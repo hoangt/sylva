@@ -311,4 +311,4 @@ if __name__ == '__main__' :
 
   g = SDFGraph([fir0, fir1])
 
-  print g
+  # print g
