@@ -1,34 +1,60 @@
 # coding: utf-8
 
-'''Synchronous Data Flow (SDF) graph model'''
+# @package docstring
+# Documentation for this module.
+# More details.
 
 import json
 
 if 'Data type class':
 
-    class data_type:
+    # Data token type class
+    #  This DataTokenType object will be used to represent the data token type in \ref sdfg.
+    class DataTokenType(object):
 
-        '''
-          Data type
-        '''
+        # Creates a new DataTokenType object.
+        #  \param name The name of the user and it should be a str object.
+        #  \param size The size of the data token in number of bits and it should be an int object.
+        def __init__(self, name='int32', size=32):
 
-        def __init__(self, name='integer range 0 to 7', size=3):
+            # \var name
+            # The name of the user and it should be a str object.
             self.name = name
+
+            # \var size
+            # The size of the data token in number of bits and it should be an int object.
             self.size = size
-            self.__repr__ = self.__str__
 
+        # Convert the current object to a string format.
+        #  \return Returns a human friendly string (type is str) of this object
         def __str__(self):
-            return '%s (size %s)' % (self.name, self.size)
+            return f'{self.name} (size {self.size})'
 
+        # Convert the current object to a string format.
+        #  This method will be invoked some time instead of self.__str__().
+        #  \return Returns a human friendly string (type is str) of this object
+        def __repr__(self):
+            return self.__str__()
+
+        # Creates a dict object with only primitive python objects to store the current \ref DataTokenType object.
+        #  Example:
+        #  {'name': 'int32', 'size': 32}
+        #  \return a dict object
         def serialize(self):
             return {'name': self.name, 'size': self.size}
 
-    def load_data_type(json_dict):
-        return data_type(name=json_dict['name'], size=json_dict['size'])
+        # Creates a DataTokenType object from a dict object that is produced by the serialize method.
+        #  Example:
+        #  DataTokenType_dict = {'name': 'int32', 'size': 32}
+        #  \param DataTokenType_dict The dict object having all information to construct a new DataTokenType object.
+        #  \return a DataTokenType object
+        @classmethod
+        def deserialize(cls, data_token_type_dict={'name': 'int32', 'size': 32}):
+            return cls(name=data_token_type_dict['name'], size=data_token_type_dict['size'])
 
 if 'SDF port class':
 
-    class port:
+    class port(object):
 
         '''
           IO port class for an actor
@@ -40,13 +66,13 @@ if 'SDF port class':
 
           1. name: string, port name
           2. index: integer, port index in either input port list or output port list
-          3. type: data_type, data token type of this port.
+          3. type: DataTokenType, data token type of this port.
             The width of the port is defined by `type`.
           4. count: integer, number of data tokens to be transferred via this port
         '''
 
         def __init__(self, name='no_port_name', index=0,
-                     type=data_type(name='integer range 0 to 3', size=2),
+                     type=DataTokenType(name='integer range 0 to 3', size=2),
                      count=1):
 
             self.name = name
@@ -72,7 +98,7 @@ if 'SDF port class':
     def load_sdf_port(json_dict):
         return port(name=str(json_dict['name']),
                     index=int(json_dict['index']),
-                    type=load_data_type(json_dict['type']),
+                    type=DataTokenType.deserialize(json_dict['type']),
                     count=int(json_dict['count']))
 
 if 'SDF edge class':
@@ -92,20 +118,21 @@ if 'SDF edge class':
             self.src_port = src_port
             self.dest_port = dest_port
 
-            if type(src_actor) == type(actor()):
+            if isinstance(src_actor, actor):
                 src_actor.next.append(self)
-            if type(dest_actor) == type(actor()):
+            if isinstance(dest_actor, actor):
                 dest_actor.previous.append(self)
 
             self.__repr__ = self.__str__
 
         def __str__(self):
-            return 'SDF edge \n  from %s (%s) \n  to %s (%s)' \
-                % (self.src_actor, self.src_port,
-                    self.dest_actor, self.dest_port)
+            result = f'SDF edge \n'
+            result += f'  from {self.src_actor} ({self.src_port})\n'
+            result += f'  to {self.dest_actor}, ({self.dest_port})'
+            return result
 
         def clone(self):
-            return edge(self.src_actor,  self.src_port.clone(),
+            return edge(self.src_actor, self.src_port.clone(),
                         self.dest_actor, self.dest_port.clone())
 
         def serialize(self):
@@ -126,8 +153,7 @@ if 'SDF edge class':
 
     def load_sdf_edge(json_dict, actors):
 
-        src_actor_index, src_port_index, dest_actor_index, dest_port_index \
-            = load_sdf_edge_index(json_dict)
+        src_actor_index, src_port_index, dest_actor_index, dest_port_index = load_sdf_edge_index(json_dict)
 
         src_actor = actors[src_actor_index]
         src_port = src_actor.output_ports[src_port_index]
@@ -150,7 +176,7 @@ if 'SDF edge class':
 
     def connect(src_actor, src_port_index, src_data_token_count,
                 dest_actor, dest_port_index, dest_data_token_count,
-                data_token_type=data_type('noName', 1)):
+                data_token_type=DataTokenType('noName', 1)):
         '''
           Create a connection between two ports of two actors.
           Ports are automatically generated.
@@ -232,7 +258,7 @@ if 'SDF actor class':
             for key in keys:
                 result[key] = getattr(self, key)
 
-            if include_base_actor == True:
+            if include_base_actor:
                 result['base_actor_index'] = self.base_actor.index
 
             return result
@@ -261,8 +287,8 @@ if 'SDF actor class':
         return result
 
     def make_sdf_actor(name, index, inports, outports,
-                       input_token_type=[data_type('std_logic', 1)],
-                       output_token_type=[data_type('std_logic', 1)]):
+                       input_token_type=[DataTokenType('std_logic', 1)],
+                       output_token_type=[DataTokenType('std_logic', 1)]):
 
         input_ports = [port('%s_in_%s' % (name, i), i,
                             input_token_type[i], c)
@@ -295,8 +321,8 @@ if 'serialize/deserialize':
         f.close()
 
     def add_actor(actors, name, index, inports, outports,
-                  input_token_type=[data_type('std_logic', 1)],
-                  output_token_type=[data_type('std_logic', 1)]):
+                  input_token_type=[DataTokenType('std_logic', 1)],
+                  output_token_type=[DataTokenType('std_logic', 1)]):
 
         actors.append(make_sdf_actor(name, index,
                                      inports, outports, input_token_type, output_token_type))
@@ -308,29 +334,28 @@ if 'serialize/deserialize':
             src_actor_index, src_port_index,
             dest_actor_index, dest_port_index, actors))
 
-if 'sdf graph' :
+if 'sdf graph':
 
     default_actor_style = {
-        'node_shape' : 'circle',
-        'facecolor' : 'white',
-        'edgecolor' :'black',
-        'linestyle' : 'solid',
-        'linewidth' : 1,
-        'radius' : 0.4,
-        'width' : 0.4,
-        'height' : 0.4,
-        'margin' : 0.8,
-        }
+        'node_shape': 'circle',
+        'facecolor': 'white',
+        'edgecolor': 'black',
+        'linestyle': 'solid',
+        'linewidth': 1,
+        'radius': 0.4,
+        'width': 0.4,
+        'height': 0.4,
+        'margin': 0.8,
+    }
 
     default_annotation_style = {
-        'color' : 'black',
-        'fontweight' :'normal',
-        'fontsize' : 12,
-        'ha' : 'center',
-        'va' : 'center'}
+        'color': 'black',
+        'fontweight': 'normal',
+        'fontsize': 12,
+        'ha': 'center',
+        'va': 'center'}
 
     import matplotlib.pyplot as plt
-    import matplotlib.patches as mpatches
 
     def get_layered_actors(actors):
         result = []
@@ -367,7 +392,7 @@ if 'sdf graph' :
         def layered_actors(self):
             return get_layered_actors(self.actors)
 
-        def plot(self, actor_style = None, annotation_style = None) :
+        def plot(self, actor_style=None, annotation_style=None):
 
             actors_2d = self.layered_actors
 
@@ -380,24 +405,24 @@ if 'sdf graph' :
             margin = _actor_style.pop('margin', 0)
             node_shape = _actor_style.pop('node_shape', '')
 
-            if node_shape.lower() == 'circle' :
+            if node_shape.lower() == 'circle':
                 _actor_style.pop('width', None)
                 _actor_style.pop('height', None)
                 shape_width = shape_height = 2 * _actor_style['radius']
 
             node_shape = eval('mpatches.{}'.format(node_shape.capitalize()))
 
-            xmin = -(shape_width/2 + margin)
+            xmin = -(shape_width / 2 + margin)
             xmax = len(actors_2d) * (shape_width + margin)
             ymin = -max([len(l) for l in actors_2d]) * (shape_width + margin)
-            ymax = (shape_width/2 + margin)
+            ymax = (shape_width / 2 + margin)
             plt.axis([xmin, xmax, ymin, ymax])
             plt.gca().set_aspect('equal')
             plt.axis('off')
             actor_nodes = {}
 
-            for layer_index, layer in enumerate(actors_2d) :
-                for actor_index, actor in enumerate(layer) :
+            for layer_index, layer in enumerate(actors_2d):
+                for actor_index, actor in enumerate(layer):
                     x = layer_index * (shape_width + margin)
                     y = -actor_index * (shape_height + margin)
                     actor_node = node_shape((x, y), **_actor_style)
@@ -406,24 +431,24 @@ if 'sdf graph' :
                     plt.gca().annotate(actor.index, (x, y), **_annotation_style)
                     actor.lpos = (layer_index, actor_index)
                     actor.pos = (x, y)
-                    actor.left = (x-shape_width/2, y)
-                    actor.right = (x+shape_width/2, y)
-                    actor.top = (x, y+shape_width/2)
-                    actor.bottom = (x, y-shape_width/2)
+                    actor.left = (x - shape_width / 2, y)
+                    actor.right = (x + shape_width / 2, y)
+                    actor.top = (x, y + shape_width / 2)
+                    actor.bottom = (x, y - shape_width / 2)
 
-            for layer_index, layer in enumerate(actors_2d) :
-                for actor_index, actor in enumerate(layer) :
-                    for next_edge in actor.next :
+            for layer_index, layer in enumerate(actors_2d):
+                for actor_index, actor in enumerate(layer):
+                    for next_edge in actor.next:
                         na = next_edge.dest_actor
                         src = actor.pos
                         dest = na.pos
                         plt.gca().annotate('', dest, src,
-                            arrowprops=dict(arrowstyle='->',
-                            patchA=actor_nodes[actor.index],
-                            patchB=actor_nodes[na.index],
-                            shrinkA=0, shrinkB=0,
-                            ec=_actor_style['edgecolor'],
-                            connectionstyle="arc3,rad=.1",
-                            ),)
+                                           arrowprops=dict(arrowstyle='->',
+                                                           patchA=actor_nodes[actor.index],
+                                                           patchB=actor_nodes[na.index],
+                                                           shrinkA=0, shrinkB=0,
+                                                           ec=_actor_style['edgecolor'],
+                                                           connectionstyle="arc3,rad=.1",
+                                                           ),)
 
             return plt

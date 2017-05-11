@@ -1,0 +1,401 @@
+\hypertarget{namespacesylva_1_1base_1_1fimp}{}\section{sylva.\+base.\+fimp Namespace Reference}
+\label{namespacesylva_1_1base_1_1fimp}\index{sylva.\+base.\+fimp@{sylva.\+base.\+fimp}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp}{fimp}
+\item 
+class \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib}{fimp\+\_\+lib}
+\item 
+class \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__set}{fimp\+\_\+set}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_ad6282a735b53c953ed8ac941c4dbf17a}{assign\+\_\+to} (self, one\+\_\+fimp)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}{add\+\_\+fimp} (self, \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp}{fimp})
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_a437b2db1db9bdd48145289d66871b835}{generate\+\_\+random\+\_\+fimps} (fimp\+\_\+name, num\+\_\+fimps=8, max\+\_\+area=0, max\+\_\+width=4, max\+\_\+height=4, min\+\_\+area=0, min\+\_\+width=1, min\+\_\+height=1, max\+\_\+computation=20, max\+\_\+input=10, max\+\_\+output=10, min\+\_\+computation=2, min\+\_\+input=1, min\+\_\+output=1, max\+\_\+energy=10, min\+\_\+energy=1)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}{load\+\_\+fimp} (fimp\+\_\+dict, load\+\_\+actors=False, actors=\mbox{[}$\,$\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}{load\+\_\+fimp\+\_\+set} (fimp\+\_\+dict)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_a57a8b55e554c3c8977bdca59b12fde4f}{load\+\_\+fimp\+\_\+lib} (fimp\+\_\+dict)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1fimp_ae9ea3885312a946a5a94bd8b2eef9b95}{load\+\_\+from\+\_\+file} (filename)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesylva_1_1base_1_1fimp_aa034443ad56b50c50310f6cc6753e52b}{assign\+\_\+to}
+\item 
+\hyperlink{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}{add\+\_\+fimp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}\label{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!add\+\_\+fimp@{add\+\_\+fimp}}
+\index{add\+\_\+fimp@{add\+\_\+fimp}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{add\+\_\+fimp()}{add\_fimp()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+add\+\_\+fimp (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fimp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Add one FIMP instance to the CGRA fabric.
+  XY location may or may not to be presented in the FIMP instance.
+\end{DoxyVerb}
+ 
+
+Definition at line 196 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+add\+\_\+fimp.
+
+
+\begin{DoxyCode}
+196   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}{add\_fimp}(self, fimp) :
+197 
+198     \textcolor{stringliteral}{'''}
+199 \textcolor{stringliteral}{      Add one FIMP instance to the CGRA fabric.}
+200 \textcolor{stringliteral}{      XY location may or may not to be presented in the FIMP instance.}
+201 \textcolor{stringliteral}{    '''}
+202 
+203     \textcolor{keywordflow}{if} fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.fimps :
+204       self.fimps.append(fimp)
+205 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_ad6282a735b53c953ed8ac941c4dbf17a}\label{namespacesylva_1_1base_1_1fimp_ad6282a735b53c953ed8ac941c4dbf17a}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!assign\+\_\+to@{assign\+\_\+to}}
+\index{assign\+\_\+to@{assign\+\_\+to}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{assign\+\_\+to()}{assign\_to()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+assign\+\_\+to (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{one\+\_\+fimp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Assign a FIMP instance to execute this HSDF actor.
+\end{DoxyVerb}
+ 
+
+Definition at line 182 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+assign\+\_\+to.
+
+
+\begin{DoxyCode}
+182   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_ad6282a735b53c953ed8ac941c4dbf17a}{assign\_to}(self, one\_fimp) :
+183 
+184     \textcolor{stringliteral}{'''}
+185 \textcolor{stringliteral}{      Assign a FIMP instance to execute this HSDF actor.}
+186 \textcolor{stringliteral}{    '''}
+187 
+188     one\_fimp.add\_actor(self)
+189 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_a437b2db1db9bdd48145289d66871b835}\label{namespacesylva_1_1base_1_1fimp_a437b2db1db9bdd48145289d66871b835}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!generate\+\_\+random\+\_\+fimps@{generate\+\_\+random\+\_\+fimps}}
+\index{generate\+\_\+random\+\_\+fimps@{generate\+\_\+random\+\_\+fimps}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{generate\+\_\+random\+\_\+fimps()}{generate\_random\_fimps()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+generate\+\_\+random\+\_\+fimps (\begin{DoxyParamCaption}\item[{}]{fimp\+\_\+name,  }\item[{}]{num\+\_\+fimps = {\ttfamily 8},  }\item[{}]{max\+\_\+area = {\ttfamily 0},  }\item[{}]{max\+\_\+width = {\ttfamily 4},  }\item[{}]{max\+\_\+height = {\ttfamily 4},  }\item[{}]{min\+\_\+area = {\ttfamily 0},  }\item[{}]{min\+\_\+width = {\ttfamily 1},  }\item[{}]{min\+\_\+height = {\ttfamily 1},  }\item[{}]{max\+\_\+computation = {\ttfamily 20},  }\item[{}]{max\+\_\+input = {\ttfamily 10},  }\item[{}]{max\+\_\+output = {\ttfamily 10},  }\item[{}]{min\+\_\+computation = {\ttfamily 2},  }\item[{}]{min\+\_\+input = {\ttfamily 1},  }\item[{}]{min\+\_\+output = {\ttfamily 1},  }\item[{}]{max\+\_\+energy = {\ttfamily 10},  }\item[{}]{min\+\_\+energy = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Generate FIMP Instances for Testing
+  -----------------------------------
+
+  0. All ranges are inclusive
+
+  1. fimp_name: string, the name of the function to be executed on the FIMP instances.
+  2. num_fimps: integer, the number of FIMP instances to generate.
+  3. max_width: integer, maximum width of the FIMP instances
+  4. max_height: integer, maximum height of the FIMP instances
+  5. min_width: integer, minimum width of the FIMP instances
+  6. min_height: integer, minimum height of the FIMP instances
+  7. max_computation: integer, maximum computation phase length
+  8. max_input: integer, maximum input phase length
+  9. max_output: integer, maximum output phase length
+  10. min_computation: integer, minimum computation phase length
+  11. min_input: integer, minimum input phase length
+  12. min_output: integer, minimum output phase length
+\end{DoxyVerb}
+ 
+
+Definition at line 217 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+217     max\_energy = 10, min\_energy = 1) :
+218 
+219     \textcolor{stringliteral}{'''}
+220 \textcolor{stringliteral}{      Generate FIMP Instances for Testing}
+221 \textcolor{stringliteral}{      -----------------------------------}
+222 \textcolor{stringliteral}{}
+223 \textcolor{stringliteral}{      0. All ranges are inclusive}
+224 \textcolor{stringliteral}{}
+225 \textcolor{stringliteral}{      1. fimp\_name: string, the name of the function to be executed on the FIMP instances.}
+226 \textcolor{stringliteral}{      2. num\_fimps: integer, the number of FIMP instances to generate.}
+227 \textcolor{stringliteral}{      3. max\_width: integer, maximum width of the FIMP instances}
+228 \textcolor{stringliteral}{      4. max\_height: integer, maximum height of the FIMP instances}
+229 \textcolor{stringliteral}{      5. min\_width: integer, minimum width of the FIMP instances}
+230 \textcolor{stringliteral}{      6. min\_height: integer, minimum height of the FIMP instances}
+231 \textcolor{stringliteral}{      7. max\_computation: integer, maximum computation phase length}
+232 \textcolor{stringliteral}{      8. max\_input: integer, maximum input phase length}
+233 \textcolor{stringliteral}{      9. max\_output: integer, maximum output phase length}
+234 \textcolor{stringliteral}{      10. min\_computation: integer, minimum computation phase length}
+235 \textcolor{stringliteral}{      11. min\_input: integer, minimum input phase length}
+236 \textcolor{stringliteral}{      12. min\_output: integer, minimum output phase length}
+237 \textcolor{stringliteral}{    '''}
+238 
+239     \textcolor{comment}{# input phase can last as long as the computation phase}
+240     \textcolor{keywordflow}{if} max\_input > max\_computation:
+241       max\_input = max\_computation
+242 
+243     \textcolor{comment}{# output phase can last as long as the computation phase}
+244     \textcolor{keywordflow}{if} max\_output > max\_computation:
+245       max\_output = max\_computation
+246 
+247     fimps = []
+248 
+249     \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(num\_fimps):
+250 
+251       computation\_phase = random.randint(min\_computation, max\_computation)
+252       ratio = computation\_phase/ (max\_computation + min\_computation)
+253 
+254       \textcolor{keywordflow}{if} (max\_input > computation\_phase):
+255         input\_max = computation\_phase
+256       \textcolor{keywordflow}{else} :
+257         input\_max = max\_input
+258 
+259       \textcolor{keywordflow}{if} (min\_input > computation\_phase):
+260         input\_min = computation\_phase
+261       \textcolor{keywordflow}{else} :
+262         input\_min = min\_input
+263 
+264       \textcolor{keywordflow}{if} (max\_output > computation\_phase):
+265         output\_max = computation\_phase
+266       \textcolor{keywordflow}{else} :
+267         output\_max = max\_output
+268 
+269       \textcolor{keywordflow}{if} (min\_output > computation\_phase):
+270         output\_min = computation\_phase
+271       \textcolor{keywordflow}{else} :
+272         output\_min = min\_output
+273 
+274       input\_phase = random.randint(input\_min, input\_max)
+275       output\_phase = random.randint(output\_min, output\_max)
+276 
+277       width = random.randint(min\_width, max\_width)
+278       width = int((ratio * (max\_width + min\_width) + width)/2)
+279 
+280       \textcolor{comment}{#================================================}
+281       \textcolor{comment}{#                expected value + random value}
+282       \textcolor{comment}{# Actual value = -----------------------------}
+283       \textcolor{comment}{#                               2}
+284       \textcolor{comment}{#================================================}
+285 
+286       height = random.randint(min\_height, max\_height)
+287       height = int((ratio * (max\_height + min\_height) + height)/2)
+288 
+289       \textcolor{keywordflow}{if} max\_area != 0 :
+290         area = random.randint(min\_area, max\_area)
+291         area = int((ratio * (max\_area + min\_area) + area)/2)
+292       \textcolor{keywordflow}{else} :
+293         area = width * height
+294 
+295       energy = random.randint(min\_energy, max\_energy)
+296       energy = int((ratio * (max\_energy + min\_energy) + energy)/2)
+297 
+298       fimps.append(
+299         fimp( name = fimp\_name, type = x,
+300               area = area,
+301               width = width,
+302               height = height,
+303               energy = energy,
+304               computation\_phase = computation\_phase,
+305               input\_phase = input\_phase,
+306               output\_phase = output\_phase) )
+307 
+308     \textcolor{keywordflow}{return} fimps
+309 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}\label{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!load\+\_\+fimp@{load\+\_\+fimp}}
+\index{load\+\_\+fimp@{load\+\_\+fimp}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{load\+\_\+fimp()}{load\_fimp()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+load\+\_\+fimp (\begin{DoxyParamCaption}\item[{}]{fimp\+\_\+dict,  }\item[{}]{load\+\_\+actors = {\ttfamily False},  }\item[{}]{actors = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 500 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+set(), and sylva.\+base.\+fimp.\+load\+\_\+from\+\_\+file().
+
+
+\begin{DoxyCode}
+500 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}{load\_fimp}(fimp\_dict, load\_actors = False, actors = []) :
+501 
+502   width = 0
+503   height = 0
+504 
+505   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'width'} \textcolor{keywordflow}{in} fimp\_dict.keys() \textcolor{keywordflow}{and} \textcolor{stringliteral}{'height'} \textcolor{keywordflow}{in} fimp\_dict.keys():
+506     width = int(fimp\_dict[\textcolor{stringliteral}{'width'}])
+507     height = int(fimp\_dict[\textcolor{stringliteral}{'height'}])
+508     area = width * height
+509   \textcolor{keywordflow}{else} :
+510     area = int(fimp\_dict[\textcolor{stringliteral}{'area'}])
+511 
+512   result = fimp(
+513     name = str(fimp\_dict[\textcolor{stringliteral}{'name'}]),
+514     type = int(fimp\_dict[\textcolor{stringliteral}{'type'}]),
+515     area = area,
+516     width = width,
+517     height = height,
+518     energy = int(fimp\_dict[\textcolor{stringliteral}{'energy'}]),
+519     computation\_phase = int(fimp\_dict[\textcolor{stringliteral}{'computation\_phase'}]),
+520     input\_phase = int(fimp\_dict[\textcolor{stringliteral}{'input\_phase'}]),
+521     output\_phase = int(fimp\_dict[\textcolor{stringliteral}{'output\_phase'}]))
+522 
+523   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'index'} \textcolor{keywordflow}{in} fimp\_dict.keys():
+524     result.index = int(fimp\_dict[\textcolor{stringliteral}{'index'}])
+525 
+526   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'extra\_buffer'} \textcolor{keywordflow}{in} fimp\_dict.keys() :
+527     result.extra\_buffer = int(fimp\_dict[\textcolor{stringliteral}{'extra\_buffer'}])
+528 
+529   \textcolor{keywordflow}{if} load\_actors == \textcolor{keyword}{False} :
+530     \textcolor{keywordflow}{return} result
+531   \textcolor{keywordflow}{else} :
+532     result.actors = [ actors[i] \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} fimp\_dict[\textcolor{stringliteral}{'actors'}] ]
+533     \textcolor{keywordflow}{return} result
+534 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_a57a8b55e554c3c8977bdca59b12fde4f}\label{namespacesylva_1_1base_1_1fimp_a57a8b55e554c3c8977bdca59b12fde4f}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!load\+\_\+fimp\+\_\+lib@{load\+\_\+fimp\+\_\+lib}}
+\index{load\+\_\+fimp\+\_\+lib@{load\+\_\+fimp\+\_\+lib}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{load\+\_\+fimp\+\_\+lib()}{load\_fimp\_lib()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+lib (\begin{DoxyParamCaption}\item[{}]{fimp\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+Definition at line 546 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+set().
+
+
+
+Referenced by sylva.\+base.\+fimp.\+load\+\_\+from\+\_\+file().
+
+
+\begin{DoxyCode}
+546 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_a57a8b55e554c3c8977bdca59b12fde4f}{load\_fimp\_lib}(fimp\_dict) :
+547 
+548   architecture = str(fimp\_dict[\textcolor{stringliteral}{'architecture'}])
+549   name = str(fimp\_dict[\textcolor{stringliteral}{'name'}])
+550   functions = fimp\_dict[\textcolor{stringliteral}{'functions'}]
+551 
+552   result = \hyperlink{namespacesylva_1_1code__generation_1_1fimp__lib_ad858d74deddd94b1802c3fad074f1336}{fimp\_lib}(architecture, name)
+553 
+554   \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} functions :
+555     result.add\_fimp\_set(\hyperlink{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}{load\_fimp\_set}(fimp\_dict[str(f)]))
+556 
+557   \textcolor{keywordflow}{return} result
+558 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}\label{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!load\+\_\+fimp\+\_\+set@{load\+\_\+fimp\+\_\+set}}
+\index{load\+\_\+fimp\+\_\+set@{load\+\_\+fimp\+\_\+set}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{load\+\_\+fimp\+\_\+set()}{load\_fimp\_set()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+set (\begin{DoxyParamCaption}\item[{}]{fimp\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+Definition at line 535 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+load\+\_\+fimp().
+
+
+
+Referenced by sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+lib(), and sylva.\+base.\+fimp.\+load\+\_\+from\+\_\+file().
+
+
+\begin{DoxyCode}
+535 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}{load\_fimp\_set}(fimp\_dict) :
+536 
+537   result = fimp\_set(name = str(fimp\_dict[\textcolor{stringliteral}{'name'}]))
+538   types = fimp\_dict[\textcolor{stringliteral}{'types'}]
+539   \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} types :
+540     result.add\_fimp(\hyperlink{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}{load\_fimp}(fimp\_dict[str(t)]))
+541   result.generics = fimp\_dict[\textcolor{stringliteral}{'generics'}]
+542   result.input\_ports = fimp\_dict[\textcolor{stringliteral}{'input\_ports'}]
+543   result.output\_ports = fimp\_dict[\textcolor{stringliteral}{'output\_ports'}]
+544   \textcolor{keywordflow}{return} result
+545 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_ae9ea3885312a946a5a94bd8b2eef9b95}\label{namespacesylva_1_1base_1_1fimp_ae9ea3885312a946a5a94bd8b2eef9b95}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}}
+\index{load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+file()}{load\_from\_file()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 559 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+load\+\_\+fimp(), sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+lib(), and sylva.\+base.\+fimp.\+load\+\_\+fimp\+\_\+set().
+
+
+\begin{DoxyCode}
+559 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_ae9ea3885312a946a5a94bd8b2eef9b95}{load\_from\_file}(filename) :
+560 
+561   f = open(filename, \textcolor{stringliteral}{'r')}
+562 \textcolor{stringliteral}{  s = f.read()}
+563 \textcolor{stringliteral}{  f.close()}
+564 \textcolor{stringliteral}{  d = json.loads(s)}
+565 \textcolor{stringliteral}{}
+566 \textcolor{stringliteral}{  }\textcolor{keywordflow}{if} \textcolor{stringliteral}{'architecture'} \textcolor{keywordflow}{in} d.keys() :
+567     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1base_1_1fimp_a57a8b55e554c3c8977bdca59b12fde4f}{load\_fimp\_lib}(d)
+568   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'types'} \textcolor{keywordflow}{in} d.keys() :
+569     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1base_1_1fimp_ad713bc31de8ee05df0c1184daba1ffb8}{load\_fimp\_set}(d)
+570   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'name'} \textcolor{keywordflow}{in} d.keys() :
+571     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1base_1_1fimp_a49222336c8f368ae3381e7b8b456a8b4}{load\_fimp}(d)
+572 
+573   \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+574 
+575 \end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}\label{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!add\+\_\+fimp@{add\+\_\+fimp}}
+\index{add\+\_\+fimp@{add\+\_\+fimp}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{add\+\_\+fimp}{add\_fimp}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+add\+\_\+fimp}
+
+
+
+Definition at line 206 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+add\+\_\+fimp().
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1fimp_aa034443ad56b50c50310f6cc6753e52b}\label{namespacesylva_1_1base_1_1fimp_aa034443ad56b50c50310f6cc6753e52b}} 
+\index{sylva\+::base\+::fimp@{sylva\+::base\+::fimp}!assign\+\_\+to@{assign\+\_\+to}}
+\index{assign\+\_\+to@{assign\+\_\+to}!sylva\+::base\+::fimp@{sylva\+::base\+::fimp}}
+\subsubsection{\texorpdfstring{assign\+\_\+to}{assign\_to}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+assign\+\_\+to}
+
+
+
+Definition at line 190 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+assign\+\_\+to().
+

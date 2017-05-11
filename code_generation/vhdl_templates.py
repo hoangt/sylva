@@ -131,7 +131,7 @@ library ieee;
 library work;
 use ieee.std_logic_1164.all;
 use work.all;
-use work.data_types.all;
+use work.DataTokenTypes.all;
 
 -- each port has one input selector
 entity input_selector is
@@ -205,13 +205,13 @@ library ieee;
 library work;
 use ieee.std_logic_1164.all;
 use work.all;
-use work.data_types.all;
+use work.DataTokenTypes.all;
 
 -- usable range : 0 to length - 1
 -- state
 --   0 : idle
 --   others : address_out + 1
-entity buffer_writer_{{ data_type }} is
+entity buffer_writer_{{ DataTokenType }} is
   generic (
     buffer_size : integer := 16
   );
@@ -219,16 +219,16 @@ entity buffer_writer_{{ data_type }} is
     clk : in std_logic;
     nrst : in std_logic;
     state_in : in integer range 0 to buffer_size;
-    data_in : in {{ data_type_string }};
+    data_in : in {{ DataTokenType_string }};
     address_out : out integer range 0 to buffer_size - 1;
     write_en : out std_logic;
-    data_out : out {{ data_type_string }}
+    data_out : out {{ DataTokenType_string }}
   );
-end buffer_writer_{{ data_type }};
+end buffer_writer_{{ DataTokenType }};
 
-architecture fimp_0 of buffer_writer_{{ data_type }} is
+architecture fimp_0 of buffer_writer_{{ DataTokenType }} is
   signal last_state : integer range 0 to buffer_size;
-  constant default_data_out : {{ data_type_string }} := {{ default_data_out }};
+  constant default_data_out : {{ DataTokenType_string }} := {{ default_data_out }};
 begin
   process (clk, nrst)
     begin
@@ -260,25 +260,25 @@ library ieee;
 library work;
 use ieee.std_logic_1164.all;
 use work.all;
-use work.data_types.all;
+use work.DataTokenTypes.all;
 
-entity data_buffer_{{ data_type }} is
+entity data_buffer_{{ DataTokenType }} is
   generic (
     buffer_size : integer := 16
   );
   port (
     clk : in std_logic;
     nrst : in std_logic;
-    data_in : in {{ data_type_string }};
-    data_out : out {{ data_type_string }};
+    data_in : in {{ DataTokenType_string }};
+    data_out : out {{ DataTokenType_string }};
     address_in : in integer range 0 to buffer_size - 1;
     write_en : in std_logic
   );
-end data_buffer_{{ data_type }};
+end data_buffer_{{ DataTokenType }};
 
-architecture fimp_0 of data_buffer_{{ data_type }} is
-  constant default_data_out : {{ data_type_string }} := {{ default_data_out }};
-  signal content : {{ data_type }}_vector(buffer_size - 1 downto 0);
+architecture fimp_0 of data_buffer_{{ DataTokenType }} is
+  constant default_data_out : {{ DataTokenType_string }} := {{ default_data_out }};
+  signal content : {{ DataTokenType }}_vector(buffer_size - 1 downto 0);
 begin
   process (clk, nrst)
     begin
@@ -296,13 +296,13 @@ begin
 end fimp_0;
 '''
 
-data_types = \
+DataTokenTypes = \
 '''{{ license_header }}
 
 library ieee;
 use ieee.std_logic_1164.all;
 
-package data_types is
+package DataTokenTypes is
 
   {% for type in types %}type {{ type.name }} is
   {{ type.definition }};
@@ -311,5 +311,5 @@ package data_types is
   {{ type.definition }};
   {% endfor %}
 
-end data_types;
+end DataTokenTypes;
 '''

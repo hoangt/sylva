@@ -1,0 +1,344 @@
+\hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1}{}\section{sylva.\+dse.\+dse\+\_\+engine\+\_\+v1 Namespace Reference}
+\label{namespacesylva_1_1dse_1_1dse__engine__v1}\index{sylva.\+dse.\+dse\+\_\+engine\+\_\+v1@{sylva.\+dse.\+dse\+\_\+engine\+\_\+v1}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1}{dse\+\_\+v1}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}{approximate\+\_\+numbers} (number)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a2c16f997588f8721ab7742ca16e79e64}{most\+\_\+parallel\+\_\+schedule} (p, i, c, a)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_af190117e4402a059bd348c6909abada2}{ceil\+\_\+in\+\_\+list} (ordered\+\_\+number\+\_\+list, number)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}{all\+\_\+schedules} (sdf\+\_\+actors, sdf\+\_\+edges)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a4a316401cfa961e555596115afe86b4c}{some\+\_\+schedules} (sdf\+\_\+actors, sdf\+\_\+edges, size=None)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}{schedules} (p, a, i, result=\mbox{[}$\,$\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ac7bc9055c7171c3d5156f342722248fc}{assign\+\_\+fimps} (hsdf\+\_\+actors, fimp\+\_\+count\+\_\+list)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a43b259fb54860365fe18c9efa8847022}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ab8db6ab7e801f2f5d7907cd2a96584d2}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2014-\/05-\/09-\/11\+:25\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}\label{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!all\+\_\+schedules@{all\+\_\+schedules}}
+\index{all\+\_\+schedules@{all\+\_\+schedules}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{all\+\_\+schedules()}{all\_schedules()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules (\begin{DoxyParamCaption}\item[{}]{sdf\+\_\+actors,  }\item[{}]{sdf\+\_\+edges }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Find all load balanced schedules for a given SDF graph.
+\end{DoxyVerb}
+ 
+
+Definition at line 385 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+approximate\+\_\+numbers(), sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+repetition\+\_\+count(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+schedules().
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
+
+
+\begin{DoxyCode}
+385 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}{all\_schedules}( (sdf\_actors, sdf\_edges) ) :
+386 
+387   \textcolor{stringliteral}{'''}
+388 \textcolor{stringliteral}{    Find all load balanced schedules for a given SDF graph.}
+389 \textcolor{stringliteral}{  '''}
+390 
+391   p = \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}{get\_repetition\_count}( (sdf\_actors, sdf\_edges) )
+392   a = [ \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}{approximate\_numbers}(n) \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} p ]
+393 
+394   result = []
+395   \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} sdf\_actors :
+396     result = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}{schedules}(p, a, s.index, result)
+397   \textcolor{keywordflow}{return} result
+398 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}\label{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!approximate\+\_\+numbers@{approximate\+\_\+numbers}}
+\index{approximate\+\_\+numbers@{approximate\+\_\+numbers}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{approximate\+\_\+numbers()}{approximate\_numbers()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+approximate\+\_\+numbers (\begin{DoxyParamCaption}\item[{}]{number }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Return all approximate numbers of an input number as a list.
+  Complicity = O{n}
+  Good enough for small scale problems.
+\end{DoxyVerb}
+ 
+
+Definition at line 340 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
+
+
+\begin{DoxyCode}
+340 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}{approximate\_numbers}(number) :
+341 
+342   \textcolor{stringliteral}{'''}
+343 \textcolor{stringliteral}{    Return all approximate numbers of an input number as a list.}
+344 \textcolor{stringliteral}{    Complicity = O\{n\}}
+345 \textcolor{stringliteral}{    Good enough for small scale problems.}
+346 \textcolor{stringliteral}{  '''}
+347 
+348   \textcolor{keywordflow}{return} [ i \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(1, int(number) + 1)
+349            \textcolor{keywordflow}{if} int(number) % i == 0 ]
+350 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_ac7bc9055c7171c3d5156f342722248fc}\label{namespacesylva_1_1dse_1_1dse__engine__v1_ac7bc9055c7171c3d5156f342722248fc}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!assign\+\_\+fimps@{assign\+\_\+fimps}}
+\index{assign\+\_\+fimps@{assign\+\_\+fimps}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{assign\+\_\+fimps()}{assign\_fimps()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+assign\+\_\+fimps (\begin{DoxyParamCaption}\item[{}]{hsdf\+\_\+actors,  }\item[{}]{fimp\+\_\+count\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Create a relative schedule based on a given FIMP count list.
+\end{DoxyVerb}
+ 
+
+Definition at line 429 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+add\+\_\+actor().
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+429 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ac7bc9055c7171c3d5156f342722248fc}{assign\_fimps}(hsdf\_actors, fimp\_count\_list) :
+430 
+431   \textcolor{stringliteral}{'''}
+432 \textcolor{stringliteral}{    Create a relative schedule based on a given FIMP count list.}
+433 \textcolor{stringliteral}{  '''}
+434 
+435   actors = \{\}
+436   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} hsdf\_actors :
+437     \textcolor{keywordflow}{if} a.base\_actor.index \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} actors.keys() :
+438       actors[a.base\_actor.index] = []
+439     actors[a.base\_actor.index].append(a)
+440 
+441   fimps = [ fimp(index = i)
+442             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(sum(fimp\_count\_list)) ]
+443 
+444   c = 0
+445   \textcolor{comment}{# current FIMP index}
+446 
+447   \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} actors.keys() : \textcolor{comment}{# for each SDF actor}
+448 
+449     f = 0
+450     \textcolor{comment}{# current FIMP index for one SDF actor}
+451 
+452     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors[i] :
+453     \textcolor{comment}{# for each HSDF actor}
+454       \textcolor{keywordflow}{if} f == fimp\_count\_list[i] :
+455         c -= fimp\_count\_list[i]
+456         f = 0
+457 
+458       fimps[c].name = a.name
+459       fimps[c].\hyperlink{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}{add\_actor}(a)
+460       c += 1
+461       f += 1
+462 
+463   \textcolor{keywordflow}{return} fimps
+464 
+465 \end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_af190117e4402a059bd348c6909abada2}\label{namespacesylva_1_1dse_1_1dse__engine__v1_af190117e4402a059bd348c6909abada2}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!ceil\+\_\+in\+\_\+list@{ceil\+\_\+in\+\_\+list}}
+\index{ceil\+\_\+in\+\_\+list@{ceil\+\_\+in\+\_\+list}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{ceil\+\_\+in\+\_\+list()}{ceil\_in\_list()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+ceil\+\_\+in\+\_\+list (\begin{DoxyParamCaption}\item[{}]{ordered\+\_\+number\+\_\+list,  }\item[{}]{number }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Ceiling a given number in a given ordered number list.
+\end{DoxyVerb}
+ 
+
+Definition at line 373 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+most\+\_\+parallel\+\_\+schedule().
+
+
+\begin{DoxyCode}
+373 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_af190117e4402a059bd348c6909abada2}{ceil\_in\_list}(ordered\_number\_list, number) :
+374 
+375   \textcolor{stringliteral}{'''}
+376 \textcolor{stringliteral}{    Ceiling a given number in a given ordered number list.}
+377 \textcolor{stringliteral}{  '''}
+378 
+379   \textcolor{keywordflow}{for} i, v \textcolor{keywordflow}{in} enumerate(ordered\_number\_list) :
+380     \textcolor{keywordflow}{if} number <= v :
+381       \textcolor{keywordflow}{return} v
+382 
+383   \textcolor{keywordflow}{return} ordered\_number\_list[-1]
+384 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_a2c16f997588f8721ab7742ca16e79e64}\label{namespacesylva_1_1dse_1_1dse__engine__v1_a2c16f997588f8721ab7742ca16e79e64}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!most\+\_\+parallel\+\_\+schedule@{most\+\_\+parallel\+\_\+schedule}}
+\index{most\+\_\+parallel\+\_\+schedule@{most\+\_\+parallel\+\_\+schedule}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{most\+\_\+parallel\+\_\+schedule()}{most\_parallel\_schedule()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+most\+\_\+parallel\+\_\+schedule (\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{i,  }\item[{}]{c,  }\item[{}]{a }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Find the most parallel schedule
+  when the amount of used FIMPs (c)
+  for an SDF actor with index (i) is given
+
+  ---
+
+  p: repetition vector
+  i: SDF actor index
+  c: FIMP count for SDF actor i
+  a: approximate numbers for p
+\end{DoxyVerb}
+ 
+
+Definition at line 351 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+ceil\+\_\+in\+\_\+list().
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+schedules().
+
+
+\begin{DoxyCode}
+351 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a2c16f997588f8721ab7742ca16e79e64}{most\_parallel\_schedule}(p, i, c, a) :
+352 
+353   \textcolor{stringliteral}{'''}
+354 \textcolor{stringliteral}{    Find the most parallel schedule}
+355 \textcolor{stringliteral}{    when the amount of used FIMPs (c)}
+356 \textcolor{stringliteral}{    for an SDF actor with index (i) is given}
+357 \textcolor{stringliteral}{}
+358 \textcolor{stringliteral}{    ---}
+359 \textcolor{stringliteral}{}
+360 \textcolor{stringliteral}{    p: repetition vector}
+361 \textcolor{stringliteral}{    i: SDF actor index}
+362 \textcolor{stringliteral}{    c: FIMP count for SDF actor i}
+363 \textcolor{stringliteral}{    a: approximate numbers for p}
+364 \textcolor{stringliteral}{  '''}
+365 
+366   ratio = int(p[i] / c)
+367   \textcolor{comment}{# ratio is always integer}
+368   \textcolor{comment}{# since c is always one element of p[i]}
+369 
+370   \textcolor{keywordflow}{return} [ \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_af190117e4402a059bd348c6909abada2}{ceil\_in\_list}(a[index], int(p[index]/ratio))
+371            \textcolor{keywordflow}{for} index \textcolor{keywordflow}{in} xrange(len(p)) ]
+372 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}\label{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!schedules@{schedules}}
+\index{schedules@{schedules}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{schedules()}{schedules()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+schedules (\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{a,  }\item[{}]{i,  }\item[{}]{result = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 422 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+most\+\_\+parallel\+\_\+schedule().
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
+
+
+\begin{DoxyCode}
+422 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}{schedules}(p, a, i, result = []) :
+423   \textcolor{keywordflow}{for} c \textcolor{keywordflow}{in} a[i] :
+424     schedule = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a2c16f997588f8721ab7742ca16e79e64}{most\_parallel\_schedule}(p, i, c, a)
+425     \textcolor{keywordflow}{if} schedule \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} result :
+426       result.append(schedule)
+427   \textcolor{keywordflow}{return} result
+428 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_a4a316401cfa961e555596115afe86b4c}\label{namespacesylva_1_1dse_1_1dse__engine__v1_a4a316401cfa961e555596115afe86b4c}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!some\+\_\+schedules@{some\+\_\+schedules}}
+\index{some\+\_\+schedules@{some\+\_\+schedules}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{some\+\_\+schedules()}{some\_schedules()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules (\begin{DoxyParamCaption}\item[{}]{sdf\+\_\+actors,  }\item[{}]{sdf\+\_\+edges,  }\item[{}]{size = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Find a subset of all load balanced schedules for a given SDF graph.
+\end{DoxyVerb}
+ 
+
+Definition at line 399 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+approximate\+\_\+numbers(), sylva.\+misc.\+util.\+evenly\+\_\+pick(), sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+repetition\+\_\+count(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+schedules().
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+399 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a4a316401cfa961e555596115afe86b4c}{some\_schedules}( (sdf\_actors, sdf\_edges), size = \textcolor{keywordtype}{None}) :
+400 
+401   \textcolor{stringliteral}{'''}
+402 \textcolor{stringliteral}{    Find a subset of all load balanced schedules for a given SDF graph.}
+403 \textcolor{stringliteral}{  '''}
+404 
+405   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} size :
+406     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}{all\_schedules}( (sdf\_actors, sdf\_edges) )
+407 
+408   p = \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}{get\_repetition\_count}( (sdf\_actors, sdf\_edges) )
+409   a = [ \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ad6e97d4396aee376d84b0ce79ba7fd22}{approximate\_numbers}(n) \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} p ]
+410 
+411   p\_sorted = sorted([ (k, v) \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} enumerate(p)], key = \textcolor{keyword}{lambda} x : x[1], reverse = \textcolor{keyword}{True})
+412 
+413   result = []
+414   \textcolor{keywordflow}{if} len(a[p\_sorted[0][0]]) < size :
+415     \textcolor{keywordflow}{for} (k, v) \textcolor{keywordflow}{in} p\_sorted :
+416       result = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}{schedules}(p, a, k, result)
+417       \textcolor{keywordflow}{if} len(result) >= size :
+418         \textcolor{keywordflow}{return} result [:size]
+419     \textcolor{keywordflow}{return} result
+420   \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1misc_1_1util_a0881116abd7a50c6cd552b6b3edafea3}{evenly\_pick}(\hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a9f62832c5ef72269c1920b61d0eeb2a6}{schedules}(p, a, p[0][0], result), size)
+421 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_a43b259fb54860365fe18c9efa8847022}\label{namespacesylva_1_1dse_1_1dse__engine__v1_a43b259fb54860365fe18c9efa8847022}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+author\+\_\+\+\_\+}{\_\_author\_\_}}
+{\footnotesize\ttfamily string sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+\_\+\+\_\+author\+\_\+\+\_\+ = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file dse\+\_\+engine\+\_\+v1.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse__engine__v1_ab8db6ab7e801f2f5d7907cd2a96584d2}\label{namespacesylva_1_1dse_1_1dse__engine__v1_ab8db6ab7e801f2f5d7907cd2a96584d2}} 
+\index{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::dse\+::dse\+\_\+engine\+\_\+v1@{sylva\+::dse\+::dse\+\_\+engine\+\_\+v1}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
+{\footnotesize\ttfamily string sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2014-\/05-\/09-\/11\+:25\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file dse\+\_\+engine\+\_\+v1.\+py.
+

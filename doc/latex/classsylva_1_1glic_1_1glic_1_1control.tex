@@ -1,0 +1,322 @@
+\hypertarget{classsylva_1_1glic_1_1glic_1_1control}{}\section{sylva.\+glic.\+glic.\+control Class Reference}
+\label{classsylva_1_1glic_1_1glic_1_1control}\index{sylva.\+glic.\+glic.\+control@{sylva.\+glic.\+glic.\+control}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a85d706a6833a83aa424d631d85368099}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a392a1e20052ef15fa96049f9b201be02}{states}=\mbox{[}$\,$\mbox{]}, \hyperlink{classsylva_1_1glic_1_1glic_1_1control_ae0839083f2b17473598890c7b4690e4f}{edges}=\mbox{[}$\,$\mbox{]}, \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}{name}=\textquotesingle{}no \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}{name}\textquotesingle{}, \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a7c5053b405b4811c446caa027cd29d7e}{default\+\_\+state\+\_\+index}=0)
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1control_aea52fc110901323d58833de74918965e}{step} (self, \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a1e5f2d48e2bfafe60f1891e0dcb1d98a}{current\+\_\+cycle}=None)
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a930531b0935008d702bf22e2307283c6}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1control_a5d7147d7ce52b8f9e3e96f3dfcba672f}{serialize} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1control_aee8d917ad164289a074b54ddd2b7615c}{deserialize} (json\+\_\+dict)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a392a1e20052ef15fa96049f9b201be02}{states}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_ae0839083f2b17473598890c7b4690e4f}{edges}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a1e5f2d48e2bfafe60f1891e0dcb1d98a}{current\+\_\+cycle}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}{name}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a7f5428a930e8f920ebe651df5a899df1}{current\+\_\+state}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a7c5053b405b4811c446caa027cd29d7e}{default\+\_\+state\+\_\+index}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a2ccde55faf999d2c91c456eaac9bdee3}{default\+\_\+state}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1control_ac4ec61e55ba16dd0abcd97a493be8f0d}{\+\_\+\+\_\+repr\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}  Basic Moore FSM class for FIMP or buffer control in SYLVA
+\end{DoxyVerb}
+ 
+
+Definition at line 111 of file glic.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a85d706a6833a83aa424d631d85368099}\label{classsylva_1_1glic_1_1glic_1_1control_a85d706a6833a83aa424d631d85368099}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{states = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{edges = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{name = {\ttfamily \textquotesingle{}no~\hyperlink{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}{name}\textquotesingle{}},  }\item[{}]{default\+\_\+state\+\_\+index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file glic.\+py.
+
+
+\begin{DoxyCode}
+117     \textcolor{keyword}{def }\_\_init\_\_(self, states=[], edges=[], name='no name', default\_state\_index=0):
+118 
+119       self.states = states
+120       self.edges = edges
+121       self.current\_cycle = 0
+122       self.name = name
+123       self.\_\_repr\_\_ = self.\_\_str\_\_
+124 
+125       \textcolor{keywordflow}{if} self.states == []:
+126         self.current\_state = \textcolor{keywordtype}{None}
+127       \textcolor{keywordflow}{else}:
+128         self.current\_state = states[0]
+129 
+130       self.default\_state\_index = default\_state\_index
+131 
+132       \textcolor{keywordflow}{if} default\_state\_index < len(states):
+133         self.default\_state = states[default\_state\_index]
+134       \textcolor{keywordflow}{else}:
+135         self.default\_state = \textcolor{keywordtype}{None}
+136 
+137       \textcolor{keywordflow}{for} state \textcolor{keywordflow}{in} self.states:
+138         involved\_edges = [e \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges
+139                           \textcolor{keywordflow}{if} e.source == state]
+140         state.edges = list(involved\_edges)
+141 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a930531b0935008d702bf22e2307283c6}\label{classsylva_1_1glic_1_1glic_1_1control_a930531b0935008d702bf22e2307283c6}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file glic.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+edges, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+sdf.\+actor.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+glic.\+glic.\+control.\+states.
+
+
+\begin{DoxyCode}
+157     \textcolor{keyword}{def }\_\_str\_\_(self):
+158 
+159       result = \textcolor{stringliteral}{'\(\backslash\)n'}
+160       result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+161       result += \textcolor{stringliteral}{'Control FSM: %s \(\backslash\)n'} % self.name
+162       result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+163       result += \textcolor{stringliteral}{'States: \(\backslash\)n'}
+164       \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states:
+165         result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % s
+166       result += \textcolor{stringliteral}{'-'} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+167       result += \textcolor{stringliteral}{'Transactions: \(\backslash\)n'}
+168       \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges:
+169         result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % e
+170       \textcolor{keywordflow}{return} result + \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+171 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_aee8d917ad164289a074b54ddd2b7615c}\label{classsylva_1_1glic_1_1glic_1_1control_aee8d917ad164289a074b54ddd2b7615c}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+control.\+deserialize (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 179 of file glic.\+py.
+
+
+\begin{DoxyCode}
+179     \textcolor{keyword}{def }deserialize(json\_dict):
+180       states = [state.deserialize(s) \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]]
+181       \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]:
+182         state.deserialize(s, states)
+183       edges = [e \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} states \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} s.edges]
+184       name = json\_dict[\textcolor{stringliteral}{'name'}]
+185       default\_state\_index = int(json\_dict[\textcolor{stringliteral}{'default\_state\_index'}])
+186 
+187       result = control()
+188       result.name = name
+189       result.default\_state = states[default\_state\_index]
+190       result.default\_state\_index = default\_state\_index
+191       result.states = states
+192       result.edges = edges
+193 
+194       \textcolor{keywordflow}{return} result
+195 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a5d7147d7ce52b8f9e3e96f3dfcba672f}\label{classsylva_1_1glic_1_1glic_1_1control_a5d7147d7ce52b8f9e3e96f3dfcba672f}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+control.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file glic.\+py.
+
+
+
+References sylva.\+glic.\+glic.\+control.\+default\+\_\+state, sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+edges, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+sdf.\+actor.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+glic.\+glic.\+control.\+states.
+
+
+\begin{DoxyCode}
+172     \textcolor{keyword}{def }serialize(self):
+173       \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'states'}: [s.serialize() \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states],
+174               \textcolor{stringliteral}{'edges'}: [e.serialize() \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges],
+175               \textcolor{stringliteral}{'name'}: self.name,
+176               \textcolor{stringliteral}{'default\_state\_index'}: self.default\_state.index\}
+177 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_aea52fc110901323d58833de74918965e}\label{classsylva_1_1glic_1_1glic_1_1control_aea52fc110901323d58833de74918965e}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!step@{step}}
+\index{step@{step}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+control.\+step (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+\_\+cycle = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file glic.\+py.
+
+
+
+References sylva.\+glic.\+glic.\+control.\+current\+\_\+cycle, and sylva.\+glic.\+glic.\+control.\+current\+\_\+state.
+
+
+\begin{DoxyCode}
+142     \textcolor{keyword}{def }step(self, current\_cycle=None):
+143 
+144       \textcolor{keywordflow}{if} current\_cycle == \textcolor{keywordtype}{None}:
+145         self.current\_cycle += 1
+146       \textcolor{keywordflow}{else}:
+147         self.current\_cycle = current\_cycle
+148 
+149       \textcolor{keywordflow}{if} self.current\_state != \textcolor{keywordtype}{None}:
+150         \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.current\_state.edges:
+151           \textcolor{keywordflow}{if} e.cycle == self.current\_cycle:
+152             self.current\_state = e.destination
+153             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+154 
+155       \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+156 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_ac4ec61e55ba16dd0abcd97a493be8f0d}\label{classsylva_1_1glic_1_1glic_1_1control_ac4ec61e55ba16dd0abcd97a493be8f0d}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+}{\_\_repr\_\_}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+repr\+\_\+\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 123 of file glic.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a1e5f2d48e2bfafe60f1891e0dcb1d98a}\label{classsylva_1_1glic_1_1glic_1_1control_a1e5f2d48e2bfafe60f1891e0dcb1d98a}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!current\+\_\+cycle@{current\+\_\+cycle}}
+\index{current\+\_\+cycle@{current\+\_\+cycle}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{current\+\_\+cycle}{current\_cycle}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+current\+\_\+cycle}
+
+
+
+Definition at line 121 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+step().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a7f5428a930e8f920ebe651df5a899df1}\label{classsylva_1_1glic_1_1glic_1_1control_a7f5428a930e8f920ebe651df5a899df1}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!current\+\_\+state@{current\+\_\+state}}
+\index{current\+\_\+state@{current\+\_\+state}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{current\+\_\+state}{current\_state}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+current\+\_\+state}
+
+
+
+Definition at line 126 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+step().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a2ccde55faf999d2c91c456eaac9bdee3}\label{classsylva_1_1glic_1_1glic_1_1control_a2ccde55faf999d2c91c456eaac9bdee3}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!default\+\_\+state@{default\+\_\+state}}
+\index{default\+\_\+state@{default\+\_\+state}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{default\+\_\+state}{default\_state}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+default\+\_\+state}
+
+
+
+Definition at line 133 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a7c5053b405b4811c446caa027cd29d7e}\label{classsylva_1_1glic_1_1glic_1_1control_a7c5053b405b4811c446caa027cd29d7e}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!default\+\_\+state\+\_\+index@{default\+\_\+state\+\_\+index}}
+\index{default\+\_\+state\+\_\+index@{default\+\_\+state\+\_\+index}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{default\+\_\+state\+\_\+index}{default\_state\_index}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+default\+\_\+state\+\_\+index}
+
+
+
+Definition at line 130 of file glic.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_ae0839083f2b17473598890c7b4690e4f}\label{classsylva_1_1glic_1_1glic_1_1control_ae0839083f2b17473598890c7b4690e4f}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!edges@{edges}}
+\index{edges@{edges}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+edges}
+
+
+
+Definition at line 120 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+state.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}\label{classsylva_1_1glic_1_1glic_1_1control_a95f657f58c1799fe7004653fe77ce106}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!name@{name}}
+\index{name@{name}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+name}
+
+
+
+Definition at line 122 of file glic.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a392a1e20052ef15fa96049f9b201be02}\label{classsylva_1_1glic_1_1glic_1_1control_a392a1e20052ef15fa96049f9b201be02}} 
+\index{sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}!states@{states}}
+\index{states@{states}!sylva\+::glic\+::glic\+::control@{sylva\+::glic\+::glic\+::control}}
+\subsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+control.\+states}
+
+
+
+Definition at line 119 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glic/\hyperlink{glic_8py}{glic.\+py}\end{DoxyCompactItemize}

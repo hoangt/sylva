@@ -1,0 +1,165 @@
+\hypertarget{classsylva_1_1dse_1_1dse_1_1system__model}{}\section{sylva.\+dse.\+dse.\+system\+\_\+model Class Reference}
+\label{classsylva_1_1dse_1_1dse_1_1system__model}\index{sylva.\+dse.\+dse.\+system\+\_\+model@{sylva.\+dse.\+dse.\+system\+\_\+model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a1d139488c7dc335da838c976cd35f748}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a8b435a2014aa563c8cb50ce7d91dfdc8}{name}=\textquotesingle{}one system model\textquotesingle{}, \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a5ca9bb6295d4575df249f2f3326721a2}{actors}=\mbox{[}$\,$\mbox{]}, \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a73a36bb2c1ddb4fa3558e4a5887decaa}{edges}=\mbox{[}$\,$\mbox{]}, \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a3275b1b0df6c3c2d16668210db33e644}{constraint}=\hyperlink{namespacesylva_1_1dse_1_1dse_ac2d9fdcc3f7fd0bad1900fa0a813dff4}{sc}(), \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_acdb0fd58cbe5281c46488bd3981edc19}{optimization\+\_\+objective}=\hyperlink{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}{soo}())
+\item 
+def \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_abdbd324e6d87f3baef25aeab12444edc}{serialize} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a8b435a2014aa563c8cb50ce7d91dfdc8}{name}
+\item 
+\hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a5ca9bb6295d4575df249f2f3326721a2}{actors}
+\item 
+\hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a73a36bb2c1ddb4fa3558e4a5887decaa}{edges}
+\item 
+\hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_a3275b1b0df6c3c2d16668210db33e644}{constraint}
+\item 
+\hyperlink{classsylva_1_1dse_1_1dse_1_1system__model_acdb0fd58cbe5281c46488bd3981edc19}{optimization\+\_\+objective}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 95 of file dse.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_a1d139488c7dc335da838c976cd35f748}\label{classsylva_1_1dse_1_1dse_1_1system__model_a1d139488c7dc335da838c976cd35f748}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+system\+\_\+model.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \textquotesingle{}one~system~model\textquotesingle{}},  }\item[{}]{actors = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{edges = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{constraint = {\ttfamily \hyperlink{namespacesylva_1_1dse_1_1dse_ac2d9fdcc3f7fd0bad1900fa0a813dff4}{sc}()},  }\item[{}]{optimization\+\_\+objective = {\ttfamily \hyperlink{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}{soo}()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file dse.\+py.
+
+
+
+References sylva.\+dse.\+dse.\+soo.
+
+
+\begin{DoxyCode}
+100     optimization\_objective = \hyperlink{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}{soo}()) :
+101 
+102     self.name = name
+103     self.actors = actors
+104     self.edges = edges
+105     self.constraint = constraint
+106     self.optimization\_objective = optimization\_objective
+107 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_abdbd324e6d87f3baef25aeab12444edc}\label{classsylva_1_1dse_1_1dse_1_1system__model_abdbd324e6d87f3baef25aeab12444edc}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file dse.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+actors, sylva.\+base.\+fimp.\+fimp.\+actors, sylva.\+dse.\+dse.\+system\+\_\+model.\+actors, sylva.\+base.\+sdf.\+sdfg.\+actors, sylva.\+dse.\+dse.\+system\+\_\+model.\+constraint, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+base.\+sdf.\+actor.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+dse.\+dse.\+system\+\_\+model.\+optimization\+\_\+objective.
+
+
+\begin{DoxyCode}
+108   \textcolor{keyword}{def }serialize(self) :
+109     result = \{\}
+110     result[\textcolor{stringliteral}{'name'}] = self.name
+111     temp = sdf.serialize\_sdf\_graph(self.actors, self.edges)
+112     result[\textcolor{stringliteral}{'actors'}] = temp[\textcolor{stringliteral}{'actors'}]
+113     result[\textcolor{stringliteral}{'edges'}] = temp[\textcolor{stringliteral}{'edges'}]
+114     result[\textcolor{stringliteral}{'constraint'}] = self.constraint.\_\_dict\_\_
+115     result[\textcolor{stringliteral}{'optimization\_objective'}] = self.optimization\_objective.\_\_dict\_\_
+116     \textcolor{keywordflow}{return} result
+117 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_a5ca9bb6295d4575df249f2f3326721a2}\label{classsylva_1_1dse_1_1dse_1_1system__model_a5ca9bb6295d4575df249f2f3326721a2}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!actors@{actors}}
+\index{actors@{actors}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{actors}{actors}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+system\+\_\+model.\+actors}
+
+
+
+Definition at line 103 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_a3275b1b0df6c3c2d16668210db33e644}\label{classsylva_1_1dse_1_1dse_1_1system__model_a3275b1b0df6c3c2d16668210db33e644}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!constraint@{constraint}}
+\index{constraint@{constraint}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{constraint}{constraint}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+system\+\_\+model.\+constraint}
+
+
+
+Definition at line 105 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_a73a36bb2c1ddb4fa3558e4a5887decaa}\label{classsylva_1_1dse_1_1dse_1_1system__model_a73a36bb2c1ddb4fa3558e4a5887decaa}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!edges@{edges}}
+\index{edges@{edges}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+system\+\_\+model.\+edges}
+
+
+
+Definition at line 104 of file dse.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+state.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_a8b435a2014aa563c8cb50ce7d91dfdc8}\label{classsylva_1_1dse_1_1dse_1_1system__model_a8b435a2014aa563c8cb50ce7d91dfdc8}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!name@{name}}
+\index{name@{name}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+system\+\_\+model.\+name}
+
+
+
+Definition at line 102 of file dse.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1dse_1_1dse_1_1system__model_acdb0fd58cbe5281c46488bd3981edc19}\label{classsylva_1_1dse_1_1dse_1_1system__model_acdb0fd58cbe5281c46488bd3981edc19}} 
+\index{sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}!optimization\+\_\+objective@{optimization\+\_\+objective}}
+\index{optimization\+\_\+objective@{optimization\+\_\+objective}!sylva\+::dse\+::dse\+::system\+\_\+model@{sylva\+::dse\+::dse\+::system\+\_\+model}}
+\subsubsection{\texorpdfstring{optimization\+\_\+objective}{optimization\_objective}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+system\+\_\+model.\+optimization\+\_\+objective}
+
+
+
+Definition at line 106 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dse/\hyperlink{dse_8py}{dse.\+py}\end{DoxyCompactItemize}

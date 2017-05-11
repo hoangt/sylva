@@ -30,7 +30,7 @@ import sylva.glic.glic as glic
 import sylva.base.sdf as sdf
 import sylva.base.fimp as fimp
 from sylva.code_generation.vhdl_types import \
-  integer as integer_data_type, std_logic
+  integer as integer_DataTokenType, std_logic
 from sylva.code_generation.hsdf_to_vhdl import *
 import sylva.code_generation.sylva_fimp_lib as sflib
 
@@ -39,7 +39,7 @@ def counter_actor(fimp_instance, sample_interval, default_name='sylva_counter'):
 
   current_cycle_port = sdf.port(
     name = 'current_cycle',
-    type = integer_data_type(sample_interval))
+    type = integer_DataTokenType(sample_interval))
 
   output_ports = [ current_cycle_port ]
 
@@ -58,8 +58,8 @@ def counter_actor(fimp_instance, sample_interval, default_name='sylva_counter'):
 def actor_fsm_actor(control, sample_interval, max_output=glic.IO,
   default_name='sylva_actor_control_fsm'):
 
-  current_cycle_port = sdf.port(name='current_cycle', index=0, type=integer_data_type(sample_interval))
-  control_port = sdf.port(name='control_output', index=0, type=integer_data_type(max_output))
+  current_cycle_port = sdf.port(name='current_cycle', index=0, type=integer_DataTokenType(sample_interval))
+  control_port = sdf.port(name='control_output', index=0, type=integer_DataTokenType(max_output))
 
   input_ports = [ current_cycle_port ]
   output_ports = [ control_port ]
@@ -83,7 +83,7 @@ def get_control_ports(name_prefix, max_output, fimp_instance) :
 
 def get_one_control_port(name_prefix, max_output, index = 0) :
 
-  return sdf.port(name='_'.join([name_prefix, str(index)]), index=index, type=integer_data_type(max_output))
+  return sdf.port(name='_'.join([name_prefix, str(index)]), index=index, type=integer_DataTokenType(max_output))
 
 class BassObject :
   def __str__(self) :
@@ -139,7 +139,7 @@ def input_selector_actor(fimp_instance, sample_interval, max_output=glic.IO, def
       data_input_ports.append(data_input_port)
 
   current_cycle_port = sdf.port(
-    name='current_cycle', index=0, type=integer_data_type(sample_interval))
+    name='current_cycle', index=0, type=integer_DataTokenType(sample_interval))
 
   data_output_ports = [ sdf.port(name='_'.join([p.name, str(fimp_instance.index)]), type=p.type)
                    for p in fimp_instance.actors[0].input_ports ]
@@ -162,7 +162,7 @@ def input_selector_actor(fimp_instance, sample_interval, max_output=glic.IO, def
       source_actor_count = len(p.src_actor.fimp.actors)
 
       if extra_buffer == True :
-        addres_port_type = integer_data_type(source_port.count)
+        addres_port_type = integer_DataTokenType(source_port.count)
         address_port_name = '_'.join([ 'read_address',
         str(source_fimp.index),
         str(source_actor.index),
@@ -170,7 +170,7 @@ def input_selector_actor(fimp_instance, sample_interval, max_output=glic.IO, def
 
       else :
         addres_port_type = \
-        integer_data_type(source_port.count * source_actor_count)
+        integer_DataTokenType(source_port.count * source_actor_count)
         address_port_name = '_'.join([ 'read_address',
         str(source_fimp.index),
         'shared',
@@ -298,7 +298,7 @@ def buffer_control_actor(controls, fimp_instance, max_cycle,
   control_ports, control_port_range = \
   get_control_ports('control_input', max_output, fimp_instance)
 
-  current_cycle_port = sdf.port(name='current_cycle', index=0, type=integer_data_type(max_cycle))
+  current_cycle_port = sdf.port(name='current_cycle', index=0, type=integer_DataTokenType(max_cycle))
 
   wr_ports = [ sdf.port(name='_'.join([read_write_signal, str(actor.index)]), index=i, type=std_logic)
                for i, actor in enumerate(fimp_instance.actors) ]
@@ -314,7 +314,7 @@ def buffer_control_actor(controls, fimp_instance, max_cycle,
       for port_index, port in enumerate(actor.output_ports) :
         address_ports[-1].append(
           sdf.port( name = '_'.join(['write_address', str(actor.index), str(port.index)]),
-            type = integer_data_type(port.count) ) )
+            type = integer_DataTokenType(port.count) ) )
         address_ports[-1][-1].actions = [
           ( actor.output_start + token_index * cycles_per_data_token[port_index], token_index )
             for token_index in xrange(port.count) ]
@@ -324,7 +324,7 @@ def buffer_control_actor(controls, fimp_instance, max_cycle,
     for port_index, port in enumerate(fimp_instance.actors[0].output_ports) :
       address_ports.append(
         sdf.port( name = '_'.join(['write_address', 'shared', str(port.index)]),
-          type = integer_data_type(port.count * actor_count) ) )
+          type = integer_DataTokenType(port.count * actor_count) ) )
       address_ports[-1].actions = []
       token_index = 0
       for actor_index, actor in enumerate(fimp_instance.actors) :
@@ -391,10 +391,10 @@ def buffer_actors(fimp_instance,
           index=0, type=std_logic)
         write_address_port = sdf.port(
           name = '_'.join(['write_address', str(actor_index), str(port.index)]),
-          type = integer_data_type(port.count))
+          type = integer_DataTokenType(port.count))
         read_address_port = sdf.port(
           name = '_'.join(['read_address', str(fimp_instance.index), str(actor_index), str(port.index)]),
-          type = integer_data_type(port.count))
+          type = integer_DataTokenType(port.count))
         data_input_port = sdf.port(
           name = '_'.join([port.name]),
           type = port.type)
@@ -424,10 +424,10 @@ def buffer_actors(fimp_instance,
         index=0, type=std_logic)
       write_address_port = sdf.port(
         name = '_'.join(['write_address', 'shared', str(port.index)]),
-        type = integer_data_type(port.count * actor_count))
+        type = integer_DataTokenType(port.count * actor_count))
       read_address_port = sdf.port(
         name = '_'.join(['read_address', str(fimp_instance.index), 'shared', str(port.index)]),
-        type = integer_data_type(port.count * actor_count))
+        type = integer_DataTokenType(port.count * actor_count))
       data_input_port = sdf.port(
         name = '_'.join([port.name]),
         type = port.type)

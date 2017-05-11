@@ -1,0 +1,363 @@
+\hypertarget{classsylva_1_1base_1_1cgra_1_1cgra}{}\section{sylva.\+base.\+cgra.\+cgra Class Reference}
+\label{classsylva_1_1base_1_1cgra_1_1cgra}\index{sylva.\+base.\+cgra.\+cgra@{sylva.\+base.\+cgra.\+cgra}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a8eb2125d36590b1d58bb4890bda88f6e}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a9efe9218f0c8eb76d2afa0337af1c0f2}{width}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a1b1902a730c5ff918da267f662c39ece}{height}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_aadc7f8128f82f0ee772bf35b2169597e}{hop\+\_\+x}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_aaaed8b52a3aa573699d89fcee405b098}{hop\+\_\+y}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a06d7bc08e37fe58d200134da5ecb7336}{TC}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a5e0af81085855ab41e2131de593af9da}{TW}=1, \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_ad4e2965612f63dfd12593a5fe3ace3ac}{fimps}=None)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a8bb04d75e7980772981822aab2966637}{add\+\_\+fimp} (self, fimp)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_ade9b60b151d4852774aab73cb01475e2}{plot\+\_\+old} (self, show\+\_\+fimp\+\_\+name=False, show\+\_\+ticks=False, show\+\_\+cgra\+\_\+nodes=False)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a62e35aca9fe9951450c7c9619bc49725}{plot} (self, show\+\_\+fimp\+\_\+name=False, show\+\_\+axis=False, show\+\_\+ticks=False, show\+\_\+cgra\+\_\+nodes=False, compact=False)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a66c18e2d096e32c652a1e95d204bdf4a}{serialize} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a8a23d70c524344ab7046469b6f47ff1a}{load} (cls, json\+\_\+dict)
+\item 
+def \hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a98e40701c2779ebe63f1669a4e68ed80}{dump} (self, filepath, indent=2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a9efe9218f0c8eb76d2afa0337af1c0f2}{width}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a1b1902a730c5ff918da267f662c39ece}{height}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_aadc7f8128f82f0ee772bf35b2169597e}{hop\+\_\+x}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_aaaed8b52a3aa573699d89fcee405b098}{hop\+\_\+y}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a06d7bc08e37fe58d200134da5ecb7336}{TC}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_a5e0af81085855ab41e2131de593af9da}{TW}
+\item 
+\hyperlink{classsylva_1_1base_1_1cgra_1_1cgra_ad4e2965612f63dfd12593a5fe3ace3ac}{fimps}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}simple cgra class for floorplanner\end{DoxyVerb}
+ 
+
+Definition at line 8 of file cgra.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a8eb2125d36590b1d58bb4890bda88f6e}\label{classsylva_1_1base_1_1cgra_1_1cgra_a8eb2125d36590b1d58bb4890bda88f6e}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{width = {\ttfamily 1},  }\item[{}]{height = {\ttfamily 1},  }\item[{}]{hop\+\_\+x = {\ttfamily 1},  }\item[{}]{hop\+\_\+y = {\ttfamily 1},  }\item[{}]{TC = {\ttfamily 1},  }\item[{}]{TW = {\ttfamily 1},  }\item[{}]{fimps = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file cgra.\+py.
+
+
+\begin{DoxyCode}
+11   \textcolor{keyword}{def }\_\_init\_\_ (self, width = 1, height = 1, hop\_x = 1, hop\_y = 1, TC = 1, TW = 1, fimps = None) :
+12 
+13     \textcolor{comment}{# TC : time for cross-window communication}
+14     \textcolor{comment}{# TW : time for intra-window communication}
+15 
+16     self.width = width
+17     self.height = height
+18     self.hop\_x = hop\_x
+19     self.hop\_y = hop\_y
+20     self.TC = TC
+21     self.TW = TW
+22     self.fimps = [] \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} fimps \textcolor{keywordflow}{else} fimps
+23 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a8bb04d75e7980772981822aab2966637}\label{classsylva_1_1base_1_1cgra_1_1cgra_a8bb04d75e7980772981822aab2966637}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!add\+\_\+fimp@{add\+\_\+fimp}}
+\index{add\+\_\+fimp@{add\+\_\+fimp}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{add\+\_\+fimp()}{add\_fimp()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+add\+\_\+fimp (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fimp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file cgra.\+py.
+
+
+
+References sylva.\+base.\+cgra.\+cgra.\+fimps.
+
+
+\begin{DoxyCode}
+24   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}{add\_fimp}(self, fimp) :
+25     \textcolor{keywordflow}{if} fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.fimps :
+26       self.fimps.append(fimp)
+27       self.fimpindexes.append(fimp.index)
+28 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a98e40701c2779ebe63f1669a4e68ed80}\label{classsylva_1_1base_1_1cgra_1_1cgra_a98e40701c2779ebe63f1669a4e68ed80}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!dump@{dump}}
+\index{dump@{dump}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+dump (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filepath,  }\item[{}]{indent = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file cgra.\+py.
+
+
+
+References sylva.\+base.\+cgra.\+cgra.\+serialize().
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+dump().
+
+
+\begin{DoxyCode}
+110   \textcolor{keyword}{def }dump(self, filepath, indent = 2) :
+111     with open(filepath, \textcolor{stringliteral}{'w+'}) \textcolor{keyword}{as} f :
+112       f.write(json.dumps(self.serialize(), indent = 2))
+113 \end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a8a23d70c524344ab7046469b6f47ff1a}\label{classsylva_1_1base_1_1cgra_1_1cgra_a8a23d70c524344ab7046469b6f47ff1a}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!load@{load}}
+\index{load@{load}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+load (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{json\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file cgra.\+py.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+load().
+
+
+\begin{DoxyCode}
+107   \textcolor{keyword}{def }load(cls, json\_dict) :
+108     \textcolor{keywordflow}{return} cgra(**json\_dict)
+109 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a62e35aca9fe9951450c7c9619bc49725}\label{classsylva_1_1base_1_1cgra_1_1cgra_a62e35aca9fe9951450c7c9619bc49725}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!plot@{plot}}
+\index{plot@{plot}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{plot()}{plot()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+plot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{show\+\_\+fimp\+\_\+name = {\ttfamily False},  }\item[{}]{show\+\_\+axis = {\ttfamily False},  }\item[{}]{show\+\_\+ticks = {\ttfamily False},  }\item[{}]{show\+\_\+cgra\+\_\+nodes = {\ttfamily False},  }\item[{}]{compact = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file cgra.\+py.
+
+
+
+References sylva.\+misc.\+plot.\+canvas\+\_\+plot(), sylva.\+base.\+cgra.\+cgra.\+fimps, sylva.\+base.\+cgra.\+cgra.\+height, and sylva.\+base.\+cgra.\+cgra.\+width.
+
+
+
+Referenced by sylva.\+base.\+cgra.\+cgra.\+plot\+\_\+old().
+
+
+\begin{DoxyCode}
+88     show\_axis = \textcolor{keyword}{False}, show\_ticks = \textcolor{keyword}{False}, show\_cgra\_nodes = \textcolor{keyword}{False}, compact = \textcolor{keyword}{False}) :
+89 
+90     plt.gca().set\_title(\textcolor{stringliteral}{'CGRA width: \{\}, height: \{\}'}.format(self.width, self.height))
+91 
+92     \textcolor{keywordflow}{if} compact :
+93       width = height = \textcolor{keywordtype}{None}
+94     \textcolor{keywordflow}{else} :
+95       width = self.width
+96       height = self.height
+97 
+98     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1misc_1_1plot_a405ea3f626f2fbeea085e412f742ce68}{canvas\_plot}([ Rectangle(f.width, f.height, x = f.x, y = f.y,
+99       name = str(f.index) + ((\textcolor{stringliteral}{':$'} + f.name + \textcolor{stringliteral}{'$'}) \textcolor{keywordflow}{if} show\_fimp\_name \textcolor{keywordflow}{else} \textcolor{stringliteral}{''}))
+100       \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps \textcolor{keywordflow}{if} f.x >= 0 \textcolor{keywordflow}{and} f.y >= 0], rectangle\_style = \{\textcolor{stringliteral}{'fc'} : \textcolor{stringliteral}{'lightgrey'}\},
+101       width = width, height = height)
+102 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_ade9b60b151d4852774aab73cb01475e2}\label{classsylva_1_1base_1_1cgra_1_1cgra_ade9b60b151d4852774aab73cb01475e2}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!plot\+\_\+old@{plot\+\_\+old}}
+\index{plot\+\_\+old@{plot\+\_\+old}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{plot\+\_\+old()}{plot\_old()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+plot\+\_\+old (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{show\+\_\+fimp\+\_\+name = {\ttfamily False},  }\item[{}]{show\+\_\+ticks = {\ttfamily False},  }\item[{}]{show\+\_\+cgra\+\_\+nodes = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file cgra.\+py.
+
+
+
+References sylva.\+base.\+cgra.\+cgra.\+fimps, sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+cgra.\+cgra.\+plot(), and sylva.\+base.\+cgra.\+cgra.\+width.
+
+
+\begin{DoxyCode}
+29   \textcolor{keyword}{def }plot\_old(self, show\_fimp\_name = False, show\_ticks = False, show\_cgra\_nodes = False) :
+30 
+31     width = self.width
+32     height = self.height
+33 
+34     plt.axis([0, width, height, 0])
+35     plt.gca().set\_aspect(\textcolor{stringliteral}{'equal'})
+36     plt.gca().set\_title(\textcolor{stringliteral}{'CGRA width: \{\}, height: \{\}'}.format(self.width, self.height))
+37     margin = 0.1
+38     size = 0.8
+39 
+40     \textcolor{comment}{# plotfloorplan(plt, 4, 5, [2], [3], [a.fimp.width], [a.fimp.height])}
+41     total\_size = size + 2 * margin
+42 
+43     plt.axis([0, width * total\_size, height * total\_size, 0])
+44 
+45     total\_size = size + 2 * margin
+46 
+47     \textcolor{keywordflow}{if} show\_ticks :
+48       plt.xticks([i \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(width)])
+49       plt.yticks([i \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(height)])
+50     \textcolor{keywordflow}{else} :
+51       plt.xticks(list(set([f.x \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps] + [f.x + f.width \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps])))
+52       plt.yticks(list(set([f.y \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps] + [f.y + f.width \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps])))
+53 
+54     \textcolor{comment}{# plot empty cgra}
+55     \textcolor{keywordflow}{if} show\_cgra\_nodes :
+56       \textcolor{keywordflow}{for} h \textcolor{keywordflow}{in} range(height) :
+57         \textcolor{keywordflow}{for} w \textcolor{keywordflow}{in} range(width) :
+58           cgra\_block = mpatches.Rectangle((w * total\_size + margin, h * total\_size + margin), size, size, \(\backslash\)
+59             facecolor=\textcolor{stringliteral}{'white'}, edgecolor=\textcolor{stringliteral}{'black'}, linestyle = \textcolor{stringliteral}{'dashed'}, linewidth=0.1)
+60           plt.gca().add\_patch(cgra\_block)
+61 
+62     \textcolor{comment}{# plot fimps}
+63     \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimps:
+64       \textcolor{keywordflow}{if} f.x >= 0 \textcolor{keywordflow}{and} f.y >= 0 :
+65         fimp\_block = mpatches.Rectangle((f.x * total\_size, f.y * total\_size), \(\backslash\)
+66           width = f.width * total\_size, height = f.height * total\_size, \(\backslash\)
+67           facecolor=\textcolor{stringliteral}{'lightgrey'})
+68         plt.gca().add\_patch(fimp\_block)
+69         rx, ry = fimp\_block.get\_xy()
+70         cx = rx + fimp\_block.get\_width()/2.0
+71         cy = ry + fimp\_block.get\_height()/2.0
+72 
+73         \textcolor{keywordflow}{if} show\_fimp\_name == \textcolor{keyword}{True} :
+74           annotation = \textcolor{stringliteral}{'%s: %s'} % (f.index, f.name)
+75         \textcolor{keywordflow}{else} :
+76           annotation = f.index
+77 
+78         plt.gca().annotate(annotation, (cx, cy),
+79           color=\textcolor{stringliteral}{'black'}, weight=\textcolor{stringliteral}{'bold'},
+80           fontsize=20, ha=\textcolor{stringliteral}{'center'}, va=\textcolor{stringliteral}{'center'})
+81       \textcolor{keywordflow}{else} :
+82         \textcolor{keywordflow}{pass}
+83         \textcolor{comment}{# raise AttributeError('fimp %s is not mapped yet.')}
+84 
+85     \textcolor{keywordflow}{return} plt
+86 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a66c18e2d096e32c652a1e95d204bdf4a}\label{classsylva_1_1base_1_1cgra_1_1cgra_a66c18e2d096e32c652a1e95d204bdf4a}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+cgra.\+cgra.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file cgra.\+py.
+
+
+
+Referenced by sylva.\+base.\+cgra.\+cgra.\+dump(), sylva.\+base.\+fimp.\+fimp.\+write\+\_\+to\+\_\+file(), sylva.\+base.\+fimp.\+fimp\+\_\+set.\+write\+\_\+to\+\_\+file(), and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+write\+\_\+to\+\_\+file().
+
+
+\begin{DoxyCode}
+103   \textcolor{keyword}{def }serialize(self) :
+104     \textcolor{keywordflow}{return} dict([(k, v) \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} self.\_\_dict\_\_.items() \textcolor{keywordflow}{if} k != \textcolor{stringliteral}{'plt'}])
+105 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_ad4e2965612f63dfd12593a5fe3ace3ac}\label{classsylva_1_1base_1_1cgra_1_1cgra_ad4e2965612f63dfd12593a5fe3ace3ac}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!fimps@{fimps}}
+\index{fimps@{fimps}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{fimps}{fimps}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+fimps}
+
+
+
+Definition at line 22 of file cgra.\+py.
+
+
+
+Referenced by sylva.\+misc.\+vhdl\+\_\+ulti.\+V\+H\+D\+L.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+cgra.\+cgra.\+add\+\_\+fimp(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+fimp\+\_\+selection\+\_\+constraint(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+resource\+\_\+dependency\+\_\+constraints(), sylva.\+misc.\+vhdl\+\_\+ulti.\+V\+H\+D\+L.\+assign\+\_\+cost(), sylva.\+base.\+cgra.\+cgra.\+plot(), and sylva.\+base.\+cgra.\+cgra.\+plot\+\_\+old().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a1b1902a730c5ff918da267f662c39ece}\label{classsylva_1_1base_1_1cgra_1_1cgra_a1b1902a730c5ff918da267f662c39ece}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!height@{height}}
+\index{height@{height}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+height}
+
+
+
+Definition at line 17 of file cgra.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+center(), sylva.\+base.\+fimp.\+fimp.\+clone(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+above\+\_\+of(), sylva.\+base.\+cgra.\+cgra.\+plot(), sylva.\+base.\+cgra.\+cgra.\+plot\+\_\+old(), and sylva.\+misc.\+plot.\+rectangle.\+right().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_aadc7f8128f82f0ee772bf35b2169597e}\label{classsylva_1_1base_1_1cgra_1_1cgra_aadc7f8128f82f0ee772bf35b2169597e}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!hop\+\_\+x@{hop\+\_\+x}}
+\index{hop\+\_\+x@{hop\+\_\+x}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{hop\+\_\+x}{hop\_x}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+hop\+\_\+x}
+
+
+
+Definition at line 18 of file cgra.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_aaaed8b52a3aa573699d89fcee405b098}\label{classsylva_1_1base_1_1cgra_1_1cgra_aaaed8b52a3aa573699d89fcee405b098}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!hop\+\_\+y@{hop\+\_\+y}}
+\index{hop\+\_\+y@{hop\+\_\+y}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{hop\+\_\+y}{hop\_y}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+hop\+\_\+y}
+
+
+
+Definition at line 19 of file cgra.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a06d7bc08e37fe58d200134da5ecb7336}\label{classsylva_1_1base_1_1cgra_1_1cgra_a06d7bc08e37fe58d200134da5ecb7336}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!TC@{TC}}
+\index{TC@{TC}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{TC}{TC}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+TC}
+
+
+
+Definition at line 20 of file cgra.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a5e0af81085855ab41e2131de593af9da}\label{classsylva_1_1base_1_1cgra_1_1cgra_a5e0af81085855ab41e2131de593af9da}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!TW@{TW}}
+\index{TW@{TW}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{TW}{TW}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+TW}
+
+
+
+Definition at line 21 of file cgra.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1cgra_1_1cgra_a9efe9218f0c8eb76d2afa0337af1c0f2}\label{classsylva_1_1base_1_1cgra_1_1cgra_a9efe9218f0c8eb76d2afa0337af1c0f2}} 
+\index{sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}!width@{width}}
+\index{width@{width}!sylva\+::base\+::cgra\+::cgra@{sylva\+::base\+::cgra\+::cgra}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily sylva.\+base.\+cgra.\+cgra.\+width}
+
+
+
+Definition at line 16 of file cgra.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+center(), sylva.\+base.\+fimp.\+fimp.\+clone(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+left\+\_\+of(), sylva.\+base.\+cgra.\+cgra.\+plot(), sylva.\+base.\+cgra.\+cgra.\+plot\+\_\+old(), sylva.\+misc.\+plot.\+rectangle.\+right(), and sylva.\+misc.\+plot.\+rectangle.\+top().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{cgra_8py}{cgra.\+py}\end{DoxyCompactItemize}

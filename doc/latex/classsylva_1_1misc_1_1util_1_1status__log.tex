@@ -1,0 +1,235 @@
+\hypertarget{classsylva_1_1misc_1_1util_1_1status__log}{}\section{sylva.\+misc.\+util.\+status\+\_\+log Class Reference}
+\label{classsylva_1_1misc_1_1util_1_1status__log}\index{sylva.\+misc.\+util.\+status\+\_\+log@{sylva.\+misc.\+util.\+status\+\_\+log}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab7c946f90680f9a4460404cf7c64f126}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a6bed7b9c7fffc5bf27401ddf0481a71d}{print\+\_\+status}=False, \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a799f3dda1ada1a55c9febe98843c5ec6}{show\+\_\+time\+\_\+stamp}=False)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a285cc969af6cbc0e41a20e38db9a6196}{update} (self)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a4e8a754367e04626ca986457b1e5c770}{time\+\_\+stamp} (self)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab98f2dd8f3108204d97d0415ab838f96}{\+\_\+\+\_\+add\+\_\+\+\_\+} (self, msg)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab13cd7b4f04bc397105042ebfb34cfaa}{\+\_\+\+\_\+iadd\+\_\+\+\_\+} (self, msg)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120ddd31d9b2e6}{write\+\_\+to\+\_\+file} (self, name=\textquotesingle{}\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab581acbcedf70a8afe11c96ea003e951}{log}\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab581acbcedf70a8afe11c96ea003e951}{log}
+\item 
+\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a8e25853177439515a92f83c533247b46}{status}
+\item 
+\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a6bed7b9c7fffc5bf27401ddf0481a71d}{print\+\_\+status}
+\item 
+\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a799f3dda1ada1a55c9febe98843c5ec6}{show\+\_\+time\+\_\+stamp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file util.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_ab7c946f90680f9a4460404cf7c64f126}\label{classsylva_1_1misc_1_1util_1_1status__log_ab7c946f90680f9a4460404cf7c64f126}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{print\+\_\+status = {\ttfamily False},  }\item[{}]{show\+\_\+time\+\_\+stamp = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file util.\+py.
+
+
+\begin{DoxyCode}
+33   \textcolor{keyword}{def }\_\_init\_\_(self, print\_status = False, show\_time\_stamp = False) :
+34 
+35     self.log = []
+36     self.status = []
+37     self.print\_status = print\_status
+38     self.show\_time\_stamp = show\_time\_stamp
+39 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_ab98f2dd8f3108204d97d0415ab838f96}\label{classsylva_1_1misc_1_1util_1_1status__log_ab98f2dd8f3108204d97d0415ab838f96}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!\+\_\+\+\_\+add\+\_\+\+\_\+@{\+\_\+\+\_\+add\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+add\+\_\+\+\_\+@{\+\_\+\+\_\+add\+\_\+\+\_\+}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+add\+\_\+\+\_\+()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file util.\+py.
+
+
+
+References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+util.\+status\+\_\+log.\+time\+\_\+stamp().
+
+
+\begin{DoxyCode}
+52   \textcolor{keyword}{def }\_\_add\_\_(self, msg) :
+53     self.status.append((self.time\_stamp(), msg))
+54     \textcolor{keywordflow}{return} self
+55 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_ab13cd7b4f04bc397105042ebfb34cfaa}\label{classsylva_1_1misc_1_1util_1_1status__log_ab13cd7b4f04bc397105042ebfb34cfaa}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+iadd\+\_\+\+\_\+()}{\_\_iadd\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+iadd\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file util.\+py.
+
+
+
+References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+util.\+status\+\_\+log.\+time\+\_\+stamp().
+
+
+\begin{DoxyCode}
+56   \textcolor{keyword}{def }\_\_iadd\_\_(self, msg) :
+57     self.status.append((self.time\_stamp(), msg))
+58     \textcolor{keywordflow}{return} self
+59 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a4e8a754367e04626ca986457b1e5c770}\label{classsylva_1_1misc_1_1util_1_1status__log_a4e8a754367e04626ca986457b1e5c770}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!time\+\_\+stamp@{time\+\_\+stamp}}
+\index{time\+\_\+stamp@{time\+\_\+stamp}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{time\+\_\+stamp()}{time\_stamp()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+time\+\_\+stamp (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file util.\+py.
+
+
+
+Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+add\+\_\+\+\_\+(), and sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+iadd\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+49   \textcolor{keyword}{def }time\_stamp(self) :
+50     \textcolor{keywordflow}{return} time.strftime(\textcolor{stringliteral}{"[%a, %d %b %Y %H:%M:%S] "}, time.localtime())
+51 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a285cc969af6cbc0e41a20e38db9a6196}\label{classsylva_1_1misc_1_1util_1_1status__log_a285cc969af6cbc0e41a20e38db9a6196}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!update@{update}}
+\index{update@{update}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+update (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file util.\+py.
+
+
+
+References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+log, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log, sylva.\+misc.\+util.\+status\+\_\+log.\+print\+\_\+status, sylva.\+misc.\+util.\+status\+\_\+log.\+show\+\_\+time\+\_\+stamp, and sylva.\+misc.\+util.\+status\+\_\+log.\+status.
+
+
+\begin{DoxyCode}
+40   \textcolor{keyword}{def }update(self) :
+41     \textcolor{keywordflow}{if} self.print\_status :
+42       \textcolor{keywordflow}{if} self.show\_time\_stamp :
+43         print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([ s[0] + s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
+44       \textcolor{keywordflow}{else} :
+45         print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
+46     self.log += self.status
+47     self.status = []
+48 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120ddd31d9b2e6}\label{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120ddd31d9b2e6}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}}
+\index{write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{write\+\_\+to\+\_\+file()}{write\_to\_file()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+util.\+status\+\_\+log.\+write\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \textquotesingle{}\hyperlink{classsylva_1_1misc_1_1util_1_1status__log_ab581acbcedf70a8afe11c96ea003e951}{log}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file util.\+py.
+
+
+
+References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+log, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log.
+
+
+\begin{DoxyCode}
+60   \textcolor{keyword}{def }write\_to\_file(self, name = 'log') :
+61     with open(name, \textcolor{stringliteral}{'w+'}) \textcolor{keyword}{as} fp :
+62       \textcolor{keywordflow}{for} l \textcolor{keywordflow}{in} self.log :
+63         fp.write(l[0] + l[1] + \textcolor{stringliteral}{'\(\backslash\)n'})
+64 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_ab581acbcedf70a8afe11c96ea003e951}\label{classsylva_1_1misc_1_1util_1_1status__log_ab581acbcedf70a8afe11c96ea003e951}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!log@{log}}
+\index{log@{log}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+status\+\_\+log.\+log}
+
+
+
+Definition at line 35 of file util.\+py.
+
+
+
+Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update(), and sylva.\+misc.\+util.\+status\+\_\+log.\+write\+\_\+to\+\_\+file().
+
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a6bed7b9c7fffc5bf27401ddf0481a71d}\label{classsylva_1_1misc_1_1util_1_1status__log_a6bed7b9c7fffc5bf27401ddf0481a71d}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!print\+\_\+status@{print\+\_\+status}}
+\index{print\+\_\+status@{print\+\_\+status}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{print\+\_\+status}{print\_status}}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+status\+\_\+log.\+print\+\_\+status}
+
+
+
+Definition at line 37 of file util.\+py.
+
+
+
+Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update().
+
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a799f3dda1ada1a55c9febe98843c5ec6}\label{classsylva_1_1misc_1_1util_1_1status__log_a799f3dda1ada1a55c9febe98843c5ec6}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!show\+\_\+time\+\_\+stamp@{show\+\_\+time\+\_\+stamp}}
+\index{show\+\_\+time\+\_\+stamp@{show\+\_\+time\+\_\+stamp}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{show\+\_\+time\+\_\+stamp}{show\_time\_stamp}}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+status\+\_\+log.\+show\+\_\+time\+\_\+stamp}
+
+
+
+Definition at line 38 of file util.\+py.
+
+
+
+Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update().
+
+\mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a8e25853177439515a92f83c533247b46}\label{classsylva_1_1misc_1_1util_1_1status__log_a8e25853177439515a92f83c533247b46}} 
+\index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!status@{status}}
+\index{status@{status}!sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+status\+\_\+log.\+status}
+
+
+
+Definition at line 36 of file util.\+py.
+
+
+
+Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+iadd\+\_\+\+\_\+(), and sylva.\+misc.\+util.\+status\+\_\+log.\+update().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+misc/\hyperlink{util_8py}{util.\+py}\end{DoxyCompactItemize}

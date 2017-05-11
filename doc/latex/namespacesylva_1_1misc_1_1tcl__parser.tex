@@ -1,0 +1,671 @@
+\hypertarget{namespacesylva_1_1misc_1_1tcl__parser}{}\section{sylva.\+misc.\+tcl\+\_\+parser Namespace Reference}
+\label{namespacesylva_1_1misc_1_1tcl__parser}\index{sylva.\+misc.\+tcl\+\_\+parser@{sylva.\+misc.\+tcl\+\_\+parser}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}{load\+\_\+command\+\_\+from\+\_\+file} (command\+\_\+file\+\_\+path, encoding=\textquotesingle{}utf-\/8\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof} (values, operation=\textquotesingle{}$\vert$\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aab59812e931f24c8e7d1cbffd2fe587e}{parse\+\_\+script} (file\+\_\+name, encoding=\textquotesingle{}utf-\/8\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}{true} = Keyword(\textquotesingle{}true\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}{false} = Keyword(\textquotesingle{}false\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}{low} = Keyword(\textquotesingle{}low\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}{mid} = Keyword(\textquotesingle{}mid\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}{high} = Keyword(\textquotesingle{}high\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}{full} = Keyword(\textquotesingle{}full\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} = Word(nums)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}{string\+\_\+value} = (Word( alphas + \textquotesingle{}\+\_\+./\textquotesingle{}, alphanums + \textquotesingle{}\+\_\+./\textquotesingle{}) $\vert$ quoted\+String)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}{single\+\_\+value} = (\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}{low} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}{high} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}{mid} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}{full} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}{string\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} $\vert$ quoted\+String $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}{true} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}{false})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a9da481e2e9eb38c1443d778d3f18a4d3}{left\+\_\+bracket} = Suppress(\textquotesingle{}\{\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ac64e684e7c1d68a9629eb9892e36ba11}{right\+\_\+bracket} = Suppress(\textquotesingle{}\}\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}{more\+\_\+values}
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} = (\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}{single\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}{more\+\_\+values})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5c0cde73a595ea661179ea225ff2ceba}{command}
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{attribute} = Word(alphas + \textquotesingle{}\+\_\+\textquotesingle{})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a41d78ece735b8cfe1b91e423ca73f72f}{set\+\_\+attribute\+\_\+command} = (set\+\_\+attribute + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{attribute} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a310173d7899d08bcad2ec9f671348bf3}{set\+\_\+attr\+\_\+command} = (set\+\_\+attr + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{attribute} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ab38ad19d9c0cfc5c8f60d8cabbdeb0e5}{constraints} = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}tmax\textquotesingle{}, \textquotesingle{}rmax\textquotesingle{}, \textquotesingle{}emax\textquotesingle{}, \textquotesingle{}amax\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}{constraint\+\_\+name} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(constraints.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}{constraint} = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}{constraint\+\_\+name} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a6e28133e31ff032306235b32b0022359}{define\+\_\+constraint\+\_\+command} = (define\+\_\+constraint + One\+Or\+More(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}{constraint}))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5a907b434f34bc173db7218151b9f179}{optimizations} = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}ka\textquotesingle{}, \textquotesingle{}ke\textquotesingle{}, \textquotesingle{}kt\textquotesingle{}, \textquotesingle{}kr\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}{optimization\+\_\+objective\+\_\+name} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(optimizations.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}{optimization\+\_\+objective} = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}{optimization\+\_\+objective\+\_\+name} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a7d18cc1131533a809b16ee58f156c982}{define\+\_\+optimization\+\_\+command} = (define\+\_\+optimization + One\+Or\+More(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}{optimization\+\_\+objective}))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a733683e83c5d1482a9f247fd092c1e74}{synthesis\+\_\+options}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad0697a68890de131865fe7aa8519784e}{synthesis\+\_\+option} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(synthesis\+\_\+options.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a049055f00db6c830fd559bbf6724c726}{synthesize\+\_\+command}
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0500d8c917dada620c715ee30d46c764}{run\+\_\+command} = (run + quoted\+String)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a76796ee2f152c59afca41bc3c4977b81}{read\+\_\+hdl\+\_\+command} = (read\+\_\+hdl + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a00e21364c10011f454cb83c1cdcdd5f2}{create\+\_\+fimp\+\_\+library\+\_\+command} = create\+\_\+fimp\+\_\+library
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a6ce51189f962d0d4e7cdcf224371100c}{write\+\_\+command} = (write + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value}) + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value}))
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a31cbff9e620c0f82c424f20ea7e70ecb}{load\+\_\+command} = (load + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(Suppress(\textquotesingle{}$<$\textquotesingle{}) $\vert$ Suppress(\textquotesingle{}from\textquotesingle{})) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad63aacf8188d9604a6876b638b975522}{dump\+\_\+command} = (dump + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{})) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad3eb2c3b522821a7537d99228f52138f}{source\+\_\+command} = (source + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aa1c1c65eee0114087b82afaa297507b0}{pick\+\_\+solution\+\_\+command} = (pick\+\_\+solution + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer}))
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a9dd05ec51936992522cb2776147d6794}{floorplan\+\_\+command} = (floorplan + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2cff869e2129abd80f1679cc0becad35}{assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command} = assign\+\_\+fimps\+\_\+to\+\_\+cgra
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a77b6ae03d7943edc073dde7d9883d925}{generate\+\_\+outputs} = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}vhdl\textquotesingle{}, \textquotesingle{}verilog\textquotesingle{}, \textquotesingle{}matlab\textquotesingle{}, \textquotesingle{}hsdf\+\_\+graph\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ab0d1caae304d09d067e44d8b51e0b341}{generate\+\_\+output} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(generate\+\_\+outputs.\+keys)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_adf51aa24e01a036ffcac0e6996994051}{key\+\_\+word\+\_\+from} = Suppress(\textquotesingle{}from\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a77cc734b69238034c98fadaceef2fbc3}{generate\+\_\+inputs} = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}hsdf\+\_\+graph\textquotesingle{}, \textquotesingle{}sdf\+\_\+graph\textquotesingle{}, \textquotesingle{}simulink\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae4978fc0cd51c6f590351e10d46bda95}{generate\+\_\+input} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(generate\+\_\+inputs.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a09154238372afd143ddb6fdd344dbf1e}{generate\+\_\+command}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aeab8373fb1283d1df4dccb93acde4290}{one\+\_\+command} = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(\mbox{[}cmd + \textquotesingle{}\+\_\+command\textquotesingle{} for cmd in command.\+keys\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}\label{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!anyof@{anyof}}
+\index{anyof@{anyof}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{anyof()}{anyof()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+anyof (\begin{DoxyParamCaption}\item[{}]{values,  }\item[{}]{operation = {\ttfamily \textquotesingle{}$\vert$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file tcl\+\_\+parser.\+py.
+
+
+\begin{DoxyCode}
+47   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(values, operation = '|') :
+48     \textcolor{keywordflow}{return} eval(\textcolor{stringliteral}{'('} + (\textcolor{stringliteral}{' '}+operation+\textcolor{stringliteral}{' '}).join(key \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} values) + \textcolor{stringliteral}{')'})
+49 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}\label{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!load\+\_\+command\+\_\+from\+\_\+file@{load\+\_\+command\+\_\+from\+\_\+file}}
+\index{load\+\_\+command\+\_\+from\+\_\+file@{load\+\_\+command\+\_\+from\+\_\+file}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{load\+\_\+command\+\_\+from\+\_\+file()}{load\_command\_from\_file()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+load\+\_\+command\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{}]{command\+\_\+file\+\_\+path,  }\item[{}]{encoding = {\ttfamily \textquotesingle{}utf-\/8\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file tcl\+\_\+parser.\+py.
+
+
+
+Referenced by sylva.\+misc.\+tcl\+\_\+parser.\+parse\+\_\+script().
+
+
+\begin{DoxyCode}
+10   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}{load\_command\_from\_file}(command\_file\_path, encoding = 'utf-8') :
+11     with open(command\_file\_path, \textcolor{stringliteral}{'r', encoding = '}utf-8') as fp :
+12       cmds = []
+13       \textcolor{keywordflow}{while} \textcolor{keyword}{True} :
+14         one\_line = fp.readline()
+15         \textcolor{keywordflow}{if} one\_line :
+16           \textcolor{keywordflow}{if} one\_line != \textcolor{stringliteral}{'\(\backslash\)n'} \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} one\_line.startswith(\textcolor{stringliteral}{'#'}) :
+17             cmds.append(one\_line[:-1]) \textcolor{comment}{# remove the '\(\backslash\)n' in the end}
+18         \textcolor{keywordflow}{else} :
+19           \textcolor{keywordflow}{break}
+20     \textcolor{keywordflow}{return} cmds
+21 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_aab59812e931f24c8e7d1cbffd2fe587e}\label{namespacesylva_1_1misc_1_1tcl__parser_aab59812e931f24c8e7d1cbffd2fe587e}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!parse\+\_\+script@{parse\+\_\+script}}
+\index{parse\+\_\+script@{parse\+\_\+script}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{parse\+\_\+script()}{parse\_script()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+parse\+\_\+script (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name,  }\item[{}]{encoding = {\ttfamily \textquotesingle{}utf-\/8\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file tcl\+\_\+parser.\+py.
+
+
+
+References sylva.\+misc.\+tcl\+\_\+parser.\+load\+\_\+command\+\_\+from\+\_\+file().
+
+
+\begin{DoxyCode}
+133 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aab59812e931f24c8e7d1cbffd2fe587e}{parse\_script}(file\_name, encoding = 'utf-8') :
+134   cmd\_string\_list = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}{load\_command\_from\_file}(file\_name, encoding=encoding)
+135   cmd\_list = [ one\_command.parseString(cs).asList() \textcolor{keywordflow}{for} cs \textcolor{keywordflow}{in} cmd\_string\_list ]
+136   \textcolor{keywordflow}{return} cmd\_list
+137 \end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a2cff869e2129abd80f1679cc0becad35}\label{namespacesylva_1_1misc_1_1tcl__parser_a2cff869e2129abd80f1679cc0becad35}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command@{assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command}}
+\index{assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command@{assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command}{assign\_fimps\_to\_cgra\_command}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command = assign\+\_\+fimps\+\_\+to\+\_\+cgra}
+
+
+
+Definition at line 120 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}\label{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!attribute@{attribute}}
+\index{attribute@{attribute}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{attribute}{attribute}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+attribute = Word(alphas + \textquotesingle{}\+\_\+\textquotesingle{})}
+
+
+
+Definition at line 88 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a5c0cde73a595ea661179ea225ff2ceba}\label{namespacesylva_1_1misc_1_1tcl__parser_a5c0cde73a595ea661179ea225ff2ceba}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!command@{command}}
+\index{command@{command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+command}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  Keywords(
+2     \textcolor{stringliteral}{'synthesize'},
+3     \textcolor{stringliteral}{'set\_attribute'}, \textcolor{stringliteral}{'set\_attr'},
+4     \textcolor{stringliteral}{'define\_constraint'},
+5     \textcolor{stringliteral}{'define\_optimization'},
+6     \textcolor{stringliteral}{'read\_hdl'},
+7     \textcolor{stringliteral}{'create\_fimp\_library'},
+8     \textcolor{stringliteral}{'write'},
+9     \textcolor{stringliteral}{'dump'},
+10     \textcolor{stringliteral}{'load'},
+11     \textcolor{stringliteral}{'source'},
+12     \textcolor{stringliteral}{'generate'},
+13     \textcolor{stringliteral}{'run'},
+14     \textcolor{stringliteral}{'pick\_solution'},
+15     \textcolor{stringliteral}{'floorplan'},
+16     \textcolor{stringliteral}{'assign\_fimps\_to\_cgra'})
+\end{DoxyCode}
+
+
+Definition at line 70 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}\label{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!constraint@{constraint}}
+\index{constraint@{constraint}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{constraint}{constraint}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+constraint = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}{constraint\+\_\+name} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})}
+
+
+
+Definition at line 95 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}\label{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!constraint\+\_\+name@{constraint\+\_\+name}}
+\index{constraint\+\_\+name@{constraint\+\_\+name}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{constraint\+\_\+name}{constraint\_name}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+constraint\+\_\+name = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(constraints.\+keys)}
+
+
+
+Definition at line 94 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ab38ad19d9c0cfc5c8f60d8cabbdeb0e5}\label{namespacesylva_1_1misc_1_1tcl__parser_ab38ad19d9c0cfc5c8f60d8cabbdeb0e5}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!constraints@{constraints}}
+\index{constraints@{constraints}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{constraints}{constraints}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+constraints = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}tmax\textquotesingle{}, \textquotesingle{}rmax\textquotesingle{}, \textquotesingle{}emax\textquotesingle{}, \textquotesingle{}amax\textquotesingle{})}
+
+
+
+Definition at line 93 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a00e21364c10011f454cb83c1cdcdd5f2}\label{namespacesylva_1_1misc_1_1tcl__parser_a00e21364c10011f454cb83c1cdcdd5f2}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!create\+\_\+fimp\+\_\+library\+\_\+command@{create\+\_\+fimp\+\_\+library\+\_\+command}}
+\index{create\+\_\+fimp\+\_\+library\+\_\+command@{create\+\_\+fimp\+\_\+library\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{create\+\_\+fimp\+\_\+library\+\_\+command}{create\_fimp\_library\_command}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+create\+\_\+fimp\+\_\+library\+\_\+command = create\+\_\+fimp\+\_\+library}
+
+
+
+Definition at line 113 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a6e28133e31ff032306235b32b0022359}\label{namespacesylva_1_1misc_1_1tcl__parser_a6e28133e31ff032306235b32b0022359}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!define\+\_\+constraint\+\_\+command@{define\+\_\+constraint\+\_\+command}}
+\index{define\+\_\+constraint\+\_\+command@{define\+\_\+constraint\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{define\+\_\+constraint\+\_\+command}{define\_constraint\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+define\+\_\+constraint\+\_\+command = (define\+\_\+constraint + One\+Or\+More(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}{constraint}))}
+
+
+
+Definition at line 96 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a7d18cc1131533a809b16ee58f156c982}\label{namespacesylva_1_1misc_1_1tcl__parser_a7d18cc1131533a809b16ee58f156c982}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!define\+\_\+optimization\+\_\+command@{define\+\_\+optimization\+\_\+command}}
+\index{define\+\_\+optimization\+\_\+command@{define\+\_\+optimization\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{define\+\_\+optimization\+\_\+command}{define\_optimization\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+define\+\_\+optimization\+\_\+command = (define\+\_\+optimization + One\+Or\+More(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}{optimization\+\_\+objective}))}
+
+
+
+Definition at line 102 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ad63aacf8188d9604a6876b638b975522}\label{namespacesylva_1_1misc_1_1tcl__parser_ad63aacf8188d9604a6876b638b975522}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!dump\+\_\+command@{dump\+\_\+command}}
+\index{dump\+\_\+command@{dump\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{dump\+\_\+command}{dump\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+dump\+\_\+command = (dump + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{})) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 116 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}\label{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!false@{false}}
+\index{false@{false}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{false}{false}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+false = Keyword(\textquotesingle{}false\textquotesingle{})}
+
+
+
+Definition at line 52 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a9dd05ec51936992522cb2776147d6794}\label{namespacesylva_1_1misc_1_1tcl__parser_a9dd05ec51936992522cb2776147d6794}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!floorplan\+\_\+command@{floorplan\+\_\+command}}
+\index{floorplan\+\_\+command@{floorplan\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{floorplan\+\_\+command}{floorplan\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+floorplan\+\_\+command = (floorplan + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})))}
+
+
+
+Definition at line 119 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}\label{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!full@{full}}
+\index{full@{full}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+full = Keyword(\textquotesingle{}full\textquotesingle{})}
+
+
+
+Definition at line 56 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a09154238372afd143ddb6fdd344dbf1e}\label{namespacesylva_1_1misc_1_1tcl__parser_a09154238372afd143ddb6fdd344dbf1e}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!generate\+\_\+command@{generate\+\_\+command}}
+\index{generate\+\_\+command@{generate\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{generate\+\_\+command}{generate\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+command}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  (generate + generate\_output + key\_word\_from + generate\_input +\(\backslash\)
+2     Optional(Suppress(\textcolor{stringliteral}{'>'}) + value))
+\end{DoxyCode}
+
+
+Definition at line 128 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ae4978fc0cd51c6f590351e10d46bda95}\label{namespacesylva_1_1misc_1_1tcl__parser_ae4978fc0cd51c6f590351e10d46bda95}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!generate\+\_\+input@{generate\+\_\+input}}
+\index{generate\+\_\+input@{generate\+\_\+input}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{generate\+\_\+input}{generate\_input}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+input = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(generate\+\_\+inputs.\+keys)}
+
+
+
+Definition at line 127 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a77cc734b69238034c98fadaceef2fbc3}\label{namespacesylva_1_1misc_1_1tcl__parser_a77cc734b69238034c98fadaceef2fbc3}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!generate\+\_\+inputs@{generate\+\_\+inputs}}
+\index{generate\+\_\+inputs@{generate\+\_\+inputs}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{generate\+\_\+inputs}{generate\_inputs}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+inputs = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}hsdf\+\_\+graph\textquotesingle{}, \textquotesingle{}sdf\+\_\+graph\textquotesingle{}, \textquotesingle{}simulink\textquotesingle{})}
+
+
+
+Definition at line 126 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ab0d1caae304d09d067e44d8b51e0b341}\label{namespacesylva_1_1misc_1_1tcl__parser_ab0d1caae304d09d067e44d8b51e0b341}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!generate\+\_\+output@{generate\+\_\+output}}
+\index{generate\+\_\+output@{generate\+\_\+output}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{generate\+\_\+output}{generate\_output}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+output = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(generate\+\_\+outputs.\+keys)}
+
+
+
+Definition at line 124 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a77b6ae03d7943edc073dde7d9883d925}\label{namespacesylva_1_1misc_1_1tcl__parser_a77b6ae03d7943edc073dde7d9883d925}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!generate\+\_\+outputs@{generate\+\_\+outputs}}
+\index{generate\+\_\+outputs@{generate\+\_\+outputs}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{generate\+\_\+outputs}{generate\_outputs}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+outputs = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}vhdl\textquotesingle{}, \textquotesingle{}verilog\textquotesingle{}, \textquotesingle{}matlab\textquotesingle{}, \textquotesingle{}hsdf\+\_\+graph\textquotesingle{})}
+
+
+
+Definition at line 123 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}\label{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!high@{high}}
+\index{high@{high}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{high}{high}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+high = Keyword(\textquotesingle{}high\textquotesingle{})}
+
+
+
+Definition at line 55 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}\label{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!integer@{integer}}
+\index{integer@{integer}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{integer}{integer}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+integer = Word(nums)}
+
+
+
+Definition at line 57 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_adf51aa24e01a036ffcac0e6996994051}\label{namespacesylva_1_1misc_1_1tcl__parser_adf51aa24e01a036ffcac0e6996994051}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!key\+\_\+word\+\_\+from@{key\+\_\+word\+\_\+from}}
+\index{key\+\_\+word\+\_\+from@{key\+\_\+word\+\_\+from}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{key\+\_\+word\+\_\+from}{key\_word\_from}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+key\+\_\+word\+\_\+from = Suppress(\textquotesingle{}from\textquotesingle{})}
+
+
+
+Definition at line 125 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a9da481e2e9eb38c1443d778d3f18a4d3}\label{namespacesylva_1_1misc_1_1tcl__parser_a9da481e2e9eb38c1443d778d3f18a4d3}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!left\+\_\+bracket@{left\+\_\+bracket}}
+\index{left\+\_\+bracket@{left\+\_\+bracket}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{left\+\_\+bracket}{left\_bracket}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+left\+\_\+bracket = Suppress(\textquotesingle{}\{\textquotesingle{})}
+
+
+
+Definition at line 61 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a31cbff9e620c0f82c424f20ea7e70ecb}\label{namespacesylva_1_1misc_1_1tcl__parser_a31cbff9e620c0f82c424f20ea7e70ecb}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!load\+\_\+command@{load\+\_\+command}}
+\index{load\+\_\+command@{load\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{load\+\_\+command}{load\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+load\+\_\+command = (load + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(Suppress(\textquotesingle{}$<$\textquotesingle{}) $\vert$ Suppress(\textquotesingle{}from\textquotesingle{})) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 115 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}\label{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!low@{low}}
+\index{low@{low}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{low}{low}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+low = Keyword(\textquotesingle{}low\textquotesingle{})}
+
+
+
+Definition at line 53 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}\label{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!mid@{mid}}
+\index{mid@{mid}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{mid}{mid}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+mid = Keyword(\textquotesingle{}mid\textquotesingle{})}
+
+
+
+Definition at line 54 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}\label{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!more\+\_\+values@{more\+\_\+values}}
+\index{more\+\_\+values@{more\+\_\+values}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{more\+\_\+values}{more\_values}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+more\+\_\+values}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  Group(left\_bracket \(\backslash\)
+2               + OneOrMore(single\_value + Optional(Suppress(\textcolor{stringliteral}{','}))) \(\backslash\)
+3               + right\_bracket)
+\end{DoxyCode}
+
+
+Definition at line 63 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_aeab8373fb1283d1df4dccb93acde4290}\label{namespacesylva_1_1misc_1_1tcl__parser_aeab8373fb1283d1df4dccb93acde4290}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!one\+\_\+command@{one\+\_\+command}}
+\index{one\+\_\+command@{one\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{one\+\_\+command}{one\_command}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+one\+\_\+command = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(\mbox{[}cmd + \textquotesingle{}\+\_\+command\textquotesingle{} for cmd in command.\+keys\mbox{]})}
+
+
+
+Definition at line 131 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}\label{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!optimization\+\_\+objective@{optimization\+\_\+objective}}
+\index{optimization\+\_\+objective@{optimization\+\_\+objective}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{optimization\+\_\+objective}{optimization\_objective}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+optimization\+\_\+objective = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}{optimization\+\_\+objective\+\_\+name} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer})}
+
+
+
+Definition at line 101 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}\label{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!optimization\+\_\+objective\+\_\+name@{optimization\+\_\+objective\+\_\+name}}
+\index{optimization\+\_\+objective\+\_\+name@{optimization\+\_\+objective\+\_\+name}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{optimization\+\_\+objective\+\_\+name}{optimization\_objective\_name}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+optimization\+\_\+objective\+\_\+name = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(optimizations.\+keys)}
+
+
+
+Definition at line 100 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a5a907b434f34bc173db7218151b9f179}\label{namespacesylva_1_1misc_1_1tcl__parser_a5a907b434f34bc173db7218151b9f179}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!optimizations@{optimizations}}
+\index{optimizations@{optimizations}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{optimizations}{optimizations}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+optimizations = \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{Keywords}(\textquotesingle{}ka\textquotesingle{}, \textquotesingle{}ke\textquotesingle{}, \textquotesingle{}kt\textquotesingle{}, \textquotesingle{}kr\textquotesingle{})}
+
+
+
+Definition at line 99 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_aa1c1c65eee0114087b82afaa297507b0}\label{namespacesylva_1_1misc_1_1tcl__parser_aa1c1c65eee0114087b82afaa297507b0}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!pick\+\_\+solution\+\_\+command@{pick\+\_\+solution\+\_\+command}}
+\index{pick\+\_\+solution\+\_\+command@{pick\+\_\+solution\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{pick\+\_\+solution\+\_\+command}{pick\_solution\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+pick\+\_\+solution\+\_\+command = (pick\+\_\+solution + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer}))}
+
+
+
+Definition at line 118 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a76796ee2f152c59afca41bc3c4977b81}\label{namespacesylva_1_1misc_1_1tcl__parser_a76796ee2f152c59afca41bc3c4977b81}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!read\+\_\+hdl\+\_\+command@{read\+\_\+hdl\+\_\+command}}
+\index{read\+\_\+hdl\+\_\+command@{read\+\_\+hdl\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{read\+\_\+hdl\+\_\+command}{read\_hdl\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+read\+\_\+hdl\+\_\+command = (read\+\_\+hdl + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 112 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ac64e684e7c1d68a9629eb9892e36ba11}\label{namespacesylva_1_1misc_1_1tcl__parser_ac64e684e7c1d68a9629eb9892e36ba11}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!right\+\_\+bracket@{right\+\_\+bracket}}
+\index{right\+\_\+bracket@{right\+\_\+bracket}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{right\+\_\+bracket}{right\_bracket}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+right\+\_\+bracket = Suppress(\textquotesingle{}\}\textquotesingle{})}
+
+
+
+Definition at line 62 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a0500d8c917dada620c715ee30d46c764}\label{namespacesylva_1_1misc_1_1tcl__parser_a0500d8c917dada620c715ee30d46c764}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!run\+\_\+command@{run\+\_\+command}}
+\index{run\+\_\+command@{run\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{run\+\_\+command}{run\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+run\+\_\+command = (run + quoted\+String)}
+
+
+
+Definition at line 111 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a310173d7899d08bcad2ec9f671348bf3}\label{namespacesylva_1_1misc_1_1tcl__parser_a310173d7899d08bcad2ec9f671348bf3}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!set\+\_\+attr\+\_\+command@{set\+\_\+attr\+\_\+command}}
+\index{set\+\_\+attr\+\_\+command@{set\+\_\+attr\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{set\+\_\+attr\+\_\+command}{set\_attr\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+set\+\_\+attr\+\_\+command = (set\+\_\+attr + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{attribute} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 90 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a41d78ece735b8cfe1b91e423ca73f72f}\label{namespacesylva_1_1misc_1_1tcl__parser_a41d78ece735b8cfe1b91e423ca73f72f}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!set\+\_\+attribute\+\_\+command@{set\+\_\+attribute\+\_\+command}}
+\index{set\+\_\+attribute\+\_\+command@{set\+\_\+attribute\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{set\+\_\+attribute\+\_\+command}{set\_attribute\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+set\+\_\+attribute\+\_\+command = (set\+\_\+attribute + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{attribute} + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 89 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}\label{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!single\+\_\+value@{single\+\_\+value}}
+\index{single\+\_\+value@{single\+\_\+value}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{single\+\_\+value}{single\_value}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+single\+\_\+value = (\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}{low} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}{high} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}{mid} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}{full} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}{string\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{integer} $\vert$ quoted\+String $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}{true} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}{false})}
+
+
+
+Definition at line 60 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ad3eb2c3b522821a7537d99228f52138f}\label{namespacesylva_1_1misc_1_1tcl__parser_ad3eb2c3b522821a7537d99228f52138f}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!source\+\_\+command@{source\+\_\+command}}
+\index{source\+\_\+command@{source\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{source\+\_\+command}{source\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+source\+\_\+command = (source + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})}
+
+
+
+Definition at line 117 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}\label{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!string\+\_\+value@{string\+\_\+value}}
+\index{string\+\_\+value@{string\+\_\+value}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{string\+\_\+value}{string\_value}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+string\+\_\+value = (Word( alphas + \textquotesingle{}\+\_\+./\textquotesingle{}, alphanums + \textquotesingle{}\+\_\+./\textquotesingle{}) $\vert$ quoted\+String)}
+
+
+
+Definition at line 59 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_ad0697a68890de131865fe7aa8519784e}\label{namespacesylva_1_1misc_1_1tcl__parser_ad0697a68890de131865fe7aa8519784e}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!synthesis\+\_\+option@{synthesis\+\_\+option}}
+\index{synthesis\+\_\+option@{synthesis\+\_\+option}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{synthesis\+\_\+option}{synthesis\_option}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+synthesis\+\_\+option = \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(synthesis\+\_\+options.\+keys)}
+
+
+
+Definition at line 107 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a733683e83c5d1482a9f247fd092c1e74}\label{namespacesylva_1_1misc_1_1tcl__parser_a733683e83c5d1482a9f247fd092c1e74}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!synthesis\+\_\+options@{synthesis\+\_\+options}}
+\index{synthesis\+\_\+options@{synthesis\+\_\+options}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{synthesis\+\_\+options}{synthesis\_options}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+synthesis\+\_\+options}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  Keywords(
+2     \textcolor{stringliteral}{'to\_asic'}, \textcolor{stringliteral}{'to\_fpga'}, \textcolor{stringliteral}{'to\_cgra'},\textcolor{stringliteral}{'effort'})
+\end{DoxyCode}
+
+
+Definition at line 105 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a049055f00db6c830fd559bbf6724c726}\label{namespacesylva_1_1misc_1_1tcl__parser_a049055f00db6c830fd559bbf6724c726}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!synthesize\+\_\+command@{synthesize\+\_\+command}}
+\index{synthesize\+\_\+command@{synthesize\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{synthesize\+\_\+command}{synthesize\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+synthesize\+\_\+command}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  (synthesize + \(\backslash\)
+2     Optional(OneOrMore(Suppress(\textcolor{stringliteral}{'-'}) + synthesis\_option + Optional(value))))
+\end{DoxyCode}
+
+
+Definition at line 108 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}\label{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!true@{true}}
+\index{true@{true}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{true}{true}}
+{\footnotesize\ttfamily sylva.\+misc.\+tcl\+\_\+parser.\+true = Keyword(\textquotesingle{}true\textquotesingle{})}
+
+
+
+Definition at line 51 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}\label{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!value@{value}}
+\index{value@{value}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+value = (\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}{single\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}{more\+\_\+values})}
+
+
+
+Definition at line 67 of file tcl\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1tcl__parser_a6ce51189f962d0d4e7cdcf224371100c}\label{namespacesylva_1_1misc_1_1tcl__parser_a6ce51189f962d0d4e7cdcf224371100c}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}!write\+\_\+command@{write\+\_\+command}}
+\index{write\+\_\+command@{write\+\_\+command}!sylva\+::misc\+::tcl\+\_\+parser@{sylva\+::misc\+::tcl\+\_\+parser}}
+\subsubsection{\texorpdfstring{write\+\_\+command}{write\_command}}
+{\footnotesize\ttfamily tuple sylva.\+misc.\+tcl\+\_\+parser.\+write\+\_\+command = (write + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value} + Optional(\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value}) + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{}) + \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value}))}
+
+
+
+Definition at line 114 of file tcl\+\_\+parser.\+py.
+

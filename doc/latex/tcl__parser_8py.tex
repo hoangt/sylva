@@ -1,0 +1,114 @@
+\hypertarget{tcl__parser_8py}{}\section{misc/tcl\+\_\+parser.py File Reference}
+\label{tcl__parser_8py}\index{misc/tcl\+\_\+parser.\+py@{misc/tcl\+\_\+parser.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{sylva.\+misc.\+tcl\+\_\+parser.\+Keywords}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacesylva_1_1misc_1_1tcl__parser}{sylva.\+misc.\+tcl\+\_\+parser}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3a51f30aa622037c144676d280943caa}{sylva.\+misc.\+tcl\+\_\+parser.\+load\+\_\+command\+\_\+from\+\_\+file} (command\+\_\+file\+\_\+path, encoding=\textquotesingle{}utf-\/8\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{sylva.\+misc.\+tcl\+\_\+parser.\+anyof} (values, operation=\textquotesingle{}$\vert$\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aab59812e931f24c8e7d1cbffd2fe587e}{sylva.\+misc.\+tcl\+\_\+parser.\+parse\+\_\+script} (file\+\_\+name, encoding=\textquotesingle{}utf-\/8\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a69ee465af30df5bf43aeceff5d2575f5}{sylva.\+misc.\+tcl\+\_\+parser.\+true} = Keyword(\textquotesingle{}true\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afd24314ff35451e53749e5b88bfded24}{sylva.\+misc.\+tcl\+\_\+parser.\+false} = Keyword(\textquotesingle{}false\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a3e7d379d24d71398245bc0928adf3d96}{sylva.\+misc.\+tcl\+\_\+parser.\+low} = Keyword(\textquotesingle{}low\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_afc97598c7f63cc5c0edee20b2c6e1841}{sylva.\+misc.\+tcl\+\_\+parser.\+mid} = Keyword(\textquotesingle{}mid\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae1450b8eb1791d39aebf72a6339c13ed}{sylva.\+misc.\+tcl\+\_\+parser.\+high} = Keyword(\textquotesingle{}high\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_acc30be6956c891e9bf8b6f3125e40e14}{sylva.\+misc.\+tcl\+\_\+parser.\+full} = Keyword(\textquotesingle{}full\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aaa6da6af48cbfc02e2f6edd078ea16ab}{sylva.\+misc.\+tcl\+\_\+parser.\+integer} = Word(nums)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5f1213f66ee68863fc66dc54ceec2d1e}{sylva.\+misc.\+tcl\+\_\+parser.\+string\+\_\+value} = (Word( alphas + \textquotesingle{}\+\_\+./\textquotesingle{}, alphanums + \textquotesingle{}\+\_\+./\textquotesingle{}) $\vert$ quoted\+String)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a92069bbdbd952a10c724671781cfcfd6}{sylva.\+misc.\+tcl\+\_\+parser.\+single\+\_\+value} = (low $\vert$ high $\vert$ mid $\vert$ full $\vert$ string\+\_\+value $\vert$ integer $\vert$ quoted\+String $\vert$ true $\vert$ false)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a9da481e2e9eb38c1443d778d3f18a4d3}{sylva.\+misc.\+tcl\+\_\+parser.\+left\+\_\+bracket} = Suppress(\textquotesingle{}\{\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ac64e684e7c1d68a9629eb9892e36ba11}{sylva.\+misc.\+tcl\+\_\+parser.\+right\+\_\+bracket} = Suppress(\textquotesingle{}\}\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a400beccbf593cc4495fdd7ab101acb39}{sylva.\+misc.\+tcl\+\_\+parser.\+more\+\_\+values}
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{sylva.\+misc.\+tcl\+\_\+parser.\+value} = (single\+\_\+value $\vert$ more\+\_\+values)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5c0cde73a595ea661179ea225ff2ceba}{sylva.\+misc.\+tcl\+\_\+parser.\+command}
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ade6aa1a9697fd50d76f10d8ef7474363}{sylva.\+misc.\+tcl\+\_\+parser.\+attribute} = Word(alphas + \textquotesingle{}\+\_\+\textquotesingle{})
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a41d78ece735b8cfe1b91e423ca73f72f}{sylva.\+misc.\+tcl\+\_\+parser.\+set\+\_\+attribute\+\_\+command} = (set\+\_\+attribute + attribute + value)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a310173d7899d08bcad2ec9f671348bf3}{sylva.\+misc.\+tcl\+\_\+parser.\+set\+\_\+attr\+\_\+command} = (set\+\_\+attr + attribute + value)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ab38ad19d9c0cfc5c8f60d8cabbdeb0e5}{sylva.\+misc.\+tcl\+\_\+parser.\+constraints} = Keywords(\textquotesingle{}tmax\textquotesingle{}, \textquotesingle{}rmax\textquotesingle{}, \textquotesingle{}emax\textquotesingle{}, \textquotesingle{}amax\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0e59a913865b08b792584c609dd496c1}{sylva.\+misc.\+tcl\+\_\+parser.\+constraint\+\_\+name} = anyof(constraints.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aca4985821c9124374a17c708bfcf6277}{sylva.\+misc.\+tcl\+\_\+parser.\+constraint} = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + constraint\+\_\+name + integer)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a6e28133e31ff032306235b32b0022359}{sylva.\+misc.\+tcl\+\_\+parser.\+define\+\_\+constraint\+\_\+command} = (define\+\_\+constraint + One\+Or\+More(constraint))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a5a907b434f34bc173db7218151b9f179}{sylva.\+misc.\+tcl\+\_\+parser.\+optimizations} = Keywords(\textquotesingle{}ka\textquotesingle{}, \textquotesingle{}ke\textquotesingle{}, \textquotesingle{}kt\textquotesingle{}, \textquotesingle{}kr\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a077caeaf6529efc598181a9e58e12010}{sylva.\+misc.\+tcl\+\_\+parser.\+optimization\+\_\+objective\+\_\+name} = anyof(optimizations.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2824099d1a0d1a85a6148e0b5fdc31e8}{sylva.\+misc.\+tcl\+\_\+parser.\+optimization\+\_\+objective} = (Suppress(\textquotesingle{}-\/\textquotesingle{}) + optimization\+\_\+objective\+\_\+name + integer)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a7d18cc1131533a809b16ee58f156c982}{sylva.\+misc.\+tcl\+\_\+parser.\+define\+\_\+optimization\+\_\+command} = (define\+\_\+optimization + One\+Or\+More(optimization\+\_\+objective))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a733683e83c5d1482a9f247fd092c1e74}{sylva.\+misc.\+tcl\+\_\+parser.\+synthesis\+\_\+options}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad0697a68890de131865fe7aa8519784e}{sylva.\+misc.\+tcl\+\_\+parser.\+synthesis\+\_\+option} = anyof(synthesis\+\_\+options.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a049055f00db6c830fd559bbf6724c726}{sylva.\+misc.\+tcl\+\_\+parser.\+synthesize\+\_\+command}
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a0500d8c917dada620c715ee30d46c764}{sylva.\+misc.\+tcl\+\_\+parser.\+run\+\_\+command} = (run + quoted\+String)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a76796ee2f152c59afca41bc3c4977b81}{sylva.\+misc.\+tcl\+\_\+parser.\+read\+\_\+hdl\+\_\+command} = (read\+\_\+hdl + value)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a00e21364c10011f454cb83c1cdcdd5f2}{sylva.\+misc.\+tcl\+\_\+parser.\+create\+\_\+fimp\+\_\+library\+\_\+command} = create\+\_\+fimp\+\_\+library
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a6ce51189f962d0d4e7cdcf224371100c}{sylva.\+misc.\+tcl\+\_\+parser.\+write\+\_\+command} = (write + value + Optional(value) + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{}) + value))
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a31cbff9e620c0f82c424f20ea7e70ecb}{sylva.\+misc.\+tcl\+\_\+parser.\+load\+\_\+command} = (load + value + Optional(Suppress(\textquotesingle{}$<$\textquotesingle{}) $\vert$ Suppress(\textquotesingle{}from\textquotesingle{})) + value)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad63aacf8188d9604a6876b638b975522}{sylva.\+misc.\+tcl\+\_\+parser.\+dump\+\_\+command} = (dump + value + Optional(Suppress(\textquotesingle{}$>$\textquotesingle{})) + value)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ad3eb2c3b522821a7537d99228f52138f}{sylva.\+misc.\+tcl\+\_\+parser.\+source\+\_\+command} = (source + value)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aa1c1c65eee0114087b82afaa297507b0}{sylva.\+misc.\+tcl\+\_\+parser.\+pick\+\_\+solution\+\_\+command} = (pick\+\_\+solution + integer + Optional(integer))
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a9dd05ec51936992522cb2776147d6794}{sylva.\+misc.\+tcl\+\_\+parser.\+floorplan\+\_\+command} = (floorplan + Optional(integer + Optional(integer)))
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a2cff869e2129abd80f1679cc0becad35}{sylva.\+misc.\+tcl\+\_\+parser.\+assign\+\_\+fimps\+\_\+to\+\_\+cgra\+\_\+command} = assign\+\_\+fimps\+\_\+to\+\_\+cgra
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a77b6ae03d7943edc073dde7d9883d925}{sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+outputs} = Keywords(\textquotesingle{}vhdl\textquotesingle{}, \textquotesingle{}verilog\textquotesingle{}, \textquotesingle{}matlab\textquotesingle{}, \textquotesingle{}hsdf\+\_\+graph\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ab0d1caae304d09d067e44d8b51e0b341}{sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+output} = anyof(generate\+\_\+outputs.\+keys)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_adf51aa24e01a036ffcac0e6996994051}{sylva.\+misc.\+tcl\+\_\+parser.\+key\+\_\+word\+\_\+from} = Suppress(\textquotesingle{}from\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a77cc734b69238034c98fadaceef2fbc3}{sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+inputs} = Keywords(\textquotesingle{}hsdf\+\_\+graph\textquotesingle{}, \textquotesingle{}sdf\+\_\+graph\textquotesingle{}, \textquotesingle{}simulink\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_ae4978fc0cd51c6f590351e10d46bda95}{sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+input} = anyof(generate\+\_\+inputs.\+keys)
+\item 
+tuple \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a09154238372afd143ddb6fdd344dbf1e}{sylva.\+misc.\+tcl\+\_\+parser.\+generate\+\_\+command}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_aeab8373fb1283d1df4dccb93acde4290}{sylva.\+misc.\+tcl\+\_\+parser.\+one\+\_\+command} = anyof(\mbox{[}cmd + \textquotesingle{}\+\_\+command\textquotesingle{} for cmd in command.\+keys\mbox{]})
+\end{DoxyCompactItemize}

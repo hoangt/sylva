@@ -1,0 +1,256 @@
+\hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf}{}\section{sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf Namespace Reference}
+\label{namespacesylva_1_1base_1_1sdf__to__hsdf}\index{sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf@{sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a947a1ab376b5ba3021f86fba7fcb17aa}{get\+\_\+topology\+\_\+matrix} (actors, edges)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}{get\+\_\+repetition\+\_\+count} (actors, edges)
+\item 
+def \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a41dda1a461cf7b083fbd682fc94d5e10}{sdf\+\_\+to\+\_\+hsdf} (actors, edges)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a710df9adbb419e1b4040e6dd8d6dae33}{a}
+\item 
+\hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a57320ee4c07c8816e2182840df922b60}{e}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}\label{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}} 
+\index{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}!get\+\_\+repetition\+\_\+count@{get\+\_\+repetition\+\_\+count}}
+\index{get\+\_\+repetition\+\_\+count@{get\+\_\+repetition\+\_\+count}!sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}}
+\subsubsection{\texorpdfstring{get\+\_\+repetition\+\_\+count()}{get\_repetition\_count()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+repetition\+\_\+count (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{edges }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file sdf\+\_\+to\+\_\+hsdf.\+py.
+
+
+
+References sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+topology\+\_\+matrix().
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules(), sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+sdf\+\_\+to\+\_\+hsdf(), and sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
+
+
+\begin{DoxyCode}
+34 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}{get\_repetition\_count}((actors, edges)) :
+35 
+36   topology\_matrix = \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a947a1ab376b5ba3021f86fba7fcb17aa}{get\_topology\_matrix}((actors, edges))
+37 
+38   solver = pywrapcp.Solver(\textcolor{stringliteral}{'SDF actor repetition'})
+39 
+40   \textcolor{comment}{# repetition count}
+41   rc = [solver.IntVar(1, sys.maxint, \textcolor{stringliteral}{'repetition count %i'} % actor.index) \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} actors]
+42 
+43   \textcolor{comment}{# add constraints}
+44   \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(edges)) :
+45     each\_row = solver.ScalProd(rc, topology\_matrix[i])
+46     solver.Add(each\_row == 0);
+47 
+48   db = solver.Phase(rc,
+49                     solver.CHOOSE\_FIRST\_UNBOUND,
+50                     solver.ASSIGN\_MIN\_VALUE)
+51   solver.NewSearch(db);
+52   solver.NextSolution();
+53 
+54   result = []
+55   \textcolor{keywordflow}{for} c \textcolor{keywordflow}{in} rc :
+56     result.append(int(c.Value()))
+57 
+58   \textcolor{keywordflow}{return} result;
+59 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf_a947a1ab376b5ba3021f86fba7fcb17aa}\label{namespacesylva_1_1base_1_1sdf__to__hsdf_a947a1ab376b5ba3021f86fba7fcb17aa}} 
+\index{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}!get\+\_\+topology\+\_\+matrix@{get\+\_\+topology\+\_\+matrix}}
+\index{get\+\_\+topology\+\_\+matrix@{get\+\_\+topology\+\_\+matrix}!sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}}
+\subsubsection{\texorpdfstring{get\+\_\+topology\+\_\+matrix()}{get\_topology\_matrix()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+topology\+\_\+matrix (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{edges }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file sdf\+\_\+to\+\_\+hsdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+repetition\+\_\+count().
+
+
+\begin{DoxyCode}
+14 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a947a1ab376b5ba3021f86fba7fcb17aa}{get\_topology\_matrix}((actors, edges)) :
+15 
+16   result = [];
+17 
+18   \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} edges :
+19 
+20     result.append([])
+21     edge\_index = len(result) - 1
+22 
+23     \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} actors :
+24       \textcolor{keywordflow}{if} (actor != edge.dest\_actor \textcolor{keywordflow}{and} actor != edge.src\_actor) :
+25         result[edge\_index].append(0)
+26       \textcolor{keywordflow}{else}:
+27         \textcolor{keywordflow}{if} (actor == edge.dest\_actor) :
+28           result[edge\_index].append(-1 * edge.dest\_port.count * edge.dest\_port.type.size)
+29         \textcolor{keywordflow}{else} :
+30           result[edge\_index].append(edge.src\_port.count * edge.src\_port.type.size)
+31 
+32   \textcolor{keywordflow}{return} result
+33 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf_a41dda1a461cf7b083fbd682fc94d5e10}\label{namespacesylva_1_1base_1_1sdf__to__hsdf_a41dda1a461cf7b083fbd682fc94d5e10}} 
+\index{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}!sdf\+\_\+to\+\_\+hsdf@{sdf\+\_\+to\+\_\+hsdf}}
+\index{sdf\+\_\+to\+\_\+hsdf@{sdf\+\_\+to\+\_\+hsdf}!sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}}
+\subsubsection{\texorpdfstring{sdf\+\_\+to\+\_\+hsdf()}{sdf\_to\_hsdf()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+sdf\+\_\+to\+\_\+hsdf (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{edges }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file sdf\+\_\+to\+\_\+hsdf.\+py.
+
+
+
+References sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+get\+\_\+repetition\+\_\+count().
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+prepare\+\_\+from\+\_\+sdf\+\_\+graph(), and sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+60 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a41dda1a461cf7b083fbd682fc94d5e10}{sdf\_to\_hsdf}((actors, edges)) :
+61 
+62   \textcolor{keyword}{def }create\_HSDF\_actors(sdf\_actors, repetition\_vector) :
+63     \textcolor{keyword}{import} copy
+64     hsdf\_actors = []
+65     \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} sdf\_actors:
+66       hsdf\_actors.append([])
+67       \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} range(repetition\_vector[n.index]):
+68         hsdf\_actor = sdf.actor(n.name)
+69         hsdf\_actor.base\_actor = n
+70         hsdf\_actors[-1].append(hsdf\_actor)
+71       n.child\_actors = hsdf\_actors[-1]
+72     \textcolor{keywordflow}{return} hsdf\_actors
+73 
+74   \textcolor{keyword}{def }index\_HSDF\_actors(hsdf\_actors) :
+75     hsdf\_actor\_set = []
+76     index = 0
+77     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} hsdf\_actors :
+78       \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} i :
+79         j.index = index
+80         hsdf\_actor\_set.append(j)
+81         index += 1
+82 
+83     \textcolor{keywordflow}{return} hsdf\_actor\_set
+84 
+85   \textcolor{keyword}{def }create\_HSDF\_edges(sdf\_edges, hsdf\_actors, repetition\_vector) :
+86 
+87     R = repetition\_vector
+88     hsdf\_edges = []
+89 
+90     \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} sdf\_edges:
+91 
+92       src\_index = e.src\_actor.index
+93       dest\_index = e.dest\_actor.index
+94       tokens = min(e.src\_port.count, e.dest\_port.count)
+95 
+96       source\_executes\_more = R[src\_index] > R[dest\_index]
+97 
+98       less = R[dest\_index]
+99       more = R[src\_index]
+100       \textcolor{keywordflow}{if} (source\_executes\_more == \textcolor{keyword}{False}) :
+101         less = R[src\_index]
+102         more = R[dest\_index]
+103 
+104       ratio = int(more/less)
+105       more\_index = 0
+106       less\_index = 0
+107 
+108       \textcolor{keywordflow}{for} r\_less \textcolor{keywordflow}{in} range(less) :
+109 
+110         less\_index = r\_less
+111 
+112         \textcolor{keywordflow}{for} r\_more \textcolor{keywordflow}{in} range(ratio) :
+113 
+114           \textcolor{keywordflow}{if} (source\_executes\_more == \textcolor{keyword}{True}) :
+115             src\_actor = hsdf\_actors[src\_index][more\_index]
+116             dest\_actor = hsdf\_actors[dest\_index][less\_index]
+117           \textcolor{keywordflow}{else} :
+118             src\_actor = hsdf\_actors[src\_index][less\_index]
+119             dest\_actor = hsdf\_actors[dest\_index][more\_index]
+120 
+121           src\_port = e.src\_port.clone()
+122           src\_port.token\_count = tokens
+123 
+124           dest\_port = e.dest\_port.clone()
+125           dest\_port.token\_count = tokens
+126 
+127           new\_edge = sdf.edge( src\_actor = src\_actor, src\_port = src\_port,
+128                            dest\_actor = dest\_actor, dest\_port = dest\_port )
+129 
+130           hsdf\_edges.append( new\_edge )
+131           more\_index += 1
+132 
+133     \textcolor{keywordflow}{return} hsdf\_edges
+134 
+135   repetition\_vector = \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a9c5d04cd8f0b409b56239871067f50d5}{get\_repetition\_count}((actors, edges))
+136 
+137   sdf\_actors = actors
+138   sdf\_edges = edges
+139 
+140   hsdf\_actors\_2D = create\_HSDF\_actors(sdf\_actors, repetition\_vector)
+141   hsdf\_edges = create\_HSDF\_edges(sdf\_edges, hsdf\_actors\_2D, repetition\_vector)
+142   hsdf\_actors\_array = index\_HSDF\_actors(hsdf\_actors\_2D)
+143 
+144   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} hsdf\_actors\_array :
+145 
+146     a.output\_ports = []
+147     a.input\_ports = []
+148 
+149     \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} a.next :
+150       \textcolor{keywordflow}{if} e.src\_port.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} \(\backslash\)
+151       [ p.name \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports ] :
+152         a.output\_ports.append(e.src\_port)
+153       \textcolor{keywordflow}{else} :
+154         e.src\_port = [ p \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports
+155                        \textcolor{keywordflow}{if} e.src\_port.name == p.name ][0]
+156 
+157     \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} a.previous :
+158       \textcolor{keywordflow}{if} e.dest\_port.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} \(\backslash\)
+159       [ p.name \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.input\_ports ] :
+160         a.input\_ports.append(e.dest\_port)
+161       \textcolor{keywordflow}{else} :
+162         e.dest\_port = [ p \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.input\_ports
+163                        \textcolor{keywordflow}{if} e.dest\_port.name == p.name ][0]
+164 
+165   \textcolor{keywordflow}{return} (hsdf\_actors\_array, hsdf\_edges)
+166 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf_a710df9adbb419e1b4040e6dd8d6dae33}\label{namespacesylva_1_1base_1_1sdf__to__hsdf_a710df9adbb419e1b4040e6dd8d6dae33}} 
+\index{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}!a@{a}}
+\index{a@{a}!sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}}
+\subsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+a}
+
+
+
+Definition at line 181 of file sdf\+\_\+to\+\_\+hsdf.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf__to__hsdf_a57320ee4c07c8816e2182840df922b60}\label{namespacesylva_1_1base_1_1sdf__to__hsdf_a57320ee4c07c8816e2182840df922b60}} 
+\index{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}!e@{e}}
+\index{e@{e}!sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf@{sylva\+::base\+::sdf\+\_\+to\+\_\+hsdf}}
+\subsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+e}
+
+
+
+Definition at line 181 of file sdf\+\_\+to\+\_\+hsdf.\+py.
+

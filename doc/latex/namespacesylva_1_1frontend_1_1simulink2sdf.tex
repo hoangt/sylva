@@ -1,0 +1,249 @@
+\hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf}{}\section{sylva.\+frontend.\+simulink2sdf Namespace Reference}
+\label{namespacesylva_1_1frontend_1_1simulink2sdf}\index{sylva.\+frontend.\+simulink2sdf@{sylva.\+frontend.\+simulink2sdf}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a65e70cbcdade6118914d5c16f96ae56c}{elaborate} (cls, mdl\+\_\+path, lib\+\_\+path=None, lib\+\_\+ext=\mbox{[}\textquotesingle{}.mdl\textquotesingle{}\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}{create\+\_\+port} (port\+\_\+dict, port\+\_\+index)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa33a1cece85e239778cb65b5d4e62438}{simulink2sdf} (mdl\+\_\+path, func\+\_\+lib=\{\}, lib\+\_\+path=None, lib\+\_\+ext=\mbox{[}\textquotesingle{}.mdl\textquotesingle{}\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a67a8c32527e5a89c1ec67fcd17a9da74}{create\+\_\+actors} (lib, model)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a29bf2b8d871f7bcf95cd79761ad8cd85}{create\+\_\+edges} (model, actors)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa4a670a2c40a40dfb700426677bcb657}{assign\+\_\+actor\+\_\+indexes} (actors, edges)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_aa4a670a2c40a40dfb700426677bcb657}\label{namespacesylva_1_1frontend_1_1simulink2sdf_aa4a670a2c40a40dfb700426677bcb657}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!assign\+\_\+actor\+\_\+indexes@{assign\+\_\+actor\+\_\+indexes}}
+\index{assign\+\_\+actor\+\_\+indexes@{assign\+\_\+actor\+\_\+indexes}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{assign\+\_\+actor\+\_\+indexes()}{assign\_actor\_indexes()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+assign\+\_\+actor\+\_\+indexes (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{edges }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file simulink2sdf.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
+
+
+\begin{DoxyCode}
+109 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa4a670a2c40a40dfb700426677bcb657}{assign\_actor\_indexes}(actors, edges):
+110 
+111     index = 0
+112 
+113     assigned\_actors = []
+114     \textcolor{comment}{# first, assign all root actors}
+115     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors:
+116         \textcolor{keywordflow}{if} a.previous == []:
+117             assigned\_actors.append(a)
+118             a.index = index
+119             index += 1
+120 
+121     \textcolor{comment}{# then assign other actors}
+122     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} assigned\_actors:
+123         \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} a.next:
+124             \textcolor{keywordflow}{if} e.dest\_actor \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} assigned\_actors:
+125                 p = e.dest\_actor.previous
+126                 all\_done = \textcolor{keyword}{True}
+127                 \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} p:
+128                     \textcolor{keywordflow}{if} edge.src\_actor \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} assigned\_actors:
+129                         all\_done = \textcolor{keyword}{False}
+130                         \textcolor{keywordflow}{break}
+131                 \textcolor{keywordflow}{if} all\_done == \textcolor{keyword}{True}:
+132                     assigned\_actors.append(e.dest\_actor)
+133                     e.dest\_actor.index = index
+134                     index += 1
+135 
+136     \textcolor{keywordflow}{return} (assigned\_actors, edges)
+137 \end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_a67a8c32527e5a89c1ec67fcd17a9da74}\label{namespacesylva_1_1frontend_1_1simulink2sdf_a67a8c32527e5a89c1ec67fcd17a9da74}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!create\+\_\+actors@{create\+\_\+actors}}
+\index{create\+\_\+actors@{create\+\_\+actors}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{create\+\_\+actors()}{create\_actors()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+create\+\_\+actors (\begin{DoxyParamCaption}\item[{}]{lib,  }\item[{}]{model }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file simulink2sdf.\+py.
+
+
+
+References sylva.\+frontend.\+simulink2sdf.\+create\+\_\+port().
+
+
+
+Referenced by sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
+
+
+\begin{DoxyCode}
+57 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a67a8c32527e5a89c1ec67fcd17a9da74}{create\_actors}(lib, model):
+58 
+59     all\_actors = []
+60 
+61     \textcolor{keywordflow}{for} block\_item \textcolor{keywordflow}{in} model.system.blocks:
+62         \textcolor{keywordflow}{if} \textcolor{stringliteral}{'SourceBlock'} \textcolor{keywordflow}{in} block\_item.keys():
+63 
+64             all\_actors.append(sdf.actor())
+65             func\_path = block\_item[\textcolor{stringliteral}{'SourceBlock'}]
+66             func\_name = func\_path.split(\textcolor{stringliteral}{'/'})[-1]
+67             lib\_name = \textcolor{stringliteral}{''}.join(func\_path.split(\textcolor{stringliteral}{'/'})[:-1])
+68 
+69             all\_actors[-1].name = func\_name
+70 
+71             \textcolor{comment}{# only use the first match}
+72             source\_block = [value \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} lib.items()
+73                             \textcolor{keywordflow}{if} key == func\_path]
+74 
+75             \textcolor{keywordflow}{if} len(source\_block) == 0:
+76                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Function %s is not in library %s.'}
+77                                 % (func\_name, lib\_name))
+78 
+79             source\_block = source\_block[0]
+80             all\_actors[-1].input\_ports \(\backslash\)
+81                 = [\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}{create\_port}(source\_block[\textcolor{stringliteral}{'input\_ports'}][i], i)
+82                    \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} source\_block[\textcolor{stringliteral}{'input\_ports'}].keys()]
+83             all\_actors[-1].output\_ports \(\backslash\)
+84                 = [\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}{create\_port}(source\_block[\textcolor{stringliteral}{'output\_ports'}][i], i)
+85                    \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} source\_block[\textcolor{stringliteral}{'output\_ports'}].keys()]
+86 
+87     \textcolor{keywordflow}{return} all\_actors
+88 
+89 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_a29bf2b8d871f7bcf95cd79761ad8cd85}\label{namespacesylva_1_1frontend_1_1simulink2sdf_a29bf2b8d871f7bcf95cd79761ad8cd85}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!create\+\_\+edges@{create\+\_\+edges}}
+\index{create\+\_\+edges@{create\+\_\+edges}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{create\+\_\+edges()}{create\_edges()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+create\+\_\+edges (\begin{DoxyParamCaption}\item[{}]{model,  }\item[{}]{actors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file simulink2sdf.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
+
+
+\begin{DoxyCode}
+90 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a29bf2b8d871f7bcf95cd79761ad8cd85}{create\_edges}(model, actors):
+91 
+92     edges = []
+93 
+94     \textcolor{keywordflow}{for} line\_item \textcolor{keywordflow}{in} model.system.lines:
+95 
+96         src\_actor = [a \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors
+97                      \textcolor{keywordflow}{if} a.name == line\_item[\textcolor{stringliteral}{'SrcBlock'}]][0]
+98         src\_port\_index = int(line\_item[\textcolor{stringliteral}{'SrcPort'}]) - 1  \textcolor{comment}{# to 0 based indexing}
+99         src\_port = src\_actor.output\_ports[src\_port\_index]
+100         dest\_actor = [a \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors
+101                       \textcolor{keywordflow}{if} a.name == line\_item[\textcolor{stringliteral}{'DstBlock'}]][0]
+102         dest\_port\_index = int(line\_item[\textcolor{stringliteral}{'DstPort'}]) - 1
+103         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
+104         edges.append(sdf.edge(src\_actor, src\_port, dest\_actor, dest\_port))
+105 
+106     \textcolor{keywordflow}{return} edges
+107 
+108 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}\label{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!create\+\_\+port@{create\+\_\+port}}
+\index{create\+\_\+port@{create\+\_\+port}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{create\+\_\+port()}{create\_port()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+create\+\_\+port (\begin{DoxyParamCaption}\item[{}]{port\+\_\+dict,  }\item[{}]{port\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file simulink2sdf.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+simulink2sdf.\+create\+\_\+actors().
+
+
+\begin{DoxyCode}
+26 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a86a92182288e89b6742e5124e8c3ec38}{create\_port}(port\_dict, port\_index):
+27 
+28     port\_name = port\_dict[\textcolor{stringliteral}{'name'}]
+29     port\_type = sdf.DataTokenType(str(port\_dict[\textcolor{stringliteral}{'token type'}]), int(port\_dict[\textcolor{stringliteral}{'token size'}]))
+30     port\_count = port\_dict[\textcolor{stringliteral}{'token count'}]
+31     \textcolor{keywordflow}{return} sdf.port(port\_name, port\_index, port\_type, port\_count)
+32 
+33 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_a65e70cbcdade6118914d5c16f96ae56c}\label{namespacesylva_1_1frontend_1_1simulink2sdf_a65e70cbcdade6118914d5c16f96ae56c}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!elaborate@{elaborate}}
+\index{elaborate@{elaborate}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{elaborate()}{elaborate()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+elaborate (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{mdl\+\_\+path,  }\item[{}]{lib\+\_\+path = {\ttfamily None},  }\item[{}]{lib\+\_\+ext = {\ttfamily \mbox{[}\textquotesingle{}.mdl\textquotesingle{}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file simulink2sdf.\+py.
+
+
+
+References sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
+
+
+\begin{DoxyCode}
+18 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a65e70cbcdade6118914d5c16f96ae56c}{elaborate}(cls, mdl\_path, lib\_path=None, lib\_ext=['.mdl']):
+19     actors, edges = \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa33a1cece85e239778cb65b5d4e62438}{simulink2sdf}(mdl\_path, \{\}, lib\_path, lib\_ext)
+20     \textcolor{keywordflow}{return} cls(actors, edges)
+21 
+22 
+23 sdf.sdfg.elaborate = classmethod(elaborate)
+24 
+25 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1simulink2sdf_aa33a1cece85e239778cb65b5d4e62438}\label{namespacesylva_1_1frontend_1_1simulink2sdf_aa33a1cece85e239778cb65b5d4e62438}} 
+\index{sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}!simulink2sdf@{simulink2sdf}}
+\index{simulink2sdf@{simulink2sdf}!sylva\+::frontend\+::simulink2sdf@{sylva\+::frontend\+::simulink2sdf}}
+\subsubsection{\texorpdfstring{simulink2sdf()}{simulink2sdf()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+simulink2sdf.\+simulink2sdf (\begin{DoxyParamCaption}\item[{}]{mdl\+\_\+path,  }\item[{}]{func\+\_\+lib = {\ttfamily \{\}},  }\item[{}]{lib\+\_\+path = {\ttfamily None},  }\item[{}]{lib\+\_\+ext = {\ttfamily \mbox{[}\textquotesingle{}.mdl\textquotesingle{}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file simulink2sdf.\+py.
+
+
+
+References sylva.\+misc.\+util.\+all\+\_\+files(), sylva.\+frontend.\+simulink2sdf.\+assign\+\_\+actor\+\_\+indexes(), sylva.\+frontend.\+simulink2sdf.\+create\+\_\+actors(), sylva.\+frontend.\+simulink2sdf.\+create\+\_\+edges(), and sylva.\+misc.\+util.\+to\+\_\+list().
+
+
+
+Referenced by sylva.\+frontend.\+simulink2sdf.\+elaborate().
+
+
+\begin{DoxyCode}
+34 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa33a1cece85e239778cb65b5d4e62438}{simulink2sdf}(mdl\_path, func\_lib=\{\}, lib\_path=None, lib\_ext=['.mdl']):
+35 
+36     lib\_paths = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(lib\_path)
+37     model = mdl\_reader.simulink\_model()
+38     lib = \{\}
+39     \textcolor{keywordflow}{if} os.path.isfile(mdl\_path):
+40         model = mdl\_reader.read\_mdl\_model(mdl\_path)
+41     \textcolor{keywordflow}{for} lib\_path \textcolor{keywordflow}{in} lib\_paths:
+42         \textcolor{keywordflow}{if} os.path.exists(lib\_path):
+43             \textcolor{keywordflow}{if} os.path.isfile(lib\_path):
+44                 temp\_lib = mdl\_reader.read\_mdl\_lib\_as\_dict(lib\_path)
+45             \textcolor{keywordflow}{else}:
+46                 temp\_lib = reduce(merge\_dicts, [mdl\_reader.read\_mdl\_lib\_as\_dict(f)
+47                                                 \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} \hyperlink{namespacesylva_1_1misc_1_1util_a5dfe1979a130725652883d277a24ee5d}{all\_files}(lib\_path, lib\_ext)])
+48             lib.update(temp\_lib)
+49     lib.update(func\_lib)
+50 
+51     actors = \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a67a8c32527e5a89c1ec67fcd17a9da74}{create\_actors}(lib, model)
+52     edges = \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_a29bf2b8d871f7bcf95cd79761ad8cd85}{create\_edges}(model, actors)
+53     (actors, edges) = \hyperlink{namespacesylva_1_1frontend_1_1simulink2sdf_aa4a670a2c40a40dfb700426677bcb657}{assign\_actor\_indexes}(actors, edges)
+54     \textcolor{keywordflow}{return} actors, edges
+55 
+56 
+\end{DoxyCode}

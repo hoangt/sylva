@@ -1,0 +1,825 @@
+\hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner}{}\section{sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner Class Reference}
+\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner}\index{sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner@{sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab5bba2d11374f0e3fe5199738e01033a}{prepare\+\_\+attributes} (self, C\+G\+RA, \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aeb0a7c06073d6f238ca448fd31a08e75}{actors})
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a387bfe2b35c791b09f18bf891f94d101}{prepare\+\_\+fimp\+\_\+variables} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a5e9f74cf3d397e97186ce25d8304fbe0}{add\+\_\+non\+\_\+overlap\+\_\+constraints} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a8fa40b80a9a8bed617cb297758c0c5b5}{add\+\_\+communication\+\_\+cost\+\_\+constraints} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a0be73170e12b6ac4ecb594d4dab14f0d}{add\+\_\+area\+\_\+constraints} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ef5c93298c0f40db47c15ed7c9c6f02}{add\+\_\+latency\+\_\+constraints} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abd8cead4c94d6202ff252a9e37615abe}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, C\+G\+RA, \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aeb0a7c06073d6f238ca448fd31a08e75}{actors}, max\+\_\+communication\+\_\+cost=-\/1, max\+\_\+area=-\/1, max\+\_\+latency=-\/1, KA=0, KC=1, KT=0, \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}{time\+\_\+limit}=None, \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}{log}=\hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}(True, True))
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_afcbeb4bd85098dad8b4fe2f822b67328}{solve} (self)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9a77944b379401d7be62164312b29721}{plot\+\_\+solutions} (self, dir\+\_\+name=None, name\+\_\+pattern=\textquotesingle{}fp\+\_\+\{index\}\+\_\+\{cost\}.svg\textquotesingle{}, show\+\_\+axis=True, compact=False)
+\item 
+def \hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a34a19dab41b1f0c2eb39a527b05e26e0}{plot\+\_\+best\+\_\+solution} (self, dir\+\_\+name=None, name\+\_\+pattern=\textquotesingle{}fp\+\_\+\{index\}\+\_\+\{cost\}.svg\textquotesingle{}, show\+\_\+axis=True, compact=False)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_af588b87074ee8449326528ea765f7bfb}{solver}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a74fc856bba52dfcaf42cac8f6e699f2f}{cgra}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aeb0a7c06073d6f238ca448fd31a08e75}{actors}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9327be3c702c82f8c806449744e30d84}{fimp\+\_\+instances}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4b3bde987121cd07a0e7247980060f29}{w}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae267251903086826b4814d3a3358a40f}{h}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a30d871766e220d12a53bce833249cc57}{x}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a583eb5cc30fb2978384746da5b4b440f}{y}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a595a65d9ac2624c445577c600a1a2a59}{icc}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a18e4e4a27d7823aaa27a3cd10e55932f}{ict}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a2899535e11180a156b7a9479a9fe8701}{rrp}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a64cea72a08e610e84b7b3fda7b4cd034}{edges}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a24339289e4339174903ce5f41594c95d}{distance}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a1b95b56881d41dd6c5e1a66e6a6218cf}{x\+\_\+distance}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abf433d1b5543d12d04aba987eac72755}{y\+\_\+distance}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae89f7aced7d800c839f2b765ccef8e17}{communication\+\_\+cost}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_acd90b8a28845457d7a02c7b64e7031b2}{num\+\_\+routing\+\_\+points}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a08dbae3d0806022bf436c82b3137ce55}{area}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab2f40591a41eeaa9607f51b48c796b27}{latency}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a49fb578b9d1590ec05da989bf9b3393b}{searching}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}{log}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ecec4815a5e0fa5ba3f3ffb9f0697dc}{solutions}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}{time\+\_\+limit}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae93626229396fc7e99339545e571ffff}{optimization}
+\item 
+\hyperlink{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a51d125ec34729ef82c7ab89ca2f9ee36}{db}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}floorplanner for CGRA\end{DoxyVerb}
+ 
+
+Definition at line 18 of file floorplanner.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abd8cead4c94d6202ff252a9e37615abe}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abd8cead4c94d6202ff252a9e37615abe}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{C\+G\+RA,  }\item[{}]{actors,  }\item[{}]{max\+\_\+communication\+\_\+cost = {\ttfamily -\/1},  }\item[{}]{max\+\_\+area = {\ttfamily -\/1},  }\item[{}]{max\+\_\+latency = {\ttfamily -\/1},  }\item[{}]{KA = {\ttfamily 0},  }\item[{}]{KC = {\ttfamily 1},  }\item[{}]{KT = {\ttfamily 0},  }\item[{}]{time\+\_\+limit = {\ttfamily None},  }\item[{}]{log = {\ttfamily \hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}(True,~True)} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 188 of file floorplanner.\+py.
+
+
+\begin{DoxyCode}
+188          KA=0, KC=1, KT=0, time\_limit=\textcolor{keywordtype}{None}, log=status\_log(\textcolor{keyword}{True}, \textcolor{keyword}{True})):
+189 
+190     self.searching = \textcolor{keyword}{True}
+191     self.log = log
+192     self.solutions = []
+193     self.time\_limit = time\_limit
+194 
+195     self.prepare\_attributes(CGRA, actors)
+196 
+197     self.add\_non\_overlap\_constraints()
+198 
+199     \textcolor{comment}{# add area constraints if specified}
+200     self.add\_area\_constraints()
+201     \textcolor{keywordflow}{if} max\_area > 0:
+202       self.solver.Add(self.area <= max\_area)
+203 
+204     \textcolor{comment}{# add communication cost constraints if specified}
+205     self.add\_communication\_cost\_constraints()
+206     \textcolor{keywordflow}{if} max\_communication\_cost > 0:
+207       self.solver.Add(self.communication\_cost <= max\_communication\_cost)
+208 
+209     \textcolor{comment}{# latency constraints}
+210     \textcolor{keywordflow}{if} max\_latency > 0:
+211       self.add\_latency\_constraints()
+212     \textcolor{keywordflow}{else}:
+213       self.latency = self.solver.IntVar(0, 0, \textcolor{stringliteral}{'latency'})
+214 
+215     objective\_var = self.solver.ScalProd(
+216       [self.area, self.communication\_cost, self.latency], [KA, KC, KT])
+217     \textcolor{comment}{# objective\_var = self.communication\_cost}
+218     self.optimization = self.solver.Minimize(objective\_var, 1)
+219 
+220     \textcolor{comment}{# assign values for x and y}
+221     self.db = self.solver.Phase(self.x + self.y,
+222                   self.solver.CHOOSE\_FIRST\_UNBOUND,
+223                   self.solver.ASSIGN\_MIN\_VALUE)
+224 
+225     \textcolor{keywordflow}{if} self.time\_limit:
+226       self.solver.NewSearch(self.db, self.optimization,
+227                   self.solver.TimeLimit(self.time\_limit))
+228     \textcolor{keywordflow}{else}:
+229       self.solver.NewSearch(self.db, self.optimization)
+230 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a0be73170e12b6ac4ecb594d4dab14f0d}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a0be73170e12b6ac4ecb594d4dab14f0d}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!add\+\_\+area\+\_\+constraints@{add\+\_\+area\+\_\+constraints}}
+\index{add\+\_\+area\+\_\+constraints@{add\+\_\+area\+\_\+constraints}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{add\+\_\+area\+\_\+constraints()}{add\_area\_constraints()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 169 of file floorplanner.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+
+
+\begin{DoxyCode}
+169   \textcolor{keyword}{def }add\_area\_constraints(self):
+170     fimps = range(len(self.fimp\_instances))
+171 
+172     max\_x = self.solver.Max([self.x[f] + self.w[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
+173     min\_x = self.solver.Min(self.x)
+174     total\_width = self.solver.ScalProd([max\_x, min\_x], [1, -1])
+175 
+176     \textcolor{comment}{# bottom = (max y + height) - min y}
+177     max\_y = self.solver.Max([self.y[f] + self.h[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
+178     min\_y = self.solver.Min(self.y)
+179     total\_height = self.solver.ScalProd([max\_y, min\_y], [1, -1])
+180 
+181     self.area = total\_width * total\_height
+182 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a8fa40b80a9a8bed617cb297758c0c5b5}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a8fa40b80a9a8bed617cb297758c0c5b5}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!add\+\_\+communication\+\_\+cost\+\_\+constraints@{add\+\_\+communication\+\_\+cost\+\_\+constraints}}
+\index{add\+\_\+communication\+\_\+cost\+\_\+constraints@{add\+\_\+communication\+\_\+cost\+\_\+constraints}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{add\+\_\+communication\+\_\+cost\+\_\+constraints()}{add\_communication\_cost\_constraints()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+communication\+\_\+cost\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file floorplanner.\+py.
+
+
+\begin{DoxyCode}
+77   \textcolor{keyword}{def }add\_communication\_cost\_constraints(self):
+78 
+79     \textcolor{comment}{# icc: individual communication cost}
+80     self.icc = []
+81 
+82     \textcolor{comment}{# ict: individual communication time}
+83     self.ict = []
+84 
+85     \textcolor{comment}{# rrp: required routing points}
+86     self.rrp = []
+87 
+88     \textcolor{comment}{# communication edges}
+89     self.edges = []
+90 
+91     \textcolor{comment}{# communication distance}
+92     self.distance = []
+93     self.x\_distance = []
+94     self.y\_distance = []
+95 
+96     \textcolor{comment}{# nrp = number of routing points}
+97     nrp\_max = max(self.cgra.width / self.cgra.hop\_x,
+98             self.cgra.height / self.cgra.hop\_y)
+99 
+100     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
+101       \textcolor{keywordflow}{for} idx \textcolor{keywordflow}{in} range(len(a.next)):
+102         one\_edge = a.next[idx]
+103         token = one\_edge.src\_port.type.size * one\_edge.src\_port.count
+104         src = a.fimp.index
+105         dest = one\_edge.dest\_actor.fimp.index
+106 
+107         \textcolor{comment}{# Assume the output port is always at the top-right actor}
+108         src\_x = self.x[src] + self.w[src] - 1
+109         src\_y = self.y[src]  \textcolor{comment}{# + self.h[src] - 1}
+110 
+111         \textcolor{comment}{# Assume the input port is always at the top-left actor}
+112         dest\_x = self.x[dest]
+113         dest\_y = self.y[dest]
+114 
+115         \textcolor{comment}{# compute distance between two actors}
+116         x\_distance = abs(src\_x - dest\_x)
+117         y\_distance = abs(src\_y - dest\_y)
+118         self.x\_distance.append(x\_distance)
+119         self.y\_distance.append(y\_distance)
+120 
+121         \textcolor{comment}{# Example:}
+122         \textcolor{comment}{#}
+123         \textcolor{comment}{# x\_equal = True means}
+124         \textcolor{comment}{#}
+125         \textcolor{comment}{# [src\_x]========>[rp]========>[rp]========>[rp]======>[dest\_x]}
+126         \textcolor{comment}{#     |< hop\_x >|  |< hop\_x >|  |< hop\_x >|  |< r\_x >|}
+127         \textcolor{comment}{#     |< x\_distance                 >|}
+128 
+129         \textcolor{comment}{# nrp = number of routing points}
+130         nrp = self.solver.IntVar(0, nrp\_max, \textcolor{stringliteral}{'nrp'})
+131 
+132         \textcolor{comment}{# remainders in x and y axes}
+133         r\_x = self.solver.IntVar(0, self.cgra.hop\_x - 1, \textcolor{stringliteral}{'r\_x'})
+134         r\_y = self.solver.IntVar(0, self.cgra.hop\_y - 1, \textcolor{stringliteral}{'r\_y'})
+135 
+136         \textcolor{comment}{# x\_equal : maximum step is taken on the x-axis for}
+137         \textcolor{comment}{# cross-window communication}
+138         x\_equal = x\_distance == nrp * self.cgra.hop\_x + r\_x
+139 
+140         \textcolor{comment}{# y\_equal : maximum step is taken on the y-axis for}
+141         \textcolor{comment}{# cross-window communication}
+142         y\_equal = y\_distance == nrp * self.cgra.hop\_y + r\_y
+143 
+144         \textcolor{comment}{# if x\_distance >= y\_distance, x\_equal should be true}
+145         x\_larger = x\_distance >= y\_distance
+146 
+147         \textcolor{comment}{# if x\_distance < y\_distance, y\_equal should be true}
+148         y\_larger = x\_distance < y\_distance
+149 
+150         self.solver.Add(x\_larger * x\_equal + y\_larger * y\_equal == 1)
+151 
+152         self.rrp.append(nrp)
+153         self.edges.append(one\_edge)
+154 
+155         \textcolor{comment}{# total communication time = nrp * (TC + TW) + TW}
+156         total\_time = nrp * (self.cgra.TC + self.cgra.TW) + self.cgra.TW
+157         self.ict.append(total\_time)
+158 
+159         \textcolor{comment}{# communication cost = distance * token size}
+160         distance = x\_distance + y\_distance
+161         self.distance.append(distance)
+162         total\_cost = distance * token
+163         self.icc.append(total\_cost)
+164 
+165     self.communication\_cost = self.solver.Sum(self.icc)
+166 
+167     self.num\_routing\_points = self.solver.Sum(self.rrp)
+168 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ef5c93298c0f40db47c15ed7c9c6f02}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ef5c93298c0f40db47c15ed7c9c6f02}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!add\+\_\+latency\+\_\+constraints@{add\+\_\+latency\+\_\+constraints}}
+\index{add\+\_\+latency\+\_\+constraints@{add\+\_\+latency\+\_\+constraints}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{add\+\_\+latency\+\_\+constraints()}{add\_latency\_constraints()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+latency\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file floorplanner.\+py.
+
+
+\begin{DoxyCode}
+183   \textcolor{keyword}{def }add\_latency\_constraints(self):
+184     self.latency = 0
+185 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a5e9f74cf3d397e97186ce25d8304fbe0}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a5e9f74cf3d397e97186ce25d8304fbe0}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!add\+\_\+non\+\_\+overlap\+\_\+constraints@{add\+\_\+non\+\_\+overlap\+\_\+constraints}}
+\index{add\+\_\+non\+\_\+overlap\+\_\+constraints@{add\+\_\+non\+\_\+overlap\+\_\+constraints}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{add\+\_\+non\+\_\+overlap\+\_\+constraints()}{add\_non\_overlap\_constraints()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file floorplanner.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+
+
+\begin{DoxyCode}
+56   \textcolor{keyword}{def }add\_non\_overlap\_constraints(self):
+57 
+58     x, y, w, h = self.x, self.y, self.w, self.h
+59     fimps = range(len(self.fimp\_instances))
+60 
+61     \textcolor{keywordflow}{for} src \textcolor{keywordflow}{in} fimps:
+62       \textcolor{keywordflow}{for} dest \textcolor{keywordflow}{in} fimps:
+63         \textcolor{keywordflow}{if} dest > src:
+64           \textcolor{comment}{# non-overlap on x-axis}
+65           xn0 = self.solver.IsGreaterOrEqualVar(
+66             x[src], x[dest] + w[dest])
+67           xn1 = self.solver.IsGreaterOrEqualVar(
+68             x[dest], x[src] + w[src])
+69           \textcolor{comment}{# non-overlap on y-axis}
+70           yn0 = self.solver.IsGreaterOrEqualVar(
+71             y[src], y[dest] + h[dest])
+72           yn1 = self.solver.IsGreaterOrEqualVar(
+73             y[dest], y[src] + h[src])
+74           \textcolor{comment}{# non-overlap on x or y axis}
+75           self.solver.Add(yn0 + yn1 + xn0 + xn1 > 0)
+76 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a34a19dab41b1f0c2eb39a527b05e26e0}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a34a19dab41b1f0c2eb39a527b05e26e0}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!plot\+\_\+best\+\_\+solution@{plot\+\_\+best\+\_\+solution}}
+\index{plot\+\_\+best\+\_\+solution@{plot\+\_\+best\+\_\+solution}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{plot\+\_\+best\+\_\+solution()}{plot\_best\_solution()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+best\+\_\+solution (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dir\+\_\+name = {\ttfamily None},  }\item[{}]{name\+\_\+pattern = {\ttfamily \textquotesingle{}fp\+\_\+\{index\}\+\_\+\{cost\}.svg\textquotesingle{}},  }\item[{}]{show\+\_\+axis = {\ttfamily True},  }\item[{}]{compact = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file floorplanner.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+cgra, sylva.\+misc.\+util.\+mkdir(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions().
+
+
+\begin{DoxyCode}
+275     show\_axis = \textcolor{keyword}{True}, compact = \textcolor{keyword}{False}):
+276 
+277     dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
+278 
+279     \textcolor{keywordflow}{if} dir\_name:
+280       \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
+281 
+282     solution = self.solutions[-1]
+283     \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
+284       self.cgra.fimps[i].x = location[0]
+285       self.cgra.fimps[i].y = location[1]
+286     file\_name = name\_pattern.format(index=\textcolor{stringliteral}{''}, cost=solution[\textcolor{stringliteral}{'cost'}])
+287     p = self.cgra.plot(show\_axis, compact)
+288     p.savefig(os.path.join(dir\_name, file\_name))
+289     p.close()
+290 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9a77944b379401d7be62164312b29721}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9a77944b379401d7be62164312b29721}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!plot\+\_\+solutions@{plot\+\_\+solutions}}
+\index{plot\+\_\+solutions@{plot\+\_\+solutions}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{plot\+\_\+solutions()}{plot\_solutions()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dir\+\_\+name = {\ttfamily None},  }\item[{}]{name\+\_\+pattern = {\ttfamily \textquotesingle{}fp\+\_\+\{index\}\+\_\+\{cost\}.svg\textquotesingle{}},  }\item[{}]{show\+\_\+axis = {\ttfamily True},  }\item[{}]{compact = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 258 of file floorplanner.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+cgra, sylva.\+misc.\+util.\+mkdir(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+best\+\_\+solution(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+
+\begin{DoxyCode}
+258     show\_axis = \textcolor{keyword}{True}, compact = \textcolor{keyword}{False}):
+259 
+260     dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
+261 
+262     \textcolor{keywordflow}{if} dir\_name:
+263       \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
+264 
+265     \textcolor{keywordflow}{for} index, solution \textcolor{keywordflow}{in} enumerate(self.solutions):
+266       \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
+267         self.cgra.fimps[i].x = location[0]
+268         self.cgra.fimps[i].y = location[1]
+269       file\_name = name\_pattern.format(index=index, cost=solution[\textcolor{stringliteral}{'cost'}])
+270       p = self.cgra.plot(show\_axis, compact)
+271       p.savefig(os.path.join(dir\_name, file\_name))
+272       p.close()
+273 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab5bba2d11374f0e3fe5199738e01033a}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab5bba2d11374f0e3fe5199738e01033a}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!prepare\+\_\+attributes@{prepare\+\_\+attributes}}
+\index{prepare\+\_\+attributes@{prepare\+\_\+attributes}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{prepare\+\_\+attributes()}{prepare\_attributes()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+prepare\+\_\+attributes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{C\+G\+RA,  }\item[{}]{actors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file floorplanner.\+py.
+
+
+\begin{DoxyCode}
+22   \textcolor{keyword}{def }prepare\_attributes(self, CGRA, actors):
+23 
+24     \textcolor{comment}{# Create the solver}
+25     self.solver = pywrapcp.Solver(\textcolor{stringliteral}{'CGRA floorplanner'})
+26 
+27     self.cgra = CGRA
+28     self.actors = actors
+29     self.actors.sort(key=\textcolor{keyword}{lambda} a: a.index)
+30 
+31     self.prepare\_fimp\_variables()
+32 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a387bfe2b35c791b09f18bf891f94d101}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a387bfe2b35c791b09f18bf891f94d101}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!prepare\+\_\+fimp\+\_\+variables@{prepare\+\_\+fimp\+\_\+variables}}
+\index{prepare\+\_\+fimp\+\_\+variables@{prepare\+\_\+fimp\+\_\+variables}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{prepare\+\_\+fimp\+\_\+variables()}{prepare\_fimp\_variables()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+prepare\+\_\+fimp\+\_\+variables (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file floorplanner.\+py.
+
+
+\begin{DoxyCode}
+33   \textcolor{keyword}{def }prepare\_fimp\_variables(self):
+34 
+35     \textcolor{comment}{# prepare FIMP instances}
+36     self.fimp\_instances = []
+37     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
+38       \textcolor{keywordflow}{if} a.fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.fimp\_instances:
+39         self.fimp\_instances.append(a.fimp)
+40         self.cgra.\hyperlink{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}{add\_fimp}(a.fimp)
+41 
+42     self.fimp\_instances.sort(key=\textcolor{keyword}{lambda} i: i.index)
+43 
+44     fimps = range(len(self.fimp\_instances))
+45 
+46     \textcolor{comment}{# FIMP size values}
+47     self.w = [self.fimp\_instances[f].width \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+48     self.h = [self.fimp\_instances[f].height \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+49 
+50     \textcolor{comment}{# FIMP location variables}
+51     self.x = [
+52       self.solver.IntVar(0, self.cgra.width - self.w[f], \textcolor{stringliteral}{'x[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+53     self.y = [self.solver.IntVar(
+54       0, self.cgra.height - self.h[f], \textcolor{stringliteral}{'y[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+55 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_afcbeb4bd85098dad8b4fe2f822b67328}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_afcbeb4bd85098dad8b4fe2f822b67328}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!solve@{solve}}
+\index{solve@{solve}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 231 of file floorplanner.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+communication\+\_\+cost, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+searching, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+
+
+\begin{DoxyCode}
+231   \textcolor{keyword}{def }solve(self):
+232     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.searching:
+233       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+234 
+235     start = time.clock()
+236     \textcolor{keywordflow}{if} self.solver.NextSolution() == \textcolor{keyword}{True}:
+237       msg = \textcolor{stringliteral}{'solution \{\}: '}.format(len(self.solutions))
+238       msg += \textcolor{stringliteral}{'cost = \{\} search time = \{\} sec'}.format(
+239         self.communication\_cost.Var().Value(), start)
+240       self.log += msg
+241       self.log.update()
+242       \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances:
+243         f.x = self.x[f.index].Value()
+244         f.y = self.y[f.index].Value()
+245       self.solutions.append(\{\})
+246       self.solutions[-
+247                1][\textcolor{stringliteral}{'cost'}] = int(self.communication\_cost.Var().Value())
+248       self.solutions[-1][\textcolor{stringliteral}{'search\_time'}] = start
+249       self.solutions[-1][\textcolor{stringliteral}{'location'}] = [(int(f.x), int(f.y))
+250                         \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances]
+251       \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+252     \textcolor{keywordflow}{else}:
+253       self.solver.EndSearch()
+254       self.searching = \textcolor{keyword}{False}
+255       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+256 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aeb0a7c06073d6f238ca448fd31a08e75}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aeb0a7c06073d6f238ca448fd31a08e75}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!actors@{actors}}
+\index{actors@{actors}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{actors}{actors}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+actors}
+
+
+
+Definition at line 28 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a08dbae3d0806022bf436c82b3137ce55}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a08dbae3d0806022bf436c82b3137ce55}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!area@{area}}
+\index{area@{area}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{area}{area}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+area}
+
+
+
+Definition at line 181 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a74fc856bba52dfcaf42cac8f6e699f2f}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a74fc856bba52dfcaf42cac8f6e699f2f}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!cgra@{cgra}}
+\index{cgra@{cgra}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{cgra}{cgra}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+cgra}
+
+
+
+Definition at line 27 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+assign\+\_\+fimps\+\_\+to\+\_\+cgra(), sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+floorplan(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+best\+\_\+solution(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions(), and sylva.\+dse.\+dse.\+design\+\_\+specification.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae89f7aced7d800c839f2b765ccef8e17}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae89f7aced7d800c839f2b765ccef8e17}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!communication\+\_\+cost@{communication\+\_\+cost}}
+\index{communication\+\_\+cost@{communication\+\_\+cost}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{communication\+\_\+cost}{communication\_cost}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+communication\+\_\+cost}
+
+
+
+Definition at line 165 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a51d125ec34729ef82c7ab89ca2f9ee36}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a51d125ec34729ef82c7ab89ca2f9ee36}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!db@{db}}
+\index{db@{db}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+db}
+
+
+
+Definition at line 221 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a24339289e4339174903ce5f41594c95d}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a24339289e4339174903ce5f41594c95d}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!distance@{distance}}
+\index{distance@{distance}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+distance}
+
+
+
+Definition at line 92 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a64cea72a08e610e84b7b3fda7b4cd034}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a64cea72a08e610e84b7b3fda7b4cd034}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!edges@{edges}}
+\index{edges@{edges}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges}
+
+
+
+Definition at line 89 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+state.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9327be3c702c82f8c806449744e30d84}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9327be3c702c82f8c806449744e30d84}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!fimp\+\_\+instances@{fimp\+\_\+instances}}
+\index{fimp\+\_\+instances@{fimp\+\_\+instances}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{fimp\+\_\+instances}{fimp\_instances}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances}
+
+
+
+Definition at line 36 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae267251903086826b4814d3a3358a40f}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae267251903086826b4814d3a3358a40f}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!h@{h}}
+\index{h@{h}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h}
+
+
+
+Definition at line 48 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a595a65d9ac2624c445577c600a1a2a59}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a595a65d9ac2624c445577c600a1a2a59}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!icc@{icc}}
+\index{icc@{icc}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{icc}{icc}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+icc}
+
+
+
+Definition at line 80 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a18e4e4a27d7823aaa27a3cd10e55932f}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a18e4e4a27d7823aaa27a3cd10e55932f}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!ict@{ict}}
+\index{ict@{ict}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{ict}{ict}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+ict}
+
+
+
+Definition at line 83 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab2f40591a41eeaa9607f51b48c796b27}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab2f40591a41eeaa9607f51b48c796b27}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!latency@{latency}}
+\index{latency@{latency}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{latency}{latency}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+latency}
+
+
+
+Definition at line 184 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!log@{log}}
+\index{log@{log}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log}
+
+
+
+Definition at line 191 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+\_\+\+\_\+del\+\_\+\+\_\+(), sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+set\+\_\+attribute(), sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+log\+\_\+normal(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve(), sylva.\+misc.\+util.\+status\+\_\+log.\+update(), and sylva.\+misc.\+util.\+status\+\_\+log.\+write\+\_\+to\+\_\+file().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_acd90b8a28845457d7a02c7b64e7031b2}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_acd90b8a28845457d7a02c7b64e7031b2}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!num\+\_\+routing\+\_\+points@{num\+\_\+routing\+\_\+points}}
+\index{num\+\_\+routing\+\_\+points@{num\+\_\+routing\+\_\+points}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{num\+\_\+routing\+\_\+points}{num\_routing\_points}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+num\+\_\+routing\+\_\+points}
+
+
+
+Definition at line 167 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae93626229396fc7e99339545e571ffff}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ae93626229396fc7e99339545e571ffff}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!optimization@{optimization}}
+\index{optimization@{optimization}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{optimization}{optimization}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+optimization}
+
+
+
+Definition at line 218 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a2899535e11180a156b7a9479a9fe8701}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a2899535e11180a156b7a9479a9fe8701}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!rrp@{rrp}}
+\index{rrp@{rrp}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{rrp}{rrp}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+rrp}
+
+
+
+Definition at line 86 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a49fb578b9d1590ec05da989bf9b3393b}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a49fb578b9d1590ec05da989bf9b3393b}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!searching@{searching}}
+\index{searching@{searching}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{searching}{searching}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+searching}
+
+
+
+Definition at line 190 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ecec4815a5e0fa5ba3f3ffb9f0697dc}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ecec4815a5e0fa5ba3f3ffb9f0697dc}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!solutions@{solutions}}
+\index{solutions@{solutions}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{solutions}{solutions}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions}
+
+
+
+Definition at line 192 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+write\+\_\+fimp\+\_\+plots(), sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+write\+\_\+hdl(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+best\+\_\+solution(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_af588b87074ee8449326528ea765f7bfb}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_af588b87074ee8449326528ea765f7bfb}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!solver@{solver}}
+\index{solver@{solver}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{solver}{solver}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver}
+
+
+
+Definition at line 25 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+fimp\+\_\+selection\+\_\+constraint(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+resource\+\_\+dependency\+\_\+constraints(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!time\+\_\+limit@{time\+\_\+limit}}
+\index{time\+\_\+limit@{time\+\_\+limit}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{time\+\_\+limit}{time\_limit}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+time\+\_\+limit}
+
+
+
+Definition at line 193 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4b3bde987121cd07a0e7247980060f29}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4b3bde987121cd07a0e7247980060f29}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!w@{w}}
+\index{w@{w}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w}
+
+
+
+Definition at line 47 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a30d871766e220d12a53bce833249cc57}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a30d871766e220d12a53bce833249cc57}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!x@{x}}
+\index{x@{x}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x}
+
+
+
+Definition at line 51 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+bottom\+\_\+left(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve(), sylva.\+misc.\+plot.\+rectangle.\+top(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a1b95b56881d41dd6c5e1a66e6a6218cf}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a1b95b56881d41dd6c5e1a66e6a6218cf}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!x\+\_\+distance@{x\+\_\+distance}}
+\index{x\+\_\+distance@{x\+\_\+distance}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{x\+\_\+distance}{x\_distance}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x\+\_\+distance}
+
+
+
+Definition at line 93 of file floorplanner.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a583eb5cc30fb2978384746da5b4b440f}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a583eb5cc30fb2978384746da5b4b440f}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!y@{y}}
+\index{y@{y}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y}
+
+
+
+Definition at line 53 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve(), sylva.\+misc.\+plot.\+rectangle.\+top(), sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+right().
+
+\mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abf433d1b5543d12d04aba987eac72755}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_abf433d1b5543d12d04aba987eac72755}} 
+\index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!y\+\_\+distance@{y\+\_\+distance}}
+\index{y\+\_\+distance@{y\+\_\+distance}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
+\subsubsection{\texorpdfstring{y\+\_\+distance}{y\_distance}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y\+\_\+distance}
+
+
+
+Definition at line 94 of file floorplanner.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code\+\_\+generation/\hyperlink{floorplanner_8py}{floorplanner.\+py}\end{DoxyCompactItemize}

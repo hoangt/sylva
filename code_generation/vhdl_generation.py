@@ -21,7 +21,7 @@ def port_list_to_dict(port_list) :
 
 pl2pd = port_list_to_dict
 
-std_logic = sdf.data_type(name = 'std_logic', size = 1)
+std_logic = sdf.DataTokenType(name = 'std_logic', size = 1)
 
 default_input_ports_list = [
   sdf.port(name ='clk', type = std_logic),

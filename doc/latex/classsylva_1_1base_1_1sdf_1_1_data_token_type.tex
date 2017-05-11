@@ -1,0 +1,176 @@
+\hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type}{}\section{sylva.\+base.\+sdf.\+Data\+Token\+Type Class Reference}
+\label{classsylva_1_1base_1_1sdf_1_1_data_token_type}\index{sylva.\+base.\+sdf.\+Data\+Token\+Type@{sylva.\+base.\+sdf.\+Data\+Token\+Type}}
+Inheritance diagram for sylva.\+base.\+sdf.\+Data\+Token\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsylva_1_1base_1_1sdf_1_1_data_token_type}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_add78d9084e28521d9c7fa6a334d2f6ec}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_a64214bba14fcba747fd608caef007924}{name}=\textquotesingle{}int32\textquotesingle{}, \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_abf397c07db4eced64bf773de13fcbbf0}{size}=32)
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_ab44771f0368f95e63030117f12b7e36d}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_ad125c88296f6af2f66c19a4c70513bbc}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_afa649c12af7f700e3c1f90b02e100d75}{serialize} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_a67288003df4678e9cb206773551a17c7}{deserialize}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_a64214bba14fcba747fd608caef007924}{name}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_abf397c07db4eced64bf773de13fcbbf0}{size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file sdf.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_add78d9084e28521d9c7fa6a334d2f6ec}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_add78d9084e28521d9c7fa6a334d2f6ec}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \textquotesingle{}int32\textquotesingle{}},  }\item[{}]{size = {\ttfamily 32} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+18         \textcolor{keyword}{def }\_\_init\_\_(self, name='int32', size=32):
+19 
+20             \textcolor{comment}{# \(\backslash\)var name}
+21             \textcolor{comment}{# The name of the user and it should be a str object.}
+22             self.name = name
+23 
+24             \textcolor{comment}{# \(\backslash\)var size}
+25             \textcolor{comment}{# The size of the data token in number of bits and it should be an int object.}
+26             self.size = size
+27 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_ad125c88296f6af2f66c19a4c70513bbc}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_ad125c88296f6af2f66c19a4c70513bbc}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+base.\+fimp.\+fimp.\+\_\+\+\_\+str\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+36         \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self):
+37             \textcolor{keywordflow}{return} self.\_\_str\_\_()
+38 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_ab44771f0368f95e63030117f12b7e36d}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_ab44771f0368f95e63030117f12b7e36d}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+30         \textcolor{keyword}{def }\_\_str\_\_(self):
+31             \textcolor{keywordflow}{return} f\textcolor{stringliteral}{'\{self.name\} (size \{self.size\})'}
+32 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_a67288003df4678e9cb206773551a17c7}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_a67288003df4678e9cb206773551a17c7}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Data\+Token\+Type.\+deserialize (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{data\+\_\+token\+\_\+type\+\_\+dict = {\ttfamily \{\textquotesingle{}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type_a64214bba14fcba747fd608caef007924}{name}\textquotesingle{}\+:~\textquotesingle{}int32\textquotesingle{}},  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+52         \textcolor{keyword}{def }deserialize(cls, data\_token\_type\_dict=\{'name': \textcolor{stringliteral}{'int32'}, \textcolor{stringliteral}{'size'}: 32\}):
+53             \textcolor{keywordflow}{return} cls(name=data\_token\_type\_dict[\textcolor{stringliteral}{'name'}], size=data\_token\_type\_dict[\textcolor{stringliteral}{'size'}])
+54 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_afa649c12af7f700e3c1f90b02e100d75}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_afa649c12af7f700e3c1f90b02e100d75}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Data\+Token\+Type.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+base.\+sdf.\+Data\+Token\+Type.\+size.
+
+
+\begin{DoxyCode}
+43         \textcolor{keyword}{def }serialize(self):
+44             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'name'}: self.name, \textcolor{stringliteral}{'size'}: self.size\}
+45 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_a64214bba14fcba747fd608caef007924}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_a64214bba14fcba747fd608caef007924}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!name@{name}}
+\index{name@{name}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name}
+
+
+
+Definition at line 22 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+clone(), sylva.\+base.\+sdf.\+actor.\+clone(), sylva.\+base.\+sdf.\+Data\+Token\+Type.\+serialize(), sylva.\+base.\+sdf.\+port.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), sylva.\+glic.\+glic.\+control.\+serialize(), and sylva.\+base.\+sdf.\+actor.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_data_token_type_abf397c07db4eced64bf773de13fcbbf0}\label{classsylva_1_1base_1_1sdf_1_1_data_token_type_abf397c07db4eced64bf773de13fcbbf0}} 
+\index{sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}!size@{size}}
+\index{size@{size}!sylva\+::base\+::sdf\+::\+Data\+Token\+Type@{sylva\+::base\+::sdf\+::\+Data\+Token\+Type}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Data\+Token\+Type.\+size}
+
+
+
+Definition at line 26 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+Data\+Token\+Type.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sdf_8py}{sdf.\+py}\end{DoxyCompactItemize}

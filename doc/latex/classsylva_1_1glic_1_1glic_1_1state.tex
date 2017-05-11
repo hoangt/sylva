@@ -1,0 +1,177 @@
+\hypertarget{classsylva_1_1glic_1_1glic_1_1state}{}\section{sylva.\+glic.\+glic.\+state Class Reference}
+\label{classsylva_1_1glic_1_1glic_1_1state}\index{sylva.\+glic.\+glic.\+state@{sylva.\+glic.\+glic.\+state}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1state_a0f4333a285db0815af061030147719bc}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1glic_1_1glic_1_1state_aef7f98ba81db15cbdc2ee99fce22b24d}{index}=0, \hyperlink{classsylva_1_1glic_1_1glic_1_1state_a11784d5cf554e5ee8b96a15f516c8c7b}{output}=None)
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1state_ae76daa7ee7736520b44faadbe0cd0b39}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1state_a09708ff3d56142db919a172a0cb849e1}{serialize} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1glic_1_1glic_1_1state_a00c5deb1533d0282be3a43587d483a2a}{deserialize} (json\+\_\+dict, states=None)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1state_aef7f98ba81db15cbdc2ee99fce22b24d}{index}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1state_a11784d5cf554e5ee8b96a15f516c8c7b}{output}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1glic_1_1glic_1_1state_a291b844e74d2968ce02a7d839c124d27}{\+\_\+\+\_\+repr\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}  Basic Moore FSM state class
+\end{DoxyVerb}
+ 
+
+Definition at line 77 of file glic.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_a0f4333a285db0815af061030147719bc}\label{classsylva_1_1glic_1_1glic_1_1state_a0f4333a285db0815af061030147719bc}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index = {\ttfamily 0},  }\item[{}]{output = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file glic.\+py.
+
+
+\begin{DoxyCode}
+83     \textcolor{keyword}{def }\_\_init\_\_(self, index=0, output=None):
+84 
+85       self.index = index
+86       self.output = output
+87       self.\_\_repr\_\_ = self.\_\_str\_\_
+88 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_ae76daa7ee7736520b44faadbe0cd0b39}\label{classsylva_1_1glic_1_1glic_1_1state_ae76daa7ee7736520b44faadbe0cd0b39}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file glic.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+glic.\+glic.\+state.\+index, sylva.\+base.\+sdf.\+actor.\+index, and sylva.\+glic.\+glic.\+state.\+output.
+
+
+\begin{DoxyCode}
+89     \textcolor{keyword}{def }\_\_str\_\_(self):
+90       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'state: %d output: %s'} % (self.index, self.output)
+91 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_a00c5deb1533d0282be3a43587d483a2a}\label{classsylva_1_1glic_1_1glic_1_1state_a00c5deb1533d0282be3a43587d483a2a}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+state.\+deserialize (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict,  }\item[{}]{states = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 100 of file glic.\+py.
+
+
+\begin{DoxyCode}
+100     \textcolor{keyword}{def }deserialize(json\_dict, states=None):
+101       index = int(json\_dict[\textcolor{stringliteral}{'index'}])
+102       output = int(json\_dict[\textcolor{stringliteral}{'output'}])
+103 
+104       \textcolor{keywordflow}{if} isinstance(states, list):
+105         states[index].edges = [
+106             edge.deserialize(e, states) \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'edges'}]]
+107         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+108 
+109       \textcolor{keywordflow}{return} state(index=index, output=output)
+110 
+111   \textcolor{keyword}{class }control:
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_a09708ff3d56142db919a172a0cb849e1}\label{classsylva_1_1glic_1_1glic_1_1state_a09708ff3d56142db919a172a0cb849e1}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+glic.\+glic.\+state.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file glic.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+edges, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+glic.\+glic.\+state.\+index, sylva.\+base.\+sdf.\+actor.\+index, and sylva.\+glic.\+glic.\+state.\+output.
+
+
+\begin{DoxyCode}
+92     \textcolor{keyword}{def }serialize(self):
+93       result = \{\textcolor{stringliteral}{'index'}: self.index, \textcolor{stringliteral}{'output'}: self.output\}
+94       \textcolor{keywordflow}{if} hasattr(self, \textcolor{stringliteral}{'edges'}):
+95         result[\textcolor{stringliteral}{'edges'}] = [e.serialize() \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges]
+96 
+97       \textcolor{keywordflow}{return} result
+98 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_a291b844e74d2968ce02a7d839c124d27}\label{classsylva_1_1glic_1_1glic_1_1state_a291b844e74d2968ce02a7d839c124d27}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+}{\_\_repr\_\_}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+repr\+\_\+\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 87 of file glic.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_aef7f98ba81db15cbdc2ee99fce22b24d}\label{classsylva_1_1glic_1_1glic_1_1state_aef7f98ba81db15cbdc2ee99fce22b24d}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!index@{index}}
+\index{index@{index}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+state.\+index}
+
+
+
+Definition at line 85 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+state.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1state_a11784d5cf554e5ee8b96a15f516c8c7b}\label{classsylva_1_1glic_1_1glic_1_1state_a11784d5cf554e5ee8b96a15f516c8c7b}} 
+\index{sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}!output@{output}}
+\index{output@{output}!sylva\+::glic\+::glic\+::state@{sylva\+::glic\+::glic\+::state}}
+\subsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily sylva.\+glic.\+glic.\+state.\+output}
+
+
+
+Definition at line 86 of file glic.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+state.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glic/\hyperlink{glic_8py}{glic.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,718 @@
+\hypertarget{namespacesylva_1_1frontend_1_1mdl__reader}{}\section{sylva.\+frontend.\+mdl\+\_\+reader Namespace Reference}
+\label{namespacesylva_1_1frontend_1_1mdl__reader}\index{sylva.\+frontend.\+mdl\+\_\+reader@{sylva.\+frontend.\+mdl\+\_\+reader}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1frontend_1_1mdl__reader_1_1simulink__model}{simulink\+\_\+model}
+\item 
+class \hyperlink{classsylva_1_1frontend_1_1mdl__reader_1_1simulink__system}{simulink\+\_\+system}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}{get\+\_\+string} (one\+\_\+string)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a57fe0f3fd3c042d0b72f2725d8cc4496}{get\+\_\+list} (one\+\_\+list)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab87bbf99474762b7a54620e20adfddc2}{get\+\_\+block} (one\+\_\+block)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\+\_\+value} (one\+\_\+value)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a078c8f3a089b8fd85e32051e6cdb1881}{get\+\_\+model\+\_\+name} (\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}{value})
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_af44b7256da0388f8bdd76e719520bf8c}{get\+\_\+block\+\_\+defaults} (block\+\_\+defaults)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a64abdaaea51955fecbf3c5557ff78edc}{get\+\_\+one\+\_\+block} (block)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}{get\+\_\+system\+\_\+block} (block)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}{get\+\_\+system} (\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}{value})
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a7b67abf433ee65dc01be853f378cc616}{process\+Node} (tokens)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}{read\+\_\+type\+\_\+count} (type\+\_\+count)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a5c3d81eb45232a9875a247ce76c4cdc9}{record\+\_\+port} (block, port\+\_\+index, port\+\_\+name, token\+\_\+type, token\+\_\+size, token\+\_\+count, io=\textquotesingle{}in\textquotesingle{})
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a98e0329f3a64c7c2d8d9627cf545b130}{read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict} (mdl\+\_\+path)
+\item 
+def \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a49a44158ffdececdbadbd00017774a8c}{read\+\_\+mdl\+\_\+model} (mdl\+\_\+path)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a59bad144a21d04a6847a82ed9aeb9aad}{use\+\_\+white\+\_\+list} = True
+\item 
+list \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_adeb4e351f2cedb282678906b4f6a7178}{property\+\_\+list}
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_aad201f37e53e165e9ea929020f01268b}{level}
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ad384a0048b62838cc068089a983d0742}{Parsed\+Model} = \hyperlink{classsylva_1_1frontend_1_1mdl__reader_1_1simulink__model}{simulink\+\_\+model}()
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}{key\+\_\+value} = Forward()
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ac7180f117231855bb60b36d9602c72a1}{key} = Word (alphanums + \textquotesingle{}\$+-\/\+\_\+$\ast$\textbackslash{}\textbackslash{}.\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}{value} = Forward()
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a26a83a8cd91347ea93b5b678c14baf7a}{off} = Keyword( \textquotesingle{}off\textquotesingle{} )
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a8fb0a02ca237b01f23245c80760b4071}{on} = Keyword( \textquotesingle{}on\textquotesingle{} )
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab10130f0d0adc28ded718ac26c1abc5c}{string\+\_\+value} = quoted\+String
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a14e5f5e94df43c0c60a7f83c1d5a574e}{other\+\_\+value} = Word (alphanums + \textquotesingle{}\$+-\/\+\_\+$\ast$\textbackslash{}\textbackslash{}.\textquotesingle{})
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a29a2a57aa15b95311fcc436d42ccc110}{normal\+\_\+value} = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a8fb0a02ca237b01f23245c80760b4071}{on} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a26a83a8cd91347ea93b5b678c14baf7a}{off} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab10130f0d0adc28ded718ac26c1abc5c}{string\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a14e5f5e94df43c0c60a7f83c1d5a574e}{other\+\_\+value}
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab48e53340e0d8180cc9ac1c1636be161}{block\+\_\+block} = nested\+Expr(\textquotesingle{}\{\textquotesingle{}, \textquotesingle{}\}\textquotesingle{}, content = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}{key\+\_\+value})
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a581827bbd8604fbac7778f6f999f002a}{list\+\_\+block} = nested\+Expr(\textquotesingle{}\mbox{[}\textquotesingle{}, \textquotesingle{}\mbox{]}\textquotesingle{}, content = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}{value})
+\item 
+\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_aa76cab99625dd105ca447bfe4fde226d}{parser} = One\+Or\+More(\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}{key\+\_\+value})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ab87bbf99474762b7a54620e20adfddc2}\label{namespacesylva_1_1frontend_1_1mdl__reader_ab87bbf99474762b7a54620e20adfddc2}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+block@{get\+\_\+block}}
+\index{get\+\_\+block@{get\+\_\+block}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+block()}{get\_block()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block (\begin{DoxyParamCaption}\item[{}]{one\+\_\+block }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+\begin{DoxyCode}
+62   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab87bbf99474762b7a54620e20adfddc2}{get\_block}(one\_block) :
+63     \textcolor{keywordflow}{if} isinstance(one\_block, list) :
+64       result = \{\}
+65       \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} one\_block :
+66         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} use\_white\_list \textcolor{keywordflow}{or} (item[0] \textcolor{keywordflow}{in} property\_list) :
+67           result[ item[0] ] = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(item[1])
+68       \textcolor{keywordflow}{return} result
+69     \textcolor{keywordflow}{else} :
+70       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'ERROR, value is not list but %s'}\(\backslash\)
+71               % one\_block
+72 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_af44b7256da0388f8bdd76e719520bf8c}\label{namespacesylva_1_1frontend_1_1mdl__reader_af44b7256da0388f8bdd76e719520bf8c}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+block\+\_\+defaults@{get\+\_\+block\+\_\+defaults}}
+\index{get\+\_\+block\+\_\+defaults@{get\+\_\+block\+\_\+defaults}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+block\+\_\+defaults()}{get\_block\_defaults()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block\+\_\+defaults (\begin{DoxyParamCaption}\item[{}]{block\+\_\+defaults }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+one\+\_\+block().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+process\+Node().
+
+
+\begin{DoxyCode}
+90   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_af44b7256da0388f8bdd76e719520bf8c}{get\_block\_defaults}(block\_defaults) :
+91 
+92     \textcolor{keywordflow}{return} [ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a64abdaaea51955fecbf3c5557ff78edc}{get\_one\_block}(block)
+93              \textcolor{keywordflow}{for} block \textcolor{keywordflow}{in} block\_defaults ]
+94 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a57fe0f3fd3c042d0b72f2725d8cc4496}\label{namespacesylva_1_1frontend_1_1mdl__reader_a57fe0f3fd3c042d0b72f2725d8cc4496}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+list@{get\+\_\+list}}
+\index{get\+\_\+list@{get\+\_\+list}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+list()}{get\_list()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+list (\begin{DoxyParamCaption}\item[{}]{one\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+string().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+\begin{DoxyCode}
+51   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a57fe0f3fd3c042d0b72f2725d8cc4496}{get\_list}(one\_list) :
+52     \textcolor{keywordflow}{if} isinstance(one\_list, list) :
+53       \textcolor{keywordflow}{if} len(one\_list) == 1 :
+54         \textcolor{keywordflow}{return} [ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}{get\_string}(one\_list[0]) ]
+55       \textcolor{keywordflow}{else} :
+56         \textcolor{keywordflow}{return} [ item \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} one\_list \textcolor{keywordflow}{if} item != \textcolor{stringliteral}{','} ]
+57       \textcolor{keywordflow}{return} one\_list
+58     \textcolor{keywordflow}{else} :
+59       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'ERROR, value is not list but %s'}\(\backslash\)
+60              % one\_list
+61 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a078c8f3a089b8fd85e32051e6cdb1881}\label{namespacesylva_1_1frontend_1_1mdl__reader_a078c8f3a089b8fd85e32051e6cdb1881}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+model\+\_\+name@{get\+\_\+model\+\_\+name}}
+\index{get\+\_\+model\+\_\+name@{get\+\_\+model\+\_\+name}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+model\+\_\+name()}{get\_model\_name()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+model\+\_\+name (\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+process\+Node().
+
+
+\begin{DoxyCode}
+87   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a078c8f3a089b8fd85e32051e6cdb1881}{get\_model\_name}(value) :
+88     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(value)
+89 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a64abdaaea51955fecbf3c5557ff78edc}\label{namespacesylva_1_1frontend_1_1mdl__reader_a64abdaaea51955fecbf3c5557ff78edc}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+one\+\_\+block@{get\+\_\+one\+\_\+block}}
+\index{get\+\_\+one\+\_\+block@{get\+\_\+one\+\_\+block}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+one\+\_\+block()}{get\_one\_block()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+one\+\_\+block (\begin{DoxyParamCaption}\item[{}]{block }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block\+\_\+defaults().
+
+
+\begin{DoxyCode}
+95   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a64abdaaea51955fecbf3c5557ff78edc}{get\_one\_block}(block) :
+96     \textcolor{keywordflow}{return} [ (item[0], \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(item[1]))
+97              \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} block[1]
+98                \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} use\_white\_list \textcolor{keywordflow}{or} (item[0] \textcolor{keywordflow}{in} property\_list) ]
+99 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}\label{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+string@{get\+\_\+string}}
+\index{get\+\_\+string@{get\+\_\+string}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+string()}{get\_string()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+string (\begin{DoxyParamCaption}\item[{}]{one\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file mdl\+\_\+reader.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+list(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+\begin{DoxyCode}
+42   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}{get\_string}(one\_string) :
+43     \textcolor{keywordflow}{if} isinstance(one\_string, str) :
+44       \textcolor{keywordflow}{if} one\_string.startswith(\textcolor{stringliteral}{'"'}) :
+45         one\_string = one\_string[1:-1]
+46       \textcolor{keywordflow}{return} one\_string
+47     \textcolor{keywordflow}{else} :
+48       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'ERROR, value is not string but %s'}\(\backslash\)
+49              % one\_string
+50 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}\label{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+system@{get\+\_\+system}}
+\index{get\+\_\+system@{get\+\_\+system}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+system()}{get\_system()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system (\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system\+\_\+block(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system\+\_\+block(), and sylva.\+frontend.\+mdl\+\_\+reader.\+process\+Node().
+
+
+\begin{DoxyCode}
+110   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}{get\_system}(value):
+111     system = simulink\_system()
+112     system.name = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(value[0][1])
+113     system.blocks = [ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}{get\_system\_block}(item[1])
+114                       \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} value
+115                         \textcolor{keywordflow}{if} item[0] == \textcolor{stringliteral}{'Block'} ]
+116     system.lines = [ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}{get\_system\_block}(item[1])
+117                       \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} value
+118                         \textcolor{keywordflow}{if} item[0] == \textcolor{stringliteral}{'Line'} ]
+119     \textcolor{keywordflow}{return} system
+120 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}\label{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+system\+\_\+block@{get\+\_\+system\+\_\+block}}
+\index{get\+\_\+system\+\_\+block@{get\+\_\+system\+\_\+block}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+system\+\_\+block()}{get\_system\_block()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system\+\_\+block (\begin{DoxyParamCaption}\item[{}]{block }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system().
+
+
+\begin{DoxyCode}
+100   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ae055d388934ef992b5b05417b47b2940}{get\_system\_block}(block) :
+101     properties = \{\}
+102     \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} block :
+103       \textcolor{keywordflow}{if} isinstance(item[0], str) \textcolor{keywordflow}{and} (\textcolor{keywordflow}{not} use\_white\_list \textcolor{keywordflow}{or} (item[0] \textcolor{keywordflow}{in} property\_list)) :
+104         \textcolor{keywordflow}{if} item[0] == \textcolor{stringliteral}{'System'} :
+105           properties[item[0]] = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}{get\_system}(item[1])
+106         \textcolor{keywordflow}{else} :
+107           properties[item[0]] = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(item[1])
+108     \textcolor{keywordflow}{return} properties
+109 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}\label{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{get\+\_\+value()}{get\_value()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+value (\begin{DoxyParamCaption}\item[{}]{one\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block(), sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+list(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+string().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block(), sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+model\+\_\+name(), sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+one\+\_\+block(), sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system\+\_\+block().
+
+
+\begin{DoxyCode}
+73   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(one\_value) :
+74     \textcolor{keywordflow}{if} isinstance(one\_value, str) :
+75       \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a242d55779219e76eca1223379ef92cbe}{get\_string}(one\_value)
+76     \textcolor{keywordflow}{elif} isinstance(one\_value, list) :
+77       \textcolor{keywordflow}{if} \textcolor{stringliteral}{','} \textcolor{keywordflow}{in} one\_value :
+78         \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a57fe0f3fd3c042d0b72f2725d8cc4496}{get\_list}(one\_value)
+79       \textcolor{keywordflow}{elif} len(one\_value) == 1 :
+80         \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a1109464081a5fe17543fc36a494625bd}{get\_value}(one\_value[0])
+81       \textcolor{keywordflow}{else} :
+82         \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab87bbf99474762b7a54620e20adfddc2}{get\_block}(one\_value)
+83     \textcolor{keywordflow}{else} :
+84       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'ERROR, value is not string or list but %s'}\(\backslash\)
+85               % one\_value
+86 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a7b67abf433ee65dc01be853f378cc616}\label{namespacesylva_1_1frontend_1_1mdl__reader_a7b67abf433ee65dc01be853f378cc616}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!process\+Node@{process\+Node}}
+\index{process\+Node@{process\+Node}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{process\+Node()}{processNode()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+process\+Node (\begin{DoxyParamCaption}\item[{}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+block\+\_\+defaults(), sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+model\+\_\+name(), and sylva.\+frontend.\+mdl\+\_\+reader.\+get\+\_\+system().
+
+
+\begin{DoxyCode}
+121   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a7b67abf433ee65dc01be853f378cc616}{processNode}(tokens):
+122 
+123     key, value = tokens[0].asList()
+124     \textcolor{comment}{# tokens[0] is for compensates the one additional [] level.}
+125 
+126     \textcolor{keyword}{global} level
+127     \textcolor{keyword}{global} ParsedModel
+128 
+129     \textcolor{comment}{# read ParsedModel name}
+130     \textcolor{keywordflow}{if} level == 0 \textcolor{keywordflow}{and} key == \textcolor{stringliteral}{'Name'} :
+131 
+132       ParsedModel.name = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a078c8f3a089b8fd85e32051e6cdb1881}{get\_model\_name}(value)
+133       level += 1
+134 
+135     \textcolor{keywordflow}{elif} level == 1 :
+136 
+137       \textcolor{comment}{# read block default parameters}
+138       \textcolor{keywordflow}{if} key == \textcolor{stringliteral}{'BlockParameterDefaults'} :
+139         ParsedModel.block\_defaults = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_af44b7256da0388f8bdd76e719520bf8c}{get\_block\_defaults}(value)
+140 
+141       \textcolor{keywordflow}{if} key == \textcolor{stringliteral}{'System'} :
+142         ParsedModel.system = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a51ec6ceefd4c16f0d3d80edbdc40c0e9}{get\_system}(value)
+143 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a98e0329f3a64c7c2d8d9627cf545b130}\label{namespacesylva_1_1frontend_1_1mdl__reader_a98e0329f3a64c7c2d8d9627cf545b130}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict@{read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict}}
+\index{read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict@{read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict()}{read\_mdl\_lib\_as\_dict()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{mdl\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 202 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+type\+\_\+count(), and sylva.\+frontend.\+mdl\+\_\+reader.\+record\+\_\+port().
+
+
+\begin{DoxyCode}
+202 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a98e0329f3a64c7c2d8d9627cf545b130}{read\_mdl\_lib\_as\_dict}(mdl\_path) :
+203 
+204   \textcolor{keyword}{global} ParsedModel
+205 
+206   p = parser.parseFile(mdl\_path, \textcolor{keyword}{True})
+207 
+208   \textcolor{keywordflow}{if} p[0][0] != \textcolor{stringliteral}{'Library'} :
+209     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Input file is NOT a library (.mdl) but a %s'} % p[0][0]
+210 
+211   lib = \{\}
+212 
+213   inport\_index = 0
+214   outport\_index = 1
+215 
+216   \textcolor{keywordflow}{for} func \textcolor{keywordflow}{in} ParsedModel.system.blocks :
+217     name = \textcolor{stringliteral}{'%s/%s'} % (ParsedModel.system.name, func[\textcolor{stringliteral}{'Name'}])
+218     lib[ name ] = \{\}
+219     lib[ name ][\textcolor{stringliteral}{'input\_ports'}] = \{\}
+220     lib[ name ][\textcolor{stringliteral}{'output\_ports'}] = \{\}
+221     system = func[\textcolor{stringliteral}{'System'}]
+222 
+223     inport\_index = 0
+224     outport\_index = 0
+225 
+226     \textcolor{keywordflow}{for} port \textcolor{keywordflow}{in} system.blocks :
+227       \textcolor{keywordflow}{if} port[\textcolor{stringliteral}{'BlockType'}] == \textcolor{stringliteral}{'Inport'} :
+228         port\_name, type\_count = port[\textcolor{stringliteral}{'Name'}].split(\textcolor{stringliteral}{':'})
+229         port\_name.replace(\textcolor{stringliteral}{' '}, \textcolor{stringliteral}{''})
+230 
+231         token\_type, token\_size, token\_count \(\backslash\)
+232         = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}{read\_type\_count}(type\_count)
+233 
+234         lib[ name ], inport\_index \(\backslash\)
+235         = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a5c3d81eb45232a9875a247ce76c4cdc9}{record\_port}(lib[ name ], inport\_index,
+236             port\_name, token\_type, token\_size, token\_count,
+237             io = \textcolor{stringliteral}{'in'})
+238 
+239       \textcolor{keywordflow}{elif} port[\textcolor{stringliteral}{'BlockType'}] == \textcolor{stringliteral}{'Outport'} :
+240 
+241         port\_name, type\_count = port[\textcolor{stringliteral}{'Name'}].split(\textcolor{stringliteral}{':'})
+242         port\_name.replace(\textcolor{stringliteral}{' '}, \textcolor{stringliteral}{''})
+243 
+244         token\_type, token\_size, token\_count \(\backslash\)
+245         = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}{read\_type\_count}(type\_count)
+246 
+247         lib[ name ], outport\_index \(\backslash\)
+248         = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a5c3d81eb45232a9875a247ce76c4cdc9}{record\_port}(lib[ name ], outport\_index,
+249             port\_name, token\_type, token\_size, token\_count,
+250             io = \textcolor{stringliteral}{'out'})
+251 
+252   \textcolor{keywordflow}{return} lib
+253 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a49a44158ffdececdbadbd00017774a8c}\label{namespacesylva_1_1frontend_1_1mdl__reader_a49a44158ffdececdbadbd00017774a8c}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!read\+\_\+mdl\+\_\+model@{read\+\_\+mdl\+\_\+model}}
+\index{read\+\_\+mdl\+\_\+model@{read\+\_\+mdl\+\_\+model}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{read\+\_\+mdl\+\_\+model()}{read\_mdl\_model()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+mdl\+\_\+model (\begin{DoxyParamCaption}\item[{}]{mdl\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file mdl\+\_\+reader.\+py.
+
+
+\begin{DoxyCode}
+254 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a49a44158ffdececdbadbd00017774a8c}{read\_mdl\_model}(mdl\_path) :
+255 
+256   \textcolor{keyword}{global} ParsedModel
+257   p = parser.parseFile(mdl\_path, \textcolor{keyword}{True})
+258 
+259   \textcolor{keywordflow}{if} p[0][0] != \textcolor{stringliteral}{'Model'} :
+260     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Input file is NOT a ParsedModel (.mdl) but a %s'} % p[0][0]
+261 
+262   \textcolor{keywordflow}{return} copy.deepcopy(ParsedModel)
+263 \end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}\label{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!read\+\_\+type\+\_\+count@{read\+\_\+type\+\_\+count}}
+\index{read\+\_\+type\+\_\+count@{read\+\_\+type\+\_\+count}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{read\+\_\+type\+\_\+count()}{read\_type\_count()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+type\+\_\+count (\begin{DoxyParamCaption}\item[{}]{type\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file mdl\+\_\+reader.\+py.
+
+
+
+References sylva.\+frontend.\+mdl\+\_\+reader.\+record\+\_\+port().
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict().
+
+
+\begin{DoxyCode}
+168   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab497eed79d6bd7ce335dafa24e638470}{read\_type\_count}(type\_count) :
+169     type\_count = type\_count.lower()
+170 
+171     token\_type = \textcolor{stringliteral}{'No type'}
+172     token\_size = 1
+173     token\_count = 1
+174 
+175     port\_properties = type\_count.split(\textcolor{stringliteral}{','})
+176 
+177     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} port\_properties :
+178       key, value = p.split(\textcolor{stringliteral}{'='})
+179       key = key.strip()
+180       value = value.strip()
+181       \textcolor{keywordflow}{if} key == \textcolor{stringliteral}{'type'} :
+182         token\_type = value
+183       \textcolor{keywordflow}{elif} key == \textcolor{stringliteral}{'size'} :
+184         token\_size = int(value)
+185       \textcolor{keywordflow}{elif} key == \textcolor{stringliteral}{'count'} :
+186         token\_count = int(value)
+187     \textcolor{keywordflow}{return} token\_type, token\_size, token\_count
+188 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a5c3d81eb45232a9875a247ce76c4cdc9}\label{namespacesylva_1_1frontend_1_1mdl__reader_a5c3d81eb45232a9875a247ce76c4cdc9}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!record\+\_\+port@{record\+\_\+port}}
+\index{record\+\_\+port@{record\+\_\+port}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{record\+\_\+port()}{record\_port()}}
+{\footnotesize\ttfamily def sylva.\+frontend.\+mdl\+\_\+reader.\+record\+\_\+port (\begin{DoxyParamCaption}\item[{}]{block,  }\item[{}]{port\+\_\+index,  }\item[{}]{port\+\_\+name,  }\item[{}]{token\+\_\+type,  }\item[{}]{token\+\_\+size,  }\item[{}]{token\+\_\+count,  }\item[{}]{io = {\ttfamily \textquotesingle{}in\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file mdl\+\_\+reader.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+mdl\+\_\+lib\+\_\+as\+\_\+dict(), and sylva.\+frontend.\+mdl\+\_\+reader.\+read\+\_\+type\+\_\+count().
+
+
+\begin{DoxyCode}
+190     token\_type, token\_size, token\_count, io = \textcolor{stringliteral}{'in'}) :
+191 
+192     io += \textcolor{stringliteral}{'put\_ports'}
+193 
+194     block[io][port\_index] = \{\}
+195     block[io][port\_index][\textcolor{stringliteral}{'name'}] = port\_name
+196     block[io][port\_index][\textcolor{stringliteral}{'token type'}] = token\_type
+197     block[io][port\_index][\textcolor{stringliteral}{'token size'}] = token\_size
+198     block[io][port\_index][\textcolor{stringliteral}{'token count'}] = token\_count
+199 
+200     \textcolor{keywordflow}{return} block, port\_index + 1
+201 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ab48e53340e0d8180cc9ac1c1636be161}\label{namespacesylva_1_1frontend_1_1mdl__reader_ab48e53340e0d8180cc9ac1c1636be161}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!block\+\_\+block@{block\+\_\+block}}
+\index{block\+\_\+block@{block\+\_\+block}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{block\+\_\+block}{block\_block}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+block\+\_\+block = nested\+Expr(\textquotesingle{}\{\textquotesingle{}, \textquotesingle{}\}\textquotesingle{}, content = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}{key\+\_\+value})}
+
+
+
+Definition at line 158 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ac7180f117231855bb60b36d9602c72a1}\label{namespacesylva_1_1frontend_1_1mdl__reader_ac7180f117231855bb60b36d9602c72a1}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!key@{key}}
+\index{key@{key}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+key = Word (alphanums + \textquotesingle{}\$+-\/\+\_\+$\ast$\textbackslash{}\textbackslash{}.\textquotesingle{})}
+
+
+
+Definition at line 147 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}\label{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!key\+\_\+value@{key\+\_\+value}}
+\index{key\+\_\+value@{key\+\_\+value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{key\+\_\+value}{key\_value}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+key\+\_\+value = Forward()}
+
+
+
+Definition at line 144 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_aad201f37e53e165e9ea929020f01268b}\label{namespacesylva_1_1frontend_1_1mdl__reader_aad201f37e53e165e9ea929020f01268b}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!level@{level}}
+\index{level@{level}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+level}
+
+
+
+Definition at line 39 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a581827bbd8604fbac7778f6f999f002a}\label{namespacesylva_1_1frontend_1_1mdl__reader_a581827bbd8604fbac7778f6f999f002a}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!list\+\_\+block@{list\+\_\+block}}
+\index{list\+\_\+block@{list\+\_\+block}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{list\+\_\+block}{list\_block}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+list\+\_\+block = nested\+Expr(\textquotesingle{}\mbox{[}\textquotesingle{}, \textquotesingle{}\mbox{]}\textquotesingle{}, content = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}{value})}
+
+
+
+Definition at line 160 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a29a2a57aa15b95311fcc436d42ccc110}\label{namespacesylva_1_1frontend_1_1mdl__reader_a29a2a57aa15b95311fcc436d42ccc110}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!normal\+\_\+value@{normal\+\_\+value}}
+\index{normal\+\_\+value@{normal\+\_\+value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{normal\+\_\+value}{normal\_value}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+normal\+\_\+value = \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a8fb0a02ca237b01f23245c80760b4071}{on} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a26a83a8cd91347ea93b5b678c14baf7a}{off} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab10130f0d0adc28ded718ac26c1abc5c}{string\+\_\+value} $\vert$ \hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_a14e5f5e94df43c0c60a7f83c1d5a574e}{other\+\_\+value}}
+
+
+
+Definition at line 156 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a26a83a8cd91347ea93b5b678c14baf7a}\label{namespacesylva_1_1frontend_1_1mdl__reader_a26a83a8cd91347ea93b5b678c14baf7a}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!off@{off}}
+\index{off@{off}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+off = Keyword( \textquotesingle{}off\textquotesingle{} )}
+
+
+
+Definition at line 152 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a8fb0a02ca237b01f23245c80760b4071}\label{namespacesylva_1_1frontend_1_1mdl__reader_a8fb0a02ca237b01f23245c80760b4071}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!on@{on}}
+\index{on@{on}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+on = Keyword( \textquotesingle{}on\textquotesingle{} )}
+
+
+
+Definition at line 153 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a14e5f5e94df43c0c60a7f83c1d5a574e}\label{namespacesylva_1_1frontend_1_1mdl__reader_a14e5f5e94df43c0c60a7f83c1d5a574e}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!other\+\_\+value@{other\+\_\+value}}
+\index{other\+\_\+value@{other\+\_\+value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{other\+\_\+value}{other\_value}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+other\+\_\+value = Word (alphanums + \textquotesingle{}\$+-\/\+\_\+$\ast$\textbackslash{}\textbackslash{}.\textquotesingle{})}
+
+
+
+Definition at line 155 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ad384a0048b62838cc068089a983d0742}\label{namespacesylva_1_1frontend_1_1mdl__reader_ad384a0048b62838cc068089a983d0742}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!Parsed\+Model@{Parsed\+Model}}
+\index{Parsed\+Model@{Parsed\+Model}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{Parsed\+Model}{ParsedModel}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+Parsed\+Model = \hyperlink{classsylva_1_1frontend_1_1mdl__reader_1_1simulink__model}{simulink\+\_\+model}()}
+
+
+
+Definition at line 40 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_aa76cab99625dd105ca447bfe4fde226d}\label{namespacesylva_1_1frontend_1_1mdl__reader_aa76cab99625dd105ca447bfe4fde226d}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!parser@{parser}}
+\index{parser@{parser}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+parser = One\+Or\+More(\hyperlink{namespacesylva_1_1frontend_1_1mdl__reader_ab486fd03c0920f56c3256072a68fa07e}{key\+\_\+value})}
+
+
+
+Definition at line 166 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_adeb4e351f2cedb282678906b4f6a7178}\label{namespacesylva_1_1frontend_1_1mdl__reader_adeb4e351f2cedb282678906b4f6a7178}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!property\+\_\+list@{property\+\_\+list}}
+\index{property\+\_\+list@{property\+\_\+list}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{property\+\_\+list}{property\_list}}
+{\footnotesize\ttfamily list sylva.\+frontend.\+mdl\+\_\+reader.\+property\+\_\+list}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [
+2   \textcolor{stringliteral}{'BlockType'},
+3   \textcolor{stringliteral}{'SourceBlock'},
+4   \textcolor{stringliteral}{'System'},
+5   \textcolor{stringliteral}{'Block'},
+6   \textcolor{stringliteral}{'Ports'},
+7   \textcolor{stringliteral}{'Port'},
+8   \textcolor{stringliteral}{'PortNumber'},
+9   \textcolor{stringliteral}{'SampleTime'},
+10   \textcolor{stringliteral}{'SignalType'},
+11   \textcolor{stringliteral}{'SamplingMode'},
+12   \textcolor{stringliteral}{'Inputs'},
+13   \textcolor{stringliteral}{'Operator'},
+14   \textcolor{stringliteral}{'OutDataTypeStr'},
+15   \textcolor{stringliteral}{'Name'},
+16   \textcolor{stringliteral}{'SID'},
+17   \textcolor{stringliteral}{'SrcBlock'},
+18   \textcolor{stringliteral}{'SrcPort'},
+19   \textcolor{stringliteral}{'DstBlock'},
+20   \textcolor{stringliteral}{'DstPort'}]
+\end{DoxyCode}
+
+
+Definition at line 6 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_ab10130f0d0adc28ded718ac26c1abc5c}\label{namespacesylva_1_1frontend_1_1mdl__reader_ab10130f0d0adc28ded718ac26c1abc5c}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!string\+\_\+value@{string\+\_\+value}}
+\index{string\+\_\+value@{string\+\_\+value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{string\+\_\+value}{string\_value}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+string\+\_\+value = quoted\+String}
+
+
+
+Definition at line 154 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a59bad144a21d04a6847a82ed9aeb9aad}\label{namespacesylva_1_1frontend_1_1mdl__reader_a59bad144a21d04a6847a82ed9aeb9aad}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!use\+\_\+white\+\_\+list@{use\+\_\+white\+\_\+list}}
+\index{use\+\_\+white\+\_\+list@{use\+\_\+white\+\_\+list}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{use\+\_\+white\+\_\+list}{use\_white\_list}}
+{\footnotesize\ttfamily bool sylva.\+frontend.\+mdl\+\_\+reader.\+use\+\_\+white\+\_\+list = True}
+
+
+
+Definition at line 4 of file mdl\+\_\+reader.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}\label{namespacesylva_1_1frontend_1_1mdl__reader_a20dbd52811dc7d7916a801d1b8cc772e}} 
+\index{sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}!value@{value}}
+\index{value@{value}!sylva\+::frontend\+::mdl\+\_\+reader@{sylva\+::frontend\+::mdl\+\_\+reader}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily sylva.\+frontend.\+mdl\+\_\+reader.\+value = Forward()}
+
+
+
+Definition at line 150 of file mdl\+\_\+reader.\+py.
+

@@ -1,0 +1,47 @@
+\hypertarget{namespacesylva_1_1code__generation_1_1sylva__default__fimp_1_1vhdl_1_1fimp__control}{}\section{sylva.\+code\+\_\+generation.\+sylva\+\_\+default\+\_\+fimp.\+vhdl.\+fimp\+\_\+control Namespace Reference}
+\label{namespacesylva_1_1code__generation_1_1sylva__default__fimp_1_1vhdl_1_1fimp__control}\index{sylva.\+code\+\_\+generation.\+sylva\+\_\+default\+\_\+fimp.\+vhdl.\+fimp\+\_\+control@{sylva.\+code\+\_\+generation.\+sylva\+\_\+default\+\_\+fimp.\+vhdl.\+fimp\+\_\+control}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacesylva_1_1code__generation_1_1sylva__default__fimp_1_1vhdl_1_1fimp__control_aefb2de2649d3e3105eac829de335e988}{code\+\_\+template}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1sylva__default__fimp_1_1vhdl_1_1fimp__control_aefb2de2649d3e3105eac829de335e988}\label{namespacesylva_1_1code__generation_1_1sylva__default__fimp_1_1vhdl_1_1fimp__control_aefb2de2649d3e3105eac829de335e988}} 
+\index{sylva\+::code\+\_\+generation\+::sylva\+\_\+default\+\_\+fimp\+::vhdl\+::fimp\+\_\+control@{sylva\+::code\+\_\+generation\+::sylva\+\_\+default\+\_\+fimp\+::vhdl\+::fimp\+\_\+control}!code\+\_\+template@{code\+\_\+template}}
+\index{code\+\_\+template@{code\+\_\+template}!sylva\+::code\+\_\+generation\+::sylva\+\_\+default\+\_\+fimp\+::vhdl\+::fimp\+\_\+control@{sylva\+::code\+\_\+generation\+::sylva\+\_\+default\+\_\+fimp\+::vhdl\+::fimp\+\_\+control}}
+\subsubsection{\texorpdfstring{code\+\_\+template}{code\_template}}
+{\footnotesize\ttfamily string sylva.\+code\+\_\+generation.\+sylva\+\_\+default\+\_\+fimp.\+vhdl.\+fimp\+\_\+control.\+code\+\_\+template}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \textcolor{stringliteral}{'''\{% for lib, packages in libraries.items() %\}Library \{\{ lib \}\};}
+2 \textcolor{stringliteral}{\{% for package in packages %\}Use \{\{ lib \}\}.\{\{ package \}\}; \{% endfor %\}}
+3 \textcolor{stringliteral}{  \{% endfor %\}}
+4 \textcolor{stringliteral}{entity \{\{ entity\_name \}\} is}
+5 \textcolor{stringliteral}{  port (}
+6 \textcolor{stringliteral}{    clk : in std\_logic;}
+7 \textcolor{stringliteral}{    nrst : in std\_logic\{% for port in input\_ports %\};}
+8 \textcolor{stringliteral}{    \{\{port.name\}\} : in \{\{port.type.name\}\}\{% endfor %\};}
+9 \textcolor{stringliteral}{    \{\{en\_port.name\}\} : out \{\{en\_port.type.name\}\});}
+10 \textcolor{stringliteral}{end \{\{ entity\_name \}\};}
+11 \textcolor{stringliteral}{}
+12 \textcolor{stringliteral}{architecture fimp\_0 of \{\{ entity\_name \}\} is}
+13 \textcolor{stringliteral}{  \{% for port in input\_ports %\}}
+14 \textcolor{stringliteral}{  signal en\_\{\{port.name\}\} : \{\{en\_port.type.name\}\};\{% endfor %\}}
+15 \textcolor{stringliteral}{}
+16 \textcolor{stringliteral}{begin}
+17 \textcolor{stringliteral}{  \{% for port in input\_ports %\}}
+18 \textcolor{stringliteral}{  en\_\{\{port.name\}\} <= '0' when \{\{port.name\}\} = \{\{IDLE\}\} else '1';\{% endfor %\}}
+19 \textcolor{stringliteral}{}
+20 \textcolor{stringliteral}{  \{\{en\_port.name\}\} <= '0' \{% for port in input\_ports %\}}
+21 \textcolor{stringliteral}{    or en\_\{\{port.name\}\}\{% endfor %\};}
+22 \textcolor{stringliteral}{}
+23 \textcolor{stringliteral}{end fimp\_0;}
+24 \textcolor{stringliteral}{'''}
+\end{DoxyCode}
+
+
+Definition at line 5 of file fimp\+\_\+control.\+py.
+

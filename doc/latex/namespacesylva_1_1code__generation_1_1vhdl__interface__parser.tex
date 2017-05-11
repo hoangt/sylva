@@ -1,0 +1,493 @@
+\hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser}{}\section{sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser Namespace Reference}
+\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser}\index{sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser@{sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status} (s=\textquotesingle{}working ...\textquotesingle{}, level=0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}{status\+\_\+level}=\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}{status\+\_\+level})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}{warning} (w=\textquotesingle{}warning ...\textquotesingle{}, level=0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}{warning\+\_\+level}=\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}{warning\+\_\+level})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_afc25f8fd1bfc69960af11938f1e9b305}{read\+\_\+vhdl} (file\+\_\+name)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af04b13914bd754706782c30d090504f5}{read\+\_\+fimp\+\_\+info} (source\+\_\+code)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58e8d5a1d080f5c440889bddbbbb514a}{get\+\_\+fimps} (source\+\_\+code, file\+\_\+name, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}{lib})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58b4385448eeafc249f2d5ca96664814}{add\+\_\+func\+\_\+to\+\_\+lib} (\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}{lib}, func\+\_\+name, generics, input\+\_\+ports, output\+\_\+ports)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}{autocfg} (current\+\_\+path)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac254ef348a92696ed564ed23a93249c7}{add\+\_\+fake\+\_\+info} (\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}{lib})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af7576699c6ef184fb26f0988bd9ab795}{export\+\_\+lib} (\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}{lib}, file\+\_\+name=\textquotesingle{}fimp\+\_\+lib.\+py\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}{status\+\_\+level} = 0
+\item 
+int \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}{warning\+\_\+level} = 0
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac1f7911c1fc284e53096dd7a52882152}{parser}
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac13539f10c901b6537c107ee60cc64b8}{default}
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a20f64a1f69f2f14c50a7cdff5181e898}{help}
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a3fd0b243c6ced038508dd7910723a009}{args} = parser.\+parse\+\_\+args()
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}{lib} = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}{autocfg}(args.\+path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac254ef348a92696ed564ed23a93249c7}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac254ef348a92696ed564ed23a93249c7}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!add\+\_\+fake\+\_\+info@{add\+\_\+fake\+\_\+info}}
+\index{add\+\_\+fake\+\_\+info@{add\+\_\+fake\+\_\+info}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{add\+\_\+fake\+\_\+info()}{add\_fake\_info()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+add\+\_\+fake\+\_\+info (\begin{DoxyParamCaption}\item[{}]{lib }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+\begin{DoxyCode}
+197 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac254ef348a92696ed564ed23a93249c7}{add\_fake\_info}(lib) :
+198 
+199   \textcolor{keywordflow}{for} func \textcolor{keywordflow}{in} lib.values() :
+200     func[\textcolor{stringliteral}{'input\_time'}] = 1
+201     func[\textcolor{stringliteral}{'output\_time'}] = 1
+202     func[\textcolor{stringliteral}{'computation\_time'}] = 1
+203 
+204     func[\textcolor{stringliteral}{'computation\_end\_time'}] = func[\textcolor{stringliteral}{'computation\_time'}] - 1
+205     func[\textcolor{stringliteral}{'input\_end\_time'}] = func[\textcolor{stringliteral}{'input\_time'}] - 1
+206     func[\textcolor{stringliteral}{'output\_start\_time'}] = func[\textcolor{stringliteral}{'computation\_time'}] \(\backslash\)
+207                               - func[\textcolor{stringliteral}{'output\_time'}]
+208     func[\textcolor{stringliteral}{'area'}] = \{\}
+209     func[\textcolor{stringliteral}{'energy'}] = \{\}
+210 
+211     \textcolor{keywordflow}{for} fimp \textcolor{keywordflow}{in} func[\textcolor{stringliteral}{'fimps'}] :
+212       func[\textcolor{stringliteral}{'area'}][fimp] = 29
+213       func[\textcolor{stringliteral}{'energy'}][fimp] = 22
+214 
+215   \textcolor{keywordflow}{return} lib
+216 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58b4385448eeafc249f2d5ca96664814}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58b4385448eeafc249f2d5ca96664814}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!add\+\_\+func\+\_\+to\+\_\+lib@{add\+\_\+func\+\_\+to\+\_\+lib}}
+\index{add\+\_\+func\+\_\+to\+\_\+lib@{add\+\_\+func\+\_\+to\+\_\+lib}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{add\+\_\+func\+\_\+to\+\_\+lib()}{add\_func\_to\_lib()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+add\+\_\+func\+\_\+to\+\_\+lib (\begin{DoxyParamCaption}\item[{}]{lib,  }\item[{}]{func\+\_\+name,  }\item[{}]{generics,  }\item[{}]{input\+\_\+ports,  }\item[{}]{output\+\_\+ports }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+warning().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg().
+
+
+\begin{DoxyCode}
+134 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58b4385448eeafc249f2d5ca96664814}{add\_func\_to\_lib}(lib, func\_name, generics, input\_ports, output\_ports) :
+135 
+136   \textcolor{keywordflow}{if} func\_name != \textcolor{keywordtype}{None} :
+137     \textcolor{keywordflow}{if} func\_name \textcolor{keywordflow}{in} lib.keys() :
+138       \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}{warning}(\textcolor{stringliteral}{'multiple definition found for function %s'} % func\_name)
+139 
+140     \textcolor{keywordflow}{if} func\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} lib :
+141       lib[func\_name] = \{\}
+142 
+143     lib[func\_name][\textcolor{stringliteral}{'generics'}] = generics
+144     lib[func\_name][\textcolor{stringliteral}{'input\_ports'}] = input\_ports
+145     lib[func\_name][\textcolor{stringliteral}{'output\_ports'}] = output\_ports
+146 
+147   \textcolor{keywordflow}{return} lib
+148 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!autocfg@{autocfg}}
+\index{autocfg@{autocfg}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{autocfg()}{autocfg()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg (\begin{DoxyParamCaption}\item[{}]{current\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+add\+\_\+func\+\_\+to\+\_\+lib(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+get\+\_\+fimps(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+read\+\_\+fimp\+\_\+info(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+read\+\_\+vhdl(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+status(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+warning().
+
+
+\begin{DoxyCode}
+149 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}{autocfg}(current\_path) :
+150 
+151   func\_name = \textcolor{keywordtype}{None}
+152   fimp\_files = \textcolor{keywordtype}{None}
+153   fimp\_count = 0
+154   architectures = []
+155 
+156   current\_path = os.path.abspath(current\_path)
+157 
+158   is\_dir = os.path.isdir(current\_path)
+159   fimp\_files = []
+160 
+161   \textcolor{keywordflow}{if} is\_dir :
+162     file\_list = os.listdir(current\_path)
+163     fimp\_files = [current\_path + \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'} + f \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} file\_list
+164                   \textcolor{keywordflow}{if} f.endswith(\textcolor{stringliteral}{'.vhd'}) \textcolor{keywordflow}{or} f.endswith(\textcolor{stringliteral}{'.vhdl'}) ]
+165   \textcolor{keywordflow}{else} :
+166     \textcolor{keywordflow}{if} current\_path.endswith(\textcolor{stringliteral}{'.vhd'}) \textcolor{keywordflow}{or} current\_path.endswith(\textcolor{stringliteral}{'.vhdl'}) :
+167       fimp\_files = [ current\_path ]
+168 
+169   \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'checking folder: '} + current\_path)
+170   lib = \{\}
+171 
+172   \textcolor{comment}{# print fimp\_files}
+173 
+174   \textcolor{keywordflow}{if} len(fimp\_files) == 0 :
+175     \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}{warning}(\textcolor{stringliteral}{'no vhdl source code file found in '} + current\_path)
+176   \textcolor{keywordflow}{else} :
+177     \textcolor{keywordflow}{for} file\_name \textcolor{keywordflow}{in} fimp\_files :
+178       \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'checking '} + file\_name)
+179       source\_code = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_afc25f8fd1bfc69960af11938f1e9b305}{read\_vhdl}(os.path.abspath(file\_name))
+180       func\_name, generics, input\_ports, output\_ports\(\backslash\)
+181       = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af04b13914bd754706782c30d090504f5}{read\_fimp\_info}(source\_code)
+182       lib = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58b4385448eeafc249f2d5ca96664814}{add\_func\_to\_lib}(lib, func\_name,
+183         generics, input\_ports, output\_ports)
+184       fimps = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58e8d5a1d080f5c440889bddbbbb514a}{get\_fimps}(source\_code, file\_name, lib)
+185 
+186       \textcolor{keywordflow}{for} func \textcolor{keywordflow}{in} fimps.keys() :
+187         \textcolor{keywordflow}{if} func \textcolor{keywordflow}{in} lib :
+188           \textcolor{keywordflow}{if} \textcolor{stringliteral}{'fimps'} \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} lib[func].keys() :
+189             lib[func][\textcolor{stringliteral}{'fimps'}] = []
+190           \textcolor{keywordflow}{for} fimp \textcolor{keywordflow}{in} fimps[func] :
+191             lib[func][\textcolor{stringliteral}{'fimps'}].append(fimp)
+192         \textcolor{keywordflow}{else} :
+193           lib[func] = \{\textcolor{stringliteral}{'fimps'} : fimps[func]\}
+194 
+195   \textcolor{keywordflow}{return} lib
+196 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af7576699c6ef184fb26f0988bd9ab795}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af7576699c6ef184fb26f0988bd9ab795}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!export\+\_\+lib@{export\+\_\+lib}}
+\index{export\+\_\+lib@{export\+\_\+lib}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{export\+\_\+lib()}{export\_lib()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+export\+\_\+lib (\begin{DoxyParamCaption}\item[{}]{lib,  }\item[{}]{file\+\_\+name = {\ttfamily \textquotesingle{}fimp\+\_\+lib.py\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 217 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+\begin{DoxyCode}
+217 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af7576699c6ef184fb26f0988bd9ab795}{export\_lib}(lib, file\_name = 'fimp\_lib.py') :
+218   fo = open(file\_name,\textcolor{stringliteral}{'w'})
+219   fo.write(\textcolor{stringliteral}{'fimp\_lib = '})
+220   \textcolor{comment}{# pprint(lib, fo)}
+221   fo.close()
+222 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58e8d5a1d080f5c440889bddbbbb514a}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58e8d5a1d080f5c440889bddbbbb514a}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!get\+\_\+fimps@{get\+\_\+fimps}}
+\index{get\+\_\+fimps@{get\+\_\+fimps}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{get\+\_\+fimps()}{get\_fimps()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+get\+\_\+fimps (\begin{DoxyParamCaption}\item[{}]{source\+\_\+code,  }\item[{}]{file\+\_\+name,  }\item[{}]{lib }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+status(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+warning().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg().
+
+
+\begin{DoxyCode}
+110 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a58e8d5a1d080f5c440889bddbbbb514a}{get\_fimps}(source\_code, file\_name, lib) :
+111 
+112   fimps = \{\}
+113   arch\_re = \textcolor{stringliteral}{r'(?<=architecture)\(\backslash\)s+'} + \(\backslash\)
+114             \textcolor{stringliteral}{r'(?P<arch\_name>\(\backslash\)w+)\(\backslash\)s+of\(\backslash\)s+(?P<entity\_name>\(\backslash\)w+)'}
+115 
+116   arch\_match = re.finditer(arch\_re, source\_code)
+117 
+118   \textcolor{keywordflow}{for} m \textcolor{keywordflow}{in} arch\_match :
+119     fimp\_name = m.group(\textcolor{stringliteral}{'arch\_name'})
+120     func\_name = m.group(\textcolor{stringliteral}{'entity\_name'})
+121     \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'found fimp \(\backslash\)'%s\(\backslash\)' for function \(\backslash\)'%s\(\backslash\)' in %s.'} % \(\backslash\)
+122            (fimp\_name, func\_name, file\_name))
+123     \textcolor{keywordflow}{if} func\_name \textcolor{keywordflow}{in} fimps.keys() :
+124       fimps[func\_name].append(fimp\_name)
+125     \textcolor{keywordflow}{else} :
+126       fimps[func\_name] = [fimp\_name]
+127 
+128   \textcolor{keywordflow}{if} fimps == \{\}:
+129     \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}{warning}(\textcolor{stringliteral}{'no FIMP found in %s.'} % file\_name)
+130 
+131   \textcolor{comment}{# return fimp\_count, architecture\_match}
+132   \textcolor{keywordflow}{return} fimps
+133 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af04b13914bd754706782c30d090504f5}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af04b13914bd754706782c30d090504f5}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!read\+\_\+fimp\+\_\+info@{read\+\_\+fimp\+\_\+info}}
+\index{read\+\_\+fimp\+\_\+info@{read\+\_\+fimp\+\_\+info}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{read\+\_\+fimp\+\_\+info()}{read\_fimp\_info()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+read\+\_\+fimp\+\_\+info (\begin{DoxyParamCaption}\item[{}]{source\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+status().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg().
+
+
+\begin{DoxyCode}
+31 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_af04b13914bd754706782c30d090504f5}{read\_fimp\_info}(source\_code) :
+32 
+33   \textcolor{comment}{# read entity\_name}
+34   entity\_re = \textcolor{stringliteral}{r'entity[\(\backslash\)s\(\backslash\)n]+(?P<entity\_name>\(\backslash\)w+)[\(\backslash\)s\(\backslash\)n]+is[\(\backslash\)s\(\backslash\)n]+'}
+35   m = re.search(entity\_re, source\_code)
+36   entity\_name = \textcolor{keywordtype}{None}
+37 
+38   \textcolor{keywordflow}{if} m != \textcolor{keywordtype}{None} :
+39     entity\_name = m.group(\textcolor{stringliteral}{'entity\_name'})
+40 
+41   \textcolor{keywordflow}{if} entity\_name != \textcolor{keywordtype}{None}:
+42     generics, input\_ports, output\_ports = \{\}, \{\}, \{\}
+43     \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'found function definition \(\backslash\)'%s\(\backslash\)'.'} % entity\_name)
+44 
+45     \textcolor{comment}{# read generics}
+46     g0\_re = \textcolor{stringliteral}{r'generic[\(\backslash\)n\(\backslash\)s]*\(\backslash\)(([\(\backslash\)n\(\backslash\)s]*'} + \(\backslash\)
+47             \textcolor{stringliteral}{r'(?P<generic\_content>.+))\(\backslash\))[\(\backslash\)n\(\backslash\)s]*;[\(\backslash\)n\(\backslash\)s]*port'}
+48     g1\_re = \textcolor{stringliteral}{r'generic[\(\backslash\)n\(\backslash\)s]*\(\backslash\)(([\(\backslash\)n\(\backslash\)s]*'} + \(\backslash\)
+49             \textcolor{stringliteral}{r'(?P<generic\_content>.+))\(\backslash\))[\(\backslash\)n\(\backslash\)s]*;[\(\backslash\)n\(\backslash\)s]*end[\(\backslash\)n\(\backslash\)s]+%s'} % \(\backslash\)
+50               entity\_name
+51 
+52     g0\_m = re.search(g0\_re, source\_code, flags = re.S)
+53     g1\_m = re.search(g1\_re, source\_code, flags = re.S)
+54 
+55     \textcolor{keywordflow}{if} g0\_m != \textcolor{keywordtype}{None} :
+56       generic\_content = re.sub(\textcolor{stringliteral}{r'\(\backslash\)s*$'}, \textcolor{stringliteral}{''}, g0\_m.group(\textcolor{stringliteral}{'generic\_content'}))
+57     \textcolor{keywordflow}{elif} g1\_m != \textcolor{keywordtype}{None} :
+58       generic\_content = re.sub(\textcolor{stringliteral}{r'\(\backslash\)s*$'}, \textcolor{stringliteral}{''}, g1\_m.group(\textcolor{stringliteral}{'generic\_content'}))
+59     \textcolor{keywordflow}{else} :
+60       generic\_content = \textcolor{keywordtype}{None}
+61 
+62     generics = \{\}
+63     \textcolor{keywordflow}{if} generic\_content != \textcolor{keywordtype}{None} :
+64       one\_generic\_re = \textcolor{stringliteral}{r'[\(\backslash\)n\(\backslash\)s]*(?P<generic\_name>\(\backslash\)w+)[\(\backslash\)n\(\backslash\)s]+:[\(\backslash\)n\(\backslash\)s]+'} + \(\backslash\)
+65                        \textcolor{stringliteral}{r'(?P<generic\_type>[^:]+)[\(\backslash\)n\(\backslash\)s]+:=[\(\backslash\)n\(\backslash\)s]+'} + \(\backslash\)
+66                        \textcolor{stringliteral}{r'(?P<default\_value>[^;]+)'}
+67       generic\_matches = re.finditer(one\_generic\_re, generic\_content)
+68       generics = \{ gm.group(\textcolor{stringliteral}{'generic\_name'}) : \{
+69                      \textcolor{stringliteral}{'type'} : gm.group(\textcolor{stringliteral}{'generic\_type'}),
+70                      \textcolor{stringliteral}{'value'} : gm.group(\textcolor{stringliteral}{'default\_value'})\}
+71                     \textcolor{keywordflow}{for} gm \textcolor{keywordflow}{in} generic\_matches \}
+72       \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'found generic: %s for function \(\backslash\)'%s\(\backslash\)'.'} % \(\backslash\)
+73              (generics, entity\_name))
+74     \textcolor{keywordflow}{else} :
+75       \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(\textcolor{stringliteral}{'no generic is found for function \(\backslash\)'%s\(\backslash\)''} % entity\_name)
+76 
+77     \textcolor{comment}{# ports}
+78     port\_re = \textcolor{stringliteral}{r'port[\(\backslash\)n\(\backslash\)s]*\(\backslash\)([\(\backslash\)n\(\backslash\)s]*(?P<ports>.+)\(\backslash\))[\(\backslash\)n\(\backslash\)s]*;'} + \(\backslash\)
+79               \textcolor{stringliteral}{r'[\(\backslash\)n\(\backslash\)s]*end[\(\backslash\)n\(\backslash\)s]+%s'} % entity\_name
+80     port\_m = re.search(port\_re, source\_code, flags = re.S)
+81 
+82     \textcolor{keywordflow}{if} port\_m != \textcolor{keywordtype}{None} :
+83       port\_content = port\_m.group(\textcolor{stringliteral}{'ports'})
+84 
+85       one\_port\_re = \textcolor{stringliteral}{r'[\(\backslash\)n\(\backslash\)s]*(?P<port\_name>\(\backslash\)w+)[\(\backslash\)n\(\backslash\)s]+:[\(\backslash\)n\(\backslash\)s]+'} + \(\backslash\)
+86                     \textcolor{stringliteral}{r'(?P<port\_direction>((in)|(out)))[\(\backslash\)n\(\backslash\)s]+'} + \(\backslash\)
+87                     \textcolor{stringliteral}{r'(?P<port\_type>[^;]+)'}
+88 
+89       port\_matches = re.finditer(one\_port\_re, port\_content, flags = re.S)
+90 
+91       input\_ports = \{\}
+92       output\_ports = \{\}
+93 
+94       \textcolor{keywordflow}{for} m \textcolor{keywordflow}{in} port\_matches :
+95         \textcolor{keywordflow}{if} m.group(\textcolor{stringliteral}{'port\_direction'}) == \textcolor{stringliteral}{'in'} :
+96           input\_ports[m.group(\textcolor{stringliteral}{'port\_name'})] = m.group(\textcolor{stringliteral}{'port\_type'})
+97         \textcolor{keywordflow}{else} :
+98           output\_ports[m.group(\textcolor{stringliteral}{'port\_name'})] = m.group(\textcolor{stringliteral}{'port\_type'})
+99 
+100         \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}( \textcolor{stringliteral}{'found %sput port \(\backslash\)'%s\(\backslash\)' type \(\backslash\)'%s\(\backslash\)' for function \(\backslash\)'%s\(\backslash\)'.'} % \(\backslash\)
+101                 (m.group(\textcolor{stringliteral}{'port\_direction'}),
+102                  m.group(\textcolor{stringliteral}{'port\_name'}),
+103                  m.group(\textcolor{stringliteral}{'port\_type'}),
+104                  entity\_name) )
+105 
+106     \textcolor{keywordflow}{return} entity\_name, generics, input\_ports, output\_ports
+107   \textcolor{keywordflow}{else} :
+108     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None}
+109 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_afc25f8fd1bfc69960af11938f1e9b305}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_afc25f8fd1bfc69960af11938f1e9b305}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!read\+\_\+vhdl@{read\+\_\+vhdl}}
+\index{read\+\_\+vhdl@{read\+\_\+vhdl}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{read\+\_\+vhdl()}{read\_vhdl()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+read\+\_\+vhdl (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg().
+
+
+\begin{DoxyCode}
+16 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_afc25f8fd1bfc69960af11938f1e9b305}{read\_vhdl}(file\_name) :
+17 
+18   \textcolor{comment}{# read source file}
+19   fo = open(file\_name, \textcolor{stringliteral}{'r')}
+20 \textcolor{stringliteral}{  source\_code = fo.read().lower()}
+21 \textcolor{stringliteral}{  fo.close()}
+22 \textcolor{stringliteral}{}
+23 \textcolor{stringliteral}{  }\textcolor{comment}{# eliminate comments, extra \(\backslash\)n and whitespace}
+24   source\_code = re.sub(\textcolor{stringliteral}{r'\(\backslash\)s*-\{2\}.*'}, \textcolor{stringliteral}{''}, source\_code)
+25   source\_code = re.sub(\textcolor{stringliteral}{r'\(\backslash\)n+'}, \textcolor{stringliteral}{'\(\backslash\)n'}, source\_code)
+26   source\_code = re.sub(\textcolor{stringliteral}{r'\(\backslash\)s+\(\backslash\)n'}, \textcolor{stringliteral}{'\(\backslash\)n'}, source\_code)
+27   source\_code = re.sub(\textcolor{stringliteral}{r'\(\backslash\)s\(\backslash\)s+'}, \textcolor{stringliteral}{' '}, source\_code)
+28 
+29   \textcolor{keywordflow}{return} source\_code
+30 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!status@{status}}
+\index{status@{status}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+status (\begin{DoxyParamCaption}\item[{}]{s = {\ttfamily \textquotesingle{}working~...\textquotesingle{}},  }\item[{}]{level = {\ttfamily 0},  }\item[{}]{status\+\_\+level = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}{status\+\_\+level}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+get\+\_\+fimps(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+read\+\_\+fimp\+\_\+info().
+
+
+\begin{DoxyCode}
+8 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a531a0f0634e3fde1c48dc06c7c8c019f}{status}(s = 'working ...', level = 0, status\_level = status\_level) :
+9   \textcolor{keywordflow}{if} level >= status\_level :
+10     print(\textcolor{stringliteral}{'Status: '} + s)
+11 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!warning@{warning}}
+\index{warning@{warning}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+warning (\begin{DoxyParamCaption}\item[{}]{w = {\ttfamily \textquotesingle{}warning~...\textquotesingle{}},  }\item[{}]{level = {\ttfamily 0},  }\item[{}]{warning\+\_\+level = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}{warning\+\_\+level}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+add\+\_\+func\+\_\+to\+\_\+lib(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+autocfg(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+get\+\_\+fimps().
+
+
+\begin{DoxyCode}
+12 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a63f8ceba954ddb8e1d7713fead5ffc9c}{warning}(w = 'warning ...', level = 0, warning\_level = warning\_level) :
+13   \textcolor{keywordflow}{if} level >= warning\_level :
+14     print(\textcolor{stringliteral}{'Warning: '} + w)
+15 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a3fd0b243c6ced038508dd7910723a009}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a3fd0b243c6ced038508dd7910723a009}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!args@{args}}
+\index{args@{args}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 235 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac13539f10c901b6537c107ee60cc64b8}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac13539f10c901b6537c107ee60cc64b8}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!default@{default}}
+\index{default@{default}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+default}
+
+
+
+Definition at line 228 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a20f64a1f69f2f14c50a7cdff5181e898}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a20f64a1f69f2f14c50a7cdff5181e898}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!help@{help}}
+\index{help@{help}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+help}
+
+
+
+Definition at line 229 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_a2679c4ab5a9a87aa62090377cbe4c7f3}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!lib@{lib}}
+\index{lib@{lib}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{lib}{lib}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+lib = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac700c06f85e744c061a573dc897c9d6f}{autocfg}(args.\+path)}
+
+
+
+Definition at line 236 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac1f7911c1fc284e53096dd7a52882152}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ac1f7911c1fc284e53096dd7a52882152}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!parser@{parser}}
+\index{parser@{parser}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+parser}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  argparse.ArgumentParser(
+2              description = \textcolor{stringliteral}{'FIMP automatic configuration'} )
+\end{DoxyCode}
+
+
+Definition at line 224 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_ab023ab99252ae045bf3ce5e948f363ae}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!status\+\_\+level@{status\+\_\+level}}
+\index{status\+\_\+level@{status\+\_\+level}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{status\+\_\+level}{status\_level}}
+{\footnotesize\ttfamily int sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+status\+\_\+level = 0}
+
+
+
+Definition at line 5 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}\label{namespacesylva_1_1code__generation_1_1vhdl__interface__parser_aa82bc16742c29c741d43cf3819798d86}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}!warning\+\_\+level@{warning\+\_\+level}}
+\index{warning\+\_\+level@{warning\+\_\+level}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+interface\+\_\+parser}}
+\subsubsection{\texorpdfstring{warning\+\_\+level}{warning\_level}}
+{\footnotesize\ttfamily int sylva.\+code\+\_\+generation.\+vhdl\+\_\+interface\+\_\+parser.\+warning\+\_\+level = 0}
+
+
+
+Definition at line 6 of file vhdl\+\_\+interface\+\_\+parser.\+py.
+

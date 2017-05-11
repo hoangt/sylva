@@ -1,0 +1,46 @@
+\hypertarget{namespacesylva_1_1misc_1_1vhdl__ulti}{}\section{sylva.\+misc.\+vhdl\+\_\+ulti Namespace Reference}
+\label{namespacesylva_1_1misc_1_1vhdl__ulti}\index{sylva.\+misc.\+vhdl\+\_\+ulti@{sylva.\+misc.\+vhdl\+\_\+ulti}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1misc_1_1vhdl__ulti_1_1_v_h_d_l}{V\+H\+DL}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1misc_1_1vhdl__ulti_aeb869044a3abdaed35a68feec0f779fa}{create\+\_\+from\+\_\+vhdl} (cls, vhdl, architecture=\textquotesingle{}F\+P\+GA\textquotesingle{}, name=\textquotesingle{}\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp}{fimp} lib\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1vhdl__ulti_aeb869044a3abdaed35a68feec0f779fa}\label{namespacesylva_1_1misc_1_1vhdl__ulti_aeb869044a3abdaed35a68feec0f779fa}} 
+\index{sylva\+::misc\+::vhdl\+\_\+ulti@{sylva\+::misc\+::vhdl\+\_\+ulti}!create\+\_\+from\+\_\+vhdl@{create\+\_\+from\+\_\+vhdl}}
+\index{create\+\_\+from\+\_\+vhdl@{create\+\_\+from\+\_\+vhdl}!sylva\+::misc\+::vhdl\+\_\+ulti@{sylva\+::misc\+::vhdl\+\_\+ulti}}
+\subsubsection{\texorpdfstring{create\+\_\+from\+\_\+vhdl()}{create\_from\_vhdl()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+vhdl\+\_\+ulti.\+create\+\_\+from\+\_\+vhdl (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{vhdl,  }\item[{}]{architecture = {\ttfamily \textquotesingle{}FPGA\textquotesingle{}},  }\item[{}]{name = {\ttfamily \textquotesingle{}\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp}{fimp}~lib\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file vhdl\+\_\+ulti.\+py.
+
+
+
+References sylva.\+misc.\+util.\+to\+\_\+list().
+
+
+\begin{DoxyCode}
+125 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1vhdl__ulti_aeb869044a3abdaed35a68feec0f779fa}{create\_from\_vhdl}(cls, vhdl, architecture = 'FPGA', name = 'fimp lib') :
+126   lib = FIMP\_Lib(architecture, name)
+127   vhdl = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(vhdl)
+128   \textcolor{keywordflow}{for} v \textcolor{keywordflow}{in} vhdl :
+129     lib.add\_fimp\_set(FIMP\_Set(name = v.entity\_name))
+130     lib[v.entity\_name].generics = v.generics
+131     lib[v.entity\_name].input\_ports = v.input\_ports
+132     lib[v.entity\_name].output\_ports = v.output\_ports
+133     \textcolor{keywordflow}{for} type\_name, f \textcolor{keywordflow}{in} v.fimps.items() :
+134       lib.add\_fimp(f)
+135 
+136   \textcolor{keywordflow}{return} lib
+137 
+138 FIMP\_Lib.create\_from\_vhdl = classmethod(create\_from\_vhdl)
+139 \end{DoxyCode}

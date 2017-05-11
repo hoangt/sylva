@@ -1,0 +1,409 @@
+\hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib}{}\section{sylva.\+base.\+fimp.\+fimp\+\_\+lib Class Reference}
+\label{classsylva_1_1base_1_1fimp_1_1fimp__lib}\index{sylva.\+base.\+fimp.\+fimp\+\_\+lib@{sylva.\+base.\+fimp.\+fimp\+\_\+lib}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_ab6ffd2deebd88d1adbef821af05a26e5}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a8286e3fa2d4188bfa83f4130959a8907}{architecture}, \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_aeb997b1d0dcc07395898b441609aa898}{name}=\textquotesingle{}S\+Y\+L\+VA F\+I\+MP Library\textquotesingle{})
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a3608b2f36def4da983b03a18caab3c0f}{add\+\_\+fimp} (self, one\+\_\+fimp)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a9002e9b5d1e1b6cef2787996398c443e}{add\+\_\+fimp\+\_\+set} (self, one\+\_\+fimp\+\_\+set)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_ae068ffaae8be2b291ba9b09d8625e308}{serialize} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_af91977d4298ea61721adb4a0d04c5b16}{write\+\_\+to\+\_\+file} (self, filename, indent=2)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a7a764d2bf9bd95c0ce1de986ddf42352}{dump} (self, filename, indent=2)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6605b78f17fc8d48fbacb88ca966488e}{get\+\_\+count} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_af417cfbd4d5b072db4e355f09d8505f8}{get\+\_\+function\+\_\+name\+\_\+set} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a168e878dc3af6a9b8ffcfa9a57e8253e}{get\+\_\+fimp\+\_\+sets} (self)
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a152519a744a90e55da513de86e390ebb}{\+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, function\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a8286e3fa2d4188bfa83f4130959a8907}{architecture}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_aeb997b1d0dcc07395898b441609aa898}{name}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6d2f4a5c592b6fc32418dc27129326ac}{set}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_af017d651d8249d243476a42a52d71b61}{function\+\_\+count}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a49bd10a263150c845e87e4134d893e84}{function\+\_\+name\+\_\+set}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1fimp__lib_a35e572d841ddc8a2f4ea44fdf823e92d}{fimp\+\_\+sets}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}  FIMP library class
+\end{DoxyVerb}
+ 
+
+Definition at line 412 of file fimp.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_ab6ffd2deebd88d1adbef821af05a26e5}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_ab6ffd2deebd88d1adbef821af05a26e5}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{architecture,  }\item[{}]{name = {\ttfamily \textquotesingle{}SYLVA~FIMP~Library\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Initialize a fimp library instance for a given architecture.
+\end{DoxyVerb}
+ 
+
+Definition at line 418 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+418     \textcolor{keyword}{def }\_\_init\_\_(self, architecture, name = 'SYLVA FIMP Library') :
+419 
+420       \textcolor{stringliteral}{'''}
+421 \textcolor{stringliteral}{        Initialize a fimp library instance for a given architecture.}
+422 \textcolor{stringliteral}{      '''}
+423 
+424       self.architecture = architecture
+425       self.name = name
+426       self.set = \{\}
+427 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a152519a744a90e55da513de86e390ebb}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a152519a744a90e55da513de86e390ebb}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getitem\+\_\+\+\_\+()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{function\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 493 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp\+\_\+set.\+set, and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set.
+
+
+\begin{DoxyCode}
+493     \textcolor{keyword}{def }\_\_getitem\_\_(self, function\_name) :
+494 
+495       \textcolor{keywordflow}{if} function\_name.lower() \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.set.keys() :
+496         \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'FIMPs for function `%s` is not in this library.'} % function\_name)
+497 
+498       \textcolor{keywordflow}{return} self.set[function\_name.lower()]
+499 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a3608b2f36def4da983b03a18caab3c0f}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a3608b2f36def4da983b03a18caab3c0f}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!add\+\_\+fimp@{add\+\_\+fimp}}
+\index{add\+\_\+fimp@{add\+\_\+fimp}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{add\+\_\+fimp()}{add\_fimp()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+add\+\_\+fimp (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{one\+\_\+fimp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Add one FIMP instance to this FIMP library
+\end{DoxyVerb}
+ 
+
+Definition at line 428 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp\+\_\+set.\+set, and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set.
+
+
+\begin{DoxyCode}
+428     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}{add\_fimp}(self, one\_fimp) :
+429 
+430       \textcolor{stringliteral}{'''}
+431 \textcolor{stringliteral}{        Add one FIMP instance to this FIMP library}
+432 \textcolor{stringliteral}{      '''}
+433 
+434       \textcolor{keywordflow}{if} one\_fimp.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.set.keys() :
+435         self.set[one\_fimp.name] = fimp\_set(one\_fimp.name)
+436 
+437       self.set[one\_fimp.name].\hyperlink{namespacesylva_1_1base_1_1fimp_a33d5ea52e7780ea1d4f0df718eab4ff2}{add\_fimp}(one\_fimp)
+438 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a9002e9b5d1e1b6cef2787996398c443e}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a9002e9b5d1e1b6cef2787996398c443e}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!add\+\_\+fimp\+\_\+set@{add\+\_\+fimp\+\_\+set}}
+\index{add\+\_\+fimp\+\_\+set@{add\+\_\+fimp\+\_\+set}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{add\+\_\+fimp\+\_\+set()}{add\_fimp\_set()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+add\+\_\+fimp\+\_\+set (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{one\+\_\+fimp\+\_\+set }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Add a FIMP set instance (one_fimp_set) to this FIMP library instance.
+\end{DoxyVerb}
+ 
+
+Definition at line 439 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp\+\_\+set.\+set, and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set.
+
+
+\begin{DoxyCode}
+439     \textcolor{keyword}{def }add\_fimp\_set(self, one\_fimp\_set) :
+440 
+441       \textcolor{stringliteral}{'''}
+442 \textcolor{stringliteral}{        Add a FIMP set instance (one\_fimp\_set) to this FIMP library instance.}
+443 \textcolor{stringliteral}{      '''}
+444 
+445       \textcolor{keywordflow}{if} one\_fimp\_set.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.set.keys() :
+446         self.set[one\_fimp\_set.name] = one\_fimp\_set
+447       \textcolor{keywordflow}{else} :
+448         print(\textcolor{stringliteral}{'WARNING: FIMP set with name = %s is already in this library.'}\(\backslash\)
+449               % one\_fimp\_set.name)
+450 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a7a764d2bf9bd95c0ce1de986ddf42352}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a7a764d2bf9bd95c0ce1de986ddf42352}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!dump@{dump}}
+\index{dump@{dump}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+dump (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{indent = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 478 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp.\+write\+\_\+to\+\_\+file(), sylva.\+base.\+fimp.\+fimp\+\_\+set.\+write\+\_\+to\+\_\+file(), and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+write\+\_\+to\+\_\+file().
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+dump().
+
+
+\begin{DoxyCode}
+478     \textcolor{keyword}{def }dump(self, filename, indent = 2) :
+479       self.write\_to\_file(filename, indent)
+480 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6605b78f17fc8d48fbacb88ca966488e}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6605b78f17fc8d48fbacb88ca966488e}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!get\+\_\+count@{get\+\_\+count}}
+\index{get\+\_\+count@{get\+\_\+count}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{get\+\_\+count()}{get\_count()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+get\+\_\+count (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 481 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp\+\_\+set.\+set, and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set.
+
+
+\begin{DoxyCode}
+481     \textcolor{keyword}{def }get\_count(self) : \textcolor{keywordflow}{return} len(self.set.keys())
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a168e878dc3af6a9b8ffcfa9a57e8253e}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a168e878dc3af6a9b8ffcfa9a57e8253e}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!get\+\_\+fimp\+\_\+sets@{get\+\_\+fimp\+\_\+sets}}
+\index{get\+\_\+fimp\+\_\+sets@{get\+\_\+fimp\+\_\+sets}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{get\+\_\+fimp\+\_\+sets()}{get\_fimp\_sets()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+get\+\_\+fimp\+\_\+sets (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 489 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+489     \textcolor{keyword}{def }get\_fimp\_sets(self) : \textcolor{keywordflow}{return} self.set.values()
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_af417cfbd4d5b072db4e355f09d8505f8}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_af417cfbd4d5b072db4e355f09d8505f8}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!get\+\_\+function\+\_\+name\+\_\+set@{get\+\_\+function\+\_\+name\+\_\+set}}
+\index{get\+\_\+function\+\_\+name\+\_\+set@{get\+\_\+function\+\_\+name\+\_\+set}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{get\+\_\+function\+\_\+name\+\_\+set()}{get\_function\_name\_set()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+get\+\_\+function\+\_\+name\+\_\+set (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 485 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+485     \textcolor{keyword}{def }get\_function\_name\_set(self) : \textcolor{keywordflow}{return} self.set.keys()
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_ae068ffaae8be2b291ba9b09d8625e308}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_ae068ffaae8be2b291ba9b09d8625e308}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Serialize this FIMP library instance for storage.
+\end{DoxyVerb}
+ 
+
+Definition at line 451 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+architecture, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+set, and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+write\+\_\+to\+\_\+file().
+
+
+\begin{DoxyCode}
+451     \textcolor{keyword}{def }serialize(self) :
+452 
+453       \textcolor{stringliteral}{'''}
+454 \textcolor{stringliteral}{        Serialize this FIMP library instance for storage.}
+455 \textcolor{stringliteral}{      '''}
+456 
+457       result = \{\}
+458       result[\textcolor{stringliteral}{'architecture'}] = self.architecture
+459       result[\textcolor{stringliteral}{'name'}] = self.name
+460       result[\textcolor{stringliteral}{'functions'}] = self.set.keys()
+461       result[\textcolor{stringliteral}{'count'}] = len(self.set.keys())
+462 
+463       \textcolor{keywordflow}{for} function\_name \textcolor{keywordflow}{in} self.set.keys() :
+464         result[function\_name] = self.set[function\_name].serialize()
+465 
+466       \textcolor{keywordflow}{return} result
+467 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_af91977d4298ea61721adb4a0d04c5b16}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_af91977d4298ea61721adb4a0d04c5b16}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}}
+\index{write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{write\+\_\+to\+\_\+file()}{write\_to\_file()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+write\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{indent = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}  Store this class instance in a file.
+\end{DoxyVerb}
+ 
+
+Definition at line 468 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+cgra.\+cgra.\+serialize(), sylva.\+base.\+fimp.\+fimp.\+serialize(), sylva.\+base.\+fimp.\+fimp\+\_\+set.\+serialize(), and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+serialize().
+
+
+
+Referenced by sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+dump().
+
+
+\begin{DoxyCode}
+468     \textcolor{keyword}{def }write\_to\_file(self, filename, indent = 2) :
+469 
+470       \textcolor{stringliteral}{'''}
+471 \textcolor{stringliteral}{        Store this class instance in a file.}
+472 \textcolor{stringliteral}{      '''}
+473 
+474       f = open(filename, \textcolor{stringliteral}{'w+'})
+475       f.write(json.dumps( self.serialize(), indent = 2) )
+476       f.close()
+477 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a8286e3fa2d4188bfa83f4130959a8907}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a8286e3fa2d4188bfa83f4130959a8907}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!architecture@{architecture}}
+\index{architecture@{architecture}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{architecture}{architecture}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+architecture}
+
+
+
+Definition at line 424 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_aeb997b1d0dcc07395898b441609aa898}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_aeb997b1d0dcc07395898b441609aa898}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!name@{name}}
+\index{name@{name}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name}
+
+
+
+Definition at line 425 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+clone(), sylva.\+base.\+sdf.\+actor.\+clone(), sylva.\+base.\+sdf.\+Data\+Token\+Type.\+serialize(), sylva.\+base.\+sdf.\+port.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), sylva.\+glic.\+glic.\+control.\+serialize(), sylva.\+base.\+sdf.\+actor.\+serialize(), and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6d2f4a5c592b6fc32418dc27129326ac}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a6d2f4a5c592b6fc32418dc27129326ac}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!set@{set}}
+\index{set@{set}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{set}{set}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+set}
+
+
+
+Definition at line 426 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+\_\+\+\_\+getitem\+\_\+\+\_\+(), sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+add\+\_\+fimp(), sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+add\+\_\+fimp\+\_\+set(), sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+get\+\_\+count(), and sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+serialize().
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a35e572d841ddc8a2f4ea44fdf823e92d}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a35e572d841ddc8a2f4ea44fdf823e92d}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!fimp\+\_\+sets@{fimp\+\_\+sets}}
+\index{fimp\+\_\+sets@{fimp\+\_\+sets}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{fimp\+\_\+sets}{fimp\_sets}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+fimp\+\_\+sets\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  property(get\_fimp\_sets, \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None},
+      \textcolor{stringliteral}{'The set of FIMP set instances in this library.'})
+\end{DoxyCode}
+
+
+Definition at line 490 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_af017d651d8249d243476a42a52d71b61}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_af017d651d8249d243476a42a52d71b61}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!function\+\_\+count@{function\+\_\+count}}
+\index{function\+\_\+count@{function\+\_\+count}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{function\+\_\+count}{function\_count}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+function\+\_\+count\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  property(get\_count, \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None},
+      \textcolor{stringliteral}{'Number of FIMP set instances in this library.'})
+\end{DoxyCode}
+
+
+Definition at line 482 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1fimp__lib_a49bd10a263150c845e87e4134d893e84}\label{classsylva_1_1base_1_1fimp_1_1fimp__lib_a49bd10a263150c845e87e4134d893e84}} 
+\index{sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}!function\+\_\+name\+\_\+set@{function\+\_\+name\+\_\+set}}
+\index{function\+\_\+name\+\_\+set@{function\+\_\+name\+\_\+set}!sylva\+::base\+::fimp\+::fimp\+\_\+lib@{sylva\+::base\+::fimp\+::fimp\+\_\+lib}}
+\subsubsection{\texorpdfstring{function\+\_\+name\+\_\+set}{function\_name\_set}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+function\+\_\+name\+\_\+set\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  property(get\_function\_name\_set, \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None},
+      \textcolor{stringliteral}{'The set of function names of the FIMP set instances in this library.'})
+\end{DoxyCode}
+
+
+Definition at line 486 of file fimp.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{fimp_8py}{fimp.\+py}\end{DoxyCompactItemize}

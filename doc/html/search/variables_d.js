@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['name',['name',['../classsylva_1_1base_1_1fimp_1_1fimp.html#a29c118ec372fd4475356ec690b878e32',1,'sylva.base.fimp.fimp.name()'],['../classsylva_1_1base_1_1fimp_1_1fimp__set.html#a6bd6ecb11789d4e76631517eca054821',1,'sylva.base.fimp.fimp_set.name()'],['../classsylva_1_1base_1_1fimp_1_1fimp__lib.html#aeb997b1d0dcc07395898b441609aa898',1,'sylva.base.fimp.fimp_lib.name()'],['../classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a64214bba14fcba747fd608caef007924',1,'sylva.base.sdf.DataTokenType.name()'],['../classsylva_1_1base_1_1sdf_1_1port.html#ace0eb23bb9f3e4a75e6a94f0961a6f99',1,'sylva.base.sdf.port.name()'],['../classsylva_1_1base_1_1sdf_1_1actor.html#a2ef1df32bd9d891a43df5b59cdc2f33b',1,'sylva.base.sdf.actor.name()'],['../classsylva_1_1dse_1_1dse_1_1system__model.html#a8b435a2014aa563c8cb50ce7d91dfdc8',1,'sylva.dse.dse.system_model.name()'],['../classsylva_1_1glic_1_1glic_1_1control.html#a95f657f58c1799fe7004653fe77ce106',1,'sylva.glic.glic.control.name()'],['../classsylva_1_1misc_1_1plot_1_1rectangle.html#aea9a12e78d03675a8af2682b9bbd656b',1,'sylva.misc.plot.rectangle.name()']]],
+  ['next',['next',['../classsylva_1_1base_1_1sdf_1_1actor.html#aa182473926fcf5c58d284b5f23351629',1,'sylva::base::sdf::actor']]],
+  ['no_5flog',['no_log',['../classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a4ce3a2f4a4bc39adf1cf5f40830e5a83',1,'sylva::misc::exec::SYLVA']]],
+  ['normal_5fvalue',['normal_value',['../namespacesylva_1_1frontend_1_1mdl__reader.html#a29a2a57aa15b95311fcc436d42ccc110',1,'sylva::frontend::mdl_reader']]],
+  ['nrst',['nrst',['../namespacesylva_1_1code__generation_1_1vhdl__types.html#a489fa8436cce610e31ddae7b882063d7',1,'sylva::code_generation::vhdl_types']]],
+  ['num_5factors',['num_actors',['../namespacesylva_1_1code__generation_1_1floorplanner.html#a9d196b124bdd8d4f50072e82ed641c33',1,'sylva::code_generation::floorplanner']]],
+  ['num_5ffimps',['num_fimps',['../namespacesylva_1_1code__generation_1_1floorplanner.html#aa3c18a3eb7fa3c7977cf8602c6570793',1,'sylva::code_generation::floorplanner']]],
+  ['num_5frouting_5fpoints',['num_routing_points',['../classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#acd90b8a28845457d7a02c7b64e7031b2',1,'sylva::code_generation::floorplanner::floorplanner']]]
+];

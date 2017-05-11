@@ -1,0 +1,301 @@
+\hypertarget{classsylva_1_1misc_1_1plot_1_1point}{}\section{sylva.\+misc.\+plot.\+point Class Reference}
+\label{classsylva_1_1misc_1_1plot_1_1point}\index{sylva.\+misc.\+plot.\+point@{sylva.\+misc.\+plot.\+point}}
+Inheritance diagram for sylva.\+misc.\+plot.\+point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsylva_1_1misc_1_1plot_1_1point}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a081090273abbdf33a6d4817720887cae}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a268ceb8acaa96e215d84447421cbadc0}{x}=None, \hyperlink{classsylva_1_1misc_1_1plot_1_1point_ac2bc4268769be52f4443f74b619cd781}{y}=None)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a38c8a33b3548844e6aa0be06d639dc5f}{\+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, index)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a0dba47ef31ba24b71bddf5d2c60c104b}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_ae31f3d284d92f335bf4723af06a45bea}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_abd550240b0bf5fb6fca1d4a2c9bd9db2}{\+\_\+\+\_\+add\+\_\+\+\_\+} (self, other)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a52992e538e21670f48a5ee5d63aafc5c}{\+\_\+\+\_\+iadd\+\_\+\+\_\+} (self, other)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a1670d6546eb506a535047d71dc8faaee}{\+\_\+\+\_\+sub\+\_\+\+\_\+} (self, other)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1plot_1_1point_a0f73456638159eb552d6aef70d76ea57}{\+\_\+\+\_\+isub\+\_\+\+\_\+} (self, other)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1misc_1_1plot_1_1point_a268ceb8acaa96e215d84447421cbadc0}{x}
+\item 
+\hyperlink{classsylva_1_1misc_1_1plot_1_1point_ac2bc4268769be52f4443f74b619cd781}{y}
+\item 
+\hyperlink{classsylva_1_1misc_1_1plot_1_1point_a0343c9245053942c8de7e013a9c7d450}{xy}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 139 of file plot.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a081090273abbdf33a6d4817720887cae}\label{classsylva_1_1misc_1_1plot_1_1point_a081090273abbdf33a6d4817720887cae}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x = {\ttfamily None},  }\item[{}]{y = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file plot.\+py.
+
+
+\begin{DoxyCode}
+140     \textcolor{keyword}{def }\_\_init\_\_(self, x = None, y = None) :
+141       self.x = x \textcolor{keywordflow}{or} 0
+142       self.y = y \textcolor{keywordflow}{or} 0
+143       self.xy = (self.x, self.y)
+144 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_abd550240b0bf5fb6fca1d4a2c9bd9db2}\label{classsylva_1_1misc_1_1plot_1_1point_abd550240b0bf5fb6fca1d4a2c9bd9db2}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+add\+\_\+\+\_\+@{\+\_\+\+\_\+add\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+add\+\_\+\+\_\+@{\+\_\+\+\_\+add\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+add\+\_\+\+\_\+()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 154 of file plot.\+py.
+
+
+
+References sylva.\+misc.\+exec.\+type, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+iadd\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+154     \textcolor{keyword}{def }\_\_add\_\_(self, other) :
+155       \textcolor{keywordflow}{try} :
+156         x = self.x + int(other.x)
+157         y = self.y + int(other.y)
+158         \textcolor{keywordflow}{return} point(x, y)
+159       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+160       \textcolor{keywordflow}{try} :
+161         x = self.x + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
+162         y = self.y + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
+163         \textcolor{keywordflow}{return} point(x, y)
+164       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+165       \textcolor{keywordflow}{try} :
+166         x = self.x + int(other[\textcolor{stringliteral}{'x'}])
+167         y = self.y + int(other[\textcolor{stringliteral}{'y'}])
+168         \textcolor{keywordflow}{return} point(x, y)
+169       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+170       \textcolor{keywordflow}{try} :
+171         x = self.x + int(other[0])
+172         y = self.y + int(other[1])
+173         \textcolor{keywordflow}{return} point(x, y)
+174       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+175       \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot add \{\}, \{\}'}.format(other, \hyperlink{namespacesylva_1_1misc_1_1exec_a55d55e6d0e68715dfbd883034bd7290c}{type}(other)))
+176 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a38c8a33b3548844e6aa0be06d639dc5f}\label{classsylva_1_1misc_1_1plot_1_1point_a38c8a33b3548844e6aa0be06d639dc5f}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getitem\+\_\+\+\_\+()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file plot.\+py.
+
+
+
+References sylva.\+misc.\+plot.\+point.\+xy.
+
+
+\begin{DoxyCode}
+145     \textcolor{keyword}{def }\_\_getitem\_\_(self, index) :
+146       \textcolor{keywordflow}{return} self.xy(index)
+147 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a52992e538e21670f48a5ee5d63aafc5c}\label{classsylva_1_1misc_1_1plot_1_1point_a52992e538e21670f48a5ee5d63aafc5c}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+iadd\+\_\+\+\_\+()}{\_\_iadd\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+iadd\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file plot.\+py.
+
+
+
+References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+177     \textcolor{keyword}{def }\_\_iadd\_\_(self, other) :
+178       \textcolor{keywordflow}{return} self.\_\_add\_\_(other)
+179 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a0f73456638159eb552d6aef70d76ea57}\label{classsylva_1_1misc_1_1plot_1_1point_a0f73456638159eb552d6aef70d76ea57}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+isub\+\_\+\+\_\+@{\+\_\+\+\_\+isub\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+isub\+\_\+\+\_\+@{\+\_\+\+\_\+isub\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+isub\+\_\+\+\_\+()}{\_\_isub\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+isub\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file plot.\+py.
+
+
+
+References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+198     \textcolor{keyword}{def }\_\_isub\_\_(self, other) :
+199       \textcolor{keywordflow}{return} self.\_\_sub\_\_(other)
+200 
+201   \textcolor{keyword}{import} matplotlib.pyplot \textcolor{keyword}{as} plt
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_ae31f3d284d92f335bf4723af06a45bea}\label{classsylva_1_1misc_1_1plot_1_1point_ae31f3d284d92f335bf4723af06a45bea}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file plot.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+
+
+\begin{DoxyCode}
+151     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self) :
+152       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.format(self.x, self.y)
+153 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a0dba47ef31ba24b71bddf5d2c60c104b}\label{classsylva_1_1misc_1_1plot_1_1point_a0dba47ef31ba24b71bddf5d2c60c104b}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 148 of file plot.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+
+
+\begin{DoxyCode}
+148     \textcolor{keyword}{def }\_\_str\_\_(self) :
+149       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.format(self.x, self.y)
+150 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a1670d6546eb506a535047d71dc8faaee}\label{classsylva_1_1misc_1_1plot_1_1point_a1670d6546eb506a535047d71dc8faaee}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+sub\+\_\+\+\_\+@{\+\_\+\+\_\+sub\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+sub\+\_\+\+\_\+@{\+\_\+\+\_\+sub\+\_\+\+\_\+}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+sub\+\_\+\+\_\+()}{\_\_sub\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 180 of file plot.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+isub\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+180     \textcolor{keyword}{def }\_\_sub\_\_(self, other) :
+181       \textcolor{keywordflow}{try} :
+182         x = self.x - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
+183         y = self.y - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
+184         \textcolor{keywordflow}{return} point(x, y)
+185       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+186       \textcolor{keywordflow}{try} :
+187         x = self.x - int(other[\textcolor{stringliteral}{'x'}])
+188         y = self.y - int(other[\textcolor{stringliteral}{'y'}])
+189         \textcolor{keywordflow}{return} point(x, y)
+190       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+191       \textcolor{keywordflow}{try} :
+192         x = self.x - int(other[0])
+193         y = self.y - int(other[1])
+194         \textcolor{keywordflow}{return} point(x, y)
+195       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
+196       \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot subtract \{\}'}.format(other))
+197 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a268ceb8acaa96e215d84447421cbadc0}\label{classsylva_1_1misc_1_1plot_1_1point_a268ceb8acaa96e215d84447421cbadc0}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!x@{x}}
+\index{x@{x}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily sylva.\+misc.\+plot.\+point.\+x}
+
+
+
+Definition at line 141 of file plot.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+bottom\+\_\+left(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+misc.\+plot.\+rectangle.\+top(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left().
+
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a0343c9245053942c8de7e013a9c7d450}\label{classsylva_1_1misc_1_1plot_1_1point_a0343c9245053942c8de7e013a9c7d450}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!xy@{xy}}
+\index{xy@{xy}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{xy}{xy}}
+{\footnotesize\ttfamily sylva.\+misc.\+plot.\+point.\+xy}
+
+
+
+Definition at line 143 of file plot.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+getitem\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+above\+\_\+of(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+below\+\_\+of(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+left\+\_\+of(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+right\+\_\+of(), sylva.\+misc.\+plot.\+rectangle.\+x(), and sylva.\+misc.\+plot.\+rectangle.\+y().
+
+\mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_ac2bc4268769be52f4443f74b619cd781}\label{classsylva_1_1misc_1_1plot_1_1point_ac2bc4268769be52f4443f74b619cd781}} 
+\index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!y@{y}}
+\index{y@{y}!sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily sylva.\+misc.\+plot.\+point.\+y}
+
+
+
+Definition at line 142 of file plot.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+misc.\+plot.\+rectangle.\+top(), sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+right().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+misc/\hyperlink{plot_8py}{plot.\+py}\end{DoxyCompactItemize}

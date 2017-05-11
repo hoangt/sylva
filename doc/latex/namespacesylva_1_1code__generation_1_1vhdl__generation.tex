@@ -1,0 +1,846 @@
+\hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation}{}\section{sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation Namespace Reference}
+\label{namespacesylva_1_1code__generation_1_1vhdl__generation}\index{sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation@{sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}{port\+\_\+list\+\_\+to\+\_\+dict} (port\+\_\+list)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a8d3a2a6fdc4ce4af07672a2dd237a75d}{format\+\_\+signals} (signals=\mbox{[}$\,$\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a11710d670da0bd9d0787c3d56fd484c7}{format\+\_\+connections} (connections=\mbox{[}$\,$\mbox{]})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}{format\+\_\+generics} (generics=\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__constants_ac7c713d1ce70d2a383d55a7b6dcc1d84}{vhdl\+\_\+constants.\+global\+\_\+generics})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}{format\+\_\+ports} (input\+\_\+ports, output\+\_\+ports)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a5bec5fea3c520448fa87982cb6bfc87f}{format\+\_\+generic\+\_\+map} (generics, global\+\_\+generics=\{\}, local\+\_\+generics=\{\})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ab342aa6669b41bf57abfaee8918f33e2}{format\+\_\+port\+\_\+map}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a220526068f8d3f59852470bc1879f019}{format\+\_\+design\+\_\+units} (components, fimp\+\_\+lib, global\+\_\+generics=\{\}, local\+\_\+generics=\{\})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}{merge\+\_\+dict} (dictA, dictB)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a82d14f967dd9f7e059172186c5b49411}{format\+\_\+components}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a4807ba4c1479ad348e96412049260431}{interface} (entity\+\_\+name=\textquotesingle{}no\+\_\+name\textquotesingle{}, input\+\_\+ports=\{\}, output\+\_\+ports=\{\}, libraries=\{\}, generics=\{\}, header=\textquotesingle{}\textquotesingle{}, license\+\_\+header=\hyperlink{namespacesylva_1_1code__generation_1_1mit__license_a5c8d9ae3b2d4db392cdc66e37b035675}{mit\+\_\+license.\+vhdl}(), template\+\_\+string=vhdl\+\_\+templates.\+interface, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}{default\+\_\+input\+\_\+ports}=\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}{default\+\_\+input\+\_\+ports})
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a94219128d04fd81a78200424dbf45356}{architecture} (architecture\+\_\+name=\textquotesingle{}fimp\+\_\+0\textquotesingle{}, entity\+\_\+name=\textquotesingle{}no\+\_\+name\textquotesingle{}, signals=\{\}, components=\{\}, fimp\+\_\+lib=\{\}, connections=\mbox{[}$\,$\mbox{]}, template\+\_\+string=vhdl\+\_\+templates.\+architecture)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ae2d3d4cc47d3292a63a983c9645c3010}{vhdl\+\_\+file} (\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a4807ba4c1479ad348e96412049260431}{interface}, architectures=\mbox{[}$\,$\mbox{]}, output\+\_\+file=\textquotesingle{}result.\+vhdl\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}{pl2pd} = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}{port\+\_\+list\+\_\+to\+\_\+dict}
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a85e74939ca684a8a978805b5918467c8}{std\+\_\+logic} = sdf.\+Data\+Token\+Type(name = \textquotesingle{}std\+\_\+logic\textquotesingle{}, size = 1)
+\item 
+list \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a2373c5e8bd084e84746b1b6b947a2667}{default\+\_\+input\+\_\+ports\+\_\+list}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}{default\+\_\+input\+\_\+ports} = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}{pl2pd}(\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a2373c5e8bd084e84746b1b6b947a2667}{default\+\_\+input\+\_\+ports\+\_\+list})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a94219128d04fd81a78200424dbf45356}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a94219128d04fd81a78200424dbf45356}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!architecture@{architecture}}
+\index{architecture@{architecture}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{architecture()}{architecture()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture (\begin{DoxyParamCaption}\item[{}]{architecture\+\_\+name = {\ttfamily \textquotesingle{}fimp\+\_\+0\textquotesingle{}},  }\item[{}]{entity\+\_\+name = {\ttfamily \textquotesingle{}no\+\_\+name\textquotesingle{}},  }\item[{}]{signals = {\ttfamily \{\}},  }\item[{}]{components = {\ttfamily \{\}},  }\item[{}]{fimp\+\_\+lib = {\ttfamily \{\}},  }\item[{}]{connections = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{template\+\_\+string = {\ttfamily vhdl\+\_\+templates.architecture} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 425 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+connections(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+design\+\_\+units(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+signals(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+vhdl\+\_\+file().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface().
+
+
+\begin{DoxyCode}
+425   template\_string = vhdl\_templates.architecture) :
+426 
+427   template = Template(template\_string)
+428   \textcolor{keywordflow}{return} template.render( architecture\_name = architecture\_name,
+429                      entity\_name = entity\_name,
+430                      components = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a82d14f967dd9f7e059172186c5b49411}{format\_components}(components, fimp\_lib),
+431                      signals = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a8d3a2a6fdc4ce4af07672a2dd237a75d}{format\_signals}(signals),
+432                      connections = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a11710d670da0bd9d0787c3d56fd484c7}{format\_connections}(connections),
+433                      design\_units = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a220526068f8d3f59852470bc1879f019}{format\_design\_units}(components, fimp\_lib))
+434 
+435 \textcolor{comment}{# 'Success' or None}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a82d14f967dd9f7e059172186c5b49411}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a82d14f967dd9f7e059172186c5b49411}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+components@{format\+\_\+components}}
+\index{format\+\_\+components@{format\+\_\+components}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+components()}{format\_components()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components (\begin{DoxyParamCaption}\item[{}]{components,  }\item[{}]{fimp\+\_\+lib = {\ttfamily \{\}},  }\item[{}]{template\+\_\+string = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__templates_a65130034af5ea62c012dd84afaedcc34}{vhdl\+\_\+templates.\+component}},  }\item[{}]{default\+\_\+input\+\_\+ports = {\ttfamily \{\textquotesingle{}clk\textquotesingle{}~\+:~\textquotesingle{}\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a85e74939ca684a8a978805b5918467c8}{std\+\_\+logic}\textquotesingle{}},  }\item[{}]{nrst }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generics(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+ports(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+merge\+\_\+dict().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+merge\+\_\+dict().
+
+
+\begin{DoxyCode}
+329   default\_input\_ports = \{\textcolor{stringliteral}{'clk'} : \textcolor{stringliteral}{'std\_logic'}, \textcolor{stringliteral}{'nrst'} : \textcolor{stringliteral}{'std\_logic'}\}) :
+330 
+331   \textcolor{stringliteral}{'''Generate component declaration part}
+332 \textcolor{stringliteral}{}
+333 \textcolor{stringliteral}{    components}
+334 \textcolor{stringliteral}{      used components}
+335 \textcolor{stringliteral}{      dict of arrays}
+336 \textcolor{stringliteral}{      outter keys are the entity names}
+337 \textcolor{stringliteral}{      inner keys are fimp instances}
+338 \textcolor{stringliteral}{      e.g. \{ 'fft\_64' : [ fft\_0, fft\_1 ] \}}
+339 \textcolor{stringliteral}{}
+340 \textcolor{stringliteral}{    fimp\_lib}
+341 \textcolor{stringliteral}{      dict of dicts}
+342 \textcolor{stringliteral}{      outter keys are the function names (entity names)}
+343 \textcolor{stringliteral}{      inner keys are attributes (['generics', 'input\_ports', 'output\_ports'])}
+344 \textcolor{stringliteral}{      e.g. \{ 'fft\_64' :}
+345 \textcolor{stringliteral}{             [ 'generics' :}
+346 \textcolor{stringliteral}{               \{ 'data\_width' :}
+347 \textcolor{stringliteral}{                 \{ 'type' : 'integer', 'value' : 3 \}}
+348 \textcolor{stringliteral}{               \},}
+349 \textcolor{stringliteral}{               'input\_ports' :}
+350 \textcolor{stringliteral}{               \{ 're\_in' : 'integer range 0 to 255,}
+351 \textcolor{stringliteral}{                 'im\_in' : 'integer range 0 to 255}
+352 \textcolor{stringliteral}{               \},}
+353 \textcolor{stringliteral}{               'output\_ports' :}
+354 \textcolor{stringliteral}{               \{ 're\_out' : 'integer range 0 to 255,}
+355 \textcolor{stringliteral}{                 'im\_out' : 'integer range 0 to 255}
+356 \textcolor{stringliteral}{               \}}
+357 \textcolor{stringliteral}{             ]}
+358 \textcolor{stringliteral}{           \}}
+359 \textcolor{stringliteral}{}
+360 \textcolor{stringliteral}{    template\_string}
+361 \textcolor{stringliteral}{      jinja2 template}
+362 \textcolor{stringliteral}{  '''}
+363 
+364   result = []
+365   template = Template(template\_string)
+366 
+367   \textcolor{keywordflow}{for} entity\_name, fimps \textcolor{keywordflow}{in} components.items() :
+368     default\_generics = fimp\_lib[entity\_name].generics
+369     input\_ports = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}{merge\_dict}(default\_input\_ports, fimp\_lib[entity\_name].input\_ports)
+370     output\_ports = fimp\_lib[entity\_name].output\_ports
+371     ports = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}{format\_ports}(input\_ports, output\_ports)
+372     result.append(
+373       template.render(
+374         entity\_name = entity\_name,
+375         generics = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}{format\_generics}(default\_generics),
+376         ports = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}{format\_ports}(input\_ports, output\_ports)) )
+377 
+378     \textcolor{keywordflow}{for} one\_fimp \textcolor{keywordflow}{in} fimps :
+379       fimp\_index = one\_fimp.global\_index
+380       fimp\_type = one\_fimp.type
+381       cfg = \textcolor{stringliteral}{'  for %s\_%s: %s use entity work.%s(fimp\_%s);'} % \(\backslash\)
+382             ( entity\_name, fimp\_index, entity\_name, entity\_name, fimp\_type )
+383       result.append(cfg)
+384 
+385   \textcolor{keywordflow}{return} result
+386 
+387 \textcolor{comment}{# string}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a11710d670da0bd9d0787c3d56fd484c7}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a11710d670da0bd9d0787c3d56fd484c7}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+connections@{format\+\_\+connections}}
+\index{format\+\_\+connections@{format\+\_\+connections}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+connections()}{format\_connections()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+connections (\begin{DoxyParamCaption}\item[{}]{connections = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate connection part
+
+  connections
+    array of dicts, keys = ['src', 'dest'], all strings (signal names)
+    e.g. [ { 'src': 'counter', 'dest' : 'fsm_state_input' } ]
+\end{DoxyVerb}
+ 
+
+Definition at line 53 of file vhdl\+\_\+generation.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture().
+
+
+\begin{DoxyCode}
+53 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a11710d670da0bd9d0787c3d56fd484c7}{format\_connections} (connections = []) :
+54   \textcolor{stringliteral}{'''Generate connection part}
+55 \textcolor{stringliteral}{}
+56 \textcolor{stringliteral}{    connections}
+57 \textcolor{stringliteral}{      array of dicts, keys = ['src', 'dest'], all strings (signal names)}
+58 \textcolor{stringliteral}{      e.g. [ \{ 'src': 'counter', 'dest' : 'fsm\_state\_input' \} ]}
+59 \textcolor{stringliteral}{  '''}
+60   result = []
+61 
+62   \textcolor{keywordflow}{if} len(connections) > 0 :
+63     \textcolor{keywordflow}{for} c \textcolor{keywordflow}{in} connections :
+64       result.append(\textcolor{stringliteral}{'%s <= %s;'} % (c[\textcolor{stringliteral}{'dest'}], c[\textcolor{stringliteral}{'src'}]))
+65   \textcolor{keywordflow}{return} result
+66 
+67 \textcolor{comment}{# array}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a220526068f8d3f59852470bc1879f019}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a220526068f8d3f59852470bc1879f019}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+design\+\_\+units@{format\+\_\+design\+\_\+units}}
+\index{format\+\_\+design\+\_\+units@{format\+\_\+design\+\_\+units}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+design\+\_\+units()}{format\_design\_units()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+design\+\_\+units (\begin{DoxyParamCaption}\item[{}]{components,  }\item[{}]{fimp\+\_\+lib,  }\item[{}]{global\+\_\+generics = {\ttfamily \{\}},  }\item[{}]{local\+\_\+generics = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate design unit instantiation part
+
+  components
+    used components
+    dict of arrays
+    outter keys are the entity names
+    inner keys are fimp instances
+    e.g. { 'fft_64' : [ fft_0, fft_1 ] }
+
+  fimp_lib
+    dict of dicts
+    outter keys are the function names (entity names)
+    inner keys are attributes (['generics', 'input_ports', 'output_ports'])
+    e.g. { 'fft_64' :
+           [ 'generics' :
+             { 'data_width' :
+               { 'type' : 'integer', 'value' : 3 }
+             },
+             'input_ports' :
+             { 're_in' : 'integer range 0 to 255,
+               'im_in' : 'integer range 0 to 255
+             },
+             'output_ports' :
+             { 're_out' : 'integer range 0 to 255,
+               'im_out' : 'integer range 0 to 255
+             }
+           ]
+         }
+
+  function_name
+    string
+
+  fimp_index
+    unique index among all fimps used in the system
+    integer
+
+  global_generics
+    dict of dicts
+    outter keys are the generic names
+    inner keys = ['type', 'value'], all strings/integers
+    e.g. { 'data_width' : { 'type': 'integer', 'value' : 8 } }
+
+  local_generics
+    dict of dicts
+    most outter keys are the entity names
+    second outter keys are the fimp index
+    inner parts are the same as global_generics
+\end{DoxyVerb}
+ 
+
+Definition at line 227 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generic\+\_\+map(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+port\+\_\+map().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+port\+\_\+map().
+
+
+\begin{DoxyCode}
+227   global\_generics = \{\}, local\_generics = \{\}) :
+228   \textcolor{stringliteral}{'''Generate design unit instantiation part}
+229 \textcolor{stringliteral}{}
+230 \textcolor{stringliteral}{    components}
+231 \textcolor{stringliteral}{      used components}
+232 \textcolor{stringliteral}{      dict of arrays}
+233 \textcolor{stringliteral}{      outter keys are the entity names}
+234 \textcolor{stringliteral}{      inner keys are fimp instances}
+235 \textcolor{stringliteral}{      e.g. \{ 'fft\_64' : [ fft\_0, fft\_1 ] \}}
+236 \textcolor{stringliteral}{}
+237 \textcolor{stringliteral}{    fimp\_lib}
+238 \textcolor{stringliteral}{      dict of dicts}
+239 \textcolor{stringliteral}{      outter keys are the function names (entity names)}
+240 \textcolor{stringliteral}{      inner keys are attributes (['generics', 'input\_ports', 'output\_ports'])}
+241 \textcolor{stringliteral}{      e.g. \{ 'fft\_64' :}
+242 \textcolor{stringliteral}{             [ 'generics' :}
+243 \textcolor{stringliteral}{               \{ 'data\_width' :}
+244 \textcolor{stringliteral}{                 \{ 'type' : 'integer', 'value' : 3 \}}
+245 \textcolor{stringliteral}{               \},}
+246 \textcolor{stringliteral}{               'input\_ports' :}
+247 \textcolor{stringliteral}{               \{ 're\_in' : 'integer range 0 to 255,}
+248 \textcolor{stringliteral}{                 'im\_in' : 'integer range 0 to 255}
+249 \textcolor{stringliteral}{               \},}
+250 \textcolor{stringliteral}{               'output\_ports' :}
+251 \textcolor{stringliteral}{               \{ 're\_out' : 'integer range 0 to 255,}
+252 \textcolor{stringliteral}{                 'im\_out' : 'integer range 0 to 255}
+253 \textcolor{stringliteral}{               \}}
+254 \textcolor{stringliteral}{             ]}
+255 \textcolor{stringliteral}{           \}}
+256 \textcolor{stringliteral}{}
+257 \textcolor{stringliteral}{    function\_name}
+258 \textcolor{stringliteral}{      string}
+259 \textcolor{stringliteral}{}
+260 \textcolor{stringliteral}{    fimp\_index}
+261 \textcolor{stringliteral}{      unique index among all fimps used in the system}
+262 \textcolor{stringliteral}{      integer}
+263 \textcolor{stringliteral}{}
+264 \textcolor{stringliteral}{    global\_generics}
+265 \textcolor{stringliteral}{      dict of dicts}
+266 \textcolor{stringliteral}{      outter keys are the generic names}
+267 \textcolor{stringliteral}{      inner keys = ['type', 'value'], all strings/integers}
+268 \textcolor{stringliteral}{      e.g. \{ 'data\_width' : \{ 'type': 'integer', 'value' : 8 \} \}}
+269 \textcolor{stringliteral}{}
+270 \textcolor{stringliteral}{    local\_generics}
+271 \textcolor{stringliteral}{      dict of dicts}
+272 \textcolor{stringliteral}{      most outter keys are the entity names}
+273 \textcolor{stringliteral}{      second outter keys are the fimp index}
+274 \textcolor{stringliteral}{      inner parts are the same as global\_generics}
+275 \textcolor{stringliteral}{  '''}
+276 
+277   result = []
+278   \textcolor{keywordflow}{for} entity\_name, fimps \textcolor{keywordflow}{in} components.items() :
+279     default\_generics = fimp\_lib[entity\_name].generics
+280     input\_ports = fimp\_lib[entity\_name].input\_ports
+281     output\_ports = fimp\_lib[entity\_name].output\_ports
+282 
+283     \textcolor{keywordflow}{if} entity\_name \textcolor{keywordflow}{in} local\_generics :
+284       all\_fimp\_local\_generics = local\_generics[entity\_name]
+285     \textcolor{keywordflow}{else} :
+286       all\_fimp\_local\_generics = \{\}
+287 
+288     \textcolor{keywordflow}{for} one\_fimp \textcolor{keywordflow}{in} fimps :
+289       fimp\_index = one\_fimp.global\_index
+290       \textcolor{keywordflow}{if} fimp\_index \textcolor{keywordflow}{in} all\_fimp\_local\_generics.keys() :
+291         fimp\_local\_generics = all\_fimp\_local\_generics[fimp\_index]
+292       \textcolor{keywordflow}{else} :
+293         fimp\_local\_generics = \{\}
+294 
+295       generic\_map = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a5bec5fea3c520448fa87982cb6bfc87f}{format\_generic\_map}(
+296         generics = default\_generics,
+297         global\_generics = global\_generics,
+298         local\_generics = fimp\_local\_generics )
+299 
+300       port\_map = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ab342aa6669b41bf57abfaee8918f33e2}{format\_port\_map}(
+301         input\_ports = input\_ports,
+302         output\_ports = output\_ports,
+303         function\_name = entity\_name,
+304         fimp\_index = fimp\_index )
+305 
+306       design\_unit = \textcolor{stringliteral}{'%s\_%s: %s'} \(\backslash\)
+307         % ( entity\_name,
+308             fimp\_index,
+309             entity\_name)
+310 
+311       result.append(design\_unit)
+312 
+313       \textcolor{keywordflow}{if} generic\_map != \textcolor{stringliteral}{''} :
+314         result.append(\textcolor{stringliteral}{'  '} + generic\_map)
+315 
+316       \textcolor{keywordflow}{if} port\_map != \textcolor{stringliteral}{''} :
+317         result.append(\textcolor{stringliteral}{'  '} + port\_map)
+318 
+319       result[-1] += \textcolor{stringliteral}{';'}
+320 
+321   \textcolor{keywordflow}{return} result
+322 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a5bec5fea3c520448fa87982cb6bfc87f}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a5bec5fea3c520448fa87982cb6bfc87f}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+generic\+\_\+map@{format\+\_\+generic\+\_\+map}}
+\index{format\+\_\+generic\+\_\+map@{format\+\_\+generic\+\_\+map}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+generic\+\_\+map()}{format\_generic\_map()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generic\+\_\+map (\begin{DoxyParamCaption}\item[{}]{generics,  }\item[{}]{global\+\_\+generics = {\ttfamily \{\}},  }\item[{}]{local\+\_\+generics = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate generic map part
+
+  generics
+    dict of dicts
+    outter keys are the generic names
+    inner keys = ['type', 'value'], all strings/integers
+    e.g. { 'data_width' : { 'type': 'integer', 'value' : 8 } }
+
+  global_generics
+    dict of dicts
+    outter keys are the generic names
+    inner keys = ['type', 'value'], all strings/integers
+    e.g. { 'data_width' : { 'type': 'integer', 'value' : 8 } }
+
+  local_generics
+    dict of dicts
+    outter keys are the generic names
+    inner keys = ['type', 'value'], all strings/integers
+    e.g. { 'data_width' : { 'type': 'integer', 'value' : 8 } }
+\end{DoxyVerb}
+ 
+
+Definition at line 119 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+port\+\_\+map().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+design\+\_\+units(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+ports().
+
+
+\begin{DoxyCode}
+119   global\_generics = \{\}, local\_generics = \{\}) :
+120 
+121   \textcolor{stringliteral}{'''Generate generic map part}
+122 \textcolor{stringliteral}{}
+123 \textcolor{stringliteral}{    generics}
+124 \textcolor{stringliteral}{      dict of dicts}
+125 \textcolor{stringliteral}{      outter keys are the generic names}
+126 \textcolor{stringliteral}{      inner keys = ['type', 'value'], all strings/integers}
+127 \textcolor{stringliteral}{      e.g. \{ 'data\_width' : \{ 'type': 'integer', 'value' : 8 \} \}}
+128 \textcolor{stringliteral}{}
+129 \textcolor{stringliteral}{    global\_generics}
+130 \textcolor{stringliteral}{      dict of dicts}
+131 \textcolor{stringliteral}{      outter keys are the generic names}
+132 \textcolor{stringliteral}{      inner keys = ['type', 'value'], all strings/integers}
+133 \textcolor{stringliteral}{      e.g. \{ 'data\_width' : \{ 'type': 'integer', 'value' : 8 \} \}}
+134 \textcolor{stringliteral}{}
+135 \textcolor{stringliteral}{    local\_generics}
+136 \textcolor{stringliteral}{      dict of dicts}
+137 \textcolor{stringliteral}{      outter keys are the generic names}
+138 \textcolor{stringliteral}{      inner keys = ['type', 'value'], all strings/integers}
+139 \textcolor{stringliteral}{      e.g. \{ 'data\_width' : \{ 'type': 'integer', 'value' : 8 \} \}}
+140 \textcolor{stringliteral}{  '''}
+141 
+142   result = \textcolor{stringliteral}{''}
+143 
+144   \textcolor{keywordflow}{if} len(generics.keys()) > 0 :
+145 
+146     result = \textcolor{stringliteral}{'generic map ('}
+147 
+148     \textcolor{keywordflow}{for} g\_name, g\_type\_value \textcolor{keywordflow}{in} generics.items() :
+149 
+150       g\_type = g\_type\_value[\textcolor{stringliteral}{'type'}]
+151       g\_value = g\_type\_value[\textcolor{stringliteral}{'value'}]
+152 
+153       is\_local = \textcolor{keyword}{False}
+154       \textcolor{keywordflow}{if} g\_name \textcolor{keywordflow}{in} local\_generics.keys() :
+155         \textcolor{keywordflow}{if} g\_type == local\_generics[g\_name][\textcolor{stringliteral}{'type'}] :
+156           g\_value = local\_generics[g\_name][\textcolor{stringliteral}{'value'}]
+157           is\_local = \textcolor{keyword}{True}
+158         \textcolor{keywordflow}{else} :
+159           errmsg = \textcolor{stringliteral}{'Local generics has wrong type for '}
+160           errmsg += \textcolor{stringliteral}{'\(\backslash\)'%s\(\backslash\)'. '} % g\_name
+161           errmsg += \textcolor{stringliteral}{'Type should be %s '} % g\_type
+162           errmsg += \textcolor{stringliteral}{'instead of %s.'} % local\_generics[g\_name][\textcolor{stringliteral}{'type'}]
+163           \textcolor{keywordflow}{raise} Exception(errmsg)
+164 
+165       is\_global = \textcolor{keyword}{False}
+166       \textcolor{keywordflow}{if} is\_local == \textcolor{keyword}{False} :
+167         \textcolor{keywordflow}{if} g\_name \textcolor{keywordflow}{in} global\_generics.keys() :
+168           \textcolor{keywordflow}{if} g\_type == global\_generics[g\_name][\textcolor{stringliteral}{'type'}] :
+169             g\_value = global\_generics[g\_name][\textcolor{stringliteral}{'value'}]
+170             is\_global = \textcolor{keyword}{True}
+171 
+172       \textcolor{keywordflow}{if} is\_global == \textcolor{keyword}{False} :
+173         warnmsg  = \textcolor{stringliteral}{'No value is provided for %s (%s). '} % (g\_name, g\_type)
+174         warnmsg += \textcolor{stringliteral}{'Default value %s will be used.'} % g\_value
+175 
+176         warnings.warn(warnmsg)
+177 
+178       result += \textcolor{stringliteral}{'%s => %s, '} % ( g\_name, g\_value )
+179 
+180     result = result[:-2] + \textcolor{stringliteral}{')'}
+181 
+182   \textcolor{keywordflow}{return} result
+183 
+184 \textcolor{comment}{# string}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+generics@{format\+\_\+generics}}
+\index{format\+\_\+generics@{format\+\_\+generics}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+generics()}{format\_generics()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generics (\begin{DoxyParamCaption}\item[{}]{generics = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__constants_ac7c713d1ce70d2a383d55a7b6dcc1d84}{vhdl\+\_\+constants.\+global\+\_\+generics}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate generic part
+
+  generics:
+    dict of dicts
+    outter keys are the generic names
+    inner keys = ['type', 'value'], all strings/integers
+    e.g. { 'data_width' : { 'type': 'integer', 'value' : 8 } }
+\end{DoxyVerb}
+ 
+
+Definition at line 68 of file vhdl\+\_\+generation.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface().
+
+
+\begin{DoxyCode}
+68 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}{format\_generics} (generics = vhdl\_constants.global\_generics) :
+69   \textcolor{stringliteral}{'''Generate generic part}
+70 \textcolor{stringliteral}{}
+71 \textcolor{stringliteral}{    generics:}
+72 \textcolor{stringliteral}{      dict of dicts}
+73 \textcolor{stringliteral}{      outter keys are the generic names}
+74 \textcolor{stringliteral}{      inner keys = ['type', 'value'], all strings/integers}
+75 \textcolor{stringliteral}{      e.g. \{ 'data\_width' : \{ 'type': 'integer', 'value' : 8 \} \}}
+76 \textcolor{stringliteral}{  '''}
+77 
+78   result = []
+79 
+80   \textcolor{keywordflow}{if} len(generics.keys()) > 0 :
+81     \textcolor{keywordflow}{for} g, v \textcolor{keywordflow}{in} generics.items():
+82       result.append(\textcolor{stringliteral}{'%s : %s := %s;'} % (g, v[\textcolor{stringliteral}{'type'}], v[\textcolor{stringliteral}{'value'}]))
+83 
+84     result[-1] = result[-1][:-1]
+85 
+86   \textcolor{keywordflow}{return} result
+87 
+88 \textcolor{comment}{# array}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_ab342aa6669b41bf57abfaee8918f33e2}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_ab342aa6669b41bf57abfaee8918f33e2}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+port\+\_\+map@{format\+\_\+port\+\_\+map}}
+\index{format\+\_\+port\+\_\+map@{format\+\_\+port\+\_\+map}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+port\+\_\+map()}{format\_port\_map()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+port\+\_\+map (\begin{DoxyParamCaption}\item[{}]{input\+\_\+ports,  }\item[{}]{output\+\_\+ports,  }\item[{}]{function\+\_\+name,  }\item[{}]{fimp\+\_\+index,  }\item[{}]{default\+\_\+input\+\_\+ports = {\ttfamily \{\textquotesingle{}clk\textquotesingle{}~\+:~\textquotesingle{}\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a85e74939ca684a8a978805b5918467c8}{std\+\_\+logic}\textquotesingle{}},  }\item[{}]{nrst }\end{DoxyParamCaption})}
+
+
+
+Definition at line 186 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+design\+\_\+units().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+design\+\_\+units(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generic\+\_\+map().
+
+
+\begin{DoxyCode}
+186   default\_input\_ports = \{\textcolor{stringliteral}{'clk'} : \textcolor{stringliteral}{'std\_logic'}, \textcolor{stringliteral}{'nrst'} : \textcolor{stringliteral}{'std\_logic'}\}) :
+187   \textcolor{stringliteral}{'''Generate port map part}
+188 \textcolor{stringliteral}{}
+189 \textcolor{stringliteral}{   input\_ports}
+190 \textcolor{stringliteral}{      dict of strings}
+191 \textcolor{stringliteral}{      keys are the input port name}
+192 \textcolor{stringliteral}{      e.g. \{ 'clk' : 'std\_logic' \}}
+193 \textcolor{stringliteral}{}
+194 \textcolor{stringliteral}{    output\_ports}
+195 \textcolor{stringliteral}{      dict of strings}
+196 \textcolor{stringliteral}{      keys are the input port name}
+197 \textcolor{stringliteral}{      e.g. \{ 'counter\_output' : 'integer range 0 to 3' \}}
+198 \textcolor{stringliteral}{}
+199 \textcolor{stringliteral}{    function\_name}
+200 \textcolor{stringliteral}{      string}
+201 \textcolor{stringliteral}{}
+202 \textcolor{stringliteral}{    fimp\_index}
+203 \textcolor{stringliteral}{      unique index among all fimps used in the system}
+204 \textcolor{stringliteral}{      integer}
+205 \textcolor{stringliteral}{  '''}
+206 
+207   result = \textcolor{stringliteral}{''}
+208 
+209   \textcolor{keywordflow}{if} len(input\_ports.keys()) + len(output\_ports.keys()) > 0 :
+210     prefix = \textcolor{stringliteral}{'%s\_%s'} % (function\_name, fimp\_index)
+211     result = \textcolor{stringliteral}{'port map ('}
+212     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} input\_ports.keys() :
+213       result += p + \textcolor{stringliteral}{' => %s\_%s'} % (prefix, p)
+214       result += \textcolor{stringliteral}{', '}
+215     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} default\_input\_ports.keys() :
+216       result += p + \textcolor{stringliteral}{' => '} + p
+217       result += \textcolor{stringliteral}{', '}
+218     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} output\_ports.keys() :
+219       result += p + \textcolor{stringliteral}{' => %s\_%s'} % (prefix, p)
+220       result += \textcolor{stringliteral}{', '}
+221     result = result[:-2] + \textcolor{stringliteral}{')'}
+222 
+223   \textcolor{keywordflow}{return} result
+224 
+225 \textcolor{comment}{# array}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+ports@{format\+\_\+ports}}
+\index{format\+\_\+ports@{format\+\_\+ports}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+ports()}{format\_ports()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+ports (\begin{DoxyParamCaption}\item[{}]{input\+\_\+ports,  }\item[{}]{output\+\_\+ports }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate port part
+
+  input_ports
+    dict of strings
+    keys are the input port name
+    e.g. { 'clk' : 'std_logic' }
+
+  output_ports
+    dict of strings
+    keys are the input port name
+    e.g. { 'counter_output' : 'integer range 0 to 3' }
+\end{DoxyVerb}
+ 
+
+Definition at line 89 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generic\+\_\+map().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface().
+
+
+\begin{DoxyCode}
+89 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}{format\_ports} (input\_ports, output\_ports) :
+90 
+91   \textcolor{stringliteral}{'''Generate port part}
+92 \textcolor{stringliteral}{}
+93 \textcolor{stringliteral}{    input\_ports}
+94 \textcolor{stringliteral}{      dict of strings}
+95 \textcolor{stringliteral}{      keys are the input port name}
+96 \textcolor{stringliteral}{      e.g. \{ 'clk' : 'std\_logic' \}}
+97 \textcolor{stringliteral}{}
+98 \textcolor{stringliteral}{    output\_ports}
+99 \textcolor{stringliteral}{      dict of strings}
+100 \textcolor{stringliteral}{      keys are the input port name}
+101 \textcolor{stringliteral}{      e.g. \{ 'counter\_output' : 'integer range 0 to 3' \}}
+102 \textcolor{stringliteral}{  '''}
+103 
+104   result = []
+105 
+106   \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} input\_ports.items() :
+107     result.append(\textcolor{stringliteral}{'%s : in %s;'} % ( k, v ))
+108 
+109   \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} output\_ports.items() :
+110     result.append(\textcolor{stringliteral}{'%s : out %s;'} % ( k, v ))
+111 
+112   \textcolor{keywordflow}{if} len(result) > 0 :
+113     result[-1] = result[-1][:-1]
+114 
+115   \textcolor{keywordflow}{return} result
+116 
+117 \textcolor{comment}{# string}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a8d3a2a6fdc4ce4af07672a2dd237a75d}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a8d3a2a6fdc4ce4af07672a2dd237a75d}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!format\+\_\+signals@{format\+\_\+signals}}
+\index{format\+\_\+signals@{format\+\_\+signals}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{format\+\_\+signals()}{format\_signals()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+signals (\begin{DoxyParamCaption}\item[{}]{signals = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate signal declaration part
+
+  signals: used signals in region
+    dict of string,
+    e.g. { counter' : 'integer range 0 to 3' }
+\end{DoxyVerb}
+ 
+
+Definition at line 37 of file vhdl\+\_\+generation.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture().
+
+
+\begin{DoxyCode}
+37 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a8d3a2a6fdc4ce4af07672a2dd237a75d}{format\_signals} (signals = []) :
+38   \textcolor{stringliteral}{'''Generate signal declaration part}
+39 \textcolor{stringliteral}{}
+40 \textcolor{stringliteral}{    signals: used signals in region}
+41 \textcolor{stringliteral}{      dict of string,}
+42 \textcolor{stringliteral}{      e.g. \{ counter' : 'integer range 0 to 3' \}}
+43 \textcolor{stringliteral}{  '''}
+44 
+45   result = []
+46 
+47   \textcolor{keywordflow}{if} len(signals) > 0 :
+48     \textcolor{keywordflow}{for} s\_name, s\_type \textcolor{keywordflow}{in} signals.items() :
+49       result.append(\textcolor{stringliteral}{'signal %s : %s;'} % (s\_name, s\_type))
+50   \textcolor{keywordflow}{return} result
+51 
+52 \textcolor{comment}{# array}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a4807ba4c1479ad348e96412049260431}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a4807ba4c1479ad348e96412049260431}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!interface@{interface}}
+\index{interface@{interface}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{interface()}{interface()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface (\begin{DoxyParamCaption}\item[{}]{entity\+\_\+name = {\ttfamily \textquotesingle{}no\+\_\+name\textquotesingle{}},  }\item[{}]{input\+\_\+ports = {\ttfamily \{\}},  }\item[{}]{output\+\_\+ports = {\ttfamily \{\}},  }\item[{}]{libraries = {\ttfamily \{\}},  }\item[{}]{generics = {\ttfamily \{\}},  }\item[{}]{header = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{license\+\_\+header = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1mit__license_a5c8d9ae3b2d4db392cdc66e37b035675}{mit\+\_\+license.\+vhdl}()},  }\item[{}]{template\+\_\+string = {\ttfamily vhdl\+\_\+templates.interface},  }\item[{}]{default\+\_\+input\+\_\+ports = {\ttfamily \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}{default\+\_\+input\+\_\+ports}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 396 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+generics(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+ports(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+merge\+\_\+dict(), sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+pl2pd, and sylva.\+misc.\+exec.\+type.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components().
+
+
+\begin{DoxyCode}
+396   default\_input\_ports = default\_input\_ports) :
+397 
+398   template = Template(template\_string)
+399 
+400   \textcolor{keywordflow}{if} \hyperlink{namespacesylva_1_1misc_1_1exec_a55d55e6d0e68715dfbd883034bd7290c}{type}(input\_ports) \textcolor{keywordflow}{is} list :
+401     input\_ports\_dict = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}{pl2pd}(input\_ports)
+402   \textcolor{keywordflow}{else} :
+403     input\_ports\_dict = input\_ports
+404 
+405   \textcolor{keywordflow}{if} \hyperlink{namespacesylva_1_1misc_1_1exec_a55d55e6d0e68715dfbd883034bd7290c}{type}(output\_ports) \textcolor{keywordflow}{is} list :
+406     output\_ports\_dict = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}{pl2pd}(output\_ports)
+407   \textcolor{keywordflow}{else} :
+408     output\_ports\_dict = output\_ports
+409 
+410   \textcolor{keywordflow}{return} template.render(
+411     license\_header = license\_header,
+412     header = header,
+413     entity\_name = entity\_name,
+414     libraries = libraries,
+415     generics = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a94dd1f9bcf57913f20c5a8235e04c3c6}{format\_generics}(generics),
+416     ports = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_ac44fef3535243add66477e8198d8b0a5}{format\_ports}( \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}{merge\_dict}( default\_input\_ports, input\_ports\_dict ),
+417       output\_ports\_dict ))
+418 
+419 \textcolor{comment}{# string}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!merge\+\_\+dict@{merge\+\_\+dict}}
+\index{merge\+\_\+dict@{merge\+\_\+dict}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{merge\+\_\+dict()}{merge\_dict()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+merge\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{dictA,  }\item[{}]{dictB }\end{DoxyParamCaption})}
+
+
+
+Definition at line 323 of file vhdl\+\_\+generation.\+py.
+
+
+
+References sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+format\+\_\+components(), and sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface().
+
+
+\begin{DoxyCode}
+323 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a6f105e19192ce75934f22be90308ceff}{merge\_dict}(dictA, dictB) :
+324   \textcolor{keywordflow}{return} dict(dictA.items() + dictB.items())
+325 
+326 \textcolor{comment}{# array}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!port\+\_\+list\+\_\+to\+\_\+dict@{port\+\_\+list\+\_\+to\+\_\+dict}}
+\index{port\+\_\+list\+\_\+to\+\_\+dict@{port\+\_\+list\+\_\+to\+\_\+dict}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{port\+\_\+list\+\_\+to\+\_\+dict()}{port\_list\_to\_dict()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+port\+\_\+list\+\_\+to\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{port\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file vhdl\+\_\+generation.\+py.
+
+
+\begin{DoxyCode}
+19 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}{port\_list\_to\_dict}(port\_list) :
+20   \textcolor{keywordflow}{return} dict([(p.name, p.type.name) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} port\_list])
+21 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_ae2d3d4cc47d3292a63a983c9645c3010}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_ae2d3d4cc47d3292a63a983c9645c3010}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!vhdl\+\_\+file@{vhdl\+\_\+file}}
+\index{vhdl\+\_\+file@{vhdl\+\_\+file}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{vhdl\+\_\+file()}{vhdl\_file()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+vhdl\+\_\+file (\begin{DoxyParamCaption}\item[{}]{interface,  }\item[{}]{architectures = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{output\+\_\+file = {\ttfamily \textquotesingle{}result.vhdl\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 437 of file vhdl\+\_\+generation.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+architecture().
+
+
+\begin{DoxyCode}
+437   output\_file = \textcolor{stringliteral}{'result.vhdl'}) :
+438 
+439   output\_file\_pointer = open(output\_file, \textcolor{stringliteral}{'w'})
+440 
+441   output\_file\_pointer.write( interface );
+442   output\_file\_pointer.write( \textcolor{stringliteral}{'\(\backslash\)n'} );
+443   output\_file\_pointer.write( \textcolor{stringliteral}{'\(\backslash\)n'} );
+444 
+445   \textcolor{keywordflow}{for} fimp \textcolor{keywordflow}{in} architectures :
+446     output\_file\_pointer.write( fimp );
+447     output\_file\_pointer.write( \textcolor{stringliteral}{'\(\backslash\)n'} );
+448     output\_file\_pointer.write( \textcolor{stringliteral}{'\(\backslash\)n'} );
+449 
+450   output\_file\_pointer.close()
+451   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Generating VHDL file \{name\} is successful.'}.format(name = output\_file)
+452 \end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a0cf71880063e2c29029ca74b630eec28}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!default\+\_\+input\+\_\+ports@{default\+\_\+input\+\_\+ports}}
+\index{default\+\_\+input\+\_\+ports@{default\+\_\+input\+\_\+ports}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{default\+\_\+input\+\_\+ports}{default\_input\_ports}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+default\+\_\+input\+\_\+ports = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}{pl2pd}(\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a2373c5e8bd084e84746b1b6b947a2667}{default\+\_\+input\+\_\+ports\+\_\+list})}
+
+
+
+Definition at line 30 of file vhdl\+\_\+generation.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a2373c5e8bd084e84746b1b6b947a2667}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a2373c5e8bd084e84746b1b6b947a2667}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!default\+\_\+input\+\_\+ports\+\_\+list@{default\+\_\+input\+\_\+ports\+\_\+list}}
+\index{default\+\_\+input\+\_\+ports\+\_\+list@{default\+\_\+input\+\_\+ports\+\_\+list}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{default\+\_\+input\+\_\+ports\+\_\+list}{default\_input\_ports\_list}}
+{\footnotesize\ttfamily list sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+default\+\_\+input\+\_\+ports\+\_\+list}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [
+2   sdf.port(name =\textcolor{stringliteral}{'clk'}, type = std\_logic),
+3   sdf.port(name =\textcolor{stringliteral}{'nrst'}, type = std\_logic) ]
+\end{DoxyCode}
+
+
+Definition at line 26 of file vhdl\+\_\+generation.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a10ea31d6ea98aa308e635b9403f5721f}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!pl2pd@{pl2pd}}
+\index{pl2pd@{pl2pd}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{pl2pd}{pl2pd}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+pl2pd = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__generation_a51a60df4116e05e838a7d6c61f434df5}{port\+\_\+list\+\_\+to\+\_\+dict}}
+
+
+
+Definition at line 22 of file vhdl\+\_\+generation.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+interface().
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__generation_a85e74939ca684a8a978805b5918467c8}\label{namespacesylva_1_1code__generation_1_1vhdl__generation_a85e74939ca684a8a978805b5918467c8}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}!std\+\_\+logic@{std\+\_\+logic}}
+\index{std\+\_\+logic@{std\+\_\+logic}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+generation}}
+\subsubsection{\texorpdfstring{std\+\_\+logic}{std\_logic}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+generation.\+std\+\_\+logic = sdf.\+Data\+Token\+Type(name = \textquotesingle{}std\+\_\+logic\textquotesingle{}, size = 1)}
+
+
+
+Definition at line 24 of file vhdl\+\_\+generation.\+py.
+

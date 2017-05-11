@@ -1,0 +1,186 @@
+\hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types}{}\section{sylva.\+code\+\_\+generation.\+vhdl\+\_\+types Namespace Reference}
+\label{namespacesylva_1_1code__generation_1_1vhdl__types}\index{sylva.\+code\+\_\+generation.\+vhdl\+\_\+types@{sylva.\+code\+\_\+generation.\+vhdl\+\_\+types}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a44144317f9950d183cd2fff09c4e60c3}{bit\+\_\+value} (self, value)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}{slv} (size=1)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a4611eb11c8cdddc4f30c1df0871ac6f0}{integer} (max\+\_\+value=0, min\+\_\+value=0)
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_aedfc2fbc8284831ee3ef21debc186c98}{integer\+\_\+vhdl} (max\+\_\+value, min\+\_\+value=0)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic} = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}{slv}(1)
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a46ca649e36cf067a6e5140e7173b3c39}{clk} = sdf.\+port(\textquotesingle{}clk\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a489fa8436cce610e31ddae7b882063d7}{nrst} = sdf.\+port(\textquotesingle{}nrst\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)
+\item 
+\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a4da139baa6ee6ea4b41421f259b9ff3b}{en} = sdf.\+port(\textquotesingle{}\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a489fa8436cce610e31ddae7b882063d7}{nrst}\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a44144317f9950d183cd2fff09c4e60c3}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a44144317f9950d183cd2fff09c4e60c3}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!bit\+\_\+value@{bit\+\_\+value}}
+\index{bit\+\_\+value@{bit\+\_\+value}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{bit\+\_\+value()}{bit\_value()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+bit\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the value of each bit of a data token.
+
+std_logic_vector : binary(value)
+integer          : binary(value - min)
+\end{DoxyVerb}
+ 
+
+Definition at line 30 of file vhdl\+\_\+types.\+py.
+
+
+\begin{DoxyCode}
+30 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a44144317f9950d183cd2fff09c4e60c3}{bit\_value}(self, value) :
+31 
+32   \textcolor{stringliteral}{'''}
+33 \textcolor{stringliteral}{  Returns the value of each bit of a data token.}
+34 \textcolor{stringliteral}{}
+35 \textcolor{stringliteral}{  std\_logic\_vector : binary(value)}
+36 \textcolor{stringliteral}{  integer          : binary(value - min)}
+37 \textcolor{stringliteral}{  '''}
+38 
+39   \textcolor{keywordflow}{if} self.name.startswith(\textcolor{stringliteral}{'integer'}) :
+40     minvalue = int(self.name.split(\textcolor{stringliteral}{' '})[2])
+41     maxvalue = int(self.name.split(\textcolor{stringliteral}{' '})[4])
+42 
+43   \textcolor{keywordflow}{elif} self.name.startswith(\textcolor{stringliteral}{'std\_logic'}) :
+44     minvalue = 0
+45     maxvalue = int(math.pow(2, self.size) - 1)
+46 
+47   \textcolor{keywordflow}{else} :
+48     \textcolor{keywordflow}{raise} NotImplementedError
+49 
+50   \textcolor{keywordflow}{if} value > maxvalue :
+51     \textcolor{keywordflow}{raise} ValueError( \textcolor{stringliteral}{'Current value (%s) is larger than the maximum value (%s)'} \(\backslash\)
+52                       % (value, maxvalue) )
+53   \textcolor{keywordflow}{if} value < minvalue :
+54     \textcolor{keywordflow}{raise} ValueError( \textcolor{stringliteral}{'Current value (%s) is smaller than the minimum value (%s)'} \(\backslash\)
+55                       % (value, minvalue) )
+56 
+57   current\_value = value - minvalue;
+58   \textcolor{keywordflow}{return} bin(current\_value).\_\_str\_\_().split(\textcolor{stringliteral}{'b'})[-1].zfill(self.size)
+59 
+60 sdf.DataTokenType.bit\_value = bit\_value
+61 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a4611eb11c8cdddc4f30c1df0871ac6f0}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a4611eb11c8cdddc4f30c1df0871ac6f0}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!integer@{integer}}
+\index{integer@{integer}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{integer()}{integer()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+integer (\begin{DoxyParamCaption}\item[{}]{max\+\_\+value = {\ttfamily 0},  }\item[{}]{min\+\_\+value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file vhdl\+\_\+types.\+py.
+
+
+\begin{DoxyCode}
+71 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a4611eb11c8cdddc4f30c1df0871ac6f0}{integer}(max\_value = 0, min\_value = 0) :
+72 
+73   \textcolor{keywordflow}{if} min\_value < 0 \textcolor{keywordflow}{or} max\_value < 0 :
+74     \textcolor{keywordflow}{raise} Exception.ValueError( \textcolor{stringliteral}{'The range of an integer can only be > 1 '} +
+75                                 \textcolor{stringliteral}{'not (%s to %s)'} % (minvalue, maxvalue) )
+76   \textcolor{keywordflow}{if} min\_value > max\_value :
+77     min\_value, max\_value = max\_value, min\_value
+78     \textcolor{keywordflow}{raise} Exception.SyntaxWarning( \textcolor{stringliteral}{'The input range is inversed due to '} +
+79                                    \textcolor{stringliteral}{'min value (%s) > max value (%s)'} % (minvalue, maxvalue))
+80   number\_of\_values = max\_value - min\_value + 1
+81   size = int(math.ceil(math.log(number\_of\_values, 2)))
+82 
+83   \textcolor{keywordflow}{return} sdf.DataTokenType( name = \textcolor{stringliteral}{'integer range %s to %s'} % (min\_value, max\_value), size = size )
+84 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_aedfc2fbc8284831ee3ef21debc186c98}\label{namespacesylva_1_1code__generation_1_1vhdl__types_aedfc2fbc8284831ee3ef21debc186c98}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!integer\+\_\+vhdl@{integer\+\_\+vhdl}}
+\index{integer\+\_\+vhdl@{integer\+\_\+vhdl}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{integer\+\_\+vhdl()}{integer\_vhdl()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+integer\+\_\+vhdl (\begin{DoxyParamCaption}\item[{}]{max\+\_\+value,  }\item[{}]{min\+\_\+value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file vhdl\+\_\+types.\+py.
+
+
+\begin{DoxyCode}
+90 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_aedfc2fbc8284831ee3ef21debc186c98}{integer\_vhdl}(max\_value, min\_value=0) :
+91   \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_aedfc2fbc8284831ee3ef21debc186c98}{integer\_vhdl}(max\_value, min\_value).name
+92 
+93 
+94 \end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!slv@{slv}}
+\index{slv@{slv}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{slv()}{slv()}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+slv (\begin{DoxyParamCaption}\item[{}]{size = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file vhdl\+\_\+types.\+py.
+
+
+\begin{DoxyCode}
+62 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}{slv}(size = 1) :
+63   \textcolor{keywordflow}{if} size < 1 :
+64     \textcolor{keywordflow}{raise} Exception.ValueError( \textcolor{stringliteral}{'The size of an std\_logic\_vector value can only be > 1 '} +
+65                                 \textcolor{stringliteral}{'not %s'} % size )
+66   \textcolor{keywordflow}{if} size == 1:
+67     \textcolor{keywordflow}{return} sdf.DataTokenType( name = \textcolor{stringliteral}{'std\_logic'}, size = 1 )
+68   \textcolor{keywordflow}{else} :
+69     \textcolor{keywordflow}{return} sdf.DataTokenType( name = \textcolor{stringliteral}{'std\_logic\_vector (%s downto 0)'} % (size - 1), size = size )
+70 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a46ca649e36cf067a6e5140e7173b3c39}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a46ca649e36cf067a6e5140e7173b3c39}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!clk@{clk}}
+\index{clk@{clk}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{clk}{clk}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+clk = sdf.\+port(\textquotesingle{}clk\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)}
+
+
+
+Definition at line 86 of file vhdl\+\_\+types.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a4da139baa6ee6ea4b41421f259b9ff3b}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a4da139baa6ee6ea4b41421f259b9ff3b}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!en@{en}}
+\index{en@{en}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{en}{en}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+en = sdf.\+port(\textquotesingle{}\hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a489fa8436cce610e31ddae7b882063d7}{nrst}\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)}
+
+
+
+Definition at line 88 of file vhdl\+\_\+types.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a489fa8436cce610e31ddae7b882063d7}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a489fa8436cce610e31ddae7b882063d7}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!nrst@{nrst}}
+\index{nrst@{nrst}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{nrst}{nrst}}
+{\footnotesize\ttfamily sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+nrst = sdf.\+port(\textquotesingle{}nrst\textquotesingle{}, 0, \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}{std\+\_\+logic}, 1)}
+
+
+
+Definition at line 87 of file vhdl\+\_\+types.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}\label{namespacesylva_1_1code__generation_1_1vhdl__types_a845f43d0f072fe58cc3fbb8a1028cb2e}} 
+\index{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}!std\+\_\+logic@{std\+\_\+logic}}
+\index{std\+\_\+logic@{std\+\_\+logic}!sylva\+::code\+\_\+generation\+::vhdl\+\_\+types@{sylva\+::code\+\_\+generation\+::vhdl\+\_\+types}}
+\subsubsection{\texorpdfstring{std\+\_\+logic}{std\_logic}}
+{\footnotesize\ttfamily def sylva.\+code\+\_\+generation.\+vhdl\+\_\+types.\+std\+\_\+logic = \hyperlink{namespacesylva_1_1code__generation_1_1vhdl__types_a8502d9eb6526007840a5e33d37826a0b}{slv}(1)}
+
+
+
+Definition at line 85 of file vhdl\+\_\+types.\+py.
+

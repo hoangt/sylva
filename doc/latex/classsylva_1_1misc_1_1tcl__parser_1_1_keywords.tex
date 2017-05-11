@@ -1,0 +1,139 @@
+\hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}{}\section{sylva.\+misc.\+tcl\+\_\+parser.\+Keywords Class Reference}
+\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}\index{sylva.\+misc.\+tcl\+\_\+parser.\+Keywords@{sylva.\+misc.\+tcl\+\_\+parser.\+Keywords}}
+Inheritance diagram for sylva.\+misc.\+tcl\+\_\+parser.\+Keywords\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsylva_1_1misc_1_1tcl__parser_1_1_keywords}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a4b7a15b3c0639416663e46d942c9b9be}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, args, kwarg)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_ae638df94fbcd53ba58d430f33daef296}{\+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, key)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a3472d59fe7173f29ba51f1153a8d9710}{\+\_\+\+\_\+setitem\+\_\+\+\_\+} (self, key, \hyperlink{namespacesylva_1_1misc_1_1tcl__parser_a83a1a4d978bc1a8a1bd92f71b754bad9}{value})
+\item 
+def \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a0a9e148d0396587905bf17d93d3cac1a}{\+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, key)
+\item 
+def \hyperlink{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_aab14f0aa36691de260b7c63be5ad6ee9}{keys} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file tcl\+\_\+parser.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a4b7a15b3c0639416663e46d942c9b9be}\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a4b7a15b3c0639416663e46d942c9b9be}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args,  }\item[{}]{kwarg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file tcl\+\_\+parser.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+fimp.\+\_\+\+\_\+setattr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+24     \textcolor{keyword}{def }\_\_init\_\_(self, *args, **kwarg) :
+25       super(Keywords, self).\_\_init\_\_()
+26       \textcolor{keywordflow}{for} k \textcolor{keywordflow}{in} args :
+27         value = Keyword(k)
+28         self.\_\_setattr\_\_(k, value)
+29         globals()[k] = self.\_\_dict\_\_[k]
+30 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a0a9e148d0396587905bf17d93d3cac1a}\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a0a9e148d0396587905bf17d93d3cac1a}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}!\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}!sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getattr\+\_\+\+\_\+()}{\_\_getattr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+getattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file tcl\+\_\+parser.\+py.
+
+
+
+Referenced by sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+getitem\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+37     \textcolor{keyword}{def }\_\_getattr\_\_(self, key) :
+38       \textcolor{keywordflow}{try} :
+39         \textcolor{keywordflow}{return} self.\_\_dict\_\_[key]
+40       \textcolor{keywordflow}{except} KeyError :
+41         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+42 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_ae638df94fbcd53ba58d430f33daef296}\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_ae638df94fbcd53ba58d430f33daef296}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}!\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}!sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getitem\+\_\+\+\_\+()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file tcl\+\_\+parser.\+py.
+
+
+
+References sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+getattr\+\_\+\+\_\+(), and sylva.\+misc.\+exec.\+Dict\+Object.\+\_\+\+\_\+getattr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+31     \textcolor{keyword}{def }\_\_getitem\_\_(self, key) :
+32       \textcolor{keywordflow}{return} self.\_\_getattr\_\_(key)
+33 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a3472d59fe7173f29ba51f1153a8d9710}\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_a3472d59fe7173f29ba51f1153a8d9710}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}!\+\_\+\+\_\+setitem\+\_\+\+\_\+@{\+\_\+\+\_\+setitem\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+setitem\+\_\+\+\_\+@{\+\_\+\+\_\+setitem\+\_\+\+\_\+}!sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+setitem\+\_\+\+\_\+()}{\_\_setitem\_\_()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+setitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file tcl\+\_\+parser.\+py.
+
+
+\begin{DoxyCode}
+34     \textcolor{keyword}{def }\_\_setitem\_\_(self, key, value) :
+35       self.\_\_dict\_\_[key] = value
+36 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_aab14f0aa36691de260b7c63be5ad6ee9}\label{classsylva_1_1misc_1_1tcl__parser_1_1_keywords_aab14f0aa36691de260b7c63be5ad6ee9}} 
+\index{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}!keys@{keys}}
+\index{keys@{keys}!sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords@{sylva\+::misc\+::tcl\+\_\+parser\+::\+Keywords}}
+\subsubsection{\texorpdfstring{keys()}{keys()}}
+{\footnotesize\ttfamily def sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+keys (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file tcl\+\_\+parser.\+py.
+
+
+\begin{DoxyCode}
+44     \textcolor{keyword}{def }keys(self):
+45       \textcolor{keywordflow}{return} self.\_\_dict\_\_.keys()
+46 
+47   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1tcl__parser_abc9d84dd4132e13b642242dfac628084}{anyof}(values, operation = '|') :
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+misc/\hyperlink{tcl__parser_8py}{tcl\+\_\+parser.\+py}\end{DoxyCompactItemize}

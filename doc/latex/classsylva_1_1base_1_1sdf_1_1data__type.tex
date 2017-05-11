@@ -1,0 +1,234 @@
+\hypertarget{classsylva_1_1base_1_1sdf_1_1data__type}{}\section{sylva.\+base.\+sdf.\+data\+\_\+type Class Reference}
+\label{classsylva_1_1base_1_1sdf_1_1data__type}\index{sylva.\+base.\+sdf.\+data\+\_\+type@{sylva.\+base.\+sdf.\+data\+\_\+type}}
+
+
+Data token type class This \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object will be used to represent the data token type in \hyperlink{classsylva_1_1base_1_1sdf_1_1sdfg}{sdfg}.  
+
+
+Inheritance diagram for sylva.\+base.\+sdf.\+data\+\_\+type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsylva_1_1base_1_1sdf_1_1data__type}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a67a4e99823bb60e42cbcefa96230a46d}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a5bb984de0211b07ac2a1a882ff7b1744}{name}=\textquotesingle{}int32\textquotesingle{}, \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a76a0420d9704afe37b25895b906128b3}{size}=32)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a5782362238cdc10794b96462c2753de5}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Convert the current object to a string format. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_ab7aca19176b5b02f9cb14295269d9b43}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Convert the current object to a string format. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a0996089b8e4a7e6ab35bc5f53704f6c4}{serialize} (self)
+\begin{DoxyCompactList}\small\item\em Creates a dict object with only primitive python objects to store the current \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a8d60e9a84477858f04e552fb02c5a837}{deserialize}
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object from a dict object that is produced by the serialize method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a5bb984de0211b07ac2a1a882ff7b1744}{name}
+\begin{DoxyCompactList}\small\item\em The name of the user and it should be a str object. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a76a0420d9704afe37b25895b906128b3}{size}
+\begin{DoxyCompactList}\small\item\em The size of the data token in number of bits and it should be an int object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data token type class This \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object will be used to represent the data token type in \hyperlink{classsylva_1_1base_1_1sdf_1_1sdfg}{sdfg}. 
+
+
+
+Definition at line 13 of file sdf.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a67a4e99823bb60e42cbcefa96230a46d}\label{classsylva_1_1base_1_1sdf_1_1data__type_a67a4e99823bb60e42cbcefa96230a46d}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+data\+\_\+type.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \textquotesingle{}int32\textquotesingle{}},  }\item[{}]{size = {\ttfamily 32} }\end{DoxyParamCaption})}
+
+
+
+Creates a new \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the user and it should be a str object. \\
+\hline
+{\em size} & The size of the data token in number of bits and it should be an int object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+18         \textcolor{keyword}{def }\_\_init\_\_(self, name='int32', size=32):
+19 
+20             
+22             self.name = name
+23 
+24             
+26             self.size = size
+27 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_ab7aca19176b5b02f9cb14295269d9b43}\label{classsylva_1_1base_1_1sdf_1_1data__type_ab7aca19176b5b02f9cb14295269d9b43}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+data\+\_\+type.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Convert the current object to a string format. 
+
+This method will be invoked some time instead of self.\+\_\+\+\_\+str\+\_\+\+\_\+(). \begin{DoxyReturn}{Returns}
+Returns a human friendly string (type is str) of this object 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+data\+\_\+type.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+base.\+fimp.\+fimp.\+\_\+\+\_\+str\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+36         \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self):
+37             \textcolor{keywordflow}{return} self.\_\_str\_\_()
+38 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a5782362238cdc10794b96462c2753de5}\label{classsylva_1_1base_1_1sdf_1_1data__type_a5782362238cdc10794b96462c2753de5}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+data\+\_\+type.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Convert the current object to a string format. 
+
+\begin{DoxyReturn}{Returns}
+Returns a human friendly string (type is str) of this object 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+data\+\_\+type.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+30         \textcolor{keyword}{def }\_\_str\_\_(self):
+31             \textcolor{keywordflow}{return} f\textcolor{stringliteral}{'\{self.name\} (size \{self.size\})'}
+32 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a8d60e9a84477858f04e552fb02c5a837}\label{classsylva_1_1base_1_1sdf_1_1data__type_a8d60e9a84477858f04e552fb02c5a837}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+data\+\_\+type.\+deserialize (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{data\+\_\+type\+\_\+dict = {\ttfamily \{\textquotesingle{}\hyperlink{classsylva_1_1base_1_1sdf_1_1data__type_a5bb984de0211b07ac2a1a882ff7b1744}{name}\textquotesingle{}\+:~\textquotesingle{}int32\textquotesingle{}},  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Creates a \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object from a dict object that is produced by the serialize method. 
+
+Example\+: data\+\_\+type\+\_\+dict = \{\textquotesingle{}name\textquotesingle{}\+: \textquotesingle{}int32\textquotesingle{}, \textquotesingle{}size\textquotesingle{}\+: 32\} 
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+type\+\_\+dict} & The dict object having all information to construct a new \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+52         \textcolor{keyword}{def }deserialize(cls, data\_type\_dict=\{'name': \textcolor{stringliteral}{'int32'}, \textcolor{stringliteral}{'size'}: 32\}):
+53 
+54             \textcolor{keywordflow}{return} cls(name=data\_type\_dict[\textcolor{stringliteral}{'name'}], size=data\_type\_dict[\textcolor{stringliteral}{'size'}])
+55 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a0996089b8e4a7e6ab35bc5f53704f6c4}\label{classsylva_1_1base_1_1sdf_1_1data__type_a0996089b8e4a7e6ab35bc5f53704f6c4}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!serialize@{serialize}}
+\index{serialize@{serialize}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+data\+\_\+type.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Creates a dict object with only primitive python objects to store the current \hyperlink{classsylva_1_1base_1_1sdf_1_1data__type}{data\+\_\+type} object. 
+
+Example\+: \{\textquotesingle{}name\textquotesingle{}\+: \textquotesingle{}int32\textquotesingle{}, \textquotesingle{}size\textquotesingle{}\+: 32\} \begin{DoxyReturn}{Returns}
+a dict object 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+data\+\_\+type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+base.\+sdf.\+data\+\_\+type.\+size.
+
+
+\begin{DoxyCode}
+43         \textcolor{keyword}{def }serialize(self):
+44             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'name'}: self.name, \textcolor{stringliteral}{'size'}: self.size\}
+45 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a5bb984de0211b07ac2a1a882ff7b1744}\label{classsylva_1_1base_1_1sdf_1_1data__type_a5bb984de0211b07ac2a1a882ff7b1744}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!name@{name}}
+\index{name@{name}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+data\+\_\+type.\+name}
+
+
+
+The name of the user and it should be a str object. 
+
+
+
+Definition at line 22 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+clone(), sylva.\+base.\+sdf.\+actor.\+clone(), sylva.\+base.\+sdf.\+data\+\_\+type.\+serialize(), sylva.\+base.\+sdf.\+port.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), sylva.\+glic.\+glic.\+control.\+serialize(), and sylva.\+base.\+sdf.\+actor.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1data__type_a76a0420d9704afe37b25895b906128b3}\label{classsylva_1_1base_1_1sdf_1_1data__type_a76a0420d9704afe37b25895b906128b3}} 
+\index{sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}!size@{size}}
+\index{size@{size}!sylva\+::base\+::sdf\+::data\+\_\+type@{sylva\+::base\+::sdf\+::data\+\_\+type}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+data\+\_\+type.\+size}
+
+
+
+The size of the data token in number of bits and it should be an int object. 
+
+
+
+Definition at line 26 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+data\+\_\+type.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sdf_8py}{sdf.\+py}\end{DoxyCompactItemize}

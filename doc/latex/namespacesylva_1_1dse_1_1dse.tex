@@ -1,0 +1,478 @@
+\hypertarget{namespacesylva_1_1dse_1_1dse}{}\section{sylva.\+dse.\+dse Namespace Reference}
+\label{namespacesylva_1_1dse_1_1dse}\index{sylva.\+dse.\+dse@{sylva.\+dse.\+dse}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse_1_1design__specification}{design\+\_\+specification}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse_1_1solver__option}{solver\+\_\+option}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse_1_1system__constraint}{system\+\_\+constraint}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse_1_1system__model}{system\+\_\+model}
+\item 
+class \hyperlink{classsylva_1_1dse_1_1dse_1_1system__optimization__objective}{system\+\_\+optimization\+\_\+objective}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\+\_\+cost} (start\+\_\+time, end\+\_\+time)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}{one\+\_\+search} (dse, log)
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse_ab6e885c27f1c1dbe29468f3d931f1a63}{search\+\_\+all} (design, option, log=\hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}(), critical\+\_\+log=\hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}())
+\item 
+def \hyperlink{namespacesylva_1_1dse_1_1dse_afcf62d3580889d2c99cb16694f738e02}{get\+\_\+result\+\_\+csv} (search\+\_\+result, file\+\_\+name=\textquotesingle{}\textquotesingle{}, report\+\_\+items=\mbox{[} \textquotesingle{}search time\textquotesingle{}, fimps, area, energy, latency, sample, interval)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacesylva_1_1dse_1_1dse_ae75d8649b8c58b165513c61e2c9e62c7}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1dse_1_1dse_a9c1f8ee252b6dc4cc07384ac848d62cf}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2014-\/09-\/23-\/10\+:41\textquotesingle{}
+\item 
+\hyperlink{namespacesylva_1_1dse_1_1dse_ac2d9fdcc3f7fd0bad1900fa0a813dff4}{sc} = \hyperlink{classsylva_1_1dse_1_1dse_1_1system__constraint}{system\+\_\+constraint}
+\item 
+\hyperlink{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}{soo} = \hyperlink{classsylva_1_1dse_1_1dse_1_1system__optimization__objective}{system\+\_\+optimization\+\_\+objective}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_afcf62d3580889d2c99cb16694f738e02}\label{namespacesylva_1_1dse_1_1dse_afcf62d3580889d2c99cb16694f738e02}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!get\+\_\+result\+\_\+csv@{get\+\_\+result\+\_\+csv}}
+\index{get\+\_\+result\+\_\+csv@{get\+\_\+result\+\_\+csv}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{get\+\_\+result\+\_\+csv()}{get\_result\_csv()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+get\+\_\+result\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{search\+\_\+result,  }\item[{}]{file\+\_\+name = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{report\+\_\+items = {\ttfamily \mbox{[}~\textquotesingle{}search~time\textquotesingle{}},  }\item[{}]{fimps,  }\item[{}]{area,  }\item[{}]{energy,  }\item[{}]{latency,  }\item[{}]{sample,  }\item[{}]{interval }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+419                    \textcolor{stringliteral}{'latency'}, \textcolor{stringliteral}{'sample interval'} ]) :
+420 
+421   msg = \textcolor{stringliteral}{'index'}
+422   \textcolor{keywordflow}{for} m \textcolor{keywordflow}{in} report\_items :
+423     msg += \textcolor{stringliteral}{','} + m
+424   msg += \textcolor{stringliteral}{'\(\backslash\)n'}
+425 
+426   index = 0
+427   \textcolor{keywordflow}{for} one\_schedule\_result \textcolor{keywordflow}{in} search\_result :
+428     \textcolor{keywordflow}{for} one\_solution \textcolor{keywordflow}{in} one\_schedule\_result :
+429       \textcolor{keywordflow}{if} one\_solution != \{\} :
+430         msg += str(index)
+431         index += 1
+432         \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} report\_items :
+433           msg += \textcolor{stringliteral}{','} + str(one\_solution[key])
+434         msg += \textcolor{stringliteral}{'\(\backslash\)n'}
+435 
+436   \textcolor{keywordflow}{if} file\_name == \textcolor{stringliteral}{''} :
+437 
+438     \textcolor{keywordflow}{return} msg
+439 
+440   \textcolor{keywordflow}{else} :
+441 
+442     dataf = open(file\_name, \textcolor{stringliteral}{'w+'})
+443     dataf.write(msg)
+444     dataf.close()
+445 \end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}\label{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!one\+\_\+search@{one\+\_\+search}}
+\index{one\+\_\+search@{one\+\_\+search}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{one\+\_\+search()}{one\_search()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+one\+\_\+search (\begin{DoxyParamCaption}\item[{}]{dse,  }\item[{}]{log }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform one search.
+
+Returns
+
+1. if a solution is found (True or False)
+2. the solution
+3. the search log
+\end{DoxyVerb}
+ 
+
+Definition at line 138 of file dse.\+py.
+
+
+
+References sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+138 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}{one\_search}(dse, log) :
+139 
+140   \textcolor{stringliteral}{'''}
+141 \textcolor{stringliteral}{  Perform one search.}
+142 \textcolor{stringliteral}{}
+143 \textcolor{stringliteral}{  Returns}
+144 \textcolor{stringliteral}{}
+145 \textcolor{stringliteral}{  1. if a solution is found (True or False)}
+146 \textcolor{stringliteral}{  2. the solution}
+147 \textcolor{stringliteral}{  3. the search log}
+148 \textcolor{stringliteral}{  '''}
+149 
+150   result = \{\}
+151   performance = \{\}
+152 
+153   start\_time = time.time()
+154 
+155   \textcolor{keywordflow}{if} dse.solver.NextSolution() :
+156 
+157     end\_time = time.time()
+158 
+159     log += \textcolor{stringliteral}{'Found one solution after %s branches\(\backslash\)n'} \(\backslash\)
+160          % dse.solver.Branches()
+161     log += \textcolor{stringliteral}{'  search time    : %f\(\backslash\)n'} % ((end\_time -  start\_time)/1000)
+162     log += \textcolor{stringliteral}{'  FIMPs          : %s\(\backslash\)n'} % len(dse.fimps)
+163     log += \textcolor{stringliteral}{'  area           : %s\(\backslash\)n'} % dse.area.Value()
+164     log += \textcolor{stringliteral}{'  latency        : %s\(\backslash\)n'} % dse.latency.Value()
+165     log += \textcolor{stringliteral}{'  energy         : %s\(\backslash\)n'} % dse.energy.Value()
+166     log += \textcolor{stringliteral}{'  sample interval: %s'} % dse.sample\_interval.Value()
+167     log.update()
+168 
+169     result[\textcolor{stringliteral}{'start'}]        = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.start ]
+170     result[\textcolor{stringliteral}{'end'}]          = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.end ]
+171     result[\textcolor{stringliteral}{'input\_end'}]    = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.input\_end ]
+172     result[\textcolor{stringliteral}{'output\_start'}] = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.output\_start ]
+173     result[\textcolor{stringliteral}{'buffer\_end'}]   = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.buffer\_end ]
+174     result[\textcolor{stringliteral}{'extra\_buffer'}] = [ int(t.Value()) \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} dse.extra\_buffer ]
+175 
+176     result[\textcolor{stringliteral}{'fimp\_types'}]   = [ -1 \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} dse.fimps]
+177 
+178     result[\textcolor{stringliteral}{'search time'}]     = (end\_time -  start\_time)/1000
+179     result[\textcolor{stringliteral}{'fimps'}]           = len(dse.fimps)
+180     result[\textcolor{stringliteral}{'area'}]            = dse.area.Value()
+181     result[\textcolor{stringliteral}{'latency'}]         = dse.latency.Value()
+182     result[\textcolor{stringliteral}{'energy'}]          = dse.energy.Value()
+183     result[\textcolor{stringliteral}{'sample interval'}] = dse.sample\_interval.Value()
+184 
+185     \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} dse.fimps :
+186       fimp\_type = 0
+187       \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} dse.fimp\_selection\_variable[f.index] :
+188         \textcolor{keywordflow}{if} int(var.Value()) == 1 :
+189           result[\textcolor{stringliteral}{'fimp\_types'}][f.index] = fimp\_type
+190         fimp\_type = fimp\_type + 1
+191 
+192     \textcolor{keywordflow}{return} \textcolor{keyword}{True}, result\textcolor{comment}{#, log}
+193 
+194   \textcolor{keywordflow}{else} :
+195 
+196     end\_time = time.time()
+197     log += \textcolor{stringliteral}{'No solution found after %s branches\(\backslash\)n'} \(\backslash\)
+198          % dse.solver.Branches()
+199     log += \textcolor{stringliteral}{'  search time    : %f\(\backslash\)n'} % ((end\_time -  start\_time)/1000)
+200     log.update()
+201 
+202   \textcolor{keywordflow}{return} \textcolor{keyword}{False}, result\textcolor{comment}{#, log}
+203 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_ab6e885c27f1c1dbe29468f3d931f1a63}\label{namespacesylva_1_1dse_1_1dse_ab6e885c27f1c1dbe29468f3d931f1a63}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!search\+\_\+all@{search\+\_\+all}}
+\index{search\+\_\+all@{search\+\_\+all}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{search\+\_\+all()}{search\_all()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+search\+\_\+all (\begin{DoxyParamCaption}\item[{}]{design,  }\item[{}]{option,  }\item[{}]{log = {\ttfamily \hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}()},  }\item[{}]{critical\+\_\+log = {\ttfamily \hyperlink{classsylva_1_1misc_1_1util_1_1status__log}{status\+\_\+log}()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file dse.\+py.
+
+
+
+References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+all\+\_\+schedules(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+assign\+\_\+fimps(), sylva.\+dse.\+dse.\+get\+\_\+result\+\_\+csv(), sylva.\+dse.\+dse.\+one\+\_\+search(), sylva.\+base.\+sdf\+\_\+to\+\_\+hsdf.\+sdf\+\_\+to\+\_\+hsdf(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules(), and sylva.\+dse.\+dse.\+time\+\_\+cost().
+
+
+
+Referenced by sylva.\+dse.\+dse.\+one\+\_\+search().
+
+
+\begin{DoxyCode}
+205   critical\_log = status\_log()):
+206 
+207   results = []
+208 
+209   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'prepare constraints and optimization objectives'}:
+210 
+211     \textcolor{keywordflow}{if} \textcolor{stringliteral}{'prepare constraints'} :
+212 
+213       tmax = design.system.constraint.tmax
+214       rmax = design.system.constraint.rmax
+215       amax = design.system.constraint.amax
+216       emax = design.system.constraint.emax
+217 
+218       log += \textcolor{stringliteral}{'Constraints: \(\backslash\)n'}
+219       log += \textcolor{stringliteral}{'Maximum latency (T\_\{max\}) is %s\(\backslash\)n'} % tmax
+220       log += \textcolor{stringliteral}{'Maximum sample interval (R\_\{max\}) is %s\(\backslash\)n'} % rmax
+221       log += \textcolor{stringliteral}{'Maximum area (A\_\{max\}) is %s\(\backslash\)n'} % amax
+222       log += \textcolor{stringliteral}{'Maximum energy consumption (E\_\{max\}) is %s\(\backslash\)n'} % emax
+223       log.update()
+224 
+225     \textcolor{keywordflow}{if} \textcolor{stringliteral}{'prepare optimization objectives'} :
+226 
+227       KT = design.system.optimization\_objective.kt
+228       KR = design.system.optimization\_objective.kr
+229       KA = design.system.optimization\_objective.ka
+230       KE = design.system.optimization\_objective.ke
+231 
+232       log += \textcolor{stringliteral}{'Optimization objectives: \(\backslash\)n'}
+233       log += \textcolor{stringliteral}{'KA = %s\(\backslash\)n'} % KA
+234       log += \textcolor{stringliteral}{'KE = %s\(\backslash\)n'} % KE
+235       log += \textcolor{stringliteral}{'KT = %s\(\backslash\)n'} % KT
+236       log += \textcolor{stringliteral}{'KR = %s\(\backslash\)n'} % KR
+237       log.update()
+238 
+239   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'prepare system SDF graph'} :
+240 
+241     sdf\_actors = design.system.actors
+242     sdf\_edges = design.system.edges
+243 
+244   \textcolor{comment}{# prepare CGRA}
+245   cgra = design.cgra
+246 
+247   \textcolor{comment}{# prepare FIMP library}
+248   fimp\_lib = design.fimp\_lib
+249 
+250   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'prepare solver options'} :
+251 
+252     time\_limit = option.time\_limit
+253     solutions\_per\_schedule = option.solutions\_per\_schedule
+254     effort = option.effort
+255     dse\_engine = option.dse\_engine
+256 
+257   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create HSDF graph and schedule it'}:
+258 
+259     log += \textcolor{stringliteral}{'Converting system SDF graph to HSDF graph ... \(\backslash\)n'}
+260     start\_time = time.time()
+261     (actors, edges) = \hyperlink{namespacesylva_1_1base_1_1sdf__to__hsdf_a41dda1a461cf7b083fbd682fc94d5e10}{sdf\_to\_hsdf}( (sdf\_actors, sdf\_edges) )
+262     end\_time = time.time()
+263     log += \textcolor{stringliteral}{'Done. '} + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) + \textcolor{stringliteral}{'\(\backslash\)n'}
+264     log += \textcolor{stringliteral}{'%s actors, %s edges.'} % (len(actors), len(edges))
+265     log.update()
+266     log += \textcolor{stringliteral}{'Generating load balanced SDF schedule ...\(\backslash\)n'}
+267     start\_time = time.time()
+268     all\_sch = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a8ca06c203c74d5cd06866a67203d251c}{all\_schedules}( (sdf\_actors, sdf\_edges) )
+269     search\_schedules = int(float(effort)*len(all\_sch)/100)
+270     schedules = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_a4a316401cfa961e555596115afe86b4c}{some\_schedules}( (sdf\_actors, sdf\_edges), search\_schedules)
+271     end\_time = time.time()
+272     log += \textcolor{stringliteral}{'Done. '} + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) + \textcolor{stringliteral}{'\(\backslash\)n'}
+273     log += \textcolor{stringliteral}{'%s schedules.\(\backslash\)n'} % len(schedules)
+274     \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} schedules :
+275       log += \textcolor{stringliteral}{'%s \(\backslash\)n'} % s
+276     log.update()
+277 
+278   \textcolor{keywordflow}{if} \textcolor{stringliteral}{'search for each schedule'} :
+279 
+280     search\_index = 0
+281 
+282     \textcolor{keywordflow}{for} schedule\_index, one\_schedule \textcolor{keywordflow}{in} enumerate(schedules) :
+283 
+284       result = []
+285 
+286       log += \textcolor{stringliteral}{'Schedule %s: \(\backslash\)n'} % schedule\_index
+287       critical\_log.status = log.status
+288       log.update()
+289 
+290       fimps = \hyperlink{namespacesylva_1_1dse_1_1dse__engine__v1_ac7bc9055c7171c3d5156f342722248fc}{assign\_fimps}(actors, one\_schedule)
+291 
+292       log += \textcolor{stringliteral}{'Used FIMP instance space holders are generated. \(\backslash\)n'}
+293 
+294       \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps :
+295         log += \textcolor{stringliteral}{'\(\backslash\)n  %s\(\backslash\)n  Actors: %s\(\backslash\)n'} % (f, f.actors)
+296       log.update()
+297 
+298       log += \textcolor{stringliteral}{'Preparing CSOP'}
+299       log.update()
+300       start\_time = time.time()
+301       dse = dse\_engine(actors, edges, fimp\_lib, fimps,
+302         time\_limit = time\_limit,
+303         max\_area = amax, max\_energy = emax,
+304         max\_latency = tmax, max\_sample\_interval = rmax,
+305         KA = KA, KE = KE, KT = KT, KR = KR)
+306 
+307       end\_time = time.time()
+308       log += \textcolor{stringliteral}{'Done. '} + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time)
+309       log.update()
+310 
+311       log += \textcolor{stringliteral}{'Search %s ... \(\backslash\)n'} % search\_index
+312       critical\_log.status = log.status
+313       log.update()
+314       start\_time = time.time()
+315       keep\_searching, r = \hyperlink{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}{one\_search}(dse, log)
+316       end\_time = time.time()
+317       log += (\textcolor{stringliteral}{'Search %s is done. '} % search\_index) \(\backslash\)
+318            + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) + \textcolor{stringliteral}{'\(\backslash\)n'}
+319       critical\_log.status = log.status
+320       log.update()
+321 
+322       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} solutions\_per\_schedule :
+323         \textcolor{keywordflow}{while} keep\_searching == \textcolor{keyword}{True} :
+324           result.append(r)
+325           search\_index += 1
+326           log += \textcolor{stringliteral}{'Search %s ... \(\backslash\)n'} % search\_index
+327           critical\_log.status = log.status
+328           log.update()
+329 
+330           start\_time = time.time()
+331           keep\_searching, r = \hyperlink{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}{one\_search}(dse, log)
+332           end\_time = time.time()
+333 
+334           \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} keep\_searching:
+335             log += \textcolor{stringliteral}{'Search failed, time limit %s seconds. \(\backslash\)n'} % (time\_limit/1000)
+336             critical\_log.status = log.status
+337           \textcolor{keywordflow}{else} :
+338             log += \textcolor{stringliteral}{'Done. '} + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) + \textcolor{stringliteral}{'\(\backslash\)n'}
+339             critical\_log.status = log.status
+340 
+341           log.update()
+342       \textcolor{keywordflow}{else} :
+343         \textcolor{keywordflow}{while} solutions\_per\_schedule > 0 \textcolor{keywordflow}{and} keep\_searching == \textcolor{keyword}{True} :
+344 
+345           result.append(r)
+346           search\_index += 1
+347           log += \textcolor{stringliteral}{'Search %s ... \(\backslash\)n'} % search\_index
+348           critical\_log.status = log.status
+349           log.update()
+350 
+351           start\_time = time.time()
+352           keep\_searching, r = \hyperlink{namespacesylva_1_1dse_1_1dse_a27653b05dda8ab9dab8aa948db5b860a}{one\_search}(dse)
+353           end\_time = time.time()
+354 
+355           \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} keep\_searching:
+356             log += \textcolor{stringliteral}{'Search failed, time limit %s seconds. \(\backslash\)n'} % (time\_limit/1000)
+357             critical\_log.status = log.status
+358           \textcolor{keywordflow}{else} :
+359             log += \textcolor{stringliteral}{'Done. '} + \hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) + \textcolor{stringliteral}{'\(\backslash\)n'}
+360             critical\_log.status = log.status
+361 
+362           log.update()
+363           solutions\_per\_schedule -= 1
+364 
+365       dse.solver.EndSearch()
+366 
+367       \textcolor{keywordflow}{if} len(result) > 0 :
+368 
+369         \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} result :
+370 
+371           \textcolor{keywordflow}{if} r != \{\} :
+372 
+373             fimp\_instances = []
+374 
+375             \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} dse.fimps :
+376               used\_fimp = fimp\_lib[ f.name ][ r[\textcolor{stringliteral}{'fimp\_types'}][f.index] ].clone()
+377               used\_fimp.index = f.index
+378               used\_fimp.actors = []
+379               fimp\_instances.append(used\_fimp)
+380 
+381               \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} f.actors :
+382                 a.assign\_to(used\_fimp)
+383                 a.fimp\_index = used\_fimp.index
+384 
+385             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} dse.actors:
+386               i = a.index
+387               a.add\_schedule(
+388                 start = r[\textcolor{stringliteral}{'start'}][i],
+389                 buffer\_end = r[\textcolor{stringliteral}{'buffer\_end'}][i])
+390               a.fimp.extra\_buffer = r[\textcolor{stringliteral}{'extra\_buffer'}][i]
+391 
+392             schedule\_keys = [ \textcolor{stringliteral}{'start'}, \textcolor{stringliteral}{'input\_end'}, \textcolor{stringliteral}{'output\_start'},
+393                               \textcolor{stringliteral}{'end'}, \textcolor{stringliteral}{'buffer\_end'}, \textcolor{stringliteral}{'fimp\_index'}]
+394 
+395             r[\textcolor{stringliteral}{'actors'}] = [ a.serialize(schedule\_keys, include\_base\_actor = \textcolor{keyword}{True}) \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors ]
+396             r[\textcolor{stringliteral}{'edges'}] = [ e.serialize() \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} edges ]
+397             r[\textcolor{stringliteral}{'fimp\_instances'}] = [ f.serialize() \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimp\_instances ]
+398 
+399             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors :
+400               log += \textcolor{stringliteral}{'Actor: %s\(\backslash\)nFIMP: %s\(\backslash\)n'} % (a, a.fimp)
+401               log.update()
+402               log += \textcolor{stringliteral}{'Schedule:\(\backslash\)n'} + a.schedule.\_\_str\_\_()
+403               log.update()
+404 
+405           \textcolor{keywordflow}{else} :
+406             log += \textcolor{stringliteral}{'No schedule for the following FIMP assignment:\(\backslash\)n%s'}\(\backslash\)
+407                  % one\_schedule
+408             critical\_log.status = log.status
+409             log.update()
+410 
+411       results.append(result)
+412 
+413   critical\_log.update()
+414 
+415   \textcolor{keywordflow}{return} results, sdfg(actors, edges)
+416 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}\label{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!time\+\_\+cost@{time\+\_\+cost}}
+\index{time\+\_\+cost@{time\+\_\+cost}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{time\+\_\+cost()}{time\_cost()}}
+{\footnotesize\ttfamily def sylva.\+dse.\+dse.\+time\+\_\+cost (\begin{DoxyParamCaption}\item[{}]{start\+\_\+time,  }\item[{}]{end\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+
+
+\begin{DoxyCode}
+49 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1dse_1_1dse_acf83688e18cc0859483b4c9bb70183fd}{time\_cost}(start\_time, end\_time) :
+50   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Time cost: %f seconds.'} % ((end\_time - start\_time)/1000)
+51 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_ae75d8649b8c58b165513c61e2c9e62c7}\label{namespacesylva_1_1dse_1_1dse_ae75d8649b8c58b165513c61e2c9e62c7}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+author\+\_\+\+\_\+}{\_\_author\_\_}}
+{\footnotesize\ttfamily string sylva.\+dse.\+dse.\+\_\+\+\_\+author\+\_\+\+\_\+ = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file dse.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_a9c1f8ee252b6dc4cc07384ac848d62cf}\label{namespacesylva_1_1dse_1_1dse_a9c1f8ee252b6dc4cc07384ac848d62cf}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
+{\footnotesize\ttfamily string sylva.\+dse.\+dse.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2014-\/09-\/23-\/10\+:41\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file dse.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_ac2d9fdcc3f7fd0bad1900fa0a813dff4}\label{namespacesylva_1_1dse_1_1dse_ac2d9fdcc3f7fd0bad1900fa0a813dff4}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!sc@{sc}}
+\index{sc@{sc}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{sc}{sc}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+sc = \hyperlink{classsylva_1_1dse_1_1dse_1_1system__constraint}{system\+\_\+constraint}}
+
+
+
+Definition at line 78 of file dse.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}\label{namespacesylva_1_1dse_1_1dse_ab54fbae03bc2c432fecd4486e623af71}} 
+\index{sylva\+::dse\+::dse@{sylva\+::dse\+::dse}!soo@{soo}}
+\index{soo@{soo}!sylva\+::dse\+::dse@{sylva\+::dse\+::dse}}
+\subsubsection{\texorpdfstring{soo}{soo}}
+{\footnotesize\ttfamily sylva.\+dse.\+dse.\+soo = \hyperlink{classsylva_1_1dse_1_1dse_1_1system__optimization__objective}{system\+\_\+optimization\+\_\+objective}}
+
+
+
+Definition at line 93 of file dse.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+system\+\_\+model.\+\_\+\+\_\+init\+\_\+\+\_\+().
+

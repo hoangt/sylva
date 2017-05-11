@@ -57,16 +57,16 @@ def bit_value(self, value) :
   current_value = value - minvalue;
   return bin(current_value).__str__().split('b')[-1].zfill(self.size)
 
-sdf.data_type.bit_value = bit_value
+sdf.DataTokenType.bit_value = bit_value
 
 def slv(size = 1) :
   if size < 1 :
     raise Exception.ValueError( 'The size of an std_logic_vector value can only be > 1 ' +
                                 'not %s' % size )
   if size == 1:
-    return sdf.data_type( name = 'std_logic', size = 1 )
+    return sdf.DataTokenType( name = 'std_logic', size = 1 )
   else :
-    return sdf.data_type( name = 'std_logic_vector (%s downto 0)' % (size - 1), size = size )
+    return sdf.DataTokenType( name = 'std_logic_vector (%s downto 0)' % (size - 1), size = size )
 
 def integer(max_value = 0, min_value = 0) :
 
@@ -80,7 +80,7 @@ def integer(max_value = 0, min_value = 0) :
   number_of_values = max_value - min_value + 1
   size = int(math.ceil(math.log(number_of_values, 2)))
 
-  return sdf.data_type( name = 'integer range %s to %s' % (min_value, max_value), size = size )
+  return sdf.DataTokenType( name = 'integer range %s to %s' % (min_value, max_value), size = size )
 
 std_logic = slv(1)
 clk  = sdf.port('clk', 0, std_logic, 1)
