@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -130,7 +155,7 @@ $(document).ready(function(){initNavTree('glic_8py_source.html','');});
 <div class="ttc" id="classsylva_1_1glic_1_1glic_1_1state_html_aef7f98ba81db15cbdc2ee99fce22b24d"><div class="ttname"><a href="classsylva_1_1glic_1_1glic_1_1state.html#aef7f98ba81db15cbdc2ee99fce22b24d">sylva.glic.glic.state.index</a></div><div class="ttdeci">index</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00085">glic.py:85</a></div></div>
 <div class="ttc" id="classsylva_1_1glic_1_1glic_1_1abb_html_af982f58cc9fe5957f377cadf182bb572"><div class="ttname"><a href="classsylva_1_1glic_1_1glic_1_1abb.html#af982f58cc9fe5957f377cadf182bb572">sylva.glic.glic.abb.input_selector_controls</a></div><div class="ttdeci">input_selector_controls</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00808">glic.py:808</a></div></div>
 <div class="ttc" id="classsylva_1_1glic_1_1glic_1_1control_html_ae0839083f2b17473598890c7b4690e4f"><div class="ttname"><a href="classsylva_1_1glic_1_1glic_1_1control.html#ae0839083f2b17473598890c7b4690e4f">sylva.glic.glic.control.edges</a></div><div class="ttdeci">edges</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00120">glic.py:120</a></div></div>
-<div class="ttc" id="namespacesylva_1_1base_html"><div class="ttname"><a href="namespacesylva_1_1base.html">sylva.base</a></div><div class="ttdef"><b>Definition:</b> <a href="base_2____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
+<div class="ttc" id="namespacesylva_1_1base_html"><div class="ttname"><a href="namespacesylva_1_1base.html">sylva.base</a></div><div class="ttdoc">All basic things in SYLVA project. </div><div class="ttdef"><b>Definition:</b> <a href="base_2____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
 <div class="ttc" id="namespacesylva_1_1glic_1_1glic_html_aa441c66a03eed575ba427151f3567a0e"><div class="ttname"><a href="namespacesylva_1_1glic_1_1glic.html#aa441c66a03eed575ba427151f3567a0e">sylva.glic.glic.comp_edge</a></div><div class="ttdeci">def comp_edge(actor_a, port_a, actor_b, port_b)</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00294">glic.py:294</a></div></div>
 <div class="ttc" id="namespacesylva_1_1glic_1_1glic_html_a1cdd3394b53489429bc51c8206e1180e"><div class="ttname"><a href="namespacesylva_1_1glic_1_1glic.html#a1cdd3394b53489429bc51c8206e1180e">sylva.glic.glic.create_fimp_control</a></div><div class="ttdeci">def create_fimp_control(one_fimp, all_edges, actor_controls)</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00750">glic.py:750</a></div></div>
 <div class="ttc" id="classsylva_1_1glic_1_1glic_1_1control_html_a392a1e20052ef15fa96049f9b201be02"><div class="ttname"><a href="classsylva_1_1glic_1_1glic_1_1control.html#a392a1e20052ef15fa96049f9b201be02">sylva.glic.glic.control.states</a></div><div class="ttdeci">states</div><div class="ttdef"><b>Definition:</b> <a href="glic_8py_source.html#l00119">glic.py:119</a></div></div>

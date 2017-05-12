@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -186,7 +211,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="glic_8py_source.html#l00089">89</a> of file <a class="el" href="glic_8py_source.html">glic.py</a>.</p>
 
-<p class="reference">References <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="sdf_8py_source.html#l00079">sylva.base.sdf.port.index</a>, <a class="el" href="glic_8py_source.html#l00085">sylva.glic.glic.state.index</a>, <a class="el" href="sdf_8py_source.html#l00231">sylva.base.sdf.actor.index</a>, and <a class="el" href="glic_8py_source.html#l00086">sylva.glic.glic.state.output</a>.</p>
+<p class="reference">References <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="glic_8py_source.html#l00085">sylva.glic.glic.state.index</a>, <a class="el" href="sdf_8py_source.html#l00134">sylva.base.sdf.Port.index</a>, <a class="el" href="sdf_8py_source.html#l00299">sylva.base.sdf.actor.index</a>, and <a class="el" href="glic_8py_source.html#l00086">sylva.glic.glic.state.output</a>.</p>
 <div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">def </span>__str__(self):</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&#39;state: %d output: %s&#39;</span> % (self.index, self.output)</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -246,7 +271,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="glic_8py_source.html#l00092">92</a> of file <a class="el" href="glic_8py_source.html">glic.py</a>.</p>
 
-<p class="reference">References <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00384">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="sdf_8py_source.html#l00079">sylva.base.sdf.port.index</a>, <a class="el" href="glic_8py_source.html#l00085">sylva.glic.glic.state.index</a>, <a class="el" href="sdf_8py_source.html#l00231">sylva.base.sdf.actor.index</a>, and <a class="el" href="glic_8py_source.html#l00086">sylva.glic.glic.state.output</a>.</p>
+<p class="reference">References <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00452">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="glic_8py_source.html#l00085">sylva.glic.glic.state.index</a>, <a class="el" href="sdf_8py_source.html#l00134">sylva.base.sdf.Port.index</a>, <a class="el" href="sdf_8py_source.html#l00299">sylva.base.sdf.actor.index</a>, and <a class="el" href="glic_8py_source.html#l00086">sylva.glic.glic.state.output</a>.</p>
 <div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">def </span>serialize(self):</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      result = {<span class="stringliteral">&#39;index&#39;</span>: self.index, <span class="stringliteral">&#39;output&#39;</span>: self.output}</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">if</span> hasattr(self, <span class="stringliteral">&#39;edges&#39;</span>):</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        result[<span class="stringliteral">&#39;edges&#39;</span>] = [e.serialize() <span class="keywordflow">for</span> e <span class="keywordflow">in</span> self.edges]</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">return</span> result</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>

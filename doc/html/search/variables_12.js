@@ -10,10 +10,11 @@ var searchData=
   ['tmax',['tmax',['../classsylva_1_1dse_1_1dse_1_1system__constraint.html#a6c8109105f6fa2eab4eacf3f1bd2591c',1,'sylva::dse::dse::system_constraint']]],
   ['to_5fclean',['to_clean',['../namespacesylva_1_1misc_1_1exec.html#ac117b58661906ce710d1cbe733234572',1,'sylva::misc::exec']]],
   ['to_5ffpga',['to_fpga',['../classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#af22003ff472d2eefe8f94bdea7c1284b',1,'sylva::misc::exec::SYLVA']]],
+  ['token_5ftype',['token_type',['../classsylva_1_1base_1_1sdf_1_1_port.html#a3bc0e05af490f897794a9781127c69e3',1,'sylva::base::sdf::Port']]],
   ['tos',['tos',['../namespacesylva_1_1base_1_1sdf__schedule.html#a49b15ca1056f29daaaef0cb8acbce98c',1,'sylva::base::sdf_schedule']]],
   ['true',['true',['../namespacesylva_1_1misc_1_1tcl__parser.html#a69ee465af30df5bf43aeceff5d2575f5',1,'sylva::misc::tcl_parser']]],
   ['ts',['ts',['../namespacesylva_1_1base_1_1sdf__schedule.html#a3211292951ee227eb812ad46385a4153',1,'sylva::base::sdf_schedule']]],
   ['tw',['TW',['../classsylva_1_1base_1_1cgra_1_1cgra.html#a5e0af81085855ab41e2131de593af9da',1,'sylva::base::cgra::cgra']]],
-  ['type',['type',['../classsylva_1_1base_1_1fimp_1_1fimp.html#a2a0ef56805a0a4b151421c183d7b78ca',1,'sylva.base.fimp.fimp.type()'],['../classsylva_1_1base_1_1sdf_1_1port.html#af04b13138d55895bfd1083eb3e772f58',1,'sylva.base.sdf.port.type()'],['../namespacesylva_1_1misc_1_1exec.html#a55d55e6d0e68715dfbd883034bd7290c',1,'sylva.misc.exec.type()']]],
+  ['type',['type',['../classsylva_1_1base_1_1fimp_1_1fimp.html#a2a0ef56805a0a4b151421c183d7b78ca',1,'sylva.base.fimp.fimp.type()'],['../namespacesylva_1_1misc_1_1exec.html#a55d55e6d0e68715dfbd883034bd7290c',1,'sylva.misc.exec.type()']]],
   ['type_5fname',['type_name',['../classsylva_1_1base_1_1fimp_1_1fimp.html#a0eb962cbafd47c9f28ad2859d6a64de2',1,'sylva::base::fimp::fimp']]]
 ];

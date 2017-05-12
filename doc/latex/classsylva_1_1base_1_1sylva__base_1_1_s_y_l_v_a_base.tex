@@ -1,0 +1,223 @@
+\hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}{}\section{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base Class Reference}
+\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}\index{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base@{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base}}
+
+
+The base object for S\+Y\+L\+VA project All objects are inherented from this object.  
+
+
+Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, dict\+\_\+object)
+\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}{\+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Create an iterator to be used for converting the object to dictionary. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}{load\+\_\+from\+\_\+dict} (cls, dict\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Loads an object from a dictionary object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}{clone} (self)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the object with same properties than original. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base object for S\+Y\+L\+VA project All objects are inherented from this object. 
+
+Definition at line 16 of file sylva\+\_\+base.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+18     \textcolor{keyword}{def }\_\_init\_\_(self, dict\_object):
+19         \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} dict\_object.items():
+20             setattr(self, key, value)
+21 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+iter\+\_\+\+\_\+()}{\_\_iter\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+iter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Create an iterator to be used for converting the object to dictionary. 
+
+When dict(some\+\_\+obj) is called, it will return a dictionary object. Each value is obtaiend by invoking the created iterator in this method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a iterator 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+33     \textcolor{keyword}{def }\_\_iter\_\_(self):
+34         \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} self.\_\_dict\_\_.items():
+35             \textcolor{keywordflow}{if} isinstance(value, SYLVABase):
+36                 \textcolor{keywordflow}{yield} (key, dict(value))
+37             \textcolor{keywordflow}{else}:
+38                 \textcolor{keywordflow}{yield} (key, value)
+39 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a string representation of the object. 
+
+This method will be invoked some time instead of self.\+\_\+\+\_\+str\+\_\+\+\_\+().
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file sylva\+\_\+base.\+py.
+
+
+
+References sylva.\+base.\+sdf\+\_\+schedule.\+schedule.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+fimp.\+fimp.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+Port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+edge.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+73     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self):
+74         \textcolor{keywordflow}{return} self.\_\_str\_\_()
+75 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a string representation of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+60     \textcolor{keyword}{def }\_\_str\_\_(self):
+61         msg = \textcolor{stringliteral}{'str representation of \{self.\_\_class\_\_\} is not implemented yet.'}
+62         \textcolor{keywordflow}{raise} NotImplementedError(msg)
+63 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!clone@{clone}}
+\index{clone@{clone}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+clone (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of the object with same properties than original. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copy of this object. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+84     \textcolor{keyword}{def }clone(self):
+85         msg = \textcolor{stringliteral}{'clone of \{self.\_\_class\_\_\} is not implemented yet.'}
+86         \textcolor{keywordflow}{raise} NotImplementedError(msg)
+87 \end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!load\+\_\+from\+\_\+dict@{load\+\_\+from\+\_\+dict}}
+\index{load\+\_\+from\+\_\+dict@{load\+\_\+from\+\_\+dict}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+dict()}{load\_from\_dict()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+load\+\_\+from\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{dict\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Loads an object from a dictionary object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cls} & The cls \\
+\hline
+{\em dict\+\_\+object} & The dictionary object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}{S\+Y\+L\+V\+A\+Base} object 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+49     \textcolor{keyword}{def }load\_from\_dict(cls, dict\_object):
+50         msg = f\textcolor{stringliteral}{'load \{cls\} from dict is not implemented yet.'}
+51         \textcolor{keywordflow}{raise} NotImplementedError(msg)
+52 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sylva__base_8py}{sylva\+\_\+base.\+py}\end{DoxyCompactItemize}

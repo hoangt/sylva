@@ -1,5 +1,10 @@
 \hypertarget{classsylva_1_1base_1_1sdf_1_1port}{}\section{sylva.\+base.\+sdf.\+port Class Reference}
 \label{classsylva_1_1base_1_1sdf_1_1port}\index{sylva.\+base.\+sdf.\+port@{sylva.\+base.\+sdf.\+port}}
+
+
+Class for port.  
+
+
 Inheritance diagram for sylva.\+base.\+sdf.\+port\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,6 +41,8 @@ def \hyperlink{classsylva_1_1base_1_1sdf_1_1port_a19793d8e6190538a7d5cd014b08441
 
 
 \subsection{Detailed Description}
+Class for port. 
+
 \begin{DoxyVerb}  IO port class for an actor
   --------------------------
 
@@ -51,7 +58,7 @@ def \hyperlink{classsylva_1_1base_1_1sdf_1_1port_a19793d8e6190538a7d5cd014b08441
 \end{DoxyVerb}
  
 
-Definition at line 57 of file sdf.\+py.
+Definition at line 70 of file sdf.\+py.
 
 
 
@@ -64,19 +71,19 @@ Definition at line 57 of file sdf.\+py.
 
 
 
-Definition at line 76 of file sdf.\+py.
+Definition at line 89 of file sdf.\+py.
 
 
 \begin{DoxyCode}
-76                      count=1):
-77 
-78             self.name = name
-79             self.index = index
-80             self.type = type
-81             self.count = count
-82 
-83             self.\_\_repr\_\_ = self.\_\_str\_\_
-84 
+89                      count=1):
+90 
+91             self.name = name
+92             self.index = index
+93             self.type = type
+94             self.count = count
+95 
+96             self.\_\_repr\_\_ = self.\_\_str\_\_
+97 
 \end{DoxyCode}
 
 
@@ -89,22 +96,22 @@ Definition at line 76 of file sdf.\+py.
 
 
 
-Definition at line 85 of file sdf.\+py.
+Definition at line 98 of file sdf.\+py.
 
 
 
-References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
+References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
 
 
 
-Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-85         \textcolor{keyword}{def }\_\_str\_\_(self):
-86             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'SDF port %s index %s type %s count %s'} \(\backslash\)
-87                 % (self.name, self.index, self.type, self.count)
-88 
+98         \textcolor{keyword}{def }\_\_str\_\_(self):
+99             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'SDF port %s index %s type %s count %s'} \(\backslash\)
+100                 % (self.name, self.index, self.type, self.count)
+101 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1port_ae5c6adc9c86e717d12901d73699bb432}\label{classsylva_1_1base_1_1sdf_1_1port_ae5c6adc9c86e717d12901d73699bb432}} 
 \index{sylva\+::base\+::sdf\+::port@{sylva\+::base\+::sdf\+::port}!clone@{clone}}
@@ -114,17 +121,17 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr
 
 
 
-Definition at line 89 of file sdf.\+py.
+Definition at line 102 of file sdf.\+py.
 
 
 
-References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
+References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
 
 
 \begin{DoxyCode}
-89         \textcolor{keyword}{def }clone(self):
-90             \textcolor{keywordflow}{return} port(self.name, self.index, self.type, self.count)
-91 
+102         \textcolor{keyword}{def }clone(self):
+103             \textcolor{keywordflow}{return} port(self.name, self.index, self.type, self.count)
+104 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1port_a19793d8e6190538a7d5cd014b08441b4}\label{classsylva_1_1base_1_1sdf_1_1port_a19793d8e6190538a7d5cd014b08441b4}} 
 \index{sylva\+::base\+::sdf\+::port@{sylva\+::base\+::sdf\+::port}!serialize@{serialize}}
@@ -134,21 +141,21 @@ References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index
 
 
 
-Definition at line 92 of file sdf.\+py.
+Definition at line 105 of file sdf.\+py.
 
 
 
-References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
+References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index, sylva.\+base.\+sdf.\+port.\+index, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+sdf.\+port.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, sylva.\+base.\+fimp.\+fimp.\+type, and sylva.\+base.\+sdf.\+port.\+type.
 
 
 \begin{DoxyCode}
-92         \textcolor{keyword}{def }serialize(self):
-93             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'name'}: self.name,
-94                     \textcolor{stringliteral}{'index'}: self.index,
-95                     \textcolor{stringliteral}{'type'}: self.type.serialize(),
-96                     \textcolor{stringliteral}{'count'}: self.count\}
-97 
-98     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(json\_dict):
+105         \textcolor{keyword}{def }serialize(self):
+106             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'name'}: self.name,
+107                     \textcolor{stringliteral}{'index'}: self.index,
+108                     \textcolor{stringliteral}{'type'}: self.type.serialize(),
+109                     \textcolor{stringliteral}{'count'}: self.count\}
+110 
+111     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(json\_dict):
 \end{DoxyCode}
 
 
@@ -161,7 +168,7 @@ References sylva.\+base.\+sdf.\+port.\+count, sylva.\+base.\+fimp.\+fimp.\+index
 
 
 
-Definition at line 83 of file sdf.\+py.
+Definition at line 96 of file sdf.\+py.
 
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1port_a628b66dd64830393bcf8d88b85023016}\label{classsylva_1_1base_1_1sdf_1_1port_a628b66dd64830393bcf8d88b85023016}} 
 \index{sylva\+::base\+::sdf\+::port@{sylva\+::base\+::sdf\+::port}!count@{count}}
@@ -171,7 +178,7 @@ Definition at line 83 of file sdf.\+py.
 
 
 
-Definition at line 81 of file sdf.\+py.
+Definition at line 94 of file sdf.\+py.
 
 
 
@@ -185,11 +192,11 @@ Referenced by sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+b
 
 
 
-Definition at line 79 of file sdf.\+py.
+Definition at line 92 of file sdf.\+py.
 
 
 
-Referenced by sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+clone(), sylva.\+base.\+sdf.\+actor.\+clone(), sylva.\+base.\+sdf.\+port.\+serialize(), sylva.\+glic.\+glic.\+state.\+serialize(), and sylva.\+base.\+sdf.\+actor.\+serialize().
+Referenced by sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+port.\+clone(), sylva.\+base.\+sdf.\+actor.\+clone(), sylva.\+glic.\+glic.\+state.\+serialize(), sylva.\+base.\+sdf.\+port.\+serialize(), and sylva.\+base.\+sdf.\+actor.\+serialize().
 
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1port_ace0eb23bb9f3e4a75e6a94f0961a6f99}\label{classsylva_1_1base_1_1sdf_1_1port_ace0eb23bb9f3e4a75e6a94f0961a6f99}} 
 \index{sylva\+::base\+::sdf\+::port@{sylva\+::base\+::sdf\+::port}!name@{name}}
@@ -199,7 +206,7 @@ Referenced by sylva.\+base.\+sdf.\+port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+g
 
 
 
-Definition at line 78 of file sdf.\+py.
+Definition at line 91 of file sdf.\+py.
 
 
 
@@ -213,7 +220,7 @@ Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\
 
 
 
-Definition at line 80 of file sdf.\+py.
+Definition at line 93 of file sdf.\+py.
 
 
 

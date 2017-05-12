@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,7 +126,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 <li>index
 : <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp.html#a21147e520263c3af6d9ca04a4043f81c">sylva.base.fimp.fimp</a>
 , <a class="el" href="classsylva_1_1base_1_1sdf_1_1actor.html#a876d41fa48c3a1a6d62fc3054b321f08">sylva.base.sdf.actor</a>
-, <a class="el" href="classsylva_1_1base_1_1sdf_1_1port.html#a4ed6db96ef0a6fb3d9b8f36c59bf7bdd">sylva.base.sdf.port</a>
+, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#abbfd66f762649b6a8105657259471c5a">sylva.base.sdf.Port</a>
 , <a class="el" href="classsylva_1_1glic_1_1glic_1_1state.html#aef7f98ba81db15cbdc2ee99fce22b24d">sylva.glic.glic.state</a>
 </li>
 <li>input_end

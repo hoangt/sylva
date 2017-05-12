@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -344,7 +369,7 @@ Private Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="fimp_8py_source.html#l00039">sylva.base.fimp.fimp.type</a>, and <a class="el" href="fimp_8py_source.html#l00040">sylva.base.fimp.fimp.type_name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sdf_8py_source.html#l00036">sylva.base.sdf.DataTokenType.__repr__()</a>, and <a class="el" href="air_8py_source.html#l00091">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00073">sylva.base.sylva_base.SYLVABase.__repr__()</a>, and <a class="el" href="air_8py_source.html#l00100">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">def </span>__str__(self) :</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="stringliteral">&#39;&#39;&#39;</span></div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="stringliteral">        Construct human readable string of this FIMP instance.</span></div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="stringliteral">      &#39;&#39;&#39;</span></div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      result = <span class="stringliteral">&#39;FIMP for {}, type {}&#39;</span>.format(self.name, self.type)</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      result += <span class="stringliteral">&#39; type_name {}, index {}&#39;</span>.format(self.type_name, self.index)</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordflow">return</span> result</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -379,7 +404,7 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00115">115</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
 <p class="reference">References <a class="el" href="fimp_8py_source.html#l00060">sylva.base.fimp.fimp.actors</a>.</p>
-<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">def </span><a class="code" href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">add_actor</a>(self, one_actor) :</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="stringliteral">&#39;&#39;&#39;</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="stringliteral">        Add one hsdf actor to this FIMP</span></div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral">        This method is invoked when actor.assign_to() method is invoked</span></div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="stringliteral">      &#39;&#39;&#39;</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">if</span> one_actor <span class="keywordflow">not</span> <span class="keywordflow">in</span> self.actors:</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        self.actors.append(one_actor)</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        one_actor.fimp = self</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="ttc" id="namespacesylva_1_1base_1_1sdf_html_a2fc075a9dc81209dee7a5b97d99640e5"><div class="ttname"><a href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">sylva.base.sdf.add_actor</a></div><div class="ttdeci">def add_actor(actors, name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</div><div class="ttdef"><b>Definition:</b> <a href="sdf_8py_source.html#l00325">sdf.py:325</a></div></div>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">def </span><a class="code" href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">add_actor</a>(self, one_actor) :</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="stringliteral">&#39;&#39;&#39;</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="stringliteral">        Add one hsdf actor to this FIMP</span></div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral">        This method is invoked when actor.assign_to() method is invoked</span></div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="stringliteral">      &#39;&#39;&#39;</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">if</span> one_actor <span class="keywordflow">not</span> <span class="keywordflow">in</span> self.actors:</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        self.actors.append(one_actor)</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        one_actor.fimp = self</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="ttc" id="namespacesylva_1_1base_1_1sdf_html_a2fc075a9dc81209dee7a5b97d99640e5"><div class="ttname"><a href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">sylva.base.sdf.add_actor</a></div><div class="ttdeci">def add_actor(actors, name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</div><div class="ttdef"><b>Definition:</b> <a href="sdf_8py_source.html#l00393">sdf.py:393</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -759,7 +784,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00060">60</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fimp_8py_source.html#l00115">sylva.base.fimp.fimp.add_actor()</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00307">sylva.dse.dse_engine_v1.dse_v1.add_data_dependency_constraints()</a>, <a class="el" href="sdf_8py_source.html#l00392">sylva.base.sdf.sdfg.layered_actors()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00150">sylva.base.fimp.fimp.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fimp_8py_source.html#l00115">sylva.base.fimp.fimp.add_actor()</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00307">sylva.dse.dse_engine_v1.dse_v1.add_data_dependency_constraints()</a>, <a class="el" href="sdf_8py_source.html#l00460">sylva.base.sdf.sdfg.layered_actors()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00150">sylva.base.fimp.fimp.serialize()</a>.</p>
 
 </div>
 </div>
@@ -849,7 +874,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00069">69</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sdf_8py_source.html#l00085">sylva.base.sdf.port.__str__()</a>, <a class="el" href="glic_8py_source.html#l00089">sylva.glic.glic.state.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00239">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00089">sylva.base.sdf.port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00242">sylva.base.sdf.actor.clone()</a>, <a class="el" href="glic_8py_source.html#l00092">sylva.glic.glic.state.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00092">sylva.base.sdf.port.serialize()</a>, and <a class="el" href="sdf_8py_source.html#l00249">sylva.base.sdf.actor.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="glic_8py_source.html#l00089">sylva.glic.glic.state.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00310">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>, <a class="el" href="glic_8py_source.html#l00092">sylva.glic.glic.state.serialize()</a>, and <a class="el" href="sdf_8py_source.html#l00317">sylva.base.sdf.actor.serialize()</a>.</p>
 
 </div>
 </div>
@@ -885,7 +910,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00038">38</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00085">sylva.base.sdf.port.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00239">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00089">sylva.base.sdf.port.clone()</a>, <a class="el" href="fimp_8py_source.html#l00137">sylva.base.fimp.fimp.clone()</a>, <a class="el" href="sdf_8py_source.html#l00242">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00043">sylva.base.sdf.DataTokenType.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00092">sylva.base.sdf.port.serialize()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00249">sylva.base.sdf.actor.serialize()</a>, <a class="el" href="fimp_8py_source.html#l00377">sylva.base.fimp.fimp_set.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00451">sylva.base.fimp.fimp_lib.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00137">sylva.base.fimp.fimp.clone()</a>, <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00310">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00317">sylva.base.sdf.actor.serialize()</a>, <a class="el" href="fimp_8py_source.html#l00377">sylva.base.fimp.fimp_set.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00451">sylva.base.fimp.fimp_lib.serialize()</a>.</p>
 
 </div>
 </div>
@@ -921,7 +946,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00039">39</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sdf_8py_source.html#l00085">sylva.base.sdf.port.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00089">sylva.base.sdf.port.clone()</a>, <a class="el" href="fimp_8py_source.html#l00137">sylva.base.fimp.fimp.clone()</a>, and <a class="el" href="sdf_8py_source.html#l00092">sylva.base.sdf.port.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00137">sylva.base.fimp.fimp.clone()</a>, and <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>.</p>
 
 </div>
 </div>

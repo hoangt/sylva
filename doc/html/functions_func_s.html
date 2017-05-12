@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,9 +123,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__lib.html#ae068ffaae8be2b291ba9b09d8625e308">sylva.base.fimp.fimp_lib</a>
 , <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__set.html#a5da0327838090a9ebd8e41dc5dec377b">sylva.base.fimp.fimp_set</a>
 , <a class="el" href="classsylva_1_1base_1_1sdf_1_1actor.html#abad5148eadd915c067c20ee575f56e1e">sylva.base.sdf.actor</a>
-, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#afa649c12af7f700e3c1f90b02e100d75">sylva.base.sdf.DataTokenType</a>
 , <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#a10a8a20cd0052b046c627e7e22af114d">sylva.base.sdf.edge</a>
-, <a class="el" href="classsylva_1_1base_1_1sdf_1_1port.html#a19793d8e6190538a7d5cd014b08441b4">sylva.base.sdf.port</a>
 , <a class="el" href="classsylva_1_1code__generation_1_1sylva__fimp__lib_1_1template.html#a0da717e4feb8a6344c0aae89f4beab2a">sylva.code_generation.sylva_fimp_lib.template</a>
 , <a class="el" href="classsylva_1_1dse_1_1dse_1_1design__specification.html#add24965827d00b11032bd22aa2606169">sylva.dse.dse.design_specification</a>
 , <a class="el" href="classsylva_1_1dse_1_1dse_1_1system__model.html#abdbd324e6d87f3baef25aeab12444edc">sylva.dse.dse.system_model</a>

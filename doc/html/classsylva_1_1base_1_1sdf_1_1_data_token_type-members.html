@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -96,12 +121,14 @@ $(document).ready(function(){initNavTree('classsylva_1_1base_1_1sdf_1_1_data_tok
 
 <p>This is the complete list of members for <a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#add78d9084e28521d9c7fa6a334d2f6ec">__init__</a>(self, name='int32', size=32)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#ad125c88296f6af2f66c19a4c70513bbc">__repr__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#ae0e89b38521c627297b30d5e7268a90b">__init__</a>(self, name='int32', size=32, dict_object={})</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5692ae87ad4953fdfe317953fcf530f8">sylva::base::sylva_base::SYLVABase.__init__</a>(self, dict_object)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8dc04df3b843a1deb6e1ae13f8425783">__iter__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5bd08c41ab09c380433d0de82fb98860">__repr__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#ab44771f0368f95e63030117f12b7e36d">__str__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a67288003df4678e9cb206773551a17c7">deserialize</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a64214bba14fcba747fd608caef007924">name</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#afa649c12af7f700e3c1f90b02e100d75">serialize</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a1597b4594cb73e0fa2597742239660f5">clone</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a24c66d6a5350bf4d8e6bcdaa64202c7c">load_from_dict</a>(cls, dict_object)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a64214bba14fcba747fd608caef007924">name</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#abf397c07db4eced64bf773de13fcbbf0">size</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">sylva.base.sdf.DataTokenType</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->

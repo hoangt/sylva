@@ -1,16 +1,21 @@
 \hypertarget{namespacesylva_1_1base_1_1sdf}{}\section{sylva.\+base.\+sdf Namespace Reference}
 \label{namespacesylva_1_1base_1_1sdf}\index{sylva.\+base.\+sdf@{sylva.\+base.\+sdf}}
+
+
+All S\+DF graph related classes and methods.  
+
+
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1actor}{actor}
 \item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}
-\item 
+\begin{DoxyCompactList}\small\item\em Class for data token type. \end{DoxyCompactList}\item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1edge}{edge}
 \item 
-class \hyperlink{classsylva_1_1base_1_1sdf_1_1port}{port}
-\item 
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}
+\begin{DoxyCompactList}\small\item\em Class for port. \end{DoxyCompactList}\item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1sdfg}{sdfg}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -45,11 +50,24 @@ def \hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+string \hyperlink{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2017-\/05-\/12\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}{\+\_\+\+\_\+license\+\_\+\+\_\+} = \textquotesingle{}M\+IT\textquotesingle{}
+\item 
+\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d} = \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}()
+\item 
+\hyperlink{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}{dc} = dict(\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d})
+\item 
 dictionary \hyperlink{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}{default\+\_\+actor\+\_\+style}
 \item 
 dictionary \hyperlink{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}{default\+\_\+annotation\+\_\+style}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+All S\+DF graph related classes and methods. 
 
 \subsection{Function Documentation}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}\label{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}} 
@@ -60,7 +78,7 @@ dictionary \hyperlink{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d826502
 
 
 
-Definition at line 325 of file sdf.\+py.
+Definition at line 393 of file sdf.\+py.
 
 
 
@@ -72,11 +90,11 @@ Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+assign\+\_\+fimps(), and s
 
 
 \begin{DoxyCode}
-325                   output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
-326 
-327         actors.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}{make\_sdf\_actor}(name, index,
-328                                      inports, outports, input\_token\_type, output\_token\_type))
-329 
+393                   output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
+394 
+395         actors.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}{make\_sdf\_actor}(name, index,
+396                                      inports, outports, input\_token\_type, output\_token\_type))
+397 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_aecda5e2c5810b35f98a0466a348af120}\label{namespacesylva_1_1base_1_1sdf_aecda5e2c5810b35f98a0466a348af120}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!add\+\_\+edge@{add\+\_\+edge}}
@@ -86,7 +104,7 @@ Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+assign\+\_\+fimps(), and s
 
 
 
-Definition at line 331 of file sdf.\+py.
+Definition at line 399 of file sdf.\+py.
 
 
 
@@ -98,12 +116,12 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor().
 
 
 \begin{DoxyCode}
-331                  dest\_actor\_index, dest\_port\_index, actors):
-332 
-333         \textcolor{keywordflow}{return} edges.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}{create\_sdf\_edge}(
-334             src\_actor\_index, src\_port\_index,
-335             dest\_actor\_index, dest\_port\_index, actors))
-336 
+399                  dest\_actor\_index, dest\_port\_index, actors):
+400 
+401         \textcolor{keywordflow}{return} edges.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}{create\_sdf\_edge}(
+402             src\_actor\_index, src\_port\_index,
+403             dest\_actor\_index, dest\_port\_index, actors))
+404 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a0c4055dfc61c95b2f23e5a5dba353302}\label{namespacesylva_1_1base_1_1sdf_a0c4055dfc61c95b2f23e5a5dba353302}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!connect@{connect}}
@@ -116,7 +134,7 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor().
 \end{DoxyVerb}
  
 
-Definition at line 179 of file sdf.\+py.
+Definition at line 247 of file sdf.\+py.
 
 
 
@@ -124,40 +142,40 @@ Referenced by sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge().
 
 
 \begin{DoxyCode}
-179                 data\_token\_type=DataTokenType(\textcolor{stringliteral}{'noName'}, 1)):
-180         \textcolor{stringliteral}{'''}
-181 \textcolor{stringliteral}{          Create a connection between two ports of two actors.}
-182 \textcolor{stringliteral}{          Ports are automatically generated.}
-183 \textcolor{stringliteral}{        '''}
-184 
-185         src\_ports = [output\_port
-186                      \textcolor{keywordflow}{for} output\_port \textcolor{keywordflow}{in} src\_actor.output\_ports
-187                      \textcolor{keywordflow}{if} output\_port.index == src\_port\_index]
-188 
-189         \textcolor{keywordflow}{if} len(src\_ports) == 1:
-190             src\_port = src\_ports[0]
-191         \textcolor{keywordflow}{else}:
-192             src\_port = port(name=\textcolor{stringliteral}{'%s\_output\_port\_%d'}
-193                             % (src\_actor.name, src\_port\_index),
-194                             index=src\_port\_index,
-195                             type=data\_token\_type,
-196                             count=src\_data\_token\_count)
-197 
-198         dest\_ports = [input\_port
-199                       \textcolor{keywordflow}{for} input\_port \textcolor{keywordflow}{in} dest\_actor.input\_ports
-200                       \textcolor{keywordflow}{if} input\_port.index == dest\_port\_index]
-201 
-202         \textcolor{keywordflow}{if} len(dest\_ports) == 1:
-203             dest\_port = dest\_ports[0]
-204         \textcolor{keywordflow}{else}:
-205             dest\_port = port(name=\textcolor{stringliteral}{'%s\_input\_port\_%d'}
-206                              % (dest\_actor.name, dest\_port\_index),
-207                              index=dest\_port\_index,
-208                              type=data\_token\_type,
-209                              count=dest\_data\_token\_count)
-210 
-211         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-212 
+247                 data\_token\_type=DataTokenType(\textcolor{stringliteral}{'noName'}, 1)):
+248         \textcolor{stringliteral}{'''}
+249 \textcolor{stringliteral}{          Create a connection between two ports of two actors.}
+250 \textcolor{stringliteral}{          Ports are automatically generated.}
+251 \textcolor{stringliteral}{        '''}
+252 
+253         src\_ports = [output\_port
+254                      \textcolor{keywordflow}{for} output\_port \textcolor{keywordflow}{in} src\_actor.output\_ports
+255                      \textcolor{keywordflow}{if} output\_port.index == src\_port\_index]
+256 
+257         \textcolor{keywordflow}{if} len(src\_ports) == 1:
+258             src\_port = src\_ports[0]
+259         \textcolor{keywordflow}{else}:
+260             src\_port = port(name=\textcolor{stringliteral}{'%s\_output\_port\_%d'}
+261                             % (src\_actor.name, src\_port\_index),
+262                             index=src\_port\_index,
+263                             type=data\_token\_type,
+264                             count=src\_data\_token\_count)
+265 
+266         dest\_ports = [input\_port
+267                       \textcolor{keywordflow}{for} input\_port \textcolor{keywordflow}{in} dest\_actor.input\_ports
+268                       \textcolor{keywordflow}{if} input\_port.index == dest\_port\_index]
+269 
+270         \textcolor{keywordflow}{if} len(dest\_ports) == 1:
+271             dest\_port = dest\_ports[0]
+272         \textcolor{keywordflow}{else}:
+273             dest\_port = port(name=\textcolor{stringliteral}{'%s\_input\_port\_%d'}
+274                              % (dest\_actor.name, dest\_port\_index),
+275                              index=dest\_port\_index,
+276                              type=data\_token\_type,
+277                              count=dest\_data\_token\_count)
+278 
+279         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
+280 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}\label{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!create\+\_\+sdf\+\_\+edge@{create\+\_\+sdf\+\_\+edge}}
@@ -167,7 +185,7 @@ Referenced by sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge().
 
 
 
-Definition at line 167 of file sdf.\+py.
+Definition at line 235 of file sdf.\+py.
 
 
 
@@ -179,16 +197,16 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+edge(), and sylva.\+base.\+sdf.\+loa
 
 
 \begin{DoxyCode}
-167                         dest\_actor\_index, dest\_port\_index, actors):
-168 
-169         src\_actor = actors[src\_actor\_index]
-170         src\_port = src\_actor.output\_ports[src\_port\_index]
-171 
-172         dest\_actor = actors[dest\_actor\_index]
-173         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
-174 
-175         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-176 
+235                         dest\_actor\_index, dest\_port\_index, actors):
+236 
+237         src\_actor = actors[src\_actor\_index]
+238         src\_port = src\_actor.output\_ports[src\_port\_index]
+239 
+240         dest\_actor = actors[dest\_actor\_index]
+241         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
+242 
+243         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
+244 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}\label{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!dump\+\_\+to\+\_\+file@{dump\+\_\+to\+\_\+file}}
@@ -198,7 +216,7 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+edge(), and sylva.\+base.\+sdf.\+loa
 
 
 
-Definition at line 318 of file sdf.\+py.
+Definition at line 386 of file sdf.\+py.
 
 
 
@@ -206,11 +224,11 @@ References sylva.\+base.\+sdf.\+add\+\_\+actor().
 
 
 \begin{DoxyCode}
-318     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}{dump\_to\_file}(item, filepath, indent=2):
-319         f = open(filepath, \textcolor{stringliteral}{'w+'})
-320         f.write(json.dumps(item, indent=2))
-321         f.close()
-322 
+386     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}{dump\_to\_file}(item, filepath, indent=2):
+387         f = open(filepath, \textcolor{stringliteral}{'w+'})
+388         f.write(json.dumps(item, indent=2))
+389         f.close()
+390 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}\label{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!get\+\_\+layered\+\_\+actors@{get\+\_\+layered\+\_\+actors}}
@@ -220,7 +238,7 @@ References sylva.\+base.\+sdf.\+add\+\_\+actor().
 
 
 
-Definition at line 360 of file sdf.\+py.
+Definition at line 428 of file sdf.\+py.
 
 
 
@@ -228,26 +246,26 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+layered\+\_\+actors().
 
 
 \begin{DoxyCode}
-360     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\_layered\_actors}(actors):
-361         result = []
-362         checked = []
-363 
-364         \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} result \textcolor{keywordflow}{or} result[-1]:
-365             result.append([])
-366             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors:
-367                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} checked:
-368                     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} a.previous:
-369                         result[-1].append(a)
-370                         \textcolor{keywordflow}{continue}
-371                     \textcolor{keywordflow}{else}:
-372                         \textcolor{keywordflow}{for} pa \textcolor{keywordflow}{in} a.previous:
-373                             \textcolor{keywordflow}{if} pa.src\_actor \textcolor{keywordflow}{in} checked:
-374                                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} result[-1]:
-375                                     result[-1].append(a)
-376             checked += result[-1]
-377 
-378         \textcolor{keywordflow}{return} result[:-1]
-379 
+428     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\_layered\_actors}(actors):
+429         result = []
+430         checked = []
+431 
+432         \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} result \textcolor{keywordflow}{or} result[-1]:
+433             result.append([])
+434             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors:
+435                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} checked:
+436                     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} a.previous:
+437                         result[-1].append(a)
+438                         \textcolor{keywordflow}{continue}
+439                     \textcolor{keywordflow}{else}:
+440                         \textcolor{keywordflow}{for} pa \textcolor{keywordflow}{in} a.previous:
+441                             \textcolor{keywordflow}{if} pa.src\_actor \textcolor{keywordflow}{in} checked:
+442                                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} result[-1]:
+443                                     result[-1].append(a)
+444             checked += result[-1]
+445 
+446         \textcolor{keywordflow}{return} result[:-1]
+447 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}\label{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+actor@{load\+\_\+sdf\+\_\+actor}}
@@ -257,7 +275,7 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+layered\+\_\+actors().
 
 
 
-Definition at line 266 of file sdf.\+py.
+Definition at line 334 of file sdf.\+py.
 
 
 
@@ -269,29 +287,29 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
 
 
 \begin{DoxyCode}
-266     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(json\_dict, keys=[]):
-267 
-268         result = actor(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
-269                        index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
-270                        input\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
-271                                     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'input\_ports'}]],
-272                        output\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
-273                                      \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'output\_ports'}]],
-274                        next=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
-275                              \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'next'}]],
-276                        previous=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
-277                                  \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'previous'}]])
-278         actor\_keys = keys \textcolor{keywordflow}{or} [
-279             \textcolor{stringliteral}{'input\_end'}, \textcolor{stringliteral}{'output\_start'},
-280             \textcolor{stringliteral}{'buffer\_end'}, \textcolor{stringliteral}{'start'}, \textcolor{stringliteral}{'end'},
-281             \textcolor{stringliteral}{'base\_actor\_index'}, \textcolor{stringliteral}{'fimp\_index'}]
-282 
-283         \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} actor\_keys:
-284             \textcolor{keywordflow}{if} key \textcolor{keywordflow}{in} json\_dict.keys():
-285                 setattr(result, key, json\_dict[key])
-286 
-287         \textcolor{keywordflow}{return} result
-288 
+334     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(json\_dict, keys=[]):
+335 
+336         result = actor(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
+337                        index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
+338                        input\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
+339                                     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'input\_ports'}]],
+340                        output\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
+341                                      \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'output\_ports'}]],
+342                        next=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
+343                              \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'next'}]],
+344                        previous=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
+345                                  \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'previous'}]])
+346         actor\_keys = keys \textcolor{keywordflow}{or} [
+347             \textcolor{stringliteral}{'input\_end'}, \textcolor{stringliteral}{'output\_start'},
+348             \textcolor{stringliteral}{'buffer\_end'}, \textcolor{stringliteral}{'start'}, \textcolor{stringliteral}{'end'},
+349             \textcolor{stringliteral}{'base\_actor\_index'}, \textcolor{stringliteral}{'fimp\_index'}]
+350 
+351         \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} actor\_keys:
+352             \textcolor{keywordflow}{if} key \textcolor{keywordflow}{in} json\_dict.keys():
+353                 setattr(result, key, json\_dict[key])
+354 
+355         \textcolor{keywordflow}{return} result
+356 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}\label{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+edge@{load\+\_\+sdf\+\_\+edge}}
@@ -301,7 +319,7 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
 
 
 
-Definition at line 154 of file sdf.\+py.
+Definition at line 222 of file sdf.\+py.
 
 
 
@@ -313,19 +331,19 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
 
 
 \begin{DoxyCode}
-154     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(json\_dict, actors):
-155 
-156         src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index = 
+222     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(json\_dict, actors):
+223 
+224         src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index = 
       \hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict)
-157 
-158         src\_actor = actors[src\_actor\_index]
-159         src\_port = src\_actor.output\_ports[src\_port\_index]
-160 
-161         dest\_actor = actors[dest\_actor\_index]
-162         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
-163 
-164         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-165 
+225 
+226         src\_actor = actors[src\_actor\_index]
+227         src\_port = src\_actor.output\_ports[src\_port\_index]
+228 
+229         dest\_actor = actors[dest\_actor\_index]
+230         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
+231 
+232         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
+233 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}\label{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+edge\+\_\+index@{load\+\_\+sdf\+\_\+edge\+\_\+index}}
@@ -335,7 +353,7 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
 
 
 
-Definition at line 144 of file sdf.\+py.
+Definition at line 212 of file sdf.\+py.
 
 
 
@@ -343,16 +361,16 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor(), and sylva.\+base.
 
 
 \begin{DoxyCode}
-144     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict):
-145 
-146         src\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'src\_actor'}])
-147         src\_port\_index = int(json\_dict[\textcolor{stringliteral}{'src\_port'}])
-148 
-149         dest\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_actor'}])
-150         dest\_port\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_port'}])
-151 
-152         \textcolor{keywordflow}{return} (src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index)
-153 
+212     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict):
+213 
+214         src\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'src\_actor'}])
+215         src\_port\_index = int(json\_dict[\textcolor{stringliteral}{'src\_port'}])
+216 
+217         dest\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_actor'}])
+218         dest\_port\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_port'}])
+219 
+220         \textcolor{keywordflow}{return} (src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index)
+221 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}\label{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+graph@{load\+\_\+sdf\+\_\+graph}}
@@ -362,7 +380,7 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor(), and sylva.\+base.
 
 
 
-Definition at line 311 of file sdf.\+py.
+Definition at line 379 of file sdf.\+py.
 
 
 
@@ -374,13 +392,13 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+load().
 
 
 \begin{DoxyCode}
-311     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\_sdf\_graph}(json\_dict, actor\_keys=[]):
-312         actors = []
-313         edges = []
-314         actors = [\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(a, actor\_keys) \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'actors'}]]
-315         edges = [\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(e, actors) \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'edges'}]]
-316         \textcolor{keywordflow}{return} (actors, edges)
-317 
+379     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\_sdf\_graph}(json\_dict, actor\_keys=[]):
+380         actors = []
+381         edges = []
+382         actors = [\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(a, actor\_keys) \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'actors'}]]
+383         edges = [\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(e, actors) \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'edges'}]]
+384         \textcolor{keywordflow}{return} (actors, edges)
+385 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}\label{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+port@{load\+\_\+sdf\+\_\+port}}
@@ -390,7 +408,7 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+load().
 
 
 
-Definition at line 98 of file sdf.\+py.
+Definition at line 166 of file sdf.\+py.
 
 
 
@@ -398,12 +416,12 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor().
 
 
 \begin{DoxyCode}
-98     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(json\_dict):
-99         \textcolor{keywordflow}{return} port(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
-100                     index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
-101                     type=DataTokenType.deserialize(json\_dict[\textcolor{stringliteral}{'type'}]),
-102                     count=int(json\_dict[\textcolor{stringliteral}{'count'}]))
-103 
+166 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(json\_dict):
+167     \textcolor{keywordflow}{return} Port(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
+168                 index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
+169                 type=DataTokenType.deserialize(json\_dict[\textcolor{stringliteral}{'type'}]),
+170                 count=int(json\_dict[\textcolor{stringliteral}{'count'}]))
+171 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}\label{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!make\+\_\+sdf\+\_\+actor@{make\+\_\+sdf\+\_\+actor}}
@@ -413,7 +431,7 @@ Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor().
 
 
 
-Definition at line 291 of file sdf.\+py.
+Definition at line 359 of file sdf.\+py.
 
 
 
@@ -421,18 +439,18 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor(), and sylva.\+base.\+sdf.\+lo
 
 
 \begin{DoxyCode}
-291                        output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
-292 
-293         input\_ports = [port(\textcolor{stringliteral}{'%s\_in\_%s'} % (name, i), i,
-294                             input\_token\_type[i], c)
-295                        \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(inports)]
-296         output\_ports = [port(\textcolor{stringliteral}{'%s\_out\_%s'} % (name, i), i,
-297                              output\_token\_type[i], c)
-298                         \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(outports)]
-299 
-300         \textcolor{keywordflow}{return} actor(name=name, index=index,
-301                      input\_ports=input\_ports, output\_ports=output\_ports)
-302 
+359                        output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
+360 
+361         input\_ports = [Port(\textcolor{stringliteral}{'%s\_in\_%s'} % (name, i), i,
+362                             input\_token\_type[i], c)
+363                        \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(inports)]
+364         output\_ports = [Port(\textcolor{stringliteral}{'%s\_out\_%s'} % (name, i), i,
+365                              output\_token\_type[i], c)
+366                         \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(outports)]
+367 
+368         \textcolor{keywordflow}{return} actor(name=name, index=index,
+369                      input\_ports=input\_ports, output\_ports=output\_ports)
+370 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}\label{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!serialize\+\_\+sdf\+\_\+graph@{serialize\+\_\+sdf\+\_\+graph}}
@@ -442,20 +460,70 @@ Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor(), and sylva.\+base.\+sdf.\+lo
 
 
 
-Definition at line 305 of file sdf.\+py.
+Definition at line 373 of file sdf.\+py.
 
 
 \begin{DoxyCode}
-305     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}{serialize\_sdf\_graph}(actors, edges):
-306         result = \{\}
-307         result[\textcolor{stringliteral}{'actors'}] = [actor.serialize() \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} actors]
-308         result[\textcolor{stringliteral}{'edges'}] = [edge.serialize() \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} edges]
-309         \textcolor{keywordflow}{return} result
-310 
+373     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}{serialize\_sdf\_graph}(actors, edges):
+374         result = \{\}
+375         result[\textcolor{stringliteral}{'actors'}] = [actor.serialize() \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} actors]
+376         result[\textcolor{stringliteral}{'edges'}] = [edge.serialize() \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} edges]
+377         \textcolor{keywordflow}{return} result
+378 
 \end{DoxyCode}
 
 
 \subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}\label{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}} 
+\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+author\+\_\+\+\_\+}{\_\_author\_\_}}
+{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+author\+\_\+\+\_\+ = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file sdf.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}\label{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}} 
+\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+license\+\_\+\+\_\+}{\_\_license\_\_}}
+{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+license\+\_\+\+\_\+ = \textquotesingle{}M\+IT\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file sdf.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}\label{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}} 
+\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
+{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2017-\/05-\/12\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file sdf.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}\label{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}} 
+\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!d@{d}}
+\index{d@{d}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
+\subsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+d = \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}()}
+
+
+
+Definition at line 74 of file sdf.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}\label{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}} 
+\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!dc@{dc}}
+\index{dc@{dc}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
+\subsubsection{\texorpdfstring{dc}{dc}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+dc = dict(\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d})}
+
+
+
+Definition at line 75 of file sdf.\+py.
+
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}\label{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!default\+\_\+actor\+\_\+style@{default\+\_\+actor\+\_\+style}}
 \index{default\+\_\+actor\+\_\+style@{default\+\_\+actor\+\_\+style}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
@@ -478,7 +546,7 @@ Definition at line 305 of file sdf.\+py.
 \end{DoxyCode}
 
 
-Definition at line 339 of file sdf.\+py.
+Definition at line 407 of file sdf.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}\label{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!default\+\_\+annotation\+\_\+style@{default\+\_\+annotation\+\_\+style}}
@@ -497,5 +565,5 @@ Definition at line 339 of file sdf.\+py.
 \end{DoxyCode}
 
 
-Definition at line 351 of file sdf.\+py.
+Definition at line 419 of file sdf.\+py.
 

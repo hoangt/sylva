@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -207,7 +232,7 @@ Private Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="sdf__schedule_8py_source.html#l00030">sylva.base.sdf_schedule.schedule.buffer_end</a>, <a class="el" href="sdf__schedule_8py_source.html#l00027">sylva.base.sdf_schedule.schedule.end</a>, <a class="el" href="sdf__schedule_8py_source.html#l00025">sylva.base.sdf_schedule.schedule.input_end</a>, <a class="el" href="fimp_8py_source.html#l00057">sylva.base.fimp.fimp.input_end</a>, <a class="el" href="sdf__schedule_8py_source.html#l00026">sylva.base.sdf_schedule.schedule.output_start</a>, <a class="el" href="fimp_8py_source.html#l00058">sylva.base.fimp.fimp.output_start</a>, and <a class="el" href="sdf__schedule_8py_source.html#l00024">sylva.base.sdf_schedule.schedule.start</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="air_8py_source.html#l00091">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00073">sylva.base.sylva_base.SYLVABase.__repr__()</a>, and <a class="el" href="air_8py_source.html#l00100">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">def </span>__str__(self) :</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    msg  = <span class="stringliteral">&#39;start: %s&#39;</span> % self.start</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    msg += os.linesep</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    msg += <span class="stringliteral">&#39;input end: %s&#39;</span> % self.input_end</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    msg += os.linesep</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    msg += <span class="stringliteral">&#39;output start: %s&#39;</span> % self.output_start</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    msg += os.linesep</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    msg += <span class="stringliteral">&#39;end: %s&#39;</span> % self.end</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    msg += os.linesep</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    msg += <span class="stringliteral">&#39;buffer end: %s&#39;</span> % self.buffer_end</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> msg</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>

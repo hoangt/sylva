@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,11 +117,17 @@ $(document).ready(function(){initNavTree('namespacemembers_d.html','');});
 <div class="textblock">Here is a list of all namespace members with links to the namespace documentation for each member:</div>
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>d
+: <a class="el" href="namespacesylva_1_1base_1_1sdf.html#a7cf3fa067b15b3a601f61564012ddaf1">sylva.base.sdf</a>
+</li>
 <li>data_buffer
 : <a class="el" href="namespacesylva_1_1code__generation_1_1vhdl__templates.html#acbce936d6f6d2795c41daf45ef6acb3c">sylva.code_generation.vhdl_templates</a>
 </li>
 <li>DataTokenTypes
 : <a class="el" href="namespacesylva_1_1code__generation_1_1vhdl__templates.html#a99451f2ccd2fb991a30cc97da54e655a">sylva.code_generation.vhdl_templates</a>
+</li>
+<li>dc
+: <a class="el" href="namespacesylva_1_1base_1_1sdf.html#a1e21c34d5788bcf15b3fb64cf5381843">sylva.base.sdf</a>
 </li>
 <li>default
 : <a class="el" href="namespacesylva_1_1code__generation_1_1vhdl__interface__parser.html#ac13539f10c901b6537c107ee60cc64b8">sylva.code_generation.vhdl_interface_parser</a>

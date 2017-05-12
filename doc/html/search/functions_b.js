@@ -8,6 +8,7 @@ var searchData=
   ['load_5ffimp',['load_fimp',['../namespacesylva_1_1base_1_1fimp.html#a49222336c8f368ae3381e7b8b456a8b4',1,'sylva::base::fimp']]],
   ['load_5ffimp_5flib',['load_fimp_lib',['../namespacesylva_1_1base_1_1fimp.html#a57a8b55e554c3c8977bdca59b12fde4f',1,'sylva::base::fimp']]],
   ['load_5ffimp_5fset',['load_fimp_set',['../namespacesylva_1_1base_1_1fimp.html#ad713bc31de8ee05df0c1184daba1ffb8',1,'sylva::base::fimp']]],
+  ['load_5ffrom_5fdict',['load_from_dict',['../classsylva_1_1base_1_1sdf_1_1_data_token_type.html#a24c66d6a5350bf4d8e6bcdaa64202c7c',1,'sylva.base.sdf.DataTokenType.load_from_dict()'],['../classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4acd68307f4b2bef6082b86f3ff6ce3a',1,'sylva.base.sylva_base.SYLVABase.load_from_dict()']]],
   ['load_5ffrom_5ffile',['load_from_file',['../namespacesylva_1_1base_1_1fimp.html#ae9ea3885312a946a5a94bd8b2eef9b95',1,'sylva::base::fimp']]],
   ['load_5fsdf_5factor',['load_sdf_actor',['../namespacesylva_1_1base_1_1sdf.html#a14b2bfbb0fd81d1e114b670f13f718f1',1,'sylva::base::sdf']]],
   ['load_5fsdf_5fedge',['load_sdf_edge',['../namespacesylva_1_1base_1_1sdf.html#acd1ba464e47476a5205de3e3856fbb83',1,'sylva::base::sdf']]],

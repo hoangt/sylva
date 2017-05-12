@@ -1,0 +1,125 @@
+\href{https://travis-ci.org/isagalaev/highlight.js}{\tt }
+
+Highlight.\+js is a syntax highlighter written in Java\+Script. It works in the browser as well as on the server. It works with pretty much any markup, doesn’t depend on any framework and has automatic language detection.
+
+\subsection*{Getting Started}
+
+The bare minimum for using highlight.\+js on a web page is linking to the library along with one of the styles and calling \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}}\+:
+
+
+\begin{DoxyCode}
+<link rel="stylesheet" href="/path/to/styles/default.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+\end{DoxyCode}
+
+
+This will find and highlight code inside of {\ttfamily $<$pre$>$$<$code$>$} tags; it tries to detect the language automatically. If automatic detection doesn’t work for you, you can specify the language in the {\ttfamily class} attribute\+:
+
+```html 
+\begin{DoxyPre}{\ttfamily ...}\end{DoxyPre}
+ 
+\begin{DoxyCode}
+The list of supported language classes is available in the [class
+reference][2].  Classes can also be prefixed with either `language-` or
+`lang-`.
+
+To disable highlighting altogether use the `nohighlight` class:
+
+```html
+<pre><code class="nohighlight">...</code></pre>
+\end{DoxyCode}
+
+
+\subsection*{Custom Initialization}
+
+When you need a bit more control over the initialization of highlight.\+js, you can use the \href{http://highlightjs.readthedocs.io/en/latest/api.html#highlightblock-block}{\tt {\ttfamily highlight\+Block}} and \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}} functions. This allows you to control {\itshape what} to highlight and {\itshape when}.
+
+Here’s an equivalent way to calling \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}} using j\+Query\+:
+
+
+\begin{DoxyCode}
+$(document).ready(function() \{
+  $('pre code').each(function(i, block) \{
+    hljs.highlightBlock(block);
+  \});
+\});
+\end{DoxyCode}
+
+
+You can use any tags instead of {\ttfamily $<$pre$>$$<$code$>$} to mark up your code. If you don\textquotesingle{}t use a container that preserve line breaks you will need to configure highlight.\+js to use the {\ttfamily $<$br$>$} tag\+:
+
+
+\begin{DoxyCode}
+hljs.configure(\{useBR: true\});
+
+$('div.code').each(function(i, block) \{
+  hljs.highlightBlock(block);
+\});
+\end{DoxyCode}
+
+
+For other options refer to the documentation for \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}}.
+
+\subsection*{Web Workers}
+
+You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big chunks of code.
+
+In your main script\+:
+
+
+\begin{DoxyCode}
+addEventListener('load', function() \{
+  var code = document.querySelector('#code');
+  var worker = new Worker('worker.js');
+  worker.onmessage = function(event) \{ code.innerHTML = event.data; \}
+  worker.postMessage(code.textContent);
+\})
+\end{DoxyCode}
+
+
+In worker.\+js\+:
+
+
+\begin{DoxyCode}
+onmessage = function(event) \{
+  importScripts('<path>/highlight.pack.js');
+  var result = self.hljs.highlightAuto(event.data);
+  postMessage(result.value);
+\}
+\end{DoxyCode}
+
+
+\subsection*{Getting the Library}
+
+You can get highlight.\+js as a hosted, or custom-\/build, browser script or as a server module. Right out of the box the browser script supports both A\+MD and Common\+JS, so if you wish you can use Require\+JS or Browserify without having to build from source. The server module also works perfectly fine with Browserify, but there is the option to use a build specific to browsers rather than something meant for a server. Head over to the \href{https://highlightjs.org/download/}{\tt download page} for all the options.
+
+{\bfseries Don\textquotesingle{}t link to Git\+Hub directly.} The library is not supposed to work straight from the source, it requires building. If none of the pre-\/packaged options work for you refer to the \href{http://highlightjs.readthedocs.io/en/latest/building-testing.html}{\tt building documentation}.
+
+{\bfseries The C\+D\+N-\/hosted package doesn\textquotesingle{}t have all the languages.} Otherwise it\textquotesingle{}d be too big. If you don\textquotesingle{}t see the language you need in the \href{https://highlightjs.org/download/}{\tt \char`\"{}\+Common\char`\"{} section}, it can be added manually\+:
+
+
+\begin{DoxyCode}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+\end{DoxyCode}
+
+
+{\bfseries On Almond.} You need to use the optimizer to give the module a name. For example\+:
+
+
+\begin{DoxyCode}
+r.js -o name=hljs paths.hljs=/path/to/highlight out=highlight.js
+\end{DoxyCode}
+
+
+\subsection*{License}
+
+Highlight.\+js is released under the B\+SD License. See \href{https://github.com/isagalaev/highlight.js/blob/master/LICENSE}{\tt L\+I\+C\+E\+N\+SE} file for details.
+
+\subsection*{Links}
+
+The official site for the library is at \href{https://highlightjs.org/}{\tt https\+://highlightjs.\+org/}.
+
+Further in-\/depth documentation for the A\+PI and other topics is at \href{http://highlightjs.readthedocs.io/}{\tt http\+://highlightjs.\+readthedocs.\+io/}.
+
+Authors and contributors are listed in the \href{https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.en.txt}{\tt A\+U\+T\+H\+O\+R\+S.\+en.\+txt} file. 

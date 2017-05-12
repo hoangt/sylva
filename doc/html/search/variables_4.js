@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['d',['d',['../namespacesylva_1_1base_1_1sdf.html#a7cf3fa067b15b3a601f61564012ddaf1',1,'sylva::base::sdf']]],
   ['data_5fbuffer',['data_buffer',['../namespacesylva_1_1code__generation_1_1vhdl__templates.html#acbce936d6f6d2795c41daf45ef6acb3c',1,'sylva::code_generation::vhdl_templates']]],
   ['datatokentypes',['DataTokenTypes',['../namespacesylva_1_1code__generation_1_1vhdl__templates.html#a99451f2ccd2fb991a30cc97da54e655a',1,'sylva::code_generation::vhdl_templates']]],
   ['db',['db',['../classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#a51d125ec34729ef82c7ab89ca2f9ee36',1,'sylva.code_generation.floorplanner.floorplanner.db()'],['../classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a101aec57bb8b85a9b4ecc57f590b93da',1,'sylva.dse.dse_engine_v1.dse_v1.db()']]],
+  ['dc',['dc',['../namespacesylva_1_1base_1_1sdf.html#a1e21c34d5788bcf15b3fb64cf5381843',1,'sylva::base::sdf']]],
   ['default',['default',['../namespacesylva_1_1code__generation_1_1vhdl__interface__parser.html#ac13539f10c901b6537c107ee60cc64b8',1,'sylva.code_generation.vhdl_interface_parser.default()'],['../namespacesylva_1_1misc_1_1exec.html#abb9ca065b61fa23e0f7235833304ebc8',1,'sylva.misc.exec.default()']]],
   ['default_5factor_5fstyle',['default_actor_style',['../namespacesylva_1_1base_1_1sdf.html#a39d9eb96b3c8367d46f62630c694532a',1,'sylva::base::sdf']]],
   ['default_5fannotation_5fstyle',['default_annotation_style',['../namespacesylva_1_1base_1_1sdf.html#a2fc7e4f9875075ae2cc4d82650265733',1,'sylva.base.sdf.default_annotation_style()'],['../namespacesylva_1_1misc_1_1plot.html#affc8bfc885cfaf5e1995cf4fd8d084c6',1,'sylva.misc.plot.default_annotation_style()']]],

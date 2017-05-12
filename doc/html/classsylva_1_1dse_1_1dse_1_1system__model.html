@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -198,7 +223,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00108">108</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 
-<p class="reference">References <a class="el" href="floorplanner_8py_source.html#l00028">sylva.code_generation.floorplanner.floorplanner.actors</a>, <a class="el" href="fimp_8py_source.html#l00060">sylva.base.fimp.fimp.actors</a>, <a class="el" href="dse_8py_source.html#l00103">sylva.dse.dse.system_model.actors</a>, <a class="el" href="sdf_8py_source.html#l00383">sylva.base.sdf.sdfg.actors</a>, <a class="el" href="dse_8py_source.html#l00105">sylva.dse.dse.system_model.constraint</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="sdf_8py_source.html#l00384">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="sdf_8py_source.html#l00022">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00078">sylva.base.sdf.port.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="sdf_8py_source.html#l00230">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="dse_8py_source.html#l00106">sylva.dse.dse.system_model.optimization_objective</a>.</p>
+<p class="reference">References <a class="el" href="floorplanner_8py_source.html#l00028">sylva.code_generation.floorplanner.floorplanner.actors</a>, <a class="el" href="fimp_8py_source.html#l00060">sylva.base.fimp.fimp.actors</a>, <a class="el" href="dse_8py_source.html#l00103">sylva.dse.dse.system_model.actors</a>, <a class="el" href="sdf_8py_source.html#l00451">sylva.base.sdf.sdfg.actors</a>, <a class="el" href="dse_8py_source.html#l00105">sylva.dse.dse.system_model.constraint</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="sdf_8py_source.html#l00452">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00054">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="sdf_8py_source.html#l00133">sylva.base.sdf.Port.name</a>, <a class="el" href="sdf_8py_source.html#l00298">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="dse_8py_source.html#l00106">sylva.dse.dse.system_model.optimization_objective</a>.</p>
 <div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">def </span>serialize(self) :</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    result = {}</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    result[<span class="stringliteral">&#39;name&#39;</span>] = self.name</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    temp = sdf.serialize_sdf_graph(self.actors, self.edges)</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    result[<span class="stringliteral">&#39;actors&#39;</span>] = temp[<span class="stringliteral">&#39;actors&#39;</span>]</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    result[<span class="stringliteral">&#39;edges&#39;</span>] = temp[<span class="stringliteral">&#39;edges&#39;</span>]</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    result[<span class="stringliteral">&#39;constraint&#39;</span>] = self.constraint.__dict__</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    result[<span class="stringliteral">&#39;optimization_objective&#39;</span>] = self.optimization_objective.__dict__</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> result</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>

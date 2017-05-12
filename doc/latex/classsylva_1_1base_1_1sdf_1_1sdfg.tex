@@ -29,7 +29,7 @@ def \hyperlink{classsylva_1_1base_1_1sdf_1_1sdfg_a0ec53888667270ea6aec60425b2c87
 \subsection{Detailed Description}
 
 
-Definition at line 380 of file sdf.\+py.
+Definition at line 448 of file sdf.\+py.
 
 
 
@@ -42,14 +42,14 @@ Definition at line 380 of file sdf.\+py.
 
 
 
-Definition at line 382 of file sdf.\+py.
+Definition at line 450 of file sdf.\+py.
 
 
 \begin{DoxyCode}
-382         \textcolor{keyword}{def }\_\_init\_\_(self, actors, edges):
-383             self.actors = actors
-384             self.edges = edges
-385 
+450         \textcolor{keyword}{def }\_\_init\_\_(self, actors, edges):
+451             self.actors = actors
+452             self.edges = edges
+453 
 \end{DoxyCode}
 
 
@@ -62,7 +62,7 @@ Definition at line 382 of file sdf.\+py.
 
 
 
-Definition at line 392 of file sdf.\+py.
+Definition at line 460 of file sdf.\+py.
 
 
 
@@ -74,9 +74,9 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+plot().
 
 
 \begin{DoxyCode}
-392         \textcolor{keyword}{def }layered\_actors(self):
-393             \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\_layered\_actors}(self.actors)
-394 
+460         \textcolor{keyword}{def }layered\_actors(self):
+461             \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\_layered\_actors}(self.actors)
+462 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1sdfg_abdac55d55690dc28e8cbd5dcaf05493c}\label{classsylva_1_1base_1_1sdf_1_1sdfg_abdac55d55690dc28e8cbd5dcaf05493c}} 
 \index{sylva\+::base\+::sdf\+::sdfg@{sylva\+::base\+::sdf\+::sdfg}!load@{load}}
@@ -86,7 +86,7 @@ Referenced by sylva.\+base.\+sdf.\+sdfg.\+plot().
 
 
 
-Definition at line 387 of file sdf.\+py.
+Definition at line 455 of file sdf.\+py.
 
 
 
@@ -98,10 +98,10 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+load().
 
 
 \begin{DoxyCode}
-387         \textcolor{keyword}{def }load(cls, json\_dict, actor\_keys=[]):
-388             actors, edges = \hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\_sdf\_graph}(json\_dict, actor\_keys)
-389             \textcolor{keywordflow}{return} sdfg(actors, edges)
-390 
+455         \textcolor{keyword}{def }load(cls, json\_dict, actor\_keys=[]):
+456             actors, edges = \hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\_sdf\_graph}(json\_dict, actor\_keys)
+457             \textcolor{keywordflow}{return} sdfg(actors, edges)
+458 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1sdfg_a0ec53888667270ea6aec60425b2c8742}\label{classsylva_1_1base_1_1sdf_1_1sdfg_a0ec53888667270ea6aec60425b2c8742}} 
 \index{sylva\+::base\+::sdf\+::sdfg@{sylva\+::base\+::sdf\+::sdfg}!plot@{plot}}
@@ -111,7 +111,7 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+load().
 
 
 
-Definition at line 395 of file sdf.\+py.
+Definition at line 463 of file sdf.\+py.
 
 
 
@@ -119,67 +119,67 @@ References sylva.\+base.\+sdf.\+sdfg.\+layered\+\_\+actors().
 
 
 \begin{DoxyCode}
-395         \textcolor{keyword}{def }plot(self, actor\_style=None, annotation\_style=None):
-396 
-397             actors\_2d = self.layered\_actors
-398 
-399             \_actor\_style = default\_actor\_style
-400             \_actor\_style.update(actor\_style \textcolor{keywordflow}{or} \{\})
-401 
-402             \_annotation\_style = default\_annotation\_style
-403             \_annotation\_style.update(annotation\_style \textcolor{keywordflow}{or} \{\})
-404 
-405             margin = \_actor\_style.pop(\textcolor{stringliteral}{'margin'}, 0)
-406             node\_shape = \_actor\_style.pop(\textcolor{stringliteral}{'node\_shape'}, \textcolor{stringliteral}{''})
-407 
-408             \textcolor{keywordflow}{if} node\_shape.lower() == \textcolor{stringliteral}{'circle'}:
-409                 \_actor\_style.pop(\textcolor{stringliteral}{'width'}, \textcolor{keywordtype}{None})
-410                 \_actor\_style.pop(\textcolor{stringliteral}{'height'}, \textcolor{keywordtype}{None})
-411                 shape\_width = shape\_height = 2 * \_actor\_style[\textcolor{stringliteral}{'radius'}]
-412 
-413             node\_shape = eval(\textcolor{stringliteral}{'mpatches.\{\}'}.format(node\_shape.capitalize()))
-414 
-415             xmin = -(shape\_width / 2 + margin)
-416             xmax = len(actors\_2d) * (shape\_width + margin)
-417             ymin = -max([len(l) \textcolor{keywordflow}{for} l \textcolor{keywordflow}{in} actors\_2d]) * (shape\_width + margin)
-418             ymax = (shape\_width / 2 + margin)
-419             plt.axis([xmin, xmax, ymin, ymax])
-420             plt.gca().set\_aspect(\textcolor{stringliteral}{'equal'})
-421             plt.axis(\textcolor{stringliteral}{'off'})
-422             actor\_nodes = \{\}
-423 
-424             \textcolor{keywordflow}{for} layer\_index, layer \textcolor{keywordflow}{in} enumerate(actors\_2d):
-425                 \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(layer):
-426                     x = layer\_index * (shape\_width + margin)
-427                     y = -actor\_index * (shape\_height + margin)
-428                     actor\_node = node\_shape((x, y), **\_actor\_style)
-429                     actor\_nodes[actor.index] = actor\_node
-430                     plt.gca().add\_patch(actor\_node)
-431                     plt.gca().annotate(actor.index, (x, y), **\_annotation\_style)
-432                     actor.lpos = (layer\_index, actor\_index)
-433                     actor.pos = (x, y)
-434                     actor.left = (x - shape\_width / 2, y)
-435                     actor.right = (x + shape\_width / 2, y)
-436                     actor.top = (x, y + shape\_width / 2)
-437                     actor.bottom = (x, y - shape\_width / 2)
-438 
-439             \textcolor{keywordflow}{for} layer\_index, layer \textcolor{keywordflow}{in} enumerate(actors\_2d):
-440                 \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(layer):
-441                     \textcolor{keywordflow}{for} next\_edge \textcolor{keywordflow}{in} actor.next:
-442                         na = next\_edge.dest\_actor
-443                         src = actor.pos
-444                         dest = na.pos
-445                         plt.gca().annotate(\textcolor{stringliteral}{''}, dest, src,
-446                                            arrowprops=dict(arrowstyle=\textcolor{stringliteral}{'->'},
-447                                                            patchA=actor\_nodes[actor.index],
-448                                                            patchB=actor\_nodes[na.index],
-449                                                            shrinkA=0, shrinkB=0,
-450                                                            ec=\_actor\_style[\textcolor{stringliteral}{'edgecolor'}],
-451                                                            connectionstyle=\textcolor{stringliteral}{"arc3,rad=.1"},
-452                                                            ),)
-453 
-454             \textcolor{keywordflow}{return} plt
-455 \end{DoxyCode}
+463         \textcolor{keyword}{def }plot(self, actor\_style=None, annotation\_style=None):
+464 
+465             actors\_2d = self.layered\_actors
+466 
+467             \_actor\_style = default\_actor\_style
+468             \_actor\_style.update(actor\_style \textcolor{keywordflow}{or} \{\})
+469 
+470             \_annotation\_style = default\_annotation\_style
+471             \_annotation\_style.update(annotation\_style \textcolor{keywordflow}{or} \{\})
+472 
+473             margin = \_actor\_style.pop(\textcolor{stringliteral}{'margin'}, 0)
+474             node\_shape = \_actor\_style.pop(\textcolor{stringliteral}{'node\_shape'}, \textcolor{stringliteral}{''})
+475 
+476             \textcolor{keywordflow}{if} node\_shape.lower() == \textcolor{stringliteral}{'circle'}:
+477                 \_actor\_style.pop(\textcolor{stringliteral}{'width'}, \textcolor{keywordtype}{None})
+478                 \_actor\_style.pop(\textcolor{stringliteral}{'height'}, \textcolor{keywordtype}{None})
+479                 shape\_width = shape\_height = 2 * \_actor\_style[\textcolor{stringliteral}{'radius'}]
+480 
+481             node\_shape = eval(\textcolor{stringliteral}{'mpatches.\{\}'}.format(node\_shape.capitalize()))
+482 
+483             xmin = -(shape\_width / 2 + margin)
+484             xmax = len(actors\_2d) * (shape\_width + margin)
+485             ymin = -max([len(l) \textcolor{keywordflow}{for} l \textcolor{keywordflow}{in} actors\_2d]) * (shape\_width + margin)
+486             ymax = (shape\_width / 2 + margin)
+487             plt.axis([xmin, xmax, ymin, ymax])
+488             plt.gca().set\_aspect(\textcolor{stringliteral}{'equal'})
+489             plt.axis(\textcolor{stringliteral}{'off'})
+490             actor\_nodes = \{\}
+491 
+492             \textcolor{keywordflow}{for} layer\_index, layer \textcolor{keywordflow}{in} enumerate(actors\_2d):
+493                 \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(layer):
+494                     x = layer\_index * (shape\_width + margin)
+495                     y = -actor\_index * (shape\_height + margin)
+496                     actor\_node = node\_shape((x, y), **\_actor\_style)
+497                     actor\_nodes[actor.index] = actor\_node
+498                     plt.gca().add\_patch(actor\_node)
+499                     plt.gca().annotate(actor.index, (x, y), **\_annotation\_style)
+500                     actor.lpos = (layer\_index, actor\_index)
+501                     actor.pos = (x, y)
+502                     actor.left = (x - shape\_width / 2, y)
+503                     actor.right = (x + shape\_width / 2, y)
+504                     actor.top = (x, y + shape\_width / 2)
+505                     actor.bottom = (x, y - shape\_width / 2)
+506 
+507             \textcolor{keywordflow}{for} layer\_index, layer \textcolor{keywordflow}{in} enumerate(actors\_2d):
+508                 \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(layer):
+509                     \textcolor{keywordflow}{for} next\_edge \textcolor{keywordflow}{in} actor.next:
+510                         na = next\_edge.dest\_actor
+511                         src = actor.pos
+512                         dest = na.pos
+513                         plt.gca().annotate(\textcolor{stringliteral}{''}, dest, src,
+514                                            arrowprops=dict(arrowstyle=\textcolor{stringliteral}{'->'},
+515                                                            patchA=actor\_nodes[actor.index],
+516                                                            patchB=actor\_nodes[na.index],
+517                                                            shrinkA=0, shrinkB=0,
+518                                                            ec=\_actor\_style[\textcolor{stringliteral}{'edgecolor'}],
+519                                                            connectionstyle=\textcolor{stringliteral}{"arc3,rad=.1"},
+520                                                            ),)
+521 
+522             \textcolor{keywordflow}{return} plt
+523 \end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -191,7 +191,7 @@ References sylva.\+base.\+sdf.\+sdfg.\+layered\+\_\+actors().
 
 
 
-Definition at line 383 of file sdf.\+py.
+Definition at line 451 of file sdf.\+py.
 
 
 
@@ -205,7 +205,7 @@ Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+dat
 
 
 
-Definition at line 384 of file sdf.\+py.
+Definition at line 452 of file sdf.\+py.
 
 
 

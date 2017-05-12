@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -5,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYLVA - System Level Architectural Synthesis Framework: README.md File Reference</title>
+<title>SYLVA - System Level Architectural Synthesis Framework: highlight.js/README.md File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,6 +24,28 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+      href="default.css">
+<script src="highlight.pack.js"></script>
+<script>
+hljs.configure({languages: ['python', 'vhdl']});
+$(function() {
+    $(".line").each(function(i,node) {
+        var $node = $(node);
+        $node.html($node.text());
+        // hljs.highlightBlock(node);
+    });
+});
+$(function() {
+    $(".fragment").each(function(i,node) {
+        var $node = $(node);
+        // $node.html("<pre><code class='" +
+        //            $node.attr("class")+"'>" +
+        //            $node.text()+"</code></pre>");
+        hljs.highlightBlock(node);
+    });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -90,7 +113,7 @@ $(document).ready(function(){initNavTree('_r_e_a_d_m_e_8md.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">README.md File Reference</div>  </div>
+<div class="title">highlight.js/README.md File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 

@@ -1,7 +1,7 @@
 var sdf_8py =
 [
     [ "DataTokenType", "classsylva_1_1base_1_1sdf_1_1_data_token_type.html", "classsylva_1_1base_1_1sdf_1_1_data_token_type" ],
-    [ "port", "classsylva_1_1base_1_1sdf_1_1port.html", "classsylva_1_1base_1_1sdf_1_1port" ],
+    [ "Port", "classsylva_1_1base_1_1sdf_1_1_port.html", "classsylva_1_1base_1_1sdf_1_1_port" ],
     [ "edge", "classsylva_1_1base_1_1sdf_1_1edge.html", "classsylva_1_1base_1_1sdf_1_1edge" ],
     [ "actor", "classsylva_1_1base_1_1sdf_1_1actor.html", "classsylva_1_1base_1_1sdf_1_1actor" ],
     [ "sdfg", "classsylva_1_1base_1_1sdf_1_1sdfg.html", "classsylva_1_1base_1_1sdf_1_1sdfg" ],
@@ -18,6 +18,11 @@ var sdf_8py =
     [ "load_sdf_port", "sdf_8py.html#a72bbd0e1cd0a666269ac3f17427954b8", null ],
     [ "make_sdf_actor", "sdf_8py.html#a34a38a5853d86a6e49aba53f9040462d", null ],
     [ "serialize_sdf_graph", "sdf_8py.html#af3757c4b0997b952e06efde4a2da8321", null ],
+    [ "__author__", "sdf_8py.html#acc6d2abcf12fe231ba37a00428ac6324", null ],
+    [ "__license__", "sdf_8py.html#a980e085a8798aeb5104490284de5edd1", null ],
+    [ "__version__", "sdf_8py.html#adccda126d39b0e5206af68035aea9066", null ],
+    [ "d", "sdf_8py.html#a7cf3fa067b15b3a601f61564012ddaf1", null ],
+    [ "dc", "sdf_8py.html#a1e21c34d5788bcf15b3fb64cf5381843", null ],
     [ "default_actor_style", "sdf_8py.html#a39d9eb96b3c8367d46f62630c694532a", null ],
     [ "default_annotation_style", "sdf_8py.html#a2fc7e4f9875075ae2cc4d82650265733", null ]
 ];

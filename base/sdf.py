@@ -1,105 +1,173 @@
-# coding: utf-8
-
-# @package docstring
-# Documentation for this module.
-# More details.
+##
+# \package sylva.base.sdf
+#
+# All SDF graph related classes and methods.
+##
 
 import json
 
-if 'Data type class':
+from sylva.base.sylva_base import SYLVABase
 
-    # Data token type class
-    #  This DataTokenType object will be used to represent the data token type in \ref sdfg.
-    class DataTokenType(object):
 
-        # Creates a new DataTokenType object.
-        #  \param name The name of the user and it should be a str object.
-        #  \param size The size of the data token in number of bits and it should be an int object.
-        def __init__(self, name='int32', size=32):
+__author__ = 'Shuo Li <contact@shuol.li>'
+__version__ = '2017-05-12'
+__license__ = 'MIT'
 
-            # \var name
-            # The name of the user and it should be a str object.
-            self.name = name
 
-            # \var size
-            # The size of the data token in number of bits and it should be an int object.
-            self.size = size
+##
+# @brief      Class for data token type.
+#
+# This DataTokenType object will be used to represent
+# the data token type in SDF graph.
+##
 
-        # Convert the current object to a string format.
-        #  \return Returns a human friendly string (type is str) of this object
-        def __str__(self):
-            return f'{self.name} (size {self.size})'
 
-        # Convert the current object to a string format.
-        #  This method will be invoked some time instead of self.__str__().
-        #  \return Returns a human friendly string (type is str) of this object
-        def __repr__(self):
-            return self.__str__()
+class DataTokenType(SYLVABase):
 
-        # Creates a dict object with only primitive python objects to store the current \ref DataTokenType object.
-        #  Example:
-        #  {'name': 'int32', 'size': 32}
-        #  \return a dict object
-        def serialize(self):
-            return {'name': self.name, 'size': self.size}
+    ##
+    # \var size
+    # The size of the data token in number of bits
+    # and it should be an int object.
+    #
+    # \var name
+    # The name of the user and it should be a str object.
+    ##
 
-        # Creates a DataTokenType object from a dict object that is produced by the serialize method.
-        #  Example:
-        #  DataTokenType_dict = {'name': 'int32', 'size': 32}
-        #  \param DataTokenType_dict The dict object having all information to construct a new DataTokenType object.
-        #  \return a DataTokenType object
-        @classmethod
-        def deserialize(cls, data_token_type_dict={'name': 'int32', 'size': 32}):
-            return cls(name=data_token_type_dict['name'], size=data_token_type_dict['size'])
+    ##
+    # @brief      Constructs the object.
+    ##
+    # @param      self  The object
+    # @param      name  The name (str) of the data token type, e.g. int32
+    # @param      size  The size (int) of the data token type
+    # @param      dict_object  For loading from a stored dictionary object
+    # Example:
+    # \code{python}
+    # int32 = DataTokenType('int32', 32)
+    # int32_dict = dict(int32)
+    # another_type = DataTokenType(dict_object=int32_dict)
+    # print(another_type)
+    # \endcode
+    # Output: `Data token type: int32 (size: 32)`
+    ##
+    def __init__(self, name='int32', size=32, dict_object={}):
 
-if 'SDF port class':
+        self.name = name
+        self.size = size
 
-    class port(object):
+        if dict_object:
+            SYLVABase.__init__(self, dict_object)
 
-        '''
-          IO port class for an actor
-          --------------------------
+    ##
+    # \copydoc sylva::base::sylva_base::SYLVABase::load_from_dict()
+    ##
+    @classmethod
+    def load_from_dict(cls, dict_object):
+        return cls(name=dict_object['name'], size=dict_object['size'])
 
-          The port is either input or output.
-          The IO direction (input or output) is not defined in this class.
-          A port emits or receives one data token per clock cycle.
+    ##
+    # \copydoc sylva::base::sylva_base::SYLVABase::__str__()
+    ##
+    def __str__(self):
+        return f'Data token type: {self.name} (size: {self.size})'
 
-          1. name: string, port name
-          2. index: integer, port index in either input port list or output port list
-          3. type: DataTokenType, data token type of this port.
-            The width of the port is defined by `type`.
-          4. count: integer, number of data tokens to be transferred via this port
-        '''
 
-        def __init__(self, name='no_port_name', index=0,
-                     type=DataTokenType(name='integer range 0 to 3', size=2),
-                     count=1):
+d = DataTokenType()
+dc = dict(d)
+d = DataTokenType(dict_object=dc)
+print(d)
 
-            self.name = name
-            self.index = index
-            self.type = type
-            self.count = count
+##
+# @brief      Class for port.
+#
+# One Port object will be used to represent
+# one data communication port on an actor in SDF graph, where
+# a port on an actor emits or receives one data token per clock cycle.
+# <br /><br />
+# The port is either input or output.
+# The IO direction (input or output) is not defined in this class.
+#
+# + One Port is an input port if it is placed in the \ref Actor input_ports
+# + One Port is an input port if it is placed in the \ref Actor output_ports
+#
+##
 
-            self.__repr__ = self.__str__
 
-        def __str__(self):
-            return 'SDF port %s index %s type %s count %s' \
-                % (self.name, self.index, self.type, self.count)
+class Port(SYLVABase):
 
-        def clone(self):
-            return port(self.name, self.index, self.type, self.count)
+    ##
+    # \var name
+    # The name of the port, e.g. `din`.
+    #
+    # \var index
+    # The index of the port among all ports in the same list,
+    # e.g. all ports in list `input_ports` have unique index values.
+    #
+    # \var token_type
+    # The data token type of the port, e.g. `DataTokenType(name='int32', size=32)`
+    #
+    # \var count
+    # The number of data tokens to be consumed or produced per invocation.
+    # One token per clock cycle is the minimum throughput.
+    ##
 
-        def serialize(self):
-            return {'name': self.name,
-                    'index': self.index,
-                    'type': self.type.serialize(),
-                    'count': self.count}
+    ##
+    # @brief      Constructs the object.
+    #
+    # @param      self        The object.
+    #
+    # @param      name        The name of the port.
+    # Example: `din`
+    #
+    # @param      index       The index of the port.
+    # It is among all ports in the same list,
+    # Example: all ports in list `input_ports` have unique index values.
+    #
+    # @param      token_type  The data token type of the port.
+    # Example: `DataTokenType(name='int32', size=32)`
+    # @param      count       The count
+    ##
+    def __init__(self, name='No name', index=0,
+                 token_type=DataTokenType(name='int32', size=32),
+                 count=1):
 
-    def load_sdf_port(json_dict):
-        return port(name=str(json_dict['name']),
-                    index=int(json_dict['index']),
-                    type=DataTokenType.deserialize(json_dict['type']),
-                    count=int(json_dict['count']))
+        self.name = name
+        self.index = index
+        self.token_type = token_type
+        self.count = count
+
+        self.__repr__ = self.__str__
+
+    ##
+    # \copydoc sylva::base::sylva_base::SYLVABase::__str__()
+    ##
+    def __str__(self):
+        result = ''
+        result += f'SDF port {self.name} index {self.index}' + '\n'
+        result += f'  Token type  {self.token_type}' + '\n'
+        result += f'  Token count {self.count}'
+        return result
+
+    ##
+    # \copydoc sylva::base::sylva_base::SYLVABase::clone()
+    ##
+    def clone(self):
+        return Port(self.name, self.index, self.type, self.count)
+
+    ##
+    # \copydoc sylva::base::sylva_base::SYLVABase::dict_object()
+    ##
+    def dict_object(self):
+        return {'name': self.name,
+                'index': self.index,
+                'type': self.token_type.dict_object(),
+                'count': self.count}
+
+
+def load_sdf_port(json_dict):
+    return Port(name=str(json_dict['name']),
+                index=int(json_dict['index']),
+                type=DataTokenType.deserialize(json_dict['type']),
+                count=int(json_dict['count']))
 
 if 'SDF edge class':
 
@@ -290,10 +358,10 @@ if 'SDF actor class':
                        input_token_type=[DataTokenType('std_logic', 1)],
                        output_token_type=[DataTokenType('std_logic', 1)]):
 
-        input_ports = [port('%s_in_%s' % (name, i), i,
+        input_ports = [Port('%s_in_%s' % (name, i), i,
                             input_token_type[i], c)
                        for i, c in enumerate(inports)]
-        output_ports = [port('%s_out_%s' % (name, i), i,
+        output_ports = [Port('%s_out_%s' % (name, i), i,
                              output_token_type[i], c)
                         for i, c in enumerate(outports)]
 

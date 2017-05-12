@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -106,7 +131,8 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp.html#a3a158e5ef136d9a8bf4a8d2e14f7b042">sylva.base.fimp.fimp</a>
 , <a class="el" href="classsylva_1_1base_1_1sdf_1_1actor.html#a366534a2c6988eb885d89b7259c5b411">sylva.base.sdf.actor</a>
 , <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#a1b17c24443ba7f3dc4b81c4a73ebe699">sylva.base.sdf.edge</a>
-, <a class="el" href="classsylva_1_1base_1_1sdf_1_1port.html#ae5c6adc9c86e717d12901d73699bb432">sylva.base.sdf.port</a>
+, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#ad0192710d76f8b2b3fefeef6e49f49bd">sylva.base.sdf.Port</a>
+, <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a1597b4594cb73e0fa2597742239660f5">sylva.base.sylva_base.SYLVABase</a>
 </li>
 <li>cmds
 : <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a86d2cf84dd00495fbaf03c3fa73f7d2a">sylva.misc.exec.SYLVA</a>
@@ -134,7 +160,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classsylva_1_1code__generation_1_1air_1_1_port_map_condition.html#a8144ca86c7e62e6bc09ab9b21322e146">sylva.code_generation.air.PortMapCondition</a>
 </li>
 <li>count
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1port.html#a628b66dd64830393bcf8d88b85023016">sylva.base.sdf.port</a>
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aec009757acfd92df95b273c671cac068">sylva.base.sdf.Port</a>
 </li>
 <li>create_air()
 : <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a0fb6646b35fdfc07ca05bb2435e4d117">sylva.misc.exec.SYLVA</a>

@@ -21,9 +21,11 @@ var hierarchy =
     [ "sylva.code_generation.sylva_fimp_lib.method_collection", "classsylva_1_1code__generation_1_1sylva__fimp__lib_1_1method__collection.html", null ],
     [ "object", null, [
       [ "sylva.base.fimp.fimp", "classsylva_1_1base_1_1fimp_1_1fimp.html", null ],
-      [ "sylva.base.sdf.DataTokenType", "classsylva_1_1base_1_1sdf_1_1_data_token_type.html", null ],
-      [ "sylva.base.sdf.port", "classsylva_1_1base_1_1sdf_1_1port.html", null ],
       [ "sylva.base.sdf.sdfg", "classsylva_1_1base_1_1sdf_1_1sdfg.html", null ],
+      [ "sylva.base.sylva_base.SYLVABase", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html", [
+        [ "sylva.base.sdf.DataTokenType", "classsylva_1_1base_1_1sdf_1_1_data_token_type.html", null ],
+        [ "sylva.base.sdf.Port", "classsylva_1_1base_1_1sdf_1_1_port.html", null ]
+      ] ],
       [ "sylva.misc.exec.DictObject", "classsylva_1_1misc_1_1exec_1_1_dict_object.html", [
         [ "sylva.misc.exec.SYLVA", "classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html", null ]
       ] ],

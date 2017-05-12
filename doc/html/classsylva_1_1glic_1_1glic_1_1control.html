@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -210,7 +235,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="glic_8py_source.html#l00157">157</a> of file <a class="el" href="glic_8py_source.html">glic.py</a>.</p>
 
-<p class="reference">References <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00384">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="sdf_8py_source.html#l00022">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00078">sylva.base.sdf.port.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="glic_8py_source.html#l00122">sylva.glic.glic.control.name</a>, <a class="el" href="sdf_8py_source.html#l00230">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="glic_8py_source.html#l00119">sylva.glic.glic.control.states</a>.</p>
+<p class="reference">References <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00452">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00054">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="glic_8py_source.html#l00122">sylva.glic.glic.control.name</a>, <a class="el" href="sdf_8py_source.html#l00133">sylva.base.sdf.Port.name</a>, <a class="el" href="sdf_8py_source.html#l00298">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="glic_8py_source.html#l00119">sylva.glic.glic.control.states</a>.</p>
 <div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">def </span>__str__(self):</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      result = <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      result += <span class="stringliteral">&#39;=&#39;</span> * 64 + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      result += <span class="stringliteral">&#39;Control FSM: %s \n&#39;</span> % self.name</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      result += <span class="stringliteral">&#39;=&#39;</span> * 64 + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      result += <span class="stringliteral">&#39;States: \n&#39;</span></div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.states:</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        result += <span class="stringliteral">&#39;  %s \n&#39;</span> % s</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      result += <span class="stringliteral">&#39;-&#39;</span> * 64 + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      result += <span class="stringliteral">&#39;Transactions: \n&#39;</span></div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">for</span> e <span class="keywordflow">in</span> self.edges:</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        result += <span class="stringliteral">&#39;  %s \n&#39;</span> % e</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">return</span> result + <span class="stringliteral">&#39;=&#39;</span> * 64 + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -260,7 +285,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="glic_8py_source.html#l00172">172</a> of file <a class="el" href="glic_8py_source.html">glic.py</a>.</p>
 
-<p class="reference">References <a class="el" href="glic_8py_source.html#l00133">sylva.glic.glic.control.default_state</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00384">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="sdf_8py_source.html#l00022">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00078">sylva.base.sdf.port.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="glic_8py_source.html#l00122">sylva.glic.glic.control.name</a>, <a class="el" href="sdf_8py_source.html#l00230">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="glic_8py_source.html#l00119">sylva.glic.glic.control.states</a>.</p>
+<p class="reference">References <a class="el" href="glic_8py_source.html#l00133">sylva.glic.glic.control.default_state</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00057">sylva.dse.dse_engine_v1.dse_v1.edges</a>, <a class="el" href="floorplanner_8py_source.html#l00089">sylva.code_generation.floorplanner.floorplanner.edges</a>, <a class="el" href="dse_8py_source.html#l00104">sylva.dse.dse.system_model.edges</a>, <a class="el" href="glic_8py_source.html#l00120">sylva.glic.glic.control.edges</a>, <a class="el" href="sdf_8py_source.html#l00452">sylva.base.sdf.sdfg.edges</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00054">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="dse_8py_source.html#l00102">sylva.dse.dse.system_model.name</a>, <a class="el" href="glic_8py_source.html#l00122">sylva.glic.glic.control.name</a>, <a class="el" href="sdf_8py_source.html#l00133">sylva.base.sdf.Port.name</a>, <a class="el" href="sdf_8py_source.html#l00298">sylva.base.sdf.actor.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="glic_8py_source.html#l00119">sylva.glic.glic.control.states</a>.</p>
 <div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">def </span>serialize(self):</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">return</span> {<span class="stringliteral">&#39;states&#39;</span>: [s.serialize() <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.states],</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;              <span class="stringliteral">&#39;edges&#39;</span>: [e.serialize() <span class="keywordflow">for</span> e <span class="keywordflow">in</span> self.edges],</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;              <span class="stringliteral">&#39;name&#39;</span>: self.name,</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;              <span class="stringliteral">&#39;default_state_index&#39;</span>: self.default_state.index}</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>

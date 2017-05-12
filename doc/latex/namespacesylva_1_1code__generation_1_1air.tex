@@ -64,7 +64,7 @@ string \hyperlink{namespacesylva_1_1code__generation_1_1air_a70ecf80fff7754a800b
 
 
 
-Definition at line 630 of file air.\+py.
+Definition at line 658 of file air.\+py.
 
 
 
@@ -76,71 +76,72 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl().
 
 
 \begin{DoxyCode}
-630 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a353257c84de380833218457a45c3f2a3}{abb\_to\_vhdl}(one\_abb, sample\_interval, sylva\_lib) :
-631 
-632   entity\_name = \textcolor{stringliteral}{'\_'}.join([one\_abb.fimp.name, str(one\_abb.fimp.index)])
-633   input\_ports, output\_ports = [], []
-634   input\_actor\_and\_ports, output\_actor\_and\_ports = [], []
-635 
-636   \textcolor{keywordflow}{if} hasattr(one\_abb, \textcolor{stringliteral}{'abb\_input\_selector\_actor'}) :
-637 
-638     \textcolor{comment}{# input data ports}
-639     data\_input\_ports = one\_abb.abb\_input\_selector\_actor.data\_input\_ports
-640     input\_actor\_and\_ports += [
-641       ActorAndPort(actor = one\_abb.abb\_input\_selector\_actor,
-642         port = p)
-643       \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} data\_input\_ports ]
-644     one\_abb.data\_input\_ports = data\_input\_ports
-645 
-646     \textcolor{comment}{# read address ports output}
-647     read\_address\_output\_ports = one\_abb.abb\_input\_selector\_actor.read\_address\_ports
-648     output\_actor\_and\_ports += [
-649       ActorAndPort(actor = one\_abb.abb\_input\_selector\_actor,
-650         port = p)
-651       \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} read\_address\_output\_ports ]
-652     one\_abb.read\_address\_output\_ports = read\_address\_output\_ports
-653 
-654     input\_ports += data\_input\_ports
-655     output\_ports += read\_address\_output\_ports
-656 
-657   \textcolor{keywordflow}{if} hasattr(one\_abb, \textcolor{stringliteral}{'abb\_output\_buffer\_actors'}) :
-658 
-659     \textcolor{comment}{# output data ports}
-660     data\_output\_ports = [ a.data\_output\_port \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors ]
-661     output\_actor\_and\_ports += [ ActorAndPort(actor = a, port = a.data\_output\_port)
-662       \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
-663     one\_abb.data\_output\_ports = data\_output\_ports
-664 
-665     \textcolor{comment}{# read address ports input}
-666     read\_address\_input\_ports = [a.read\_address\_port \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors ]
-667     input\_actor\_and\_ports += [ ActorAndPort(actor = a, port = a.read\_address\_port)
-668       \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
-669     one\_abb.read\_address\_input\_ports = read\_address\_input\_ports
-670 
-671     input\_ports += read\_address\_input\_ports
-672     output\_ports += data\_output\_ports
+658 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a353257c84de380833218457a45c3f2a3}{abb\_to\_vhdl}(one\_abb, sample\_interval, sylva\_lib):
+659 
+660     entity\_name = \textcolor{stringliteral}{'\_'}.join([one\_abb.fimp.name, str(one\_abb.fimp.index)])
+661     input\_ports, output\_ports = [], []
+662     input\_actor\_and\_ports, output\_actor\_and\_ports = [], []
+663 
+664     \textcolor{keywordflow}{if} hasattr(one\_abb, \textcolor{stringliteral}{'abb\_input\_selector\_actor'}):
+665 
+666         \textcolor{comment}{# input data ports}
+667         data\_input\_ports = one\_abb.abb\_input\_selector\_actor.data\_input\_ports
+668         input\_actor\_and\_ports += [
+669             ActorAndPort(actor=one\_abb.abb\_input\_selector\_actor,
+670                          port=p)
+671             \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} data\_input\_ports]
+672         one\_abb.data\_input\_ports = data\_input\_ports
 673 
-674   status = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}{hsdf\_to\_vhdl}( one\_abb.hsdf\_actors, one\_abb.hsdf\_edges, sylva\_lib,
-675     entity\_name = entity\_name,
-676     used\_libraries = \{\textcolor{stringliteral}{'IEEE'} : [\textcolor{stringliteral}{'std\_logic\_1164.all'}],\textcolor{stringliteral}{'WORK'} : [\textcolor{stringliteral}{'all'}]\},
-677     output\_file = entity\_name + \textcolor{stringliteral}{'.vhdl'},
-678     input\_actor\_and\_ports = input\_actor\_and\_ports,
-679     output\_actor\_and\_ports = output\_actor\_and\_ports )
-680 
-681   top\_input\_ports = [ p.port \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} input\_actor\_and\_ports ]
-682   top\_output\_ports = [ p.port \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} output\_actor\_and\_ports ]
-683   base\_actor = sdf.actor( name = entity\_name, index = one\_abb.fimp.index,
-684     input\_ports = top\_input\_ports, output\_ports = top\_output\_ports )
-685   one\_abb.top\_actor = sdf.actor( name = entity\_name, index = one\_abb.fimp.index,
-686     input\_ports = top\_input\_ports, output\_ports = top\_output\_ports,
-687     base\_actor = base\_actor )
-688 
-689   one\_abb.top\_actor.assign\_to(fimp.fimp(name = entity\_name, index = one\_abb.fimp.index))
-690   one\_abb.top\_actor.fimp.base\_actor = base\_actor
-691   one\_abb.top\_actor.fimp.global\_index = one\_abb.fimp.index
+674         \textcolor{comment}{# read address ports output}
+675         read\_address\_output\_ports = one\_abb.abb\_input\_selector\_actor.read\_address\_ports
+676         output\_actor\_and\_ports += [
+677             ActorAndPort(actor=one\_abb.abb\_input\_selector\_actor,
+678                          port=p)
+679             \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} read\_address\_output\_ports]
+680         one\_abb.read\_address\_output\_ports = read\_address\_output\_ports
+681 
+682         input\_ports += data\_input\_ports
+683         output\_ports += read\_address\_output\_ports
+684 
+685     \textcolor{keywordflow}{if} hasattr(one\_abb, \textcolor{stringliteral}{'abb\_output\_buffer\_actors'}):
+686 
+687         \textcolor{comment}{# output data ports}
+688         data\_output\_ports = [a.data\_output\_port \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
+689         output\_actor\_and\_ports += [ActorAndPort(actor=a, port=a.data\_output\_port)
+690                                    \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
+691         one\_abb.data\_output\_ports = data\_output\_ports
 692 
-693   \textcolor{keywordflow}{return} status
-694 
+693         \textcolor{comment}{# read address ports input}
+694         read\_address\_input\_ports = [a.read\_address\_port \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
+695         input\_actor\_and\_ports += [ActorAndPort(actor=a, port=a.read\_address\_port)
+696                                   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
+697         one\_abb.read\_address\_input\_ports = read\_address\_input\_ports
+698 
+699         input\_ports += read\_address\_input\_ports
+700         output\_ports += data\_output\_ports
+701 
+702     status = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}{hsdf\_to\_vhdl}(one\_abb.hsdf\_actors, one\_abb.hsdf\_edges, sylva\_lib,
+703                           entity\_name=entity\_name,
+704                           used\_libraries=\{\textcolor{stringliteral}{'IEEE'}: [\textcolor{stringliteral}{'std\_logic\_1164.all'}], \textcolor{stringliteral}{'WORK'}: [\textcolor{stringliteral}{'all'}]\},
+705                           output\_file=entity\_name + \textcolor{stringliteral}{'.vhdl'},
+706                           input\_actor\_and\_ports=input\_actor\_and\_ports,
+707                           output\_actor\_and\_ports=output\_actor\_and\_ports)
+708 
+709     top\_input\_ports = [p.port \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} input\_actor\_and\_ports]
+710     top\_output\_ports = [p.port \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} output\_actor\_and\_ports]
+711     base\_actor = sdf.actor(name=entity\_name, index=one\_abb.fimp.index,
+712                            input\_ports=top\_input\_ports, output\_ports=top\_output\_ports)
+713     one\_abb.top\_actor = sdf.actor(name=entity\_name, index=one\_abb.fimp.index,
+714                                   input\_ports=top\_input\_ports, output\_ports=top\_output\_ports,
+715                                   base\_actor=base\_actor)
+716 
+717     one\_abb.top\_actor.assign\_to(fimp.fimp(name=entity\_name, index=one\_abb.fimp.index))
+718     one\_abb.top\_actor.fimp.base\_actor = base\_actor
+719     one\_abb.top\_actor.fimp.global\_index = one\_abb.fimp.index
+720 
+721     \textcolor{keywordflow}{return} status
+722 
+723 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a29263a2d50cecb3cf4e5aa3b684c4666}\label{namespacesylva_1_1code__generation_1_1air_a29263a2d50cecb3cf4e5aa3b684c4666}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!actor\+\_\+fsm\+\_\+actor@{actor\+\_\+fsm\+\_\+actor}}
@@ -150,7 +151,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl().
 
 
 
-Definition at line 59 of file air.\+py.
+Definition at line 63 of file air.\+py.
 
 
 
@@ -158,26 +159,28 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+counter\+\_\+actor(), and syl
 
 
 \begin{DoxyCode}
-59   default\_name=\textcolor{stringliteral}{'sylva\_actor\_control\_fsm'}):
-60 
-61   current\_cycle\_port = sdf.port(name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(sample\_interval))
-62   control\_port = sdf.port(name=\textcolor{stringliteral}{'control\_output'}, index=0, type=integer\_DataTokenType(max\_output))
-63 
-64   input\_ports = [ current\_cycle\_port ]
-65   output\_ports = [ control\_port ]
-66 
-67   name = default\_name + \textcolor{stringliteral}{'\_'} + str(control.name)
-68 
-69   base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-70   result = sdf.actor(name = name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor = 
-      base\_actor)
-71 
-72   result.control = control
-73   result.control\_port = control\_port
-74   result.current\_cycle\_port = current\_cycle\_port
+63                     default\_name=\textcolor{stringliteral}{'sylva\_actor\_control\_fsm'}):
+64 
+65     current\_cycle\_port = sdf.port(name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(sample\_interval
+      ))
+66     control\_port = sdf.port(name=\textcolor{stringliteral}{'control\_output'}, index=0, type=integer\_DataTokenType(max\_output))
+67 
+68     input\_ports = [current\_cycle\_port]
+69     output\_ports = [control\_port]
+70 
+71     name = default\_name + \textcolor{stringliteral}{'\_'} + str(control.name)
+72 
+73     base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+74     result = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor=base\_actor
+      )
 75 
-76   \textcolor{keywordflow}{return} result
-77 
+76     result.control = control
+77     result.control\_port = control\_port
+78     result.current\_cycle\_port = current\_cycle\_port
+79 
+80     \textcolor{keywordflow}{return} result
+81 
+82 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a12c49366c61395ad719575c8715849cc}\label{namespacesylva_1_1code__generation_1_1air_a12c49366c61395ad719575c8715849cc}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!air\+\_\+to\+\_\+vhdl@{air\+\_\+to\+\_\+vhdl}}
@@ -187,7 +190,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+counter\+\_\+actor(), and syl
 
 
 
-Definition at line 695 of file air.\+py.
+Definition at line 724 of file air.\+py.
 
 
 
@@ -199,117 +202,117 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+write\+\_\+hdl(
 
 
 \begin{DoxyCode}
-695 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a12c49366c61395ad719575c8715849cc}{air\_to\_vhdl}(air, sample\_interval, fimp\_lib, output\_dir, top\_module\_name) :
-696 
-697   cwd = os.getcwd()
-698   os.chdir(output\_dir)
-699 
-700   \textcolor{keywordflow}{for} function\_name \textcolor{keywordflow}{in} fimp\_lib.function\_name\_set :
-701     \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} fimp\_lib[function\_name].set.items() :
-702       value.code\_template = \textcolor{stringliteral}{'entity \{\{entity\_name\}\} is end;'}
-703 
-704   \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air :
-705 
-706     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.fimp.actors :
-707       a.abb = one\_abb
-708     one\_abb.fimp.abb = one\_abb
-709     sylva\_lib = fimp.fimp\_lib(\textcolor{stringliteral}{'FPGA'})
-710     \hyperlink{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}{create\_abb\_hsdf}(one\_abb, sample\_interval)
-711 
-712     \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create temporal fimp lib'} :
-713 
-714       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create counter'} :
-715 
-716         sylva\_lib.add\_fimp(one\_abb.abb\_counter\_actor.fimp)
-717         \textcolor{keywordflow}{if} os.path.isfile(one\_abb.abb\_counter\_actor.fimp.name + \textcolor{stringliteral}{'.vhdl'}) == \textcolor{keyword}{False} :
-718           with open(one\_abb.abb\_counter\_actor.fimp.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-719             fp.write(sflib.vhdl.counter(one\_abb.abb\_counter\_actor))
-720 
-721       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create control fsms'} :
-722         \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_control\_fsm\_actors :
-723           sylva\_lib.add\_fimp(a.fimp)
-724           with open(a.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-725             fp.write(sflib.vhdl.fsm(a))
-726 
-727       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create fimp control'} :
-728         sylva\_lib.add\_fimp(one\_abb.abb\_fimp\_control\_actor.fimp)
-729         with open(one\_abb.abb\_fimp\_control\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-730           fp.write(sflib.vhdl.fimp\_control(one\_abb.abb\_fimp\_control\_actor))
-731 
-732       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create input selector'} :
-733         \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != [] :
-734           sylva\_lib.add\_fimp(one\_abb.abb\_input\_selector\_actor.fimp)
-735           with open(one\_abb.abb\_input\_selector\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-736             fp.write(sflib.vhdl.input\_selector(one\_abb.abb\_input\_selector\_actor))
-737 
-738       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create output selector'} :
-739         \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-740           sylva\_lib.add\_fimp(one\_abb.abb\_output\_selector\_actor.fimp)
-741           with open(one\_abb.abb\_output\_selector\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-742             fp.write(sflib.vhdl.output\_selector(one\_abb.abb\_output\_selector\_actor))
-743 
-744       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create buffer control'} :
-745         \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-746           sylva\_lib.add\_fimp(one\_abb.abb\_buffer\_control\_actor.fimp)
-747           with open(one\_abb.abb\_buffer\_control\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-748             fp.write(sflib.vhdl.buffer\_control(one\_abb.abb\_buffer\_control\_actor))
+724 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a12c49366c61395ad719575c8715849cc}{air\_to\_vhdl}(air, sample\_interval, fimp\_lib, output\_dir, top\_module\_name):
+725 
+726     cwd = os.getcwd()
+727     os.chdir(output\_dir)
+728 
+729     \textcolor{keywordflow}{for} function\_name \textcolor{keywordflow}{in} fimp\_lib.function\_name\_set:
+730         \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} fimp\_lib[function\_name].set.items():
+731             value.code\_template = \textcolor{stringliteral}{'entity \{\{entity\_name\}\} is end;'}
+732 
+733     \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air:
+734 
+735         \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.fimp.actors:
+736             a.abb = one\_abb
+737         one\_abb.fimp.abb = one\_abb
+738         sylva\_lib = fimp.fimp\_lib(\textcolor{stringliteral}{'FPGA'})
+739         \hyperlink{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}{create\_abb\_hsdf}(one\_abb, sample\_interval)
+740 
+741         \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create temporal fimp lib'}:
+742 
+743             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create counter'}:
+744 
+745                 sylva\_lib.add\_fimp(one\_abb.abb\_counter\_actor.fimp)
+746                 \textcolor{keywordflow}{if} os.path.isfile(one\_abb.abb\_counter\_actor.fimp.name + \textcolor{stringliteral}{'.vhdl'}) == \textcolor{keyword}{False}:
+747                     with open(one\_abb.abb\_counter\_actor.fimp.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+748                         fp.write(sflib.vhdl.counter(one\_abb.abb\_counter\_actor))
 749 
-750       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create output buffer'} :
-751         \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-752           \textcolor{keywordflow}{for} b \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors :
-753             sylva\_lib.add\_fimp(b.fimp)
-754             with open(b.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp :
-755               fp.write(sflib.vhdl.output\_buffer(b))
-756 
-757       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'copy fimp from lib'} :
-758         fs = fimp\_lib[one\_abb.fimp.actors[0].base\_actor.name]
-759         fs.input\_ports[\textcolor{stringliteral}{'en'}] = \textcolor{stringliteral}{'std\_logic'}
-760         sylva\_lib.add\_fimp\_set(fs)
-761         \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a34788575516a0c7731b0e5abd4d42231}{create\_empty\_vhdl}(one\_abb.fimp.actors[0],
-762           libraries = \{\textcolor{stringliteral}{'IEEE'} : [\textcolor{stringliteral}{'std\_logic\_1164.all'}],\textcolor{stringliteral}{'WORK'} : [\textcolor{stringliteral}{'all'}]\},
-763           fimp\_count = one\_abb.fimp.type + 1,
-764           additional\_input\_ports = [sdf.port(name = \textcolor{stringliteral}{'en'}, type = std\_logic)])
-765 
-766     \_\_ = \hyperlink{namespacesylva_1_1code__generation_1_1air_a353257c84de380833218457a45c3f2a3}{abb\_to\_vhdl}(one\_abb, sample\_interval, sylva\_lib)
-767 
-768   top\_actors = [ one\_abb.top\_actor \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air ]
-769   top\_edges = []
-770 
-771   \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air :
+750             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create control fsms'}:
+751                 \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_control\_fsm\_actors:
+752                     sylva\_lib.add\_fimp(a.fimp)
+753                     with open(a.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+754                         fp.write(sflib.vhdl.fsm(a))
+755 
+756             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create fimp control'}:
+757                 sylva\_lib.add\_fimp(one\_abb.abb\_fimp\_control\_actor.fimp)
+758                 with open(one\_abb.abb\_fimp\_control\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+759                     fp.write(sflib.vhdl.fimp\_control(one\_abb.abb\_fimp\_control\_actor))
+760 
+761             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create input selector'}:
+762                 \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != []:
+763                     sylva\_lib.add\_fimp(one\_abb.abb\_input\_selector\_actor.fimp)
+764                     with open(one\_abb.abb\_input\_selector\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+765                         fp.write(sflib.vhdl.input\_selector(one\_abb.abb\_input\_selector\_actor))
+766 
+767             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create output selector'}:
+768                 \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+769                     sylva\_lib.add\_fimp(one\_abb.abb\_output\_selector\_actor.fimp)
+770                     with open(one\_abb.abb\_output\_selector\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+771                         fp.write(sflib.vhdl.output\_selector(one\_abb.abb\_output\_selector\_actor))
 772 
-773     \textcolor{comment}{# for each actor that requires the output data from this actor}
-774     \textcolor{comment}{# we need to connect the data\_output\_ports and the read\_address\_ports}
-775     data\_edges = [ sdf.edge(
-776       src\_actor = p.src\_actor.abb.top\_actor,
-777       src\_port = p.src\_port.top\_port,
-778       dest\_actor = one\_abb.top\_actor,
-779       dest\_port = p.dest\_port.top\_port)
-780       \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.fimp.actors
-781         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.previous ]
-782 
-783     top\_edges += data\_edges
-784 
-785     \textcolor{keywordflow}{if} len(data\_edges) > 0 :
-786       address\_edges = [ sdf.edge(
-787         src\_actor = address\_port.source\_fimp.abb.top\_actor,
-788         src\_port = [ p \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} address\_port.source\_fimp.abb.read\_address\_input\_ports
-789           \textcolor{keywordflow}{if} p.name == address\_port.name ][0],
-790         dest\_actor = one\_abb.top\_actor,
-791         dest\_port = address\_port)
-792         \textcolor{keywordflow}{for} address\_port \textcolor{keywordflow}{in} one\_abb.abb\_input\_selector\_actor.read\_address\_ports ]
-793       top\_edges += address\_edges
+773             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create buffer control'}:
+774                 \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+775                     sylva\_lib.add\_fimp(one\_abb.abb\_buffer\_control\_actor.fimp)
+776                     with open(one\_abb.abb\_buffer\_control\_actor.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+777                         fp.write(sflib.vhdl.buffer\_control(one\_abb.abb\_buffer\_control\_actor))
+778 
+779             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'create output buffer'}:
+780                 \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+781                     \textcolor{keywordflow}{for} b \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors:
+782                         sylva\_lib.add\_fimp(b.fimp)
+783                         with open(b.name + \textcolor{stringliteral}{'.vhdl'}, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} fp:
+784                             fp.write(sflib.vhdl.output\_buffer(b))
+785 
+786             \textcolor{keywordflow}{if} \textcolor{stringliteral}{'copy fimp from lib'}:
+787                 fs = fimp\_lib[one\_abb.fimp.actors[0].base\_actor.name]
+788                 fs.input\_ports[\textcolor{stringliteral}{'en'}] = \textcolor{stringliteral}{'std\_logic'}
+789                 sylva\_lib.add\_fimp\_set(fs)
+790                 \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a34788575516a0c7731b0e5abd4d42231}{create\_empty\_vhdl}(one\_abb.fimp.actors[0],
+791                                   libraries=\{\textcolor{stringliteral}{'IEEE'}: [\textcolor{stringliteral}{'std\_logic\_1164.all'}], \textcolor{stringliteral}{'WORK'}: [\textcolor{stringliteral}{'all'}]\},
+792                                   fimp\_count=one\_abb.fimp.type + 1,
+793                                   additional\_input\_ports=[sdf.port(name=\textcolor{stringliteral}{'en'}, type=std\_logic)])
 794 
-795   temp\_lib = fimp.fimp\_lib(architecture = \textcolor{stringliteral}{'VHDL'}, name = \textcolor{stringliteral}{'temporal lib for top module'})
-796   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} top\_actors :
-797     temp\_lib.add\_fimp(a.fimp)
-798 
-799   \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}{hsdf\_to\_vhdl}( top\_actors, top\_edges, temp\_lib,
-800     entity\_name = top\_module\_name,
-801     used\_libraries = \{\textcolor{stringliteral}{'IEEE'} : [\textcolor{stringliteral}{'std\_logic\_1164.all'}],\textcolor{stringliteral}{'WORK'} : [\textcolor{stringliteral}{'all'}]\},
-802     output\_file = top\_module\_name + \textcolor{stringliteral}{'.vhdl'} )
-803 
-804   os.chdir(cwd)
-805 \end{DoxyCode}
+795         \_\_ = \hyperlink{namespacesylva_1_1code__generation_1_1air_a353257c84de380833218457a45c3f2a3}{abb\_to\_vhdl}(one\_abb, sample\_interval, sylva\_lib)
+796 
+797     top\_actors = [one\_abb.top\_actor \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air]
+798     top\_edges = []
+799 
+800     \textcolor{keywordflow}{for} one\_abb \textcolor{keywordflow}{in} air:
+801 
+802         \textcolor{comment}{# for each actor that requires the output data from this actor}
+803         \textcolor{comment}{# we need to connect the data\_output\_ports and the read\_address\_ports}
+804         data\_edges = [sdf.edge(
+805             src\_actor=p.src\_actor.abb.top\_actor,
+806             src\_port=p.src\_port.top\_port,
+807             dest\_actor=one\_abb.top\_actor,
+808             dest\_port=p.dest\_port.top\_port)
+809             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.fimp.actors
+810             \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.previous]
+811 
+812         top\_edges += data\_edges
+813 
+814         \textcolor{keywordflow}{if} len(data\_edges) > 0:
+815             address\_edges = [sdf.edge(
+816                 src\_actor=address\_port.source\_fimp.abb.top\_actor,
+817                 src\_port=[p \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} address\_port.source\_fimp.abb.read\_address\_input\_ports
+818                           \textcolor{keywordflow}{if} p.name == address\_port.name][0],
+819                 dest\_actor=one\_abb.top\_actor,
+820                 dest\_port=address\_port)
+821                 \textcolor{keywordflow}{for} address\_port \textcolor{keywordflow}{in} one\_abb.abb\_input\_selector\_actor.read\_address\_ports]
+822             top\_edges += address\_edges
+823 
+824     temp\_lib = fimp.fimp\_lib(architecture=\textcolor{stringliteral}{'VHDL'}, name=\textcolor{stringliteral}{'temporal lib for top module'})
+825     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} top\_actors:
+826         temp\_lib.add\_fimp(a.fimp)
+827 
+828     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}{hsdf\_to\_vhdl}(top\_actors, top\_edges, temp\_lib,
+829                  entity\_name=top\_module\_name,
+830                  used\_libraries=\{\textcolor{stringliteral}{'IEEE'}: [\textcolor{stringliteral}{'std\_logic\_1164.all'}], \textcolor{stringliteral}{'WORK'}: [\textcolor{stringliteral}{'all'}]\},
+831                  output\_file=top\_module\_name + \textcolor{stringliteral}{'.vhdl'})
+832 
+833     os.chdir(cwd)
+834 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a2437e8f4411d574d2a354bee377e1e31}\label{namespacesylva_1_1code__generation_1_1air_a2437e8f4411d574d2a354bee377e1e31}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!buffer\+\_\+actors@{buffer\+\_\+actors}}
 \index{buffer\+\_\+actors@{buffer\+\_\+actors}!sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}}
@@ -318,7 +321,7 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+write\+\_\+hdl(
 
 
 
-Definition at line 376 of file air.\+py.
+Definition at line 405 of file air.\+py.
 
 
 
@@ -326,87 +329,89 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 \begin{DoxyCode}
-376   read\_write\_signal=\textcolor{stringliteral}{'wr'}):
-377 
-378   fimp\_index = str(fimp\_instance.index)
-379   extra\_buffer = fimp\_instance.extra\_buffer == 1
-380 
-381   result = []
-382   \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True} :
-383     \textcolor{comment}{# each actor has its own output buffers}
-384     \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors :
-385       result.append([])
-386       actor\_index = actor.index
-387       \textcolor{comment}{# each output port has one output buffer}
-388       \textcolor{keywordflow}{for} port \textcolor{keywordflow}{in} actor.output\_ports :
-389         name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_index), str(actor\_index), str(port.index)])
-390         wr\_port = sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, str(actor.index), str(port.index)]),
-391           index=0, type=std\_logic)
-392         write\_address\_port = sdf.port(
-393           name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, str(actor\_index), str(port.index)]),
-394           type = integer\_DataTokenType(port.count))
-395         read\_address\_port = sdf.port(
-396           name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'}, str(fimp\_instance.index), str(actor\_index), str(port.index)]),
-397           type = integer\_DataTokenType(port.count))
-398         data\_input\_port = sdf.port(
-399           name = \textcolor{stringliteral}{'\_'}.join([port.name]),
-400           type = port.type)
-401         data\_output\_port = sdf.port(
-402           name = \textcolor{stringliteral}{'\_'}.join([port.name, str(actor.index)]),
-403           type = port.type)
-404         input\_ports = [ wr\_port, write\_address\_port, read\_address\_port, data\_input\_port ]
-405         output\_ports = [ data\_output\_port ]
-406         port.top\_port = data\_output\_port
-407         base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-408         one\_buffer = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports,
-409           base\_actor = base\_actor)
-410         one\_buffer.buffer\_size = port.count
-411         one\_buffer.wr\_port = wr\_port
-412         one\_buffer.write\_address\_port = write\_address\_port
-413         one\_buffer.read\_address\_port = read\_address\_port
-414         one\_buffer.data\_input\_port = data\_input\_port
-415         one\_buffer.data\_output\_port = data\_output\_port
-416         result[-1].append(one\_buffer)
-417 
-418   \textcolor{keywordflow}{else} : \textcolor{comment}{# extra\_buffer = False}
-419 
-420     actor\_count = len(fimp\_instance.actors)
-421     \textcolor{keywordflow}{for} port \textcolor{keywordflow}{in} fimp\_instance.actors[0].output\_ports :
-422       name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_index), \textcolor{stringliteral}{'shared'}, str(port.index)])
-423       wr\_port = sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, \textcolor{stringliteral}{'shared'}, str(port.index)]),
-424         index=0, type=std\_logic)
-425       write\_address\_port = sdf.port(
-426         name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, \textcolor{stringliteral}{'shared'}, str(port.index)]),
-427         type = integer\_DataTokenType(port.count * actor\_count))
-428       read\_address\_port = sdf.port(
-429         name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'}, str(fimp\_instance.index), \textcolor{stringliteral}{'shared'}, str(port.index)]),
-430         type = integer\_DataTokenType(port.count * actor\_count))
-431       data\_input\_port = sdf.port(
-432         name = \textcolor{stringliteral}{'\_'}.join([port.name]),
-433         type = port.type)
-434       data\_output\_port = sdf.port(
-435         name = \textcolor{stringliteral}{'\_'}.join([port.name, \textcolor{stringliteral}{'shared'}]),
-436         type = port.type)
-437       input\_ports = [ wr\_port, write\_address\_port, read\_address\_port, data\_input\_port ]
-438       output\_ports = [ data\_output\_port ]
-439       \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors :
-440         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports :
-441           \textcolor{keywordflow}{if} p.name == port.name :
-442             p.top\_port = data\_output\_port
-443       base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-444       one\_buffer = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports,
-445         base\_actor = base\_actor)
-446       one\_buffer.buffer\_size = port.count * len(fimp\_instance.actors)
-447       one\_buffer.wr\_port = wr\_port
-448       one\_buffer.write\_address\_port = write\_address\_port
-449       one\_buffer.read\_address\_port = read\_address\_port
-450       one\_buffer.data\_input\_port = data\_input\_port
-451       one\_buffer.data\_output\_port = data\_output\_port
-452 
-453       result.append(one\_buffer)
-454 
-455   \textcolor{keywordflow}{return} result
-456 
+405                   read\_write\_signal=\textcolor{stringliteral}{'wr'}):
+406 
+407     fimp\_index = str(fimp\_instance.index)
+408     extra\_buffer = fimp\_instance.extra\_buffer == 1
+409 
+410     result = []
+411     \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
+412         \textcolor{comment}{# each actor has its own output buffers}
+413         \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors:
+414             result.append([])
+415             actor\_index = actor.index
+416             \textcolor{comment}{# each output port has one output buffer}
+417             \textcolor{keywordflow}{for} port \textcolor{keywordflow}{in} actor.output\_ports:
+418                 name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_index), str(actor\_index), str(port.index)])
+419                 wr\_port = sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, str(actor.index), str(port.index)]),
+420                                    index=0, type=std\_logic)
+421                 write\_address\_port = sdf.port(
+422                     name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, str(actor\_index), str(port.index)]),
+423                     type=integer\_DataTokenType(port.count))
+424                 read\_address\_port = sdf.port(
+425                     name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'}, str(fimp\_instance.index), str(actor\_index), str(
+      port.index)]),
+426                     type=integer\_DataTokenType(port.count))
+427                 data\_input\_port = sdf.port(
+428                     name=\textcolor{stringliteral}{'\_'}.join([port.name]),
+429                     type=port.type)
+430                 data\_output\_port = sdf.port(
+431                     name=\textcolor{stringliteral}{'\_'}.join([port.name, str(actor.index)]),
+432                     type=port.type)
+433                 input\_ports = [wr\_port, write\_address\_port, read\_address\_port, data\_input\_port]
+434                 output\_ports = [data\_output\_port]
+435                 port.top\_port = data\_output\_port
+436                 base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+437                 one\_buffer = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports,
+438                                        base\_actor=base\_actor)
+439                 one\_buffer.buffer\_size = port.count
+440                 one\_buffer.wr\_port = wr\_port
+441                 one\_buffer.write\_address\_port = write\_address\_port
+442                 one\_buffer.read\_address\_port = read\_address\_port
+443                 one\_buffer.data\_input\_port = data\_input\_port
+444                 one\_buffer.data\_output\_port = data\_output\_port
+445                 result[-1].append(one\_buffer)
+446 
+447     \textcolor{keywordflow}{else}:  \textcolor{comment}{# extra\_buffer = False}
+448 
+449         actor\_count = len(fimp\_instance.actors)
+450         \textcolor{keywordflow}{for} port \textcolor{keywordflow}{in} fimp\_instance.actors[0].output\_ports:
+451             name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_index), \textcolor{stringliteral}{'shared'}, str(port.index)])
+452             wr\_port = sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, \textcolor{stringliteral}{'shared'}, str(port.index)]),
+453                                index=0, type=std\_logic)
+454             write\_address\_port = sdf.port(
+455                 name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, \textcolor{stringliteral}{'shared'}, str(port.index)]),
+456                 type=integer\_DataTokenType(port.count * actor\_count))
+457             read\_address\_port = sdf.port(
+458                 name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'}, str(fimp\_instance.index), \textcolor{stringliteral}{'shared'}, str(port.index)]),
+459                 type=integer\_DataTokenType(port.count * actor\_count))
+460             data\_input\_port = sdf.port(
+461                 name=\textcolor{stringliteral}{'\_'}.join([port.name]),
+462                 type=port.type)
+463             data\_output\_port = sdf.port(
+464                 name=\textcolor{stringliteral}{'\_'}.join([port.name, \textcolor{stringliteral}{'shared'}]),
+465                 type=port.type)
+466             input\_ports = [wr\_port, write\_address\_port, read\_address\_port, data\_input\_port]
+467             output\_ports = [data\_output\_port]
+468             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors:
+469                 \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports:
+470                     \textcolor{keywordflow}{if} p.name == port.name:
+471                         p.top\_port = data\_output\_port
+472             base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+473             one\_buffer = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports,
+474                                    base\_actor=base\_actor)
+475             one\_buffer.buffer\_size = port.count * len(fimp\_instance.actors)
+476             one\_buffer.wr\_port = wr\_port
+477             one\_buffer.write\_address\_port = write\_address\_port
+478             one\_buffer.read\_address\_port = read\_address\_port
+479             one\_buffer.data\_input\_port = data\_input\_port
+480             one\_buffer.data\_output\_port = data\_output\_port
+481 
+482             result.append(one\_buffer)
+483 
+484     \textcolor{keywordflow}{return} result
+485 
+486 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a1a46162a8988513e15b0b45a4b456340}\label{namespacesylva_1_1code__generation_1_1air_a1a46162a8988513e15b0b45a4b456340}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!buffer\+\_\+control\+\_\+actor@{buffer\+\_\+control\+\_\+actor}}
@@ -416,7 +421,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 
-Definition at line 296 of file air.\+py.
+Definition at line 323 of file air.\+py.
 
 
 
@@ -428,67 +433,68 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 \begin{DoxyCode}
-296   read\_write\_signal=\textcolor{stringliteral}{'wr'}, extra\_buffer = \textcolor{keyword}{True}):
-297 
-298   control\_ports, control\_port\_range = \(\backslash\)
-299   \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
-300 
-301   current\_cycle\_port = sdf.port(name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(max\_cycle))
-302 
-303   wr\_ports = [ sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, str(actor.index)]), index=i, type=std\_logic)
-304                \textcolor{keywordflow}{for} i, actor \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors) ]
-305 
-306   address\_ports = []
-307   \_\_, cycles\_per\_data\_token = \hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(fimp\_instance.actors[0])
-308 
-309   \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True} :
-310     \textcolor{comment}{# each actor has its own output buffers}
-311     \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors :
-312       address\_ports.append([])
-313       \textcolor{comment}{# each output port has one output buffer}
-314       \textcolor{keywordflow}{for} port\_index, port \textcolor{keywordflow}{in} enumerate(actor.output\_ports) :
-315         address\_ports[-1].append(
-316           sdf.port( name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, str(actor.index), str(port.index)]),
-317             type = integer\_DataTokenType(port.count) ) )
-318         address\_ports[-1][-1].actions = [
-319           ( actor.output\_start + token\_index * cycles\_per\_data\_token[port\_index], token\_index )
-320             \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(port.count) ]
-321   \textcolor{keywordflow}{else} :
-322     actor\_count = len(fimp\_instance.actors)
-323     \textcolor{comment}{# all output ports of all actors share one output buffer}
-324     \textcolor{keywordflow}{for} port\_index, port \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors[0].output\_ports) :
-325       address\_ports.append(
-326         sdf.port( name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, \textcolor{stringliteral}{'shared'}, str(port.index)]),
-327           type = integer\_DataTokenType(port.count * actor\_count) ) )
-328       address\_ports[-1].actions = []
-329       token\_index = 0
-330       \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors) :
-331         \textcolor{keywordflow}{for} \_\_ \textcolor{keywordflow}{in} xrange(port.count) :
-332           action = ( actor.output\_start + token\_index * cycles\_per\_data\_token[port\_index],
-333             token\_index )
-334           token\_index += 1
-335           address\_ports[-1].actions.append(action)
-336 
-337   input\_ports = control\_ports + [ current\_cycle\_port ]
-338   output\_ports = wr\_ports + address\_ports
-339 
-340   name=\textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_instance.index)])
-341   base\_actor = sdf.actor(
-342     name = name,
-343     input\_ports = input\_ports,
-344     output\_ports = output\_ports)
-345   result = sdf.actor(
-346     name = name,
-347     input\_ports = input\_ports,
-348     output\_ports = output\_ports,
-349     base\_actor = base\_actor)
-350   result.control\_ports = control\_ports
-351   result.current\_cycle\_port = current\_cycle\_port
-352   result.wr\_ports = wr\_ports
-353   result.address\_ports = address\_ports
-354 
-355   \textcolor{keywordflow}{return} result
-356 
+323                          read\_write\_signal=\textcolor{stringliteral}{'wr'}, extra\_buffer=\textcolor{keyword}{True}):
+324 
+325     control\_ports, control\_port\_range = \(\backslash\)
+326         \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
+327 
+328     current\_cycle\_port = sdf.port(name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(max\_cycle))
+329 
+330     wr\_ports = [sdf.port(name=\textcolor{stringliteral}{'\_'}.join([read\_write\_signal, str(actor.index)]), index=i, type=std\_logic)
+331                 \textcolor{keywordflow}{for} i, actor \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors)]
+332 
+333     address\_ports = []
+334     \_\_, cycles\_per\_data\_token = \hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(fimp\_instance.actors[0])
+335 
+336     \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
+337         \textcolor{comment}{# each actor has its own output buffers}
+338         \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors:
+339             address\_ports.append([])
+340             \textcolor{comment}{# each output port has one output buffer}
+341             \textcolor{keywordflow}{for} port\_index, port \textcolor{keywordflow}{in} enumerate(actor.output\_ports):
+342                 address\_ports[-1].append(
+343                     sdf.port(name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, str(actor.index), str(port.index)]),
+344                              type=integer\_DataTokenType(port.count)))
+345                 address\_ports[-1][-1].actions = [
+346                     (actor.output\_start + token\_index * cycles\_per\_data\_token[port\_index], token\_index)
+347                     \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(port.count)]
+348     \textcolor{keywordflow}{else}:
+349         actor\_count = len(fimp\_instance.actors)
+350         \textcolor{comment}{# all output ports of all actors share one output buffer}
+351         \textcolor{keywordflow}{for} port\_index, port \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors[0].output\_ports):
+352             address\_ports.append(
+353                 sdf.port(name=\textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'write\_address'}, \textcolor{stringliteral}{'shared'}, str(port.index)]),
+354                          type=integer\_DataTokenType(port.count * actor\_count)))
+355             address\_ports[-1].actions = []
+356             token\_index = 0
+357             \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(fimp\_instance.actors):
+358                 \textcolor{keywordflow}{for} \_\_ \textcolor{keywordflow}{in} xrange(port.count):
+359                     action = (actor.output\_start + token\_index * cycles\_per\_data\_token[port\_index],
+360                               token\_index)
+361                     token\_index += 1
+362                     address\_ports[-1].actions.append(action)
+363 
+364     input\_ports = control\_ports + [current\_cycle\_port]
+365     output\_ports = wr\_ports + address\_ports
+366 
+367     name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_instance.index)])
+368     base\_actor = sdf.actor(
+369         name=name,
+370         input\_ports=input\_ports,
+371         output\_ports=output\_ports)
+372     result = sdf.actor(
+373         name=name,
+374         input\_ports=input\_ports,
+375         output\_ports=output\_ports,
+376         base\_actor=base\_actor)
+377     result.control\_ports = control\_ports
+378     result.current\_cycle\_port = current\_cycle\_port
+379     result.wr\_ports = wr\_ports
+380     result.address\_ports = address\_ports
+381 
+382     \textcolor{keywordflow}{return} result
+383 
+384 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}\label{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!counter\+\_\+actor@{counter\+\_\+actor}}
@@ -498,7 +504,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 
-Definition at line 38 of file air.\+py.
+Definition at line 40 of file air.\+py.
 
 
 
@@ -510,26 +516,28 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 \begin{DoxyCode}
-38 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}{counter\_actor}(fimp\_instance, sample\_interval, default\_name='sylva\_counter'):
-39 
-40   current\_cycle\_port = sdf.port(
-41     name = \textcolor{stringliteral}{'current\_cycle'},
-42     type = integer\_DataTokenType(sample\_interval))
-43 
-44   output\_ports = [ current\_cycle\_port ]
+40 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}{counter\_actor}(fimp\_instance, sample\_interval, default\_name='sylva\_counter'):
+41 
+42     current\_cycle\_port = sdf.port(
+43         name=\textcolor{stringliteral}{'current\_cycle'},
+44         type=integer\_DataTokenType(sample\_interval))
 45 
-46   name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(sample\_interval)])
+46     output\_ports = [current\_cycle\_port]
 47 
-48   base\_actor = sdf.actor(name = name, output\_ports = output\_ports)
-49   result = sdf.actor(name = name,
-50     output\_ports = output\_ports, base\_actor = base\_actor)
-51 
-52   result.current\_cycle\_port = current\_cycle\_port
-53   result.max\_output = sample\_interval
-54 
-55   \textcolor{keywordflow}{return} result
+48     name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(sample\_interval)])
+49 
+50     base\_actor = sdf.actor(name=name, output\_ports=output\_ports)
+51     result = sdf.actor(name=name,
+52                        output\_ports=output\_ports, base\_actor=base\_actor)
+53 
+54     result.current\_cycle\_port = current\_cycle\_port
+55     result.max\_output = sample\_interval
 56 
-57 \textcolor{comment}{# Each ABB uses its own type of FSM}
+57     \textcolor{keywordflow}{return} result
+58 
+59 \textcolor{comment}{# Each ABB uses its own type of FSM}
+60 
+61 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}\label{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!create\+\_\+abb\+\_\+hsdf@{create\+\_\+abb\+\_\+hsdf}}
@@ -539,7 +547,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 
-Definition at line 457 of file air.\+py.
+Definition at line 487 of file air.\+py.
 
 
 
@@ -551,182 +559,180 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl().
 
 
 \begin{DoxyCode}
-457 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}{create\_abb\_hsdf}(one\_abb, sample\_interval):
-458 
-459   one\_abb.abb\_counter\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}{counter\_actor}(one\_abb.fimp, sample\_interval)
-460   one\_abb.abb\_control\_fsm\_actors = [
-461       \hyperlink{namespacesylva_1_1code__generation_1_1air_a29263a2d50cecb3cf4e5aa3b684c4666}{actor\_fsm\_actor}(control, sample\_interval) \textcolor{keywordflow}{for} control \textcolor{keywordflow}{in} one\_abb.actor\_controls]
-462   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != [] :
-463     one\_abb.abb\_input\_selector\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}{input\_selector\_actor}(one\_abb.fimp, 
+487 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a5a2588aa1c35ad4bd47d3b8f7eeca94a}{create\_abb\_hsdf}(one\_abb, sample\_interval):
+488 
+489     one\_abb.abb\_counter\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a50394584613c57985bc89c8fa14a058f}{counter\_actor}(one\_abb.fimp, sample\_interval)
+490     one\_abb.abb\_control\_fsm\_actors = [
+491         \hyperlink{namespacesylva_1_1code__generation_1_1air_a29263a2d50cecb3cf4e5aa3b684c4666}{actor\_fsm\_actor}(control, sample\_interval) \textcolor{keywordflow}{for} control \textcolor{keywordflow}{in} one\_abb.actor\_controls]
+492     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != []:
+493         one\_abb.abb\_input\_selector\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}{input\_selector\_actor}(one\_abb.fimp, 
       sample\_interval)
-464   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-465     one\_abb.abb\_output\_selector\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a3e01248fb07a8e940919fe35ddcd684e}{output\_selector\_actor}(one\_abb.fimp)
-466     one\_abb.abb\_output\_buffer\_actors = \hyperlink{namespacesylva_1_1code__generation_1_1air_a2437e8f4411d574d2a354bee377e1e31}{buffer\_actors}(one\_abb.fimp)
-467     one\_abb.abb\_buffer\_control\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a1a46162a8988513e15b0b45a4b456340}{buffer\_control\_actor}(
-468       one\_abb.actor\_controls, one\_abb.fimp, sample\_interval,
-469       extra\_buffer = one\_abb.fimp.extra\_buffer == 1)
-470   one\_abb.abb\_fimp\_control\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a2ea6ae18c1f30dcbc16f01d32d092979}{fimp\_control\_actor}(
-471       one\_abb.actor\_controls, one\_abb.fimp)
-472   one\_abb.abb\_fimp\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}{fimp\_actor}(one\_abb.fimp)
-473 
-474 
-475   one\_abb.hsdf\_actors = [one\_abb.abb\_counter\_actor]
-476   one\_abb.hsdf\_actors += one\_abb.abb\_control\_fsm\_actors
-477   one\_abb.hsdf\_actors.append(one\_abb.abb\_fimp\_control\_actor)
-478   one\_abb.hsdf\_actors.append(one\_abb.abb\_fimp\_actor)
-479 
-480   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != [] :
-481     one\_abb.hsdf\_actors.append(one\_abb.abb\_input\_selector\_actor)
-482   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-483     one\_abb.hsdf\_actors.append(one\_abb.abb\_output\_selector\_actor)
-484     one\_abb.hsdf\_actors.append(one\_abb.abb\_buffer\_control\_actor)
-485     \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1 :
-486       one\_abb.hsdf\_actors += [
-487         a \textcolor{keywordflow}{for} b \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} b]
-488     \textcolor{keywordflow}{else} :
-489       one\_abb.hsdf\_actors += [
-490         a \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
-491 
-492   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.hsdf\_actors :
-493     global\_index = 0
-494     a.assign\_to(fimp.fimp(name = a.base\_actor.name))
-495     a.fimp.global\_index = global\_index
-496     global\_index += 1
-497     a.fimp.base\_actor = a.base\_actor
-498 
-499   one\_abb.abb\_fimp\_actor.fimp.type = one\_abb.fimp.type
-500 
-501   \textcolor{comment}{# counter to fsms}
-502   one\_abb.edges\_counter\_to\_fsm = [sdf.edge(src\_actor=one\_abb.abb\_counter\_actor,
-503                                            src\_port=one\_abb.abb\_counter\_actor.current\_cycle\_port,
-504                                            dest\_actor=a, dest\_port=a.current\_cycle\_port)
-505                                   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_control\_fsm\_actors]
-506 
-507   one\_abb.hsdf\_edges = list(one\_abb.edges\_counter\_to\_fsm)
+494     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+495         one\_abb.abb\_output\_selector\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a3e01248fb07a8e940919fe35ddcd684e}{output\_selector\_actor}(one\_abb.fimp)
+496         one\_abb.abb\_output\_buffer\_actors = \hyperlink{namespacesylva_1_1code__generation_1_1air_a2437e8f4411d574d2a354bee377e1e31}{buffer\_actors}(one\_abb.fimp)
+497         one\_abb.abb\_buffer\_control\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a1a46162a8988513e15b0b45a4b456340}{buffer\_control\_actor}(
+498             one\_abb.actor\_controls, one\_abb.fimp, sample\_interval,
+499             extra\_buffer=one\_abb.fimp.extra\_buffer == 1)
+500     one\_abb.abb\_fimp\_control\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a2ea6ae18c1f30dcbc16f01d32d092979}{fimp\_control\_actor}(
+501         one\_abb.actor\_controls, one\_abb.fimp)
+502     one\_abb.abb\_fimp\_actor = \hyperlink{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}{fimp\_actor}(one\_abb.fimp)
+503 
+504     one\_abb.hsdf\_actors = [one\_abb.abb\_counter\_actor]
+505     one\_abb.hsdf\_actors += one\_abb.abb\_control\_fsm\_actors
+506     one\_abb.hsdf\_actors.append(one\_abb.abb\_fimp\_control\_actor)
+507     one\_abb.hsdf\_actors.append(one\_abb.abb\_fimp\_actor)
 508 
-509   \textcolor{comment}{# fsms to fimp control}
-510   one\_abb.edges\_fsm\_to\_fimp\_control = \(\backslash\)
-511       [sdf.edge(src\_actor=a,
-512                 src\_port=a.output\_ports[0],
-513                 dest\_actor=one\_abb.abb\_fimp\_control\_actor,
-514                 dest\_port=one\_abb.abb\_fimp\_control\_actor.input\_ports[i])
-515        \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
-516   one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_fimp\_control
-517 
-518   \textcolor{comment}{# fimp control to fimp}
-519   one\_abb.edge\_fimp\_control\_to\_fimp = \(\backslash\)
-520       sdf.edge(src\_actor=one\_abb.abb\_fimp\_control\_actor,
-521                src\_port=one\_abb.abb\_fimp\_control\_actor.output\_ports[0],
-522                dest\_actor=one\_abb.abb\_fimp\_actor,
-523                dest\_port=one\_abb.abb\_fimp\_actor.en\_port)
-524   one\_abb.hsdf\_edges.append(one\_abb.edge\_fimp\_control\_to\_fimp)
-525 
-526   \textcolor{comment}{# fsms to input selector}
-527   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != [] :
-528     one\_abb.edges\_fsm\_to\_input\_selector = [sdf.edge(src\_actor=a,
-529                                                     src\_port=a.output\_ports[0],
-530                                                     dest\_actor=one\_abb.abb\_input\_selector\_actor,
-531                                                     dest\_port=one\_abb.abb\_input\_selector\_actor.input\_ports[
-      i])
-532                                            \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
-533     one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_input\_selector
-534     \textcolor{comment}{# counter to output buffer control}
-535     one\_abb.edge\_counter\_to\_input\_selector = sdf.edge(
-536       src\_actor=one\_abb.abb\_counter\_actor,
-537       src\_port=one\_abb.abb\_counter\_actor.output\_ports[0],
-538       dest\_actor=one\_abb.abb\_input\_selector\_actor ,
-539       dest\_port=one\_abb.abb\_input\_selector\_actor.current\_cycle\_port)
-540     one\_abb.hsdf\_edges.append(one\_abb.edge\_counter\_to\_input\_selector)
-541 
-542 
-543   \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != [] :
-544 
-545     \textcolor{comment}{# counter to output buffer control}
-546     one\_abb.edge\_counter\_to\_output\_buffer = sdf.edge(
-547       src\_actor=one\_abb.abb\_counter\_actor,
-548       src\_port=one\_abb.abb\_counter\_actor.output\_ports[0],
-549       dest\_actor=one\_abb.abb\_buffer\_control\_actor,
-550       dest\_port=one\_abb.abb\_buffer\_control\_actor.current\_cycle\_port)
-551     one\_abb.hsdf\_edges.append(one\_abb.edge\_counter\_to\_output\_buffer)
-552 
-553 
-554     \textcolor{comment}{# fsms to output selector}
-555     one\_abb.edges\_fsm\_to\_output\_selector = [sdf.edge(src\_actor=a,
-556                                                      src\_port=a.output\_ports[0],
-557                                                      dest\_actor=one\_abb.abb\_output\_selector\_actor,
-558                                                      dest\_port=
-      one\_abb.abb\_output\_selector\_actor.input\_ports[i])
-559                                             \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
-560     one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_output\_selector
-561 
-562     \textcolor{comment}{# fsms to output buffers}
-563     one\_abb.edges\_fsm\_to\_output\_buffer\_controls = \(\backslash\)
-564         [sdf.edge(src\_actor=a,
-565                   src\_port=a.output\_ports[0],
-566                   dest\_actor=one\_abb.abb\_buffer\_control\_actor,
-567                   dest\_port=one\_abb.abb\_buffer\_control\_actor.input\_ports[i])
-568          \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
-569     one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_output\_buffer\_controls
+509     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != []:
+510         one\_abb.hsdf\_actors.append(one\_abb.abb\_input\_selector\_actor)
+511     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+512         one\_abb.hsdf\_actors.append(one\_abb.abb\_output\_selector\_actor)
+513         one\_abb.hsdf\_actors.append(one\_abb.abb\_buffer\_control\_actor)
+514         \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1:
+515             one\_abb.hsdf\_actors += [
+516                 a \textcolor{keywordflow}{for} b \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} b]
+517         \textcolor{keywordflow}{else}:
+518             one\_abb.hsdf\_actors += [
+519                 a \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors]
+520 
+521     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.hsdf\_actors:
+522         global\_index = 0
+523         a.assign\_to(fimp.fimp(name=a.base\_actor.name))
+524         a.fimp.global\_index = global\_index
+525         global\_index += 1
+526         a.fimp.base\_actor = a.base\_actor
+527 
+528     one\_abb.abb\_fimp\_actor.fimp.type = one\_abb.fimp.type
+529 
+530     \textcolor{comment}{# counter to fsms}
+531     one\_abb.edges\_counter\_to\_fsm = [sdf.edge(src\_actor=one\_abb.abb\_counter\_actor,
+532                                              src\_port=one\_abb.abb\_counter\_actor.current\_cycle\_port,
+533                                              dest\_actor=a, dest\_port=a.current\_cycle\_port)
+534                                     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} one\_abb.abb\_control\_fsm\_actors]
+535 
+536     one\_abb.hsdf\_edges = list(one\_abb.edges\_counter\_to\_fsm)
+537 
+538     \textcolor{comment}{# fsms to fimp control}
+539     one\_abb.edges\_fsm\_to\_fimp\_control = \(\backslash\)
+540         [sdf.edge(src\_actor=a,
+541                   src\_port=a.output\_ports[0],
+542                   dest\_actor=one\_abb.abb\_fimp\_control\_actor,
+543                   dest\_port=one\_abb.abb\_fimp\_control\_actor.input\_ports[i])
+544          \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
+545     one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_fimp\_control
+546 
+547     \textcolor{comment}{# fimp control to fimp}
+548     one\_abb.edge\_fimp\_control\_to\_fimp = \(\backslash\)
+549         sdf.edge(src\_actor=one\_abb.abb\_fimp\_control\_actor,
+550                  src\_port=one\_abb.abb\_fimp\_control\_actor.output\_ports[0],
+551                  dest\_actor=one\_abb.abb\_fimp\_actor,
+552                  dest\_port=one\_abb.abb\_fimp\_actor.en\_port)
+553     one\_abb.hsdf\_edges.append(one\_abb.edge\_fimp\_control\_to\_fimp)
+554 
+555     \textcolor{comment}{# fsms to input selector}
+556     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].input\_ports != []:
+557         one\_abb.edges\_fsm\_to\_input\_selector = [sdf.edge(src\_actor=a,
+558                                                         src\_port=a.output\_ports[0],
+559                                                         dest\_actor=one\_abb.abb\_input\_selector\_actor,
+560                                                         dest\_port=
+      one\_abb.abb\_input\_selector\_actor.input\_ports[i])
+561                                                \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
+562         one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_input\_selector
+563         \textcolor{comment}{# counter to output buffer control}
+564         one\_abb.edge\_counter\_to\_input\_selector = sdf.edge(
+565             src\_actor=one\_abb.abb\_counter\_actor,
+566             src\_port=one\_abb.abb\_counter\_actor.output\_ports[0],
+567             dest\_actor=one\_abb.abb\_input\_selector\_actor,
+568             dest\_port=one\_abb.abb\_input\_selector\_actor.current\_cycle\_port)
+569         one\_abb.hsdf\_edges.append(one\_abb.edge\_counter\_to\_input\_selector)
 570 
-571     \textcolor{comment}{# output buffer control to output buffers}
-572     \textcolor{comment}{# wr}
-573     \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1 :
-574       one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr = \(\backslash\)
-575         [ sdf.edge(src\_actor = one\_abb.abb\_buffer\_control\_actor,
-576             src\_port = one\_abb.abb\_buffer\_control\_actor.wr\_ports[i],
-577             dest\_actor = one\_buffer\_actor,
-578             dest\_port = one\_buffer\_actor.wr\_port)
-579          \textcolor{keywordflow}{for} buffer\_set \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors
-580          \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(buffer\_set)]
-581     \textcolor{keywordflow}{else} :
-582       one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr = \(\backslash\)
-583         [ sdf.edge(src\_actor = one\_abb.abb\_buffer\_control\_actor,
-584             src\_port = one\_abb.abb\_buffer\_control\_actor.wr\_ports[i],
-585             dest\_actor = one\_buffer\_actor,
-586             dest\_port = one\_buffer\_actor.wr\_port)
-587          \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_output\_buffer\_actors)]
-588     one\_abb.hsdf\_edges += one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr
-589 
-590     \textcolor{comment}{# output buffer control to output buffers}
-591     \textcolor{comment}{# address}
-592     \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1 :
-593       one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address = \(\backslash\)
-594         [ sdf.edge(src\_actor = one\_abb.abb\_buffer\_control\_actor,
-595             src\_port = one\_abb.abb\_buffer\_control\_actor.address\_ports[actor\_index][port\_index],
-596             dest\_actor = one\_buffer\_actor,
-597             dest\_port = one\_buffer\_actor.write\_address\_port)
-598          \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(one\_abb.fimp.actors)
-599          \textcolor{keywordflow}{for} port\_index, \_\_ \textcolor{keywordflow}{in} enumerate(actor.output\_ports)]
-600     \textcolor{keywordflow}{else} :
-601       one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address = \(\backslash\)
-602         [ sdf.edge(src\_actor = one\_abb.abb\_buffer\_control\_actor,
-603             src\_port = one\_abb.abb\_buffer\_control\_actor.address\_ports[port\_index],
-604             dest\_actor = one\_buffer\_actor,
-605             dest\_port = one\_buffer\_actor.write\_address\_port)
-606          \textcolor{keywordflow}{for} port\_index, \_\_ \textcolor{keywordflow}{in} enumerate(one\_abb.fimp.actors[0].output\_ports) ]
-607     one\_abb.hsdf\_edges += one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address
-608 
-609     \textcolor{comment}{# fimp to output\_buffers}
-610     \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1 :
-611       one\_abb.edges\_fimp\_to\_output\_buffers = \(\backslash\)
-612         [ sdf.edge(src\_actor = one\_abb.abb\_fimp\_actor,
-613             src\_port = one\_abb.abb\_fimp\_actor.output\_ports[i],
-614             dest\_actor = one\_buffer\_actor,
-615             dest\_port = one\_buffer\_actor.data\_input\_port)
-616          \textcolor{keywordflow}{for} buffer\_set \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors
-617          \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(buffer\_set)]
-618     \textcolor{keywordflow}{else} :
-619       one\_abb.edges\_fimp\_to\_output\_buffers = \(\backslash\)
-620         [ sdf.edge(src\_actor = one\_abb.abb\_fimp\_actor,
-621             src\_port = one\_abb.abb\_fimp\_actor.output\_ports[i],
-622             dest\_actor = one\_buffer\_actor,
-623             dest\_port = one\_buffer\_actor.data\_input\_port)
-624          \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_output\_buffer\_actors) ]
-625 
-626     one\_abb.hsdf\_edges += one\_abb.edges\_fimp\_to\_output\_buffers
-627 
-628   \textcolor{keywordflow}{return} one\_abb
-629 
+571     \textcolor{keywordflow}{if} one\_abb.fimp.actors[0].output\_ports != []:
+572 
+573         \textcolor{comment}{# counter to output buffer control}
+574         one\_abb.edge\_counter\_to\_output\_buffer = sdf.edge(
+575             src\_actor=one\_abb.abb\_counter\_actor,
+576             src\_port=one\_abb.abb\_counter\_actor.output\_ports[0],
+577             dest\_actor=one\_abb.abb\_buffer\_control\_actor,
+578             dest\_port=one\_abb.abb\_buffer\_control\_actor.current\_cycle\_port)
+579         one\_abb.hsdf\_edges.append(one\_abb.edge\_counter\_to\_output\_buffer)
+580 
+581         \textcolor{comment}{# fsms to output selector}
+582         one\_abb.edges\_fsm\_to\_output\_selector = [sdf.edge(src\_actor=a,
+583                                                          src\_port=a.output\_ports[0],
+584                                                          dest\_actor=one\_abb.abb\_output\_selector\_actor,
+585                                                          dest\_port=
+      one\_abb.abb\_output\_selector\_actor.input\_ports[i])
+586                                                 \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
+587         one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_output\_selector
+588 
+589         \textcolor{comment}{# fsms to output buffers}
+590         one\_abb.edges\_fsm\_to\_output\_buffer\_controls = \(\backslash\)
+591             [sdf.edge(src\_actor=a,
+592                       src\_port=a.output\_ports[0],
+593                       dest\_actor=one\_abb.abb\_buffer\_control\_actor,
+594                       dest\_port=one\_abb.abb\_buffer\_control\_actor.input\_ports[i])
+595              \textcolor{keywordflow}{for} i, a \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_control\_fsm\_actors)]
+596         one\_abb.hsdf\_edges += one\_abb.edges\_fsm\_to\_output\_buffer\_controls
+597 
+598         \textcolor{comment}{# output buffer control to output buffers}
+599         \textcolor{comment}{# wr}
+600         \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1:
+601             one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr = \(\backslash\)
+602                 [sdf.edge(src\_actor=one\_abb.abb\_buffer\_control\_actor,
+603                           src\_port=one\_abb.abb\_buffer\_control\_actor.wr\_ports[i],
+604                           dest\_actor=one\_buffer\_actor,
+605                           dest\_port=one\_buffer\_actor.wr\_port)
+606                  \textcolor{keywordflow}{for} buffer\_set \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors
+607                  \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(buffer\_set)]
+608         \textcolor{keywordflow}{else}:
+609             one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr = \(\backslash\)
+610                 [sdf.edge(src\_actor=one\_abb.abb\_buffer\_control\_actor,
+611                           src\_port=one\_abb.abb\_buffer\_control\_actor.wr\_ports[i],
+612                           dest\_actor=one\_buffer\_actor,
+613                           dest\_port=one\_buffer\_actor.wr\_port)
+614                  \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_output\_buffer\_actors)]
+615         one\_abb.hsdf\_edges += one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_wr
+616 
+617         \textcolor{comment}{# output buffer control to output buffers}
+618         \textcolor{comment}{# address}
+619         \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1:
+620             one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address = \(\backslash\)
+621                 [sdf.edge(src\_actor=one\_abb.abb\_buffer\_control\_actor,
+622                           src\_port=one\_abb.abb\_buffer\_control\_actor.address\_ports[actor\_index][port\_index],
+623                           dest\_actor=one\_buffer\_actor,
+624                           dest\_port=one\_buffer\_actor.write\_address\_port)
+625                  \textcolor{keywordflow}{for} actor\_index, actor \textcolor{keywordflow}{in} enumerate(one\_abb.fimp.actors)
+626                  \textcolor{keywordflow}{for} port\_index, \_\_ \textcolor{keywordflow}{in} enumerate(actor.output\_ports)]
+627         \textcolor{keywordflow}{else}:
+628             one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address = \(\backslash\)
+629                 [sdf.edge(src\_actor=one\_abb.abb\_buffer\_control\_actor,
+630                           src\_port=one\_abb.abb\_buffer\_control\_actor.address\_ports[port\_index],
+631                           dest\_actor=one\_buffer\_actor,
+632                           dest\_port=one\_buffer\_actor.write\_address\_port)
+633                  \textcolor{keywordflow}{for} port\_index, \_\_ \textcolor{keywordflow}{in} enumerate(one\_abb.fimp.actors[0].output\_ports)]
+634         one\_abb.hsdf\_edges += one\_abb.edges\_output\_buffer\_controls\_to\_output\_buffers\_address
+635 
+636         \textcolor{comment}{# fimp to output\_buffers}
+637         \textcolor{keywordflow}{if} one\_abb.fimp.extra\_buffer == 1:
+638             one\_abb.edges\_fimp\_to\_output\_buffers = \(\backslash\)
+639                 [sdf.edge(src\_actor=one\_abb.abb\_fimp\_actor,
+640                           src\_port=one\_abb.abb\_fimp\_actor.output\_ports[i],
+641                           dest\_actor=one\_buffer\_actor,
+642                           dest\_port=one\_buffer\_actor.data\_input\_port)
+643                  \textcolor{keywordflow}{for} buffer\_set \textcolor{keywordflow}{in} one\_abb.abb\_output\_buffer\_actors
+644                  \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(buffer\_set)]
+645         \textcolor{keywordflow}{else}:
+646             one\_abb.edges\_fimp\_to\_output\_buffers = \(\backslash\)
+647                 [sdf.edge(src\_actor=one\_abb.abb\_fimp\_actor,
+648                           src\_port=one\_abb.abb\_fimp\_actor.output\_ports[i],
+649                           dest\_actor=one\_buffer\_actor,
+650                           dest\_port=one\_buffer\_actor.data\_input\_port)
+651                  \textcolor{keywordflow}{for} i, one\_buffer\_actor \textcolor{keywordflow}{in} enumerate(one\_abb.abb\_output\_buffer\_actors)]
+652 
+653         one\_abb.hsdf\_edges += one\_abb.edges\_fimp\_to\_output\_buffers
+654 
+655     \textcolor{keywordflow}{return} one\_abb
+656 
+657 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}\label{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!fimp\+\_\+actor@{fimp\+\_\+actor}}
@@ -736,7 +742,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl().
 
 
 
-Definition at line 357 of file air.\+py.
+Definition at line 385 of file air.\+py.
 
 
 
@@ -748,24 +754,25 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 \begin{DoxyCode}
-357 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}{fimp\_actor}(fimp\_instance, fimp\_enable\_signal\_name='en'):
-358   name = fimp\_instance.actors[0].base\_actor.name
-359   index = fimp\_instance.index
-360 
-361   data\_input\_ports = fimp\_instance.actors[0].base\_actor.input\_ports
-362   en\_port = sdf.port( name =fimp\_enable\_signal\_name, index=0, type=std\_logic)
-363 
-364   input\_ports = data\_input\_ports + [en\_port]
-365   output\_ports = fimp\_instance.actors[0].base\_actor.output\_ports
-366 
-367   base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-368   result = sdf.actor(name=name, input\_ports = input\_ports, output\_ports=output\_ports, base\_actor = 
-      base\_actor,
-369     index=fimp\_instance.index)
-370   result.en\_port = en\_port
-371   result.fimp\_type = fimp\_instance.type
-372   \textcolor{keywordflow}{return} result
-373 
+385 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a5a82ebeeb6def57b9dc6784ab9cd43f4}{fimp\_actor}(fimp\_instance, fimp\_enable\_signal\_name='en'):
+386     name = fimp\_instance.actors[0].base\_actor.name
+387     index = fimp\_instance.index
+388 
+389     data\_input\_ports = fimp\_instance.actors[0].base\_actor.input\_ports
+390     en\_port = sdf.port(name=fimp\_enable\_signal\_name, index=0, type=std\_logic)
+391 
+392     input\_ports = data\_input\_ports + [en\_port]
+393     output\_ports = fimp\_instance.actors[0].base\_actor.output\_ports
+394 
+395     base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+396     result = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor=base\_actor
+      ,
+397                        index=fimp\_instance.index)
+398     result.en\_port = en\_port
+399     result.fimp\_type = fimp\_instance.type
+400     \textcolor{keywordflow}{return} result
+401 
+402 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a2ea6ae18c1f30dcbc16f01d32d092979}\label{namespacesylva_1_1code__generation_1_1air_a2ea6ae18c1f30dcbc16f01d32d092979}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!fimp\+\_\+control\+\_\+actor@{fimp\+\_\+control\+\_\+actor}}
@@ -775,7 +782,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 
-Definition at line 271 of file air.\+py.
+Definition at line 294 of file air.\+py.
 
 
 
@@ -787,19 +794,21 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 \begin{DoxyCode}
-271   idle=glic.IDLE):
-272 
-273   input\_ports, \_\_ \(\backslash\)
-274   = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
-275 
-276   output\_ports = [sdf.port(name=fimp\_enable\_signal\_name, index=0,
-277                            type=std\_logic)]
-278   name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_instance.index)])
-279 
-280   base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-281   \textcolor{keywordflow}{return} sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor = base\_actor)
-282 
-283 \textcolor{comment}{# output\_cycles, cycles\_per\_data\_token}
+294                        idle=glic.IDLE):
+295 
+296     input\_ports, \_\_ \(\backslash\)
+297         = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
+298 
+299     output\_ports = [sdf.port(name=fimp\_enable\_signal\_name, index=0,
+300                              type=std\_logic)]
+301     name = \textcolor{stringliteral}{'\_'}.join([default\_name, str(fimp\_instance.index)])
+302 
+303     base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+304     \textcolor{keywordflow}{return} sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor=base\_actor)
+305 
+306 \textcolor{comment}{# output\_cycles, cycles\_per\_data\_token}
+307 
+308 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}\label{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!get\+\_\+control\+\_\+ports@{get\+\_\+control\+\_\+ports}}
@@ -809,7 +818,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 
-Definition at line 78 of file air.\+py.
+Definition at line 83 of file air.\+py.
 
 
 
@@ -821,12 +830,13 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+buffer\+\_\+control\+\_\+acto
 
 
 \begin{DoxyCode}
-78 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(name\_prefix, max\_output, fimp\_instance) :
-79 
-80   control\_ports = [ \hyperlink{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}{get\_one\_control\_port}(name\_prefix, max\_output, index = actor.index)
-81                     \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors ]
-82   \textcolor{keywordflow}{return} control\_ports, xrange(len(control\_ports))
-83 
+83 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(name\_prefix, max\_output, fimp\_instance):
+84 
+85     control\_ports = [\hyperlink{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}{get\_one\_control\_port}(name\_prefix, max\_output, index=actor.index)
+86                      \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} fimp\_instance.actors]
+87     \textcolor{keywordflow}{return} control\_ports, xrange(len(control\_ports))
+88 
+89 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}\label{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!get\+\_\+one\+\_\+control\+\_\+port@{get\+\_\+one\+\_\+control\+\_\+port}}
@@ -836,7 +846,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+buffer\+\_\+control\+\_\+acto
 
 
 
-Definition at line 84 of file air.\+py.
+Definition at line 90 of file air.\+py.
 
 
 
@@ -844,11 +854,12 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+get\+\_\+control\+\_\+ports()
 
 
 \begin{DoxyCode}
-84 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}{get\_one\_control\_port}(name\_prefix, max\_output, index = 0) :
-85 
-86   \textcolor{keywordflow}{return} sdf.port(name=\textcolor{stringliteral}{'\_'}.join([name\_prefix, str(index)]), index=index, type=integer\_DataTokenType(
+90 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_aab89db05c96a30b48a7afc9c857af6d7}{get\_one\_control\_port}(name\_prefix, max\_output, index=0):
+91 
+92     \textcolor{keywordflow}{return} sdf.port(name=\textcolor{stringliteral}{'\_'}.join([name\_prefix, str(index)]), index=index, type=integer\_DataTokenType(
       max\_output))
-87 
+93 
+94 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}\label{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!input\+\_\+selector\+\_\+actor@{input\+\_\+selector\+\_\+actor}}
@@ -858,7 +869,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+get\+\_\+control\+\_\+ports()
 
 
 
-Definition at line 122 of file air.\+py.
+Definition at line 143 of file air.\+py.
 
 
 
@@ -870,119 +881,121 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 \begin{DoxyCode}
-122 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}{input\_selector\_actor}(fimp\_instance, sample\_interval, max\_output=glic.IO, 
+143 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_aaa165d9fb26a2af721734a446b1549fa}{input\_selector\_actor}(fimp\_instance, sample\_interval, max\_output=glic.IO, 
       default\_name='sylva\_input\_selector'):
-123 
-124   input\_ports = []
-125   output\_ports = []
-126 
-127   name = default\_name + \textcolor{stringliteral}{'\_'} + str(fimp\_instance.index)
-128 
-129   control\_ports, control\_port\_range \(\backslash\)
-130   = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
-131 
-132   data\_input\_ports = []
-133   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors :
-134     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.input\_ports :
-135       data\_input\_port\_name = \textcolor{stringliteral}{'\_'}.join([p.name, str(a.index), str(p.index)])
-136       data\_input\_port = sdf.port(name = data\_input\_port\_name, type = p.type)
-137       data\_input\_port.actor = a
-138       p.top\_port = data\_input\_port
-139       data\_input\_ports.append(data\_input\_port)
-140 
-141   current\_cycle\_port = sdf.port(
-142     name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(sample\_interval))
-143 
-144   data\_output\_ports = [ sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(fimp\_instance.index)]), type=p.type)
-145                    \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} fimp\_instance.actors[0].input\_ports ]
-146 
-147   read\_address\_ports = \{\}
-148   \textcolor{comment}{# assume actors are sorted based on their start time}
-149   \textcolor{comment}{# increasing}
-150   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors :
-151 
-152     input\_start\_time = a.start
-153     input\_end\_time = a.input\_end
-154 
-155     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.previous :
-156       cycles\_step = \hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(p.src\_actor)[1][p.src\_port.index]
-157 
-158       source\_fimp = p.src\_actor.fimp
-159       source\_actor = p.src\_actor
-160       source\_port = p.src\_port
-161       extra\_buffer = p.src\_actor.fimp.extra\_buffer == 1
-162       source\_actor\_count = len(p.src\_actor.fimp.actors)
-163 
-164       \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True} :
-165         addres\_port\_type = integer\_DataTokenType(source\_port.count)
-166         address\_port\_name = \textcolor{stringliteral}{'\_'}.join([ \textcolor{stringliteral}{'read\_address'},
-167         str(source\_fimp.index),
-168         str(source\_actor.index),
-169         str(source\_port.index)])
-170 
-171       \textcolor{keywordflow}{else} :
-172         addres\_port\_type = \(\backslash\)
-173         integer\_DataTokenType(source\_port.count * source\_actor\_count)
-174         address\_port\_name = \textcolor{stringliteral}{'\_'}.join([ \textcolor{stringliteral}{'read\_address'},
-175         str(source\_fimp.index),
-176         \textcolor{stringliteral}{'shared'},
-177         str(source\_port.index)])
+144 
+145     input\_ports = []
+146     output\_ports = []
+147 
+148     name = default\_name + \textcolor{stringliteral}{'\_'} + str(fimp\_instance.index)
+149 
+150     control\_ports, control\_port\_range \(\backslash\)
+151         = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
+152 
+153     data\_input\_ports = []
+154     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors:
+155         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.input\_ports:
+156             data\_input\_port\_name = \textcolor{stringliteral}{'\_'}.join([p.name, str(a.index), str(p.index)])
+157             data\_input\_port = sdf.port(name=data\_input\_port\_name, type=p.type)
+158             data\_input\_port.actor = a
+159             p.top\_port = data\_input\_port
+160             data\_input\_ports.append(data\_input\_port)
+161 
+162     current\_cycle\_port = sdf.port(
+163         name=\textcolor{stringliteral}{'current\_cycle'}, index=0, type=integer\_DataTokenType(sample\_interval))
+164 
+165     data\_output\_ports = [sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(fimp\_instance.index)]), type=p.type)
+166                          \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} fimp\_instance.actors[0].input\_ports]
+167 
+168     read\_address\_ports = \{\}
+169     \textcolor{comment}{# assume actors are sorted based on their start time}
+170     \textcolor{comment}{# increasing}
+171     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors:
+172 
+173         input\_start\_time = a.start
+174         input\_end\_time = a.input\_end
+175 
+176         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.previous:
+177             cycles\_step = \hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(p.src\_actor)[1][p.src\_port.index]
 178 
-179       \textcolor{keywordflow}{if} address\_port\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} read\_address\_ports.keys():
-180         address\_port = sdf.port(name=address\_port\_name, type=addres\_port\_type)
-181         address\_port.extra\_buffer = extra\_buffer
-182         address\_port.actions = []
-183         address\_port.source\_fimp = source\_fimp
-184         address\_port.source\_port = source\_port
-185         \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True} :
-186           address\_port.source\_actor = source\_actor
-187         read\_address\_ports[address\_port\_name] = address\_port
-188 
-189       actions = read\_address\_ports[address\_port\_name].actions
-190       previous\_actions = len(actions)
+179             source\_fimp = p.src\_actor.fimp
+180             source\_actor = p.src\_actor
+181             source\_port = p.src\_port
+182             extra\_buffer = p.src\_actor.fimp.extra\_buffer == 1
+183             source\_actor\_count = len(p.src\_actor.fimp.actors)
+184 
+185             \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
+186                 addres\_port\_type = integer\_DataTokenType(source\_port.count)
+187                 address\_port\_name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'},
+188                                               str(source\_fimp.index),
+189                                               str(source\_actor.index),
+190                                               str(source\_port.index)])
 191 
-192       \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
-193         address\_offset = previous\_actions * p.dest\_port.count
-194         actions += [ AddressPortAction(
-195           cycle = input\_start\_time + token\_index * cycles\_step,
-196           address = address\_offset + token\_index )
-197           \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(p.dest\_port.count) ]
-198       \textcolor{keywordflow}{else} :
-199         actor\_index = p.src\_actor.abb.fimp.actors.index(p.src\_actor)
-200         address\_offset = actor\_index * p.src\_port.count + previous\_actions * p.dest\_port.count
-201         actions += [ AddressPortAction(
-202           cycle = input\_start\_time + token\_index * cycles\_step,
-203           address = address\_offset + token\_index )
-204           \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(p.dest\_port.count) ]
-205 
-206   read\_address\_ports = read\_address\_ports.values()
-207   input\_ports = control\_ports + data\_input\_ports + [current\_cycle\_port]
-208   output\_ports = data\_output\_ports + read\_address\_ports
+192             \textcolor{keywordflow}{else}:
+193                 addres\_port\_type = \(\backslash\)
+194                     integer\_DataTokenType(source\_port.count * source\_actor\_count)
+195                 address\_port\_name = \textcolor{stringliteral}{'\_'}.join([\textcolor{stringliteral}{'read\_address'},
+196                                               str(source\_fimp.index),
+197                                               \textcolor{stringliteral}{'shared'},
+198                                               str(source\_port.index)])
+199 
+200             \textcolor{keywordflow}{if} address\_port\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} read\_address\_ports.keys():
+201                 address\_port = sdf.port(name=address\_port\_name, type=addres\_port\_type)
+202                 address\_port.extra\_buffer = extra\_buffer
+203                 address\_port.actions = []
+204                 address\_port.source\_fimp = source\_fimp
+205                 address\_port.source\_port = source\_port
+206                 \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
+207                     address\_port.source\_actor = source\_actor
+208                 read\_address\_ports[address\_port\_name] = address\_port
 209 
-210   base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-211 
-212   result = sdf.actor(name = name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor = 
-      base\_actor)
-213   result.control\_ports = control\_ports
-214   result.data\_input\_ports = data\_input\_ports
-215   result.data\_output\_ports = data\_output\_ports
-216   result.read\_address\_ports = read\_address\_ports
-217   result.current\_cycle\_port = current\_cycle\_port
-218 
-219   result.control\_map = [
-220     ControlMap(output\_port = data\_output\_port,
-221       conditions = [
-222         PortMapCondition(control\_port = c,
-223           valid\_values = [glic.INPUT, glic.IO],
-224           input\_port = data\_input\_ports[j + i*len(data\_output\_ports)])
-225         \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(control\_ports)
-226           \textcolor{keywordflow}{for} j, \_\_ \textcolor{keywordflow}{in} enumerate(data\_output\_ports) ])
-227     \textcolor{keywordflow}{for} data\_output\_port \textcolor{keywordflow}{in} data\_output\_ports ]
-228 
-229   \textcolor{keywordflow}{return} result
+210             actions = read\_address\_ports[address\_port\_name].actions
+211             previous\_actions = len(actions)
+212 
+213             \textcolor{keywordflow}{if} extra\_buffer == \textcolor{keyword}{True}:
+214                 address\_offset = previous\_actions * p.dest\_port.count
+215                 actions += [AddressPortAction(
+216                     cycle=input\_start\_time + token\_index * cycles\_step,
+217                     address=address\_offset + token\_index)
+218                     \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(p.dest\_port.count)]
+219             \textcolor{keywordflow}{else}:
+220                 actor\_index = p.src\_actor.abb.fimp.actors.index(p.src\_actor)
+221                 address\_offset = actor\_index * p.src\_port.count + previous\_actions * p.dest\_port.count
+222                 actions += [AddressPortAction(
+223                     cycle=input\_start\_time + token\_index * cycles\_step,
+224                     address=address\_offset + token\_index)
+225                     \textcolor{keywordflow}{for} token\_index \textcolor{keywordflow}{in} xrange(p.dest\_port.count)]
+226 
+227     read\_address\_ports = read\_address\_ports.values()
+228     input\_ports = control\_ports + data\_input\_ports + [current\_cycle\_port]
+229     output\_ports = data\_output\_ports + read\_address\_ports
 230 
-231 \textcolor{comment}{# Each ABB has its own output selector type}
-232 \textcolor{comment}{# sylva\_output\_selector\_N, N = FIMP index}
+231     base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+232 
+233     result = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor=base\_actor
+      )
+234     result.control\_ports = control\_ports
+235     result.data\_input\_ports = data\_input\_ports
+236     result.data\_output\_ports = data\_output\_ports
+237     result.read\_address\_ports = read\_address\_ports
+238     result.current\_cycle\_port = current\_cycle\_port
+239 
+240     result.control\_map = [
+241         ControlMap(output\_port=data\_output\_port,
+242                    conditions=[
+243                        PortMapCondition(control\_port=c,
+244                                         valid\_values=[glic.INPUT, glic.IO],
+245                                         input\_port=data\_input\_ports[j + i*len(data\_output\_ports)])
+246                        \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(control\_ports)
+247                        \textcolor{keywordflow}{for} j, \_\_ \textcolor{keywordflow}{in} enumerate(data\_output\_ports)])
+248         \textcolor{keywordflow}{for} data\_output\_port \textcolor{keywordflow}{in} data\_output\_ports]
+249 
+250     \textcolor{keywordflow}{return} result
+251 
+252 \textcolor{comment}{# Each ABB has its own output selector type}
+253 \textcolor{comment}{# sylva\_output\_selector\_N, N = FIMP index}
+254 
+255 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}\label{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!output\+\_\+data\+\_\+structure@{output\+\_\+data\+\_\+structure}}
@@ -992,7 +1005,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf().
 
 
 
-Definition at line 284 of file air.\+py.
+Definition at line 309 of file air.\+py.
 
 
 
@@ -1004,15 +1017,17 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+buffer\+\_\+control\+\_\+acto
 
 
 \begin{DoxyCode}
-284 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(actor):
-285   output\_cycles = actor.end - actor.output\_start + 1
-286   cycles\_per\_data\_token = [ int(math.ceil(float(output\_cycles)/p.count)) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} actor.output\_ports ]
-287   \textcolor{keywordflow}{return} output\_cycles, cycles\_per\_data\_token
-288 
-289 \textcolor{comment}{# Each ABB has its own buffer control type}
-290 \textcolor{comment}{# since the number of HSDF actors are different}
-291 \textcolor{comment}{# name = Name\_FIMPIndex\_HSDFActorIndex}
-292 \textcolor{comment}{# One controller controls all the buffers}
+309 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1air_a83186b3b999778cee36ac81d42b2cd44}{output\_data\_structure}(actor):
+310     output\_cycles = actor.end - actor.output\_start + 1
+311     cycles\_per\_data\_token = [int(math.ceil(float(output\_cycles)/p.count)) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} actor.output\_ports]
+312     \textcolor{keywordflow}{return} output\_cycles, cycles\_per\_data\_token
+313 
+314 \textcolor{comment}{# Each ABB has its own buffer control type}
+315 \textcolor{comment}{# since the number of HSDF actors are different}
+316 \textcolor{comment}{# name = Name\_FIMPIndex\_HSDFActorIndex}
+317 \textcolor{comment}{# One controller controls all the buffers}
+318 
+319 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1air_a3e01248fb07a8e940919fe35ddcd684e}\label{namespacesylva_1_1code__generation_1_1air_a3e01248fb07a8e940919fe35ddcd684e}} 
 \index{sylva\+::code\+\_\+generation\+::air@{sylva\+::code\+\_\+generation\+::air}!output\+\_\+selector\+\_\+actor@{output\+\_\+selector\+\_\+actor}}
@@ -1022,7 +1037,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+buffer\+\_\+control\+\_\+acto
 
 
 
-Definition at line 234 of file air.\+py.
+Definition at line 257 of file air.\+py.
 
 
 
@@ -1034,37 +1049,37 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+create\+\_\+abb\+\_\+hsdf(), 
 
 
 \begin{DoxyCode}
-234   default\_name=\textcolor{stringliteral}{'sylva\_output\_selector'}):
-235 
-236   control\_ports, control\_port\_range \(\backslash\)
-237   = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
-238 
-239   data\_ports = [ sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(fimp\_instance.index)]), type=p.type)
-240                    \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} fimp\_instance.actors[0].output\_ports ]
-241   data\_port\_range = xrange(len(data\_ports))
-242 
-243   input\_ports = control\_ports + data\_ports
-244 
-245   output\_ports = []
-246   \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors :
-247     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports :
-248       output\_ports.append(sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(a.index), str(p.index)]), type=p.type))
-249       output\_ports[-1].actor\_index = a.index
-250 
-251   name = default\_name + \textcolor{stringliteral}{'\_'} + str(fimp\_instance.index)
-252 
-253   base\_actor = sdf.actor(name = name, input\_ports = input\_ports, output\_ports = output\_ports)
-254 
-255   result = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor = base\_actor
+257                           default\_name=\textcolor{stringliteral}{'sylva\_output\_selector'}):
+258 
+259     control\_ports, control\_port\_range \(\backslash\)
+260         = \hyperlink{namespacesylva_1_1code__generation_1_1air_a71d379169f113b29c326aa9f70c6d47e}{get\_control\_ports}(\textcolor{stringliteral}{'control\_input'}, max\_output, fimp\_instance)
+261 
+262     data\_ports = [sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(fimp\_instance.index)]), type=p.type)
+263                   \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} fimp\_instance.actors[0].output\_ports]
+264     data\_port\_range = xrange(len(data\_ports))
+265 
+266     input\_ports = control\_ports + data\_ports
+267 
+268     output\_ports = []
+269     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} fimp\_instance.actors:
+270         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} a.output\_ports:
+271             output\_ports.append(sdf.port(name=\textcolor{stringliteral}{'\_'}.join([p.name, str(a.index), str(p.index)]), type=p.type))
+272             output\_ports[-1].actor\_index = a.index
+273 
+274     name = default\_name + \textcolor{stringliteral}{'\_'} + str(fimp\_instance.index)
+275 
+276     base\_actor = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports)
+277 
+278     result = sdf.actor(name=name, input\_ports=input\_ports, output\_ports=output\_ports, base\_actor=base\_actor
       )
-256   result.control\_port\_range = control\_port\_range
-257   result.data\_port\_range = data\_port\_range
-258   \textcolor{keywordflow}{return} result
-259 
-260 
-261 \textcolor{comment}{# Each ABB has its own FIMP control type}
-262 \textcolor{comment}{# since the number of HSDF actors are different}
-263 \textcolor{comment}{# name = sylva\_fimp\_control\_FIMPIndex}
+279     result.control\_port\_range = control\_port\_range
+280     result.data\_port\_range = data\_port\_range
+281     \textcolor{keywordflow}{return} result
+282 
+283 
+284 \textcolor{comment}{# Each ABB has its own FIMP control type}
+285 \textcolor{comment}{# since the number of HSDF actors are different}
+286 \textcolor{comment}{# name = sylva\_fimp\_control\_FIMPIndex}
 \end{DoxyCode}
 
 

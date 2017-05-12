@@ -34,7 +34,7 @@ def \hyperlink{classsylva_1_1base_1_1sdf_1_1edge_a10a8a20cd0052b046c627e7e22af11
 \end{DoxyVerb}
  
 
-Definition at line 106 of file sdf.\+py.
+Definition at line 174 of file sdf.\+py.
 
 
 
@@ -47,24 +47,24 @@ Definition at line 106 of file sdf.\+py.
 
 
 
-Definition at line 114 of file sdf.\+py.
+Definition at line 182 of file sdf.\+py.
 
 
 \begin{DoxyCode}
-114                      dest\_actor=\textcolor{keywordtype}{None}, dest\_port=\textcolor{keywordtype}{None}):
-115 
-116             self.src\_actor = src\_actor
-117             self.dest\_actor = dest\_actor
-118             self.src\_port = src\_port
-119             self.dest\_port = dest\_port
-120 
-121             \textcolor{keywordflow}{if} isinstance(src\_actor, actor):
-122                 src\_actor.next.append(self)
-123             \textcolor{keywordflow}{if} isinstance(dest\_actor, actor):
-124                 dest\_actor.previous.append(self)
-125 
-126             self.\_\_repr\_\_ = self.\_\_str\_\_
-127 
+182                      dest\_actor=\textcolor{keywordtype}{None}, dest\_port=\textcolor{keywordtype}{None}):
+183 
+184             self.src\_actor = src\_actor
+185             self.dest\_actor = dest\_actor
+186             self.src\_port = src\_port
+187             self.dest\_port = dest\_port
+188 
+189             \textcolor{keywordflow}{if} isinstance(src\_actor, actor):
+190                 src\_actor.next.append(self)
+191             \textcolor{keywordflow}{if} isinstance(dest\_actor, actor):
+192                 dest\_actor.previous.append(self)
+193 
+194             self.\_\_repr\_\_ = self.\_\_str\_\_
+195 
 \end{DoxyCode}
 
 
@@ -77,20 +77,20 @@ Definition at line 114 of file sdf.\+py.
 
 
 
-Definition at line 128 of file sdf.\+py.
+Definition at line 196 of file sdf.\+py.
 
 
 
-Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-128         \textcolor{keyword}{def }\_\_str\_\_(self):
-129             result = f\textcolor{stringliteral}{'SDF edge \(\backslash\)n'}
-130             result += f\textcolor{stringliteral}{'  from \{self.src\_actor\} (\{self.src\_port\})\(\backslash\)n'}
-131             result += f\textcolor{stringliteral}{'  to \{self.dest\_actor\}, (\{self.dest\_port\})'}
-132             \textcolor{keywordflow}{return} result
-133 
+196         \textcolor{keyword}{def }\_\_str\_\_(self):
+197             result = f\textcolor{stringliteral}{'SDF edge \(\backslash\)n'}
+198             result += f\textcolor{stringliteral}{'  from \{self.src\_actor\} (\{self.src\_port\})\(\backslash\)n'}
+199             result += f\textcolor{stringliteral}{'  to \{self.dest\_actor\}, (\{self.dest\_port\})'}
+200             \textcolor{keywordflow}{return} result
+201 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1edge_a1b17c24443ba7f3dc4b81c4a73ebe699}\label{classsylva_1_1base_1_1sdf_1_1edge_a1b17c24443ba7f3dc4b81c4a73ebe699}} 
 \index{sylva\+::base\+::sdf\+::edge@{sylva\+::base\+::sdf\+::edge}!clone@{clone}}
@@ -100,7 +100,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr
 
 
 
-Definition at line 134 of file sdf.\+py.
+Definition at line 202 of file sdf.\+py.
 
 
 
@@ -108,10 +108,10 @@ References sylva.\+base.\+sdf.\+edge.\+dest\+\_\+actor, sylva.\+base.\+sdf.\+edg
 
 
 \begin{DoxyCode}
-134         \textcolor{keyword}{def }clone(self):
-135             \textcolor{keywordflow}{return} edge(self.src\_actor, self.src\_port.clone(),
-136                         self.dest\_actor, self.dest\_port.clone())
-137 
+202         \textcolor{keyword}{def }clone(self):
+203             \textcolor{keywordflow}{return} edge(self.src\_actor, self.src\_port.clone(),
+204                         self.dest\_actor, self.dest\_port.clone())
+205 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1edge_a10a8a20cd0052b046c627e7e22af114d}\label{classsylva_1_1base_1_1sdf_1_1edge_a10a8a20cd0052b046c627e7e22af114d}} 
 \index{sylva\+::base\+::sdf\+::edge@{sylva\+::base\+::sdf\+::edge}!serialize@{serialize}}
@@ -121,7 +121,7 @@ References sylva.\+base.\+sdf.\+edge.\+dest\+\_\+actor, sylva.\+base.\+sdf.\+edg
 
 
 
-Definition at line 138 of file sdf.\+py.
+Definition at line 206 of file sdf.\+py.
 
 
 
@@ -129,13 +129,13 @@ References sylva.\+base.\+sdf.\+edge.\+dest\+\_\+actor, sylva.\+base.\+sdf.\+edg
 
 
 \begin{DoxyCode}
-138         \textcolor{keyword}{def }serialize(self):
-139             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'src\_actor'}: self.src\_actor.index,
-140                     \textcolor{stringliteral}{'dest\_actor'}: self.dest\_actor.index,
-141                     \textcolor{stringliteral}{'src\_port'}: self.src\_port.index,
-142                     \textcolor{stringliteral}{'dest\_port'}: self.dest\_port.index\}
-143 
-144     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict):
+206         \textcolor{keyword}{def }serialize(self):
+207             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'src\_actor'}: self.src\_actor.index,
+208                     \textcolor{stringliteral}{'dest\_actor'}: self.dest\_actor.index,
+209                     \textcolor{stringliteral}{'src\_port'}: self.src\_port.index,
+210                     \textcolor{stringliteral}{'dest\_port'}: self.dest\_port.index\}
+211 
+212     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict):
 \end{DoxyCode}
 
 
@@ -148,7 +148,7 @@ References sylva.\+base.\+sdf.\+edge.\+dest\+\_\+actor, sylva.\+base.\+sdf.\+edg
 
 
 
-Definition at line 126 of file sdf.\+py.
+Definition at line 194 of file sdf.\+py.
 
 \mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1edge_ad7b20c67c35c7961c81beae1694a7b73}\label{classsylva_1_1base_1_1sdf_1_1edge_ad7b20c67c35c7961c81beae1694a7b73}} 
 \index{sylva\+::base\+::sdf\+::edge@{sylva\+::base\+::sdf\+::edge}!dest\+\_\+actor@{dest\+\_\+actor}}
@@ -158,7 +158,7 @@ Definition at line 126 of file sdf.\+py.
 
 
 
-Definition at line 117 of file sdf.\+py.
+Definition at line 185 of file sdf.\+py.
 
 
 
@@ -172,7 +172,7 @@ Referenced by sylva.\+base.\+sdf.\+edge.\+clone(), and sylva.\+base.\+sdf.\+edge
 
 
 
-Definition at line 119 of file sdf.\+py.
+Definition at line 187 of file sdf.\+py.
 
 
 
@@ -186,7 +186,7 @@ Referenced by sylva.\+base.\+sdf.\+edge.\+clone(), and sylva.\+base.\+sdf.\+edge
 
 
 
-Definition at line 116 of file sdf.\+py.
+Definition at line 184 of file sdf.\+py.
 
 
 
@@ -200,7 +200,7 @@ Referenced by sylva.\+base.\+sdf.\+edge.\+clone(), and sylva.\+base.\+sdf.\+edge
 
 
 
-Definition at line 118 of file sdf.\+py.
+Definition at line 186 of file sdf.\+py.
 
 
 

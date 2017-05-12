@@ -8,7 +8,6 @@ var searchData=
   ['read_5fmdl_5fmodel',['read_mdl_model',['../namespacesylva_1_1frontend_1_1mdl__reader.html#a49a44158ffdececdbadbd00017774a8c',1,'sylva::frontend::mdl_reader']]],
   ['read_5ftype_5fcount',['read_type_count',['../namespacesylva_1_1frontend_1_1mdl__reader.html#ab497eed79d6bd7ce335dafa24e638470',1,'sylva::frontend::mdl_reader']]],
   ['read_5fvhdl',['read_vhdl',['../namespacesylva_1_1code__generation_1_1vhdl__interface__parser.html#afc25f8fd1bfc69960af11938f1e9b305',1,'sylva::code_generation::vhdl_interface_parser']]],
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['record_5fcmd',['record_cmd',['../classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#afca36696c160ab349df57221283ac5ca',1,'sylva.misc.exec.SYLVA.record_cmd()'],['../namespacesylva_1_1misc_1_1exec.html#a020e4ddb64c1ddaf08c5d43dc33b1a6f',1,'sylva.misc.exec.record_cmd()']]],
   ['record_5fcmd_5ffile_5fpath',['record_cmd_file_path',['../classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a88d289f3e8cebe556cc7995c24fc7e21',1,'sylva::misc::exec::SYLVA']]],
   ['record_5fport',['record_port',['../namespacesylva_1_1frontend_1_1mdl__reader.html#a5c3d81eb45232a9875a247ce76c4cdc9',1,'sylva::frontend::mdl_reader']]],

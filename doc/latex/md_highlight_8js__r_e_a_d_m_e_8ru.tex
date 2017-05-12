@@ -1,0 +1,122 @@
+Highlight.\+js — это инструмент для подсветки синтаксиса, написанный на Java\+Script. Он работает и в браузере, и на сервере. Он работает с практически любой H\+T\+ML разметкой, не зависит от каких-\/либо фреймворков и умеет автоматически определять язык.
+
+\subsection*{Начало работы}
+
+Минимум, что нужно сделать для использования highlight.\+js на веб-\/странице — это подключить библиотеку, C\+S\+S-\/стили и вызывать \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}}\+:
+
+
+\begin{DoxyCode}
+<link rel="stylesheet" href="/path/to/styles/default.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+\end{DoxyCode}
+
+
+Библиотека найдёт и раскрасит код внутри тегов {\ttfamily $<$pre$>$$<$code$>$}, попытавшись автоматически определить язык. Когда автоопределение не срабатывает, можно явно указать язык в атрибуте class\+:
+
+```html 
+\begin{DoxyPre}{\ttfamily ...}\end{DoxyPre}
+ 
+\begin{DoxyCode}
+Список поддерживаемых классов языков доступен в [справочнике по классам][2].
+Класс также можно предварить префиксами `language-` или `lang-`.
+
+Чтобы отключить подсветку для какого-то блока, используйте класс `nohighlight`:
+
+```html
+<pre><code class="nohighlight">...</code></pre>
+\end{DoxyCode}
+
+
+\subsection*{Инициализация вручную}
+
+Чтобы иметь чуть больше контроля за инициализацией подсветки, вы можете использовать функции \href{http://highlightjs.readthedocs.io/en/latest/api.html#highlightblock-block}{\tt {\ttfamily highlight\+Block}} и \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}}. Таким образом можно управлять тем, {\itshape что} и {\itshape когда} подсвечивать.
+
+Вот пример инициализации, эквивалентной вызову \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}}, но с использованием j\+Query\+:
+
+
+\begin{DoxyCode}
+$(document).ready(function() \{
+  $('pre code').each(function(i, block) \{
+    hljs.highlightBlock(block);
+  \});
+\});
+\end{DoxyCode}
+
+
+Вы можете использовать любые теги разметки вместо {\ttfamily $<$pre$>$$<$code$>$}. Если используете контейнер, не сохраняющий переводы строк, вам нужно сказать highlight.\+js использовать для них тег {\ttfamily $<$br$>$}\+:
+
+
+\begin{DoxyCode}
+hljs.configure(\{useBR: true\});
+
+$('div.code').each(function(i, block) \{
+  hljs.highlightBlock(block);
+\});
+\end{DoxyCode}
+
+
+Другие опции можно найти в документации функции \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}}.
+
+\subsection*{Web Workers}
+
+Подсветку можно запустить внутри web worker\textquotesingle{}а, чтобы окно браузера не подтормаживало при работе с большими кусками кода.
+
+В основном скрипте\+:
+
+
+\begin{DoxyCode}
+addEventListener('load', function() \{
+  var code = document.querySelector('#code');
+  var worker = new Worker('worker.js');
+  worker.onmessage = function(event) \{ code.innerHTML = event.data; \}
+  worker.postMessage(code.textContent);
+\})
+\end{DoxyCode}
+
+
+В worker.\+js\+:
+
+
+\begin{DoxyCode}
+onmessage = function(event) \{
+  importScripts('<path>/highlight.pack.js');
+  var result = self.hljs.highlightAuto(event.data);
+  postMessage(result.value);
+\}
+\end{DoxyCode}
+
+
+\subsection*{Установка библиотеки}
+
+Highlight.\+js можно использовать в браузере прямо с C\+DN хостинга или скачать индивидуальную сборку, а также установив модуль на сервере. На \href{https://highlightjs.org/download/}{\tt странице загрузки} подробно описаны все варианты.
+
+{\bfseries Не подключайте Git\+Hub напрямую.} Библиотека не предназначена для использования в виде исходного кода, а требует отдельной сборки. Если вам не подходит ни один из готовых вариантов, читайте \href{http://highlightjs.readthedocs.io/en/latest/building-testing.html}{\tt документацию по сборке}.
+
+{\bfseries Файл на C\+DN содержит не все языки.} Иначе он будет слишком большого размера. Если нужного вам языка нет в \href{https://highlightjs.org/download/}{\tt категории \char`\"{}\+Common\char`\"{}}, можно дообавить его вручную\+:
+
+
+\begin{DoxyCode}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+\end{DoxyCode}
+
+
+{\bfseries Про Almond.} Нужно задать имя модуля в оптимизаторе, например\+:
+
+
+\begin{DoxyCode}
+r.js -o name=hljs paths.hljs=/path/to/highlight out=highlight.js
+\end{DoxyCode}
+
+
+\subsection*{Лицензия}
+
+Highlight.\+js распространяется под лицензией B\+SD. Подробнее читайте файл \href{https://github.com/isagalaev/highlight.js/blob/master/LICENSE}{\tt L\+I\+C\+E\+N\+SE}.
+
+\subsection*{Ссылки}
+
+Официальный сайт билиотеки расположен по адресу \href{https://highlightjs.org/}{\tt https\+://highlightjs.\+org/}.
+
+Более подробная документация по A\+PI и другим темам расположена на \href{http://highlightjs.readthedocs.io/}{\tt http\+://highlightjs.\+readthedocs.\+io/}.
+
+Авторы и контрибьюторы перечислены в файле \href{https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.ru.txt}{\tt A\+U\+T\+H\+O\+R\+S.\+ru.\+txt} file. 

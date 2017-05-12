@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -97,7 +122,7 @@ $(document).ready(function(){initNavTree('dse__engine__v1_8py_source.html','');}
 <div class="ttc" id="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1_html_ab5084d6c2eba001ce6cdfd19a5f56be6"><div class="ttname"><a href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#ab5084d6c2eba001ce6cdfd19a5f56be6">sylva.dse.dse_engine_v1.dse_v1.output_start_var</a></div><div class="ttdeci">output_start_var</div><div class="ttdef"><b>Definition:</b> <a href="dse__engine__v1_8py_source.html#l00264">dse_engine_v1.py:264</a></div></div>
 <div class="ttc" id="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1_html_aaf4998f28b186740af869957be403635"><div class="ttname"><a href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#aaf4998f28b186740af869957be403635">sylva.dse.dse_engine_v1.dse_v1.prepare_latency_and_sample_interval_variables</a></div><div class="ttdeci">def prepare_latency_and_sample_interval_variables(self)</div><div class="ttdef"><b>Definition:</b> <a href="dse__engine__v1_8py_source.html#l00323">dse_engine_v1.py:323</a></div></div>
 <div class="ttc" id="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1_html_a9a0ec17de620253d23e8106cbffc03dd"><div class="ttname"><a href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a9a0ec17de620253d23e8106cbffc03dd">sylva.dse.dse_engine_v1.dse_v1.fimp_type_count_set</a></div><div class="ttdeci">fimp_type_count_set</div><div class="ttdef"><b>Definition:</b> <a href="dse__engine__v1_8py_source.html#l00145">dse_engine_v1.py:145</a></div></div>
-<div class="ttc" id="namespacesylva_1_1base_1_1sdf_html_a2fc075a9dc81209dee7a5b97d99640e5"><div class="ttname"><a href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">sylva.base.sdf.add_actor</a></div><div class="ttdeci">def add_actor(actors, name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</div><div class="ttdef"><b>Definition:</b> <a href="sdf_8py_source.html#l00325">sdf.py:325</a></div></div>
+<div class="ttc" id="namespacesylva_1_1base_1_1sdf_html_a2fc075a9dc81209dee7a5b97d99640e5"><div class="ttname"><a href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">sylva.base.sdf.add_actor</a></div><div class="ttdeci">def add_actor(actors, name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</div><div class="ttdef"><b>Definition:</b> <a href="sdf_8py_source.html#l00393">sdf.py:393</a></div></div>
 <div class="ttc" id="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1_html_ae5ffc9ead2cb2e795efa2a4e9a824a42"><div class="ttname"><a href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#ae5ffc9ead2cb2e795efa2a4e9a824a42">sylva.dse.dse_engine_v1.dse_v1.prepare_buffer_end_time_variable</a></div><div class="ttdeci">def prepare_buffer_end_time_variable(self)</div><div class="ttdef"><b>Definition:</b> <a href="dse__engine__v1_8py_source.html#l00273">dse_engine_v1.py:273</a></div></div>
 <div class="ttc" id="namespacesylva_1_1base_1_1fimp_html"><div class="ttname"><a href="namespacesylva_1_1base_1_1fimp.html">sylva.base.fimp</a></div><div class="ttdef"><b>Definition:</b> <a href="fimp_8py_source.html#l00001">fimp.py:1</a></div></div>
 <div class="ttc" id="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1_html_a225a04af42165cc16fa445a81cc818a5"><div class="ttname"><a href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a225a04af42165cc16fa445a81cc818a5">sylva.dse.dse_engine_v1.dse_v1.prepare_output_start_time_variable</a></div><div class="ttdeci">def prepare_output_start_time_variable(self)</div><div class="ttdef"><b>Definition:</b> <a href="dse__engine__v1_8py_source.html#l00252">dse_engine_v1.py:252</a></div></div>

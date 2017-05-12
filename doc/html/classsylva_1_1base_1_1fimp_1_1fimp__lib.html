@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -483,7 +508,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="fimp_8py_source.html#l00425">425</a> of file <a class="el" href="fimp_8py_source.html">fimp.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00085">sylva.base.sdf.port.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00239">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00089">sylva.base.sdf.port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00242">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00043">sylva.base.sdf.DataTokenType.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00092">sylva.base.sdf.port.serialize()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00249">sylva.base.sdf.actor.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00451">sylva.base.fimp.fimp_lib.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00310">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>, <a class="el" href="sdf_8py_source.html#l00317">sylva.base.sdf.actor.serialize()</a>, and <a class="el" href="fimp_8py_source.html#l00451">sylva.base.fimp.fimp_lib.serialize()</a>.</p>
 
 </div>
 </div>

@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.13-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +24,30 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="prism.css">
+<script src="prism.js"></script>
+<script>
+$(function() {
+  $(".params").each(function(i,param_node) {
+    $(param_node).find(".fragment").each(function(i,node) {
+      var $node = $(node);
+      var line_no = $node.find('.lineno').eq(0).text()
+      if (line_no){ line_no = "'" + line_no.replace(/\s+/g, '') + "'"}
+      else {line_no = "'0'"}
+      $node.find('.line').each(function(i,line_node) {
+        var $line_node = $(line_node);
+        $line_node.find('.lineno').eq(0).html("")
+        $line_node.html($line_node.text()+'\n');
+      });
+      $node.html("<pre data-start=" + line_no + ">" +
+                 "<code class='language-python line-numbers'>" +
+                 $node.text() + "</code></pre>");
+      });
+  });
+});
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,7 +128,7 @@ $(document).ready(function(){initNavTree('hsdf__to__vhdl_8py_source.html','');})
 <div class="ttc" id="namespacesylva_1_1base_1_1sdf__to__hsdf_html"><div class="ttname"><a href="namespacesylva_1_1base_1_1sdf__to__hsdf.html">sylva.base.sdf_to_hsdf</a></div><div class="ttdef"><b>Definition:</b> <a href="sdf__to__hsdf_8py_source.html#l00001">sdf_to_hsdf.py:1</a></div></div>
 <div class="ttc" id="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_html_adfe6fda6b02f34c7fd4f2775ced8228f"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl.html#adfe6fda6b02f34c7fd4f2775ced8228f">sylva.code_generation.hsdf_to_vhdl.get_signal_name</a></div><div class="ttdeci">def get_signal_name(fimp, port)</div><div class="ttdef"><b>Definition:</b> <a href="hsdf__to__vhdl_8py_source.html#l00048">hsdf_to_vhdl.py:48</a></div></div>
 <div class="ttc" id="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_html_a0725288caa57a5c518a1b9c2683291fa"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl.html#a0725288caa57a5c518a1b9c2683291fa">sylva.code_generation.hsdf_to_vhdl.hsdf_to_vhdl</a></div><div class="ttdeci">def hsdf_to_vhdl</div><div class="ttdef"><b>Definition:</b> <a href="hsdf__to__vhdl_8py_source.html#l00298">hsdf_to_vhdl.py:298</a></div></div>
-<div class="ttc" id="namespacesylva_1_1base_html"><div class="ttname"><a href="namespacesylva_1_1base.html">sylva.base</a></div><div class="ttdef"><b>Definition:</b> <a href="base_2____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
+<div class="ttc" id="namespacesylva_1_1base_html"><div class="ttname"><a href="namespacesylva_1_1base.html">sylva.base</a></div><div class="ttdoc">All basic things in SYLVA project. </div><div class="ttdef"><b>Definition:</b> <a href="base_2____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
 <div class="ttc" id="namespacesylva_1_1code__generation_html"><div class="ttname"><a href="namespacesylva_1_1code__generation.html">sylva.code_generation</a></div><div class="ttdef"><b>Definition:</b> <a href="code__generation_2____init_____8py_source.html#l00001">__init__.py:1</a></div></div>
 <div class="ttc" id="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_html_a4a40923ef153cf1f1a9da0c742b2e542"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl.html#a4a40923ef153cf1f1a9da0c742b2e542">sylva.code_generation.hsdf_to_vhdl.connect_global_inputs</a></div><div class="ttdeci">def connect_global_inputs(nodes, global_inputs, exceptions={})</div><div class="ttdef"><b>Definition:</b> <a href="hsdf__to__vhdl_8py_source.html#l00200">hsdf_to_vhdl.py:200</a></div></div>
 <div class="ttc" id="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_html_a5381a4c2d460f5f0490d0361e37917e9"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1hsdf__to__vhdl.html#a5381a4c2d460f5f0490d0361e37917e9">sylva.code_generation.hsdf_to_vhdl.create_connection</a></div><div class="ttdeci">def create_connection(one_edge, connections)</div><div class="ttdef"><b>Definition:</b> <a href="hsdf__to__vhdl_8py_source.html#l00113">hsdf_to_vhdl.py:113</a></div></div>
