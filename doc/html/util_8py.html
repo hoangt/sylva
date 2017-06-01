@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -173,12 +179,14 @@ Variables</h2></td></tr>
 <tr class="separator:a1111366860ec15b68260a43ac632d257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa458ed92c21a116abe2d5f9ab81a2125"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#aa458ed92c21a116abe2d5f9ab81a2125">sylva.misc.util.__version__</a> = '2015-08-15-23:20'</td></tr>
 <tr class="separator:aa458ed92c21a116abe2d5f9ab81a2125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae24a7e9d1f4709e04a181e488d3e7e96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#ae24a7e9d1f4709e04a181e488d3e7e96">sylva.misc.util.ceil</a> = lambda x : int(math.ceil(x))</td></tr>
+<tr class="memitem:ae24a7e9d1f4709e04a181e488d3e7e96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#ae24a7e9d1f4709e04a181e488d3e7e96">sylva.misc.util.ceil</a> = lambda x: int(math.ceil(x))</td></tr>
 <tr class="separator:ae24a7e9d1f4709e04a181e488d3e7e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa02f5d131cb4bc9ad1c277a7b0c76885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#aa02f5d131cb4bc9ad1c277a7b0c76885">sylva.misc.util.floor</a> = lambda x : int(math.floor(x))</td></tr>
+<tr class="memitem:aa02f5d131cb4bc9ad1c277a7b0c76885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#aa02f5d131cb4bc9ad1c277a7b0c76885">sylva.misc.util.floor</a> = lambda x: int(math.floor(x))</td></tr>
 <tr class="separator:aa02f5d131cb4bc9ad1c277a7b0c76885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3731c524403f8c49cdb518af558d408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#ab3731c524403f8c49cdb518af558d408">sylva.misc.util.log</a> = lambda x : math.log(x, 10)</td></tr>
+<tr class="memitem:ab3731c524403f8c49cdb518af558d408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#ab3731c524403f8c49cdb518af558d408">sylva.misc.util.log</a> = lambda x: math.log(x, 10)</td></tr>
 <tr class="separator:ab3731c524403f8c49cdb518af558d408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac1d560ffdd426fb10172ea106318a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1misc_1_1util.html#a6ac1d560ffdd426fb10172ea106318a0">sylva.misc.util.log2</a> = lambda x: math.log(x, 2)</td></tr>
+<tr class="separator:a6ac1d560ffdd426fb10172ea106318a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

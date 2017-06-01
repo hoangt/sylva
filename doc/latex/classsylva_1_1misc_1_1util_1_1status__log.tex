@@ -31,7 +31,7 @@ def \hyperlink{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120d
 \subsection{Detailed Description}
 
 
-Definition at line 31 of file util.\+py.
+Definition at line 33 of file util.\+py.
 
 
 
@@ -44,17 +44,17 @@ Definition at line 31 of file util.\+py.
 
 
 
-Definition at line 33 of file util.\+py.
+Definition at line 35 of file util.\+py.
 
 
 \begin{DoxyCode}
-33   \textcolor{keyword}{def }\_\_init\_\_(self, print\_status = False, show\_time\_stamp = False) :
-34 
-35     self.log = []
-36     self.status = []
-37     self.print\_status = print\_status
-38     self.show\_time\_stamp = show\_time\_stamp
-39 
+35     \textcolor{keyword}{def }\_\_init\_\_(self, print\_status=False, show\_time\_stamp=False):
+36 
+37         self.log = []
+38         self.status = []
+39         self.print\_status = print\_status
+40         self.show\_time\_stamp = show\_time\_stamp
+41 
 \end{DoxyCode}
 
 
@@ -67,7 +67,7 @@ Definition at line 33 of file util.\+py.
 
 
 
-Definition at line 52 of file util.\+py.
+Definition at line 54 of file util.\+py.
 
 
 
@@ -75,10 +75,10 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+ut
 
 
 \begin{DoxyCode}
-52   \textcolor{keyword}{def }\_\_add\_\_(self, msg) :
-53     self.status.append((self.time\_stamp(), msg))
-54     \textcolor{keywordflow}{return} self
-55 
+54     \textcolor{keyword}{def }\_\_add\_\_(self, msg):
+55         self.status.append((self.time\_stamp(), msg))
+56         \textcolor{keywordflow}{return} self
+57 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_ab13cd7b4f04bc397105042ebfb34cfaa}\label{classsylva_1_1misc_1_1util_1_1status__log_ab13cd7b4f04bc397105042ebfb34cfaa}} 
 \index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}}
@@ -88,7 +88,7 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+ut
 
 
 
-Definition at line 56 of file util.\+py.
+Definition at line 58 of file util.\+py.
 
 
 
@@ -96,10 +96,10 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+ut
 
 
 \begin{DoxyCode}
-56   \textcolor{keyword}{def }\_\_iadd\_\_(self, msg) :
-57     self.status.append((self.time\_stamp(), msg))
-58     \textcolor{keywordflow}{return} self
-59 
+58     \textcolor{keyword}{def }\_\_iadd\_\_(self, msg):
+59         self.status.append((self.time\_stamp(), msg))
+60         \textcolor{keywordflow}{return} self
+61 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a4e8a754367e04626ca986457b1e5c770}\label{classsylva_1_1misc_1_1util_1_1status__log_a4e8a754367e04626ca986457b1e5c770}} 
 \index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!time\+\_\+stamp@{time\+\_\+stamp}}
@@ -109,7 +109,7 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+status, and sylva.\+misc.\+ut
 
 
 
-Definition at line 49 of file util.\+py.
+Definition at line 51 of file util.\+py.
 
 
 
@@ -117,9 +117,9 @@ Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+add\+\_\+\+\_\+(
 
 
 \begin{DoxyCode}
-49   \textcolor{keyword}{def }time\_stamp(self) :
-50     \textcolor{keywordflow}{return} time.strftime(\textcolor{stringliteral}{"[%a, %d %b %Y %H:%M:%S] "}, time.localtime())
-51 
+51     \textcolor{keyword}{def }time\_stamp(self):
+52         \textcolor{keywordflow}{return} time.strftime(\textcolor{stringliteral}{"[%a, %d %b %Y %H:%M:%S] "}, time.localtime())
+53 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a285cc969af6cbc0e41a20e38db9a6196}\label{classsylva_1_1misc_1_1util_1_1status__log_a285cc969af6cbc0e41a20e38db9a6196}} 
 \index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!update@{update}}
@@ -129,7 +129,7 @@ Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+\_\+\+\_\+add\+\_\+\+\_\+(
 
 
 
-Definition at line 40 of file util.\+py.
+Definition at line 42 of file util.\+py.
 
 
 
@@ -137,15 +137,15 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\
 
 
 \begin{DoxyCode}
-40   \textcolor{keyword}{def }update(self) :
-41     \textcolor{keywordflow}{if} self.print\_status :
-42       \textcolor{keywordflow}{if} self.show\_time\_stamp :
-43         print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([ s[0] + s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
-44       \textcolor{keywordflow}{else} :
-45         print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
-46     self.log += self.status
-47     self.status = []
-48 
+42     \textcolor{keyword}{def }update(self):
+43         \textcolor{keywordflow}{if} self.print\_status:
+44             \textcolor{keywordflow}{if} self.show\_time\_stamp:
+45                 print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([s[0] + s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
+46             \textcolor{keywordflow}{else}:
+47                 print(\textcolor{stringliteral}{'\(\backslash\)n'}.join([s[1] \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.status]))
+48         self.log += self.status
+49         self.status = []
+50 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120ddd31d9b2e6}\label{classsylva_1_1misc_1_1util_1_1status__log_a8785c236977e889558120ddd31d9b2e6}} 
 \index{sylva\+::misc\+::util\+::status\+\_\+log@{sylva\+::misc\+::util\+::status\+\_\+log}!write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}}
@@ -155,7 +155,7 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\
 
 
 
-Definition at line 60 of file util.\+py.
+Definition at line 62 of file util.\+py.
 
 
 
@@ -163,11 +163,11 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\
 
 
 \begin{DoxyCode}
-60   \textcolor{keyword}{def }write\_to\_file(self, name = 'log') :
-61     with open(name, \textcolor{stringliteral}{'w+'}) \textcolor{keyword}{as} fp :
-62       \textcolor{keywordflow}{for} l \textcolor{keywordflow}{in} self.log :
-63         fp.write(l[0] + l[1] + \textcolor{stringliteral}{'\(\backslash\)n'})
-64 
+62     \textcolor{keyword}{def }write\_to\_file(self, name='log'):
+63         with open(name, \textcolor{stringliteral}{'w+'}) \textcolor{keyword}{as} fp:
+64             \textcolor{keywordflow}{for} l \textcolor{keywordflow}{in} self.log:
+65                 fp.write(l[0] + l[1] + \textcolor{stringliteral}{'\(\backslash\)n'})
+66 
 \end{DoxyCode}
 
 
@@ -180,7 +180,7 @@ References sylva.\+misc.\+util.\+status\+\_\+log.\+log, sylva.\+misc.\+exec.\+S\
 
 
 
-Definition at line 35 of file util.\+py.
+Definition at line 37 of file util.\+py.
 
 
 
@@ -194,7 +194,7 @@ Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update(), and sylva.\+misc
 
 
 
-Definition at line 37 of file util.\+py.
+Definition at line 39 of file util.\+py.
 
 
 
@@ -208,7 +208,7 @@ Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update().
 
 
 
-Definition at line 38 of file util.\+py.
+Definition at line 40 of file util.\+py.
 
 
 
@@ -222,7 +222,7 @@ Referenced by sylva.\+misc.\+util.\+status\+\_\+log.\+update().
 
 
 
-Definition at line 36 of file util.\+py.
+Definition at line 38 of file util.\+py.
 
 
 

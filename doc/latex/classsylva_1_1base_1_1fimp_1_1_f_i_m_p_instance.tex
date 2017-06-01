@@ -1,0 +1,246 @@
+\hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance}{}\section{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance Class Reference}
+\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance}\index{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance@{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance}}
+
+
+Class for F\+I\+MP instace.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ad4c68c73febfe4607ff8b0cf583628e0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, function\+\_\+name=\textquotesingle{}no name\textquotesingle{}, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_af01c88ccee9642af4e8b488c6c574fad}{index}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_add403074726c5a6637a9ea292d12811c}{actors}=\mbox{[}$\,$\mbox{]}, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeb9f8a37a01046643a2c4e9fefae982d}{x}=-\/1, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeca18b6f2bd24ee58b428a2f7fc90d2f}{y}=-\/1, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_abb77c89ca6b5831cc36d8cc6c25feeff}{cost}=\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost}{F\+I\+M\+P\+Cost}(), otherkwargs)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ac20e7fe05ac4f1bfacf020a57150b0ee}{add\+\_\+actor} (self, one\+\_\+actor)
+\begin{DoxyCompactList}\small\item\em Adds an actor to the current F\+I\+MP instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_af01c88ccee9642af4e8b488c6c574fad}{index}
+\begin{DoxyCompactList}\small\item\em Unique integer index of this F\+I\+MP in a deployed system, e.\+g a C\+G\+RA fabric. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_add403074726c5a6637a9ea292d12811c}{actors}
+\begin{DoxyCompactList}\small\item\em The list of H\+S\+D\+FG Actor objects to be hosted by this F\+I\+MP instance. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeb9f8a37a01046643a2c4e9fefae982d}{x}
+\begin{DoxyCompactList}\small\item\em The horizental location of the F\+I\+MP instance in a C\+G\+RA fabric. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeca18b6f2bd24ee58b428a2f7fc90d2f}{y}
+\begin{DoxyCompactList}\small\item\em The vertical location of the F\+I\+MP instance in a C\+G\+RA fabric. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_abb77c89ca6b5831cc36d8cc6c25feeff}{cost}
+\begin{DoxyCompactList}\small\item\em The cost of the curret F\+I\+MP instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for F\+I\+MP instace. 
+
+This F\+I\+MP instance is created for executing multiple H\+S\+D\+FG actors. 
+
+Definition at line 227 of file fimp.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ad4c68c73febfe4607ff8b0cf583628e0}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ad4c68c73febfe4607ff8b0cf583628e0}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{function\+\_\+name = {\ttfamily \textquotesingle{}no~name\textquotesingle{}},  }\item[{}]{index = {\ttfamily 0},  }\item[{}]{actors = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{x = {\ttfamily -\/1},  }\item[{}]{y = {\ttfamily -\/1},  }\item[{}]{cost = {\ttfamily \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost}{F\+I\+M\+P\+Cost}()},  }\item[{}]{otherkwargs }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em function\+\_\+name} & \\
+\hline
+{\em index} & Unique integer index of this F\+I\+MP in a deployed system, e.\+g a C\+G\+RA fabric.\\
+\hline
+{\em actors} & The list of H\+S\+D\+FG Actor objects to be hosted by this F\+I\+MP instance. This attribute should be assigned explicitly. \\
+\hline
+{\em x} & The horizental location of the F\+I\+MP instance in a C\+G\+RA fabric. Only useful for C\+G\+RA target. This attribute should be assigned explicitly. \\
+\hline
+{\em y} & The vertical location of the F\+I\+MP instance in a C\+G\+RA fabric. Only useful for C\+G\+RA target. This attribute should be assigned explicitly. \\
+\hline
+{\em cost} & The cost of the curret F\+I\+MP instance. This information is obtained from the a \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set}{F\+I\+M\+P\+Set} object. \\
+\hline
+{\em otherkwargs} & The other keyword arguments, reserved for future usage \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 270 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+270     \textcolor{keyword}{def }\_\_init\_\_(self, function\_name='no name', index=0, actors=[], x=-1, y=-1, cost=FIMPCost(), **
+      otherkwargs):
+271 
+272         \textcolor{comment}{# FIMP index in a system}
+273         \textcolor{comment}{# It has to be explicitly specified after synthesis}
+274         self.index = index
+275 
+276         \textcolor{comment}{# Actors running on this FIMP}
+277         \textcolor{comment}{# It has to be explicitly add to the FIMP}
+278         \textcolor{comment}{# It will not be serialized.}
+279         self.actors = actors
+280 
+281         \textcolor{comment}{# FIMP instance location on a CGRA fabric}
+282         \textcolor{comment}{# They have to be explicitly add to the FIMP}
+283         self.x = -1
+284         self.y = -1
+285 
+286         SYLVABase.\_\_init\_\_(self, **SYLVABase.\_args(locals(), globals()))
+287 
+288         \textcolor{comment}{# FIMPCost}
+289         self.cost = self.cost.clone
+290 
+291         \textcolor{keywordflow}{for} one\_actor \textcolor{keywordflow}{in} self.actors:
+292             one\_actor.fimp\_instance = self
+293 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ac20e7fe05ac4f1bfacf020a57150b0ee}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_ac20e7fe05ac4f1bfacf020a57150b0ee}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!add\+\_\+actor@{add\+\_\+actor}}
+\index{add\+\_\+actor@{add\+\_\+actor}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{add\+\_\+actor()}{add\_actor()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+add\+\_\+actor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{one\+\_\+actor }\end{DoxyParamCaption})}
+
+
+
+Adds an actor to the current F\+I\+MP instance. 
+
+This method will also dynamically assign the current F\+I\+MP instance to the Actor object\textquotesingle{}s {\ttfamily fimp} attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em one\+\_\+actor} & One H\+S\+D\+FG Actor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 305 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+actors, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+actors.
+
+
+\begin{DoxyCode}
+305     \textcolor{keyword}{def }add\_actor(self, one\_actor):
+306         \textcolor{keywordflow}{if} one\_actor \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.actors:
+307             self.actors.append(one\_actor)
+308             one\_actor.fimp\_instance = self
+309 
+310 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_add403074726c5a6637a9ea292d12811c}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_add403074726c5a6637a9ea292d12811c}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!actors@{actors}}
+\index{actors@{actors}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{actors}{actors}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+actors}
+
+
+
+The list of H\+S\+D\+FG Actor objects to be hosted by this F\+I\+MP instance. 
+
+This attribute should be assigned explicitly. 
+
+Definition at line 279 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+actor\+\_\+layers(), sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+reassign\+\_\+actor\+\_\+indexes(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+\_\+repetition\+\_\+vector(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+\_\+topology\+\_\+matrix(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+add\+\_\+actor(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), sylva.\+base.\+sdf.\+D\+F\+G.\+get\+\_\+digraph(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+get\+\_\+hsdf(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_abb77c89ca6b5831cc36d8cc6c25feeff}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_abb77c89ca6b5831cc36d8cc6c25feeff}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!cost@{cost}}
+\index{cost@{cost}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+cost}
+
+
+
+The cost of the curret F\+I\+MP instance. 
+
+This information is obtained from the a \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set}{F\+I\+M\+P\+Set} object. 
+
+Definition at line 289 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_af01c88ccee9642af4e8b488c6c574fad}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_af01c88ccee9642af4e8b488c6c574fad}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!index@{index}}
+\index{index@{index}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+index}
+
+
+
+Unique integer index of this F\+I\+MP in a deployed system, e.\+g a C\+G\+RA fabric. 
+
+
+
+Definition at line 274 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+state.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeb9f8a37a01046643a2c4e9fefae982d}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeb9f8a37a01046643a2c4e9fefae982d}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!x@{x}}
+\index{x@{x}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x}
+
+
+
+The horizental location of the F\+I\+MP instance in a C\+G\+RA fabric. 
+
+Only useful for C\+G\+RA target. This attribute should be assigned explicitly. 
+
+Definition at line 283 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+bottom\+\_\+left(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve(), sylva.\+misc.\+plot.\+rectangle.\+top(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeca18b6f2bd24ee58b428a2f7fc90d2f}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance_aeca18b6f2bd24ee58b428a2f7fc90d2f}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}!y@{y}}
+\index{y@{y}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Instance}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y}
+
+
+
+The vertical location of the F\+I\+MP instance in a C\+G\+RA fabric. 
+
+Only useful for C\+G\+RA target. This attribute should be assigned explicitly. 
+
+Definition at line 284 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+repr\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve(), sylva.\+misc.\+plot.\+rectangle.\+top(), sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left(), and sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+right().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{fimp_8py}{fimp.\+py}\end{DoxyCompactItemize}

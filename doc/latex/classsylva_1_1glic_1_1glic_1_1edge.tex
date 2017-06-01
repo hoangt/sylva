@@ -52,12 +52,12 @@ Definition at line 55 of file glic.\+py.
 
 
 \begin{DoxyCode}
-55                  cycle=0):
+55                      cycle=0):
 56 
-57       self.source = source
-58       self.destination = destination
-59       self.cycle = cycle
-60       self.\_\_repr\_\_ = self.\_\_str\_\_
+57             self.source = source
+58             self.destination = destination
+59             self.cycle = cycle
+60             self.\_\_repr\_\_ = self.\_\_str\_\_
 61 
 \end{DoxyCode}
 
@@ -75,13 +75,13 @@ Definition at line 62 of file glic.\+py.
 
 
 
-References sylva.\+glic.\+glic.\+edge.\+cycle, sylva.\+code\+\_\+generation.\+air.\+Address\+Port\+Action.\+cycle, sylva.\+glic.\+glic.\+edge.\+destination, and sylva.\+glic.\+glic.\+edge.\+source.
+References sylva.\+glic.\+glic.\+edge.\+cycle, sylva.\+code\+\_\+generation.\+air.\+Address\+Port\+Action.\+cycle, sylva.\+glic.\+glic.\+edge.\+destination, sylva.\+glic.\+glic.\+edge.\+source, and sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+source.
 
 
 \begin{DoxyCode}
-62     \textcolor{keyword}{def }\_\_str\_\_(self):
-63       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'edge from %s to %s on %s'} \(\backslash\)
-64           % (self.source, self.destination, self.cycle)
+62         \textcolor{keyword}{def }\_\_str\_\_(self):
+63             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'edge from %s to %s on %s'} \(\backslash\)
+64                 % (self.source, self.destination, self.cycle)
 65 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1edge_a1430a92ec5530e5c4dc8bd7109f356a7}\label{classsylva_1_1glic_1_1glic_1_1edge_a1430a92ec5530e5c4dc8bd7109f356a7}} 
@@ -96,12 +96,12 @@ Definition at line 72 of file glic.\+py.
 
 
 \begin{DoxyCode}
-72     \textcolor{keyword}{def }deserialize(json\_dict, states=[]):
-73       \textcolor{keywordflow}{return} edge(source=states[int(json\_dict[\textcolor{stringliteral}{'source'}])],
-74                   destination=states[int(json\_dict[\textcolor{stringliteral}{'destination'}])],
-75                   cycle=int(json\_dict[\textcolor{stringliteral}{'cycle'}]))
+72         \textcolor{keyword}{def }deserialize(json\_dict, states=[]):
+73             \textcolor{keywordflow}{return} edge(source=states[int(json\_dict[\textcolor{stringliteral}{'source'}])],
+74                         destination=states[int(json\_dict[\textcolor{stringliteral}{'destination'}])],
+75                         cycle=int(json\_dict[\textcolor{stringliteral}{'cycle'}]))
 76 
-77   \textcolor{keyword}{class }state:
+77     \textcolor{keyword}{class }state:
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1edge_a3fecc788dfeea26b5005b6263dfe3088}\label{classsylva_1_1glic_1_1glic_1_1edge_a3fecc788dfeea26b5005b6263dfe3088}} 
 \index{sylva\+::glic\+::glic\+::edge@{sylva\+::glic\+::glic\+::edge}!serialize@{serialize}}
@@ -115,14 +115,14 @@ Definition at line 66 of file glic.\+py.
 
 
 
-References sylva.\+glic.\+glic.\+edge.\+cycle, sylva.\+code\+\_\+generation.\+air.\+Address\+Port\+Action.\+cycle, sylva.\+glic.\+glic.\+edge.\+destination, and sylva.\+glic.\+glic.\+edge.\+source.
+References sylva.\+glic.\+glic.\+edge.\+cycle, sylva.\+code\+\_\+generation.\+air.\+Address\+Port\+Action.\+cycle, sylva.\+glic.\+glic.\+edge.\+destination, sylva.\+glic.\+glic.\+edge.\+source, and sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+source.
 
 
 \begin{DoxyCode}
-66     \textcolor{keyword}{def }serialize(self):
-67       \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'source'}: self.source.index,
-68               \textcolor{stringliteral}{'destination'}: self.destination.index,
-69               \textcolor{stringliteral}{'cycle'}: self.cycle\}
+66         \textcolor{keyword}{def }serialize(self):
+67             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'source'}: self.source.index,
+68                     \textcolor{stringliteral}{'destination'}: self.destination.index,
+69                     \textcolor{stringliteral}{'cycle'}: self.cycle\}
 70 
 \end{DoxyCode}
 

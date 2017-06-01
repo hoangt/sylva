@@ -62,30 +62,30 @@ Definition at line 117 of file glic.\+py.
 
 
 \begin{DoxyCode}
-117     \textcolor{keyword}{def }\_\_init\_\_(self, states=[], edges=[], name='no name', default\_state\_index=0):
+117         \textcolor{keyword}{def }\_\_init\_\_(self, states=[], edges=[], name='no name', default\_state\_index=0):
 118 
-119       self.states = states
-120       self.edges = edges
-121       self.current\_cycle = 0
-122       self.name = name
-123       self.\_\_repr\_\_ = self.\_\_str\_\_
+119             self.states = states
+120             self.edges = edges
+121             self.current\_cycle = 0
+122             self.name = name
+123             self.\_\_repr\_\_ = self.\_\_str\_\_
 124 
-125       \textcolor{keywordflow}{if} self.states == []:
-126         self.current\_state = \textcolor{keywordtype}{None}
-127       \textcolor{keywordflow}{else}:
-128         self.current\_state = states[0]
+125             \textcolor{keywordflow}{if} self.states == []:
+126                 self.current\_state = \textcolor{keywordtype}{None}
+127             \textcolor{keywordflow}{else}:
+128                 self.current\_state = states[0]
 129 
-130       self.default\_state\_index = default\_state\_index
+130             self.default\_state\_index = default\_state\_index
 131 
-132       \textcolor{keywordflow}{if} default\_state\_index < len(states):
-133         self.default\_state = states[default\_state\_index]
-134       \textcolor{keywordflow}{else}:
-135         self.default\_state = \textcolor{keywordtype}{None}
+132             \textcolor{keywordflow}{if} default\_state\_index < len(states):
+133                 self.default\_state = states[default\_state\_index]
+134             \textcolor{keywordflow}{else}:
+135                 self.default\_state = \textcolor{keywordtype}{None}
 136 
-137       \textcolor{keywordflow}{for} state \textcolor{keywordflow}{in} self.states:
-138         involved\_edges = [e \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges
-139                           \textcolor{keywordflow}{if} e.source == state]
-140         state.edges = list(involved\_edges)
+137             \textcolor{keywordflow}{for} state \textcolor{keywordflow}{in} self.states:
+138                 involved\_edges = [e \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges
+139                                   \textcolor{keywordflow}{if} e.source == state]
+140                 state.edges = list(involved\_edges)
 141 
 \end{DoxyCode}
 
@@ -103,24 +103,24 @@ Definition at line 157 of file glic.\+py.
 
 
 
-References sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+edges, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+sdf.\+Port.\+name, sylva.\+base.\+sdf.\+actor.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+glic.\+glic.\+control.\+states.
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+D\+F\+G.\+edges, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+name, sylva.\+base.\+sdf.\+Port.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Set.\+name, sylva.\+base.\+sylva\+\_\+base.\+Data\+Token\+Type.\+name, sylva.\+base.\+sdf.\+Actor.\+name, sylva.\+base.\+sylva\+\_\+base.\+Port.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+name, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Library.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Library.\+name, sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+name, and sylva.\+glic.\+glic.\+control.\+states.
 
 
 \begin{DoxyCode}
-157     \textcolor{keyword}{def }\_\_str\_\_(self):
+157         \textcolor{keyword}{def }\_\_str\_\_(self):
 158 
-159       result = \textcolor{stringliteral}{'\(\backslash\)n'}
-160       result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
-161       result += \textcolor{stringliteral}{'Control FSM: %s \(\backslash\)n'} % self.name
-162       result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
-163       result += \textcolor{stringliteral}{'States: \(\backslash\)n'}
-164       \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states:
-165         result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % s
-166       result += \textcolor{stringliteral}{'-'} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
-167       result += \textcolor{stringliteral}{'Transactions: \(\backslash\)n'}
-168       \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges:
-169         result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % e
-170       \textcolor{keywordflow}{return} result + \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+159             result = \textcolor{stringliteral}{'\(\backslash\)n'}
+160             result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+161             result += \textcolor{stringliteral}{'Control FSM: %s \(\backslash\)n'} % self.name
+162             result += \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+163             result += \textcolor{stringliteral}{'States: \(\backslash\)n'}
+164             \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states:
+165                 result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % s
+166             result += \textcolor{stringliteral}{'-'} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
+167             result += \textcolor{stringliteral}{'Transactions: \(\backslash\)n'}
+168             \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges:
+169                 result += \textcolor{stringliteral}{'  %s \(\backslash\)n'} % e
+170             \textcolor{keywordflow}{return} result + \textcolor{stringliteral}{'='} * 64 + \textcolor{stringliteral}{'\(\backslash\)n'}
 171 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_aee8d917ad164289a074b54ddd2b7615c}\label{classsylva_1_1glic_1_1glic_1_1control_aee8d917ad164289a074b54ddd2b7615c}} 
@@ -135,22 +135,22 @@ Definition at line 179 of file glic.\+py.
 
 
 \begin{DoxyCode}
-179     \textcolor{keyword}{def }deserialize(json\_dict):
-180       states = [state.deserialize(s) \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]]
-181       \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]:
-182         state.deserialize(s, states)
-183       edges = [e \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} states \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} s.edges]
-184       name = json\_dict[\textcolor{stringliteral}{'name'}]
-185       default\_state\_index = int(json\_dict[\textcolor{stringliteral}{'default\_state\_index'}])
+179         \textcolor{keyword}{def }deserialize(json\_dict):
+180             states = [state.deserialize(s) \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]]
+181             \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'states'}]:
+182                 state.deserialize(s, states)
+183             edges = [e \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} states \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} s.edges]
+184             name = json\_dict[\textcolor{stringliteral}{'name'}]
+185             default\_state\_index = int(json\_dict[\textcolor{stringliteral}{'default\_state\_index'}])
 186 
-187       result = control()
-188       result.name = name
-189       result.default\_state = states[default\_state\_index]
-190       result.default\_state\_index = default\_state\_index
-191       result.states = states
-192       result.edges = edges
+187             result = control()
+188             result.name = name
+189             result.default\_state = states[default\_state\_index]
+190             result.default\_state\_index = default\_state\_index
+191             result.states = states
+192             result.edges = edges
 193 
-194       \textcolor{keywordflow}{return} result
+194             \textcolor{keywordflow}{return} result
 195 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_a5d7147d7ce52b8f9e3e96f3dfcba672f}\label{classsylva_1_1glic_1_1glic_1_1control_a5d7147d7ce52b8f9e3e96f3dfcba672f}} 
@@ -165,15 +165,15 @@ Definition at line 172 of file glic.\+py.
 
 
 
-References sylva.\+glic.\+glic.\+control.\+default\+\_\+state, sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+edges, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+sdfg.\+edges, sylva.\+base.\+fimp.\+fimp.\+name, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+sdf.\+Port.\+name, sylva.\+base.\+sdf.\+actor.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+set.\+name, sylva.\+base.\+fimp.\+fimp\+\_\+lib.\+name, and sylva.\+glic.\+glic.\+control.\+states.
+References sylva.\+glic.\+glic.\+control.\+default\+\_\+state, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+edges, sylva.\+dse.\+dse.\+system\+\_\+model.\+edges, sylva.\+glic.\+glic.\+control.\+edges, sylva.\+base.\+sdf.\+D\+F\+G.\+edges, sylva.\+base.\+sdf.\+Data\+Token\+Type.\+name, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+name, sylva.\+base.\+sdf.\+Port.\+name, sylva.\+dse.\+dse.\+system\+\_\+model.\+name, sylva.\+glic.\+glic.\+control.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Set.\+name, sylva.\+base.\+sylva\+\_\+base.\+Data\+Token\+Type.\+name, sylva.\+base.\+sdf.\+Actor.\+name, sylva.\+base.\+sylva\+\_\+base.\+Port.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+name, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Library.\+name, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Library.\+name, sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+name, and sylva.\+glic.\+glic.\+control.\+states.
 
 
 \begin{DoxyCode}
-172     \textcolor{keyword}{def }serialize(self):
-173       \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'states'}: [s.serialize() \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states],
-174               \textcolor{stringliteral}{'edges'}: [e.serialize() \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges],
-175               \textcolor{stringliteral}{'name'}: self.name,
-176               \textcolor{stringliteral}{'default\_state\_index'}: self.default\_state.index\}
+172         \textcolor{keyword}{def }serialize(self):
+173             \textcolor{keywordflow}{return} \{\textcolor{stringliteral}{'states'}: [s.serialize() \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.states],
+174                     \textcolor{stringliteral}{'edges'}: [e.serialize() \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.edges],
+175                     \textcolor{stringliteral}{'name'}: self.name,
+176                     \textcolor{stringliteral}{'default\_state\_index'}: self.default\_state.index\}
 177 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1glic_1_1glic_1_1control_aea52fc110901323d58833de74918965e}\label{classsylva_1_1glic_1_1glic_1_1control_aea52fc110901323d58833de74918965e}} 
@@ -192,20 +192,20 @@ References sylva.\+glic.\+glic.\+control.\+current\+\_\+cycle, and sylva.\+glic.
 
 
 \begin{DoxyCode}
-142     \textcolor{keyword}{def }step(self, current\_cycle=None):
+142         \textcolor{keyword}{def }step(self, current\_cycle=None):
 143 
-144       \textcolor{keywordflow}{if} current\_cycle == \textcolor{keywordtype}{None}:
-145         self.current\_cycle += 1
-146       \textcolor{keywordflow}{else}:
-147         self.current\_cycle = current\_cycle
+144             \textcolor{keywordflow}{if} current\_cycle == \textcolor{keywordtype}{None}:
+145                 self.current\_cycle += 1
+146             \textcolor{keywordflow}{else}:
+147                 self.current\_cycle = current\_cycle
 148 
-149       \textcolor{keywordflow}{if} self.current\_state != \textcolor{keywordtype}{None}:
-150         \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.current\_state.edges:
-151           \textcolor{keywordflow}{if} e.cycle == self.current\_cycle:
-152             self.current\_state = e.destination
-153             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+149             \textcolor{keywordflow}{if} self.current\_state != \textcolor{keywordtype}{None}:
+150                 \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} self.current\_state.edges:
+151                     \textcolor{keywordflow}{if} e.cycle == self.current\_cycle:
+152                         self.current\_state = e.destination
+153                         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
 154 
-155       \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+155             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
 156 
 \end{DoxyCode}
 

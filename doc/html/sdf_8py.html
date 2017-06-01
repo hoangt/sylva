@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -117,7 +123,6 @@ $(document).ready(function(){initNavTree('sdf_8py.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">sdf.py File Reference</div>  </div>
@@ -134,11 +139,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html">sylva.base.sdf.Port</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for port.  <a href="classsylva_1_1base_1_1sdf_1_1_port.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html">sylva.base.sdf.edge</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_actor.html">sylva.base.sdf.Actor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for SDF actor.  <a href="classsylva_1_1base_1_1sdf_1_1_actor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1actor.html">sylva.base.sdf.actor</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_edge.html">sylva.base.sdf.Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communication edge.  <a href="classsylva_1_1base_1_1sdf_1_1_edge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1sdfg.html">sylva.base.sdf.sdfg</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_d_f_g.html">sylva.base.sdf.DFG</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for Data Flow Graph.  <a href="classsylva_1_1base_1_1sdf_1_1_d_f_g.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g.html">sylva.base.sdf.HSDFG</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for <a class="el" href="classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g.html" title="Class for HSDFG. ">HSDFG</a>.  <a href="classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_s_d_f_g.html">sylva.base.sdf.SDFG</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for <a class="el" href="classsylva_1_1base_1_1sdf_1_1_s_d_f_g.html" title="Class for SDFG Graph. ">SDFG</a> Graph.  <a href="classsylva_1_1base_1_1sdf_1_1_s_d_f_g.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -147,51 +161,14 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacesylva_1_1base_1_1sdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">All SDF graph related classes and methods. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a72bbd0e1cd0a666269ac3f17427954b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a72bbd0e1cd0a666269ac3f17427954b8">sylva.base.sdf.load_sdf_port</a> (json_dict)</td></tr>
-<tr class="separator:a72bbd0e1cd0a666269ac3f17427954b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67886f481ab9be68797400241d754f64"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a67886f481ab9be68797400241d754f64">sylva.base.sdf.load_sdf_edge_index</a> (json_dict)</td></tr>
-<tr class="separator:a67886f481ab9be68797400241d754f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd1ba464e47476a5205de3e3856fbb83"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#acd1ba464e47476a5205de3e3856fbb83">sylva.base.sdf.load_sdf_edge</a> (json_dict, actors)</td></tr>
-<tr class="separator:acd1ba464e47476a5205de3e3856fbb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c688b99c9dcb365aa7598c79f038839"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a7c688b99c9dcb365aa7598c79f038839">sylva.base.sdf.create_sdf_edge</a> (src_actor_index, src_port_index, dest_actor_index, dest_port_index, actors)</td></tr>
-<tr class="separator:a7c688b99c9dcb365aa7598c79f038839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4055dfc61c95b2f23e5a5dba353302"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a0c4055dfc61c95b2f23e5a5dba353302">sylva.base.sdf.connect</a> (src_actor, src_port_index, src_data_token_count, dest_actor, dest_port_index, dest_data_token_count, data_token_type=DataTokenType('noName', 1))</td></tr>
-<tr class="separator:a0c4055dfc61c95b2f23e5a5dba353302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b2bfbb0fd81d1e114b670f13f718f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a14b2bfbb0fd81d1e114b670f13f718f1">sylva.base.sdf.load_sdf_actor</a> (json_dict, keys=[])</td></tr>
-<tr class="separator:a14b2bfbb0fd81d1e114b670f13f718f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34a38a5853d86a6e49aba53f9040462d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a34a38a5853d86a6e49aba53f9040462d">sylva.base.sdf.make_sdf_actor</a> (name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</td></tr>
-<tr class="separator:a34a38a5853d86a6e49aba53f9040462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3757c4b0997b952e06efde4a2da8321"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#af3757c4b0997b952e06efde4a2da8321">sylva.base.sdf.serialize_sdf_graph</a> (actors, edges)</td></tr>
-<tr class="separator:af3757c4b0997b952e06efde4a2da8321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bdfa7a81bf9648662631113a609062d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a0bdfa7a81bf9648662631113a609062d">sylva.base.sdf.load_sdf_graph</a> (json_dict, actor_keys=[])</td></tr>
-<tr class="separator:a0bdfa7a81bf9648662631113a609062d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c1c6ea91b0ed9948ce670cd269b88b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a55c1c6ea91b0ed9948ce670cd269b88b">sylva.base.sdf.dump_to_file</a> (item, filepath, indent=2)</td></tr>
-<tr class="separator:a55c1c6ea91b0ed9948ce670cd269b88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc075a9dc81209dee7a5b97d99640e5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a2fc075a9dc81209dee7a5b97d99640e5">sylva.base.sdf.add_actor</a> (actors, name, index, inports, outports, input_token_type=[DataTokenType('std_logic', 1)], output_token_type=[DataTokenType('std_logic', 1)])</td></tr>
-<tr class="separator:a2fc075a9dc81209dee7a5b97d99640e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecda5e2c5810b35f98a0466a348af120"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#aecda5e2c5810b35f98a0466a348af120">sylva.base.sdf.add_edge</a> (edges, src_actor_index, src_port_index, dest_actor_index, dest_port_index, actors)</td></tr>
-<tr class="separator:aecda5e2c5810b35f98a0466a348af120"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0fb379d9b6a1f2adb650611bdb49e6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a1e0fb379d9b6a1f2adb650611bdb49e6">sylva.base.sdf.get_layered_actors</a> (actors)</td></tr>
-<tr class="separator:a1e0fb379d9b6a1f2adb650611bdb49e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:acc6d2abcf12fe231ba37a00428ac6324"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#acc6d2abcf12fe231ba37a00428ac6324">sylva.base.sdf.__author__</a> = 'Shuo Li &lt;contact@shuol.li&gt;'</td></tr>
 <tr class="separator:acc6d2abcf12fe231ba37a00428ac6324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adccda126d39b0e5206af68035aea9066"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#adccda126d39b0e5206af68035aea9066">sylva.base.sdf.__version__</a> = '2017-05-12'</td></tr>
+<tr class="memitem:adccda126d39b0e5206af68035aea9066"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#adccda126d39b0e5206af68035aea9066">sylva.base.sdf.__version__</a> = '2017-05-17'</td></tr>
 <tr class="separator:adccda126d39b0e5206af68035aea9066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a980e085a8798aeb5104490284de5edd1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a980e085a8798aeb5104490284de5edd1">sylva.base.sdf.__license__</a> = 'MIT'</td></tr>
+<tr class="memitem:a980e085a8798aeb5104490284de5edd1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a980e085a8798aeb5104490284de5edd1">sylva.base.sdf.__license__</a> = 'https://opensource.org/licenses/MIT'</td></tr>
 <tr class="separator:a980e085a8798aeb5104490284de5edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf3fa067b15b3a601f61564012ddaf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a7cf3fa067b15b3a601f61564012ddaf1">sylva.base.sdf.d</a> = DataTokenType()</td></tr>
-<tr class="separator:a7cf3fa067b15b3a601f61564012ddaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e21c34d5788bcf15b3fb64cf5381843"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a1e21c34d5788bcf15b3fb64cf5381843">sylva.base.sdf.dc</a> = dict(d)</td></tr>
-<tr class="separator:a1e21c34d5788bcf15b3fb64cf5381843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d9eb96b3c8367d46f62630c694532a"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a39d9eb96b3c8367d46f62630c694532a">sylva.base.sdf.default_actor_style</a></td></tr>
-<tr class="separator:a39d9eb96b3c8367d46f62630c694532a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc7e4f9875075ae2cc4d82650265733"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1sdf.html#a2fc7e4f9875075ae2cc4d82650265733">sylva.base.sdf.default_annotation_style</a></td></tr>
-<tr class="separator:a2fc7e4f9875075ae2cc4d82650265733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

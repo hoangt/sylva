@@ -43,11 +43,13 @@ string \hyperlink{namespacesylva_1_1misc_1_1util_a1111366860ec15b68260a43ac632d2
 \item 
 string \hyperlink{namespacesylva_1_1misc_1_1util_aa458ed92c21a116abe2d5f9ab81a2125}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2015-\/08-\/15-\/23\+:20\textquotesingle{}
 \item 
-\hyperlink{namespacesylva_1_1misc_1_1util_ae24a7e9d1f4709e04a181e488d3e7e96}{ceil} = lambda x \+: int(math.\+ceil(x))
+\hyperlink{namespacesylva_1_1misc_1_1util_ae24a7e9d1f4709e04a181e488d3e7e96}{ceil} = lambda x\+: int(math.\+ceil(x))
 \item 
-\hyperlink{namespacesylva_1_1misc_1_1util_aa02f5d131cb4bc9ad1c277a7b0c76885}{floor} = lambda x \+: int(math.\+floor(x))
+\hyperlink{namespacesylva_1_1misc_1_1util_aa02f5d131cb4bc9ad1c277a7b0c76885}{floor} = lambda x\+: int(math.\+floor(x))
 \item 
-\hyperlink{namespacesylva_1_1misc_1_1util_ab3731c524403f8c49cdb518af558d408}{log} = lambda x \+: math.\+log(x, 10)
+\hyperlink{namespacesylva_1_1misc_1_1util_ab3731c524403f8c49cdb518af558d408}{log} = lambda x\+: math.\+log(x, 10)
+\item 
+\hyperlink{namespacesylva_1_1misc_1_1util_a6ac1d560ffdd426fb10172ea106318a0}{log2} = lambda x\+: math.\+log(x, 2)
 \end{DoxyCompactItemize}
 
 
@@ -60,7 +62,7 @@ string \hyperlink{namespacesylva_1_1misc_1_1util_aa458ed92c21a116abe2d5f9ab81a21
 
 
 
-Definition at line 69 of file util.\+py.
+Definition at line 71 of file util.\+py.
 
 
 
@@ -72,18 +74,18 @@ Referenced by sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
 
 
 \begin{DoxyCode}
-69 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a5dfe1979a130725652883d277a24ee5d}{all\_files}(path, ext\_names = []) :
-70   path = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(path)
-71   result = []
-72   \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} path :
-73     result += [ os.path.join(dirpath, filename)
-74       \textcolor{keywordflow}{for} (dirpath, dirnames, filenames) \textcolor{keywordflow}{in} os.walk(p)
-75         \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} filenames ]
-76   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} ext\_names :
-77     \textcolor{keywordflow}{return} result
-78   ext\_names = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(ext\_names)
-79   \textcolor{keywordflow}{return} [f \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} result \textcolor{keywordflow}{if} os.path.splitext(f)[1] \textcolor{keywordflow}{in} ext\_names]
-80 
+71 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a5dfe1979a130725652883d277a24ee5d}{all\_files}(path, ext\_names=[]):
+72     path = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(path)
+73     result = []
+74     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} path:
+75         result += [os.path.join(dirpath, filename)
+76                    \textcolor{keywordflow}{for} (dirpath, dirnames, filenames) \textcolor{keywordflow}{in} os.walk(p)
+77                    \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} filenames]
+78     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} ext\_names:
+79         \textcolor{keywordflow}{return} result
+80     ext\_names = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(ext\_names)
+81     \textcolor{keywordflow}{return} [f \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} result \textcolor{keywordflow}{if} os.path.splitext(f)[1] \textcolor{keywordflow}{in} ext\_names]
+82 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_aa202ba520fb5e2daa064c4379aeeb5cf}\label{namespacesylva_1_1misc_1_1util_aa202ba520fb5e2daa064c4379aeeb5cf}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!chunks@{chunks}}
@@ -93,7 +95,7 @@ Referenced by sylva.\+frontend.\+simulink2sdf.\+simulink2sdf().
 
 
 
-Definition at line 65 of file util.\+py.
+Definition at line 67 of file util.\+py.
 
 
 
@@ -101,10 +103,10 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+define\+\_\+con
 
 
 \begin{DoxyCode}
-65 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_aa202ba520fb5e2daa064c4379aeeb5cf}{chunks}(l, n):
-66   \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(0, len(l), n):
-67     \textcolor{keywordflow}{yield} l[i:i+n]
-68 
+67 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_aa202ba520fb5e2daa064c4379aeeb5cf}{chunks}(l, n):
+68     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(0, len(l), n):
+69         \textcolor{keywordflow}{yield} l[i:i + n]
+70 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a0ce6d1d719234031353b60ac60f2af0d}\label{namespacesylva_1_1misc_1_1util_a0ce6d1d719234031353b60ac60f2af0d}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!dir\+\_\+and\+\_\+file@{dir\+\_\+and\+\_\+file}}
@@ -114,7 +116,7 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+define\+\_\+con
 
 
 
-Definition at line 132 of file util.\+py.
+Definition at line 135 of file util.\+py.
 
 
 
@@ -122,28 +124,28 @@ Referenced by sylva.\+misc.\+exec.\+clean\+\_\+command(), sylva.\+misc.\+exec.\+
 
 
 \begin{DoxyCode}
-132 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a0ce6d1d719234031353b60ac60f2af0d}{dir\_and\_file}(provided\_name) :
-133 
-134   \textcolor{keywordflow}{if} provided\_name.startswith(\textcolor{stringliteral}{'./'}) :
-135     provided\_name = provided\_name[2:]
+135 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a0ce6d1d719234031353b60ac60f2af0d}{dir\_and\_file}(provided\_name):
 136 
-137   name, ext = os.path.splitext(os.path.basename(provided\_name))
-138   dirname = os.path.dirname(provided\_name)
+137     \textcolor{keywordflow}{if} provided\_name.startswith(\textcolor{stringliteral}{'./'}):
+138         provided\_name = provided\_name[2:]
 139 
-140   \textcolor{comment}{# when provided\_name is a dir}
-141   \textcolor{keywordflow}{if} name == provided\_name :
-142     name = \textcolor{stringliteral}{''}
-143     dirname = provided\_name
-144 
-145   \textcolor{keywordflow}{if} ext :
-146     output\_dir = dirname
-147   \textcolor{keywordflow}{elif} name :
-148     output\_dir = os.path.join(dirname, name)
-149   \textcolor{keywordflow}{else} :
-150     output\_dir = dirname
-151 
-152   \textcolor{keywordflow}{return} output\_dir, name, ext
-153 
+140     name, ext = os.path.splitext(os.path.basename(provided\_name))
+141     dirname = os.path.dirname(provided\_name)
+142 
+143     \textcolor{comment}{# when provided\_name is a dir}
+144     \textcolor{keywordflow}{if} name == provided\_name:
+145         name = \textcolor{stringliteral}{''}
+146         dirname = provided\_name
+147 
+148     \textcolor{keywordflow}{if} ext:
+149         output\_dir = dirname
+150     \textcolor{keywordflow}{elif} name:
+151         output\_dir = os.path.join(dirname, name)
+152     \textcolor{keywordflow}{else}:
+153         output\_dir = dirname
+154 
+155     \textcolor{keywordflow}{return} output\_dir, name, ext
+156 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a0881116abd7a50c6cd552b6b3edafea3}\label{namespacesylva_1_1misc_1_1util_a0881116abd7a50c6cd552b6b3edafea3}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!evenly\+\_\+pick@{evenly\+\_\+pick}}
@@ -153,19 +155,15 @@ Referenced by sylva.\+misc.\+exec.\+clean\+\_\+command(), sylva.\+misc.\+exec.\+
 
 
 
-Definition at line 121 of file util.\+py.
-
-
-
-Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
+Definition at line 123 of file util.\+py.
 
 
 \begin{DoxyCode}
-121 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a0881116abd7a50c6cd552b6b3edafea3}{evenly\_pick}(values, count) :
-122   step = len(values)/(count-1)
-123   mid = len(values)/2
-124   \textcolor{keywordflow}{return} values[:mid:step] + values[-1:mid+1:-step]
-125 
+123 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a0881116abd7a50c6cd552b6b3edafea3}{evenly\_pick}(values, count):
+124     step = len(values) / (count - 1)
+125     mid = len(values) / 2
+126     \textcolor{keywordflow}{return} values[:mid:step] + values[-1:mid + 1:-step]
+127 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a7ad460a52be16d3083cb41f0be004714}\label{namespacesylva_1_1misc_1_1util_a7ad460a52be16d3083cb41f0be004714}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!files\+\_\+in\+\_\+path@{files\+\_\+in\+\_\+path}}
@@ -175,7 +173,7 @@ Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+some\+\_\+schedules().
 
 
 
-Definition at line 81 of file util.\+py.
+Definition at line 83 of file util.\+py.
 
 
 
@@ -187,16 +185,16 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+read\+\_\+hdl()
 
 
 \begin{DoxyCode}
-81 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a7ad460a52be16d3083cb41f0be004714}{files\_in\_path}(file\_name, path) :
-82   paths = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(path)
-83   base\_name = os.path.basename(file\_name)
-84   result = [ os.path.join(dirpath, filename)
-85     \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} paths
-86       \textcolor{keywordflow}{for} (dirpath, dirnames, filenames) \textcolor{keywordflow}{in} os.walk(path)
-87         \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} filenames
-88     \textcolor{keywordflow}{if} filename == base\_name ]
-89   \textcolor{keywordflow}{return} result
-90 
+83 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a7ad460a52be16d3083cb41f0be004714}{files\_in\_path}(file\_name, path):
+84     paths = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(path)
+85     base\_name = os.path.basename(file\_name)
+86     result = [os.path.join(dirpath, filename)
+87               \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} paths
+88               \textcolor{keywordflow}{for} (dirpath, dirnames, filenames) \textcolor{keywordflow}{in} os.walk(path)
+89               \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} filenames
+90               \textcolor{keywordflow}{if} filename == base\_name]
+91     \textcolor{keywordflow}{return} result
+92 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a32b5da1967e998035c511c75ccccdf89}\label{namespacesylva_1_1misc_1_1util_a32b5da1967e998035c511c75ccccdf89}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!max\+\_\+index@{max\+\_\+index}}
@@ -206,13 +204,13 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+read\+\_\+hdl()
 
 
 
-Definition at line 118 of file util.\+py.
+Definition at line 120 of file util.\+py.
 
 
 \begin{DoxyCode}
-118 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a32b5da1967e998035c511c75ccccdf89}{max\_index}(values) :
-119   \textcolor{keywordflow}{return} values.index(max(value))
-120 
+120 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a32b5da1967e998035c511c75ccccdf89}{max\_index}(values):
+121     \textcolor{keywordflow}{return} values.index(max(value))
+122 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_ab250130a1258b854bd002c06c3467f57}\label{namespacesylva_1_1misc_1_1util_ab250130a1258b854bd002c06c3467f57}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!max\+\_\+items@{max\+\_\+items}}
@@ -222,13 +220,13 @@ Definition at line 118 of file util.\+py.
 
 
 
-Definition at line 104 of file util.\+py.
+Definition at line 106 of file util.\+py.
 
 
 \begin{DoxyCode}
-104 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_ab250130a1258b854bd002c06c3467f57}{max\_items}(values) :
-105   \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values) \textcolor{keywordflow}{if} value == max(values)]
-106 
+106 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_ab250130a1258b854bd002c06c3467f57}{max\_items}(values):
+107     \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values) \textcolor{keywordflow}{if} value == max(values)]
+108 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_aea54b6ab8ee247ea3d042b09b5333c1c}\label{namespacesylva_1_1misc_1_1util_aea54b6ab8ee247ea3d042b09b5333c1c}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!max\+\_\+items\+\_\+with\+\_\+ceil@{max\+\_\+items\+\_\+with\+\_\+ceil}}
@@ -238,14 +236,14 @@ Definition at line 104 of file util.\+py.
 
 
 
-Definition at line 111 of file util.\+py.
+Definition at line 113 of file util.\+py.
 
 
 \begin{DoxyCode}
-111 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_aea54b6ab8ee247ea3d042b09b5333c1c}{max\_items\_with\_ceil}(values, ceil) :
-112   \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values)
-113     \textcolor{keywordflow}{if} value == max(values) \textcolor{keywordflow}{and} value < ceil]
-114 
+113 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_aea54b6ab8ee247ea3d042b09b5333c1c}{max\_items\_with\_ceil}(values, ceil):
+114     \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values)
+115             \textcolor{keywordflow}{if} value == max(values) \textcolor{keywordflow}{and} value < ceil]
+116 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a5cd57a1d193048a940df5f3795423f8c}\label{namespacesylva_1_1misc_1_1util_a5cd57a1d193048a940df5f3795423f8c}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!merge\+\_\+dicts@{merge\+\_\+dicts}}
@@ -255,14 +253,14 @@ Definition at line 111 of file util.\+py.
 
 
 
-Definition at line 91 of file util.\+py.
+Definition at line 93 of file util.\+py.
 
 
 \begin{DoxyCode}
-91 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a5cd57a1d193048a940df5f3795423f8c}{merge\_dicts}(a, b) :
-92   a.update(b)
-93   \textcolor{keywordflow}{return} a
-94 
+93 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a5cd57a1d193048a940df5f3795423f8c}{merge\_dicts}(a, b):
+94     a.update(b)
+95     \textcolor{keywordflow}{return} a
+96 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a167f655cf126d75c98e671a0672087ca}\label{namespacesylva_1_1misc_1_1util_a167f655cf126d75c98e671a0672087ca}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!min\+\_\+index@{min\+\_\+index}}
@@ -272,13 +270,13 @@ Definition at line 91 of file util.\+py.
 
 
 
-Definition at line 115 of file util.\+py.
+Definition at line 117 of file util.\+py.
 
 
 \begin{DoxyCode}
-115 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a167f655cf126d75c98e671a0672087ca}{min\_index}(values) :
-116   \textcolor{keywordflow}{return} values.index(min(value))
-117 
+117 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a167f655cf126d75c98e671a0672087ca}{min\_index}(values):
+118     \textcolor{keywordflow}{return} values.index(min(value))
+119 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a7fdf694403cc19390b498aa430354a22}\label{namespacesylva_1_1misc_1_1util_a7fdf694403cc19390b498aa430354a22}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!min\+\_\+items@{min\+\_\+items}}
@@ -288,13 +286,13 @@ Definition at line 115 of file util.\+py.
 
 
 
-Definition at line 101 of file util.\+py.
+Definition at line 103 of file util.\+py.
 
 
 \begin{DoxyCode}
-101 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a7fdf694403cc19390b498aa430354a22}{min\_items}(values) :
-102   \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values) \textcolor{keywordflow}{if} value == min(values)]
-103 
+103 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a7fdf694403cc19390b498aa430354a22}{min\_items}(values):
+104     \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values) \textcolor{keywordflow}{if} value == min(values)]
+105 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a54b027582331f484228cb0a1acac2d90}\label{namespacesylva_1_1misc_1_1util_a54b027582331f484228cb0a1acac2d90}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!min\+\_\+items\+\_\+with\+\_\+floor@{min\+\_\+items\+\_\+with\+\_\+floor}}
@@ -304,14 +302,14 @@ Definition at line 101 of file util.\+py.
 
 
 
-Definition at line 107 of file util.\+py.
+Definition at line 109 of file util.\+py.
 
 
 \begin{DoxyCode}
-107 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a54b027582331f484228cb0a1acac2d90}{min\_items\_with\_floor}(values, floor) :
-108   \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values)
-109     \textcolor{keywordflow}{if} value == min(values) \textcolor{keywordflow}{and} value >floor]
-110 
+109 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a54b027582331f484228cb0a1acac2d90}{min\_items\_with\_floor}(values, floor):
+110     \textcolor{keywordflow}{return} [(index, value) \textcolor{keywordflow}{for} index, value \textcolor{keywordflow}{in} enumerate(values)
+111             \textcolor{keywordflow}{if} value == min(values) \textcolor{keywordflow}{and} value > floor]
+112 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}\label{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!mkdir@{mkdir}}
@@ -321,7 +319,7 @@ Definition at line 107 of file util.\+py.
 
 
 
-Definition at line 126 of file util.\+py.
+Definition at line 128 of file util.\+py.
 
 
 
@@ -329,12 +327,13 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+dump(), sylva.\
 
 
 \begin{DoxyCode}
-126 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(new\_dir) :
-127   \textcolor{keywordflow}{try} :
-128     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.exists(new\_dir) :
-129       os.mkdir(new\_dir)
-130   \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-131 
+128 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(new\_dir):
+129     \textcolor{keywordflow}{try}:
+130         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.exists(new\_dir):
+131             os.mkdir(new\_dir)
+132     \textcolor{keywordflow}{except}:
+133         \textcolor{keywordflow}{pass}
+134 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}\label{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!to\+\_\+list@{to\+\_\+list}}
@@ -344,7 +343,7 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+dump(), sylva.\
 
 
 
-Definition at line 95 of file util.\+py.
+Definition at line 97 of file util.\+py.
 
 
 
@@ -352,12 +351,12 @@ Referenced by sylva.\+misc.\+util.\+all\+\_\+files(), sylva.\+misc.\+plot.\+canv
 
 
 \begin{DoxyCode}
-95 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(a) :
-96   \textcolor{keywordflow}{if} isinstance(a, list) :
-97     \textcolor{keywordflow}{return} a
-98   \textcolor{keywordflow}{else} :
-99     \textcolor{keywordflow}{return} [a]
-100 
+97 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(a):
+98     \textcolor{keywordflow}{if} isinstance(a, list):
+99         \textcolor{keywordflow}{return} a
+100     \textcolor{keywordflow}{else}:
+101         \textcolor{keywordflow}{return} [a]
+102 
 \end{DoxyCode}
 
 
@@ -386,29 +385,39 @@ Definition at line 24 of file util.\+py.
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!ceil@{ceil}}
 \index{ceil@{ceil}!sylva\+::misc\+::util@{sylva\+::misc\+::util}}
 \subsubsection{\texorpdfstring{ceil}{ceil}}
-{\footnotesize\ttfamily sylva.\+misc.\+util.\+ceil = lambda x \+: int(math.\+ceil(x))}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+ceil = lambda x\+: int(math.\+ceil(x))}
 
 
 
-Definition at line 154 of file util.\+py.
+Definition at line 157 of file util.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_aa02f5d131cb4bc9ad1c277a7b0c76885}\label{namespacesylva_1_1misc_1_1util_aa02f5d131cb4bc9ad1c277a7b0c76885}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!floor@{floor}}
 \index{floor@{floor}!sylva\+::misc\+::util@{sylva\+::misc\+::util}}
 \subsubsection{\texorpdfstring{floor}{floor}}
-{\footnotesize\ttfamily sylva.\+misc.\+util.\+floor = lambda x \+: int(math.\+floor(x))}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+floor = lambda x\+: int(math.\+floor(x))}
 
 
 
-Definition at line 155 of file util.\+py.
+Definition at line 158 of file util.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_ab3731c524403f8c49cdb518af558d408}\label{namespacesylva_1_1misc_1_1util_ab3731c524403f8c49cdb518af558d408}} 
 \index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!log@{log}}
 \index{log@{log}!sylva\+::misc\+::util@{sylva\+::misc\+::util}}
 \subsubsection{\texorpdfstring{log}{log}}
-{\footnotesize\ttfamily sylva.\+misc.\+util.\+log = lambda x \+: math.\+log(x, 10)}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+log = lambda x\+: math.\+log(x, 10)}
 
 
 
-Definition at line 156 of file util.\+py.
+Definition at line 159 of file util.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1util_a6ac1d560ffdd426fb10172ea106318a0}\label{namespacesylva_1_1misc_1_1util_a6ac1d560ffdd426fb10172ea106318a0}} 
+\index{sylva\+::misc\+::util@{sylva\+::misc\+::util}!log2@{log2}}
+\index{log2@{log2}!sylva\+::misc\+::util@{sylva\+::misc\+::util}}
+\subsubsection{\texorpdfstring{log2}{log2}}
+{\footnotesize\ttfamily sylva.\+misc.\+util.\+log2 = lambda x\+: math.\+log(x, 2)}
+
+
+
+Definition at line 160 of file util.\+py.
 

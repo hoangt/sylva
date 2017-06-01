@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['make_5fsdf_5factor',['make_sdf_actor',['../namespacesylva_1_1base_1_1sdf.html#a34a38a5853d86a6e49aba53f9040462d',1,'sylva::base::sdf']]],
-  ['max_5farea',['max_area',['../classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a7ccaf97aee0eea5ee5b815cc15c9ca8c',1,'sylva::dse::dse_engine_v1::dse_v1']]],
-  ['max_5fenergy',['max_energy',['../classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#aeb393a5a395f63412042d4cbeb299148',1,'sylva::dse::dse_engine_v1::dse_v1']]],
+  ['max_5farea',['max_area',['../classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#a3f8ec6d09b038af4fc1849d52945a618',1,'sylva::dse::dse_engine::DSEEngine']]],
+  ['max_5fenergy',['max_energy',['../classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#adc5adfdd271441b2d148ba4917a3a816',1,'sylva::dse::dse_engine::DSEEngine']]],
   ['max_5findex',['max_index',['../namespacesylva_1_1misc_1_1util.html#a32b5da1967e998035c511c75ccccdf89',1,'sylva::misc::util']]],
   ['max_5fitems',['max_items',['../namespacesylva_1_1misc_1_1util.html#ab250130a1258b854bd002c06c3467f57',1,'sylva::misc::util']]],
   ['max_5fitems_5fwith_5fceil',['max_items_with_ceil',['../namespacesylva_1_1misc_1_1util.html#aea54b6ab8ee247ea3d042b09b5333c1c',1,'sylva::misc::util']]],
-  ['max_5flatency',['max_latency',['../classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#aff2dc8fd64544ea6cb34f13ea949db60',1,'sylva::dse::dse_engine_v1::dse_v1']]],
-  ['max_5fsample_5finterval',['max_sample_interval',['../classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a4ad1aafd9ec5d08061e190467de2d0ca',1,'sylva::dse::dse_engine_v1::dse_v1']]],
+  ['max_5flatency',['max_latency',['../classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#a9e3a420120dac809f071796af12ccab5',1,'sylva::dse::dse_engine::DSEEngine']]],
+  ['max_5fsample_5finterval',['max_sample_interval',['../classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#a8c3fe415b947865ef59fd5113031aa74',1,'sylva::dse::dse_engine::DSEEngine']]],
   ['mdl_5freader_2epy',['mdl_reader.py',['../mdl__reader_8py.html',1,'']]],
   ['merge_5fdict',['merge_dict',['../namespacesylva_1_1code__generation_1_1vhdl__generation.html#a6f105e19192ce75934f22be90308ceff',1,'sylva::code_generation::vhdl_generation']]],
   ['merge_5fdicts',['merge_dicts',['../namespacesylva_1_1misc_1_1util.html#a5cd57a1d193048a940df5f3795423f8c',1,'sylva::misc::util']]],
@@ -26,6 +25,5 @@ var searchData=
   ['mit_5flicense_2epy',['mit_license.py',['../mit__license_8py.html',1,'']]],
   ['mkdir',['mkdir',['../namespacesylva_1_1misc_1_1util.html#af426e429c40209bbb46e3a0e8f139a44',1,'sylva::misc::util']]],
   ['modules',['modules',['../namespacesylva_1_1code__generation_1_1vhdl__constants.html#a3e666173c3556509eef03cd2ef567ba1',1,'sylva::code_generation::vhdl_constants']]],
-  ['more_5fvalues',['more_values',['../namespacesylva_1_1misc_1_1tcl__parser.html#a400beccbf593cc4495fdd7ab101acb39',1,'sylva::misc::tcl_parser']]],
-  ['most_5fparallel_5fschedule',['most_parallel_schedule',['../namespacesylva_1_1dse_1_1dse__engine__v1.html#a2c16f997588f8721ab7742ca16e79e64',1,'sylva::dse::dse_engine_v1']]]
+  ['more_5fvalues',['more_values',['../namespacesylva_1_1misc_1_1tcl__parser.html#a400beccbf593cc4495fdd7ab101acb39',1,'sylva::misc::tcl_parser']]]
 ];

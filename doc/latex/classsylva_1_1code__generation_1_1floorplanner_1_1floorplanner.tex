@@ -99,48 +99,48 @@ Definition at line 188 of file floorplanner.\+py.
 
 
 \begin{DoxyCode}
-188          KA=0, KC=1, KT=0, time\_limit=\textcolor{keywordtype}{None}, log=status\_log(\textcolor{keyword}{True}, \textcolor{keyword}{True})):
+188                  KA=0, KC=1, KT=0, time\_limit=\textcolor{keywordtype}{None}, log=status\_log(\textcolor{keyword}{True}, \textcolor{keyword}{True})):
 189 
-190     self.searching = \textcolor{keyword}{True}
-191     self.log = log
-192     self.solutions = []
-193     self.time\_limit = time\_limit
+190         self.searching = \textcolor{keyword}{True}
+191         self.log = log
+192         self.solutions = []
+193         self.time\_limit = time\_limit
 194 
-195     self.prepare\_attributes(CGRA, actors)
+195         self.prepare\_attributes(CGRA, actors)
 196 
-197     self.add\_non\_overlap\_constraints()
+197         self.add\_non\_overlap\_constraints()
 198 
-199     \textcolor{comment}{# add area constraints if specified}
-200     self.add\_area\_constraints()
-201     \textcolor{keywordflow}{if} max\_area > 0:
-202       self.solver.Add(self.area <= max\_area)
+199         \textcolor{comment}{# add area constraints if specified}
+200         self.add\_area\_constraints()
+201         \textcolor{keywordflow}{if} max\_area > 0:
+202             self.solver.Add(self.area <= max\_area)
 203 
-204     \textcolor{comment}{# add communication cost constraints if specified}
-205     self.add\_communication\_cost\_constraints()
-206     \textcolor{keywordflow}{if} max\_communication\_cost > 0:
-207       self.solver.Add(self.communication\_cost <= max\_communication\_cost)
+204         \textcolor{comment}{# add communication cost constraints if specified}
+205         self.add\_communication\_cost\_constraints()
+206         \textcolor{keywordflow}{if} max\_communication\_cost > 0:
+207             self.solver.Add(self.communication\_cost <= max\_communication\_cost)
 208 
-209     \textcolor{comment}{# latency constraints}
-210     \textcolor{keywordflow}{if} max\_latency > 0:
-211       self.add\_latency\_constraints()
-212     \textcolor{keywordflow}{else}:
-213       self.latency = self.solver.IntVar(0, 0, \textcolor{stringliteral}{'latency'})
+209         \textcolor{comment}{# latency constraints}
+210         \textcolor{keywordflow}{if} max\_latency > 0:
+211             self.add\_latency\_constraints()
+212         \textcolor{keywordflow}{else}:
+213             self.latency = self.solver.IntVar(0, 0, \textcolor{stringliteral}{'latency'})
 214 
-215     objective\_var = self.solver.ScalProd(
-216       [self.area, self.communication\_cost, self.latency], [KA, KC, KT])
-217     \textcolor{comment}{# objective\_var = self.communication\_cost}
-218     self.optimization = self.solver.Minimize(objective\_var, 1)
+215         objective\_var = self.solver.ScalProd(
+216             [self.area, self.communication\_cost, self.latency], [KA, KC, KT])
+217         \textcolor{comment}{# objective\_var = self.communication\_cost}
+218         self.optimization = self.solver.Minimize(objective\_var, 1)
 219 
-220     \textcolor{comment}{# assign values for x and y}
-221     self.db = self.solver.Phase(self.x + self.y,
-222                   self.solver.CHOOSE\_FIRST\_UNBOUND,
-223                   self.solver.ASSIGN\_MIN\_VALUE)
+220         \textcolor{comment}{# assign values for x and y}
+221         self.db = self.solver.Phase(self.x + self.y,
+222                                     self.solver.CHOOSE\_FIRST\_UNBOUND,
+223                                     self.solver.ASSIGN\_MIN\_VALUE)
 224 
-225     \textcolor{keywordflow}{if} self.time\_limit:
-226       self.solver.NewSearch(self.db, self.optimization,
-227                   self.solver.TimeLimit(self.time\_limit))
-228     \textcolor{keywordflow}{else}:
-229       self.solver.NewSearch(self.db, self.optimization)
+225         \textcolor{keywordflow}{if} self.time\_limit:
+226             self.solver.NewSearch(self.db, self.optimization,
+227                                   self.solver.TimeLimit(self.time\_limit))
+228         \textcolor{keywordflow}{else}:
+229             self.solver.NewSearch(self.db, self.optimization)
 230 
 \end{DoxyCode}
 
@@ -158,23 +158,23 @@ Definition at line 169 of file floorplanner.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-169   \textcolor{keyword}{def }add\_area\_constraints(self):
-170     fimps = range(len(self.fimp\_instances))
+169     \textcolor{keyword}{def }add\_area\_constraints(self):
+170         fimps = range(len(self.fimp\_instances))
 171 
-172     max\_x = self.solver.Max([self.x[f] + self.w[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
-173     min\_x = self.solver.Min(self.x)
-174     total\_width = self.solver.ScalProd([max\_x, min\_x], [1, -1])
+172         max\_x = self.solver.Max([self.x[f] + self.w[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
+173         min\_x = self.solver.Min(self.x)
+174         total\_width = self.solver.ScalProd([max\_x, min\_x], [1, -1])
 175 
-176     \textcolor{comment}{# bottom = (max y + height) - min y}
-177     max\_y = self.solver.Max([self.y[f] + self.h[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
-178     min\_y = self.solver.Min(self.y)
-179     total\_height = self.solver.ScalProd([max\_y, min\_y], [1, -1])
+176         \textcolor{comment}{# bottom = (max y + height) - min y}
+177         max\_y = self.solver.Max([self.y[f] + self.h[f] \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps])
+178         min\_y = self.solver.Min(self.y)
+179         total\_height = self.solver.ScalProd([max\_y, min\_y], [1, -1])
 180 
-181     self.area = total\_width * total\_height
+181         self.area = total\_width * total\_height
 182 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a8fa40b80a9a8bed617cb297758c0c5b5}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a8fa40b80a9a8bed617cb297758c0c5b5}} 
@@ -189,97 +189,97 @@ Definition at line 77 of file floorplanner.\+py.
 
 
 \begin{DoxyCode}
-77   \textcolor{keyword}{def }add\_communication\_cost\_constraints(self):
+77     \textcolor{keyword}{def }add\_communication\_cost\_constraints(self):
 78 
-79     \textcolor{comment}{# icc: individual communication cost}
-80     self.icc = []
+79         \textcolor{comment}{# icc: individual communication cost}
+80         self.icc = []
 81 
-82     \textcolor{comment}{# ict: individual communication time}
-83     self.ict = []
+82         \textcolor{comment}{# ict: individual communication time}
+83         self.ict = []
 84 
-85     \textcolor{comment}{# rrp: required routing points}
-86     self.rrp = []
+85         \textcolor{comment}{# rrp: required routing points}
+86         self.rrp = []
 87 
-88     \textcolor{comment}{# communication edges}
-89     self.edges = []
+88         \textcolor{comment}{# communication edges}
+89         self.edges = []
 90 
-91     \textcolor{comment}{# communication distance}
-92     self.distance = []
-93     self.x\_distance = []
-94     self.y\_distance = []
+91         \textcolor{comment}{# communication distance}
+92         self.distance = []
+93         self.x\_distance = []
+94         self.y\_distance = []
 95 
-96     \textcolor{comment}{# nrp = number of routing points}
-97     nrp\_max = max(self.cgra.width / self.cgra.hop\_x,
-98             self.cgra.height / self.cgra.hop\_y)
+96         \textcolor{comment}{# nrp = number of routing points}
+97         nrp\_max = max(self.cgra.width / self.cgra.hop\_x,
+98                       self.cgra.height / self.cgra.hop\_y)
 99 
-100     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
-101       \textcolor{keywordflow}{for} idx \textcolor{keywordflow}{in} range(len(a.next)):
-102         one\_edge = a.next[idx]
-103         token = one\_edge.src\_port.type.size * one\_edge.src\_port.count
-104         src = a.fimp.index
-105         dest = one\_edge.dest\_actor.fimp.index
+100         \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
+101             \textcolor{keywordflow}{for} idx \textcolor{keywordflow}{in} range(len(a.next)):
+102                 one\_edge = a.next[idx]
+103                 token = one\_edge.src\_port.type.size * one\_edge.src\_port.count
+104                 src = a.fimp.index
+105                 dest = one\_edge.dest\_actor.fimp.index
 106 
-107         \textcolor{comment}{# Assume the output port is always at the top-right actor}
-108         src\_x = self.x[src] + self.w[src] - 1
-109         src\_y = self.y[src]  \textcolor{comment}{# + self.h[src] - 1}
+107                 \textcolor{comment}{# Assume the output port is always at the top-right actor}
+108                 src\_x = self.x[src] + self.w[src] - 1
+109                 src\_y = self.y[src]  \textcolor{comment}{# + self.h[src] - 1}
 110 
-111         \textcolor{comment}{# Assume the input port is always at the top-left actor}
-112         dest\_x = self.x[dest]
-113         dest\_y = self.y[dest]
+111                 \textcolor{comment}{# Assume the input port is always at the top-left actor}
+112                 dest\_x = self.x[dest]
+113                 dest\_y = self.y[dest]
 114 
-115         \textcolor{comment}{# compute distance between two actors}
-116         x\_distance = abs(src\_x - dest\_x)
-117         y\_distance = abs(src\_y - dest\_y)
-118         self.x\_distance.append(x\_distance)
-119         self.y\_distance.append(y\_distance)
+115                 \textcolor{comment}{# compute distance between two actors}
+116                 x\_distance = abs(src\_x - dest\_x)
+117                 y\_distance = abs(src\_y - dest\_y)
+118                 self.x\_distance.append(x\_distance)
+119                 self.y\_distance.append(y\_distance)
 120 
-121         \textcolor{comment}{# Example:}
-122         \textcolor{comment}{#}
-123         \textcolor{comment}{# x\_equal = True means}
-124         \textcolor{comment}{#}
-125         \textcolor{comment}{# [src\_x]========>[rp]========>[rp]========>[rp]======>[dest\_x]}
-126         \textcolor{comment}{#     |< hop\_x >|  |< hop\_x >|  |< hop\_x >|  |< r\_x >|}
-127         \textcolor{comment}{#     |< x\_distance                 >|}
+121                 \textcolor{comment}{# Example:}
+122                 \textcolor{comment}{#}
+123                 \textcolor{comment}{# x\_equal = True means}
+124                 \textcolor{comment}{#}
+125                 \textcolor{comment}{# [src\_x]========>[rp]========>[rp]========>[rp]======>[dest\_x]}
+126                 \textcolor{comment}{#     |< hop\_x >|  |< hop\_x >|  |< hop\_x >|  |< r\_x >|}
+127                 \textcolor{comment}{#     |< x\_distance                 >|}
 128 
-129         \textcolor{comment}{# nrp = number of routing points}
-130         nrp = self.solver.IntVar(0, nrp\_max, \textcolor{stringliteral}{'nrp'})
+129                 \textcolor{comment}{# nrp = number of routing points}
+130                 nrp = self.solver.IntVar(0, nrp\_max, \textcolor{stringliteral}{'nrp'})
 131 
-132         \textcolor{comment}{# remainders in x and y axes}
-133         r\_x = self.solver.IntVar(0, self.cgra.hop\_x - 1, \textcolor{stringliteral}{'r\_x'})
-134         r\_y = self.solver.IntVar(0, self.cgra.hop\_y - 1, \textcolor{stringliteral}{'r\_y'})
+132                 \textcolor{comment}{# remainders in x and y axes}
+133                 r\_x = self.solver.IntVar(0, self.cgra.hop\_x - 1, \textcolor{stringliteral}{'r\_x'})
+134                 r\_y = self.solver.IntVar(0, self.cgra.hop\_y - 1, \textcolor{stringliteral}{'r\_y'})
 135 
-136         \textcolor{comment}{# x\_equal : maximum step is taken on the x-axis for}
-137         \textcolor{comment}{# cross-window communication}
-138         x\_equal = x\_distance == nrp * self.cgra.hop\_x + r\_x
+136                 \textcolor{comment}{# x\_equal : maximum step is taken on the x-axis for}
+137                 \textcolor{comment}{# cross-window communication}
+138                 x\_equal = x\_distance == nrp * self.cgra.hop\_x + r\_x
 139 
-140         \textcolor{comment}{# y\_equal : maximum step is taken on the y-axis for}
-141         \textcolor{comment}{# cross-window communication}
-142         y\_equal = y\_distance == nrp * self.cgra.hop\_y + r\_y
+140                 \textcolor{comment}{# y\_equal : maximum step is taken on the y-axis for}
+141                 \textcolor{comment}{# cross-window communication}
+142                 y\_equal = y\_distance == nrp * self.cgra.hop\_y + r\_y
 143 
-144         \textcolor{comment}{# if x\_distance >= y\_distance, x\_equal should be true}
-145         x\_larger = x\_distance >= y\_distance
+144                 \textcolor{comment}{# if x\_distance >= y\_distance, x\_equal should be true}
+145                 x\_larger = x\_distance >= y\_distance
 146 
-147         \textcolor{comment}{# if x\_distance < y\_distance, y\_equal should be true}
-148         y\_larger = x\_distance < y\_distance
+147                 \textcolor{comment}{# if x\_distance < y\_distance, y\_equal should be true}
+148                 y\_larger = x\_distance < y\_distance
 149 
-150         self.solver.Add(x\_larger * x\_equal + y\_larger * y\_equal == 1)
+150                 self.solver.Add(x\_larger * x\_equal + y\_larger * y\_equal == 1)
 151 
-152         self.rrp.append(nrp)
-153         self.edges.append(one\_edge)
+152                 self.rrp.append(nrp)
+153                 self.edges.append(one\_edge)
 154 
-155         \textcolor{comment}{# total communication time = nrp * (TC + TW) + TW}
-156         total\_time = nrp * (self.cgra.TC + self.cgra.TW) + self.cgra.TW
-157         self.ict.append(total\_time)
+155                 \textcolor{comment}{# total communication time = nrp * (TC + TW) + TW}
+156                 total\_time = nrp * (self.cgra.TC + self.cgra.TW) + self.cgra.TW
+157                 self.ict.append(total\_time)
 158 
-159         \textcolor{comment}{# communication cost = distance * token size}
-160         distance = x\_distance + y\_distance
-161         self.distance.append(distance)
-162         total\_cost = distance * token
-163         self.icc.append(total\_cost)
+159                 \textcolor{comment}{# communication cost = distance * token size}
+160                 distance = x\_distance + y\_distance
+161                 self.distance.append(distance)
+162                 total\_cost = distance * token
+163                 self.icc.append(total\_cost)
 164 
-165     self.communication\_cost = self.solver.Sum(self.icc)
+165         self.communication\_cost = self.solver.Sum(self.icc)
 166 
-167     self.num\_routing\_points = self.solver.Sum(self.rrp)
+167         self.num\_routing\_points = self.solver.Sum(self.rrp)
 168 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ef5c93298c0f40db47c15ed7c9c6f02}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a4ef5c93298c0f40db47c15ed7c9c6f02}} 
@@ -294,8 +294,8 @@ Definition at line 183 of file floorplanner.\+py.
 
 
 \begin{DoxyCode}
-183   \textcolor{keyword}{def }add\_latency\_constraints(self):
-184     self.latency = 0
+183     \textcolor{keyword}{def }add\_latency\_constraints(self):
+184         self.latency = 0
 185 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a5e9f74cf3d397e97186ce25d8304fbe0}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a5e9f74cf3d397e97186ce25d8304fbe0}} 
@@ -310,30 +310,30 @@ Definition at line 56 of file floorplanner.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+h, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+w, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-56   \textcolor{keyword}{def }add\_non\_overlap\_constraints(self):
+56     \textcolor{keyword}{def }add\_non\_overlap\_constraints(self):
 57 
-58     x, y, w, h = self.x, self.y, self.w, self.h
-59     fimps = range(len(self.fimp\_instances))
+58         x, y, w, h = self.x, self.y, self.w, self.h
+59         fimps = range(len(self.fimp\_instances))
 60 
-61     \textcolor{keywordflow}{for} src \textcolor{keywordflow}{in} fimps:
-62       \textcolor{keywordflow}{for} dest \textcolor{keywordflow}{in} fimps:
-63         \textcolor{keywordflow}{if} dest > src:
-64           \textcolor{comment}{# non-overlap on x-axis}
-65           xn0 = self.solver.IsGreaterOrEqualVar(
-66             x[src], x[dest] + w[dest])
-67           xn1 = self.solver.IsGreaterOrEqualVar(
-68             x[dest], x[src] + w[src])
-69           \textcolor{comment}{# non-overlap on y-axis}
-70           yn0 = self.solver.IsGreaterOrEqualVar(
-71             y[src], y[dest] + h[dest])
-72           yn1 = self.solver.IsGreaterOrEqualVar(
-73             y[dest], y[src] + h[src])
-74           \textcolor{comment}{# non-overlap on x or y axis}
-75           self.solver.Add(yn0 + yn1 + xn0 + xn1 > 0)
+61         \textcolor{keywordflow}{for} src \textcolor{keywordflow}{in} fimps:
+62             \textcolor{keywordflow}{for} dest \textcolor{keywordflow}{in} fimps:
+63                 \textcolor{keywordflow}{if} dest > src:
+64                     \textcolor{comment}{# non-overlap on x-axis}
+65                     xn0 = self.solver.IsGreaterOrEqualVar(
+66                         x[src], x[dest] + w[dest])
+67                     xn1 = self.solver.IsGreaterOrEqualVar(
+68                         x[dest], x[src] + w[src])
+69                     \textcolor{comment}{# non-overlap on y-axis}
+70                     yn0 = self.solver.IsGreaterOrEqualVar(
+71                         y[src], y[dest] + h[dest])
+72                     yn1 = self.solver.IsGreaterOrEqualVar(
+73                         y[dest], y[src] + h[src])
+74                     \textcolor{comment}{# non-overlap on x or y axis}
+75                     self.solver.Add(yn0 + yn1 + xn0 + xn1 > 0)
 76 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a34a19dab41b1f0c2eb39a527b05e26e0}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a34a19dab41b1f0c2eb39a527b05e26e0}} 
@@ -356,21 +356,21 @@ Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\
 
 
 \begin{DoxyCode}
-275     show\_axis = \textcolor{keyword}{True}, compact = \textcolor{keyword}{False}):
+275                            show\_axis=\textcolor{keyword}{True}, compact=\textcolor{keyword}{False}):
 276 
-277     dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
+277         dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
 278 
-279     \textcolor{keywordflow}{if} dir\_name:
-280       \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
+279         \textcolor{keywordflow}{if} dir\_name:
+280             \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
 281 
-282     solution = self.solutions[-1]
-283     \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
-284       self.cgra.fimps[i].x = location[0]
-285       self.cgra.fimps[i].y = location[1]
-286     file\_name = name\_pattern.format(index=\textcolor{stringliteral}{''}, cost=solution[\textcolor{stringliteral}{'cost'}])
-287     p = self.cgra.plot(show\_axis, compact)
-288     p.savefig(os.path.join(dir\_name, file\_name))
-289     p.close()
+282         solution = self.solutions[-1]
+283         \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
+284             self.cgra.fimps[i].x = location[0]
+285             self.cgra.fimps[i].y = location[1]
+286         file\_name = name\_pattern.format(index=\textcolor{stringliteral}{''}, cost=solution[\textcolor{stringliteral}{'cost'}])
+287         p = self.cgra.plot(show\_axis, compact)
+288         p.savefig(os.path.join(dir\_name, file\_name))
+289         p.close()
 290 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9a77944b379401d7be62164312b29721}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a9a77944b379401d7be62164312b29721}} 
@@ -393,21 +393,21 @@ Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve
 
 
 \begin{DoxyCode}
-258     show\_axis = \textcolor{keyword}{True}, compact = \textcolor{keyword}{False}):
+258                        show\_axis=\textcolor{keyword}{True}, compact=\textcolor{keyword}{False}):
 259 
-260     dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
+260         dir\_name = dir\_name \textcolor{keywordflow}{or} \textcolor{stringliteral}{''}
 261 
-262     \textcolor{keywordflow}{if} dir\_name:
-263       \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
+262         \textcolor{keywordflow}{if} dir\_name:
+263             \hyperlink{namespacesylva_1_1misc_1_1util_af426e429c40209bbb46e3a0e8f139a44}{mkdir}(dir\_name)
 264 
-265     \textcolor{keywordflow}{for} index, solution \textcolor{keywordflow}{in} enumerate(self.solutions):
-266       \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
-267         self.cgra.fimps[i].x = location[0]
-268         self.cgra.fimps[i].y = location[1]
-269       file\_name = name\_pattern.format(index=index, cost=solution[\textcolor{stringliteral}{'cost'}])
-270       p = self.cgra.plot(show\_axis, compact)
-271       p.savefig(os.path.join(dir\_name, file\_name))
-272       p.close()
+265         \textcolor{keywordflow}{for} index, solution \textcolor{keywordflow}{in} enumerate(self.solutions):
+266             \textcolor{keywordflow}{for} i, location \textcolor{keywordflow}{in} enumerate(solution[\textcolor{stringliteral}{'location'}]):
+267                 self.cgra.fimps[i].x = location[0]
+268                 self.cgra.fimps[i].y = location[1]
+269             file\_name = name\_pattern.format(index=index, cost=solution[\textcolor{stringliteral}{'cost'}])
+270             p = self.cgra.plot(show\_axis, compact)
+271             p.savefig(os.path.join(dir\_name, file\_name))
+272             p.close()
 273 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab5bba2d11374f0e3fe5199738e01033a}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_ab5bba2d11374f0e3fe5199738e01033a}} 
@@ -422,16 +422,16 @@ Definition at line 22 of file floorplanner.\+py.
 
 
 \begin{DoxyCode}
-22   \textcolor{keyword}{def }prepare\_attributes(self, CGRA, actors):
+22     \textcolor{keyword}{def }prepare\_attributes(self, CGRA, actors):
 23 
-24     \textcolor{comment}{# Create the solver}
-25     self.solver = pywrapcp.Solver(\textcolor{stringliteral}{'CGRA floorplanner'})
+24         \textcolor{comment}{# Create the solver}
+25         self.solver = pywrapcp.Solver(\textcolor{stringliteral}{'CGRA floorplanner'})
 26 
-27     self.cgra = CGRA
-28     self.actors = actors
-29     self.actors.sort(key=\textcolor{keyword}{lambda} a: a.index)
+27         self.cgra = CGRA
+28         self.actors = actors
+29         self.actors.sort(key=\textcolor{keyword}{lambda} a: a.index)
 30 
-31     self.prepare\_fimp\_variables()
+31         self.prepare\_fimp\_variables()
 32 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a387bfe2b35c791b09f18bf891f94d101}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a387bfe2b35c791b09f18bf891f94d101}} 
@@ -446,28 +446,28 @@ Definition at line 33 of file floorplanner.\+py.
 
 
 \begin{DoxyCode}
-33   \textcolor{keyword}{def }prepare\_fimp\_variables(self):
+33     \textcolor{keyword}{def }prepare\_fimp\_variables(self):
 34 
-35     \textcolor{comment}{# prepare FIMP instances}
-36     self.fimp\_instances = []
-37     \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
-38       \textcolor{keywordflow}{if} a.fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.fimp\_instances:
-39         self.fimp\_instances.append(a.fimp)
-40         self.cgra.\hyperlink{namespacesylva_1_1base_1_1fimp_a82bf900d1f19a23480ce25d4055fa3d3}{add\_fimp}(a.fimp)
+35         \textcolor{comment}{# prepare FIMP instances}
+36         self.fimp\_instances = []
+37         \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors:
+38             \textcolor{keywordflow}{if} a.fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.fimp\_instances:
+39                 self.fimp\_instances.append(a.fimp)
+40                 self.cgra.add\_fimp(a.fimp)
 41 
-42     self.fimp\_instances.sort(key=\textcolor{keyword}{lambda} i: i.index)
+42         self.fimp\_instances.sort(key=\textcolor{keyword}{lambda} i: i.index)
 43 
-44     fimps = range(len(self.fimp\_instances))
+44         fimps = range(len(self.fimp\_instances))
 45 
-46     \textcolor{comment}{# FIMP size values}
-47     self.w = [self.fimp\_instances[f].width \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
-48     self.h = [self.fimp\_instances[f].height \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+46         \textcolor{comment}{# FIMP size values}
+47         self.w = [self.fimp\_instances[f].width \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+48         self.h = [self.fimp\_instances[f].height \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
 49 
-50     \textcolor{comment}{# FIMP location variables}
-51     self.x = [
-52       self.solver.IntVar(0, self.cgra.width - self.w[f], \textcolor{stringliteral}{'x[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
-53     self.y = [self.solver.IntVar(
-54       0, self.cgra.height - self.h[f], \textcolor{stringliteral}{'y[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+50         \textcolor{comment}{# FIMP location variables}
+51         self.x = [
+52             self.solver.IntVar(0, self.cgra.width - self.w[f], \textcolor{stringliteral}{'x[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
+53         self.y = [self.solver.IntVar(
+54             0, self.cgra.height - self.h[f], \textcolor{stringliteral}{'y[%i]'} % f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} fimps]
 55 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_afcbeb4bd85098dad8b4fe2f822b67328}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_afcbeb4bd85098dad8b4fe2f822b67328}} 
@@ -482,35 +482,35 @@ Definition at line 231 of file floorplanner.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+communication\+\_\+cost, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+searching, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y.
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+communication\+\_\+cost, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+fimp\+\_\+instances, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+fimp\+\_\+instances, sylva.\+examples.\+hsdfg.\+format, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+log, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+plot\+\_\+solutions(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+searching, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solutions, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solver, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-231   \textcolor{keyword}{def }solve(self):
-232     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.searching:
-233       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+231     \textcolor{keyword}{def }solve(self):
+232         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.searching:
+233             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
 234 
-235     start = time.clock()
-236     \textcolor{keywordflow}{if} self.solver.NextSolution() == \textcolor{keyword}{True}:
-237       msg = \textcolor{stringliteral}{'solution \{\}: '}.format(len(self.solutions))
-238       msg += \textcolor{stringliteral}{'cost = \{\} search time = \{\} sec'}.format(
-239         self.communication\_cost.Var().Value(), start)
-240       self.log += msg
-241       self.log.update()
-242       \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances:
-243         f.x = self.x[f.index].Value()
-244         f.y = self.y[f.index].Value()
-245       self.solutions.append(\{\})
-246       self.solutions[-
-247                1][\textcolor{stringliteral}{'cost'}] = int(self.communication\_cost.Var().Value())
-248       self.solutions[-1][\textcolor{stringliteral}{'search\_time'}] = start
-249       self.solutions[-1][\textcolor{stringliteral}{'location'}] = [(int(f.x), int(f.y))
-250                         \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances]
-251       \textcolor{keywordflow}{return} \textcolor{keyword}{True}
-252     \textcolor{keywordflow}{else}:
-253       self.solver.EndSearch()
-254       self.searching = \textcolor{keyword}{False}
-255       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+235         start = time.clock()
+236         \textcolor{keywordflow}{if} self.solver.NextSolution() == \textcolor{keyword}{True}:
+237             msg = \textcolor{stringliteral}{'solution \{\}: '}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(len(self.solutions))
+238             msg += \textcolor{stringliteral}{'cost = \{\} search time = \{\} sec'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(
+239                 self.communication\_cost.Var().Value(), start)
+240             self.log += msg
+241             self.log.update()
+242             \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances:
+243                 f.x = self.x[f.index].Value()
+244                 f.y = self.y[f.index].Value()
+245             self.solutions.append(\{\})
+246             self.solutions[-
+247                            1][\textcolor{stringliteral}{'cost'}] = int(self.communication\_cost.Var().Value())
+248             self.solutions[-1][\textcolor{stringliteral}{'search\_time'}] = start
+249             self.solutions[-1][\textcolor{stringliteral}{'location'}] = [(int(f.x), int(f.y))
+250                                               \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.fimp\_instances]
+251             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+252         \textcolor{keywordflow}{else}:
+253             self.solver.EndSearch()
+254             self.searching = \textcolor{keyword}{False}
+255             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
 256 
 \end{DoxyCode}
 
@@ -528,7 +528,7 @@ Definition at line 28 of file floorplanner.\+py.
 
 
 
-Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+Referenced by sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
 
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a08dbae3d0806022bf436c82b3137ce55}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a08dbae3d0806022bf436c82b3137ce55}} 
 \index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!area@{area}}
@@ -539,6 +539,10 @@ Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+dat
 
 
 Definition at line 181 of file floorplanner.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+prepare\+\_\+optimization\+\_\+objective().
 
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a74fc856bba52dfcaf42cac8f6e699f2f}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a74fc856bba52dfcaf42cac8f6e699f2f}} 
 \index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!cgra@{cgra}}
@@ -660,6 +664,10 @@ Definition at line 83 of file floorplanner.\+py.
 
 Definition at line 184 of file floorplanner.\+py.
 
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+prepare\+\_\+optimization\+\_\+objective().
+
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_a931da93a5d8a1efd65e401913fb722db}} 
 \index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!log@{log}}
 \index{log@{log}!sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}}
@@ -744,7 +752,7 @@ Definition at line 25 of file floorplanner.\+py.
 
 
 
-Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+fimp\+\_\+selection\+\_\+constraint(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+dse\+\_\+v1.\+add\+\_\+resource\+\_\+dependency\+\_\+constraints(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
+Referenced by sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+area\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+fimp\+\_\+selection\+\_\+constraint(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+add\+\_\+non\+\_\+overlap\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+resource\+\_\+dependency\+\_\+constraints(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+prepare\+\_\+optimization\+\_\+objective(), and sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+solve().
 
 \mbox{\Hypertarget{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}\label{classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner_aa6a27c1e810c6242a6876d943e108460}} 
 \index{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner@{sylva\+::code\+\_\+generation\+::floorplanner\+::floorplanner}!time\+\_\+limit@{time\+\_\+limit}}

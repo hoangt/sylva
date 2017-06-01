@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -118,7 +124,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>sample_interval
-: <a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a8d498b6d0063cdfad15d341a81ffd548">sylva.dse.dse_engine_v1.dse_v1</a>
+: <a class="el" href="classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#a1afdcfe12de1556102777e9485c12fc5">sylva.dse.dse_engine.DSEEngine</a>
 </li>
 <li>sdf_graph
 : <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a50b5e891a42306c00730a92dfde22bdb">sylva.misc.exec.SYLVA</a>
@@ -128,10 +134,6 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>searching
 : <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#a49fb578b9d1590ec05da989bf9b3393b">sylva.code_generation.floorplanner.floorplanner</a>
-</li>
-<li>set
-: <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__lib.html#a6d2f4a5c592b6fc32418dc27129326ac">sylva.base.fimp.fimp_lib</a>
-, <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__set.html#ae1110f70c9087b003ef54d99f6eb8a83">sylva.base.fimp.fimp_set</a>
 </li>
 <li>show_info
 : <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a9a267f9d05fa98ca49fbfc5e049184a1">sylva.misc.exec.SYLVA</a>
@@ -144,6 +146,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>size
 : <a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html#abf397c07db4eced64bf773de13fcbbf0">sylva.base.sdf.DataTokenType</a>
+, <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_data_token_type.html#ad2a181eb47ed614abc21072faf2e6849">sylva.base.sylva_base.DataTokenType</a>
 </li>
 <li>solutions
 : <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#a4ecec4815a5e0fa5ba3f3ffb9f0697dc">sylva.code_generation.floorplanner.floorplanner</a>
@@ -153,20 +156,19 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>solver
 : <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#af588b87074ee8449326528ea765f7bfb">sylva.code_generation.floorplanner.floorplanner</a>
-, <a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a2297e46c146e963ca8cce4f0c7416048">sylva.dse.dse_engine_v1.dse_v1</a>
+, <a class="el" href="classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#ae88035d526d912396088ead223f5a553">sylva.dse.dse_engine.DSEEngine</a>
 </li>
 <li>source
 : <a class="el" href="classsylva_1_1glic_1_1glic_1_1edge.html#aa146acae3a8559c93674c0eed281b0e4">sylva.glic.glic.edge</a>
 </li>
 <li>src_actor
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#adab5e4935ad5cdd09b2c8859ea183513">sylva.base.sdf.edge</a>
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_edge.html#a669757129f2efcb76625f90992afd7db">sylva.base.sdf.Edge</a>
 </li>
 <li>src_port
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#a8df512cfa9966c1bf78dc8fb584aefce">sylva.base.sdf.edge</a>
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_edge.html#a824af9d2da5c0fadcc08bba783a29f15">sylva.base.sdf.Edge</a>
 </li>
 <li>start
-: <a class="el" href="classsylva_1_1base_1_1sdf__schedule_1_1schedule.html#a790c6790e606e4f15520e042d390de55">sylva.base.sdf_schedule.schedule</a>
-, <a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#abedb3388036f38e634e325bd6a4d6e27">sylva.dse.dse_engine_v1.dse_v1</a>
+: <a class="el" href="classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#abb10a808dffa700d7b08b5db00642012">sylva.dse.dse_engine.DSEEngine</a>
 </li>
 <li>states
 : <a class="el" href="classsylva_1_1glic_1_1glic_1_1control.html#a392a1e20052ef15fa96049f9b201be02">sylva.glic.glic.control</a>

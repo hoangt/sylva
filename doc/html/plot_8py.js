@@ -6,7 +6,7 @@ var plot_8py =
     [ "fimp_execution_model_plot", "plot_8py.html#a2e27375ca68228e819017903e39e39d9", null ],
     [ "fimp_schedule_plot", "plot_8py.html#a407cb01fd5820f94e98a438d04391c6e", null ],
     [ "schedule_plot", "plot_8py.html#a2937dd66c98822d9914353fc15105e14", null ],
-    [ "time_block", "plot_8py.html#a35e705ad0728f0ff413c9d4033bff7b4", null ],
+    [ "time_block", "plot_8py.html#a39ec0e33c0b551cbb7d10d42e63bfa3d", null ],
     [ "__author__", "plot_8py.html#a7500c696078a3d942b466b4627141020", null ],
     [ "__version__", "plot_8py.html#aeaebaa88de4546f2ce3ff8b7e568797e", null ],
     [ "default_annotation_style", "plot_8py.html#affc8bfc885cfaf5e1995cf4fd8d084c6", null ],

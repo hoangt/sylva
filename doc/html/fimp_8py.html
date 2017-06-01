@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -117,7 +123,6 @@ $(document).ready(function(){initNavTree('fimp_8py.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">fimp.py File Reference</div>  </div>
@@ -128,41 +133,33 @@ $(document).ready(function(){initNavTree('fimp_8py.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp.html">sylva.base.fimp.fimp</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost.html">sylva.base.fimp.FIMPCost</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for FIMP cost.  <a href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__set.html">sylva.base.fimp.fimp_set</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set.html">sylva.base.fimp.FIMPSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for <a class="el" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set.html" title="Class for FIMPSet. ">FIMPSet</a>.  <a href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__lib.html">sylva.base.fimp.fimp_lib</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance.html">sylva.base.fimp.FIMPInstance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for FIMP instace.  <a href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_library.html">sylva.base.fimp.FIMPLibrary</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for fimp library.  <a href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_library.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacesylva_1_1base_1_1fimp"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html">sylva.base.fimp</a></td></tr>
+<tr class="memdesc:namespacesylva_1_1base_1_1fimp"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIMP related classes. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ad6282a735b53c953ed8ac941c4dbf17a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#ad6282a735b53c953ed8ac941c4dbf17a">sylva.base.fimp.assign_to</a> (self, one_fimp)</td></tr>
-<tr class="separator:ad6282a735b53c953ed8ac941c4dbf17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d5ea52e7780ea1d4f0df718eab4ff2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a33d5ea52e7780ea1d4f0df718eab4ff2">sylva.base.fimp.add_fimp</a> (self, fimp)</td></tr>
-<tr class="separator:a33d5ea52e7780ea1d4f0df718eab4ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a437b2db1db9bdd48145289d66871b835"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a437b2db1db9bdd48145289d66871b835">sylva.base.fimp.generate_random_fimps</a> (fimp_name, num_fimps=8, max_area=0, max_width=4, max_height=4, min_area=0, min_width=1, min_height=1, max_computation=20, max_input=10, max_output=10, min_computation=2, min_input=1, min_output=1, max_energy=10, min_energy=1)</td></tr>
-<tr class="separator:a437b2db1db9bdd48145289d66871b835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49222336c8f368ae3381e7b8b456a8b4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a49222336c8f368ae3381e7b8b456a8b4">sylva.base.fimp.load_fimp</a> (fimp_dict, load_actors=False, actors=[])</td></tr>
-<tr class="separator:a49222336c8f368ae3381e7b8b456a8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad713bc31de8ee05df0c1184daba1ffb8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#ad713bc31de8ee05df0c1184daba1ffb8">sylva.base.fimp.load_fimp_set</a> (fimp_dict)</td></tr>
-<tr class="separator:ad713bc31de8ee05df0c1184daba1ffb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a8b55e554c3c8977bdca59b12fde4f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a57a8b55e554c3c8977bdca59b12fde4f">sylva.base.fimp.load_fimp_lib</a> (fimp_dict)</td></tr>
-<tr class="separator:a57a8b55e554c3c8977bdca59b12fde4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ea3885312a946a5a94bd8b2eef9b95"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#ae9ea3885312a946a5a94bd8b2eef9b95">sylva.base.fimp.load_from_file</a> (filename)</td></tr>
-<tr class="separator:ae9ea3885312a946a5a94bd8b2eef9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa034443ad56b50c50310f6cc6753e52b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#aa034443ad56b50c50310f6cc6753e52b">sylva.base.fimp.assign_to</a></td></tr>
-<tr class="separator:aa034443ad56b50c50310f6cc6753e52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82bf900d1f19a23480ce25d4055fa3d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a82bf900d1f19a23480ce25d4055fa3d3">sylva.base.fimp.add_fimp</a></td></tr>
-<tr class="separator:a82bf900d1f19a23480ce25d4055fa3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b088b79551408deecce8bde1a7bfd5b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a7b088b79551408deecce8bde1a7bfd5b">sylva.base.fimp.__author__</a> = 'Shuo Li &lt;contact@shuol.li&gt;'</td></tr>
+<tr class="separator:a7b088b79551408deecce8bde1a7bfd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c6dd0c9261d67c1e7fbbfe588f9156"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a29c6dd0c9261d67c1e7fbbfe588f9156">sylva.base.fimp.__version__</a> = '2017-05-16'</td></tr>
+<tr class="separator:a29c6dd0c9261d67c1e7fbbfe588f9156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f8f985a5f4c7a9aed068a07667cab5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1base_1_1fimp.html#a09f8f985a5f4c7a9aed068a07667cab5">sylva.base.fimp.__license__</a> = 'https://opensource.org/licenses/MIT'</td></tr>
+<tr class="separator:a09f8f985a5f4c7a9aed068a07667cab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

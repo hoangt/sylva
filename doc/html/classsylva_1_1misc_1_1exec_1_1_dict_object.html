@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -124,12 +130,11 @@ $(document).ready(function(){initNavTree('classsylva_1_1misc_1_1exec_1_1_dict_ob
 <div class="dynheader">
 Inheritance diagram for sylva.misc.exec.DictObject:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classsylva_1_1misc_1_1exec_1_1_dict_object.png" usemap="#sylva.misc.exec.DictObject_map" alt=""/>
-  <map id="sylva.misc.exec.DictObject_map" name="sylva.misc.exec.DictObject_map">
-<area href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html" alt="sylva.misc.exec.SYLVA" shape="rect" coords="0,112,165,136"/>
+<div class="center"><img src="classsylva_1_1misc_1_1exec_1_1_dict_object__inherit__graph.png" border="0" usemap="#sylva_8misc_8exec_8_dict_object_inherit__map" alt="Inheritance graph"/></div>
+<map name="sylva_8misc_8exec_8_dict_object_inherit__map" id="sylva_8misc_8exec_8_dict_object_inherit__map">
+<area shape="rect" id="node3" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html" title="sylva.misc.exec.SYLVA" alt="" coords="14,155,177,181"/>
 </map>
- </div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -186,7 +191,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="exec_8py_source.html#l00055">55</a> of file <a class="el" href="exec_8py_source.html">exec.py</a>.</p>
 
-<p class="reference">References <a class="el" href="fimp_8py_source.html#l00074">sylva.base.fimp.fimp.__setattr__()</a>.</p>
+<p class="reference">References <a class="el" href="sylva__base_8py_source.html#l00111">sylva.base.sylva_base.SYLVABase.__setattr__()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">def </span>__init__(self, *args, **kwargs) :</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    super(DictObject, self).__init__()</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> kwargs :</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      self.__setattr__(k, v)</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> k <span class="keywordflow">in</span> args :</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      self.__setattr__(k, k)</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -251,7 +256,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="exec_8py_source.html#l00062">62</a> of file <a class="el" href="exec_8py_source.html">exec.py</a>.</p>
 
-<p class="reference">References <a class="el" href="exec_8py_source.html#l00068">sylva.misc.exec.DictObject.__getattr__()</a>.</p>
+<p class="reference">References <a class="el" href="exec_8py_source.html#l00068">sylva.misc.exec.DictObject.__getattr__()</a>, and <a class="el" href="sylva__base_8py_source.html#l00122">sylva.base.sylva_base.SYLVABase.__getattr__()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">def </span>__getitem__(self, key) :</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> self.__getattr__(key)</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>

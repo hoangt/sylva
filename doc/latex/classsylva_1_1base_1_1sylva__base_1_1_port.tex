@@ -1,0 +1,164 @@
+\hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port}{}\section{sylva.\+base.\+sylva\+\_\+base.\+Port Class Reference}
+\label{classsylva_1_1base_1_1sylva__base_1_1_port}\index{sylva.\+base.\+sylva\+\_\+base.\+Port@{sylva.\+base.\+sylva\+\_\+base.\+Port}}
+
+
+Class for port.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+Port\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsylva_1_1base_1_1sylva__base_1_1_port__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a89c3b6366376207690227422325088f3}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a4e52c67462a68c12e544a8e95f065993}{name}=\textquotesingle{}din\textquotesingle{}, \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a36d850a63a97265c2a611d2387cf8491}{index}=0, \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a442668943cd208f89f54bb6613b4f514}{dtype}=\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_data_token_type}{Data\+Token\+Type}(), \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a3d01efab6495163880ccf499970f62fe}{count}=1)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a4e52c67462a68c12e544a8e95f065993}{name}
+\begin{DoxyCompactList}\small\item\em The name of the port, e.\+g {\ttfamily din}. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a36d850a63a97265c2a611d2387cf8491}{index}
+\begin{DoxyCompactList}\small\item\em The index of the port among all ports in the same list, e.\+g all ports in list {\ttfamily input\+\_\+ports} have unique index values. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a442668943cd208f89f54bb6613b4f514}{dtype}
+\begin{DoxyCompactList}\small\item\em The data token type of the port, e.\+g `\+Data\+Token\+Type(name=\textquotesingle{}int32\textquotesingle{}, size=32)`. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port_a3d01efab6495163880ccf499970f62fe}{count}
+\begin{DoxyCompactList}\small\item\em The number of data tokens to be consumed or produced per invocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for port. 
+
+One \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port}{Port} object will be used to represent one data communication port on an actor in S\+DF graph, where a port on an actor emits or receives one data token per clock cycle. ~\newline
+~\newline
+ The port is either input or output. The IO direction (input or output) is not defined in this class.
+
+
+\begin{DoxyItemize}
+\item One \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port}{Port} is an input port if it is placed in the Actor input\+\_\+ports
+\item One \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_port}{Port} is an input port if it is placed in the Actor output\+\_\+ports 
+\end{DoxyItemize}
+
+Definition at line 217 of file sylva\+\_\+base.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port_a89c3b6366376207690227422325088f3}\label{classsylva_1_1base_1_1sylva__base_1_1_port_a89c3b6366376207690227422325088f3}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+Port.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \textquotesingle{}din\textquotesingle{}},  }\item[{}]{index = {\ttfamily 0},  }\item[{}]{dtype = {\ttfamily \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_data_token_type}{Data\+Token\+Type}()},  }\item[{}]{count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object.\\
+\hline
+{\em name} & The name of the port, e.\+g {\ttfamily din}.\\
+\hline
+{\em index} & The index of the port among all ports in the same list, e.\+g all ports in list {\ttfamily input\+\_\+ports} have unique index values.\\
+\hline
+{\em dtype} & \\
+\hline
+{\em count} & The number of data tokens to be consumed or produced per invocation. One token per clock cycle is the minimum throughput. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 246 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+246     \textcolor{keyword}{def }\_\_init\_\_(self, name='din', index=0, dtype=DataTokenType(), count=1):
+247         SYLVABase.\_\_init\_\_(self)
+248         self.name = name
+249         self.index = index
+250         self.dtype = dtype
+251         self.count = count
+252 
+253 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port_a3d01efab6495163880ccf499970f62fe}\label{classsylva_1_1base_1_1sylva__base_1_1_port_a3d01efab6495163880ccf499970f62fe}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}!count@{count}}
+\index{count@{count}!sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+Port.\+count}
+
+
+
+The number of data tokens to be consumed or produced per invocation. 
+
+One token per clock cycle is the minimum throughput. 
+
+Definition at line 251 of file sylva\+\_\+base.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port_a442668943cd208f89f54bb6613b4f514}\label{classsylva_1_1base_1_1sylva__base_1_1_port_a442668943cd208f89f54bb6613b4f514}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}!dtype@{dtype}}
+\index{dtype@{dtype}!sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}}
+\subsubsection{\texorpdfstring{dtype}{dtype}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+Port.\+dtype}
+
+
+
+The data token type of the port, e.\+g `\+Data\+Token\+Type(name=\textquotesingle{}int32\textquotesingle{}, size=32)`. 
+
+
+
+Definition at line 250 of file sylva\+\_\+base.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port_a36d850a63a97265c2a611d2387cf8491}\label{classsylva_1_1base_1_1sylva__base_1_1_port_a36d850a63a97265c2a611d2387cf8491}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}!index@{index}}
+\index{index@{index}!sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+Port.\+index}
+
+
+
+The index of the port among all ports in the same list, e.\+g all ports in list {\ttfamily input\+\_\+ports} have unique index values. 
+
+
+
+Definition at line 249 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+state.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+glic.\+glic.\+state.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_port_a4e52c67462a68c12e544a8e95f065993}\label{classsylva_1_1base_1_1sylva__base_1_1_port_a4e52c67462a68c12e544a8e95f065993}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}!name@{name}}
+\index{name@{name}!sylva\+::base\+::sylva\+\_\+base\+::\+Port@{sylva\+::base\+::sylva\+\_\+base\+::\+Port}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+Port.\+name}
+
+
+
+The name of the port, e.\+g {\ttfamily din}. 
+
+
+
+Definition at line 248 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+system.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sylva__base_8py}{sylva\+\_\+base.\+py}\end{DoxyCompactItemize}

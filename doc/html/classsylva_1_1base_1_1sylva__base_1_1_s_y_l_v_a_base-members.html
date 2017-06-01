@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -121,12 +127,17 @@ $(document).ready(function(){initNavTree('classsylva_1_1base_1_1sylva__base_1_1_
 
 <p>This is the complete list of members for <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5692ae87ad4953fdfe317953fcf530f8">__init__</a>(self, dict_object)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8dc04df3b843a1deb6e1ae13f8425783">__iter__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5bd08c41ab09c380433d0de82fb98860">__repr__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af30165f6499a5efacb683c2194f53a73">__getattr__</a>(self, attr_name)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#adb3747bc0503b669cbc05e7419adb454">__init__</a>(self, args)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a073105841fe00ad333bf679a24fa24d9">__setattr__</a>(self, attr_name, attr_value)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a6c1ed8e83c61ea8a6035b5e4460989f3">__str__</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a1597b4594cb73e0fa2597742239660f5">clone</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4acd68307f4b2bef6082b86f3ff6ce3a">load_from_dict</a>(cls, dict_object)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a7225be10455bba307832200d18167bd4">_class</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a756882c2570aaef7562ad5903717328c">_excluded_attributes</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4b28a6df0e18ab256c21493b49a64b22">clean_store</a>(cls, filepath=None)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e">dump</a>(self, filepath=None)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a>(self)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af68e05257afb40aa828aa9e2a73b267f">load</a>(cls, filepath)</td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a19a76f0bddbefbe0687234c9da15c8fc">storage_form</a></td><td class="entry"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -84,7 +84,7 @@ Definition at line 732 of file exec.\+py.
 
 
 
-References sylva.\+misc.\+util.\+dir\+\_\+and\+\_\+file().
+References sylva.\+misc.\+util.\+dir\+\_\+and\+\_\+file(), and sylva.\+examples.\+hsdfg.\+format.
 
 
 \begin{DoxyCode}
@@ -102,11 +102,11 @@ References sylva.\+misc.\+util.\+dir\+\_\+and\+\_\+file().
 743         path = os.path.join(dirname, name + ext)
 744         \textcolor{keywordflow}{if} os.path.exists(path) :
 745           os.remove(path)
-746           print(\textcolor{stringliteral}{'Deleted file \{\}'}.format(path))
+746           print(\textcolor{stringliteral}{'Deleted file \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(path))
 747       \textcolor{keywordflow}{else}:
 748         \textcolor{keywordflow}{if} os.path.exists(dirname) :
 749           shutil.rmtree(dirname)
-750           print(\textcolor{stringliteral}{'Deleted directory \{\}'}.format(dirname))
+750           print(\textcolor{stringliteral}{'Deleted directory \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(dirname))
 751 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1exec_aef271c6d1dab8f9f3e66ab76cdecbf42}\label{namespacesylva_1_1misc_1_1exec_aef271c6d1dab8f9f3e66ab76cdecbf42}} 
@@ -137,13 +137,17 @@ Definition at line 700 of file exec.\+py.
 Definition at line 692 of file exec.\+py.
 
 
+
+References sylva.\+examples.\+hsdfg.\+format.
+
+
 \begin{DoxyCode}
 692 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1exec_afdee869cb32b6c18b9747718ac8dc475}{exit\_command}() :
 693   print(\textcolor{stringliteral}{'\(\backslash\)nSYVLA exits normally.'})
 694   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} sy.no\_rc :
-695     print(\textcolor{stringliteral}{'Command record is in file \{\}.'}.format(sy.record\_cmd\_file\_path))
+695     print(\textcolor{stringliteral}{'Command record is in file \{\}.'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(sy.record\_cmd\_file\_path))
 696   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} sy.no\_log:
-697     print(\textcolor{stringliteral}{'Log is in file \{\}.'}.format(sy.log\_file))
+697     print(\textcolor{stringliteral}{'Log is in file \{\}.'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(sy.log\_file))
 698   sys.exit(0)
 699 
 \end{DoxyCode}
@@ -159,7 +163,7 @@ Definition at line 704 of file exec.\+py.
 
 
 
-References sylva.\+misc.\+util.\+to\+\_\+list(), and sylva.\+misc.\+exec.\+type.
+References sylva.\+examples.\+hsdfg.\+format, sylva.\+misc.\+util.\+to\+\_\+list(), and sylva.\+misc.\+exec.\+type.
 
 
 \begin{DoxyCode}
@@ -178,7 +182,7 @@ References sylva.\+misc.\+util.\+to\+\_\+list(), and sylva.\+misc.\+exec.\+type.
 716   \textcolor{keywordflow}{if} result :
 717     print(\textcolor{stringliteral}{''})
 718     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} sorted(result, key = \textcolor{keyword}{lambda} x : x[0]) :
-719       print(\textcolor{stringliteral}{'\{\} = \{\}'}.format(i[0], i[1]))
+719       print(\textcolor{stringliteral}{'\{\} = \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i[0], i[1]))
 720   \textcolor{keywordflow}{else} :
 721     print(\textcolor{stringliteral}{'\(\backslash\)nEmpty'})
 722 
@@ -194,6 +198,10 @@ References sylva.\+misc.\+util.\+to\+\_\+list(), and sylva.\+misc.\+exec.\+type.
 Definition at line 752 of file exec.\+py.
 
 
+
+References sylva.\+examples.\+hsdfg.\+format.
+
+
 \begin{DoxyCode}
 752 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1exec_a2a286b4556ac1dcfb9fa47e672f7bee0}{ls\_command}() :
 753   files = []
@@ -201,7 +209,7 @@ Definition at line 752 of file exec.\+py.
 755   print(\textcolor{stringliteral}{''})
 756   \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} os.listdir(\textcolor{stringliteral}{'./'}) :
 757     \textcolor{keywordflow}{if} os.path.isdir(f) :
-758       dirs.append(\textcolor{stringliteral}{'\{\}\(\backslash\)\(\backslash\)'}.format(f))
+758       dirs.append(\textcolor{stringliteral}{'\{\}\(\backslash\)\(\backslash\)'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(f))
 759     \textcolor{keywordflow}{else} :
 760       files.append(f)
 761   all\_items = dirs + files
@@ -227,10 +235,14 @@ Definition at line 752 of file exec.\+py.
 Definition at line 772 of file exec.\+py.
 
 
+
+References sylva.\+examples.\+hsdfg.\+format.
+
+
 \begin{DoxyCode}
 772 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1exec_a2ac5cdf0face6797b9b5f2b60e7095e7}{pwd\_command}() :
 773   print(\textcolor{stringliteral}{''})
-774   print(\textcolor{stringliteral}{'PWD = \{\}'}.format(os.getcwd()))
+774   print(\textcolor{stringliteral}{'PWD = \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(os.getcwd()))
 775 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1exec_a670ec00a77a111ff274f7d3dc3989966}\label{namespacesylva_1_1misc_1_1exec_a670ec00a77a111ff274f7d3dc3989966}} 
@@ -266,6 +278,10 @@ Definition at line 723 of file exec.\+py.
 Definition at line 785 of file exec.\+py.
 
 
+
+References sylva.\+examples.\+hsdfg.\+format.
+
+
 \begin{DoxyCode}
 785 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1exec_a75779a3eb47b91a0f69020b264c0bd2d}{start\_interactive\_shell}(sy, control\_commands) :
 786   \textcolor{keywordflow}{while} \textcolor{keyword}{True} :
@@ -277,16 +293,16 @@ Definition at line 785 of file exec.\+py.
 792       \textcolor{keywordflow}{if} cmd \textcolor{keywordflow}{in} control\_commands :
 793         control\_commands[cmd]()
 794       \textcolor{keywordflow}{elif} cmd \textcolor{keywordflow}{in} sy.keys :
-795         print(\textcolor{stringliteral}{'\{\} = \{\}'}.format(cmd, sy[cmd]))
+795         print(\textcolor{stringliteral}{'\{\} = \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(cmd, sy[cmd]))
 796       \textcolor{keywordflow}{elif} cd\_command :
 797         target\_dir = cd\_command.groups()[0]
 798         \textcolor{keywordflow}{try} :
 799           os.chdir(target\_dir)
-800           print(\textcolor{stringliteral}{'Change directory to \{\}'}.format(os.getcwd()))
+800           print(\textcolor{stringliteral}{'Change directory to \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(os.getcwd()))
 801         \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e :
-802           print(\textcolor{stringliteral}{'ERROR: Cannot change directory to \{\}'}.format(target\_dir))
+802           print(\textcolor{stringliteral}{'ERROR: Cannot change directory to \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(target\_dir))
 803           \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.exists(target\_dir) :
-804             print(\textcolor{stringliteral}{'\{\} does not exist.'}.format(target\_dir))
+804             print(\textcolor{stringliteral}{'\{\} does not exist.'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(target\_dir))
 805       \textcolor{keywordflow}{elif} m :
 806         attr, value = m.groups()
 807         \textcolor{keywordflow}{if} value.lower() == \textcolor{stringliteral}{'True'} :
@@ -304,7 +320,7 @@ Definition at line 785 of file exec.\+py.
 819           sy.execute\_command(sylva\_cmd)
 820         \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e :
 821           sy.log\_critical(str(e))
-822           sy.log\_critical(\textcolor{stringliteral}{'ERROR: Unsupported command \{\}.'}.format(cmd))
+822           sy.log\_critical(\textcolor{stringliteral}{'ERROR: Unsupported command \{\}.'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(cmd))
 823 
 \end{DoxyCode}
 

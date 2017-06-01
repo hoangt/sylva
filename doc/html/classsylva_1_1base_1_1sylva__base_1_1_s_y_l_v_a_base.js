@@ -1,9 +1,14 @@
 var classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base =
 [
-    [ "__init__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5692ae87ad4953fdfe317953fcf530f8", null ],
-    [ "__iter__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8dc04df3b843a1deb6e1ae13f8425783", null ],
-    [ "__repr__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5bd08c41ab09c380433d0de82fb98860", null ],
+    [ "__init__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#adb3747bc0503b669cbc05e7419adb454", null ],
+    [ "__getattr__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af30165f6499a5efacb683c2194f53a73", null ],
+    [ "__setattr__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a073105841fe00ad333bf679a24fa24d9", null ],
     [ "__str__", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a6c1ed8e83c61ea8a6035b5e4460989f3", null ],
-    [ "clone", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a1597b4594cb73e0fa2597742239660f5", null ],
-    [ "load_from_dict", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4acd68307f4b2bef6082b86f3ff6ce3a", null ]
+    [ "clean_store", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4b28a6df0e18ab256c21493b49a64b22", null ],
+    [ "dump", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e", null ],
+    [ "get_storage_form", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019", null ],
+    [ "load", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af68e05257afb40aa828aa9e2a73b267f", null ],
+    [ "_class", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a7225be10455bba307832200d18167bd4", null ],
+    [ "_excluded_attributes", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a756882c2570aaef7562ad5903717328c", null ],
+    [ "storage_form", "classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a19a76f0bddbefbe0687234c9da15c8fc", null ]
 ];

@@ -430,11 +430,15 @@ Referenced by sylva.\+code\+\_\+generation.\+sylva\+\_\+fimp\+\_\+lib.\+create\+
 Definition at line 30 of file sylva\+\_\+fimp\+\_\+lib.\+py.
 
 
+
+References sylva.\+examples.\+hsdfg.\+format.
+
+
 \begin{DoxyCode}
 30 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1sylva__fimp__lib_acdc15946f5f6a217b6075944dbbd5f59}{integer\_vhdl}(max\_value, min\_value = 0) :
 31   \textcolor{keywordflow}{if} max\_value < min\_value :
 32     max\_value, min\_value = min\_value, max\_value
-33   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'integer range \{0\} to \{1\}'}.format(min\_value, max\_value)
+33   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'integer range \{0\} to \{1\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(min\_value, max\_value)
 34 
 \end{DoxyCode}
 

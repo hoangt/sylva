@@ -19,5 +19,6 @@ var util_8py =
     [ "__version__", "util_8py.html#aa458ed92c21a116abe2d5f9ab81a2125", null ],
     [ "ceil", "util_8py.html#ae24a7e9d1f4709e04a181e488d3e7e96", null ],
     [ "floor", "util_8py.html#aa02f5d131cb4bc9ad1c277a7b0c76885", null ],
-    [ "log", "util_8py.html#ab3731c524403f8c49cdb518af558d408", null ]
+    [ "log", "util_8py.html#ab3731c524403f8c49cdb518af558d408", null ],
+    [ "log2", "util_8py.html#a6ac1d560ffdd426fb10172ea106318a0", null ]
 ];

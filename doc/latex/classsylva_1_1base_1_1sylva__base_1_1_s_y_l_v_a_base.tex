@@ -2,127 +2,168 @@
 \label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}\index{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base@{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base}}
 
 
-The base object for S\+Y\+L\+VA project All objects are inherented from this object.  
+The base object for S\+Y\+L\+VA project.  
 
 
-Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base\+:\begin{figure}[H]
+
+
+Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}
+\includegraphics[width=350pt]{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, dict\+\_\+object)
-\item 
-def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}{\+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
-\begin{DoxyCompactList}\small\item\em Create an iterator to be used for converting the object to dictionary. \end{DoxyCompactList}\item 
-def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}{load\+\_\+from\+\_\+dict} (cls, dict\+\_\+object)
-\begin{DoxyCompactList}\small\item\em Loads an object from a dictionary object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_adb3747bc0503b669cbc05e7419adb454}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, args)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af68e05257afb40aa828aa9e2a73b267f}{load} (cls, filepath)
+\begin{DoxyCompactList}\small\item\em Load one object from a file (.json format) \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a196978bd73392249f19f817bc1033d8e}{dump} (self, filepath=None)
+\begin{DoxyCompactList}\small\item\em dump one object to a file (.json format) \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a073105841fe00ad333bf679a24fa24d9}{\+\_\+\+\_\+setattr\+\_\+\+\_\+} (self, attr\+\_\+name, attr\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Override python build-\/in set attribute method. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af30165f6499a5efacb683c2194f53a73}{\+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, attr\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Override python build-\/in get attribute method. \end{DoxyCompactList}\item 
 def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
 \begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
-def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
-\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
-def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}{clone} (self)
-\begin{DoxyCompactList}\small\item\em Creates a new instance of the object with same properties than original. \end{DoxyCompactList}\end{DoxyCompactItemize}
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8d94af12d912b69a5c8ada74debce019}{get\+\_\+storage\+\_\+form} (self)
+\begin{DoxyCompactList}\small\item\em Get the storage form of this object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4b28a6df0e18ab256c21493b49a64b22}{clean\+\_\+store} (cls, filepath=None)
+\begin{DoxyCompactList}\small\item\em Clean store file of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a19a76f0bddbefbe0687234c9da15c8fc}{storage\+\_\+form} = property(\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8d94af12d912b69a5c8ada74debce019}{get\+\_\+storage\+\_\+form})
+\begin{DoxyCompactList}\small\item\em A dict object as the storage form of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a7225be10455bba307832200d18167bd4}{\+\_\+class}
+\begin{DoxyCompactList}\small\item\em The name of the class, e.\+g {\ttfamily Actor} \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a756882c2570aaef7562ad5903717328c}{\+\_\+excluded\+\_\+attributes}
+\begin{DoxyCompactList}\small\item\em The name of the attributes to be excluded when storing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-The base object for S\+Y\+L\+VA project All objects are inherented from this object. 
+The base object for S\+Y\+L\+VA project. 
 
-Definition at line 16 of file sylva\+\_\+base.\+py.
+All objects are inherented from this object.
+
+
+\begin{DoxyItemize}
+\item Use {\ttfamily dict(obj)} to convert a \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}{S\+Y\+L\+V\+A\+Base} object to dictionary object for serialization (\href{https://en.wikipedia.org/wiki/Serialization}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Serialization}).
+\item For de-\/serialization, use {\ttfamily $\ast$$\ast$} before the dictioary object.
+\end{DoxyItemize}
+
+Check \hyperlink{dump_and_load_8py-example}{dump\+\_\+and\+\_\+load.\+py} for example. 
+
+Definition at line 32 of file sylva\+\_\+base.\+py.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5692ae87ad4953fdfe317953fcf530f8}} 
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_adb3747bc0503b669cbc05e7419adb454}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_adb3747bc0503b669cbc05e7419adb454}} 
 \index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict\+\_\+object }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args }\end{DoxyParamCaption})}
 
 
 
-Definition at line 18 of file sylva\+\_\+base.\+py.
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em args} & The arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file sylva\+\_\+base.\+py.
 
 
 \begin{DoxyCode}
-18     \textcolor{keyword}{def }\_\_init\_\_(self, dict\_object):
-19         \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} dict\_object.items():
-20             setattr(self, key, value)
-21 
+51     \textcolor{keyword}{def }\_\_init\_\_(self, *args):
+52         dict.\_\_init\_\_(self, *args)
+53         self.\_class = self.\_\_class\_\_.\_\_name\_\_
+54         self.\_excluded\_attributes = []
+55 
 \end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8dc04df3b843a1deb6e1ae13f8425783}} 
-\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+iter\+\_\+\+\_\+()}{\_\_iter\_\_()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+iter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af30165f6499a5efacb683c2194f53a73}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af30165f6499a5efacb683c2194f53a73}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getattr\+\_\+\+\_\+()}{\_\_getattr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+getattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attr\+\_\+name }\end{DoxyParamCaption})}
 
 
 
-Create an iterator to be used for converting the object to dictionary. 
-
-When dict(some\+\_\+obj) is called, it will return a dictionary object. Each value is obtaiend by invoking the created iterator in this method.
+Override python build-\/in get attribute method. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em self} & The object\\
+{\em self} & The object \\
+\hline
+{\em attr\+\_\+name} & The attribute name\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a iterator 
+value of the attribute 
 \end{DoxyReturn}
 
 
-Definition at line 33 of file sylva\+\_\+base.\+py.
+Definition at line 122 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+getitem\+\_\+\+\_\+(), and sylva.\+misc.\+exec.\+Dict\+Object.\+\_\+\+\_\+getitem\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-33     \textcolor{keyword}{def }\_\_iter\_\_(self):
-34         \textcolor{keywordflow}{for} key, value \textcolor{keywordflow}{in} self.\_\_dict\_\_.items():
-35             \textcolor{keywordflow}{if} isinstance(value, SYLVABase):
-36                 \textcolor{keywordflow}{yield} (key, dict(value))
-37             \textcolor{keywordflow}{else}:
-38                 \textcolor{keywordflow}{yield} (key, value)
-39 
+122     \textcolor{keyword}{def }\_\_getattr\_\_(self, attr\_name):
+123         \textcolor{keywordflow}{return} self.get(attr\_name, \textcolor{keywordtype}{None})
+124 
 \end{DoxyCode}
-\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a5bd08c41ab09c380433d0de82fb98860}} 
-\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a073105841fe00ad333bf679a24fa24d9}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a073105841fe00ad333bf679a24fa24d9}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+setattr\+\_\+\+\_\+@{\+\_\+\+\_\+setattr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+setattr\+\_\+\+\_\+@{\+\_\+\+\_\+setattr\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+setattr\+\_\+\+\_\+()}{\_\_setattr\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+setattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attr\+\_\+name,  }\item[{}]{attr\+\_\+value }\end{DoxyParamCaption})}
 
 
 
-Returns a string representation of the object. 
-
-This method will be invoked some time instead of self.\+\_\+\+\_\+str\+\_\+\+\_\+().
+Override python build-\/in set attribute method. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em self} & The object\\
+{\em self} & The object \\
+\hline
+{\em attr\+\_\+name} & The attribute name \\
+\hline
+{\em attr\+\_\+value} & The attribute value \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-String representation of the object. 
-\end{DoxyReturn}
 
 
-Definition at line 73 of file sylva\+\_\+base.\+py.
+Definition at line 111 of file sylva\+\_\+base.\+py.
 
 
 
-References sylva.\+base.\+sdf\+\_\+schedule.\+schedule.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+Data\+Token\+Type.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+fimp.\+fimp.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+Port.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+edge.\+\_\+\+\_\+str\+\_\+\+\_\+(), and sylva.\+base.\+sdf.\+actor.\+\_\+\+\_\+str\+\_\+\+\_\+().
+Referenced by sylva.\+misc.\+tcl\+\_\+parser.\+Keywords.\+\_\+\+\_\+init\+\_\+\+\_\+(), sylva.\+misc.\+exec.\+Dict\+Object.\+\_\+\+\_\+init\+\_\+\+\_\+(), and sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+define\+\_\+constraint\+\_\+and\+\_\+optimization().
 
 
 \begin{DoxyCode}
-73     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self):
-74         \textcolor{keywordflow}{return} self.\_\_str\_\_()
-75 
+111     \textcolor{keyword}{def }\_\_setattr\_\_(self, attr\_name, attr\_value):
+112         self[attr\_name] = attr\_value
+113 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}} 
 \index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
@@ -144,28 +185,101 @@ String representation of the object.
 \end{DoxyReturn}
 
 
-Definition at line 60 of file sylva\+\_\+base.\+py.
+Definition at line 132 of file sylva\+\_\+base.\+py.
 
 
 
-Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+\_\+\+\_\+repr\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-60     \textcolor{keyword}{def }\_\_str\_\_(self):
-61         msg = \textcolor{stringliteral}{'str representation of \{self.\_\_class\_\_\} is not implemented yet.'}
-62         \textcolor{keywordflow}{raise} NotImplementedError(msg)
-63 
+132     \textcolor{keyword}{def }\_\_str\_\_(self):
+133         \textcolor{keywordflow}{return} str(self.store)
+134 
 \end{DoxyCode}
-\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a1597b4594cb73e0fa2597742239660f5}} 
-\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!clone@{clone}}
-\index{clone@{clone}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
-\subsubsection{\texorpdfstring{clone()}{clone()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+clone (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4b28a6df0e18ab256c21493b49a64b22}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4b28a6df0e18ab256c21493b49a64b22}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!clean\+\_\+store@{clean\+\_\+store}}
+\index{clean\+\_\+store@{clean\+\_\+store}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{clean\+\_\+store()}{clean\_store()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+clean\+\_\+store (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{filepath = {\ttfamily None} }\end{DoxyParamCaption})}
 
 
 
-Creates a new instance of the object with same properties than original. 
+Clean store file of this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cls} & The class \\
+\hline
+{\em filepath} & The file path \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+162     \textcolor{keyword}{def }clean\_store(cls, filepath=None):
+163         \textcolor{keywordflow}{if} filepath \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+164             filepath = f\textcolor{stringliteral}{'\{cls.\_\_name\_\_\}\_store.json'}
+165         \textcolor{keywordflow}{try}:
+166             os.remove(filepath)
+167         \textcolor{keywordflow}{except} OSError:
+168             \textcolor{keywordflow}{pass}
+169 
+170 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a196978bd73392249f19f817bc1033d8e}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a196978bd73392249f19f817bc1033d8e}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!dump@{dump}}
+\index{dump@{dump}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+dump (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filepath = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+dump one object to a file (.json format) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cls} & The class \\
+\hline
+{\em filepath} & The file path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object in class cls 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file sylva\+\_\+base.\+py.
+
+
+
+References sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+storage\+\_\+form.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+dump().
+
+
+\begin{DoxyCode}
+98     \textcolor{keyword}{def }dump(self, filepath=None):
+99         \textcolor{keywordflow}{if} filepath \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+100             filepath = f\textcolor{stringliteral}{'\{self.\_\_class\_\_.\_\_name\_\_\}\_store.json'}
+101         with open(filepath, \textcolor{stringliteral}{'w+'}, encoding=\textcolor{stringliteral}{'utf-8'}) \textcolor{keyword}{as} fp:
+102             json.dump(self.storage\_form, fp, indent=4)
+103 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8d94af12d912b69a5c8ada74debce019}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8d94af12d912b69a5c8ada74debce019}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!get\+\_\+storage\+\_\+form@{get\+\_\+storage\+\_\+form}}
+\index{get\+\_\+storage\+\_\+form@{get\+\_\+storage\+\_\+form}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{get\+\_\+storage\+\_\+form()}{get\_storage\_form()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+get\+\_\+storage\+\_\+form (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the storage form of this object. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -173,49 +287,135 @@ Creates a new instance of the object with same properties than original.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Copy of this object. 
+A dict object as the storage form 
 \end{DoxyReturn}
 
 
-Definition at line 84 of file sylva\+\_\+base.\+py.
+Definition at line 142 of file sylva\+\_\+base.\+py.
+
+
+
+References sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+\_\+excluded\+\_\+attributes.
 
 
 \begin{DoxyCode}
-84     \textcolor{keyword}{def }clone(self):
-85         msg = \textcolor{stringliteral}{'clone of \{self.\_\_class\_\_\} is not implemented yet.'}
-86         \textcolor{keywordflow}{raise} NotImplementedError(msg)
-87 \end{DoxyCode}
-\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a4acd68307f4b2bef6082b86f3ff6ce3a}} 
-\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!load\+\_\+from\+\_\+dict@{load\+\_\+from\+\_\+dict}}
-\index{load\+\_\+from\+\_\+dict@{load\+\_\+from\+\_\+dict}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
-\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+dict()}{load\_from\_dict()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+load\+\_\+from\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{dict\+\_\+object }\end{DoxyParamCaption})}
+142     \textcolor{keyword}{def }get\_storage\_form(self):
+143         \textcolor{keyword}{def }include(kv):
+144             \textcolor{keywordflow}{return} kv[0] \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.\_excluded\_attributes
+145         \textcolor{keywordflow}{return} dict(filter(include, self.items()))
+146 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af68e05257afb40aa828aa9e2a73b267f}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_af68e05257afb40aa828aa9e2a73b267f}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!load@{load}}
+\index{load@{load}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+load (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{filepath }\end{DoxyParamCaption})}
 
 
 
-Loads an object from a dictionary object. 
+Load one object from a file (.json format) 
+
+The return type is based on the \+\_\+class attribute value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em cls} & The cls \\
+{\em cls} & The class \\
 \hline
-{\em dict\+\_\+object} & The dictionary object\\
+{\em filepath} & The file path\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Returns an \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base}{S\+Y\+L\+V\+A\+Base} object 
+object in class cls 
 \end{DoxyReturn}
 
 
-Definition at line 49 of file sylva\+\_\+base.\+py.
+Definition at line 67 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+load().
 
 
 \begin{DoxyCode}
-49     \textcolor{keyword}{def }load\_from\_dict(cls, dict\_object):
-50         msg = f\textcolor{stringliteral}{'load \{cls\} from dict is not implemented yet.'}
-51         \textcolor{keywordflow}{raise} NotImplementedError(msg)
-52 
-\end{DoxyCode}
+67     \textcolor{keyword}{def }load(cls, filepath):
+68 
+69         \textcolor{comment}{# read json dict from file}
+70         with open(filepath, \textcolor{stringliteral}{'r', encoding='}utf-8') as fp:            json\_dict = json.load(fp)
+71 
+72         \textcolor{comment}{# pop \_class attribute from dict}
+73         cls\_name = json\_dict.pop(\textcolor{stringliteral}{'\_class'}, \textcolor{stringliteral}{'SYLVABase'})
+74 
+75         \textcolor{comment}{# obtain class type from global variables}
+76         cls = globals()[cls\_name]
+77 
+78         \textcolor{comment}{# pop \_excluded\_attributes from dict}
+79         \_excluded\_attributes = json\_dict.pop(\textcolor{stringliteral}{'\_excluded\_attributes'}, [])
+80 
+81         \textcolor{comment}{# construct new object}
+82         result = cls(**json\_dict)
+83 
+84         \textcolor{comment}{# add \_excluded\_attributes}
+85         result.\_excluded\_attributes = \_excluded\_attributes
+86 
+87         \textcolor{keywordflow}{return} result
+88 
+89 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a7225be10455bba307832200d18167bd4}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a7225be10455bba307832200d18167bd4}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+class@{\+\_\+class}}
+\index{\+\_\+class@{\+\_\+class}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+class}{\_class}}
+{\footnotesize\ttfamily S\+Y\+L\+V\+A\+Base.\+\_\+class\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the class, e.\+g {\ttfamily Actor} 
+
+
+
+Definition at line 53 of file sylva\+\_\+base.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a756882c2570aaef7562ad5903717328c}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a756882c2570aaef7562ad5903717328c}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!\+\_\+excluded\+\_\+attributes@{\+\_\+excluded\+\_\+attributes}}
+\index{\+\_\+excluded\+\_\+attributes@{\+\_\+excluded\+\_\+attributes}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{\+\_\+excluded\+\_\+attributes}{\_excluded\_attributes}}
+{\footnotesize\ttfamily S\+Y\+L\+V\+A\+Base.\+\_\+excluded\+\_\+attributes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the attributes to be excluded when storing. 
+
+
+
+Definition at line 54 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+get\+\_\+storage\+\_\+form().
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a19a76f0bddbefbe0687234c9da15c8fc}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a19a76f0bddbefbe0687234c9da15c8fc}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}!storage\+\_\+form@{storage\+\_\+form}}
+\index{storage\+\_\+form@{storage\+\_\+form}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Base}}
+\subsubsection{\texorpdfstring{storage\+\_\+form}{storage\_form}}
+{\footnotesize\ttfamily S\+Y\+L\+V\+A\+Base.\+storage\+\_\+form = property(\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a8d94af12d912b69a5c8ada74debce019}{get\+\_\+storage\+\_\+form})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A dict object as the storage form of this object. 
+
+
+
+Definition at line 152 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Base.\+dump().
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

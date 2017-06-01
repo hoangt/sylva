@@ -1,0 +1,11 @@
+digraph SDFG {
+	node [fillcolor=style]
+	edge [labeldistance=1]
+		a_0 [label="a\n0" URL="\ref Actor" tooltip=a_0]
+		d_1 [label="d\n1" URL="\ref Actor" tooltip=d_1]
+		b_2 [label="b\n2" URL="\ref Actor" tooltip=b_2]
+		c_3 [label="c\n3" URL="\ref Actor" tooltip=c_3]
+			a_0 -> b_2 [headlabel="2 " taillabel="4 "]
+			d_1 -> b_2 [headlabel="4 " taillabel="2 "]
+			b_2 -> c_3 [headlabel="2 " taillabel="2 "]
+}

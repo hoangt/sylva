@@ -1,0 +1,156 @@
+\hypertarget{namespacesylva_1_1examples_1_1sdfg}{}\section{sylva.\+examples.\+sdfg Namespace Reference}
+\label{namespacesylva_1_1examples_1_1sdfg}\index{sylva.\+examples.\+sdfg@{sylva.\+examples.\+sdfg}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}{create\+\_\+sdfg} ()
+\begin{DoxyCompactList}\small\item\em Creates a S\+D\+FG object with four actors for demostration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1sdfg_a9767943f0ae15a17015dac550f39bd9d}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1sdfg_abe4ddc4d5ea4d8093138a1ffe8e25892}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2017-\/05-\/19\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1sdfg_a29b8e50c938ab324beba52e4d6774718}{\+\_\+\+\_\+license\+\_\+\+\_\+} = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}
+\item 
+def \hyperlink{namespacesylva_1_1examples_1_1sdfg_a007e0b3d2c0dab8288b9fdc29ce21b98}{sdfg} = \hyperlink{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}{create\+\_\+sdfg}()
+\item 
+def \hyperlink{namespacesylva_1_1examples_1_1sdfg_ab2119d8c7e8a1d2e0e1b4f6be9f1def5}{dot\+\_\+graph} = sdfg.\+get\+\_\+digraph()
+\item 
+\hyperlink{namespacesylva_1_1examples_1_1sdfg_acbd020c41073525b1ea8420447c2027c}{format}
+\item 
+\hyperlink{namespacesylva_1_1examples_1_1sdfg_a4c8d33123d39177bbf2baa7990dac03b}{cleanup}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}\label{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!create\+\_\+sdfg@{create\+\_\+sdfg}}
+\index{create\+\_\+sdfg@{create\+\_\+sdfg}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{create\+\_\+sdfg()}{create\_sdfg()}}
+{\footnotesize\ttfamily def sylva.\+examples.\+sdfg.\+create\+\_\+sdfg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a S\+D\+FG object with four actors for demostration. 
+
+\begin{DoxyReturn}{Returns}
+S\+D\+FG object 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file sdfg.\+py.
+
+
+\begin{DoxyCode}
+20 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}{create\_sdfg}():
+21     actor\_names = [\textcolor{stringliteral}{'a'}, \textcolor{stringliteral}{'b'}, \textcolor{stringliteral}{'c'}, \textcolor{stringliteral}{'d'}]
+22 
+23     \textcolor{comment}{# we will assign indexes for actors later}
+24     a, b, c, d = [Actor(name=name) \textcolor{keywordflow}{for} name \textcolor{keywordflow}{in} actor\_names]
+25 
+26     a\_dout\_b = Port(name=\textcolor{stringliteral}{'a\_dout\_b'}, count=4)
+27     a.output\_ports.append(a\_dout\_b)
+28 
+29     d\_dout\_b = Port(name=\textcolor{stringliteral}{'d\_dout\_b'}, count=2)
+30     d.output\_ports.append(d\_dout\_b)
+31 
+32     a\_din\_b = Port(name=\textcolor{stringliteral}{'a\_din\_b'}, count=2)
+33     d\_din\_b = Port(name=\textcolor{stringliteral}{'d\_din\_b'}, count=4)
+34     b.input\_ports.append(a\_din\_b)
+35     b.input\_ports.append(d\_din\_b)
+36 
+37     b\_dout\_c = Port(name=\textcolor{stringliteral}{'b\_dout\_c'}, count=2)
+38     b.output\_ports.append(b\_dout\_c)
+39 
+40     b\_din\_c = Port(name=\textcolor{stringliteral}{'b\_din\_c'}, count=2)
+41     c.input\_ports.append(b\_din\_c)
+42 
+43     Edge(a, a\_dout\_b, b, a\_din\_b)
+44     Edge(d, d\_dout\_b, b, d\_din\_b)
+45     Edge(b, b\_dout\_c, c, b\_din\_c)
+46 
+47     \textcolor{comment}{# we will assign indexes for actors by passing}
+48     \textcolor{comment}{# `reassign\_actor\_indexes=True`}
+49     \textcolor{keywordflow}{return} SDFG([a, d, b, c], reassign\_actor\_indexes=\textcolor{keyword}{True})
+50 
+51 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_a9767943f0ae15a17015dac550f39bd9d}\label{namespacesylva_1_1examples_1_1sdfg_a9767943f0ae15a17015dac550f39bd9d}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+author\+\_\+\+\_\+}{\_\_author\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+sdfg.\+\_\+\+\_\+author\+\_\+\+\_\+ = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 9 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_a29b8e50c938ab324beba52e4d6774718}\label{namespacesylva_1_1examples_1_1sdfg_a29b8e50c938ab324beba52e4d6774718}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+license\+\_\+\+\_\+}{\_\_license\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+sdfg.\+\_\+\+\_\+license\+\_\+\+\_\+ = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_abe4ddc4d5ea4d8093138a1ffe8e25892}\label{namespacesylva_1_1examples_1_1sdfg_abe4ddc4d5ea4d8093138a1ffe8e25892}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+sdfg.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2017-\/05-\/19\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 10 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_a4c8d33123d39177bbf2baa7990dac03b}\label{namespacesylva_1_1examples_1_1sdfg_a4c8d33123d39177bbf2baa7990dac03b}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{cleanup}{cleanup}}
+{\footnotesize\ttfamily sylva.\+examples.\+sdfg.\+cleanup}
+
+
+
+Definition at line 63 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_ab2119d8c7e8a1d2e0e1b4f6be9f1def5}\label{namespacesylva_1_1examples_1_1sdfg_ab2119d8c7e8a1d2e0e1b4f6be9f1def5}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!dot\+\_\+graph@{dot\+\_\+graph}}
+\index{dot\+\_\+graph@{dot\+\_\+graph}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{dot\+\_\+graph}{dot\_graph}}
+{\footnotesize\ttfamily def sylva.\+examples.\+sdfg.\+dot\+\_\+graph = sdfg.\+get\+\_\+digraph()}
+
+
+
+Definition at line 57 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_acbd020c41073525b1ea8420447c2027c}\label{namespacesylva_1_1examples_1_1sdfg_acbd020c41073525b1ea8420447c2027c}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!format@{format}}
+\index{format@{format}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily sylva.\+examples.\+sdfg.\+format}
+
+
+
+Definition at line 62 of file sdfg.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1sdfg_a007e0b3d2c0dab8288b9fdc29ce21b98}\label{namespacesylva_1_1examples_1_1sdfg_a007e0b3d2c0dab8288b9fdc29ce21b98}} 
+\index{sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}!sdfg@{sdfg}}
+\index{sdfg@{sdfg}!sylva\+::examples\+::sdfg@{sylva\+::examples\+::sdfg}}
+\subsubsection{\texorpdfstring{sdfg}{sdfg}}
+{\footnotesize\ttfamily def sylva.\+examples.\+sdfg.\+sdfg = \hyperlink{namespacesylva_1_1examples_1_1sdfg_ad4206a7c163d26bbbe8173a5f3dc9000}{create\+\_\+sdfg}()}
+
+
+
+Definition at line 54 of file sdfg.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse.\+search\+\_\+all().
+

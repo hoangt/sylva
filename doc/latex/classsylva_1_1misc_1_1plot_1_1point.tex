@@ -1,9 +1,12 @@
 \hypertarget{classsylva_1_1misc_1_1plot_1_1point}{}\section{sylva.\+misc.\+plot.\+point Class Reference}
 \label{classsylva_1_1misc_1_1plot_1_1point}\index{sylva.\+misc.\+plot.\+point@{sylva.\+misc.\+plot.\+point}}
-Inheritance diagram for sylva.\+misc.\+plot.\+point\+:\begin{figure}[H]
+
+
+Inheritance diagram for sylva.\+misc.\+plot.\+point\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classsylva_1_1misc_1_1plot_1_1point}
+\includegraphics[width=185pt]{classsylva_1_1misc_1_1plot_1_1point__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -52,15 +55,15 @@ Definition at line 139 of file plot.\+py.
 
 
 
-Definition at line 140 of file plot.\+py.
+Definition at line 141 of file plot.\+py.
 
 
 \begin{DoxyCode}
-140     \textcolor{keyword}{def }\_\_init\_\_(self, x = None, y = None) :
-141       self.x = x \textcolor{keywordflow}{or} 0
-142       self.y = y \textcolor{keywordflow}{or} 0
-143       self.xy = (self.x, self.y)
-144 
+141         \textcolor{keyword}{def }\_\_init\_\_(self, x=None, y=None):
+142             self.x = x \textcolor{keywordflow}{or} 0
+143             self.y = y \textcolor{keywordflow}{or} 0
+144             self.xy = (self.x, self.y)
+145 
 \end{DoxyCode}
 
 
@@ -73,11 +76,11 @@ Definition at line 140 of file plot.\+py.
 
 
 
-Definition at line 154 of file plot.\+py.
+Definition at line 155 of file plot.\+py.
 
 
 
-References sylva.\+misc.\+exec.\+type, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+References sylva.\+examples.\+hsdfg.\+format, sylva.\+misc.\+exec.\+type, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -85,29 +88,33 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+iadd\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-154     \textcolor{keyword}{def }\_\_add\_\_(self, other) :
-155       \textcolor{keywordflow}{try} :
-156         x = self.x + int(other.x)
-157         y = self.y + int(other.y)
-158         \textcolor{keywordflow}{return} point(x, y)
-159       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-160       \textcolor{keywordflow}{try} :
-161         x = self.x + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
-162         y = self.y + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
-163         \textcolor{keywordflow}{return} point(x, y)
-164       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-165       \textcolor{keywordflow}{try} :
-166         x = self.x + int(other[\textcolor{stringliteral}{'x'}])
-167         y = self.y + int(other[\textcolor{stringliteral}{'y'}])
-168         \textcolor{keywordflow}{return} point(x, y)
-169       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-170       \textcolor{keywordflow}{try} :
-171         x = self.x + int(other[0])
-172         y = self.y + int(other[1])
-173         \textcolor{keywordflow}{return} point(x, y)
-174       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-175       \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot add \{\}, \{\}'}.format(other, \hyperlink{namespacesylva_1_1misc_1_1exec_a55d55e6d0e68715dfbd883034bd7290c}{type}(other)))
-176 
+155         \textcolor{keyword}{def }\_\_add\_\_(self, other):
+156             \textcolor{keywordflow}{try}:
+157                 x = self.x + int(other.x)
+158                 y = self.y + int(other.y)
+159                 \textcolor{keywordflow}{return} point(x, y)
+160             \textcolor{keywordflow}{except}:
+161                 \textcolor{keywordflow}{pass}
+162             \textcolor{keywordflow}{try}:
+163                 x = self.x + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
+164                 y = self.y + int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
+165                 \textcolor{keywordflow}{return} point(x, y)
+166             \textcolor{keywordflow}{except}:
+167                 \textcolor{keywordflow}{pass}
+168             \textcolor{keywordflow}{try}:
+169                 x = self.x + int(other[\textcolor{stringliteral}{'x'}])
+170                 y = self.y + int(other[\textcolor{stringliteral}{'y'}])
+171                 \textcolor{keywordflow}{return} point(x, y)
+172             \textcolor{keywordflow}{except}:
+173                 \textcolor{keywordflow}{pass}
+174             \textcolor{keywordflow}{try}:
+175                 x = self.x + int(other[0])
+176                 y = self.y + int(other[1])
+177                 \textcolor{keywordflow}{return} point(x, y)
+178             \textcolor{keywordflow}{except}:
+179                 \textcolor{keywordflow}{pass}
+180             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot add \{\}, \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(other, \hyperlink{namespacesylva_1_1misc_1_1exec_a55d55e6d0e68715dfbd883034bd7290c}{type}(other)))
+181 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a38c8a33b3548844e6aa0be06d639dc5f}\label{classsylva_1_1misc_1_1plot_1_1point_a38c8a33b3548844e6aa0be06d639dc5f}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}}
@@ -117,7 +124,7 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+iadd\+\_\+\+\_\+().
 
 
 
-Definition at line 145 of file plot.\+py.
+Definition at line 146 of file plot.\+py.
 
 
 
@@ -125,9 +132,9 @@ References sylva.\+misc.\+plot.\+point.\+xy.
 
 
 \begin{DoxyCode}
-145     \textcolor{keyword}{def }\_\_getitem\_\_(self, index) :
-146       \textcolor{keywordflow}{return} self.xy(index)
-147 
+146         \textcolor{keyword}{def }\_\_getitem\_\_(self, index):
+147             \textcolor{keywordflow}{return} self.xy(index)
+148 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a52992e538e21670f48a5ee5d63aafc5c}\label{classsylva_1_1misc_1_1plot_1_1point_a52992e538e21670f48a5ee5d63aafc5c}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+iadd\+\_\+\+\_\+@{\+\_\+\+\_\+iadd\+\_\+\+\_\+}}
@@ -137,7 +144,7 @@ References sylva.\+misc.\+plot.\+point.\+xy.
 
 
 
-Definition at line 177 of file plot.\+py.
+Definition at line 182 of file plot.\+py.
 
 
 
@@ -145,9 +152,9 @@ References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-177     \textcolor{keyword}{def }\_\_iadd\_\_(self, other) :
-178       \textcolor{keywordflow}{return} self.\_\_add\_\_(other)
-179 
+182         \textcolor{keyword}{def }\_\_iadd\_\_(self, other):
+183             \textcolor{keywordflow}{return} self.\_\_add\_\_(other)
+184 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a0f73456638159eb552d6aef70d76ea57}\label{classsylva_1_1misc_1_1plot_1_1point_a0f73456638159eb552d6aef70d76ea57}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+isub\+\_\+\+\_\+@{\+\_\+\+\_\+isub\+\_\+\+\_\+}}
@@ -157,7 +164,7 @@ References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+().
 
 
 
-Definition at line 198 of file plot.\+py.
+Definition at line 206 of file plot.\+py.
 
 
 
@@ -165,10 +172,10 @@ References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-198     \textcolor{keyword}{def }\_\_isub\_\_(self, other) :
-199       \textcolor{keywordflow}{return} self.\_\_sub\_\_(other)
-200 
-201   \textcolor{keyword}{import} matplotlib.pyplot \textcolor{keyword}{as} plt
+206         \textcolor{keyword}{def }\_\_isub\_\_(self, other):
+207             \textcolor{keywordflow}{return} self.\_\_sub\_\_(other)
+208 
+209     \textcolor{keyword}{import} matplotlib.pyplot \textcolor{keyword}{as} plt
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_ae31f3d284d92f335bf4723af06a45bea}\label{classsylva_1_1misc_1_1plot_1_1point_ae31f3d284d92f335bf4723af06a45bea}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
@@ -178,17 +185,17 @@ References sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+sub\+\_\+\+\_\+().
 
 
 
-Definition at line 151 of file plot.\+py.
+Definition at line 152 of file plot.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+References sylva.\+examples.\+hsdfg.\+format, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-151     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self) :
-152       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.format(self.x, self.y)
-153 
+152         \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1floorplanner_a84f24b1e40f5425e9bb40ab45ccbd10f}{\_\_repr\_\_}(self):
+153             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(self.x, self.y)
+154 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a0dba47ef31ba24b71bddf5d2c60c104b}\label{classsylva_1_1misc_1_1plot_1_1point_a0dba47ef31ba24b71bddf5d2c60c104b}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
@@ -198,17 +205,17 @@ References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva
 
 
 
-Definition at line 148 of file plot.\+py.
+Definition at line 149 of file plot.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+References sylva.\+examples.\+hsdfg.\+format, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-148     \textcolor{keyword}{def }\_\_str\_\_(self) :
-149       \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.format(self.x, self.y)
-150 
+149         \textcolor{keyword}{def }\_\_str\_\_(self):
+150             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'(\{\}, \{\})'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(self.x, self.y)
+151 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1point_a1670d6546eb506a535047d71dc8faaee}\label{classsylva_1_1misc_1_1plot_1_1point_a1670d6546eb506a535047d71dc8faaee}} 
 \index{sylva\+::misc\+::plot\+::point@{sylva\+::misc\+::plot\+::point}!\+\_\+\+\_\+sub\+\_\+\+\_\+@{\+\_\+\+\_\+sub\+\_\+\+\_\+}}
@@ -218,11 +225,11 @@ References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva
 
 
 
-Definition at line 180 of file plot.\+py.
+Definition at line 185 of file plot.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, and sylva.\+misc.\+plot.\+point.\+y.
+References sylva.\+examples.\+hsdfg.\+format, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -230,24 +237,27 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+isub\+\_\+\+\_\+().
 
 
 \begin{DoxyCode}
-180     \textcolor{keyword}{def }\_\_sub\_\_(self, other) :
-181       \textcolor{keywordflow}{try} :
-182         x = self.x - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
-183         y = self.y - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
-184         \textcolor{keywordflow}{return} point(x, y)
-185       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-186       \textcolor{keywordflow}{try} :
-187         x = self.x - int(other[\textcolor{stringliteral}{'x'}])
-188         y = self.y - int(other[\textcolor{stringliteral}{'y'}])
-189         \textcolor{keywordflow}{return} point(x, y)
-190       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-191       \textcolor{keywordflow}{try} :
-192         x = self.x - int(other[0])
-193         y = self.y - int(other[1])
-194         \textcolor{keywordflow}{return} point(x, y)
-195       \textcolor{keywordflow}{except} : \textcolor{keywordflow}{pass}
-196       \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot subtract \{\}'}.format(other))
-197 
+185         \textcolor{keyword}{def }\_\_sub\_\_(self, other):
+186             \textcolor{keywordflow}{try}:
+187                 x = self.x - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'x'}))
+188                 y = self.y - int(other.\_\_getattr\_\_(\textcolor{stringliteral}{'y'}))
+189                 \textcolor{keywordflow}{return} point(x, y)
+190             \textcolor{keywordflow}{except}:
+191                 \textcolor{keywordflow}{pass}
+192             \textcolor{keywordflow}{try}:
+193                 x = self.x - int(other[\textcolor{stringliteral}{'x'}])
+194                 y = self.y - int(other[\textcolor{stringliteral}{'y'}])
+195                 \textcolor{keywordflow}{return} point(x, y)
+196             \textcolor{keywordflow}{except}:
+197                 \textcolor{keywordflow}{pass}
+198             \textcolor{keywordflow}{try}:
+199                 x = self.x - int(other[0])
+200                 y = self.y - int(other[1])
+201                 \textcolor{keywordflow}{return} point(x, y)
+202             \textcolor{keywordflow}{except}:
+203                 \textcolor{keywordflow}{pass}
+204             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'Cannot subtract \{\}'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(other))
+205 
 \end{DoxyCode}
 
 
@@ -260,7 +270,7 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+isub\+\_\+\+\_\+().
 
 
 
-Definition at line 141 of file plot.\+py.
+Definition at line 142 of file plot.\+py.
 
 
 
@@ -274,7 +284,7 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+add\+\_\+\+\_\+(), sylva.\
 
 
 
-Definition at line 143 of file plot.\+py.
+Definition at line 144 of file plot.\+py.
 
 
 
@@ -288,7 +298,7 @@ Referenced by sylva.\+misc.\+plot.\+point.\+\_\+\+\_\+getitem\+\_\+\+\_\+(), syl
 
 
 
-Definition at line 142 of file plot.\+py.
+Definition at line 143 of file plot.\+py.
 
 
 

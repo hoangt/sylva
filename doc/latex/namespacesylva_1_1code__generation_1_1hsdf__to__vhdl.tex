@@ -46,14 +46,14 @@ string \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a75916eaf
 
   global_inputs
     dict of strings
-    [port name : port type]
+    {port name : port type}
 
   exceptions
     { fimp_index : [ port names ] }
 \end{DoxyVerb}
  
 
-Definition at line 200 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 178 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
@@ -61,34 +61,34 @@ References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+p
 
 
 \begin{DoxyCode}
-200 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a4a40923ef153cf1f1a9da0c742b2e542}{connect\_global\_inputs}(nodes, global\_inputs, exceptions = \{\}) :
-201   \textcolor{stringliteral}{'''Connect global input ports like clock or reset}
-202 \textcolor{stringliteral}{}
-203 \textcolor{stringliteral}{    nodes}
-204 \textcolor{stringliteral}{      array of sdf nodes}
-205 \textcolor{stringliteral}{}
-206 \textcolor{stringliteral}{    global\_inputs}
-207 \textcolor{stringliteral}{      dict of strings}
-208 \textcolor{stringliteral}{      [port name : port type]}
-209 \textcolor{stringliteral}{}
-210 \textcolor{stringliteral}{    exceptions}
-211 \textcolor{stringliteral}{      \{ fimp\_index : [ port names ] \}}
-212 \textcolor{stringliteral}{  '''}
-213 
-214   \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} nodes :
-215     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} n.input\_ports :
-216       connect = \textcolor{keyword}{False}
-217 
-218       \textcolor{keywordflow}{if} n.fimp.index \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} exceptions.keys() :
-219         connect = \textcolor{keyword}{True}
-220       \textcolor{keywordflow}{else} :
-221         \textcolor{keywordflow}{if} p.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} exceptions[n.fimp.index] :
-222           connect = \textcolor{keyword}{True}
-223 
-224       \textcolor{keywordflow}{if} (connect == \textcolor{keyword}{True}) \textcolor{keywordflow}{and} (p.name \textcolor{keywordflow}{in} global\_inputs) :
-225           signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(n.fimp, p)
-226           connections.append(\{\textcolor{stringliteral}{'dest'} : signal\_name, \textcolor{stringliteral}{'src'}: p.name\})
-227 
+178 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a4a40923ef153cf1f1a9da0c742b2e542}{connect\_global\_inputs}(nodes, global\_inputs, exceptions=\{\}):
+179     \textcolor{stringliteral}{'''Connect global input ports like clock or reset}
+180 \textcolor{stringliteral}{}
+181 \textcolor{stringliteral}{      nodes}
+182 \textcolor{stringliteral}{        array of sdf nodes}
+183 \textcolor{stringliteral}{}
+184 \textcolor{stringliteral}{      global\_inputs}
+185 \textcolor{stringliteral}{        dict of strings}
+186 \textcolor{stringliteral}{        \{port name : port type\}}
+187 \textcolor{stringliteral}{}
+188 \textcolor{stringliteral}{      exceptions}
+189 \textcolor{stringliteral}{        \{ fimp\_index : [ port names ] \}}
+190 \textcolor{stringliteral}{    '''}
+191 
+192     \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} nodes:
+193         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} n.input\_ports:
+194             connect = \textcolor{keyword}{False}
+195 
+196             \textcolor{keywordflow}{if} n.fimp.index \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} exceptions.keys():
+197                 connect = \textcolor{keyword}{True}
+198             \textcolor{keywordflow}{else}:
+199                 \textcolor{keywordflow}{if} p.name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} exceptions[n.fimp.index]:
+200                     connect = \textcolor{keyword}{True}
+201 
+202             \textcolor{keywordflow}{if} (connect == \textcolor{keyword}{True}) \textcolor{keywordflow}{and} (p.name \textcolor{keywordflow}{in} global\_inputs):
+203                 signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(n.fimp, p)
+204                 connections.append(\{\textcolor{stringliteral}{'dest'}: signal\_name, \textcolor{stringliteral}{'src'}: p.name\})
+205 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!connect\+\_\+one\+\_\+edge@{connect\+\_\+one\+\_\+edge}}
@@ -121,11 +121,11 @@ References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+p
 \end{DoxyVerb}
  
 
-Definition at line 167 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 146 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+components().
+References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+components(), sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+connection(), and sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+signals().
 
 
 
@@ -133,39 +133,38 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+
 
 
 \begin{DoxyCode}
-167 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}{connect\_one\_edge}(one\_edge, components, signals, connections) :
-168 
-169   \textcolor{stringliteral}{'''Generate necessary parts for connecting one sdf edge}
-170 \textcolor{stringliteral}{}
-171 \textcolor{stringliteral}{    one\_edge}
-172 \textcolor{stringliteral}{      sdf.edge}
-173 \textcolor{stringliteral}{}
-174 \textcolor{stringliteral}{    current\_components}
-175 \textcolor{stringliteral}{      current used components}
-176 \textcolor{stringliteral}{      dict of arrays}
-177 \textcolor{stringliteral}{      outer keys are the entity names}
-178 \textcolor{stringliteral}{      inner keys are fimp instances}
-179 \textcolor{stringliteral}{      e.g. \{ 'fft\_64' : [ fft\_0, fft\_1 ] \}}
-180 \textcolor{stringliteral}{}
-181 \textcolor{stringliteral}{    signals}
-182 \textcolor{stringliteral}{      current used components}
-183 \textcolor{stringliteral}{      dict of strings}
-184 \textcolor{stringliteral}{      keys are signal names}
-185 \textcolor{stringliteral}{      values are signal types}
-186 \textcolor{stringliteral}{      e.g. \{ 'counter\_output' : 'integer range 0 to 3' \}}
-187 \textcolor{stringliteral}{}
-188 \textcolor{stringliteral}{    connections}
-189 \textcolor{stringliteral}{      array of dicts, keys = [ 'src', 'dest' ], all strings (signal names)}
-190 \textcolor{stringliteral}{      e.g. [ \{ 'src': 'counter', 'dest' : 'fsm\_state\_input' \} ]}
-191 \textcolor{stringliteral}{  '''}
-192 
-193   src\_fimp\_exists, dest\_fimp\_exists = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}{create\_components}(
-194     one\_edge, components )
-195 
-196   create\_signals (one\_edge, src\_fimp\_exists, dest\_fimp\_exists, signals)
-197 
-198   create\_connection (one\_edge, connections)
-199 
+146 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}{connect\_one\_edge}(one\_edge, components, signals, connections):
+147     \textcolor{stringliteral}{'''Generate necessary parts for connecting one sdf edge}
+148 \textcolor{stringliteral}{}
+149 \textcolor{stringliteral}{      one\_edge}
+150 \textcolor{stringliteral}{        sdf.edge}
+151 \textcolor{stringliteral}{}
+152 \textcolor{stringliteral}{      current\_components}
+153 \textcolor{stringliteral}{        current used components}
+154 \textcolor{stringliteral}{        dict of arrays}
+155 \textcolor{stringliteral}{        outer keys are the entity names}
+156 \textcolor{stringliteral}{        inner keys are fimp instances}
+157 \textcolor{stringliteral}{        e.g. \{ 'fft\_64' : [ fft\_0, fft\_1 ] \}}
+158 \textcolor{stringliteral}{}
+159 \textcolor{stringliteral}{      signals}
+160 \textcolor{stringliteral}{        current used components}
+161 \textcolor{stringliteral}{        dict of strings}
+162 \textcolor{stringliteral}{        keys are signal names}
+163 \textcolor{stringliteral}{        values are signal types}
+164 \textcolor{stringliteral}{        e.g. \{ 'counter\_output' : 'integer range 0 to 3' \}}
+165 \textcolor{stringliteral}{}
+166 \textcolor{stringliteral}{      connections}
+167 \textcolor{stringliteral}{        array of dicts, keys = [ 'src', 'dest' ], all strings (signal names)}
+168 \textcolor{stringliteral}{        e.g. [ \{ 'src': 'counter', 'dest' : 'fsm\_state\_input' \} ]}
+169 \textcolor{stringliteral}{    '''}
+170 
+171     src\_fimp\_exists, dest\_fimp\_exists = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}{create\_components}(
+172         one\_edge, components)
+173 
+174     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a7b3765f9d22f02a29cb6ecfb267ae7f0}{create\_signals}(one\_edge, src\_fimp\_exists, dest\_fimp\_exists, signals)
+175 
+176     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5381a4c2d460f5f0490d0361e37917e9}{create\_connection}(one\_edge, connections)
+177 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+components@{create\+\_\+components}}
@@ -183,7 +182,7 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+
 \end{DoxyVerb}
  
 
-Definition at line 51 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 33 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
@@ -191,44 +190,43 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\
 
 
 \begin{DoxyCode}
-51 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}{create\_components} (one\_edge, components) :
-52 
-53   \textcolor{stringliteral}{'''Create component declarations if necessary.}
-54 \textcolor{stringliteral}{}
-55 \textcolor{stringliteral}{    components}
-56 \textcolor{stringliteral}{      dict of arrays}
-57 \textcolor{stringliteral}{      keys are the function names (entity names)}
-58 \textcolor{stringliteral}{      values are the fimp instances used for the function}
-59 \textcolor{stringliteral}{      e.g. \{'fft' : [ fft\_0, fft\_1, fft\_2 ]\}}
-60 \textcolor{stringliteral}{  '''}
-61 
-62   src\_entity\_name = one\_edge.src\_actor.base\_actor.name
-63   dest\_entity\_name = one\_edge.dest\_actor.base\_actor.name
-64 
-65   src\_fimp = one\_edge.src\_actor.fimp
-66   dest\_fimp = one\_edge.dest\_actor.fimp
+33 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a3672bd3c4fb6d5c86df2d4cd1f64e875}{create\_components}(one\_edge, components):
+34     \textcolor{stringliteral}{'''Create component declarations if necessary.}
+35 \textcolor{stringliteral}{}
+36 \textcolor{stringliteral}{      components}
+37 \textcolor{stringliteral}{        dict of arrays}
+38 \textcolor{stringliteral}{        keys are the function names (entity names)}
+39 \textcolor{stringliteral}{        values are the fimp instances used for the function}
+40 \textcolor{stringliteral}{        e.g. \{'fft' : [ fft\_0, fft\_1, fft\_2 ]\}}
+41 \textcolor{stringliteral}{    '''}
+42 
+43     src\_entity\_name = one\_edge.src\_actor.base\_actor.name
+44     dest\_entity\_name = one\_edge.dest\_actor.base\_actor.name
+45 
+46     src\_fimp = one\_edge.src\_actor.fimp
+47     dest\_fimp = one\_edge.dest\_actor.fimp
+48 
+49     src\_fimp\_exists = \textcolor{keyword}{False}
+50     dest\_fimp\_exists = \textcolor{keyword}{False}
+51 
+52     \textcolor{keywordflow}{if} src\_entity\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components.keys():
+53         components[src\_entity\_name] = [src\_fimp]
+54     \textcolor{keywordflow}{else}:
+55         \textcolor{keywordflow}{if} src\_fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components[src\_entity\_name]:
+56             components[src\_entity\_name].append(src\_fimp)
+57         \textcolor{keywordflow}{else}:
+58             src\_fimp\_exists = \textcolor{keyword}{True}
+59 
+60     \textcolor{keywordflow}{if} dest\_entity\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components.keys():
+61         components[dest\_entity\_name] = [dest\_fimp]
+62     \textcolor{keywordflow}{else}:
+63         \textcolor{keywordflow}{if} dest\_fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components[dest\_entity\_name]:
+64             components[dest\_entity\_name].append(dest\_fimp)
+65         \textcolor{keywordflow}{else}:
+66             dest\_fimp\_exists = \textcolor{keyword}{True}
 67 
-68   src\_fimp\_exists = \textcolor{keyword}{False}
-69   dest\_fimp\_exists = \textcolor{keyword}{False}
-70 
-71   \textcolor{keywordflow}{if} src\_entity\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components.keys() :
-72     components[src\_entity\_name] = [src\_fimp]
-73   \textcolor{keywordflow}{else} :
-74     \textcolor{keywordflow}{if} src\_fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components[src\_entity\_name] :
-75       components[src\_entity\_name].append(src\_fimp)
-76     \textcolor{keywordflow}{else} :
-77       src\_fimp\_exists = \textcolor{keyword}{True}
-78 
-79   \textcolor{keywordflow}{if} dest\_entity\_name \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components.keys() :
-80     components[dest\_entity\_name] = [dest\_fimp]
-81   \textcolor{keywordflow}{else} :
-82     \textcolor{keywordflow}{if} dest\_fimp \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} components[dest\_entity\_name] :
-83       components[dest\_entity\_name].append(dest\_fimp)
-84     \textcolor{keywordflow}{else} :
-85       dest\_fimp\_exists = \textcolor{keyword}{True}
-86 
-87   \textcolor{keywordflow}{return} src\_fimp\_exists, dest\_fimp\_exists
-88 
+68     \textcolor{keywordflow}{return} src\_fimp\_exists, dest\_fimp\_exists
+69 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5381a4c2d460f5f0490d0361e37917e9}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5381a4c2d460f5f0490d0361e37917e9}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+connection@{create\+\_\+connection}}
@@ -240,70 +238,73 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\
 \end{DoxyVerb}
  
 
-Definition at line 113 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 93 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+get\+\_\+signal\+\_\+name().
+References sylva.\+examples.\+hsdfg.\+format, and sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+get\+\_\+signal\+\_\+name().
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+one\+\_\+edge().
 
 
 \begin{DoxyCode}
-113 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5381a4c2d460f5f0490d0361e37917e9}{create\_connection} (one\_edge, connections) :
+93 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5381a4c2d460f5f0490d0361e37917e9}{create\_connection}(one\_edge, connections):
+94     \textcolor{stringliteral}{'''Create signal connections for one edge}
+95 \textcolor{stringliteral}{    '''}
+96 
+97     \textcolor{comment}{# when size is different,}
+98     \textcolor{comment}{# we need to split the source port or the destination port}
+99 
+100     \textcolor{comment}{# if the source port is wider: N to 1}
+101     \textcolor{keyword}{def }n\_to\_one(src\_port, dest\_port, n, src\_signal\_name, dest\_signal\_name):
+102 
+103         \textcolor{comment}{# destination is also std\_logic\_vector}
+104         \textcolor{keywordflow}{if} dest\_port.type.name.lower().startswith(\textcolor{stringliteral}{'std\_logic\_vector'}):
+105             \textcolor{keywordflow}{return} [\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name,
+106                      \textcolor{stringliteral}{'src'}: src\_signal\_name +
+107                      \textcolor{stringliteral}{'( \{i\} * \{width\} - 1 downto 0)'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i=i, width=dest\_port.type.size)\}
+108                     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(n)]
+109         \textcolor{comment}{# destination is std\_logic}
+110         \textcolor{keywordflow}{else}:
+111             \textcolor{keywordflow}{return} [\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name,
+112                      \textcolor{stringliteral}{'src'}: src\_signal\_name + \textcolor{stringliteral}{'(\{i\})'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i=i)\}
+113                     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(n)]
 114 
-115   \textcolor{stringliteral}{'''Create signal connections for one edge}
-116 \textcolor{stringliteral}{  '''}
+115     \textcolor{comment}{# if the destination port is wider: 1 to N}
+116     \textcolor{keyword}{def }one\_to\_n(src\_port, dest\_port, n, src\_signal\_name, dest\_signal\_name):
 117 
-118   \textcolor{comment}{# when size is different,}
-119   \textcolor{comment}{# we need to split the source port or the destination port}
-120 
-121   \textcolor{comment}{# if the source port is wider: N to 1}
-122   \textcolor{keyword}{def }n\_to\_one (src\_port, dest\_port, n, src\_signal\_name, dest\_signal\_name) :
-123 
-124     \textcolor{comment}{# destination is also std\_logic\_vector}
-125     \textcolor{keywordflow}{if} dest\_port.type.name.lower().startswith(\textcolor{stringliteral}{'std\_logic\_vector'}) :
-126       \textcolor{keywordflow}{return} [ \{ \textcolor{stringliteral}{'dest'} : dest\_signal\_name,
-127                  \textcolor{stringliteral}{'src'}  : src\_signal\_name + \(\backslash\)
-128                  \textcolor{stringliteral}{'( \{i\} * \{width\} - 1 downto 0)'}.format(i = i, width = dest\_port.type.size) \}
-129                \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n) ]
-130     \textcolor{comment}{# destination is std\_logic}
-131     \textcolor{keywordflow}{else} :
-132       \textcolor{keywordflow}{return} [ \{ \textcolor{stringliteral}{'dest'} : dest\_signal\_name,
-133                  \textcolor{stringliteral}{'src'}  : src\_signal\_name + \textcolor{stringliteral}{'(\{i\})'}.format(i = i) \}
-134                \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n) ]
+118         \textcolor{comment}{# source is also std\_logic\_vector}
+119         \textcolor{keywordflow}{if} src\_port.type.name.lower().startswith(\textcolor{stringliteral}{'std\_logic\_vector'}):
+120             \textcolor{keywordflow}{return} [\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name +
+121                      \textcolor{stringliteral}{'( \{i\} * \{width\} - 1 downto 0)'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i=i, width=src\_port.type.size),
+122                      \textcolor{stringliteral}{'src'}: src\_signal\_name\}
+123                     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(n)]
+124         \textcolor{comment}{# source is std\_logic}
+125         \textcolor{keywordflow}{else}:
+126             \textcolor{keywordflow}{return} [\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name + \textcolor{stringliteral}{'(\{i\})'}.\hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i=i),
+127                      \textcolor{stringliteral}{'src'}: src\_signal\_name\}
+128                     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(n)]
+129 
+130     src\_fimp = one\_edge.src\_actor.fimp
+131     dest\_fimp = one\_edge.dest\_actor.fimp
+132 
+133     src\_port = one\_edge.src\_port
+134     dest\_port = one\_edge.dest\_port
 135 
-136   \textcolor{comment}{# if the destination port is wider: 1 to N}
-137   \textcolor{keyword}{def }one\_to\_n (src\_port, dest\_port, n, src\_signal\_name, dest\_signal\_name) :
+136     src\_signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(src\_fimp, src\_port)
+137     dest\_signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(dest\_fimp, dest\_port)
 138 
-139     \textcolor{comment}{# source is also std\_logic\_vector}
-140     \textcolor{keywordflow}{if} src\_port.type.name.lower().startswith(\textcolor{stringliteral}{'std\_logic\_vector'}) :
-141       \textcolor{keywordflow}{return} [ \{ \textcolor{stringliteral}{'dest'} : dest\_signal\_name + \(\backslash\)
-142                  \textcolor{stringliteral}{'( \{i\} * \{width\} - 1 downto 0)'}.format(i = i, width = src\_port.type.size) ,
-143                  \textcolor{stringliteral}{'src'}  : src\_signal\_name\}
-144                \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n) ]
-145     \textcolor{comment}{# source is std\_logic}
-146     \textcolor{keywordflow}{else} :
-147       \textcolor{keywordflow}{return} [ \{ \textcolor{stringliteral}{'dest'} : dest\_signal\_name + \textcolor{stringliteral}{'(\{i\})'}.format(i = i),
-148                  \textcolor{stringliteral}{'src'}  : src\_signal\_name \}
-149                \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n) ]
-150 
-151   src\_fimp = one\_edge.src\_actor.fimp
-152   dest\_fimp = one\_edge.dest\_actor.fimp
-153 
-154   src\_port = one\_edge.src\_port
-155   dest\_port = one\_edge.dest\_port
-156 
-157   src\_signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(src\_fimp, src\_port)
-158   dest\_signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(dest\_fimp, dest\_port)
-159 
-160   \textcolor{keywordflow}{if} src\_port.type.size == dest\_port.type.size :
-161     connections.append(\{\textcolor{stringliteral}{'dest'} : dest\_signal\_name, \textcolor{stringliteral}{'src'}: src\_signal\_name\})
-162   \textcolor{keywordflow}{elif} src\_port.type.size > dest\_port.type.size :
-163     connections += n\_to\_one(src\_port, dest\_port, int(src\_port.type.size/dest\_port.type.size), 
+139     \textcolor{keywordflow}{if} src\_port.type.size == dest\_port.type.size:
+140         connections.append(\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name, \textcolor{stringliteral}{'src'}: src\_signal\_name\})
+141     \textcolor{keywordflow}{elif} src\_port.type.size > dest\_port.type.size:
+142         connections += n\_to\_one(src\_port, dest\_port, int(src\_port.type.size / dest\_port.type.size), 
       src\_signal\_name, dest\_signal\_name)
-164   \textcolor{keywordflow}{else} :
-165     connections += one\_to\_n(src\_port, dest\_port, int(dest\_port.type.size/src\_port.type.size), 
+143     \textcolor{keywordflow}{else}:
+144         connections += one\_to\_n(src\_port, dest\_port, int(dest\_port.type.size / src\_port.type.size), 
       src\_signal\_name, dest\_signal\_name)
-166 
+145 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a34788575516a0c7731b0e5abd4d42231}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a34788575516a0c7731b0e5abd4d42231}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+empty\+\_\+vhdl@{create\+\_\+empty\+\_\+vhdl}}
@@ -313,7 +314,11 @@ References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+get\+\_\+sign
 
 
 
-Definition at line 350 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 325 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+
+
+
+References sylva.\+examples.\+hsdfg.\+format.
 
 
 
@@ -321,22 +326,25 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl(), and 
 
 
 \begin{DoxyCode}
-350   additional\_input\_ports = []) :
-351 
-352   \textcolor{keywordflow}{if} output\_file == \textcolor{keywordtype}{None} :
-353     output\_file = sdf\_actor.name + \textcolor{stringliteral}{'.vhdl'}
-354 
-355   interface = vhdl\_generation.interface( entity\_name = sdf\_actor.name,
-356     libraries = libraries,
-357     input\_ports = dict([(p.name, p.type.name) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} (sdf\_actor.input\_ports + additional\_input\_ports)]),
-358     output\_ports = dict([(p.name, p.type.name) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} sdf\_actor.output\_ports]) )
-359 
-360   architectures = [ vhdl\_generation.architecture( entity\_name = sdf\_actor.name,
-361     architecture\_name = \textcolor{stringliteral}{'fimp\_\{0\}'}.format(i) )
-362     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(fimp\_count) ]
-363 
-364   \textcolor{keywordflow}{return} vhdl\_generation.vhdl\_file(interface, architectures, output\_file)
-365 \end{DoxyCode}
+325                       additional\_input\_ports=[]):
+326 
+327     \textcolor{keywordflow}{if} output\_file == \textcolor{keywordtype}{None}:
+328         output\_file = sdf\_actor.name + \textcolor{stringliteral}{'.vhdl'}
+329 
+330     interface = vhdl\_generation.interface(entity\_name=sdf\_actor.name,
+331                                           libraries=libraries,
+332                                           input\_ports=dict([(p.name, p.type.name) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} (
+      sdf\_actor.input\_ports + additional\_input\_ports)]),
+333                                           output\_ports=dict([(p.name, p.type.name) \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} 
+      sdf\_actor.output\_ports]))
+334 
+335     architectures = [vhdl\_generation.architecture(entity\_name=sdf\_actor.name,
+336                                                   architecture\_name=\textcolor{stringliteral}{'fimp\_\{0\}'}.
+      \hyperlink{namespacesylva_1_1examples_1_1hsdfg_ab3510a0b8457362330aa4d9fd2209590}{format}(i))
+337                      \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(fimp\_count)]
+338 
+339     \textcolor{keywordflow}{return} vhdl\_generation.vhdl\_file(interface, architectures, output\_file)
+340 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a32b4f40eadeb985a68674b401be7a1dc}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a32b4f40eadeb985a68674b401be7a1dc}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+port\+\_\+connections@{create\+\_\+port\+\_\+connections}}
 \index{create\+\_\+port\+\_\+connections@{create\+\_\+port\+\_\+connections}!sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}}
@@ -356,47 +364,46 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+air\+\_\+to\+\_\+vhdl(), and 
 \end{DoxyVerb}
  
 
-Definition at line 229 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 207 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
-Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+global\+\_\+inputs().
+Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+global\+\_\+inputs(), and sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+to\+\_\+vhdl().
 
 
 \begin{DoxyCode}
-229   direction = \textcolor{stringliteral}{'input'}) :
-230 
-231   \textcolor{stringliteral}{'''Create port to signal connections}
-232 \textcolor{stringliteral}{}
-233 \textcolor{stringliteral}{    port\_connections}
-234 \textcolor{stringliteral}{      \{ 'data\_in\_re' : [ \{'fimp' : fft\_0, 'port' : data\_in\_re\} ] \}}
-235 \textcolor{stringliteral}{}
-236 \textcolor{stringliteral}{    connections}
-237 \textcolor{stringliteral}{      current established connections}
-238 \textcolor{stringliteral}{}
-239 \textcolor{stringliteral}{    direction}
-240 \textcolor{stringliteral}{      'input' or 'output'}
-241 \textcolor{stringliteral}{  '''}
-242 
-243   \textcolor{keywordflow}{for} top\_port\_name, fimp\_ports \textcolor{keywordflow}{in} port\_connections :
-244     \textcolor{keywordflow}{if} direction == \textcolor{stringliteral}{'input'} :
-245       \textcolor{keywordflow}{for} fimp\_port \textcolor{keywordflow}{in} fimp\_ports :
-246         fimp = fimp\_port[\textcolor{stringliteral}{'fimp'}]
-247         port = fimp\_port[\textcolor{stringliteral}{'port'}]
-248         dest\_signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} \(\backslash\)
-249           % (fimp.name, fimp.index, port.name)
-250 
-251         connections.append(\{\textcolor{stringliteral}{'dest'} : dest\_signal\_name, \textcolor{stringliteral}{'src'}: top\_port\_name\})
-252 
-253     \textcolor{keywordflow}{elif} direction == \textcolor{stringliteral}{'output'} :
-254       \textcolor{keywordflow}{for} fimp\_port \textcolor{keywordflow}{in} fimp\_ports :
-255         fimp = fimp\_port[\textcolor{stringliteral}{'fimp'}]
-256         port = fimp\_port[\textcolor{stringliteral}{'port'}]
-257         src\_signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} \(\backslash\)
-258           % (fimp.name, fimp.index, port.name)
-259 
-260         connections.append(\{\textcolor{stringliteral}{'dest'} : top\_port\_name, \textcolor{stringliteral}{'src'}: src\_signal\_name\})
-261 
+207                             direction=\textcolor{stringliteral}{'input'}):
+208     \textcolor{stringliteral}{'''Create port to signal connections}
+209 \textcolor{stringliteral}{}
+210 \textcolor{stringliteral}{      port\_connections}
+211 \textcolor{stringliteral}{        \{ 'data\_in\_re' : [ \{'fimp' : fft\_0, 'port' : data\_in\_re\} ] \}}
+212 \textcolor{stringliteral}{}
+213 \textcolor{stringliteral}{      connections}
+214 \textcolor{stringliteral}{        current established connections}
+215 \textcolor{stringliteral}{}
+216 \textcolor{stringliteral}{      direction}
+217 \textcolor{stringliteral}{        'input' or 'output'}
+218 \textcolor{stringliteral}{    '''}
+219 
+220     \textcolor{keywordflow}{for} top\_port\_name, fimp\_ports \textcolor{keywordflow}{in} port\_connections:
+221         \textcolor{keywordflow}{if} direction == \textcolor{stringliteral}{'input'}:
+222             \textcolor{keywordflow}{for} fimp\_port \textcolor{keywordflow}{in} fimp\_ports:
+223                 fimp = fimp\_port[\textcolor{stringliteral}{'fimp'}]
+224                 port = fimp\_port[\textcolor{stringliteral}{'port'}]
+225                 dest\_signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} \(\backslash\)
+226                     % (fimp.name, fimp.index, port.name)
+227 
+228                 connections.append(\{\textcolor{stringliteral}{'dest'}: dest\_signal\_name, \textcolor{stringliteral}{'src'}: top\_port\_name\})
+229 
+230         \textcolor{keywordflow}{elif} direction == \textcolor{stringliteral}{'output'}:
+231             \textcolor{keywordflow}{for} fimp\_port \textcolor{keywordflow}{in} fimp\_ports:
+232                 fimp = fimp\_port[\textcolor{stringliteral}{'fimp'}]
+233                 port = fimp\_port[\textcolor{stringliteral}{'port'}]
+234                 src\_signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} \(\backslash\)
+235                     % (fimp.name, fimp.index, port.name)
+236 
+237                 connections.append(\{\textcolor{stringliteral}{'dest'}: top\_port\_name, \textcolor{stringliteral}{'src'}: src\_signal\_name\})
+238 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a7b3765f9d22f02a29cb6ecfb267ae7f0}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a7b3765f9d22f02a29cb6ecfb267ae7f0}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+signals@{create\+\_\+signals}}
@@ -412,38 +419,41 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\
 \end{DoxyVerb}
  
 
-Definition at line 89 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 70 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
 References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+get\+\_\+signal\+\_\+name().
 
 
+
+Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+one\+\_\+edge().
+
+
 \begin{DoxyCode}
-89 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a7b3765f9d22f02a29cb6ecfb267ae7f0}{create\_signals} (one\_edge, src\_fimp\_exists, dest\_fimp\_exists, signals) :
-90 
-91   \textcolor{stringliteral}{'''create signals}
-92 \textcolor{stringliteral}{}
-93 \textcolor{stringliteral}{    signal name}
-94 \textcolor{stringliteral}{      string}
-95 \textcolor{stringliteral}{      <function name>\_<fimp index>\_<port name>}
-96 \textcolor{stringliteral}{  '''}
-97 
-98   src\_fimp = one\_edge.src\_actor.fimp
-99   dest\_fimp = one\_edge.dest\_actor.fimp
-100 
-101   \textcolor{keywordflow}{if} src\_fimp\_exists == \textcolor{keyword}{False} :
-102     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} src\_fimp.base\_actor.input\_ports \(\backslash\)
-103            + src\_fimp.base\_actor.output\_ports :
-104       signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(src\_fimp, p)
-105       signals[signal\_name] = p.type.name
-106 
-107   \textcolor{keywordflow}{if} dest\_fimp\_exists == \textcolor{keyword}{False} :
-108     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} dest\_fimp.base\_actor.input\_ports \(\backslash\)
-109            + dest\_fimp.base\_actor.output\_ports :
-110       signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(dest\_fimp, p)
-111       signals[signal\_name] = p.type.name
-112 
+70 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a7b3765f9d22f02a29cb6ecfb267ae7f0}{create\_signals}(one\_edge, src\_fimp\_exists, dest\_fimp\_exists, signals):
+71     \textcolor{stringliteral}{'''create signals}
+72 \textcolor{stringliteral}{}
+73 \textcolor{stringliteral}{      signal name}
+74 \textcolor{stringliteral}{        string}
+75 \textcolor{stringliteral}{        <function name>\_<fimp index>\_<port name>}
+76 \textcolor{stringliteral}{    '''}
+77 
+78     src\_fimp = one\_edge.src\_actor.fimp
+79     dest\_fimp = one\_edge.dest\_actor.fimp
+80 
+81     \textcolor{keywordflow}{if} src\_fimp\_exists == \textcolor{keyword}{False}:
+82         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} src\_fimp.base\_actor.input\_ports \(\backslash\)
+83                 + src\_fimp.base\_actor.output\_ports:
+84             signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(src\_fimp, p)
+85             signals[signal\_name] = p.type.name
+86 
+87     \textcolor{keywordflow}{if} dest\_fimp\_exists == \textcolor{keyword}{False}:
+88         \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} dest\_fimp.base\_actor.input\_ports \(\backslash\)
+89                 + dest\_fimp.base\_actor.output\_ports:
+90             signal\_name = \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(dest\_fimp, p)
+91             signals[signal\_name] = p.type.name
+92 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a09020e1a1ea5a2d3e4b8cdd35f51a185}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a09020e1a1ea5a2d3e4b8cdd35f51a185}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!create\+\_\+top\+\_\+connections@{create\+\_\+top\+\_\+connections}}
@@ -464,44 +474,47 @@ References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+get\+\_\+sign
 \end{DoxyVerb}
  
 
-Definition at line 262 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 239 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
 References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+to\+\_\+vhdl().
 
 
+
+Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+to\+\_\+vhdl().
+
+
 \begin{DoxyCode}
-262 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a09020e1a1ea5a2d3e4b8cdd35f51a185}{create\_top\_connections} (input\_actor\_and\_ports, output\_actor\_and\_ports, 
-      connections) :
-263 
-264   \textcolor{stringliteral}{'''Create top level connections (e.g. clk or nrst) for the entire HSDF graph}
-265 \textcolor{stringliteral}{}
-266 \textcolor{stringliteral}{    input\_actor\_and\_ports}
-267 \textcolor{stringliteral}{      e.g. [ ActorAndPort object ]}
-268 \textcolor{stringliteral}{}
-269 \textcolor{stringliteral}{    output\_actor\_and\_ports}
-270 \textcolor{stringliteral}{      e.g. [ ActorAndPort object ]}
-271 \textcolor{stringliteral}{}
-272 \textcolor{stringliteral}{    connections}
-273 \textcolor{stringliteral}{      current established connections}
-274 \textcolor{stringliteral}{  '''}
-275   \textcolor{keywordflow}{for} iap \textcolor{keywordflow}{in} input\_actor\_and\_ports :
-276     \textcolor{comment}{# port name format: <function name>\_<fimp index>\_<port name>}
-277     func\_name = iap.actor.base\_actor.name
-278     fimp\_index = 0
-279     port\_name = iap.port.name
-280     signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} % (func\_name, fimp\_index, port\_name)
-281     connections.append(\{\textcolor{stringliteral}{'dest'} : signal\_name, \textcolor{stringliteral}{'src'}: port\_name\})
-282 
-283   \textcolor{keywordflow}{for} oap \textcolor{keywordflow}{in} output\_actor\_and\_ports :
-284     \textcolor{comment}{# port name format: <function name>\_<fimp index>\_<port name>}
-285     func\_name = oap.actor.base\_actor.name
-286     fimp\_index = 0
-287     port\_name = oap.port.name
-288     signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} % (func\_name, fimp\_index, port\_name)
-289     connections.append(\{\textcolor{stringliteral}{'src'} : signal\_name, \textcolor{stringliteral}{'dest'}: port\_name\})
-290 
+239 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a09020e1a1ea5a2d3e4b8cdd35f51a185}{create\_top\_connections}(input\_actor\_and\_ports, output\_actor\_and\_ports, connections
+      ):
+240     \textcolor{stringliteral}{'''Create top level connections (e.g. clk or nrst) for the entire HSDF graph}
+241 \textcolor{stringliteral}{}
+242 \textcolor{stringliteral}{      input\_actor\_and\_ports}
+243 \textcolor{stringliteral}{        e.g. [ ActorAndPort object ]}
+244 \textcolor{stringliteral}{}
+245 \textcolor{stringliteral}{      output\_actor\_and\_ports}
+246 \textcolor{stringliteral}{        e.g. [ ActorAndPort object ]}
+247 \textcolor{stringliteral}{}
+248 \textcolor{stringliteral}{      connections}
+249 \textcolor{stringliteral}{        current established connections}
+250 \textcolor{stringliteral}{    '''}
+251     \textcolor{keywordflow}{for} iap \textcolor{keywordflow}{in} input\_actor\_and\_ports:
+252         \textcolor{comment}{# port name format: <function name>\_<fimp index>\_<port name>}
+253         func\_name = iap.actor.base\_actor.name
+254         fimp\_index = 0
+255         port\_name = iap.port.name
+256         signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} % (func\_name, fimp\_index, port\_name)
+257         connections.append(\{\textcolor{stringliteral}{'dest'}: signal\_name, \textcolor{stringliteral}{'src'}: port\_name\})
+258 
+259     \textcolor{keywordflow}{for} oap \textcolor{keywordflow}{in} output\_actor\_and\_ports:
+260         \textcolor{comment}{# port name format: <function name>\_<fimp index>\_<port name>}
+261         func\_name = oap.actor.base\_actor.name
+262         fimp\_index = 0
+263         port\_name = oap.port.name
+264         signal\_name = \textcolor{stringliteral}{'%s\_%s\_%s'} % (func\_name, fimp\_index, port\_name)
+265         connections.append(\{\textcolor{stringliteral}{'src'}: signal\_name, \textcolor{stringliteral}{'dest'}: port\_name\})
+266 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!get\+\_\+signal\+\_\+name@{get\+\_\+signal\+\_\+name}}
@@ -511,7 +524,7 @@ References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+hsdf\+\_\+to\
 
 
 
-Definition at line 48 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 30 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
@@ -519,9 +532,9 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\
 
 
 \begin{DoxyCode}
-48 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}( fimp, port ) :
-49   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'%s\_%s\_%s'} % (fimp.base\_actor.name, fimp.global\_index, port.name)
-50 
+30 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_adfe6fda6b02f34c7fd4f2775ced8228f}{get\_signal\_name}(fimp, port):
+31     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'%s\_%s\_%s'} % (fimp.base\_actor.name, fimp.global\_index, port.name)
+32 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a0725288caa57a5c518a1b9c2683291fa}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!hsdf\+\_\+to\+\_\+vhdl@{hsdf\+\_\+to\+\_\+vhdl}}
@@ -531,11 +544,11 @@ Referenced by sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\
 
 
 
-Definition at line 298 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 274 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+one\+\_\+edge(), and sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+empty\+\_\+vhdl().
+References sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+connect\+\_\+one\+\_\+edge(), sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+empty\+\_\+vhdl(), sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+port\+\_\+connections(), and sylva.\+code\+\_\+generation.\+hsdf\+\_\+to\+\_\+vhdl.\+create\+\_\+top\+\_\+connections().
 
 
 
@@ -543,57 +556,57 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+abb\+\_\+to\+\_\+vhdl(), sylv
 
 
 \begin{DoxyCode}
-298   default\_input\_ports = \{\textcolor{stringliteral}{'clk'}: \textcolor{stringliteral}{'std\_logic'}, \textcolor{stringliteral}{'nrst'} : \textcolor{stringliteral}{'std\_logic'}\},
-299   input\_connections = \{\},
-300   output\_ports = \{\},
-301   output\_connections = \{\},
-302   global\_input\_connections = [],
-303   global\_output\_connections = [],
-304   used\_libraries = \{\},
-305   custom\_header = \textcolor{stringliteral}{''},
-306   license\_header = mit\_license.vhdl() ) :
+274                  default\_input\_ports=\{\textcolor{stringliteral}{'clk'}: \textcolor{stringliteral}{'std\_logic'}, \textcolor{stringliteral}{'nrst'}: \textcolor{stringliteral}{'std\_logic'}\},
+275                  input\_connections=\{\},
+276                  output\_ports=\{\},
+277                  output\_connections=\{\},
+278                  global\_input\_connections=[],
+279                  global\_output\_connections=[],
+280                  used\_libraries=\{\},
+281                  custom\_header=\textcolor{stringliteral}{''},
+282                  license\_header=mit\_license.vhdl()):
+283     \textcolor{stringliteral}{''' Generate vhdl design unit based on an HSDF graph.}
+284 \textcolor{stringliteral}{}
+285 \textcolor{stringliteral}{      input\_connections/output\_connections}
+286 \textcolor{stringliteral}{        \{ 'data\_in' : [(fft\_0, 'data\_in\_re'), (fir\_0, 'data\_in\_re')]\}}
+287 \textcolor{stringliteral}{}
+288 \textcolor{stringliteral}{      global\_input\_connections/global\_output\_connections}
+289 \textcolor{stringliteral}{        ['clk', 'nrst']}
+290 \textcolor{stringliteral}{    '''}
+291 
+292     interface = vhdl\_generation.interface(entity\_name=entity\_name,
+293                                           input\_ports=[ap.port \textcolor{keywordflow}{for} ap \textcolor{keywordflow}{in} input\_actor\_and\_ports],
+294                                           output\_ports=[ap.port \textcolor{keywordflow}{for} ap \textcolor{keywordflow}{in} output\_actor\_and\_ports],
+295                                           libraries=used\_libraries,
+296                                           generics=global\_generics,
+297                                           header=custom\_header,
+298                                           license\_header=license\_header,
+299                                           default\_input\_ports=default\_input\_ports)
+300 
+301     components = \{\}
+302     signals = \{\}
+303     connections = []
+304 
+305     \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} sdf\_edges:
+306         \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}{connect\_one\_edge}(edge, components, signals, connections)
 307 
-308   \textcolor{stringliteral}{''' Generate vhdl design unit based on an HSDF graph.}
-309 \textcolor{stringliteral}{}
-310 \textcolor{stringliteral}{    input\_connections/output\_connections}
-311 \textcolor{stringliteral}{      \{ 'data\_in' : [(fft\_0, 'data\_in\_re'), (fir\_0, 'data\_in\_re')]\}}
-312 \textcolor{stringliteral}{}
-313 \textcolor{stringliteral}{    global\_input\_connections/global\_output\_connections}
-314 \textcolor{stringliteral}{      ['clk', 'nrst']}
-315 \textcolor{stringliteral}{  '''}
-316 
-317   interface = vhdl\_generation.interface(entity\_name = entity\_name,
-318     input\_ports = [ ap.port \textcolor{keywordflow}{for} ap \textcolor{keywordflow}{in} input\_actor\_and\_ports ],
-319     output\_ports = [ ap.port \textcolor{keywordflow}{for} ap \textcolor{keywordflow}{in} output\_actor\_and\_ports ],
-320     libraries = used\_libraries,
-321     generics = global\_generics,
-322     header = custom\_header,
-323     license\_header = license\_header,
-324     default\_input\_ports = default\_input\_ports)
-325 
-326   components = \{\}
-327   signals = \{\}
-328   connections = []
-329 
-330   \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} sdf\_edges :
-331     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a5976ee6a55f22e1fc1e9fc87bac3ea62}{connect\_one\_edge}(edge, components, signals, connections)
-332 
-333   create\_top\_connections (input\_actor\_and\_ports, output\_actor\_and\_ports, connections)
-334 
-335   create\_port\_connections (input\_connections, connections, \textcolor{stringliteral}{'input'})
-336   create\_port\_connections (output\_connections, connections, \textcolor{stringliteral}{'output'})
-337 
-338   fimps = []
-339   fimps.append(vhdl\_generation.architecture(
-340     architecture\_name = \textcolor{stringliteral}{'fimp\_0'},
-341     entity\_name = entity\_name,
-342     components = components,
-343     fimp\_lib = fimp\_lib,
-344     signals = signals,
-345     connections = connections))
-346 
-347   \textcolor{keywordflow}{return} vhdl\_generation.vhdl\_file(interface, fimps, output\_file = output\_file)
-348 
+308     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a09020e1a1ea5a2d3e4b8cdd35f51a185}{create\_top\_connections}(input\_actor\_and\_ports, output\_actor\_and\_ports, connections
+      )
+309 
+310     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a32b4f40eadeb985a68674b401be7a1dc}{create\_port\_connections}(input\_connections, connections, \textcolor{stringliteral}{'input'})
+311     \hyperlink{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a32b4f40eadeb985a68674b401be7a1dc}{create\_port\_connections}(output\_connections, connections, \textcolor{stringliteral}{'output'})
+312 
+313     fimps = []
+314     fimps.append(vhdl\_generation.architecture(
+315         architecture\_name=\textcolor{stringliteral}{'fimp\_0'},
+316         entity\_name=entity\_name,
+317         components=components,
+318         fimp\_lib=fimp\_lib,
+319         signals=signals,
+320         connections=connections))
+321 
+322     \textcolor{keywordflow}{return} vhdl\_generation.vhdl\_file(interface, fimps, output\_file=output\_file)
+323 
 \end{DoxyCode}
 
 
@@ -606,7 +619,7 @@ Referenced by sylva.\+code\+\_\+generation.\+air.\+abb\+\_\+to\+\_\+vhdl(), sylv
 
 
 
-Definition at line 24 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 3 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a75916eaf9006c0cce223480e45896984}\label{namespacesylva_1_1code__generation_1_1hsdf__to__vhdl_a75916eaf9006c0cce223480e45896984}} 
 \index{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl@{sylva\+::code\+\_\+generation\+::hsdf\+\_\+to\+\_\+vhdl}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
@@ -616,5 +629,5 @@ Definition at line 24 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 
 
 
-Definition at line 25 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
+Definition at line 4 of file hsdf\+\_\+to\+\_\+vhdl.\+py.
 

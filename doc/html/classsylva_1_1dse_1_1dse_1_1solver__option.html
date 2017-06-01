@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -125,7 +131,7 @@ $(document).ready(function(){initNavTree('classsylva_1_1dse_1_1dse_1_1solver__op
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9dc8c1ee5f29aeabb4b6587974adfbec"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a9dc8c1ee5f29aeabb4b6587974adfbec">__init__</a> (self, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a1cd7045a515dfd0b3d5502da487ef4e5">effort</a>=0, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a4bb3e9d8e2a3e8f95a39f414d0bc19f8">solutions_per_schedule</a>=0, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#afaf7c917b79ce8a22c1b5e3743d95787">time_limit</a>=100000, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a7a53af2287a6078049559a565fbb9e90">dse_engine</a>=<a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html">dse_v1</a>)</td></tr>
+<tr class="memitem:a9dc8c1ee5f29aeabb4b6587974adfbec"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a9dc8c1ee5f29aeabb4b6587974adfbec">__init__</a> (self, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a1cd7045a515dfd0b3d5502da487ef4e5">effort</a>=0, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a4bb3e9d8e2a3e8f95a39f414d0bc19f8">solutions_per_schedule</a>=0, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#afaf7c917b79ce8a22c1b5e3743d95787">time_limit</a>=100000, <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a7a53af2287a6078049559a565fbb9e90">dse_engine</a>=dse_v1)</td></tr>
 <tr class="separator:a9dc8c1ee5f29aeabb4b6587974adfbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -141,7 +147,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00052">52</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00055">55</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9dc8c1ee5f29aeabb4b6587974adfbec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dc8c1ee5f29aeabb4b6587974adfbec">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -177,7 +183,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dse_engine</em> = <code><a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html">dse_v1</a></code>&#160;</td>
+          <td class="paramname"><em>dse_engine</em> = <code>dse_v1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,8 +193,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00058">58</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    dse_engine = dse_v1) :</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    self.effort = effort</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    self.solutions_per_schedule = solutions_per_schedule</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    self.time_limit = time_limit</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    self.dse_engine = dse_engine</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00061">61</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                 dse_engine=dse_v1):</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        self.effort = effort</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        self.solutions_per_schedule = solutions_per_schedule</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        self.time_limit = time_limit</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        self.dse_engine = dse_engine</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -204,7 +210,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00063">63</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00066">66</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 
 </div>
 </div>
@@ -220,7 +226,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00060">60</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00063">63</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 
 </div>
 </div>
@@ -236,7 +242,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00061">61</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00064">64</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 
 </div>
 </div>
@@ -252,7 +258,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00062">62</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dse_8py_source.html#l00065">65</a> of file <a class="el" href="dse_8py_source.html">dse.py</a>.</p>
 
 </div>
 </div>

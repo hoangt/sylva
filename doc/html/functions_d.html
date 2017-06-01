@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -117,15 +123,21 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>data_token_type
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#ac0ca6b47887a32c69c66564f683adf2b">sylva.base.sdf.Port</a>
+</li>
 <li>db
 : <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#a51d125ec34729ef82c7ab89ca2f9ee36">sylva.code_generation.floorplanner.floorplanner</a>
-, <a class="el" href="classsylva_1_1dse_1_1dse__engine__v1_1_1dse__v1.html#a101aec57bb8b85a9b4ecc57f590b93da">sylva.dse.dse_engine_v1.dse_v1</a>
+, <a class="el" href="classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html#a1cf7c2d64fd5e943afa03c073b9db70d">sylva.dse.dse_engine.DSEEngine</a>
 </li>
 <li>default_state
 : <a class="el" href="classsylva_1_1glic_1_1glic_1_1control.html#a2ccde55faf999d2c91c456eaac9bdee3">sylva.glic.glic.control</a>
 </li>
 <li>default_state_index
 : <a class="el" href="classsylva_1_1glic_1_1glic_1_1control.html#a7c5053b405b4811c446caa027cd29d7e">sylva.glic.glic.control</a>
+</li>
+<li>default_style
+: <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_s_v_g.html#ab3adb0b4627d8e6984b8bc5e4e2a4ce6">sylva.base.sylva_base.SYLVASVG</a>
 </li>
 <li>deserialize()
 : <a class="el" href="classsylva_1_1code__generation_1_1sylva__fimp__lib_1_1template.html#ac648764b728d04c28165f82f882b8368">sylva.code_generation.sylva_fimp_lib.template</a>
@@ -137,16 +149,13 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a0e93fa247aad3cacd2cf9163a06424d7">sylva.misc.exec.SYLVA</a>
 </li>
 <li>dest_actor
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#ad7b20c67c35c7961c81beae1694a7b73">sylva.base.sdf.edge</a>
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_edge.html#aaf76b434868a8237cd832dbd0a3a20f1">sylva.base.sdf.Edge</a>
 </li>
 <li>dest_port
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1edge.html#a29deafaf7b33e20437193990c8cef360">sylva.base.sdf.edge</a>
+: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_edge.html#a9c5834c5e8234311f49654ced9c43424">sylva.base.sdf.Edge</a>
 </li>
 <li>destination
 : <a class="el" href="classsylva_1_1glic_1_1glic_1_1edge.html#acf42bd33991b904735939bb747c11837">sylva.glic.glic.edge</a>
-</li>
-<li>dict_object()
-: <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a15a6d8d321b101e2247cad4cd14d5623">sylva.base.sdf.Port</a>
 </li>
 <li>distance
 : <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html#a24339289e4339174903ce5f41594c95d">sylva.code_generation.floorplanner.floorplanner</a>
@@ -155,9 +164,11 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="classsylva_1_1dse_1_1dse_1_1solver__option.html#a7a53af2287a6078049559a565fbb9e90">sylva.dse.dse.solver_option</a>
 , <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#ac88cb1a25265462e3a779e86d0d00cfe">sylva.misc.exec.SYLVA</a>
 </li>
+<li>dtype
+: <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_port.html#a442668943cd208f89f54bb6613b4f514">sylva.base.sylva_base.Port</a>
+</li>
 <li>dump()
-: <a class="el" href="classsylva_1_1base_1_1cgra_1_1cgra.html#a98e40701c2779ebe63f1669a4e68ed80">sylva.base.cgra.cgra</a>
-, <a class="el" href="classsylva_1_1base_1_1fimp_1_1fimp__lib.html#a7a764d2bf9bd95c0ce1de986ddf42352">sylva.base.fimp.fimp_lib</a>
+: <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e">sylva.base.sylva_base.SYLVABase</a>
 , <a class="el" href="classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a069be4000eb357f5b2088f408ded6ef0">sylva.misc.exec.SYLVA</a>
 </li>
 </ul>

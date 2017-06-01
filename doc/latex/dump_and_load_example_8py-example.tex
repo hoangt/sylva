@@ -1,0 +1,29 @@
+\hypertarget{dump_and_load_example_8py-example}{}\section{dump\+\_\+and\+\_\+load\+\_\+example.\+py}
+
+\begin{DoxyCodeInclude}
+1 
+6 
+7 
+8 \textcolor{keyword}{from} \hyperlink{namespacesylva_1_1base_1_1sdf}{sylva.base.sdf} \textcolor{keyword}{import} DataTokenType
+9 \textcolor{comment}{# DataTokenType is inherented from SYLVABase}
+10 
+11 \textcolor{comment}{# Create a new DataTokenType object}
+12 int32 = DataTokenType(name=\textcolor{stringliteral}{'int32'}, size=32)
+13 
+14 \textcolor{comment}{# Convert DataTokenType object to dictionary object}
+15 dict\_object = dict(int32)
+16 
+17 \textcolor{comment}{# check the content of `dict\_object`}
+18 print(dict\_object)
+19 
+20 \textcolor{comment}{# Deserialize a DataTokenType object from the created dictionary object}
+21 another\_type = DataTokenType(**dict\_object)
+22 
+23 \textcolor{comment}{# check the content of the generated DataTokenType object}
+24 print(another\_type)
+25 
+26 \textcolor{comment}{# Output should be:}
+27 \{\textcolor{stringliteral}{'name'}: \textcolor{stringliteral}{'int32'}, \textcolor{stringliteral}{'size'}: 32, \textcolor{stringliteral}{'\_class'}: \textcolor{stringliteral}{'DataTokenType'}\}
+28 \{\textcolor{stringliteral}{'\_class'}: \textcolor{stringliteral}{'DataTokenType'}, \textcolor{stringliteral}{'name'}: \textcolor{stringliteral}{'int32'}, \textcolor{stringliteral}{'size'}: 32\}
+\end{DoxyCodeInclude}
+ 

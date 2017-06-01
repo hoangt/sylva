@@ -1,0 +1,87 @@
+\hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test}{}\section{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Test Class Reference}
+\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test}\index{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Test@{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Test}}
+
+
+Class for S\+DF actor.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test_a5e38db786aebd04221fcaa2ab56a241d}{check\+\_\+reloaded} (obj, clean\+\_\+store=False)
+\begin{DoxyCompactList}\small\item\em Check if a reloaded object is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for S\+DF actor. 
+
+
+\begin{DoxyImage}
+\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{dot_SDFG_example}
+\doxyfigcaption{\mbox{[}\char`\"{}\+S\+D\+F\+G\char`\"{}\mbox{]}}
+\end{DoxyImage}
+ The name of the Actor is its function name, e.\+g {\ttfamily a}, {\ttfamily b}. The index of the Actor is the unique integer identifier of the actor in an S\+D\+FG or H\+S\+D\+FG. All the data source actors of one Actor object will have lower indexes than that Actor object. e.\+g {\ttfamily a.\+index = 0}, {\ttfamily d.\+index = 1}, {\ttfamily b.\+index = 2}, {\ttfamily c.\+index = 3} Class for test S\+Y\+L\+VA project. 
+
+Definition at line 694 of file sylva\+\_\+base.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test_a5e38db786aebd04221fcaa2ab56a241d}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_test_a5e38db786aebd04221fcaa2ab56a241d}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Test@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Test}!check\+\_\+reloaded@{check\+\_\+reloaded}}
+\index{check\+\_\+reloaded@{check\+\_\+reloaded}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Test@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+Test}}
+\subsubsection{\texorpdfstring{check\+\_\+reloaded()}{check\_reloaded()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+Test.\+check\+\_\+reloaded (\begin{DoxyParamCaption}\item[{}]{obj,  }\item[{}]{clean\+\_\+store = {\ttfamily False} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a reloaded object is correct. 
+
+
+\begin{DoxyEnumerate}
+\item dump object
+\item load object from the dump file.
+\item check if object == loaded object.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object \\
+\hline
+{\em clean\+\_\+store} & flag for clean intermediate result True = clean, False = do not clean \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 709 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+709     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1examples_1_1cgra__test_a880e21c8ab7a79e7bb6d726fd3f8a584}{check\_reloaded}(obj, clean\_store=False):
+710         \textcolor{keywordflow}{if} isinstance(obj, type):
+711             obj = obj()
+712         obj.dump()
+713         loaded\_obj = obj.\_\_class\_\_.load()
+714         \textcolor{keywordflow}{if} clean\_store:
+715             obj.\_\_class\_\_.clean\_store()
+716         print(obj)
+717         print(loaded\_obj)
+718         \textcolor{comment}{# assert(dict(obj) == dict(loaded\_obj))}
+719         print(f\textcolor{stringliteral}{'Test \{obj.\_\_name\_\_\} passed.'})
+720 
+721 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sylva__base_8py}{sylva\+\_\+base.\+py}\end{DoxyCompactItemize}

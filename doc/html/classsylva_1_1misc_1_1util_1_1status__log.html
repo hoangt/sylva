@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -151,7 +157,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00031">31</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00033">33</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7c946f90680f9a4460404cf7c64f126"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7c946f90680f9a4460404cf7c64f126">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -185,8 +191,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00033">33</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">def </span>__init__(self, print_status = False, show_time_stamp = False) :</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    self.log = []</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    self.status = []</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    self.print_status = print_status</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    self.show_time_stamp = show_time_stamp</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00035">35</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">def </span>__init__(self, print_status=False, show_time_stamp=False):</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        self.log = []</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        self.status = []</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        self.print_status = print_status</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        self.show_time_stamp = show_time_stamp</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -216,10 +222,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00052">52</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00054">54</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8py_source.html#l00036">sylva.misc.util.status_log.status</a>, and <a class="el" href="util_8py_source.html#l00049">sylva.misc.util.status_log.time_stamp()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">def </span>__add__(self, msg) :</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    self.status.append((self.time_stamp(), msg))</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> self</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div></div><!-- fragment -->
+<p class="reference">References <a class="el" href="util_8py_source.html#l00038">sylva.misc.util.status_log.status</a>, and <a class="el" href="util_8py_source.html#l00051">sylva.misc.util.status_log.time_stamp()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">def </span>__add__(self, msg):</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        self.status.append((self.time_stamp(), msg))</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> self</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ab13cd7b4f04bc397105042ebfb34cfaa"></a>
@@ -248,10 +254,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00056">56</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00058">58</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8py_source.html#l00036">sylva.misc.util.status_log.status</a>, and <a class="el" href="util_8py_source.html#l00049">sylva.misc.util.status_log.time_stamp()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">def </span>__iadd__(self, msg) :</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    self.status.append((self.time_stamp(), msg))</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> self</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div></div><!-- fragment -->
+<p class="reference">References <a class="el" href="util_8py_source.html#l00038">sylva.misc.util.status_log.status</a>, and <a class="el" href="util_8py_source.html#l00051">sylva.misc.util.status_log.time_stamp()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">def </span>__iadd__(self, msg):</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        self.status.append((self.time_stamp(), msg))</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> self</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4e8a754367e04626ca986457b1e5c770"></a>
@@ -270,10 +276,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00049">49</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00051">51</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00052">sylva.misc.util.status_log.__add__()</a>, and <a class="el" href="util_8py_source.html#l00056">sylva.misc.util.status_log.__iadd__()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">def </span>time_stamp(self) :</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> time.strftime(<span class="stringliteral">&quot;[%a, %d %b %Y %H:%M:%S] &quot;</span>, time.localtime())</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div></div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00054">sylva.misc.util.status_log.__add__()</a>, and <a class="el" href="util_8py_source.html#l00058">sylva.misc.util.status_log.__iadd__()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">def </span>time_stamp(self):</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> time.strftime(<span class="stringliteral">&quot;[%a, %d %b %Y %H:%M:%S] &quot;</span>, time.localtime())</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a285cc969af6cbc0e41a20e38db9a6196"></a>
@@ -292,10 +298,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00040">40</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00042">42</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8py_source.html#l00035">sylva.misc.util.status_log.log</a>, <a class="el" href="exec_8py_source.html#l00094">sylva.misc.exec.SYLVA.log</a>, <a class="el" href="floorplanner_8py_source.html#l00191">sylva.code_generation.floorplanner.floorplanner.log</a>, <a class="el" href="util_8py_source.html#l00037">sylva.misc.util.status_log.print_status</a>, <a class="el" href="util_8py_source.html#l00038">sylva.misc.util.status_log.show_time_stamp</a>, and <a class="el" href="util_8py_source.html#l00036">sylva.misc.util.status_log.status</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">def </span>update(self) :</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> self.print_status :</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">if</span> self.show_time_stamp :</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        print(<span class="stringliteral">&#39;\n&#39;</span>.join([ s[0] + s[1] <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.status]))</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">else</span> :</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        print(<span class="stringliteral">&#39;\n&#39;</span>.join([s[1] <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.status]))</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    self.log += self.status</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    self.status = []</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div></div><!-- fragment -->
+<p class="reference">References <a class="el" href="util_8py_source.html#l00037">sylva.misc.util.status_log.log</a>, <a class="el" href="exec_8py_source.html#l00094">sylva.misc.exec.SYLVA.log</a>, <a class="el" href="floorplanner_8py_source.html#l00191">sylva.code_generation.floorplanner.floorplanner.log</a>, <a class="el" href="util_8py_source.html#l00039">sylva.misc.util.status_log.print_status</a>, <a class="el" href="util_8py_source.html#l00040">sylva.misc.util.status_log.show_time_stamp</a>, and <a class="el" href="util_8py_source.html#l00038">sylva.misc.util.status_log.status</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">def </span>update(self):</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> self.print_status:</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> self.show_time_stamp:</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                print(<span class="stringliteral">&#39;\n&#39;</span>.join([s[0] + s[1] <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.status]))</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">else</span>:</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                print(<span class="stringliteral">&#39;\n&#39;</span>.join([s[1] <span class="keywordflow">for</span> s <span class="keywordflow">in</span> self.status]))</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        self.log += self.status</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        self.status = []</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8785c236977e889558120ddd31d9b2e6"></a>
@@ -324,10 +330,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00060">60</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00062">62</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8py_source.html#l00035">sylva.misc.util.status_log.log</a>, <a class="el" href="exec_8py_source.html#l00094">sylva.misc.exec.SYLVA.log</a>, and <a class="el" href="floorplanner_8py_source.html#l00191">sylva.code_generation.floorplanner.floorplanner.log</a>.</p>
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">def </span>write_to_file(self, name = &#39;log&#39;) :</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    with open(name, <span class="stringliteral">&#39;w+&#39;</span>) <span class="keyword">as</span> fp :</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">for</span> l <span class="keywordflow">in</span> self.log :</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        fp.write(l[0] + l[1] + <span class="stringliteral">&#39;\n&#39;</span>)</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div></div><!-- fragment -->
+<p class="reference">References <a class="el" href="util_8py_source.html#l00037">sylva.misc.util.status_log.log</a>, <a class="el" href="exec_8py_source.html#l00094">sylva.misc.exec.SYLVA.log</a>, and <a class="el" href="floorplanner_8py_source.html#l00191">sylva.code_generation.floorplanner.floorplanner.log</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">def </span>write_to_file(self, name=&#39;log&#39;):</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        with open(name, <span class="stringliteral">&#39;w+&#39;</span>) <span class="keyword">as</span> fp:</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">for</span> l <span class="keywordflow">in</span> self.log:</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                fp.write(l[0] + l[1] + <span class="stringliteral">&#39;\n&#39;</span>)</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -343,9 +349,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00035">35</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00037">37</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00040">sylva.misc.util.status_log.update()</a>, and <a class="el" href="util_8py_source.html#l00060">sylva.misc.util.status_log.write_to_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00042">sylva.misc.util.status_log.update()</a>, and <a class="el" href="util_8py_source.html#l00062">sylva.misc.util.status_log.write_to_file()</a>.</p>
 
 </div>
 </div>
@@ -361,9 +367,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00037">37</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00039">39</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00040">sylva.misc.util.status_log.update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00042">sylva.misc.util.status_log.update()</a>.</p>
 
 </div>
 </div>
@@ -379,9 +385,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00038">38</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00040">40</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00040">sylva.misc.util.status_log.update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00042">sylva.misc.util.status_log.update()</a>.</p>
 
 </div>
 </div>
@@ -397,9 +403,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00036">36</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8py_source.html#l00038">38</a> of file <a class="el" href="util_8py_source.html">util.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00052">sylva.misc.util.status_log.__add__()</a>, <a class="el" href="util_8py_source.html#l00056">sylva.misc.util.status_log.__iadd__()</a>, and <a class="el" href="util_8py_source.html#l00040">sylva.misc.util.status_log.update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="util_8py_source.html#l00054">sylva.misc.util.status_log.__add__()</a>, <a class="el" href="util_8py_source.html#l00058">sylva.misc.util.status_log.__iadd__()</a>, and <a class="el" href="util_8py_source.html#l00042">sylva.misc.util.status_log.update()</a>.</p>
 
 </div>
 </div>

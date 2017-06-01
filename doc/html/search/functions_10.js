@@ -7,5 +7,6 @@ var searchData=
   ['read_5fvhdl',['read_vhdl',['../namespacesylva_1_1code__generation_1_1vhdl__interface__parser.html#afc25f8fd1bfc69960af11938f1e9b305',1,'sylva::code_generation::vhdl_interface_parser']]],
   ['record_5fport',['record_port',['../namespacesylva_1_1frontend_1_1mdl__reader.html#a5c3d81eb45232a9875a247ce76c4cdc9',1,'sylva::frontend::mdl_reader']]],
   ['reset_5fcommand',['reset_command',['../namespacesylva_1_1misc_1_1exec.html#a670ec00a77a111ff274f7d3dc3989966',1,'sylva::misc::exec']]],
+  ['reset_5findex',['reset_index',['../classsylva_1_1base_1_1sdf_1_1_actor.html#a944374756e18d763022664b8bc26d77f',1,'sylva::base::sdf::Actor']]],
   ['right',['right',['../classsylva_1_1misc_1_1plot_1_1rectangle.html#a50bdb9a7a95b6e03a66ce8031649ff9f',1,'sylva::misc::plot::rectangle']]]
 ];

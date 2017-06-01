@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -116,52 +122,94 @@ $(document).ready(function(){initNavTree('classsylva_1_1base_1_1sylva__base_1_1_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sylva.base.sylva_base.SYLVABase Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The base object for SYLVA project All objects are inherented from this object.  
+<p>The base object for SYLVA project.  
  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for sylva.base.sylva_base.SYLVABase:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.png" usemap="#sylva.base.sylva_5Fbase.SYLVABase_map" alt=""/>
-  <map id="sylva.base.sylva_5Fbase.SYLVABase_map" name="sylva.base.sylva_5Fbase.SYLVABase_map">
-<area href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html" title="Class for data token type. " alt="sylva.base.sdf.DataTokenType" shape="rect" coords="0,112,215,136"/>
-<area href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. " alt="sylva.base.sdf.Port" shape="rect" coords="225,112,440,136"/>
+<div class="center"><img src="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base__inherit__graph.png" border="0" usemap="#sylva_8base_8sylva__base_8_s_y_l_v_a_base_inherit__map" alt="Inheritance graph"/></div>
+<map name="sylva_8base_8sylva__base_8_s_y_l_v_a_base_inherit__map" id="sylva_8base_8sylva__base_8_s_y_l_v_a_base_inherit__map">
+<area shape="rect" id="node4" href="classsylva_1_1base_1_1cgra_1_1_c_g_r_a.html" title="Class for CGRA. " alt="" coords="419,5,572,32"/>
+<area shape="rect" id="node5" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost.html" title="Class for FIMP cost. " alt="" coords="409,56,582,83"/>
+<area shape="rect" id="node6" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance.html" title="Class for FIMP instace. " alt="" coords="398,107,593,133"/>
+<area shape="rect" id="node7" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_library.html" title="Class for fimp library. " alt="" coords="403,157,588,184"/>
+<area shape="rect" id="node8" href="classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set.html" title="Class for FIMPSet. " alt="" coords="412,208,579,235"/>
+<area shape="rect" id="node9" href="classsylva_1_1base_1_1sdf_1_1_actor.html" title="Class for SDF actor. " alt="" coords="426,259,565,285"/>
+<area shape="rect" id="node10" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html" title="Class for data token type. " alt="" coords="396,309,595,336"/>
+<area shape="rect" id="node11" href="classsylva_1_1base_1_1sdf_1_1_d_f_g.html" title="Class for Data Flow Graph. " alt="" coords="428,360,563,387"/>
+<area shape="rect" id="node14" href="classsylva_1_1base_1_1sdf_1_1_edge.html" title="Class for communication edge. " alt="" coords="426,411,565,437"/>
+<area shape="rect" id="node15" href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. " alt="" coords="429,461,561,488"/>
+<area shape="rect" id="node16" href="classsylva_1_1base_1_1sylva__base_1_1_data_token_type.html" title="Class for data token type. " alt="" coords="404,513,587,554"/>
+<area shape="rect" id="node17" href="classsylva_1_1base_1_1sylva__base_1_1_port.html" title="Class for port. " alt="" coords="406,579,585,605"/>
+<area shape="rect" id="node18" href="classsylva_1_1dse_1_1dse__engine_1_1_d_s_e_engine.html" title="Class for DSEEngine. " alt="" coords="387,629,604,656"/>
+<area shape="rect" id="node12" href="classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g.html" title="Class for HSDFG. " alt="" coords="652,360,805,387"/>
+<area shape="rect" id="node13" href="classsylva_1_1base_1_1sdf_1_1_s_d_f_g.html" title="Class for SDFG Graph. " alt="" coords="853,360,997,387"/>
 </map>
- </div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5692ae87ad4953fdfe317953fcf530f8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5692ae87ad4953fdfe317953fcf530f8">__init__</a> (self, dict_object)</td></tr>
-<tr class="separator:a5692ae87ad4953fdfe317953fcf530f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc04df3b843a1deb6e1ae13f8425783"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8dc04df3b843a1deb6e1ae13f8425783">__iter__</a> (self)</td></tr>
-<tr class="memdesc:a8dc04df3b843a1deb6e1ae13f8425783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator to be used for converting the object to dictionary.  <a href="#a8dc04df3b843a1deb6e1ae13f8425783">More...</a><br /></td></tr>
-<tr class="separator:a8dc04df3b843a1deb6e1ae13f8425783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4acd68307f4b2bef6082b86f3ff6ce3a">load_from_dict</a> (cls, dict_object)</td></tr>
-<tr class="memdesc:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an object from a dictionary object.  <a href="#a4acd68307f4b2bef6082b86f3ff6ce3a">More...</a><br /></td></tr>
-<tr class="separator:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3747bc0503b669cbc05e7419adb454"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#adb3747bc0503b669cbc05e7419adb454">__init__</a> (self, args)</td></tr>
+<tr class="memdesc:adb3747bc0503b669cbc05e7419adb454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object.  <a href="#adb3747bc0503b669cbc05e7419adb454">More...</a><br /></td></tr>
+<tr class="separator:adb3747bc0503b669cbc05e7419adb454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68e05257afb40aa828aa9e2a73b267f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af68e05257afb40aa828aa9e2a73b267f">load</a> (cls, filepath)</td></tr>
+<tr class="memdesc:af68e05257afb40aa828aa9e2a73b267f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load one object from a file (.json format)  <a href="#af68e05257afb40aa828aa9e2a73b267f">More...</a><br /></td></tr>
+<tr class="separator:af68e05257afb40aa828aa9e2a73b267f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196978bd73392249f19f817bc1033d8e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e">dump</a> (self, filepath=None)</td></tr>
+<tr class="memdesc:a196978bd73392249f19f817bc1033d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">dump one object to a file (.json format)  <a href="#a196978bd73392249f19f817bc1033d8e">More...</a><br /></td></tr>
+<tr class="separator:a196978bd73392249f19f817bc1033d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073105841fe00ad333bf679a24fa24d9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a073105841fe00ad333bf679a24fa24d9">__setattr__</a> (self, attr_name, attr_value)</td></tr>
+<tr class="memdesc:a073105841fe00ad333bf679a24fa24d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override python build-in set attribute method.  <a href="#a073105841fe00ad333bf679a24fa24d9">More...</a><br /></td></tr>
+<tr class="separator:a073105841fe00ad333bf679a24fa24d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30165f6499a5efacb683c2194f53a73"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af30165f6499a5efacb683c2194f53a73">__getattr__</a> (self, attr_name)</td></tr>
+<tr class="memdesc:af30165f6499a5efacb683c2194f53a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override python build-in get attribute method.  <a href="#af30165f6499a5efacb683c2194f53a73">More...</a><br /></td></tr>
+<tr class="separator:af30165f6499a5efacb683c2194f53a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1ed8e83c61ea8a6035b5e4460989f3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a6c1ed8e83c61ea8a6035b5e4460989f3">__str__</a> (self)</td></tr>
 <tr class="memdesc:a6c1ed8e83c61ea8a6035b5e4460989f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the object.  <a href="#a6c1ed8e83c61ea8a6035b5e4460989f3">More...</a><br /></td></tr>
 <tr class="separator:a6c1ed8e83c61ea8a6035b5e4460989f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bd08c41ab09c380433d0de82fb98860"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5bd08c41ab09c380433d0de82fb98860">__repr__</a> (self)</td></tr>
-<tr class="memdesc:a5bd08c41ab09c380433d0de82fb98860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the object.  <a href="#a5bd08c41ab09c380433d0de82fb98860">More...</a><br /></td></tr>
-<tr class="separator:a5bd08c41ab09c380433d0de82fb98860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1597b4594cb73e0fa2597742239660f5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a1597b4594cb73e0fa2597742239660f5">clone</a> (self)</td></tr>
-<tr class="memdesc:a1597b4594cb73e0fa2597742239660f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the object with same properties than original.  <a href="#a1597b4594cb73e0fa2597742239660f5">More...</a><br /></td></tr>
-<tr class="separator:a1597b4594cb73e0fa2597742239660f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d94af12d912b69a5c8ada74debce019"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a> (self)</td></tr>
+<tr class="memdesc:a8d94af12d912b69a5c8ada74debce019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the storage form of this object.  <a href="#a8d94af12d912b69a5c8ada74debce019">More...</a><br /></td></tr>
+<tr class="separator:a8d94af12d912b69a5c8ada74debce019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b28a6df0e18ab256c21493b49a64b22"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4b28a6df0e18ab256c21493b49a64b22">clean_store</a> (cls, filepath=None)</td></tr>
+<tr class="memdesc:a4b28a6df0e18ab256c21493b49a64b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean store file of this class.  <a href="#a4b28a6df0e18ab256c21493b49a64b22">More...</a><br /></td></tr>
+<tr class="separator:a4b28a6df0e18ab256c21493b49a64b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a19a76f0bddbefbe0687234c9da15c8fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a19a76f0bddbefbe0687234c9da15c8fc">storage_form</a> = property(<a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a>)</td></tr>
+<tr class="memdesc:a19a76f0bddbefbe0687234c9da15c8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dict object as the storage form of this object.  <a href="#a19a76f0bddbefbe0687234c9da15c8fc">More...</a><br /></td></tr>
+<tr class="separator:a19a76f0bddbefbe0687234c9da15c8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7225be10455bba307832200d18167bd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a7225be10455bba307832200d18167bd4">_class</a></td></tr>
+<tr class="memdesc:a7225be10455bba307832200d18167bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the class, e.g <code>Actor</code>  <a href="#a7225be10455bba307832200d18167bd4">More...</a><br /></td></tr>
+<tr class="separator:a7225be10455bba307832200d18167bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756882c2570aaef7562ad5903717328c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a756882c2570aaef7562ad5903717328c">_excluded_attributes</a></td></tr>
+<tr class="memdesc:a756882c2570aaef7562ad5903717328c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the attributes to be excluded when storing.  <a href="#a756882c2570aaef7562ad5903717328c">More...</a><br /></td></tr>
+<tr class="separator:a756882c2570aaef7562ad5903717328c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The base object for SYLVA project All objects are inherented from this object. </p>
+<div class="textblock"><p>The base object for SYLVA project. </p>
+<p>All objects are inherented from this object.</p>
+<ul>
+<li>Use <code>dict(obj)</code> to convert a <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html" title="The base object for SYLVA project. ">SYLVABase</a> object to dictionary object for serialization (<a href="https://en.wikipedia.org/wiki/Serialization">https://en.wikipedia.org/wiki/Serialization</a>).</li>
+<li>For de-serialization, use <code>**</code> before the dictioary object.</li>
+</ul>
+<p>Check <a class="el" href="dump_and_load_8py-example.html">dump_and_load.py</a> for example. </p>
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00016">16</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00032">32</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5692ae87ad4953fdfe317953fcf530f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5692ae87ad4953fdfe317953fcf530f8">&#9670;&nbsp;</a></span>__init__()</h2>
+<a id="adb3747bc0503b669cbc05e7419adb454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3747bc0503b669cbc05e7419adb454">&#9670;&nbsp;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +224,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dict_object</em>&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,72 +234,108 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00018">18</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">def </span>__init__(self, dict_object):</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> key, value <span class="keywordflow">in</span> dict_object.items():</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            setattr(self, key, value)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div></div><!-- fragment -->
+<p>Constructs the object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>The object </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00051">51</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">def </span>__init__(self, *args):</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        dict.__init__(self, *args)</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        self._class = self.__class__.__name__</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        self._excluded_attributes = []</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8dc04df3b843a1deb6e1ae13f8425783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc04df3b843a1deb6e1ae13f8425783">&#9670;&nbsp;</a></span>__iter__()</h2>
+<a id="af30165f6499a5efacb683c2194f53a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30165f6499a5efacb683c2194f53a73">&#9670;&nbsp;</a></span>__getattr__()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.__iter__ </td>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.__getattr__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>attr_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create an iterator to be used for converting the object to dictionary. </p>
-<p>When dict(some_obj) is called, it will return a dictionary object. Each value is obtaiend by invoking the created iterator in this method.</p>
+<p>Override python build-in get attribute method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
+    <tr><td class="paramname">self</td><td>The object </td></tr>
+    <tr><td class="paramname">attr_name</td><td>The attribute name</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a iterator </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>value of the attribute </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00033">33</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">def </span>__iter__(self):</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> key, value <span class="keywordflow">in</span> self.__dict__.items():</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> isinstance(value, SYLVABase):</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">yield</span> (key, dict(value))</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">else</span>:</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">yield</span> (key, value)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00122">122</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="tcl__parser_8py_source.html#l00031">sylva.misc.tcl_parser.Keywords.__getitem__()</a>, and <a class="el" href="exec_8py_source.html#l00062">sylva.misc.exec.DictObject.__getitem__()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">def </span>__getattr__(self, attr_name):</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> self.get(attr_name, <span class="keywordtype">None</span>)</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a5bd08c41ab09c380433d0de82fb98860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd08c41ab09c380433d0de82fb98860">&#9670;&nbsp;</a></span>__repr__()</h2>
+<a id="a073105841fe00ad333bf679a24fa24d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a073105841fe00ad333bf679a24fa24d9">&#9670;&nbsp;</a></span>__setattr__()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.__repr__ </td>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.__setattr__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>attr_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>attr_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a string representation of the object. </p>
-<p>This method will be invoked some time instead of self.__str__().</p>
+<p>Override python build-in set attribute method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
+    <tr><td class="paramname">self</td><td>The object </td></tr>
+    <tr><td class="paramname">attr_name</td><td>The attribute name </td></tr>
+    <tr><td class="paramname">attr_value</td><td>The attribute value </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00073">73</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00111">111</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
 
-<p class="reference">References <a class="el" href="sdf__schedule_8py_source.html#l00036">sylva.base.sdf_schedule.schedule.__str__()</a>, <a class="el" href="sylva__base_8py_source.html#l00060">sylva.base.sylva_base.SYLVABase.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00070">sylva.base.sdf.DataTokenType.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00143">sylva.base.sdf.Port.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00196">sylva.base.sdf.edge.__str__()</a>, and <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">def </span><a class="code" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a84f24b1e40f5425e9bb40ab45ccbd10f">__repr__</a>(self):</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> self.__str__()</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="ttc" id="namespacesylva_1_1code__generation_1_1floorplanner_html_a84f24b1e40f5425e9bb40ab45ccbd10f"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1floorplanner.html#a84f24b1e40f5425e9bb40ab45ccbd10f">sylva.code_generation.floorplanner.__repr__</a></div><div class="ttdeci">__repr__</div><div class="ttdef"><b>Definition:</b> <a href="floorplanner_8py_source.html#l00345">floorplanner.py:345</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="tcl__parser_8py_source.html#l00024">sylva.misc.tcl_parser.Keywords.__init__()</a>, <a class="el" href="exec_8py_source.html#l00055">sylva.misc.exec.DictObject.__init__()</a>, and <a class="el" href="exec_8py_source.html#l00588">sylva.misc.exec.SYLVA.execute_define_constraint_and_optimization()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">def </span>__setattr__(self, attr_name, attr_value):</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        self[attr_name] = attr_value</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a6c1ed8e83c61ea8a6035b5e4460989f3"></a>
@@ -279,49 +363,20 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00060">60</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00132">132</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00073">sylva.base.sylva_base.SYLVABase.__repr__()</a>, and <a class="el" href="air_8py_source.html#l00100">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">def </span>__str__(self):</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        msg = <span class="stringliteral">&#39;str representation of {self.__class__} is not implemented yet.&#39;</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">raise</span> NotImplementedError(msg)</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div></div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="air_8py_source.html#l00100">sylva.code_generation.air.BassObject.__repr__()</a>, and <a class="el" href="sylva__base_8py_source.html#l00854">sylva.base.sylva_base.SYLVASVG.__repr__()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">def </span>__str__(self):</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> str(self.store)</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a1597b4594cb73e0fa2597742239660f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1597b4594cb73e0fa2597742239660f5">&#9670;&nbsp;</a></span>clone()</h2>
+<a id="a4b28a6df0e18ab256c21493b49a64b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b28a6df0e18ab256c21493b49a64b22">&#9670;&nbsp;</a></span>clean_store()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.clone </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a new instance of the object with same properties than original. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Copy of this object. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00084">84</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">def </span>clone(self):</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        msg = <span class="stringliteral">&#39;clone of {self.__class__} is not implemented yet.&#39;</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">raise</span> NotImplementedError(msg)</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><!-- fragment -->
-</div>
-</div>
-<a id="a4acd68307f4b2bef6082b86f3ff6ce3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4acd68307f4b2bef6082b86f3ff6ce3a">&#9670;&nbsp;</a></span>load_from_dict()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.load_from_dict </td>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.clean_store </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>cls</em>, </td>
@@ -330,7 +385,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dict_object</em>&#160;</td>
+          <td class="paramname"><em>filepath</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -340,18 +395,219 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Loads an object from a dictionary object. </p>
+<p>Clean store file of this class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cls</td><td>The cls </td></tr>
-    <tr><td class="paramname">dict_object</td><td>The dictionary object</td></tr>
+    <tr><td class="paramname">cls</td><td>The class </td></tr>
+    <tr><td class="paramname">filepath</td><td>The file path </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html" title="The base object for SYLVA project All objects are inherented from this object. ">SYLVABase</a> object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00049">49</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">def </span>load_from_dict(cls, dict_object):</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        msg = f<span class="stringliteral">&#39;load {cls} from dict is not implemented yet.&#39;</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">raise</span> NotImplementedError(msg)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00162">162</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">def </span>clean_store(cls, filepath=None):</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> filepath <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            filepath = f<span class="stringliteral">&#39;{cls.__name__}_store.json&#39;</span></div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">try</span>:</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            os.remove(filepath)</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">except</span> OSError:</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">pass</span></div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a196978bd73392249f19f817bc1033d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196978bd73392249f19f817bc1033d8e">&#9670;&nbsp;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.dump </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>filepath</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dump one object to a file (.json format) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cls</td><td>The class </td></tr>
+    <tr><td class="paramname">filepath</td><td>The file path</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>object in class cls </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00098">98</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">References <a class="el" href="sylva__base_8py_source.html#l00152">sylva.base.sylva_base.SYLVABase.storage_form</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="exec_8py_source.html#l00501">sylva.misc.exec.SYLVA.execute_dump()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">def </span>dump(self, filepath=None):</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> filepath <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            filepath = f<span class="stringliteral">&#39;{self.__class__.__name__}_store.json&#39;</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        with open(filepath, <span class="stringliteral">&#39;w+&#39;</span>, encoding=<span class="stringliteral">&#39;utf-8&#39;</span>) <span class="keyword">as</span> fp:</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            json.dump(self.storage_form, fp, indent=4)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a8d94af12d912b69a5c8ada74debce019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d94af12d912b69a5c8ada74debce019">&#9670;&nbsp;</a></span>get_storage_form()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.get_storage_form </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the storage form of this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>The object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A dict object as the storage form </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00142">142</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">References <a class="el" href="sylva__base_8py_source.html#l00054">sylva.base.sylva_base.SYLVABase._excluded_attributes</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">def </span>get_storage_form(self):</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">def </span>include(kv):</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">return</span> kv[0] <span class="keywordflow">not</span> <span class="keywordflow">in</span> self._excluded_attributes</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> dict(filter(include, self.items()))</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div></div><!-- fragment -->
+</div>
+</div>
+<a id="af68e05257afb40aa828aa9e2a73b267f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68e05257afb40aa828aa9e2a73b267f">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def sylva.base.sylva_base.SYLVABase.load </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cls</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>filepath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load one object from a file (.json format) </p>
+<p>The return type is based on the _class attribute value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cls</td><td>The class </td></tr>
+    <tr><td class="paramname">filepath</td><td>The file path</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>object in class cls </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00067">67</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="exec_8py_source.html#l00489">sylva.misc.exec.SYLVA.execute_load()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">def </span>load(cls, filepath):</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment"># read json dict from file</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        with open(filepath, <span class="stringliteral">&#39;r&#39;, encoding=&#39;</span>utf-8&#39;) as fp:            json_dict = json.load(fp)</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment"># pop _class attribute from dict</span></div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        cls_name = json_dict.pop(<span class="stringliteral">&#39;_class&#39;</span>, <span class="stringliteral">&#39;SYLVABase&#39;</span>)</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment"># obtain class type from global variables</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cls = globals()[cls_name]</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment"># pop _excluded_attributes from dict</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        _excluded_attributes = json_dict.pop(<span class="stringliteral">&#39;_excluded_attributes&#39;</span>, [])</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment"># construct new object</span></div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        result = cls(**json_dict)</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment"># add _excluded_attributes</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        result._excluded_attributes = _excluded_attributes</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> result</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7225be10455bba307832200d18167bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7225be10455bba307832200d18167bd4">&#9670;&nbsp;</a></span>_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SYLVABase._class</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of the class, e.g <code>Actor</code> </p>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00053">53</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+</div>
+</div>
+<a id="a756882c2570aaef7562ad5903717328c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756882c2570aaef7562ad5903717328c">&#9670;&nbsp;</a></span>_excluded_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SYLVABase._excluded_attributes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of the attributes to be excluded when storing. </p>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00054">54</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00142">sylva.base.sylva_base.SYLVABase.get_storage_form()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a19a76f0bddbefbe0687234c9da15c8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a76f0bddbefbe0687234c9da15c8fc">&#9670;&nbsp;</a></span>storage_form</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SYLVABase.storage_form = property(<a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A dict object as the storage form of this object. </p>
+
+<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00152">152</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00098">sylva.base.sylva_base.SYLVABase.dump()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

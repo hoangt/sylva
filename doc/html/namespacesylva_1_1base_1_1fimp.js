@@ -1,6 +1,7 @@
 var namespacesylva_1_1base_1_1fimp =
 [
-    [ "fimp", "classsylva_1_1base_1_1fimp_1_1fimp.html", "classsylva_1_1base_1_1fimp_1_1fimp" ],
-    [ "fimp_lib", "classsylva_1_1base_1_1fimp_1_1fimp__lib.html", "classsylva_1_1base_1_1fimp_1_1fimp__lib" ],
-    [ "fimp_set", "classsylva_1_1base_1_1fimp_1_1fimp__set.html", "classsylva_1_1base_1_1fimp_1_1fimp__set" ]
+    [ "FIMPCost", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost.html", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost" ],
+    [ "FIMPInstance", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance.html", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_instance" ],
+    [ "FIMPLibrary", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_library.html", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_library" ],
+    [ "FIMPSet", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set.html", "classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set" ]
 ];

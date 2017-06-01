@@ -1,0 +1,419 @@
+\hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost}{}\section{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost Class Reference}
+\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost}\index{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost@{sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost}}
+
+
+Class for F\+I\+MP cost.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ae6a202c864a8f1427483d759878512aa}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afb919056ee51978896f0132907a50933}{function\+\_\+name}=\textquotesingle{}no function name\textquotesingle{}, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a6b12a5e2573490c298eb49479e5c5db3}{fimp\+\_\+type\+\_\+index}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a40224d915dcc08c4d54e9ac3006047b1}{width}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e40cec2324c7d0eb82f511a0925c839}{height}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afba92218e139335948c9dcba3c9aabd4}{area}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a7e0fcf06204dd67fb26243550fa22c68}{energy}=0, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a8e52dbdc89608f7d5b4da0e7538eaa0e}{computation\+\_\+phase}=1, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a334924c4d82dc491fbc97c8ec09058ca}{input\+\_\+phase}=1, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a49cd73cf2ea2a999de46e265c0346f3f}{output\+\_\+phase}=1, \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e3a5e51b56d03f44bf36db9280ca535}{fimp\+\_\+type\+\_\+name}=None, otherkwargs)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afb919056ee51978896f0132907a50933}{function\+\_\+name}
+\begin{DoxyCompactList}\small\item\em The function name of this F\+I\+MP. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a6b12a5e2573490c298eb49479e5c5db3}{fimp\+\_\+type\+\_\+index}
+\begin{DoxyCompactList}\small\item\em integer identifier of the F\+I\+MP\textquotesingle{}s type, e.\+g {\ttfamily 0}, This is used for D\+SE when we want to specify which F\+I\+MP type we are going to use. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e3a5e51b56d03f44bf36db9280ca535}{fimp\+\_\+type\+\_\+name}
+\begin{DoxyCompactList}\small\item\em The name of the current F\+I\+MP type, e.\+g {\ttfamily fimp\+\_\+1} when {\ttfamily fimp\+\_\+type\+\_\+index == 1}. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a40224d915dcc08c4d54e9ac3006047b1}{width}
+\begin{DoxyCompactList}\small\item\em F\+I\+MP width in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently). \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e40cec2324c7d0eb82f511a0925c839}{height}
+\begin{DoxyCompactList}\small\item\em F\+I\+MP height in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently). \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afba92218e139335948c9dcba3c9aabd4}{area}
+\begin{DoxyCompactList}\small\item\em total gate count in A\+S\+IC, total logic element count in F\+P\+GA, total number of C\+G\+RA element in C\+G\+RA. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a7e0fcf06204dd67fb26243550fa22c68}{energy}
+\begin{DoxyCompactList}\small\item\em average energy consumption in nano-\/joule for executing once. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a8e52dbdc89608f7d5b4da0e7538eaa0e}{computation\+\_\+phase}
+\begin{DoxyCompactList}\small\item\em Computation phase in the three-\/phase function execution model. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a334924c4d82dc491fbc97c8ec09058ca}{input\+\_\+phase}
+\begin{DoxyCompactList}\small\item\em Input phase in the three-\/phase function execution model. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a49cd73cf2ea2a999de46e265c0346f3f}{output\+\_\+phase}
+\begin{DoxyCompactList}\small\item\em Output phase in the three-\/phase function execution model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e6de19dbcfa3dee104fd7d469a148eb}{input\+\_\+end\+\_\+time} = property(\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ab5c4e28ac7b7fb3fd3e14a66a564e989}{\+\_\+input\+\_\+end\+\_\+time})
+\begin{DoxyCompactList}\small\item\em Get input end time. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a2f755f827f18025c332335a16607f231}{output\+\_\+start\+\_\+time} = property(\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a162a87e8f45b84a27b8c7e2503539122}{\+\_\+output\+\_\+start\+\_\+time})
+\begin{DoxyCompactList}\small\item\em Get output start time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ab5c4e28ac7b7fb3fd3e14a66a564e989}{\+\_\+input\+\_\+end\+\_\+time} (self)
+\begin{DoxyCompactList}\small\item\em Get input end time. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a162a87e8f45b84a27b8c7e2503539122}{\+\_\+output\+\_\+start\+\_\+time} (self)
+\begin{DoxyCompactList}\small\item\em Get output start time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for F\+I\+MP cost. 
+
+The function name will be provided by the \hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_set}{F\+I\+M\+P\+Set} object 
+
+Definition at line 21 of file fimp.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ae6a202c864a8f1427483d759878512aa}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ae6a202c864a8f1427483d759878512aa}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{function\+\_\+name = {\ttfamily \textquotesingle{}no~function~name\textquotesingle{}},  }\item[{}]{fimp\+\_\+type\+\_\+index = {\ttfamily 0},  }\item[{}]{width = {\ttfamily 0},  }\item[{}]{height = {\ttfamily 0},  }\item[{}]{area = {\ttfamily 0},  }\item[{}]{energy = {\ttfamily 0},  }\item[{}]{computation\+\_\+phase = {\ttfamily 1},  }\item[{}]{input\+\_\+phase = {\ttfamily 1},  }\item[{}]{output\+\_\+phase = {\ttfamily 1},  }\item[{}]{fimp\+\_\+type\+\_\+name = {\ttfamily None},  }\item[{}]{otherkwargs }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em function\+\_\+name} & The function name of this F\+I\+MP.\\
+\hline
+{\em fimp\+\_\+type\+\_\+index} & integer identifier of the F\+I\+MP\textquotesingle{}s type, e.\+g {\ttfamily 0}, This is used for D\+SE when we want to specify which F\+I\+MP type we are going to use.\\
+\hline
+{\em width} & F\+I\+MP width in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently).\\
+\hline
+{\em height} & F\+I\+MP height in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently).\\
+\hline
+{\em area} & total gate count in A\+S\+IC, total logic element count in F\+P\+GA, total number of C\+G\+RA element in C\+G\+RA.\\
+\hline
+{\em energy} & average energy consumption in nano-\/joule for executing once. The energy unit does not matter if all F\+I\+M\+Ps have the same energy unit. \\
+\hline
+{\em computation\+\_\+phase} & Computation phase in the three-\/phase function execution model. In terms of number of clock cycles. \\
+\hline
+{\em input\+\_\+phase} & Input phase in the three-\/phase function execution model. In terms of number of clock cycles. \\
+\hline
+{\em output\+\_\+phase} & Output phase in the three-\/phase function execution model. In terms of number of clock cycles. \\
+\hline
+{\em fimp\+\_\+type\+\_\+name} & The name of the current F\+I\+MP type, e.\+g {\ttfamily fimp\+\_\+1} when {\ttfamily fimp\+\_\+type\+\_\+index == 1}. If not provided it will be {\ttfamily f\textquotesingle{}fimp\+\_\+\{fimp\+\_\+type\+\_\+index\}\textquotesingle{}} \\
+\hline
+{\em otherkwargs} & The other keyword arguments, reserved for future usage \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 95 of file fimp.\+py.
+
+
+\begin{DoxyCode}
+95                  fimp\_type\_name=\textcolor{keywordtype}{None}, **otherkwargs):
+96 
+97         self.function\_name = function\_name
+98 
+99         self.fimp\_type\_index = fimp\_type\_index
+100 
+101         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} fimp\_type\_name:
+102             fimp\_type\_name = f\textcolor{stringliteral}{'fimp\_\{self.fimp\_type\_index\}'}
+103 
+104         self.fimp\_type\_name = fimp\_type\_name
+105 
+106         self.width = width
+107         self.height = height
+108 
+109         \textcolor{keywordflow}{if} width \textcolor{keywordflow}{and} height:
+110             area = width * height
+111 
+112         self.area = area
+113 
+114         self.energy = energy \textcolor{keywordflow}{or} 0
+115 
+116         self.computation\_phase = computation\_phase
+117         self.input\_phase = input\_phase
+118         self.output\_phase = output\_phase
+119 
+120         SYLVABase.\_\_init\_\_(self, **SYLVABase.\_args(locals(), globals()))
+121 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ab5c4e28ac7b7fb3fd3e14a66a564e989}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ab5c4e28ac7b7fb3fd3e14a66a564e989}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!\+\_\+input\+\_\+end\+\_\+time@{\+\_\+input\+\_\+end\+\_\+time}}
+\index{\+\_\+input\+\_\+end\+\_\+time@{\+\_\+input\+\_\+end\+\_\+time}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{\+\_\+input\+\_\+end\+\_\+time()}{\_input\_end\_time()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+input\+\_\+end\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get input end time. 
+
+Based on the current input phase.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input end time related to the start time. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+input\+\_\+phase, and sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+input\+\_\+phase.
+
+
+\begin{DoxyCode}
+131     \textcolor{keyword}{def }\_input\_end\_time(self):
+132         \textcolor{keywordflow}{return} self.input\_phase - 1
+133 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a162a87e8f45b84a27b8c7e2503539122}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a162a87e8f45b84a27b8c7e2503539122}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!\+\_\+output\+\_\+start\+\_\+time@{\+\_\+output\+\_\+start\+\_\+time}}
+\index{\+\_\+output\+\_\+start\+\_\+time@{\+\_\+output\+\_\+start\+\_\+time}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{\+\_\+output\+\_\+start\+\_\+time()}{\_output\_start\_time()}}
+{\footnotesize\ttfamily def sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+output\+\_\+start\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get output start time. 
+
+Based on the current output phase and computation phase.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output start time related to the start time. 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file fimp.\+py.
+
+
+
+References sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+computation\+\_\+phase, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+computation\+\_\+phase, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+output\+\_\+phase, and sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+output\+\_\+phase.
+
+
+\begin{DoxyCode}
+150     \textcolor{keyword}{def }\_output\_start\_time(self):
+151         \textcolor{keywordflow}{return} self.computation\_phase - self.output\_phase + 1
+152 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afba92218e139335948c9dcba3c9aabd4}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afba92218e139335948c9dcba3c9aabd4}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!area@{area}}
+\index{area@{area}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{area}{area}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+area}
+
+
+
+total gate count in A\+S\+IC, total logic element count in F\+P\+GA, total number of C\+G\+RA element in C\+G\+RA. 
+
+
+
+Definition at line 112 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+prepare\+\_\+optimization\+\_\+objective().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a8e52dbdc89608f7d5b4da0e7538eaa0e}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a8e52dbdc89608f7d5b4da0e7538eaa0e}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!computation\+\_\+phase@{computation\+\_\+phase}}
+\index{computation\+\_\+phase@{computation\+\_\+phase}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{computation\+\_\+phase}{computation\_phase}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+computation\+\_\+phase}
+
+
+
+Computation phase in the three-\/phase function execution model. 
+
+In terms of number of clock cycles. 
+
+Definition at line 116 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+output\+\_\+start\+\_\+time().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a7e0fcf06204dd67fb26243550fa22c68}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a7e0fcf06204dd67fb26243550fa22c68}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!energy@{energy}}
+\index{energy@{energy}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{energy}{energy}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+energy}
+
+
+
+average energy consumption in nano-\/joule for executing once. 
+
+The energy unit does not matter if all F\+I\+M\+Ps have the same energy unit. 
+
+Definition at line 114 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+prepare\+\_\+optimization\+\_\+objective().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a6b12a5e2573490c298eb49479e5c5db3}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a6b12a5e2573490c298eb49479e5c5db3}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!fimp\+\_\+type\+\_\+index@{fimp\+\_\+type\+\_\+index}}
+\index{fimp\+\_\+type\+\_\+index@{fimp\+\_\+type\+\_\+index}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{fimp\+\_\+type\+\_\+index}{fimp\_type\_index}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+fimp\+\_\+type\+\_\+index}
+
+
+
+integer identifier of the F\+I\+MP\textquotesingle{}s type, e.\+g {\ttfamily 0}, This is used for D\+SE when we want to specify which F\+I\+MP type we are going to use. 
+
+
+
+Definition at line 99 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e3a5e51b56d03f44bf36db9280ca535}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e3a5e51b56d03f44bf36db9280ca535}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!fimp\+\_\+type\+\_\+name@{fimp\+\_\+type\+\_\+name}}
+\index{fimp\+\_\+type\+\_\+name@{fimp\+\_\+type\+\_\+name}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{fimp\+\_\+type\+\_\+name}{fimp\_type\_name}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+fimp\+\_\+type\+\_\+name}
+
+
+
+The name of the current F\+I\+MP type, e.\+g {\ttfamily fimp\+\_\+1} when {\ttfamily fimp\+\_\+type\+\_\+index == 1}. 
+
+If not provided it will be {\ttfamily f\textquotesingle{}fimp\+\_\+\{fimp\+\_\+type\+\_\+index\}\textquotesingle{}} 
+
+Definition at line 104 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afb919056ee51978896f0132907a50933}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_afb919056ee51978896f0132907a50933}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!function\+\_\+name@{function\+\_\+name}}
+\index{function\+\_\+name@{function\+\_\+name}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{function\+\_\+name}{function\_name}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+function\+\_\+name}
+
+
+
+The function name of this F\+I\+MP. 
+
+
+
+Definition at line 97 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e40cec2324c7d0eb82f511a0925c839}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e40cec2324c7d0eb82f511a0925c839}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!height@{height}}
+\index{height@{height}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height}
+
+
+
+F\+I\+MP height in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently). 
+
+
+
+Definition at line 107 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+center(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+left(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+above\+\_\+of(), and sylva.\+misc.\+plot.\+rectangle.\+right().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a334924c4d82dc491fbc97c8ec09058ca}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a334924c4d82dc491fbc97c8ec09058ca}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!input\+\_\+phase@{input\+\_\+phase}}
+\index{input\+\_\+phase@{input\+\_\+phase}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{input\+\_\+phase}{input\_phase}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+input\+\_\+phase}
+
+
+
+Input phase in the three-\/phase function execution model. 
+
+In terms of number of clock cycles. 
+
+Definition at line 117 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+input\+\_\+end\+\_\+time().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a49cd73cf2ea2a999de46e265c0346f3f}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a49cd73cf2ea2a999de46e265c0346f3f}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!output\+\_\+phase@{output\+\_\+phase}}
+\index{output\+\_\+phase@{output\+\_\+phase}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{output\+\_\+phase}{output\_phase}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+output\+\_\+phase}
+
+
+
+Output phase in the three-\/phase function execution model. 
+
+In terms of number of clock cycles. 
+
+Definition at line 118 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+\_\+output\+\_\+start\+\_\+time().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a40224d915dcc08c4d54e9ac3006047b1}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a40224d915dcc08c4d54e9ac3006047b1}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!width@{width}}
+\index{width@{width}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width}
+
+
+
+F\+I\+MP width in number of C\+G\+RA elements for C\+G\+RA, total gate count in A\+S\+IC (not used by S\+Y\+L\+VA currently), total logic element count in F\+P\+GA (not used by S\+Y\+L\+VA currently). 
+
+
+
+Definition at line 106 of file fimp.\+py.
+
+
+
+Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rectangle.\+center(), sylva.\+misc.\+plot.\+rectangle.\+get\+\_\+patch(), sylva.\+misc.\+plot.\+rectangle.\+pixel\+\_\+map(), sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+left\+\_\+of(), sylva.\+misc.\+plot.\+rectangle.\+right(), and sylva.\+misc.\+plot.\+rectangle.\+top().
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e6de19dbcfa3dee104fd7d469a148eb}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a0e6de19dbcfa3dee104fd7d469a148eb}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!input\+\_\+end\+\_\+time@{input\+\_\+end\+\_\+time}}
+\index{input\+\_\+end\+\_\+time@{input\+\_\+end\+\_\+time}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{input\+\_\+end\+\_\+time}{input\_end\_time}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+input\+\_\+end\+\_\+time = property(\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_ab5c4e28ac7b7fb3fd3e14a66a564e989}{\+\_\+input\+\_\+end\+\_\+time})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get input end time. 
+
+
+
+Definition at line 139 of file fimp.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a2f755f827f18025c332335a16607f231}\label{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a2f755f827f18025c332335a16607f231}} 
+\index{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}!output\+\_\+start\+\_\+time@{output\+\_\+start\+\_\+time}}
+\index{output\+\_\+start\+\_\+time@{output\+\_\+start\+\_\+time}!sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost@{sylva\+::base\+::fimp\+::\+F\+I\+M\+P\+Cost}}
+\subsubsection{\texorpdfstring{output\+\_\+start\+\_\+time}{output\_start\_time}}
+{\footnotesize\ttfamily sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+output\+\_\+start\+\_\+time = property(\hyperlink{classsylva_1_1base_1_1fimp_1_1_f_i_m_p_cost_a162a87e8f45b84a27b8c7e2503539122}{\+\_\+output\+\_\+start\+\_\+time})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get output start time. 
+
+
+
+Definition at line 158 of file fimp.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{fimp_8py}{fimp.\+py}\end{DoxyCompactItemize}

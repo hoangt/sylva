@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['make_5fsdf_5factor',['make_sdf_actor',['../namespacesylva_1_1base_1_1sdf.html#a34a38a5853d86a6e49aba53f9040462d',1,'sylva::base::sdf']]],
   ['max_5findex',['max_index',['../namespacesylva_1_1misc_1_1util.html#a32b5da1967e998035c511c75ccccdf89',1,'sylva::misc::util']]],
   ['max_5fitems',['max_items',['../namespacesylva_1_1misc_1_1util.html#ab250130a1258b854bd002c06c3467f57',1,'sylva::misc::util']]],
   ['max_5fitems_5fwith_5fceil',['max_items_with_ceil',['../namespacesylva_1_1misc_1_1util.html#aea54b6ab8ee247ea3d042b09b5333c1c',1,'sylva::misc::util']]],
@@ -16,6 +15,5 @@ var searchData=
   ['min_5findex',['min_index',['../namespacesylva_1_1misc_1_1util.html#a167f655cf126d75c98e671a0672087ca',1,'sylva::misc::util']]],
   ['min_5fitems',['min_items',['../namespacesylva_1_1misc_1_1util.html#a7fdf694403cc19390b498aa430354a22',1,'sylva::misc::util']]],
   ['min_5fitems_5fwith_5ffloor',['min_items_with_floor',['../namespacesylva_1_1misc_1_1util.html#a54b027582331f484228cb0a1acac2d90',1,'sylva::misc::util']]],
-  ['mkdir',['mkdir',['../namespacesylva_1_1misc_1_1util.html#af426e429c40209bbb46e3a0e8f139a44',1,'sylva::misc::util']]],
-  ['most_5fparallel_5fschedule',['most_parallel_schedule',['../namespacesylva_1_1dse_1_1dse__engine__v1.html#a2c16f997588f8721ab7742ca16e79e64',1,'sylva::dse::dse_engine_v1']]]
+  ['mkdir',['mkdir',['../namespacesylva_1_1misc_1_1util.html#af426e429c40209bbb46e3a0e8f139a44',1,'sylva::misc::util']]]
 ];

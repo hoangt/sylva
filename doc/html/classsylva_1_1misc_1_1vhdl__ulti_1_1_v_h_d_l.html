@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -125,11 +131,8 @@ $(document).ready(function(){initNavTree('classsylva_1_1misc_1_1vhdl__ulti_1_1_v
 <div class="dynheader">
 Inheritance diagram for sylva.misc.vhdl_ulti.VHDL:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classsylva_1_1misc_1_1vhdl__ulti_1_1_v_h_d_l.png" usemap="#sylva.misc.vhdl_5Fulti.VHDL_map" alt=""/>
-  <map id="sylva.misc.vhdl_5Fulti.VHDL_map" name="sylva.misc.vhdl_5Fulti.VHDL_map">
-</map>
- </div></div>
+<div class="center"><img src="classsylva_1_1misc_1_1vhdl__ulti_1_1_v_h_d_l__inherit__graph.png" border="0" usemap="#sylva_8misc_8vhdl__ulti_8_v_h_d_l_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -218,7 +221,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="vhdl__ulti_8py_source.html#l00013">13</a> of file <a class="el" href="vhdl__ulti_8py_source.html">vhdl_ulti.py</a>.</p>
 
-<p class="reference">References <a class="el" href="cgra_8py_source.html#l00022">sylva.base.cgra.cgra.fimps</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00059">sylva.dse.dse_engine_v1.dse_v1.fimps</a>, and <a class="el" href="vhdl__ulti_8py_source.html#l00096">sylva.misc.vhdl_ulti.VHDL.fimps</a>.</p>
+<p class="reference">References <a class="el" href="vhdl__ulti_8py_source.html#l00096">sylva.misc.vhdl_ulti.VHDL.fimps</a>.</p>
 <div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">def </span>__str__(self) :</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> str(self.fimps)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -250,7 +253,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="vhdl__ulti_8py_source.html#l00112">112</a> of file <a class="el" href="vhdl__ulti_8py_source.html">vhdl_ulti.py</a>.</p>
 
-<p class="reference">References <a class="el" href="cgra_8py_source.html#l00022">sylva.base.cgra.cgra.fimps</a>, <a class="el" href="dse__engine__v1_8py_source.html#l00059">sylva.dse.dse_engine_v1.dse_v1.fimps</a>, and <a class="el" href="vhdl__ulti_8py_source.html#l00096">sylva.misc.vhdl_ulti.VHDL.fimps</a>.</p>
+<p class="reference">References <a class="el" href="vhdl__ulti_8py_source.html#l00096">sylva.misc.vhdl_ulti.VHDL.fimps</a>.</p>
 <div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">def </span>assign_cost(self, cost_dict) :</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">for</span> type_name, f <span class="keywordflow">in</span> self.fimps.items() :</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      fimp_cost = cost_dict[f.name][f.type_name]</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> fimp_cost.items() :</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        setattr(f, k, v)</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
@@ -413,7 +416,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="vhdl__ulti_8py_source.html#l00096">96</a> of file <a class="el" href="vhdl__ulti_8py_source.html">vhdl_ulti.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="vhdl__ulti_8py_source.html#l00013">sylva.misc.vhdl_ulti.VHDL.__str__()</a>, and <a class="el" href="vhdl__ulti_8py_source.html#l00112">sylva.misc.vhdl_ulti.VHDL.assign_cost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="vhdl__ulti_8py_source.html#l00013">sylva.misc.vhdl_ulti.VHDL.__str__()</a>, <a class="el" href="dse__engine_8py_source.html#l00197">sylva.dse.dse_engine.DSEEngine.add_fimp_selection_constraint()</a>, <a class="el" href="dse__engine_8py_source.html#l00322">sylva.dse.dse_engine.DSEEngine.add_resource_dependency_constraints()</a>, and <a class="el" href="vhdl__ulti_8py_source.html#l00112">sylva.misc.vhdl_ulti.VHDL.assign_cost()</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,259 @@
+{
+    "actors": [
+        {
+            "base_actor": null,
+            "name": "a",
+            "index": 0,
+            "input_ports": [],
+            "output_ports": [
+                {
+                    "name": "a_dout_b",
+                    "index": 0,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 4,
+                    "_class": "Port"
+                }
+            ],
+            "outgoing_edges": [
+                {
+                    "dest_port": {
+                        "name": "a_din_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "a_dout_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "a",
+                        "index": 0,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                }
+            ],
+            "incoming_edges": [],
+            "_class": "Actor"
+        },
+        {
+            "base_actor": null,
+            "name": "d",
+            "index": 1,
+            "input_ports": [],
+            "output_ports": [
+                {
+                    "name": "d_dout_b",
+                    "index": 0,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 2,
+                    "_class": "Port"
+                }
+            ],
+            "outgoing_edges": [
+                {
+                    "dest_port": {
+                        "name": "d_din_b",
+                        "index": 1,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "d_dout_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "d",
+                        "index": 1,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                }
+            ],
+            "incoming_edges": [],
+            "_class": "Actor"
+        },
+        {
+            "base_actor": null,
+            "name": "b",
+            "index": 2,
+            "input_ports": [
+                {
+                    "name": "a_din_b",
+                    "index": 0,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 2,
+                    "_class": "Port"
+                },
+                {
+                    "name": "d_din_b",
+                    "index": 1,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 4,
+                    "_class": "Port"
+                }
+            ],
+            "output_ports": [
+                {
+                    "name": "b_dout_c",
+                    "index": 0,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 2,
+                    "_class": "Port"
+                }
+            ],
+            "outgoing_edges": [
+                {
+                    "dest_port": {
+                        "name": "b_din_c",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "c",
+                        "index": 3,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "b_dout_c",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                }
+            ],
+            "incoming_edges": [
+                {
+                    "dest_port": {
+                        "name": "a_din_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "a_dout_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "a",
+                        "index": 0,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                },
+                {
+                    "dest_port": {
+                        "name": "d_din_b",
+                        "index": 1,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "d_dout_b",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "d",
+                        "index": 1,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                }
+            ],
+            "_class": "Actor"
+        },
+        {
+            "base_actor": null,
+            "name": "c",
+            "index": 3,
+            "input_ports": [
+                {
+                    "name": "b_din_c",
+                    "index": 0,
+                    "data_token_type": {
+                        "name": "int32",
+                        "size": 32,
+                        "_class": "DataTokenType"
+                    },
+                    "count": 2,
+                    "_class": "Port"
+                }
+            ],
+            "output_ports": [],
+            "outgoing_edges": [],
+            "incoming_edges": [
+                {
+                    "dest_port": {
+                        "name": "b_din_c",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "dest_actor": {
+                        "name": "c",
+                        "index": 3,
+                        "_class": "Actor"
+                    },
+                    "src_port": {
+                        "name": "b_dout_c",
+                        "index": 0,
+                        "_class": "Port"
+                    },
+                    "src_actor": {
+                        "name": "b",
+                        "index": 2,
+                        "_class": "Actor"
+                    },
+                    "_class": "Edge"
+                }
+            ],
+            "_class": "Actor"
+        }
+    ],
+    "_class": "SDFG"
+}

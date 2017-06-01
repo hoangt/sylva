@@ -1,0 +1,87 @@
+\hypertarget{namespacesylva_1_1examples_1_1dump__and__load}{}\section{sylva.\+examples.\+dump\+\_\+and\+\_\+load Namespace Reference}
+\label{namespacesylva_1_1examples_1_1dump__and__load}\index{sylva.\+examples.\+dump\+\_\+and\+\_\+load@{sylva.\+examples.\+dump\+\_\+and\+\_\+load}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}{dump\+\_\+and\+\_\+load} ()
+\begin{DoxyCompactList}\small\item\em Dumps and load. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1dump__and__load_adcbf27850becc572711605ccd2a292cb}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1dump__and__load_a12238f83d54958fa6d0f7b33e45a901e}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2017-\/05-\/19\textquotesingle{}
+\item 
+string \hyperlink{namespacesylva_1_1examples_1_1dump__and__load_a1ccb255a35f981f14b86bbc21a4f8e45}{\+\_\+\+\_\+license\+\_\+\+\_\+} = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}\label{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}} 
+\index{sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}!dump\+\_\+and\+\_\+load@{dump\+\_\+and\+\_\+load}}
+\index{dump\+\_\+and\+\_\+load@{dump\+\_\+and\+\_\+load}!sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}}
+\subsubsection{\texorpdfstring{dump\+\_\+and\+\_\+load()}{dump\_and\_load()}}
+{\footnotesize\ttfamily def sylva.\+examples.\+dump\+\_\+and\+\_\+load.\+dump\+\_\+and\+\_\+load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dumps and load. 
+
+This method will dump a Data\+Token\+Type obejct to file and reload if from that file then print the original object and the reloaded object. 
+
+Definition at line 23 of file dump\+\_\+and\+\_\+load.\+py.
+
+
+\begin{DoxyCode}
+23 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}{dump\_and\_load}():
+24 
+25     \textcolor{comment}{# Create a new DataTokenType object}
+26     int32 = DataTokenType(name=\textcolor{stringliteral}{'int32'}, size=32)
+27 
+28     \textcolor{comment}{# Convert DataTokenType object to dictionary object}
+29     dict\_object = dict(int32)
+30 
+31     \textcolor{comment}{# check the content of `dict\_object`}
+32     print(dict\_object)
+33 
+34     \textcolor{comment}{# Deserialize a DataTokenType object from the created dictionary object}
+35     another\_type = DataTokenType(**dict\_object)
+36 
+37     \textcolor{comment}{# check the content of the generated DataTokenType object}
+38     print(another\_type)
+39 
+40 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1dump__and__load_adcbf27850becc572711605ccd2a292cb}\label{namespacesylva_1_1examples_1_1dump__and__load_adcbf27850becc572711605ccd2a292cb}} 
+\index{sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}!\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+author\+\_\+\+\_\+@{\+\_\+\+\_\+author\+\_\+\+\_\+}!sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+author\+\_\+\+\_\+}{\_\_author\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+dump\+\_\+and\+\_\+load.\+\_\+\+\_\+author\+\_\+\+\_\+ = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 9 of file dump\+\_\+and\+\_\+load.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1dump__and__load_a1ccb255a35f981f14b86bbc21a4f8e45}\label{namespacesylva_1_1examples_1_1dump__and__load_a1ccb255a35f981f14b86bbc21a4f8e45}} 
+\index{sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}!\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}!sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+license\+\_\+\+\_\+}{\_\_license\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+dump\+\_\+and\+\_\+load.\+\_\+\+\_\+license\+\_\+\+\_\+ = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file dump\+\_\+and\+\_\+load.\+py.
+
+\mbox{\Hypertarget{namespacesylva_1_1examples_1_1dump__and__load_a12238f83d54958fa6d0f7b33e45a901e}\label{namespacesylva_1_1examples_1_1dump__and__load_a12238f83d54958fa6d0f7b33e45a901e}} 
+\index{sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::examples\+::dump\+\_\+and\+\_\+load@{sylva\+::examples\+::dump\+\_\+and\+\_\+load}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
+{\footnotesize\ttfamily string sylva.\+examples.\+dump\+\_\+and\+\_\+load.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2017-\/05-\/19\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 10 of file dump\+\_\+and\+\_\+load.\+py.
+

@@ -10,7 +10,7 @@ class \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle}{rectangle}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\+\_\+block} (start, end, index, color=\textquotesingle{}grey\textquotesingle{}, height=0.\+2, subindex=1, subtotal=1, space=0.\+2)
+def \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\+\_\+block} (start, end, index, color=\textquotesingle{}gray\textquotesingle{}, height=0.\+2, subindex=1, subtotal=1, space=0.\+2)
 \item 
 def \hyperlink{namespacesylva_1_1misc_1_1plot_a407cb01fd5820f94e98a438d04391c6e}{fimp\+\_\+schedule\+\_\+plot} (fimps=\mbox{[}$\,$\mbox{]}, height=0.\+2, plt=plt, input\+\_\+color=\textquotesingle{}green\textquotesingle{}, output\+\_\+color=\textquotesingle{}pink\textquotesingle{}, computation\+\_\+color=\textquotesingle{}grey\textquotesingle{}, buffer\+\_\+color=\textquotesingle{}darkred\textquotesingle{})
 \item 
@@ -33,7 +33,7 @@ dictionary \hyperlink{namespacesylva_1_1misc_1_1plot_affc8bfc885cfaf5e1995cf4fd8
 \item 
 \hyperlink{namespacesylva_1_1misc_1_1plot_a0cda7def12ec7fe347a18675bc3f3ead}{p} = \hyperlink{classsylva_1_1misc_1_1plot_1_1point}{point}(2, 2)
 \item 
-\hyperlink{namespacesylva_1_1misc_1_1plot_a620aa90142604ebb167426bcbd31acb1}{r} = \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle}{rectangle}(4, 4, x = 0, y = 0)
+\hyperlink{namespacesylva_1_1misc_1_1plot_a620aa90142604ebb167426bcbd31acb1}{r} = \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle}{rectangle}(4, 4, x=0, y=0)
 \end{DoxyCompactItemize}
 
 
@@ -46,7 +46,7 @@ dictionary \hyperlink{namespacesylva_1_1misc_1_1plot_affc8bfc885cfaf5e1995cf4fd8
 
 
 
-Definition at line 336 of file plot.\+py.
+Definition at line 347 of file plot.\+py.
 
 
 
@@ -54,53 +54,53 @@ References sylva.\+misc.\+util.\+to\+\_\+list().
 
 
 
-Referenced by sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+below\+\_\+of(), and sylva.\+base.\+cgra.\+cgra.\+plot().
+Referenced by sylva.\+misc.\+plot.\+rectangle.\+place\+\_\+below\+\_\+of().
 
 
 \begin{DoxyCode}
-336     width = \textcolor{keywordtype}{None}, height = \textcolor{keywordtype}{None}, show\_axis = \textcolor{keyword}{True}, show\_ticks = \textcolor{keyword}{False}, plt = plt) :
-337 
-338     \_rectangle\_style = default\_rectangle\_style
-339     \_rectangle\_style.update(rectangle\_style \textcolor{keywordflow}{or} \{\})
-340 
-341     \_annotation\_style = default\_annotation\_style
-342     \_annotation\_style.update(annotation\_style \textcolor{keywordflow}{or} \{\})
-343 
-344     rects = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(rects)
-345     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} width :
-346       min\_width = min([ rect.x \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects ]) - padding
-347       max\_width = max([ rect.x + rect.width \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects ]) + padding
-348     \textcolor{keywordflow}{else} :
-349       min\_width = 0
-350       max\_width = width
-351     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} height :
-352       min\_height = min([ rect.y \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects ]) - padding
-353       max\_height = max([ rect.y + rect.height \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects ]) + padding
-354     \textcolor{keywordflow}{else} :
-355       min\_height = 0
-356       max\_height = height
-357 
-358     \textcolor{keywordflow}{if} show\_axis :
-359       plt.axis([min\_width, max\_width, max\_height, min\_height])
-360       \textcolor{keywordflow}{if} show\_ticks :
-361         plt.xticks(range(min\_width, max\_width+1))
-362         plt.yticks(range(min\_height, max\_height+1))
-363       \textcolor{keywordflow}{else} :
-364         plt.xticks(list(set([r.left.x \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects] \(\backslash\)
-365           + [int(min\_width), int(max\_width)] + [r.right.x \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects])))
-366         plt.yticks(list(set([r.top.y \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects] \(\backslash\)
-367           + [int(min\_height), int(max\_height)] + [r.bottom.y \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects])))
-368     \textcolor{keywordflow}{else} :
-369       plt.axis(\textcolor{stringliteral}{'off'})
-370 
-371     plt.gca().set\_aspect(\textcolor{stringliteral}{'equal'})
-372     \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects :
-373       plt.gca().add\_patch(rect.get\_patch())
-374       plt.gca().annotate(rect.name,
-375         (rect.x + 0.5 * rect.width, rect.y + 0.5 * rect.height),
-376         **\_annotation\_style)
-377     \textcolor{keywordflow}{return} plt
-378 
+347                     width=\textcolor{keywordtype}{None}, height=\textcolor{keywordtype}{None}, show\_axis=\textcolor{keyword}{True}, show\_ticks=\textcolor{keyword}{False}, plt=plt):
+348 
+349         \_rectangle\_style = default\_rectangle\_style
+350         \_rectangle\_style.update(rectangle\_style \textcolor{keywordflow}{or} \{\})
+351 
+352         \_annotation\_style = default\_annotation\_style
+353         \_annotation\_style.update(annotation\_style \textcolor{keywordflow}{or} \{\})
+354 
+355         rects = \hyperlink{namespacesylva_1_1misc_1_1util_a03f5cfd365a10a5ec0567e320f987a9b}{to\_list}(rects)
+356         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} width:
+357             min\_width = min([rect.x \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects]) - padding
+358             max\_width = max([rect.x + rect.width \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects]) + padding
+359         \textcolor{keywordflow}{else}:
+360             min\_width = 0
+361             max\_width = width
+362         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} height:
+363             min\_height = min([rect.y \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects]) - padding
+364             max\_height = max([rect.y + rect.height \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects]) + padding
+365         \textcolor{keywordflow}{else}:
+366             min\_height = 0
+367             max\_height = height
+368 
+369         \textcolor{keywordflow}{if} show\_axis:
+370             plt.axis([min\_width, max\_width, max\_height, min\_height])
+371             \textcolor{keywordflow}{if} show\_ticks:
+372                 plt.xticks(range(min\_width, max\_width + 1))
+373                 plt.yticks(range(min\_height, max\_height + 1))
+374             \textcolor{keywordflow}{else}:
+375                 plt.xticks(list(set([r.left.x \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects]
+376                                     + [int(min\_width), int(max\_width)] + [r.right.x \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects])))
+377                 plt.yticks(list(set([r.top.y \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects]
+378                                     + [int(min\_height), int(max\_height)] + [r.bottom.y \textcolor{keywordflow}{for} r \textcolor{keywordflow}{in} rects])))
+379         \textcolor{keywordflow}{else}:
+380             plt.axis(\textcolor{stringliteral}{'off'})
+381 
+382         plt.gca().set\_aspect(\textcolor{stringliteral}{'equal'})
+383         \textcolor{keywordflow}{for} rect \textcolor{keywordflow}{in} rects:
+384             plt.gca().add\_patch(rect.get\_patch())
+385             plt.gca().annotate(rect.name,
+386                                (rect.x + 0.5 * rect.width, rect.y + 0.5 * rect.height),
+387                                **\_annotation\_style)
+388         \textcolor{keywordflow}{return} plt
+389 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a2e27375ca68228e819017903e39e39d9}\label{namespacesylva_1_1misc_1_1plot_a2e27375ca68228e819017903e39e39d9}} 
 \index{sylva\+::misc\+::plot@{sylva\+::misc\+::plot}!fimp\+\_\+execution\+\_\+model\+\_\+plot@{fimp\+\_\+execution\+\_\+model\+\_\+plot}}
@@ -122,39 +122,39 @@ Referenced by sylva.\+misc.\+plot.\+schedule\+\_\+plot().
 
 
 \begin{DoxyCode}
-103     buffer\_color = \textcolor{stringliteral}{'darkred'}) :
+103                                   buffer\_color=\textcolor{stringliteral}{'darkred'}):
 104 
-105     end\_time = max(fimps, key = \textcolor{keyword}{lambda} f: f.computation\_phase).computation\_phase
-106     fimp\_count = len(fimps)
+105         end\_time = max(fimps, key=\textcolor{keyword}{lambda} f: f.computation\_phase).computation\_phase
+106         fimp\_count = len(fimps)
 107 
-108     plt.axis([0, end\_time + 2, 0, fimp\_count + 2])
-109     plt.gca().grid(\textcolor{keyword}{True})
+108         plt.axis([0, end\_time + 2, 0, fimp\_count + 2])
+109         plt.gca().grid(\textcolor{keyword}{True})
 110 
-111     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(len(fimps)) :
-112       input\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(start = 0,
-113         end = fimps[i].input\_phase - 1,
-114         index = i,
-115         subindex = 0, subtotal = 3, color = input\_color)
-116       computation\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(start = 0,
-117         end = fimps[i].computation\_phase - 1,
-118         index = i,
-119         subindex = 1, subtotal = 3, color = computation\_color)
-120       output\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(
-121         start = fimps[i].computation\_phase - fimps[i].output\_phase + 1,
-122         end = fimps[i].computation\_phase - 1,
-123         index = i,
-124         subindex = 2, subtotal = 3, color = output\_color)
-125       rx, ry = computation\_block.get\_xy()
-126       cx = rx + computation\_block.get\_width()/2.0
-127       cy = ry + computation\_block.get\_height()/2.0
-128       plt.gca().annotate(fimps[i], (cx, cy),
-129         color=\textcolor{stringliteral}{'black'}, weight=\textcolor{stringliteral}{'bold'},
-130         fontsize=16, ha=\textcolor{stringliteral}{'center'}, va=\textcolor{stringliteral}{'center'})
-131       plt.gca().add\_patch(input\_block)
-132       plt.gca().add\_patch(output\_block)
-133       plt.gca().add\_patch(computation\_block)
+111         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(len(fimps)):
+112             input\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(start=0,
+113                                      end=fimps[i].input\_phase - 1,
+114                                      index=i,
+115                                      subindex=0, subtotal=3, color=input\_color)
+116             computation\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(start=0,
+117                                            end=fimps[i].computation\_phase - 1,
+118                                            index=i,
+119                                            subindex=1, subtotal=3, color=computation\_color)
+120             output\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(
+121                 start=fimps[i].computation\_phase - fimps[i].output\_phase + 1,
+122                 end=fimps[i].computation\_phase - 1,
+123                 index=i,
+124                 subindex=2, subtotal=3, color=output\_color)
+125             rx, ry = computation\_block.get\_xy()
+126             cx = rx + computation\_block.get\_width() / 2.0
+127             cy = ry + computation\_block.get\_height() / 2.0
+128             plt.gca().annotate(fimps[i], (cx, cy),
+129                                color=\textcolor{stringliteral}{'black'}, weight=\textcolor{stringliteral}{'bold'},
+130                                fontsize=16, ha=\textcolor{stringliteral}{'center'}, va=\textcolor{stringliteral}{'center'})
+131             plt.gca().add\_patch(input\_block)
+132             plt.gca().add\_patch(output\_block)
+133             plt.gca().add\_patch(computation\_block)
 134 
-135     \textcolor{keywordflow}{return} plt
+135         \textcolor{keywordflow}{return} plt
 136 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a407cb01fd5820f94e98a438d04391c6e}\label{namespacesylva_1_1misc_1_1plot_a407cb01fd5820f94e98a438d04391c6e}} 
@@ -177,13 +177,13 @@ Referenced by sylva.\+misc.\+plot.\+time\+\_\+block().
 
 
 \begin{DoxyCode}
-55     buffer\_color = \textcolor{stringliteral}{'darkred'}) :
+55                            buffer\_color=\textcolor{stringliteral}{'darkred'}):
 56 
-57     actors = [ one\_actor \textcolor{keywordflow}{for} one\_fimp \textcolor{keywordflow}{in} fimps \textcolor{keywordflow}{for} one\_actor \textcolor{keywordflow}{in} one\_fimp.actors ]
+57         actors = [one\_actor \textcolor{keywordflow}{for} one\_fimp \textcolor{keywordflow}{in} fimps \textcolor{keywordflow}{for} one\_actor \textcolor{keywordflow}{in} one\_fimp.actors]
 58 
-59     \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1misc_1_1plot_a2937dd66c98822d9914353fc15105e14}{schedule\_plot}(actors,
-60       height, plt,
-61       input\_color, output\_color, computation\_color, buffer\_color)
+59         \textcolor{keywordflow}{return} \hyperlink{namespacesylva_1_1misc_1_1plot_a2937dd66c98822d9914353fc15105e14}{schedule\_plot}(actors,
+60                              height, plt,
+61                              input\_color, output\_color, computation\_color, buffer\_color)
 62 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a2937dd66c98822d9914353fc15105e14}\label{namespacesylva_1_1misc_1_1plot_a2937dd66c98822d9914353fc15105e14}} 
@@ -206,46 +206,46 @@ Referenced by sylva.\+misc.\+exec.\+S\+Y\+L\+V\+A.\+execute\+\_\+write\+\_\+fimp
 
 
 \begin{DoxyCode}
-66     buffer\_color = \textcolor{stringliteral}{'darkred'}) :
+66                       buffer\_color=\textcolor{stringliteral}{'darkred'}):
 67 
-68     end\_time = max(actors, key = \textcolor{keyword}{lambda} n: n.buffer\_end).buffer\_end
-69     fimp\_count = max(actors, key = \textcolor{keyword}{lambda} n: n.fimp.index).fimp.index
+68         end\_time = max(actors, key=\textcolor{keyword}{lambda} n: n.buffer\_end).buffer\_end
+69         fimp\_count = max(actors, key=\textcolor{keyword}{lambda} n: n.fimp.index).fimp.index
 70 
-71     plt.axis([0, end\_time + 2, 0, (fimp\_count + 2) * height *3])
-72     plt.gca().grid(\textcolor{keyword}{True})
+71         plt.axis([0, end\_time + 2, 0, (fimp\_count + 2) * height * 3])
+72         plt.gca().grid(\textcolor{keyword}{True})
 73 
-74     \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} actors :
-75       input\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(n.start, n.input\_end, n.fimp.index,
-76         subindex = 0, subtotal = 3, color = input\_color)
-77       computation\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(n.start, n.end, n.fimp.index,
-78         subindex = 1, subtotal = 3, color = computation\_color)
-79       output\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(n.output\_start, n.end, n.fimp.index,
-80         subindex = 2, subtotal = 3, color = output\_color)
-81       rx, ry = computation\_block.get\_xy()
-82       cx = rx + computation\_block.get\_width()/2.0
-83       cy = ry + computation\_block.get\_height()/2.0
-84       plt.gca().annotate(\textcolor{stringliteral}{'%s\_%s'} %(n.name, n.index), (cx, cy),
-85         color=\textcolor{stringliteral}{'black'},
-86         \textcolor{comment}{# weight='bold',}
-87         \textcolor{comment}{# fontsize=16,}
-88         ha=\textcolor{stringliteral}{'center'}, va=\textcolor{stringliteral}{'center'})
-89       plt.gca().add\_patch(input\_block)
-90       plt.gca().add\_patch(output\_block)
+74         \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} actors:
+75             input\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(n.start, n.input\_end, n.fimp.index,
+76                                      subindex=0, subtotal=3, color=input\_color)
+77             computation\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(n.start, n.end, n.fimp.index,
+78                                            subindex=1, subtotal=3, color=computation\_color)
+79             output\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(n.output\_start, n.end, n.fimp.index,
+80                                       subindex=2, subtotal=3, color=output\_color)
+81             rx, ry = computation\_block.get\_xy()
+82             cx = rx + computation\_block.get\_width() / 2.0
+83             cy = ry + computation\_block.get\_height() / 2.0
+84             plt.gca().annotate(\textcolor{stringliteral}{'%s\_%s'} % (n.name, n.index), (cx, cy),
+85                                color=\textcolor{stringliteral}{'black'},
+86                                \textcolor{comment}{# weight='bold',}
+87                                \textcolor{comment}{# fontsize=16,}
+88                                ha=\textcolor{stringliteral}{'center'}, va=\textcolor{stringliteral}{'center'})
+89             plt.gca().add\_patch(input\_block)
+90             plt.gca().add\_patch(output\_block)
 91 
-92       \textcolor{keywordflow}{if} n.buffer\_end > n.end:
-93         buffer\_ext\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}{time\_block}(n.end+1, n.buffer\_end, n.fimp.index,
-94           subindex = 2, subtotal = 3, color = buffer\_color)
-95         plt.gca().add\_patch(buffer\_ext\_block)
-96       plt.gca().add\_patch(computation\_block)
+92             \textcolor{keywordflow}{if} n.buffer\_end > n.end:
+93                 buffer\_ext\_block = \hyperlink{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}{time\_block}(n.end + 1, n.buffer\_end, n.fimp.index,
+94                                               subindex=2, subtotal=3, color=buffer\_color)
+95                 plt.gca().add\_patch(buffer\_ext\_block)
+96             plt.gca().add\_patch(computation\_block)
 97 
-98     \textcolor{keywordflow}{return} plt
+98         \textcolor{keywordflow}{return} plt
 99 
 \end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}\label{namespacesylva_1_1misc_1_1plot_a35e705ad0728f0ff413c9d4033bff7b4}} 
+\mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}\label{namespacesylva_1_1misc_1_1plot_a39ec0e33c0b551cbb7d10d42e63bfa3d}} 
 \index{sylva\+::misc\+::plot@{sylva\+::misc\+::plot}!time\+\_\+block@{time\+\_\+block}}
 \index{time\+\_\+block@{time\+\_\+block}!sylva\+::misc\+::plot@{sylva\+::misc\+::plot}}
 \subsubsection{\texorpdfstring{time\+\_\+block()}{time\_block()}}
-{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+time\+\_\+block (\begin{DoxyParamCaption}\item[{}]{start,  }\item[{}]{end,  }\item[{}]{index,  }\item[{}]{color = {\ttfamily \textquotesingle{}grey\textquotesingle{}},  }\item[{}]{height = {\ttfamily 0.2},  }\item[{}]{subindex = {\ttfamily 1},  }\item[{}]{subtotal = {\ttfamily 1},  }\item[{}]{space = {\ttfamily 0.2} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def sylva.\+misc.\+plot.\+time\+\_\+block (\begin{DoxyParamCaption}\item[{}]{start,  }\item[{}]{end,  }\item[{}]{index,  }\item[{}]{color = {\ttfamily \textquotesingle{}gray\textquotesingle{}},  }\item[{}]{height = {\ttfamily 0.2},  }\item[{}]{subindex = {\ttfamily 1},  }\item[{}]{subtotal = {\ttfamily 1},  }\item[{}]{space = {\ttfamily 0.2} }\end{DoxyParamCaption})}
 
 
 
@@ -261,18 +261,18 @@ Referenced by sylva.\+misc.\+plot.\+fimp\+\_\+execution\+\_\+model\+\_\+plot(), 
 
 
 \begin{DoxyCode}
-37     subindex = 1, subtotal = 1, space = 0.2) :
+37                    subindex=1, subtotal=1, space=0.2):
 38 
-39     total\_height = height * subtotal
-40     x = start
-41     y = 0
-42     y = y + index * total\_height
-43     y = y + space
-44     y = y + height * (subtotal - subindex - 1)
+39         total\_height = height * subtotal
+40         x = start
+41         y = 0
+42         y = y + index * total\_height
+43         y = y + space
+44         y = y + height * (subtotal - subindex - 1)
 45 
-46     \textcolor{keywordflow}{return} Rectangle((x, y), \(\backslash\)
-47       width = end - start + 1, height = height, \(\backslash\)
-48       facecolor = color, edgecolor = \textcolor{stringliteral}{'black'}, linestyle = \textcolor{stringliteral}{'solid'})
+46         \textcolor{keywordflow}{return} Rectangle((x, y),
+47                          width=end - start + 1, height=height,
+48                          facecolor=color, edgecolor=\textcolor{stringliteral}{'black'}, linestyle=\textcolor{stringliteral}{'solid'})
 49 
 \end{DoxyCode}
 
@@ -307,15 +307,15 @@ Definition at line 24 of file plot.\+py.
 {\bfseries Initial value\+:}
 \begin{DoxyCode}
 1 =  \{
-2     \textcolor{stringliteral}{'color'} : \textcolor{stringliteral}{'black'},
-3     \textcolor{stringliteral}{'fontweight'} :\textcolor{stringliteral}{'normal'},
-4     \textcolor{stringliteral}{'fontsize'} : 12,
-5     \textcolor{stringliteral}{'ha'} : \textcolor{stringliteral}{'center'},
-6     \textcolor{stringliteral}{'va'} : \textcolor{stringliteral}{'center'}\}
+2         \textcolor{stringliteral}{'color'}: \textcolor{stringliteral}{'black'},
+3         \textcolor{stringliteral}{'fontweight'}: \textcolor{stringliteral}{'normal'},
+4         \textcolor{stringliteral}{'fontsize'}: 12,
+5         \textcolor{stringliteral}{'ha'}: \textcolor{stringliteral}{'center'},
+6         \textcolor{stringliteral}{'va'}: \textcolor{stringliteral}{'center'}\}
 \end{DoxyCode}
 
 
-Definition at line 213 of file plot.\+py.
+Definition at line 221 of file plot.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a9d341463b25190ccc0193e07c697648f}\label{namespacesylva_1_1misc_1_1plot_a9d341463b25190ccc0193e07c697648f}} 
 \index{sylva\+::misc\+::plot@{sylva\+::misc\+::plot}!default\+\_\+rectangle\+\_\+style@{default\+\_\+rectangle\+\_\+style}}
@@ -326,17 +326,17 @@ Definition at line 213 of file plot.\+py.
 {\bfseries Initial value\+:}
 \begin{DoxyCode}
 1 =  \{
-2     \textcolor{stringliteral}{'facecolor'} : \textcolor{stringliteral}{'white'},
-3     \textcolor{stringliteral}{'edgecolor'} :\textcolor{stringliteral}{'black'},
-4     \textcolor{stringliteral}{'linestyle'} : \textcolor{stringliteral}{'solid'},
-5     \textcolor{stringliteral}{'linewidth'} : 1,
-6     \textcolor{stringliteral}{'width'} : 0.4,
-7     \textcolor{stringliteral}{'height'} : 0.4,
+2         \textcolor{stringliteral}{'facecolor'}: \textcolor{stringliteral}{'white'},
+3         \textcolor{stringliteral}{'edgecolor'}: \textcolor{stringliteral}{'black'},
+4         \textcolor{stringliteral}{'linestyle'}: \textcolor{stringliteral}{'solid'},
+5         \textcolor{stringliteral}{'linewidth'}: 1,
+6         \textcolor{stringliteral}{'width'}: 0.4,
+7         \textcolor{stringliteral}{'height'}: 0.4,
 8     \}
 \end{DoxyCode}
 
 
-Definition at line 204 of file plot.\+py.
+Definition at line 212 of file plot.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a0cda7def12ec7fe347a18675bc3f3ead}\label{namespacesylva_1_1misc_1_1plot_a0cda7def12ec7fe347a18675bc3f3ead}} 
 \index{sylva\+::misc\+::plot@{sylva\+::misc\+::plot}!p@{p}}
@@ -346,15 +346,15 @@ Definition at line 204 of file plot.\+py.
 
 
 
-Definition at line 380 of file plot.\+py.
+Definition at line 391 of file plot.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1misc_1_1plot_a620aa90142604ebb167426bcbd31acb1}\label{namespacesylva_1_1misc_1_1plot_a620aa90142604ebb167426bcbd31acb1}} 
 \index{sylva\+::misc\+::plot@{sylva\+::misc\+::plot}!r@{r}}
 \index{r@{r}!sylva\+::misc\+::plot@{sylva\+::misc\+::plot}}
 \subsubsection{\texorpdfstring{r}{r}}
-{\footnotesize\ttfamily sylva.\+misc.\+plot.\+r = \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle}{rectangle}(4, 4, x = 0, y = 0)}
+{\footnotesize\ttfamily sylva.\+misc.\+plot.\+r = \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle}{rectangle}(4, 4, x=0, y=0)}
 
 
 
-Definition at line 381 of file plot.\+py.
+Definition at line 392 of file plot.\+py.
 

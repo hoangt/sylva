@@ -1,0 +1,193 @@
+\hypertarget{classsylva_1_1base_1_1sdf_1_1_edge}{}\section{sylva.\+base.\+sdf.\+Edge Class Reference}
+\label{classsylva_1_1base_1_1sdf_1_1_edge}\index{sylva.\+base.\+sdf.\+Edge@{sylva.\+base.\+sdf.\+Edge}}
+
+
+Class for communication edge.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+sdf.\+Edge\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsylva_1_1base_1_1sdf_1_1_edge__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a6514d5bb661258682b4c8262b9631153}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a669757129f2efcb76625f90992afd7db}{src\+\_\+actor}=\hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}(), \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a824af9d2da5c0fadcc08bba783a29f15}{src\+\_\+port}=\hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}(), \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_aaf76b434868a8237cd832dbd0a3a20f1}{dest\+\_\+actor}=\hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}(), \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a9c5834c5e8234311f49654ced9c43424}{dest\+\_\+port}=\hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}())
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a0e573f4c878817df6cf77283137df6d2}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Override \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}{S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a669757129f2efcb76625f90992afd7db}{src\+\_\+actor}
+\begin{DoxyCompactList}\small\item\em The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_aaf76b434868a8237cd832dbd0a3a20f1}{dest\+\_\+actor}
+\begin{DoxyCompactList}\small\item\em The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a824af9d2da5c0fadcc08bba783a29f15}{src\+\_\+port}
+\begin{DoxyCompactList}\small\item\em The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_edge_a9c5834c5e8234311f49654ced9c43424}{dest\+\_\+port}
+\begin{DoxyCompactList}\small\item\em The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for communication edge. 
+
+One \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object will be used to represent one data communication edge between two \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port} objects of two \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} objects in \hyperlink{classsylva_1_1base_1_1sdf_1_1_s_d_f_g}{S\+D\+FG}, where a port on an actor emits or receives a constat number of data token per clock cycle. Each \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object has one source actor, one source port, one destination actor and one destination port. 
+
+Definition at line 245 of file sdf.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_a6514d5bb661258682b4c8262b9631153}\label{classsylva_1_1base_1_1sdf_1_1_edge_a6514d5bb661258682b4c8262b9631153}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Edge.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src\+\_\+actor = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}()},  }\item[{}]{src\+\_\+port = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}()},  }\item[{}]{dest\+\_\+actor = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}()},  }\item[{}]{dest\+\_\+port = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}()} }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em src\+\_\+actor} & The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. The current \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object will be added to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor_a11fdbcea1b73039bad4996f5380277d8}{src\+\_\+actor.outgoing\+\_\+edges} (list of outgoing edges) \\
+\hline
+{\em src\+\_\+port} & The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}.\\
+\hline
+{\em dest\+\_\+actor} & The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. The current \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object will be added to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor_a369e42539c2f6dbefafd3ab543428404}{dest\+\_\+actor.incoming\+\_\+edges} (list of incoming edges) \\
+\hline
+{\em dest\+\_\+port} & The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 275 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+275                  dest\_actor=Actor(), dest\_port=Port()):
+276 
+277         SYLVABase.\_\_init\_\_(self)
+278 
+279         self.src\_actor = src\_actor
+280         self.dest\_actor = dest\_actor
+281         self.src\_port = src\_port
+282         self.dest\_port = dest\_port
+283 
+284         \textcolor{comment}{# self.src\_actor.outgoing\_edges.append(self)}
+285         \textcolor{comment}{# self.dest\_actor.incoming\_edges.append(self)}
+286 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_a0e573f4c878817df6cf77283137df6d2}\label{classsylva_1_1base_1_1sdf_1_1_edge_a0e573f4c878817df6cf77283137df6d2}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+Edge.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Override \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base_a6c1ed8e83c61ea8a6035b5e4460989f3}{S\+Y\+L\+V\+A\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 294 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+code\+\_\+generation.\+air.\+Bass\+Object.\+\_\+\+\_\+repr\+\_\+\+\_\+(), and sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+S\+V\+G.\+\_\+\+\_\+repr\+\_\+\+\_\+().
+
+
+\begin{DoxyCode}
+294     \textcolor{keyword}{def }\_\_str\_\_(self):
+295         result = f\textcolor{stringliteral}{'SDF edge \(\backslash\)n'}
+296         result += f\textcolor{stringliteral}{'  from \{self.src\_actor.name\}(\{self.src\_actor.index\})'}
+297         result += f\textcolor{stringliteral}{' (\{self.src\_port.name\})\(\backslash\)n'}
+298         result += f\textcolor{stringliteral}{'  to \{self.dest\_actor.name\}(\{self.dest\_actor.index\})'}
+299         result += f\textcolor{stringliteral}{' (\{self.dest\_port.name\})'}
+300         \textcolor{keywordflow}{return} result
+301 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_aaf76b434868a8237cd832dbd0a3a20f1}\label{classsylva_1_1base_1_1sdf_1_1_edge_aaf76b434868a8237cd832dbd0a3a20f1}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!dest\+\_\+actor@{dest\+\_\+actor}}
+\index{dest\+\_\+actor@{dest\+\_\+actor}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{dest\+\_\+actor}{dest\_actor}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Edge.\+dest\+\_\+actor}
+
+
+
+The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. 
+
+The current \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object will be added to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor_a369e42539c2f6dbefafd3ab543428404}{dest\+\_\+actor.incoming\+\_\+edges} (list of incoming edges) 
+
+Definition at line 280 of file sdf.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_a9c5834c5e8234311f49654ced9c43424}\label{classsylva_1_1base_1_1sdf_1_1_edge_a9c5834c5e8234311f49654ced9c43424}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!dest\+\_\+port@{dest\+\_\+port}}
+\index{dest\+\_\+port@{dest\+\_\+port}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{dest\+\_\+port}{dest\_port}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Edge.\+dest\+\_\+port}
+
+
+
+The destination \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}. 
+
+
+
+Definition at line 282 of file sdf.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_a669757129f2efcb76625f90992afd7db}\label{classsylva_1_1base_1_1sdf_1_1_edge_a669757129f2efcb76625f90992afd7db}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!src\+\_\+actor@{src\+\_\+actor}}
+\index{src\+\_\+actor@{src\+\_\+actor}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{src\+\_\+actor}{src\_actor}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Edge.\+src\+\_\+actor}
+
+
+
+The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}. 
+
+The current \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} object will be added to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor_a11fdbcea1b73039bad4996f5380277d8}{src\+\_\+actor.outgoing\+\_\+edges} (list of outgoing edges) 
+
+Definition at line 279 of file sdf.\+py.
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_edge_a824af9d2da5c0fadcc08bba783a29f15}\label{classsylva_1_1base_1_1sdf_1_1_edge_a824af9d2da5c0fadcc08bba783a29f15}} 
+\index{sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}!src\+\_\+port@{src\+\_\+port}}
+\index{src\+\_\+port@{src\+\_\+port}!sylva\+::base\+::sdf\+::\+Edge@{sylva\+::base\+::sdf\+::\+Edge}}
+\subsubsection{\texorpdfstring{src\+\_\+port}{src\_port}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+Edge.\+src\+\_\+port}
+
+
+
+The source \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}. 
+
+
+
+Definition at line 281 of file sdf.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sdf_8py}{sdf.\+py}\end{DoxyCompactItemize}

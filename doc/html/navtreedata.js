@@ -1,9 +1,9 @@
 var NAVTREE =
 [
   [ "SYLVA - System Level Architectural Synthesis Framework", "index.html", [
-    [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
+    [ "Packages", null, [
+      [ "Packages", "namespaces.html", "namespaces" ],
+      [ "Package Functions", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", "namespacemembers_vars" ]
@@ -22,17 +22,19 @@ var NAVTREE =
     ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ]
-    ] ]
+    ] ],
+    [ "Examples", "examples.html", "examples" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
 "____init_____8py.html",
-"classsylva_1_1dse_1_1dse_1_1design__specification.html",
-"classsylva_1_1misc_1_1tcl__parser_1_1_keywords.html",
-"glic_8py.html#ad6e11d2ff626d576dddd38f99952a31a",
-"sdf__schedule_8py_source.html"
+"classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_s_v_g.html#ab5193e954ce5acbbf148e9874c0637e5",
+"classsylva_1_1misc_1_1exec_1_1_s_y_l_v_a.html#a848ae0b83bbf7a02a22b2958dd1388f8",
+"functions_func_r.html",
+"namespacesylva_1_1code__generation_1_1sylva__fimp__lib.html",
+"vhdl__templates_8py.html#a6a4eb4d5688beb52c3cb9d56f574477c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

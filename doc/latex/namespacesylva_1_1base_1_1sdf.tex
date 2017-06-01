@@ -8,470 +8,33 @@ All S\+DF graph related classes and methods.
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classsylva_1_1base_1_1sdf_1_1actor}{actor}
-\item 
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor}
+\begin{DoxyCompactList}\small\item\em Class for S\+DF actor. \end{DoxyCompactList}\item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}
 \begin{DoxyCompactList}\small\item\em Class for data token type. \end{DoxyCompactList}\item 
-class \hyperlink{classsylva_1_1base_1_1sdf_1_1edge}{edge}
-\item 
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG}
+\begin{DoxyCompactList}\small\item\em Class for Data Flow Graph. \end{DoxyCompactList}\item 
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge}
+\begin{DoxyCompactList}\small\item\em Class for communication edge. \end{DoxyCompactList}\item 
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g}{H\+S\+D\+FG}
+\begin{DoxyCompactList}\small\item\em Class for \hyperlink{classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g}{H\+S\+D\+FG}. \end{DoxyCompactList}\item 
 class \hyperlink{classsylva_1_1base_1_1sdf_1_1_port}{Port}
 \begin{DoxyCompactList}\small\item\em Class for port. \end{DoxyCompactList}\item 
-class \hyperlink{classsylva_1_1base_1_1sdf_1_1sdfg}{sdfg}
-\end{DoxyCompactItemize}
-\subsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\+\_\+sdf\+\_\+port} (json\+\_\+dict)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\+\_\+sdf\+\_\+edge\+\_\+index} (json\+\_\+dict)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\+\_\+sdf\+\_\+edge} (json\+\_\+dict, actors)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}{create\+\_\+sdf\+\_\+edge} (src\+\_\+actor\+\_\+index, src\+\_\+port\+\_\+index, dest\+\_\+actor\+\_\+index, dest\+\_\+port\+\_\+index, actors)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a0c4055dfc61c95b2f23e5a5dba353302}{connect} (src\+\_\+actor, src\+\_\+port\+\_\+index, src\+\_\+data\+\_\+token\+\_\+count, dest\+\_\+actor, dest\+\_\+port\+\_\+index, dest\+\_\+data\+\_\+token\+\_\+count, data\+\_\+token\+\_\+type=\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}no\+Name\textquotesingle{}, 1))
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\+\_\+sdf\+\_\+actor} (json\+\_\+dict, keys=\mbox{[}$\,$\mbox{]})
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}{make\+\_\+sdf\+\_\+actor} (name, index, inports, outports, input\+\_\+token\+\_\+type=\mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{}, 1)\mbox{]}, output\+\_\+token\+\_\+type=\mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{}, 1)\mbox{]})
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}{serialize\+\_\+sdf\+\_\+graph} (actors, edges)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\+\_\+sdf\+\_\+graph} (json\+\_\+dict, actor\+\_\+keys=\mbox{[}$\,$\mbox{]})
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}{dump\+\_\+to\+\_\+file} (item, filepath, indent=2)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}{add\+\_\+actor} (actors, name, index, inports, outports, input\+\_\+token\+\_\+type=\mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{}, 1)\mbox{]}, output\+\_\+token\+\_\+type=\mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{}, 1)\mbox{]})
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_aecda5e2c5810b35f98a0466a348af120}{add\+\_\+edge} (edges, src\+\_\+actor\+\_\+index, src\+\_\+port\+\_\+index, dest\+\_\+actor\+\_\+index, dest\+\_\+port\+\_\+index, actors)
-\item 
-def \hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\+\_\+layered\+\_\+actors} (actors)
-\end{DoxyCompactItemize}
+class \hyperlink{classsylva_1_1base_1_1sdf_1_1_s_d_f_g}{S\+D\+FG}
+\begin{DoxyCompactList}\small\item\em Class for \hyperlink{classsylva_1_1base_1_1sdf_1_1_s_d_f_g}{S\+D\+FG} Graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}{\+\_\+\+\_\+author\+\_\+\+\_\+} = \textquotesingle{}Shuo Li $<$contact@shuol.\+li$>$\textquotesingle{}
 \item 
-string \hyperlink{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2017-\/05-\/12\textquotesingle{}
+string \hyperlink{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}{\+\_\+\+\_\+version\+\_\+\+\_\+} = \textquotesingle{}2017-\/05-\/17\textquotesingle{}
 \item 
-string \hyperlink{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}{\+\_\+\+\_\+license\+\_\+\+\_\+} = \textquotesingle{}M\+IT\textquotesingle{}
-\item 
-\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d} = \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}()
-\item 
-\hyperlink{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}{dc} = dict(\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d})
-\item 
-dictionary \hyperlink{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}{default\+\_\+actor\+\_\+style}
-\item 
-dictionary \hyperlink{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}{default\+\_\+annotation\+\_\+style}
+string \hyperlink{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}{\+\_\+\+\_\+license\+\_\+\+\_\+} = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 All S\+DF graph related classes and methods. 
-
-\subsection{Function Documentation}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}\label{namespacesylva_1_1base_1_1sdf_a2fc075a9dc81209dee7a5b97d99640e5}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!add\+\_\+actor@{add\+\_\+actor}}
-\index{add\+\_\+actor@{add\+\_\+actor}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{add\+\_\+actor()}{add\_actor()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+add\+\_\+actor (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{name,  }\item[{}]{index,  }\item[{}]{inports,  }\item[{}]{outports,  }\item[{}]{input\+\_\+token\+\_\+type = {\ttfamily \mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{},~1)\mbox{]}},  }\item[{}]{output\+\_\+token\+\_\+type = {\ttfamily \mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{},~1)\mbox{]}} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 393 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+add\+\_\+edge(), and sylva.\+base.\+sdf.\+make\+\_\+sdf\+\_\+actor().
-
-
-
-Referenced by sylva.\+dse.\+dse\+\_\+engine\+\_\+v1.\+assign\+\_\+fimps(), and sylva.\+base.\+sdf.\+dump\+\_\+to\+\_\+file().
-
-
-\begin{DoxyCode}
-393                   output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
-394 
-395         actors.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}{make\_sdf\_actor}(name, index,
-396                                      inports, outports, input\_token\_type, output\_token\_type))
-397 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_aecda5e2c5810b35f98a0466a348af120}\label{namespacesylva_1_1base_1_1sdf_aecda5e2c5810b35f98a0466a348af120}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!add\+\_\+edge@{add\+\_\+edge}}
-\index{add\+\_\+edge@{add\+\_\+edge}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{add\+\_\+edge()}{add\_edge()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{edges,  }\item[{}]{src\+\_\+actor\+\_\+index,  }\item[{}]{src\+\_\+port\+\_\+index,  }\item[{}]{dest\+\_\+actor\+\_\+index,  }\item[{}]{dest\+\_\+port\+\_\+index,  }\item[{}]{actors }\end{DoxyParamCaption})}
-
-
-
-Definition at line 399 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge().
-
-
-
-Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor().
-
-
-\begin{DoxyCode}
-399                  dest\_actor\_index, dest\_port\_index, actors):
-400 
-401         \textcolor{keywordflow}{return} edges.append(\hyperlink{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}{create\_sdf\_edge}(
-402             src\_actor\_index, src\_port\_index,
-403             dest\_actor\_index, dest\_port\_index, actors))
-404 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a0c4055dfc61c95b2f23e5a5dba353302}\label{namespacesylva_1_1base_1_1sdf_a0c4055dfc61c95b2f23e5a5dba353302}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!connect@{connect}}
-\index{connect@{connect}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{connect()}{connect()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+connect (\begin{DoxyParamCaption}\item[{}]{src\+\_\+actor,  }\item[{}]{src\+\_\+port\+\_\+index,  }\item[{}]{src\+\_\+data\+\_\+token\+\_\+count,  }\item[{}]{dest\+\_\+actor,  }\item[{}]{dest\+\_\+port\+\_\+index,  }\item[{}]{dest\+\_\+data\+\_\+token\+\_\+count,  }\item[{}]{data\+\_\+token\+\_\+type = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}noName\textquotesingle{},~1)} }\end{DoxyParamCaption})}
-
-\begin{DoxyVerb}  Create a connection between two ports of two actors.
-  Ports are automatically generated.
-\end{DoxyVerb}
- 
-
-Definition at line 247 of file sdf.\+py.
-
-
-
-Referenced by sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge().
-
-
-\begin{DoxyCode}
-247                 data\_token\_type=DataTokenType(\textcolor{stringliteral}{'noName'}, 1)):
-248         \textcolor{stringliteral}{'''}
-249 \textcolor{stringliteral}{          Create a connection between two ports of two actors.}
-250 \textcolor{stringliteral}{          Ports are automatically generated.}
-251 \textcolor{stringliteral}{        '''}
-252 
-253         src\_ports = [output\_port
-254                      \textcolor{keywordflow}{for} output\_port \textcolor{keywordflow}{in} src\_actor.output\_ports
-255                      \textcolor{keywordflow}{if} output\_port.index == src\_port\_index]
-256 
-257         \textcolor{keywordflow}{if} len(src\_ports) == 1:
-258             src\_port = src\_ports[0]
-259         \textcolor{keywordflow}{else}:
-260             src\_port = port(name=\textcolor{stringliteral}{'%s\_output\_port\_%d'}
-261                             % (src\_actor.name, src\_port\_index),
-262                             index=src\_port\_index,
-263                             type=data\_token\_type,
-264                             count=src\_data\_token\_count)
-265 
-266         dest\_ports = [input\_port
-267                       \textcolor{keywordflow}{for} input\_port \textcolor{keywordflow}{in} dest\_actor.input\_ports
-268                       \textcolor{keywordflow}{if} input\_port.index == dest\_port\_index]
-269 
-270         \textcolor{keywordflow}{if} len(dest\_ports) == 1:
-271             dest\_port = dest\_ports[0]
-272         \textcolor{keywordflow}{else}:
-273             dest\_port = port(name=\textcolor{stringliteral}{'%s\_input\_port\_%d'}
-274                              % (dest\_actor.name, dest\_port\_index),
-275                              index=dest\_port\_index,
-276                              type=data\_token\_type,
-277                              count=dest\_data\_token\_count)
-278 
-279         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-280 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}\label{namespacesylva_1_1base_1_1sdf_a7c688b99c9dcb365aa7598c79f038839}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!create\+\_\+sdf\+\_\+edge@{create\+\_\+sdf\+\_\+edge}}
-\index{create\+\_\+sdf\+\_\+edge@{create\+\_\+sdf\+\_\+edge}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{create\+\_\+sdf\+\_\+edge()}{create\_sdf\_edge()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{src\+\_\+actor\+\_\+index,  }\item[{}]{src\+\_\+port\+\_\+index,  }\item[{}]{dest\+\_\+actor\+\_\+index,  }\item[{}]{dest\+\_\+port\+\_\+index,  }\item[{}]{actors }\end{DoxyParamCaption})}
-
-
-
-Definition at line 235 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+connect().
-
-
-
-Referenced by sylva.\+base.\+sdf.\+add\+\_\+edge(), and sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge().
-
-
-\begin{DoxyCode}
-235                         dest\_actor\_index, dest\_port\_index, actors):
-236 
-237         src\_actor = actors[src\_actor\_index]
-238         src\_port = src\_actor.output\_ports[src\_port\_index]
-239 
-240         dest\_actor = actors[dest\_actor\_index]
-241         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
-242 
-243         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-244 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}\label{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!dump\+\_\+to\+\_\+file@{dump\+\_\+to\+\_\+file}}
-\index{dump\+\_\+to\+\_\+file@{dump\+\_\+to\+\_\+file}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{dump\+\_\+to\+\_\+file()}{dump\_to\_file()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+dump\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{}]{item,  }\item[{}]{filepath,  }\item[{}]{indent = {\ttfamily 2} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 386 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+add\+\_\+actor().
-
-
-\begin{DoxyCode}
-386     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a55c1c6ea91b0ed9948ce670cd269b88b}{dump\_to\_file}(item, filepath, indent=2):
-387         f = open(filepath, \textcolor{stringliteral}{'w+'})
-388         f.write(json.dumps(item, indent=2))
-389         f.close()
-390 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}\label{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!get\+\_\+layered\+\_\+actors@{get\+\_\+layered\+\_\+actors}}
-\index{get\+\_\+layered\+\_\+actors@{get\+\_\+layered\+\_\+actors}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{get\+\_\+layered\+\_\+actors()}{get\_layered\_actors()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+get\+\_\+layered\+\_\+actors (\begin{DoxyParamCaption}\item[{}]{actors }\end{DoxyParamCaption})}
-
-
-
-Definition at line 428 of file sdf.\+py.
-
-
-
-Referenced by sylva.\+base.\+sdf.\+sdfg.\+layered\+\_\+actors().
-
-
-\begin{DoxyCode}
-428     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a1e0fb379d9b6a1f2adb650611bdb49e6}{get\_layered\_actors}(actors):
-429         result = []
-430         checked = []
-431 
-432         \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} result \textcolor{keywordflow}{or} result[-1]:
-433             result.append([])
-434             \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} actors:
-435                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} checked:
-436                     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} a.previous:
-437                         result[-1].append(a)
-438                         \textcolor{keywordflow}{continue}
-439                     \textcolor{keywordflow}{else}:
-440                         \textcolor{keywordflow}{for} pa \textcolor{keywordflow}{in} a.previous:
-441                             \textcolor{keywordflow}{if} pa.src\_actor \textcolor{keywordflow}{in} checked:
-442                                 \textcolor{keywordflow}{if} a \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} result[-1]:
-443                                     result[-1].append(a)
-444             checked += result[-1]
-445 
-446         \textcolor{keywordflow}{return} result[:-1]
-447 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}\label{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+actor@{load\+\_\+sdf\+\_\+actor}}
-\index{load\+\_\+sdf\+\_\+actor@{load\+\_\+sdf\+\_\+actor}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{load\+\_\+sdf\+\_\+actor()}{load\_sdf\_actor()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict,  }\item[{}]{keys = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 334 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge\+\_\+index(), sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+port(), and sylva.\+base.\+sdf.\+make\+\_\+sdf\+\_\+actor().
-
-
-
-Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
-
-
-\begin{DoxyCode}
-334     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(json\_dict, keys=[]):
-335 
-336         result = actor(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
-337                        index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
-338                        input\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
-339                                     \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'input\_ports'}]],
-340                        output\_ports=[\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(p)
-341                                      \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'output\_ports'}]],
-342                        next=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
-343                              \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'next'}]],
-344                        previous=[\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(e)
-345                                  \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'previous'}]])
-346         actor\_keys = keys \textcolor{keywordflow}{or} [
-347             \textcolor{stringliteral}{'input\_end'}, \textcolor{stringliteral}{'output\_start'},
-348             \textcolor{stringliteral}{'buffer\_end'}, \textcolor{stringliteral}{'start'}, \textcolor{stringliteral}{'end'},
-349             \textcolor{stringliteral}{'base\_actor\_index'}, \textcolor{stringliteral}{'fimp\_index'}]
-350 
-351         \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} actor\_keys:
-352             \textcolor{keywordflow}{if} key \textcolor{keywordflow}{in} json\_dict.keys():
-353                 setattr(result, key, json\_dict[key])
-354 
-355         \textcolor{keywordflow}{return} result
-356 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}\label{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+edge@{load\+\_\+sdf\+\_\+edge}}
-\index{load\+\_\+sdf\+\_\+edge@{load\+\_\+sdf\+\_\+edge}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{load\+\_\+sdf\+\_\+edge()}{load\_sdf\_edge()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict,  }\item[{}]{actors }\end{DoxyParamCaption})}
-
-
-
-Definition at line 222 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+create\+\_\+sdf\+\_\+edge(), and sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge\+\_\+index().
-
-
-
-Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph().
-
-
-\begin{DoxyCode}
-222     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(json\_dict, actors):
-223 
-224         src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index = 
-      \hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict)
-225 
-226         src\_actor = actors[src\_actor\_index]
-227         src\_port = src\_actor.output\_ports[src\_port\_index]
-228 
-229         dest\_actor = actors[dest\_actor\_index]
-230         dest\_port = dest\_actor.input\_ports[dest\_port\_index]
-231 
-232         \textcolor{keywordflow}{return} edge(src\_actor, src\_port, dest\_actor, dest\_port)
-233 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}\label{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+edge\+\_\+index@{load\+\_\+sdf\+\_\+edge\+\_\+index}}
-\index{load\+\_\+sdf\+\_\+edge\+\_\+index@{load\+\_\+sdf\+\_\+edge\+\_\+index}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{load\+\_\+sdf\+\_\+edge\+\_\+index()}{load\_sdf\_edge\_index()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge\+\_\+index (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict }\end{DoxyParamCaption})}
-
-
-
-Definition at line 212 of file sdf.\+py.
-
-
-
-Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor(), and sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge().
-
-
-\begin{DoxyCode}
-212     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a67886f481ab9be68797400241d754f64}{load\_sdf\_edge\_index}(json\_dict):
-213 
-214         src\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'src\_actor'}])
-215         src\_port\_index = int(json\_dict[\textcolor{stringliteral}{'src\_port'}])
-216 
-217         dest\_actor\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_actor'}])
-218         dest\_port\_index = int(json\_dict[\textcolor{stringliteral}{'dest\_port'}])
-219 
-220         \textcolor{keywordflow}{return} (src\_actor\_index, src\_port\_index, dest\_actor\_index, dest\_port\_index)
-221 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}\label{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+graph@{load\+\_\+sdf\+\_\+graph}}
-\index{load\+\_\+sdf\+\_\+graph@{load\+\_\+sdf\+\_\+graph}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{load\+\_\+sdf\+\_\+graph()}{load\_sdf\_graph()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict,  }\item[{}]{actor\+\_\+keys = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 379 of file sdf.\+py.
-
-
-
-References sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor(), and sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+edge().
-
-
-
-Referenced by sylva.\+base.\+sdf.\+sdfg.\+load().
-
-
-\begin{DoxyCode}
-379     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a0bdfa7a81bf9648662631113a609062d}{load\_sdf\_graph}(json\_dict, actor\_keys=[]):
-380         actors = []
-381         edges = []
-382         actors = [\hyperlink{namespacesylva_1_1base_1_1sdf_a14b2bfbb0fd81d1e114b670f13f718f1}{load\_sdf\_actor}(a, actor\_keys) \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'actors'}]]
-383         edges = [\hyperlink{namespacesylva_1_1base_1_1sdf_acd1ba464e47476a5205de3e3856fbb83}{load\_sdf\_edge}(e, actors) \textcolor{keywordflow}{for} e \textcolor{keywordflow}{in} json\_dict[\textcolor{stringliteral}{'edges'}]]
-384         \textcolor{keywordflow}{return} (actors, edges)
-385 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}\label{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!load\+\_\+sdf\+\_\+port@{load\+\_\+sdf\+\_\+port}}
-\index{load\+\_\+sdf\+\_\+port@{load\+\_\+sdf\+\_\+port}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{load\+\_\+sdf\+\_\+port()}{load\_sdf\_port()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+port (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict }\end{DoxyParamCaption})}
-
-
-
-Definition at line 166 of file sdf.\+py.
-
-
-
-Referenced by sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor().
-
-
-\begin{DoxyCode}
-166 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_a72bbd0e1cd0a666269ac3f17427954b8}{load\_sdf\_port}(json\_dict):
-167     \textcolor{keywordflow}{return} Port(name=str(json\_dict[\textcolor{stringliteral}{'name'}]),
-168                 index=int(json\_dict[\textcolor{stringliteral}{'index'}]),
-169                 type=DataTokenType.deserialize(json\_dict[\textcolor{stringliteral}{'type'}]),
-170                 count=int(json\_dict[\textcolor{stringliteral}{'count'}]))
-171 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}\label{namespacesylva_1_1base_1_1sdf_a34a38a5853d86a6e49aba53f9040462d}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!make\+\_\+sdf\+\_\+actor@{make\+\_\+sdf\+\_\+actor}}
-\index{make\+\_\+sdf\+\_\+actor@{make\+\_\+sdf\+\_\+actor}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{make\+\_\+sdf\+\_\+actor()}{make\_sdf\_actor()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+make\+\_\+sdf\+\_\+actor (\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{index,  }\item[{}]{inports,  }\item[{}]{outports,  }\item[{}]{input\+\_\+token\+\_\+type = {\ttfamily \mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{},~1)\mbox{]}},  }\item[{}]{output\+\_\+token\+\_\+type = {\ttfamily \mbox{[}\hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}(\textquotesingle{}std\+\_\+logic\textquotesingle{},~1)\mbox{]}} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 359 of file sdf.\+py.
-
-
-
-Referenced by sylva.\+base.\+sdf.\+add\+\_\+actor(), and sylva.\+base.\+sdf.\+load\+\_\+sdf\+\_\+actor().
-
-
-\begin{DoxyCode}
-359                        output\_token\_type=[DataTokenType(\textcolor{stringliteral}{'std\_logic'}, 1)]):
-360 
-361         input\_ports = [Port(\textcolor{stringliteral}{'%s\_in\_%s'} % (name, i), i,
-362                             input\_token\_type[i], c)
-363                        \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(inports)]
-364         output\_ports = [Port(\textcolor{stringliteral}{'%s\_out\_%s'} % (name, i), i,
-365                              output\_token\_type[i], c)
-366                         \textcolor{keywordflow}{for} i, c \textcolor{keywordflow}{in} enumerate(outports)]
-367 
-368         \textcolor{keywordflow}{return} actor(name=name, index=index,
-369                      input\_ports=input\_ports, output\_ports=output\_ports)
-370 
-\end{DoxyCode}
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}\label{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!serialize\+\_\+sdf\+\_\+graph@{serialize\+\_\+sdf\+\_\+graph}}
-\index{serialize\+\_\+sdf\+\_\+graph@{serialize\+\_\+sdf\+\_\+graph}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{serialize\+\_\+sdf\+\_\+graph()}{serialize\_sdf\_graph()}}
-{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+serialize\+\_\+sdf\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{actors,  }\item[{}]{edges }\end{DoxyParamCaption})}
-
-
-
-Definition at line 373 of file sdf.\+py.
-
-
-\begin{DoxyCode}
-373     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1base_1_1sdf_af3757c4b0997b952e06efde4a2da8321}{serialize\_sdf\_graph}(actors, edges):
-374         result = \{\}
-375         result[\textcolor{stringliteral}{'actors'}] = [actor.serialize() \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} actors]
-376         result[\textcolor{stringliteral}{'edges'}] = [edge.serialize() \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} edges]
-377         \textcolor{keywordflow}{return} result
-378 
-\end{DoxyCode}
-
 
 \subsection{Variable Documentation}
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}\label{namespacesylva_1_1base_1_1sdf_acc6d2abcf12fe231ba37a00428ac6324}} 
@@ -482,88 +45,25 @@ Definition at line 373 of file sdf.\+py.
 
 
 
-Definition at line 12 of file sdf.\+py.
+Definition at line 15 of file sdf.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}\label{namespacesylva_1_1base_1_1sdf_a980e085a8798aeb5104490284de5edd1}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+license\+\_\+\+\_\+@{\+\_\+\+\_\+license\+\_\+\+\_\+}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+license\+\_\+\+\_\+}{\_\_license\_\_}}
-{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+license\+\_\+\+\_\+ = \textquotesingle{}M\+IT\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+license\+\_\+\+\_\+ = \textquotesingle{}https\+://opensource.\+org/licenses/M\+IT\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 14 of file sdf.\+py.
+Definition at line 17 of file sdf.\+py.
 
 \mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}\label{namespacesylva_1_1base_1_1sdf_adccda126d39b0e5206af68035aea9066}} 
 \index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+version\+\_\+\+\_\+@{\+\_\+\+\_\+version\+\_\+\+\_\+}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+version\+\_\+\+\_\+}{\_\_version\_\_}}
-{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2017-\/05-\/12\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily string sylva.\+base.\+sdf.\+\_\+\+\_\+version\+\_\+\+\_\+ = \textquotesingle{}2017-\/05-\/17\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 13 of file sdf.\+py.
-
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}\label{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!d@{d}}
-\index{d@{d}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{d}{d}}
-{\footnotesize\ttfamily sylva.\+base.\+sdf.\+d = \hyperlink{classsylva_1_1base_1_1sdf_1_1_data_token_type}{Data\+Token\+Type}()}
-
-
-
-Definition at line 74 of file sdf.\+py.
-
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}\label{namespacesylva_1_1base_1_1sdf_a1e21c34d5788bcf15b3fb64cf5381843}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!dc@{dc}}
-\index{dc@{dc}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{dc}{dc}}
-{\footnotesize\ttfamily sylva.\+base.\+sdf.\+dc = dict(\hyperlink{namespacesylva_1_1base_1_1sdf_a7cf3fa067b15b3a601f61564012ddaf1}{d})}
-
-
-
-Definition at line 75 of file sdf.\+py.
-
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}\label{namespacesylva_1_1base_1_1sdf_a39d9eb96b3c8367d46f62630c694532a}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!default\+\_\+actor\+\_\+style@{default\+\_\+actor\+\_\+style}}
-\index{default\+\_\+actor\+\_\+style@{default\+\_\+actor\+\_\+style}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{default\+\_\+actor\+\_\+style}{default\_actor\_style}}
-{\footnotesize\ttfamily dictionary sylva.\+base.\+sdf.\+default\+\_\+actor\+\_\+style}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-1 =  \{
-2         \textcolor{stringliteral}{'node\_shape'}: \textcolor{stringliteral}{'circle'},
-3         \textcolor{stringliteral}{'facecolor'}: \textcolor{stringliteral}{'white'},
-4         \textcolor{stringliteral}{'edgecolor'}: \textcolor{stringliteral}{'black'},
-5         \textcolor{stringliteral}{'linestyle'}: \textcolor{stringliteral}{'solid'},
-6         \textcolor{stringliteral}{'linewidth'}: 1,
-7         \textcolor{stringliteral}{'radius'}: 0.4,
-8         \textcolor{stringliteral}{'width'}: 0.4,
-9         \textcolor{stringliteral}{'height'}: 0.4,
-10         \textcolor{stringliteral}{'margin'}: 0.8,
-11     \}
-\end{DoxyCode}
-
-
-Definition at line 407 of file sdf.\+py.
-
-\mbox{\Hypertarget{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}\label{namespacesylva_1_1base_1_1sdf_a2fc7e4f9875075ae2cc4d82650265733}} 
-\index{sylva\+::base\+::sdf@{sylva\+::base\+::sdf}!default\+\_\+annotation\+\_\+style@{default\+\_\+annotation\+\_\+style}}
-\index{default\+\_\+annotation\+\_\+style@{default\+\_\+annotation\+\_\+style}!sylva\+::base\+::sdf@{sylva\+::base\+::sdf}}
-\subsubsection{\texorpdfstring{default\+\_\+annotation\+\_\+style}{default\_annotation\_style}}
-{\footnotesize\ttfamily dictionary sylva.\+base.\+sdf.\+default\+\_\+annotation\+\_\+style}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-1 =  \{
-2         \textcolor{stringliteral}{'color'}: \textcolor{stringliteral}{'black'},
-3         \textcolor{stringliteral}{'fontweight'}: \textcolor{stringliteral}{'normal'},
-4         \textcolor{stringliteral}{'fontsize'}: 12,
-5         \textcolor{stringliteral}{'ha'}: \textcolor{stringliteral}{'center'},
-6         \textcolor{stringliteral}{'va'}: \textcolor{stringliteral}{'center'}\}
-\end{DoxyCode}
-
-
-Definition at line 419 of file sdf.\+py.
+Definition at line 16 of file sdf.\+py.
 

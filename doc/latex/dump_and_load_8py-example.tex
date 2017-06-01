@@ -1,0 +1,40 @@
+\hypertarget{dump_and_load_8py-example}{}\section{dump\+\_\+and\+\_\+load.\+py}
+
+\begin{DoxyCodeInclude}
+1 
+6 
+7 \textcolor{keyword}{from} \hyperlink{namespacesylva_1_1base_1_1sdf}{sylva.base.sdf} \textcolor{keyword}{import} DataTokenType
+8 
+9 \_\_author\_\_ = \textcolor{stringliteral}{'Shuo Li <contact@shuol.li>'}
+10 \_\_version\_\_ = \textcolor{stringliteral}{'2017-05-19'}
+11 \_\_license\_\_ = \textcolor{stringliteral}{'https://opensource.org/licenses/MIT'}
+12 
+13 
+14 
+23 \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}{dump\_and\_load}():
+24 
+25     \textcolor{comment}{# Create a new DataTokenType object}
+26     int32 = DataTokenType(name=\textcolor{stringliteral}{'int32'}, size=32)
+27 
+28     \textcolor{comment}{# Convert DataTokenType object to dictionary object}
+29     dict\_object = dict(int32)
+30 
+31     \textcolor{comment}{# check the content of `dict\_object`}
+32     print(dict\_object)
+33 
+34     \textcolor{comment}{# Deserialize a DataTokenType object from the created dictionary object}
+35     another\_type = DataTokenType(**dict\_object)
+36 
+37     \textcolor{comment}{# check the content of the generated DataTokenType object}
+38     print(another\_type)
+39 
+40 
+41 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{'\_\_main\_\_'}:
+42 
+43     \hyperlink{namespacesylva_1_1examples_1_1dump__and__load_afb1e7b81c3c5d6dcb649ce2c3e32bdf7}{dump\_and\_load}()
+44 
+45     \textcolor{comment}{# Output should be:}
+46     \textcolor{comment}{# `\{'name': 'int32', 'size': 32, '\_class': 'DataTokenType'\}`}
+47     \textcolor{comment}{# `\{'\_class': 'DataTokenType', 'name': 'int32', 'size': 32\}`}
+\end{DoxyCodeInclude}
+ 

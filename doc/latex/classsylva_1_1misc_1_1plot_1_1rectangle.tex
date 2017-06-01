@@ -1,9 +1,12 @@
 \hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle}{}\section{sylva.\+misc.\+plot.\+rectangle Class Reference}
 \label{classsylva_1_1misc_1_1plot_1_1rectangle}\index{sylva.\+misc.\+plot.\+rectangle@{sylva.\+misc.\+plot.\+rectangle}}
-Inheritance diagram for sylva.\+misc.\+plot.\+rectangle\+:\begin{figure}[H]
+
+
+Inheritance diagram for sylva.\+misc.\+plot.\+rectangle\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classsylva_1_1misc_1_1plot_1_1rectangle}
+\includegraphics[width=204pt]{classsylva_1_1misc_1_1plot_1_1rectangle__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -69,7 +72,7 @@ def \hyperlink{classsylva_1_1misc_1_1plot_1_1rectangle_aab959379faa71fa2fff5f179
 \subsection{Detailed Description}
 
 
-Definition at line 220 of file plot.\+py.
+Definition at line 228 of file plot.\+py.
 
 
 
@@ -82,18 +85,18 @@ Definition at line 220 of file plot.\+py.
 
 
 
-Definition at line 223 of file plot.\+py.
+Definition at line 231 of file plot.\+py.
 
 
 \begin{DoxyCode}
-223       xy = \textcolor{keywordtype}{None}, x = \textcolor{keywordtype}{None}, y = \textcolor{keywordtype}{None}) :
-224 
-225       \textcolor{comment}{# top-left position}
-226       self.xy = xy \textcolor{keywordflow}{or} point(x, y)
-227       self.name = name \textcolor{keywordflow}{or} str(self.xy)
-228       self.width = width
-229       self.height = height
-230 
+231                      xy=\textcolor{keywordtype}{None}, x=\textcolor{keywordtype}{None}, y=\textcolor{keywordtype}{None}):
+232 
+233             \textcolor{comment}{# top-left position}
+234             self.xy = xy \textcolor{keywordflow}{or} point(x, y)
+235             self.name = name \textcolor{keywordflow}{or} str(self.xy)
+236             self.width = width
+237             self.height = height
+238 
 \end{DoxyCode}
 
 
@@ -106,7 +109,7 @@ Definition at line 223 of file plot.\+py.
 
 
 
-Definition at line 239 of file plot.\+py.
+Definition at line 247 of file plot.\+py.
 
 
 
@@ -114,18 +117,18 @@ References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rec
 
 
 \begin{DoxyCode}
-239     \textcolor{keyword}{def }\_\_contains\_\_(self, other) :
-240       \textcolor{keywordflow}{if} isinstance(other, rectangle) :
-241         \textcolor{keywordflow}{return} self.top\_left \textcolor{keywordflow}{in} other \(\backslash\)
-242             \textcolor{keywordflow}{or} self.top\_right \textcolor{keywordflow}{in} other \(\backslash\)
-243             \textcolor{keywordflow}{or} self.bottom\_left \textcolor{keywordflow}{in} other \(\backslash\)
-244             \textcolor{keywordflow}{or} self.bottom\_right \textcolor{keywordflow}{in} other
-245       \textcolor{keywordflow}{elif} isinstance(other, point) :
-246         x\_in\_range = self.left.x <= other.x <= self.right.x
-247         y\_in\_range = self.top.y <= other.y <= self.bottom.y
-248         \textcolor{keywordflow}{return} x\_in\_range \textcolor{keywordflow}{and} y\_in\_range
-249       \textcolor{keywordflow}{return} \textcolor{keyword}{False}
-250 
+247         \textcolor{keyword}{def }\_\_contains\_\_(self, other):
+248             \textcolor{keywordflow}{if} isinstance(other, rectangle):
+249                 \textcolor{keywordflow}{return} self.top\_left \textcolor{keywordflow}{in} other \(\backslash\)
+250                     \textcolor{keywordflow}{or} self.top\_right \textcolor{keywordflow}{in} other \(\backslash\)
+251                     \textcolor{keywordflow}{or} self.bottom\_left \textcolor{keywordflow}{in} other \(\backslash\)
+252                     \textcolor{keywordflow}{or} self.bottom\_right \textcolor{keywordflow}{in} other
+253             \textcolor{keywordflow}{elif} isinstance(other, point):
+254                 x\_in\_range = self.left.x <= other.x <= self.right.x
+255                 y\_in\_range = self.top.y <= other.y <= self.bottom.y
+256                 \textcolor{keywordflow}{return} x\_in\_range \textcolor{keywordflow}{and} y\_in\_range
+257             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+258 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a1ad220e20ea15beaeafdd814705d570e}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a1ad220e20ea15beaeafdd814705d570e}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!bottom@{bottom}}
@@ -135,11 +138,11 @@ References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rec
 
 
 
-Definition at line 283 of file plot.\+py.
+Definition at line 294 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -147,11 +150,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-283     \textcolor{keyword}{def }bottom(self):
-284       x = self.x + self.width/2
-285       y = self.y + self.height
-286       \textcolor{keywordflow}{return} point(x, y)
-287 
+294         \textcolor{keyword}{def }bottom(self):
+295             x = self.x + self.width / 2
+296             y = self.y + self.height
+297             \textcolor{keywordflow}{return} point(x, y)
+298 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a7c8c635a0a782c8e304f7440b74d8066}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a7c8c635a0a782c8e304f7440b74d8066}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!bottom\+\_\+left@{bottom\+\_\+left}}
@@ -161,11 +164,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 301 of file plot.\+py.
+Definition at line 312 of file plot.\+py.
 
 
 
-References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, and sylva.\+misc.\+plot.\+rectangle.\+x().
+References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x.
 
 
 
@@ -173,9 +176,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-301     \textcolor{keyword}{def }bottom\_left(self):
-302       \textcolor{keywordflow}{return} point(self.x, self.bottom.y)
-303 
+312         \textcolor{keyword}{def }bottom\_left(self):
+313             \textcolor{keywordflow}{return} point(self.x, self.bottom.y)
+314 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a657018c2fcbc892047da2f18166aae85}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a657018c2fcbc892047da2f18166aae85}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!bottom\+\_\+right@{bottom\+\_\+right}}
@@ -185,7 +188,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 293 of file plot.\+py.
+Definition at line 304 of file plot.\+py.
 
 
 
@@ -197,9 +200,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-293     \textcolor{keyword}{def }bottom\_right(self):
-294       \textcolor{keywordflow}{return} point(self.right.x, self.bottom.y)
-295 
+304         \textcolor{keyword}{def }bottom\_right(self):
+305             \textcolor{keywordflow}{return} point(self.right.x, self.bottom.y)
+306 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a0466258315b096cd7f4e1918a1007488}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a0466258315b096cd7f4e1918a1007488}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!center@{center}}
@@ -209,17 +212,17 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 305 of file plot.\+py.
+Definition at line 316 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left(), sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, and sylva.\+misc.\+plot.\+rectangle.\+width.
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+misc.\+plot.\+rectangle.\+top\+\_\+left(), sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, and sylva.\+misc.\+plot.\+rectangle.\+width.
 
 
 \begin{DoxyCode}
-305     \textcolor{keyword}{def }center(self):
-306       \textcolor{keywordflow}{return} self.top\_left + point(self.width/2, self.height/2)
-307 
+316         \textcolor{keyword}{def }center(self):
+317             \textcolor{keywordflow}{return} self.top\_left + point(self.width / 2, self.height / 2)
+318 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_af3defb54fedda1e1f8d886e5f840bb72}\label{classsylva_1_1misc_1_1plot_1_1rectangle_af3defb54fedda1e1f8d886e5f840bb72}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!get\+\_\+patch@{get\+\_\+patch}}
@@ -229,23 +232,23 @@ References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+hei
 
 
 
-Definition at line 314 of file plot.\+py.
+Definition at line 325 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-314     \textcolor{keyword}{def }get\_patch(self, style = None) :
-315 
-316       \_style = default\_rectangle\_style
-317       \_style.update(style \textcolor{keywordflow}{or} \{\})
-318 
-319       \_style[\textcolor{stringliteral}{'width'}] = self.width
-320       \_style[\textcolor{stringliteral}{'height'}] = self.height
-321       \textcolor{keywordflow}{return} mpatches.Rectangle( (self.x, self.y), **\_style)
-322 
+325         \textcolor{keyword}{def }get\_patch(self, style=None):
+326 
+327             \_style = default\_rectangle\_style
+328             \_style.update(style \textcolor{keywordflow}{or} \{\})
+329 
+330             \_style[\textcolor{stringliteral}{'width'}] = self.width
+331             \_style[\textcolor{stringliteral}{'height'}] = self.height
+332             \textcolor{keywordflow}{return} mpatches.Rectangle((self.x, self.y), **\_style)
+333 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a4080bf5f63cc48132e480b458369af41}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a4080bf5f63cc48132e480b458369af41}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!left@{left}}
@@ -255,11 +258,11 @@ References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+hei
 
 
 
-Definition at line 271 of file plot.\+py.
+Definition at line 282 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -267,11 +270,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-271     \textcolor{keyword}{def }left(self):
-272       x = self.x
-273       y = self.y + self.height/2
-274       \textcolor{keywordflow}{return} point(x, y)
-275 
+282         \textcolor{keyword}{def }left(self):
+283             x = self.x
+284             y = self.y + self.height / 2
+285             \textcolor{keywordflow}{return} point(x, y)
+286 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a95db845fde73592eef007ab940b8b140}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a95db845fde73592eef007ab940b8b140}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!overlaps@{overlaps}}
@@ -281,7 +284,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 231 of file plot.\+py.
+Definition at line 239 of file plot.\+py.
 
 
 
@@ -289,14 +292,14 @@ References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rec
 
 
 \begin{DoxyCode}
-231     \textcolor{keyword}{def }overlaps(self, other) :
-232 
-233       right = other.left.x >= self.right.x
-234       left = other.right.x <= self.left.x
-235       top = other.bottom.y <= self.top.y
-236       bottom = other.top.y >= self.bottom.y
-237       \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} (right \textcolor{keywordflow}{or} left \textcolor{keywordflow}{or} top \textcolor{keywordflow}{or} bottom)
-238 
+239         \textcolor{keyword}{def }overlaps(self, other):
+240 
+241             right = other.left.x >= self.right.x
+242             left = other.right.x <= self.left.x
+243             top = other.bottom.y <= self.top.y
+244             bottom = other.top.y >= self.bottom.y
+245             \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} (right \textcolor{keywordflow}{or} left \textcolor{keywordflow}{or} top \textcolor{keywordflow}{or} bottom)
+246 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a6395db39d40526291589390d31437f80}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a6395db39d40526291589390d31437f80}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!pixel\+\_\+map@{pixel\+\_\+map}}
@@ -306,19 +309,19 @@ References sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+rec
 
 
 
-Definition at line 309 of file plot.\+py.
+Definition at line 320 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 \begin{DoxyCode}
-309     \textcolor{keyword}{def }pixel\_map(self) :
-310       \textcolor{keywordflow}{return} [ (x, y)
-311         \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(self.x, self.x + self.width, 1)
-312         \textcolor{keywordflow}{for} y \textcolor{keywordflow}{in} range(self.y, self.y + self.height, 1) ]
-313 
+320         \textcolor{keyword}{def }pixel\_map(self):
+321             \textcolor{keywordflow}{return} [(x, y)
+322                     \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(self.x, self.x + self.width, 1)
+323                     \textcolor{keywordflow}{for} y \textcolor{keywordflow}{in} range(self.y, self.y + self.height, 1)]
+324 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_ab0cdba67562bf45f97399b1e4529d6ac}\label{classsylva_1_1misc_1_1plot_1_1rectangle_ab0cdba67562bf45f97399b1e4529d6ac}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!place\+\_\+above\+\_\+of@{place\+\_\+above\+\_\+of}}
@@ -328,17 +331,17 @@ References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+hei
 
 
 
-Definition at line 329 of file plot.\+py.
+Definition at line 340 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle.\+xy.
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle.\+xy.
 
 
 \begin{DoxyCode}
-329     \textcolor{keyword}{def }place\_above\_of(self, other) :
-330       self.xy = other.top\_left - (0, self.height)
-331 
+340         \textcolor{keyword}{def }place\_above\_of(self, other):
+341             self.xy = other.top\_left - (0, self.height)
+342 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_aab959379faa71fa2fff5f1797207078b}\label{classsylva_1_1misc_1_1plot_1_1rectangle_aab959379faa71fa2fff5f1797207078b}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!place\+\_\+below\+\_\+of@{place\+\_\+below\+\_\+of}}
@@ -348,7 +351,7 @@ References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+hei
 
 
 
-Definition at line 332 of file plot.\+py.
+Definition at line 343 of file plot.\+py.
 
 
 
@@ -356,10 +359,10 @@ References sylva.\+misc.\+plot.\+canvas\+\_\+plot(), sylva.\+misc.\+plot.\+point
 
 
 \begin{DoxyCode}
-332     \textcolor{keyword}{def }place\_below\_of(self, other) :
-333       self.xy = other.bottom\_left
-334 
-335   \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1plot_a405ea3f626f2fbeea085e412f742ce68}{canvas\_plot}(rects, padding = 0.1, rectangle\_style = None, annotation\_style = None,
+343         \textcolor{keyword}{def }place\_below\_of(self, other):
+344             self.xy = other.bottom\_left
+345 
+346     \textcolor{keyword}{def }\hyperlink{namespacesylva_1_1misc_1_1plot_a405ea3f626f2fbeea085e412f742ce68}{canvas\_plot}(rects, padding=0.1, rectangle\_style=None, annotation\_style=None,
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_ad468b38c9b5c95f14e5a6dec5d064cb1}\label{classsylva_1_1misc_1_1plot_1_1rectangle_ad468b38c9b5c95f14e5a6dec5d064cb1}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!place\+\_\+left\+\_\+of@{place\+\_\+left\+\_\+of}}
@@ -369,17 +372,17 @@ References sylva.\+misc.\+plot.\+canvas\+\_\+plot(), sylva.\+misc.\+plot.\+point
 
 
 
-Definition at line 326 of file plot.\+py.
+Definition at line 337 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle.\+xy.
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle.\+xy.
 
 
 \begin{DoxyCode}
-326     \textcolor{keyword}{def }place\_left\_of(self, other) :
-327       self.xy = other.top\_left - (self.width, 0)
-328 
+337         \textcolor{keyword}{def }place\_left\_of(self, other):
+338             self.xy = other.top\_left - (self.width, 0)
+339 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a614690234b91159164255ffc1a32f8be}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a614690234b91159164255ffc1a32f8be}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!place\+\_\+right\+\_\+of@{place\+\_\+right\+\_\+of}}
@@ -389,7 +392,7 @@ References sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+widt
 
 
 
-Definition at line 323 of file plot.\+py.
+Definition at line 334 of file plot.\+py.
 
 
 
@@ -397,9 +400,9 @@ References sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle
 
 
 \begin{DoxyCode}
-323     \textcolor{keyword}{def }place\_right\_of(self, other) :
-324       self.xy = other.xy + (other.width, 0)
-325 
+334         \textcolor{keyword}{def }place\_right\_of(self, other):
+335             self.xy = other.xy + (other.width, 0)
+336 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a50bdb9a7a95b6e03a66ce8031649ff9f}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a50bdb9a7a95b6e03a66ce8031649ff9f}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!right@{right}}
@@ -409,11 +412,11 @@ References sylva.\+misc.\+plot.\+point.\+xy, and sylva.\+misc.\+plot.\+rectangle
 
 
 
-Definition at line 265 of file plot.\+py.
+Definition at line 276 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+height, sylva.\+base.\+fimp.\+fimp.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+height, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+height, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+height, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+height, sylva.\+misc.\+plot.\+rectangle.\+height, sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -421,11 +424,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-265     \textcolor{keyword}{def }right(self):
-266       x = self.x + self.width
-267       y = self.y + self.height/2
-268       \textcolor{keywordflow}{return} point(x, y)
-269 
+276         \textcolor{keyword}{def }right(self):
+277             x = self.x + self.width
+278             y = self.y + self.height / 2
+279             \textcolor{keywordflow}{return} point(x, y)
+280 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_ac5b4d8952847953f5aa329fb839b63ad}\label{classsylva_1_1misc_1_1plot_1_1rectangle_ac5b4d8952847953f5aa329fb839b63ad}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!top@{top}}
@@ -435,11 +438,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 277 of file plot.\+py.
+Definition at line 288 of file plot.\+py.
 
 
 
-References sylva.\+base.\+cgra.\+cgra.\+width, sylva.\+base.\+fimp.\+fimp.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+base.\+cgra.\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+C\+G\+R\+A.\+width, sylva.\+base.\+cgra(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/22).\+C\+G\+R\+A.\+width, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Cost.\+width, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Cost.\+width, sylva.\+misc.\+plot.\+rectangle.\+width, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -447,11 +450,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-277     \textcolor{keyword}{def }top(self):
-278       x = self.x + self.width/2
-279       y = self.y
-280       \textcolor{keywordflow}{return} point(x, y)
-281 
+288         \textcolor{keyword}{def }top(self):
+289             x = self.x + self.width / 2
+290             y = self.y
+291             \textcolor{keywordflow}{return} point(x, y)
+292 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_ac763b52f6d533f4b006421eae5f81b56}\label{classsylva_1_1misc_1_1plot_1_1rectangle_ac763b52f6d533f4b006421eae5f81b56}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!top\+\_\+left@{top\+\_\+left}}
@@ -461,11 +464,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 297 of file plot.\+py.
+Definition at line 308 of file plot.\+py.
 
 
 
-References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+x, sylva.\+misc.\+plot.\+point.\+x, sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+x, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+x, sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -473,9 +476,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-297     \textcolor{keyword}{def }top\_left(self):
-298       \textcolor{keywordflow}{return} point(self.x, self.y)
-299 
+308         \textcolor{keyword}{def }top\_left(self):
+309             \textcolor{keywordflow}{return} point(self.x, self.y)
+310 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a54324a7b1be1bd85655ee60686d5944f}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a54324a7b1be1bd85655ee60686d5944f}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!top\+\_\+right@{top\+\_\+right}}
@@ -485,11 +488,11 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 289 of file plot.\+py.
+Definition at line 300 of file plot.\+py.
 
 
 
-References sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, and sylva.\+misc.\+plot.\+rectangle.\+y().
+References sylva.\+misc.\+plot.\+rectangle.\+right(), sylva.\+code\+\_\+generation.\+floorplanner.\+floorplanner.\+y, sylva.\+misc.\+plot.\+point.\+y, sylva.\+misc.\+plot.\+rectangle.\+y(), sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+y, and sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+y.
 
 
 
@@ -497,9 +500,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 \begin{DoxyCode}
-289     \textcolor{keyword}{def }top\_right(self):
-290       \textcolor{keywordflow}{return} point(self.right.x, self.y)
-291 
+300         \textcolor{keyword}{def }top\_right(self):
+301             \textcolor{keywordflow}{return} point(self.right.x, self.y)
+302 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a935b64e6f087b6ab153df8a45e6dd72d}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a935b64e6f087b6ab153df8a45e6dd72d}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!x@{x}}
@@ -509,7 +512,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+\_\+\+\_\+contains\+\_\+\+\_\+()
 
 
 
-Definition at line 252 of file plot.\+py.
+Definition at line 260 of file plot.\+py.
 
 
 
@@ -521,8 +524,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 \begin{DoxyCode}
-252     \textcolor{keyword}{def }x(self):
-253       \textcolor{keywordflow}{return} self.xy.x
+260         \textcolor{keyword}{def }x(self):
+261             \textcolor{keywordflow}{return} self.xy.x
+262 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a94fe87f391637f1ddf6ab629ffea76a1}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a94fe87f391637f1ddf6ab629ffea76a1}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!x@{x}}
@@ -532,7 +536,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 
-Definition at line 255 of file plot.\+py.
+Definition at line 264 of file plot.\+py.
 
 
 
@@ -540,8 +544,9 @@ References sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+misc.\+plot.\+point.\+
 
 
 \begin{DoxyCode}
-255     \textcolor{keyword}{def }x(self, value):
-256       self.xy.x = value
+264         \textcolor{keyword}{def }x(self, value):
+265             self.xy.x = value
+266 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a3067088c7894de27d5a3338077ef027b}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a3067088c7894de27d5a3338077ef027b}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!y@{y}}
@@ -551,7 +556,7 @@ References sylva.\+misc.\+plot.\+rectangle.\+x(), sylva.\+misc.\+plot.\+point.\+
 
 
 
-Definition at line 258 of file plot.\+py.
+Definition at line 268 of file plot.\+py.
 
 
 
@@ -563,8 +568,9 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 \begin{DoxyCode}
-258     \textcolor{keyword}{def }y(self):
-259       \textcolor{keywordflow}{return} self.xy.y
+268         \textcolor{keyword}{def }y(self):
+269             \textcolor{keywordflow}{return} self.xy.y
+270 
 \end{DoxyCode}
 \mbox{\Hypertarget{classsylva_1_1misc_1_1plot_1_1rectangle_a99edbd1ca0485e36233c604797adcda8}\label{classsylva_1_1misc_1_1plot_1_1rectangle_a99edbd1ca0485e36233c604797adcda8}} 
 \index{sylva\+::misc\+::plot\+::rectangle@{sylva\+::misc\+::plot\+::rectangle}!y@{y}}
@@ -574,7 +580,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 
-Definition at line 261 of file plot.\+py.
+Definition at line 272 of file plot.\+py.
 
 
 
@@ -582,9 +588,9 @@ References sylva.\+misc.\+plot.\+point.\+xy, sylva.\+misc.\+plot.\+rectangle.\+x
 
 
 \begin{DoxyCode}
-261     \textcolor{keyword}{def }y(self, value):
-262       self.xy.y = value
-263 
+272         \textcolor{keyword}{def }y(self, value):
+273             self.xy.y = value
+274 
 \end{DoxyCode}
 
 
@@ -597,7 +603,7 @@ References sylva.\+misc.\+plot.\+point.\+xy, sylva.\+misc.\+plot.\+rectangle.\+x
 
 
 
-Definition at line 229 of file plot.\+py.
+Definition at line 237 of file plot.\+py.
 
 
 
@@ -611,7 +617,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 
-Definition at line 227 of file plot.\+py.
+Definition at line 235 of file plot.\+py.
 
 
 
@@ -625,7 +631,7 @@ Referenced by sylva.\+frontend.\+mdl\+\_\+reader.\+simulink\+\_\+model.\+\_\+\+\
 
 
 
-Definition at line 228 of file plot.\+py.
+Definition at line 236 of file plot.\+py.
 
 
 
@@ -639,7 +645,7 @@ Referenced by sylva.\+misc.\+plot.\+rectangle.\+bottom(), sylva.\+misc.\+plot.\+
 
 
 
-Definition at line 226 of file plot.\+py.
+Definition at line 234 of file plot.\+py.
 
 
 

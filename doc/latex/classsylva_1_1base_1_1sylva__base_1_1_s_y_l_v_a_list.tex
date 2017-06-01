@@ -1,0 +1,254 @@
+\hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list}{}\section{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List Class Reference}
+\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list}\index{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List@{sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List}}
+
+
+Class for list with custom actions on manipulations.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a43f7e190df1f424bcbf14b9c892b2127}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, args)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a7d8693b89ac0a60fa8fc313901db1ad1}{append} (self, item)
+\begin{DoxyCompactList}\small\item\em Override append method in list. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a34a24845d0df1e41f3584ba4bfb51598}{has} (self, attr\+\_\+name, attr\+\_\+value, check\+\_\+func=None)
+\begin{DoxyCompactList}\small\item\em Check if the current \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list}{S\+Y\+L\+V\+A\+List} has key value pair \#. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a0e822d791dfa807d2bdacc2717b2420a}{find} (self, attr\+\_\+name, attr\+\_\+value, check\+\_\+func=None)
+\begin{DoxyCompactList}\small\item\em Searches for the first match based on key-\/value pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a5ecf6ed5a0fbfa81d3c657a18a71a934}{before\+\_\+append\+\_\+actions}
+\begin{DoxyCompactList}\small\item\em The list of actions (type\+: types.\+Function\+Type) to be performed before appending an item to the list. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_ab32bfb41a69f89b6d7c7f30c397749b0}{after\+\_\+append\+\_\+actions}
+\begin{DoxyCompactList}\small\item\em The list of actions (type\+: types.\+Function\+Type) to be performed after appending an item to the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for list with custom actions on manipulations. 
+
+Definition at line 308 of file sylva\+\_\+base.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a43f7e190df1f424bcbf14b9c892b2127}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a43f7e190df1f424bcbf14b9c892b2127}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em args} & The arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 326 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+326     \textcolor{keyword}{def }\_\_init\_\_(self, *args):
+327         list.\_\_init\_\_(self, *args)
+328         self.before\_append\_actions = []
+329         self.after\_append\_actions = []
+330 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a7d8693b89ac0a60fa8fc313901db1ad1}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a7d8693b89ac0a60fa8fc313901db1ad1}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!append@{append}}
+\index{append@{append}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+append (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+
+
+Override append method in list. 
+
+Flow\+:
+
+
+\begin{DoxyEnumerate}
+\item invoke self.\+before\+\_\+append\+\_\+action(item)
+\item append(item) using list.\+append(item)
+\item invoke self.\+after\+\_\+append\+\_\+action(item)
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em item} & The item to be appended\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of list.\+apped(item) 
+\end{DoxyReturn}
+
+
+Definition at line 345 of file sylva\+\_\+base.\+py.
+
+
+
+References sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+after\+\_\+append\+\_\+actions, and sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+before\+\_\+append\+\_\+actions.
+
+
+\begin{DoxyCode}
+345     \textcolor{keyword}{def }append(self, item):
+346 
+347         \textcolor{keywordflow}{for} method \textcolor{keywordflow}{in} self.before\_append\_actions:
+348             method(self, item)
+349 
+350         result = list.append(self, item)
+351 
+352         \textcolor{keywordflow}{for} method \textcolor{keywordflow}{in} self.after\_append\_actions:
+353             method(self, item)
+354 
+355         \textcolor{keywordflow}{return} result
+356 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a0e822d791dfa807d2bdacc2717b2420a}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a0e822d791dfa807d2bdacc2717b2420a}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!find@{find}}
+\index{find@{find}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+find (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attr\+\_\+name,  }\item[{}]{attr\+\_\+value,  }\item[{}]{check\+\_\+func = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Searches for the first match based on key-\/value pair. 
+
+\#
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em attr\+\_\+name} & The attribute name \\
+\hline
+{\em attr\+\_\+value} & The attribute value \\
+\hline
+{\em check\+\_\+func} & The check function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+First match or None if no match 
+\end{DoxyReturn}
+
+
+Definition at line 384 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+384     \textcolor{keyword}{def }find(self, attr\_name, attr\_value, check\_func=None):
+385         \textcolor{keywordflow}{if} check\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+386             \textcolor{keyword}{def }check\_func(obj):
+387                 \textcolor{keywordflow}{return} getattr(obj, attr\_name) == attr\_value
+388 
+389         \textcolor{keywordflow}{try}:
+390             \textcolor{keywordflow}{return} next(item \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} self \textcolor{keywordflow}{if} check\_func(item))
+391         \textcolor{keywordflow}{except} StopIteration:
+392             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+393 
+394 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a34a24845d0df1e41f3584ba4bfb51598}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a34a24845d0df1e41f3584ba4bfb51598}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!has@{has}}
+\index{has@{has}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{has()}{has()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+has (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attr\+\_\+name,  }\item[{}]{attr\+\_\+value,  }\item[{}]{check\+\_\+func = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Check if the current \hyperlink{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list}{S\+Y\+L\+V\+A\+List} has key value pair \#. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em attr\+\_\+name} & The attribute name \\
+\hline
+{\em attr\+\_\+value} & The attribute value \\
+\hline
+{\em check\+\_\+func} & The check function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True = has, False = has not 
+\end{DoxyReturn}
+
+
+Definition at line 367 of file sylva\+\_\+base.\+py.
+
+
+\begin{DoxyCode}
+367     \textcolor{keyword}{def }has(self, attr\_name, attr\_value, check\_func=None):
+368         \textcolor{keywordflow}{if} check\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+369             \textcolor{keyword}{def }check\_func(obj):
+370                 \textcolor{keywordflow}{return} getattr(obj, attr\_name) == attr\_value
+371 
+372         \textcolor{keywordflow}{return} any(check\_func(item) \textcolor{keywordflow}{for} item \textcolor{keywordflow}{in} self)
+373 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_ab32bfb41a69f89b6d7c7f30c397749b0}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_ab32bfb41a69f89b6d7c7f30c397749b0}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!after\+\_\+append\+\_\+actions@{after\+\_\+append\+\_\+actions}}
+\index{after\+\_\+append\+\_\+actions@{after\+\_\+append\+\_\+actions}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{after\+\_\+append\+\_\+actions}{after\_append\_actions}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+after\+\_\+append\+\_\+actions}
+
+
+
+The list of actions (type\+: types.\+Function\+Type) to be performed after appending an item to the list. 
+
+
+
+Definition at line 329 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+append().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a5ecf6ed5a0fbfa81d3c657a18a71a934}\label{classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_list_a5ecf6ed5a0fbfa81d3c657a18a71a934}} 
+\index{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}!before\+\_\+append\+\_\+actions@{before\+\_\+append\+\_\+actions}}
+\index{before\+\_\+append\+\_\+actions@{before\+\_\+append\+\_\+actions}!sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List@{sylva\+::base\+::sylva\+\_\+base\+::\+S\+Y\+L\+V\+A\+List}}
+\subsubsection{\texorpdfstring{before\+\_\+append\+\_\+actions}{before\_append\_actions}}
+{\footnotesize\ttfamily sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+before\+\_\+append\+\_\+actions}
+
+
+
+The list of actions (type\+: types.\+Function\+Type) to be performed before appending an item to the list. 
+
+
+
+Definition at line 328 of file sylva\+\_\+base.\+py.
+
+
+
+Referenced by sylva.\+base.\+sylva\+\_\+base.\+S\+Y\+L\+V\+A\+List.\+append().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sylva__base_8py}{sylva\+\_\+base.\+py}\end{DoxyCompactItemize}

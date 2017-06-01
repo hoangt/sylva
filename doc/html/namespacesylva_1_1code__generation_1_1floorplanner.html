@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -179,7 +185,7 @@ Variables</h2></td></tr>
 <tr class="separator:aa680e680b0de0a966b6d5b32ed00f49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84f24b1e40f5425e9bb40ab45ccbd10f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a84f24b1e40f5425e9bb40ab45ccbd10f">__repr__</a></td></tr>
 <tr class="separator:a84f24b1e40f5425e9bb40ab45ccbd10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6ab7f5eecb6c140149e1ea30161d62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#aef6ab7f5eecb6c140149e1ea30161d62">fp</a> = <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html">floorplanner</a>(<a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a5ed98e48cee4fdb98cc0772655281931">c</a>, <a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a0a7a26c9bd92be126f3b70c232ba81cd">actors</a>, time_limit = 10000)</td></tr>
+<tr class="memitem:aef6ab7f5eecb6c140149e1ea30161d62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#aef6ab7f5eecb6c140149e1ea30161d62">fp</a> = <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html">floorplanner</a>(<a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a5ed98e48cee4fdb98cc0772655281931">c</a>, <a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a0a7a26c9bd92be126f3b70c232ba81cd">actors</a>, time_limit=10000)</td></tr>
 <tr class="separator:aef6ab7f5eecb6c140149e1ea30161d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -218,7 +224,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [sdf.actor(name=<span class="stringliteral">&#39;n_%i&#39;</span> % f, index=i)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;          <span class="keywordflow">for</span> i, f <span class="keywordflow">in</span> enumerate(functions)]</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [sdf.actor(name=<span class="stringliteral">&#39;n_%i&#39;</span> % f, index=i)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                  <span class="keywordflow">for</span> i, f <span class="keywordflow">in</span> enumerate(functions)]</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="floorplanner_8py_source.html#l00306">306</a> of file <a class="el" href="floorplanner_8py_source.html">floorplanner.py</a>.</p>
 
 </div>
@@ -442,7 +448,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [FIMP(<span class="stringliteral">&#39;n_%i&#39;</span> % f, index=i,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                 width=w[i], height=h[i], computation_phase=i)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;              <span class="keywordflow">for</span> i, f <span class="keywordflow">in</span> enumerate(fimp_names)]</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [FIMP(<span class="stringliteral">&#39;n_%i&#39;</span> % f, index=i,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                               width=w[i], height=h[i], computation_phase=i)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                          <span class="keywordflow">for</span> i, f <span class="keywordflow">in</span> enumerate(fimp_names)]</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="floorplanner_8py_source.html#l00308">308</a> of file <a class="el" href="floorplanner_8py_source.html">floorplanner.py</a>.</p>
 
 </div>
@@ -486,7 +492,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sylva.code_generation.floorplanner.fp = <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html">floorplanner</a>(<a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a5ed98e48cee4fdb98cc0772655281931">c</a>, <a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a0a7a26c9bd92be126f3b70c232ba81cd">actors</a>, time_limit = 10000)</td>
+          <td class="memname">sylva.code_generation.floorplanner.fp = <a class="el" href="classsylva_1_1code__generation_1_1floorplanner_1_1floorplanner.html">floorplanner</a>(<a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a5ed98e48cee4fdb98cc0772655281931">c</a>, <a class="el" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a0a7a26c9bd92be126f3b70c232ba81cd">actors</a>, time_limit=10000)</td>
         </tr>
       </table>
 </div><div class="memdoc">

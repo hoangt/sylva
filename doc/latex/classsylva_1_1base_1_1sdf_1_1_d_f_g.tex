@@ -1,0 +1,391 @@
+\hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g}{}\section{sylva.\+base.\+sdf.\+D\+FG Class Reference}
+\label{classsylva_1_1base_1_1sdf_1_1_d_f_g}\index{sylva.\+base.\+sdf.\+D\+FG@{sylva.\+base.\+sdf.\+D\+FG}}
+
+
+Class for Data Flow Graph.  
+
+
+
+
+Inheritance diagram for sylva.\+base.\+sdf.\+D\+FG\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsylva_1_1base_1_1sdf_1_1_d_f_g__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_af005a65a522091fe22d2536bb16d1cf2}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a3e404cf1c5b21b46817a26520a03aa3a}{actors}=\mbox{[}$\,$\mbox{]}, reassign\+\_\+actor\+\_\+indexes=True, otherkwargs)
+\begin{DoxyCompactList}\small\item\em Constructs the object. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab66178c50a2d998a7cd92190173b4450}{export} (cls, key)
+\begin{DoxyCompactList}\small\item\em Override S\+Y\+L\+V\+A\+Base.\+export. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab910b4ff0e171dcc46ea65cf790699cc}{get\+\_\+digraph} (self, name=None, render\+\_\+format=\textquotesingle{}svg\textquotesingle{}, graph\+\_\+attr=None, node\+\_\+attr=None, edge\+\_\+attr=None)
+\begin{DoxyCompactList}\small\item\em Create a D\+OT object (graphviz.\+Digraph) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a3e404cf1c5b21b46817a26520a03aa3a}{actors}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} list. \end{DoxyCompactList}\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a565dfad69749ebe807f3db745fffe50d}{edges}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a55a9b08182b503823754256937227b9a}{actor\+\_\+layers} = property(\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a1e8c55f1e1a5cc595466e7b3bf3fd409}{\+\_\+actor\+\_\+layers})
+\begin{DoxyCompactList}\small\item\em Get actor layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a1e8c55f1e1a5cc595466e7b3bf3fd409}{\+\_\+actor\+\_\+layers} (self)
+\begin{DoxyCompactList}\small\item\em Get actor layers. \end{DoxyCompactList}\item 
+def \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a80ccaab79271be0d90347c079a666719}{\+\_\+reassign\+\_\+actor\+\_\+indexes} (self)
+\begin{DoxyCompactList}\small\item\em Assign indexes to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for Data Flow Graph. 
+
+\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} is composed of two lists\+: actors and edges. 
+
+Definition at line 338 of file sdf.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_af005a65a522091fe22d2536bb16d1cf2}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_af005a65a522091fe22d2536bb16d1cf2}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{actors = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{reassign\+\_\+actor\+\_\+indexes = {\ttfamily True},  }\item[{}]{otherkwargs }\end{DoxyParamCaption})}
+
+
+
+Constructs the object. 
+
+More information about \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG}, \hyperlink{classsylva_1_1base_1_1sdf_1_1_s_d_f_g}{S\+D\+FG} and \hyperlink{classsylva_1_1base_1_1sdf_1_1_h_s_d_f_g}{H\+S\+D\+FG}, check \href{https://goo.gl/3Gio5l}{\tt https\+://goo.\+gl/3\+Gio5l} (last checked 017-\/05-\/16)
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em actors} & The \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} list. The index of each \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} object is the index in this list. \\
+\hline
+{\em reassign\+\_\+actor\+\_\+indexes} & if reassigning Actors\textquotesingle{} indexes If True, costructor will assign indexes to actors depending on their data dependency. \\
+\hline
+{\em otherkwargs} & The other keyword arguments, reserved for future usage \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 363 of file sdf.\+py.
+
+
+\begin{DoxyCode}
+363     \textcolor{keyword}{def }\_\_init\_\_(self, actors=[], reassign\_actor\_indexes=True, **otherkwargs):
+364 
+365         SYLVABase.\_\_init\_\_(self, **SYLVABase.\_args(locals(), globals()))
+366 
+367         self.actors = self.actors
+368 
+369         \_edges = []
+370         \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} self.actors:
+371             \textcolor{comment}{# create incoming\_edges and outgoing\_edges for each actor}
+372             \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} actor.outgoing\_edges:
+373                 edge.src\_actor = actor
+374                 port\_name = edge.src\_port.name
+375                 edge.src\_port = actor.output\_ports.find(\textcolor{stringliteral}{'name'}, port\_name)
+376                 edge.dest\_actor = next(a \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} self.actors
+377                                        \textcolor{keywordflow}{if} a == edge.dest\_actor)
+378                 port\_name = edge.dest\_port.name
+379                 input\_ports = edge.dest\_actor.input\_ports
+380                 edge.dest\_port = input\_ports.find(\textcolor{stringliteral}{'name'}, port\_name)
+381                 \_edges.append(edge)
+382 
+383         self.actors = sorted(self.actors, key=\textcolor{keyword}{lambda} actor: actor.index)
+384         self.edges = \_edges
+385         \textcolor{keywordflow}{if} reassign\_actor\_indexes:
+386             self.\_reassign\_actor\_indexes()
+387 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_a1e8c55f1e1a5cc595466e7b3bf3fd409}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_a1e8c55f1e1a5cc595466e7b3bf3fd409}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!\+\_\+actor\+\_\+layers@{\+\_\+actor\+\_\+layers}}
+\index{\+\_\+actor\+\_\+layers@{\+\_\+actor\+\_\+layers}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{\+\_\+actor\+\_\+layers()}{\_actor\_layers()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+actor\+\_\+layers (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get actor layers. 
+
+Each layer has all the data dependent actors in the last layer and possibly also in previous layers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of list 
+\end{DoxyReturn}
+
+
+Definition at line 398 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+actors, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+actors, and sylva.\+base.\+sdf.\+D\+F\+G.\+actors.
+
+
+\begin{DoxyCode}
+398     \textcolor{keyword}{def }\_actor\_layers(self):
+399 
+400         result = []
+401         checked\_actors = []
+402 
+403         \textcolor{keyword}{def }add\_actor(current\_actor, checked\_actors):
+404             \textcolor{keywordflow}{if} current\_actor \textcolor{keywordflow}{in} checked\_actors:
+405                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+406 
+407             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} current\_actor.incoming\_edges:
+408                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+409 
+410             \textcolor{keywordflow}{for} one\_edge \textcolor{keywordflow}{in} current\_actor.incoming\_edges:
+411                 \textcolor{keywordflow}{if} one\_edge.src\_actor \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} checked\_actors:
+412                     \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+413 
+414             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+415 
+416         \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} result \textcolor{keywordflow}{or} result[-1]:
+417             result.append([])
+418             \textcolor{keywordflow}{for} current\_actor \textcolor{keywordflow}{in} self.actors:
+419                 \textcolor{keywordflow}{if} add\_actor(current\_actor, checked\_actors):
+420                     \textcolor{keywordflow}{if} current\_actor \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} result[-1]:
+421                         result[-1].append(current\_actor)
+422             checked\_actors += result[-1]
+423 
+424         \textcolor{keywordflow}{return} result[:-1]
+425 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_a80ccaab79271be0d90347c079a666719}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_a80ccaab79271be0d90347c079a666719}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!\+\_\+reassign\+\_\+actor\+\_\+indexes@{\+\_\+reassign\+\_\+actor\+\_\+indexes}}
+\index{\+\_\+reassign\+\_\+actor\+\_\+indexes@{\+\_\+reassign\+\_\+actor\+\_\+indexes}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{\+\_\+reassign\+\_\+actor\+\_\+indexes()}{\_reassign\_actor\_indexes()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+reassign\+\_\+actor\+\_\+indexes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assign indexes to \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 438 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+D\+F\+G.\+actor\+\_\+layers, sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+actors, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+actors, and sylva.\+base.\+sdf.\+D\+F\+G.\+actors.
+
+
+\begin{DoxyCode}
+438     \textcolor{keyword}{def }\_reassign\_actor\_indexes(self):
+439         result = []
+440         index = 0
+441         \textcolor{keywordflow}{for} one\_layer \textcolor{keywordflow}{in} self.actor\_layers:
+442             \textcolor{keywordflow}{for} one\_actor \textcolor{keywordflow}{in} one\_layer:
+443                 one\_actor.index = index
+444                 result.append(one\_actor)
+445                 index += 1
+446         self.actors = result
+447 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab66178c50a2d998a7cd92190173b4450}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab66178c50a2d998a7cd92190173b4450}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!export@{export}}
+\index{export@{export}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{export()}{export()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+D\+F\+G.\+export (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+Override S\+Y\+L\+V\+A\+Base.\+export. 
+
+When converting to dictionary object, do not export self.\+edges 
+
+Definition at line 454 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+sdf.\+D\+F\+G.\+get\+\_\+digraph().
+
+
+\begin{DoxyCode}
+454     \textcolor{keyword}{def }export(cls, key):
+455         \textcolor{keywordflow}{if} SYLVABase.export(key):
+456             \textcolor{keywordflow}{if} key \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} [\textcolor{stringliteral}{'edges'}, \textcolor{stringliteral}{'reassign\_actor\_indexes'}]:
+457                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+458         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+459 
+\end{DoxyCode}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab910b4ff0e171dcc46ea65cf790699cc}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_ab910b4ff0e171dcc46ea65cf790699cc}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!get\+\_\+digraph@{get\+\_\+digraph}}
+\index{get\+\_\+digraph@{get\+\_\+digraph}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{get\+\_\+digraph()}{get\_digraph()}}
+{\footnotesize\ttfamily def sylva.\+base.\+sdf.\+D\+F\+G.\+get\+\_\+digraph (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily None},  }\item[{}]{render\+\_\+format = {\ttfamily \textquotesingle{}svg\textquotesingle{}},  }\item[{}]{graph\+\_\+attr = {\ttfamily None},  }\item[{}]{node\+\_\+attr = {\ttfamily None},  }\item[{}]{edge\+\_\+attr = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Create a D\+OT object (graphviz.\+Digraph) 
+
+Check \href{http://www.graphviz.org/}{\tt http\+://www.\+graphviz.\+org/} (last check 2017-\/05-\/16) for more information about D\+OT format. An online editor can be found at \href{http://viz-js.com/}{\tt http\+://viz-\/js.\+com/} (last check 2017-\/05-\/16). \#
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object \\
+\hline
+{\em name} & The name of the graph, default = {\ttfamily \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG}} \\
+\hline
+{\em render\+\_\+format} & The render format \\
+\hline
+{\em graph\+\_\+attr} & Graph style attributes for rendering \\
+\hline
+{\em node\+\_\+attr} & \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} style attributes for rendering \\
+\hline
+{\em edge\+\_\+attr} & \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} style attributes for rendering\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+graphciz.\+Digraph object. 
+\end{DoxyReturn}
+
+
+Definition at line 477 of file sdf.\+py.
+
+
+
+References sylva.\+base.\+fimp.\+F\+I\+M\+P\+Instance.\+actors, sylva.\+base.\+fimp(\+D\+E\+S\+K\+T\+O\+P-\/\+D3\+I\+R\+S\+O\+A 的冲突副本 2017-\/05-\/19).\+F\+I\+M\+P\+Instance.\+actors, sylva.\+base.\+sdf.\+D\+F\+G.\+actors, and sylva.\+base.\+sdf.\+D\+F\+G.\+edges.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+D\+F\+G.\+export().
+
+
+\begin{DoxyCode}
+477                     graph\_attr=\textcolor{keywordtype}{None}, node\_attr=\textcolor{keywordtype}{None}, edge\_attr=\textcolor{keywordtype}{None}):
+478 
+479         \textcolor{keywordflow}{if} name \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+480             name = self.\_\_class\_\_.\_\_name\_\_
+481 
+482         \textcolor{keywordflow}{if} graph\_attr \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+483             graph\_attr = \{\}
+484 
+485         \textcolor{keywordflow}{if} node\_attr \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+486             node\_attr = \{\textcolor{stringliteral}{'fillcolor'}: \textcolor{stringliteral}{'white'}, \textcolor{stringliteral}{'style'}: \textcolor{stringliteral}{'filled'}\},
+487 
+488         \textcolor{keywordflow}{if} edge\_attr \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+489             edge\_attr = \{\textcolor{stringliteral}{'labeldistance'}: \textcolor{stringliteral}{'1'}\}
+490 
+491         result = graphviz.Digraph(name=name, graph\_attr=graph\_attr,
+492                                   format=render\_format,
+493                                   node\_attr=node\_attr,
+494                                   edge\_attr=edge\_attr)
+495 
+496         \textcolor{keywordflow}{for} actor \textcolor{keywordflow}{in} self.actors:
+497             actor\_name = f\textcolor{stringliteral}{'\{actor.name\}\_\{actor.index\}'}
+498             actor\_label = f\textcolor{stringliteral}{'\{actor.name\}\(\backslash\)\(\backslash\)n\{actor.index\}'}
+499             result.node(name=actor\_name, label=actor\_label,
+500                         tooltip=actor\_name, URL=\textcolor{stringliteral}{r'\(\backslash\)ref Actor'})
+501 
+502         \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} self.edges:
+503             src\_name = f\textcolor{stringliteral}{'\{edge.src\_actor.name\}\_\{edge.src\_actor.index\}'}
+504             dest\_name = f\textcolor{stringliteral}{'\{edge.dest\_actor.name\}\_\{edge.dest\_actor.index\}'}
+505             result.edge(tail\_name=src\_name, head\_name=dest\_name,
+506                         taillabel=str(edge.src\_port.count) + \textcolor{stringliteral}{' '},
+507                         headlabel=str(edge.dest\_port.count) + \textcolor{stringliteral}{' '})
+508 
+509         \textcolor{keywordflow}{return} result
+510 
+511 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_a3e404cf1c5b21b46817a26520a03aa3a}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_a3e404cf1c5b21b46817a26520a03aa3a}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!actors@{actors}}
+\index{actors@{actors}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{actors}{actors}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+D\+F\+G.\+actors}
+
+
+
+The \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} list. 
+
+The index of each \hyperlink{classsylva_1_1base_1_1sdf_1_1_actor}{Actor} object is the index in this list. 
+
+Definition at line 367 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+actor\+\_\+layers(), sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+reassign\+\_\+actor\+\_\+indexes(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+\_\+repetition\+\_\+vector(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+\_\+topology\+\_\+matrix(), sylva.\+dse.\+dse\+\_\+engine.\+D\+S\+E\+Engine.\+add\+\_\+data\+\_\+dependency\+\_\+constraints(), sylva.\+base.\+sdf.\+D\+F\+G.\+get\+\_\+digraph(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+get\+\_\+hsdf(), and sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize().
+
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_a565dfad69749ebe807f3db745fffe50d}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_a565dfad69749ebe807f3db745fffe50d}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!edges@{edges}}
+\index{edges@{edges}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+D\+F\+G.\+edges}
+
+
+
+The \hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g}{D\+FG} \hyperlink{classsylva_1_1base_1_1sdf_1_1_edge}{Edge} list. 
+
+
+
+Definition at line 384 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+glic.\+glic.\+control.\+\_\+\+\_\+str\+\_\+\+\_\+(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+\_\+topology\+\_\+matrix(), sylva.\+base.\+sdf.\+D\+F\+G.\+get\+\_\+digraph(), sylva.\+base.\+sdf.\+S\+D\+F\+G.\+get\+\_\+hsdf(), sylva.\+glic.\+glic.\+state.\+serialize(), sylva.\+dse.\+dse.\+system\+\_\+model.\+serialize(), and sylva.\+glic.\+glic.\+control.\+serialize().
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classsylva_1_1base_1_1sdf_1_1_d_f_g_a55a9b08182b503823754256937227b9a}\label{classsylva_1_1base_1_1sdf_1_1_d_f_g_a55a9b08182b503823754256937227b9a}} 
+\index{sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}!actor\+\_\+layers@{actor\+\_\+layers}}
+\index{actor\+\_\+layers@{actor\+\_\+layers}!sylva\+::base\+::sdf\+::\+D\+FG@{sylva\+::base\+::sdf\+::\+D\+FG}}
+\subsubsection{\texorpdfstring{actor\+\_\+layers}{actor\_layers}}
+{\footnotesize\ttfamily sylva.\+base.\+sdf.\+D\+F\+G.\+actor\+\_\+layers = property(\hyperlink{classsylva_1_1base_1_1sdf_1_1_d_f_g_a1e8c55f1e1a5cc595466e7b3bf3fd409}{\+\_\+actor\+\_\+layers})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get actor layers. 
+
+Each layer has all the data dependent actors in the last layer and possibly also in previous layers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of list 
+\end{DoxyReturn}
+
+
+Definition at line 431 of file sdf.\+py.
+
+
+
+Referenced by sylva.\+base.\+sdf.\+D\+F\+G.\+\_\+reassign\+\_\+actor\+\_\+indexes().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{sdf_8py}{sdf.\+py}\end{DoxyCompactItemize}

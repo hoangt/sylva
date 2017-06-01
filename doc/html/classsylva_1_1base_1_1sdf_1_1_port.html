@@ -23,6 +23,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen_extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet"
@@ -57,7 +63,7 @@ $(function() {
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SYLVA - System Level Architectural Synthesis Framework
-   &#160;<span id="projectnumber">2017.05.11.0</span>
+   &#160;<span id="projectnumber">2017.05.19.0</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -117,7 +123,6 @@ $(document).ready(function(){initNavTree('classsylva_1_1base_1_1sdf_1_1_port.htm
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsylva_1_1base_1_1sdf_1_1_port-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sylva.base.sdf.Port Class Reference</div>  </div>
@@ -129,54 +134,64 @@ $(document).ready(function(){initNavTree('classsylva_1_1base_1_1sdf_1_1_port.htm
 <div class="dynheader">
 Inheritance diagram for sylva.base.sdf.Port:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classsylva_1_1base_1_1sdf_1_1_port.png" usemap="#sylva.base.sdf.Port_map" alt=""/>
-  <map id="sylva.base.sdf.Port_map" name="sylva.base.sdf.Port_map">
-<area href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html" title="The base object for SYLVA project All objects are inherented from this object. " alt="sylva.base.sylva_base.SYLVABase" shape="rect" coords="0,56,215,80"/>
+<div class="center"><img src="classsylva_1_1base_1_1sdf_1_1_port__inherit__graph.png" border="0" usemap="#sylva_8base_8sdf_8_port_inherit__map" alt="Inheritance graph"/></div>
+<map name="sylva_8base_8sdf_8_port_inherit__map" id="sylva_8base_8sdf_8_port_inherit__map">
+<area shape="rect" id="node2" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html" title="The base object for SYLVA project. " alt="" coords="5,80,233,107"/>
 </map>
- </div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c863910b4100f268b9193513b5d0963"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a1c863910b4100f268b9193513b5d0963">__init__</a> (self, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>='No <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>', <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#abbfd66f762649b6a8105657259471c5a">index</a>=0, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a3bc0e05af490f897794a9781127c69e3">token_type</a>=<a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">DataTokenType</a>(<a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>='int32', size=32), <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aec009757acfd92df95b273c671cac068">count</a>=1)</td></tr>
-<tr class="memdesc:a1c863910b4100f268b9193513b5d0963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object.  <a href="#a1c863910b4100f268b9193513b5d0963">More...</a><br /></td></tr>
-<tr class="separator:a1c863910b4100f268b9193513b5d0963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6cd7c07850ca053a8a8788d94ae37c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a8e6cd7c07850ca053a8a8788d94ae37c">__str__</a> (self)</td></tr>
-<tr class="separator:a8e6cd7c07850ca053a8a8788d94ae37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0192710d76f8b2b3fefeef6e49f49bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#ad0192710d76f8b2b3fefeef6e49f49bd">clone</a> (self)</td></tr>
-<tr class="memdesc:ad0192710d76f8b2b3fefeef6e49f49bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the object with same properties than original.  <a href="#ad0192710d76f8b2b3fefeef6e49f49bd">More...</a><br /></td></tr>
-<tr class="separator:ad0192710d76f8b2b3fefeef6e49f49bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15a6d8d321b101e2247cad4cd14d5623"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a15a6d8d321b101e2247cad4cd14d5623">dict_object</a> (self)</td></tr>
-<tr class="separator:a15a6d8d321b101e2247cad4cd14d5623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc04df3b843a1deb6e1ae13f8425783"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8dc04df3b843a1deb6e1ae13f8425783">__iter__</a> (self)</td></tr>
-<tr class="memdesc:a8dc04df3b843a1deb6e1ae13f8425783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator to be used for converting the object to dictionary.  <a href="#a8dc04df3b843a1deb6e1ae13f8425783">More...</a><br /></td></tr>
-<tr class="separator:a8dc04df3b843a1deb6e1ae13f8425783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4acd68307f4b2bef6082b86f3ff6ce3a">load_from_dict</a> (cls, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a15a6d8d321b101e2247cad4cd14d5623">dict_object</a>)</td></tr>
-<tr class="memdesc:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an object from a dictionary object.  <a href="#a4acd68307f4b2bef6082b86f3ff6ce3a">More...</a><br /></td></tr>
-<tr class="separator:a4acd68307f4b2bef6082b86f3ff6ce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bd08c41ab09c380433d0de82fb98860"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a5bd08c41ab09c380433d0de82fb98860">__repr__</a> (self)</td></tr>
-<tr class="memdesc:a5bd08c41ab09c380433d0de82fb98860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the object.  <a href="#a5bd08c41ab09c380433d0de82fb98860">More...</a><br /></td></tr>
-<tr class="separator:a5bd08c41ab09c380433d0de82fb98860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7835010686c34d2f024b716ac89e38"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a1c7835010686c34d2f024b716ac89e38">__init__</a> (self, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>='din', <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#abbfd66f762649b6a8105657259471c5a">index</a>=0, <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#ac0ca6b47887a32c69c66564f683adf2b">data_token_type</a>=<a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">DataTokenType</a>(), <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aec009757acfd92df95b273c671cac068">count</a>=1)</td></tr>
+<tr class="memdesc:a1c7835010686c34d2f024b716ac89e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object.  <a href="#a1c7835010686c34d2f024b716ac89e38">More...</a><br /></td></tr>
+<tr class="separator:a1c7835010686c34d2f024b716ac89e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td></tr>
+<tr class="memitem:adb3747bc0503b669cbc05e7419adb454 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#adb3747bc0503b669cbc05e7419adb454">__init__</a> (self, args)</td></tr>
+<tr class="memdesc:adb3747bc0503b669cbc05e7419adb454 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#adb3747bc0503b669cbc05e7419adb454">More...</a><br /></td></tr>
+<tr class="separator:adb3747bc0503b669cbc05e7419adb454 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68e05257afb40aa828aa9e2a73b267f inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af68e05257afb40aa828aa9e2a73b267f">load</a> (cls, filepath)</td></tr>
+<tr class="memdesc:af68e05257afb40aa828aa9e2a73b267f inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load one object from a file (.json format)  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af68e05257afb40aa828aa9e2a73b267f">More...</a><br /></td></tr>
+<tr class="separator:af68e05257afb40aa828aa9e2a73b267f inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196978bd73392249f19f817bc1033d8e inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e">dump</a> (self, filepath=None)</td></tr>
+<tr class="memdesc:a196978bd73392249f19f817bc1033d8e inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">dump one object to a file (.json format)  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a196978bd73392249f19f817bc1033d8e">More...</a><br /></td></tr>
+<tr class="separator:a196978bd73392249f19f817bc1033d8e inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073105841fe00ad333bf679a24fa24d9 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a073105841fe00ad333bf679a24fa24d9">__setattr__</a> (self, attr_name, attr_value)</td></tr>
+<tr class="memdesc:a073105841fe00ad333bf679a24fa24d9 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override python build-in set attribute method.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a073105841fe00ad333bf679a24fa24d9">More...</a><br /></td></tr>
+<tr class="separator:a073105841fe00ad333bf679a24fa24d9 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30165f6499a5efacb683c2194f53a73 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af30165f6499a5efacb683c2194f53a73">__getattr__</a> (self, attr_name)</td></tr>
+<tr class="memdesc:af30165f6499a5efacb683c2194f53a73 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override python build-in get attribute method.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#af30165f6499a5efacb683c2194f53a73">More...</a><br /></td></tr>
+<tr class="separator:af30165f6499a5efacb683c2194f53a73 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1ed8e83c61ea8a6035b5e4460989f3 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a6c1ed8e83c61ea8a6035b5e4460989f3">__str__</a> (self)</td></tr>
+<tr class="memdesc:a6c1ed8e83c61ea8a6035b5e4460989f3 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the object.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a6c1ed8e83c61ea8a6035b5e4460989f3">More...</a><br /></td></tr>
+<tr class="separator:a6c1ed8e83c61ea8a6035b5e4460989f3 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d94af12d912b69a5c8ada74debce019 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a> (self)</td></tr>
+<tr class="memdesc:a8d94af12d912b69a5c8ada74debce019 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the storage form of this object.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">More...</a><br /></td></tr>
+<tr class="separator:a8d94af12d912b69a5c8ada74debce019 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b28a6df0e18ab256c21493b49a64b22 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4b28a6df0e18ab256c21493b49a64b22">clean_store</a> (cls, filepath=None)</td></tr>
+<tr class="memdesc:a4b28a6df0e18ab256c21493b49a64b22 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean store file of this class.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a4b28a6df0e18ab256c21493b49a64b22">More...</a><br /></td></tr>
+<tr class="separator:a4b28a6df0e18ab256c21493b49a64b22 inherit pub_methods_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa8aa0ac5a7e375e2c0cb6e92a0b1dd20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a></td></tr>
-<tr class="memdesc:aa8aa0ac5a7e375e2c0cb6e92a0b1dd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the port, e.g.  <a href="#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">More...</a><br /></td></tr>
+<tr class="memdesc:aa8aa0ac5a7e375e2c0cb6e92a0b1dd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the port, e.g <code>din</code>.  <a href="#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">More...</a><br /></td></tr>
 <tr class="separator:aa8aa0ac5a7e375e2c0cb6e92a0b1dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbfd66f762649b6a8105657259471c5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#abbfd66f762649b6a8105657259471c5a">index</a></td></tr>
-<tr class="memdesc:abbfd66f762649b6a8105657259471c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the port among all ports in the same list, e.g.  <a href="#abbfd66f762649b6a8105657259471c5a">More...</a><br /></td></tr>
+<tr class="memdesc:abbfd66f762649b6a8105657259471c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the port among all ports in the same list, e.g all ports in list <code>input_ports</code> have unique index values.  <a href="#abbfd66f762649b6a8105657259471c5a">More...</a><br /></td></tr>
 <tr class="separator:abbfd66f762649b6a8105657259471c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc0e05af490f897794a9781127c69e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a3bc0e05af490f897794a9781127c69e3">token_type</a></td></tr>
-<tr class="memdesc:a3bc0e05af490f897794a9781127c69e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data token type of the port, e.g.  <a href="#a3bc0e05af490f897794a9781127c69e3">More...</a><br /></td></tr>
-<tr class="separator:a3bc0e05af490f897794a9781127c69e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ca6b47887a32c69c66564f683adf2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#ac0ca6b47887a32c69c66564f683adf2b">data_token_type</a></td></tr>
+<tr class="memdesc:ac0ca6b47887a32c69c66564f683adf2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data token type of the port, e.g `DataTokenType(name='int32', size=32)`.  <a href="#ac0ca6b47887a32c69c66564f683adf2b">More...</a><br /></td></tr>
+<tr class="separator:ac0ca6b47887a32c69c66564f683adf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec009757acfd92df95b273c671cac068"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aec009757acfd92df95b273c671cac068">count</a></td></tr>
 <tr class="memdesc:aec009757acfd92df95b273c671cac068"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of data tokens to be consumed or produced per invocation.  <a href="#aec009757acfd92df95b273c671cac068">More...</a><br /></td></tr>
 <tr class="separator:aec009757acfd92df95b273c671cac068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a1d6e4ff7796c0ecdd2fc39b12fb15494"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#a1d6e4ff7796c0ecdd2fc39b12fb15494">__repr__</a></td></tr>
-<tr class="separator:a1d6e4ff7796c0ecdd2fc39b12fb15494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header properties_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td colspan="2" onclick="javascript:toggleInherit('properties_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html">sylva.base.sylva_base.SYLVABase</a></td></tr>
+<tr class="memitem:a19a76f0bddbefbe0687234c9da15c8fc inherit properties_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a19a76f0bddbefbe0687234c9da15c8fc">storage_form</a> = property(<a class="el" href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a8d94af12d912b69a5c8ada74debce019">get_storage_form</a>)</td></tr>
+<tr class="memdesc:a19a76f0bddbefbe0687234c9da15c8fc inherit properties_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dict object as the storage form of this object.  <a href="classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base.html#a19a76f0bddbefbe0687234c9da15c8fc">More...</a><br /></td></tr>
+<tr class="separator:a19a76f0bddbefbe0687234c9da15c8fc inherit properties_classsylva_1_1base_1_1sylva__base_1_1_s_y_l_v_a_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for port. </p>
@@ -184,14 +199,14 @@ Private Attributes</h2></td></tr>
 <br />
  The port is either input or output. The IO direction (input or output) is not defined in this class.</p>
 <ul>
-<li>One <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. ">Port</a> is an input port if it is placed in the Actor input_ports</li>
-<li>One <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. ">Port</a> is an input port if it is placed in the Actor output_ports </li>
+<li>One <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. ">Port</a> is an input port if it is placed in the <a class="el" href="classsylva_1_1base_1_1sdf_1_1_actor.html" title="Class for SDF actor. ">Actor</a> input_ports</li>
+<li>One <a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html" title="Class for port. ">Port</a> is an input port if it is placed in the <a class="el" href="classsylva_1_1base_1_1sdf_1_1_actor.html" title="Class for SDF actor. ">Actor</a> output_ports </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00095">95</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00070">70</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1c863910b4100f268b9193513b5d0963"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c863910b4100f268b9193513b5d0963">&#9670;&nbsp;</a></span>__init__()</h2>
+<a id="a1c7835010686c34d2f024b716ac89e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7835010686c34d2f024b716ac89e38">&#9670;&nbsp;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +221,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>name</em> = <code>'No&#160;<a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>'</code>, </td>
+          <td class="paramname"><em>name</em> = <code>'din'</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -218,7 +233,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>token_type</em> = <code><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">DataTokenType</a>(<a class="el" href="classsylva_1_1base_1_1sdf_1_1_port.html#aa8aa0ac5a7e375e2c0cb6e92a0b1dd20">name</a>='int32',&#160;size=32)</code>, </td>
+          <td class="paramname"><em>data_token_type</em> = <code><a class="el" href="classsylva_1_1base_1_1sdf_1_1_data_token_type.html">DataTokenType</a>()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -238,250 +253,19 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The object.</td></tr>
-    <tr><td class="paramname">name</td><td>The name of the port. Example: <code>din</code></td></tr>
-    <tr><td class="paramname">index</td><td>The index of the port. It is among all ports in the same list, Example: all ports in list <code>input_ports</code> have unique index values.</td></tr>
-    <tr><td class="paramname">token_type</td><td>The data token type of the port. Example: `DataTokenType(name='int32', size=32)` </td></tr>
-    <tr><td class="paramname">count</td><td>The count </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the port, e.g <code>din</code>.</td></tr>
+    <tr><td class="paramname">index</td><td>The index of the port among all ports in the same list, e.g all ports in list <code>input_ports</code> have unique index values.</td></tr>
+    <tr><td class="paramname">data_token_type</td><td>The data token type of the port, e.g `DataTokenType(name='int32', size=32)`.</td></tr>
+    <tr><td class="paramname">count</td><td>The number of data tokens to be consumed or produced per invocation. One token per clock cycle is the minimum throughput. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00131">131</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                 count=1):</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        self.name = name</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        self.index = index</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        self.token_type = token_type</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        self.count = count</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        self.__repr__ = self.__str__</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div></div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8dc04df3b843a1deb6e1ae13f8425783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc04df3b843a1deb6e1ae13f8425783">&#9670;&nbsp;</a></span>__iter__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.__iter__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create an iterator to be used for converting the object to dictionary. </p>
-<p>When dict(some_obj) is called, it will return a dictionary object. Each value is obtaiend by invoking the created iterator in this method.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a iterator </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00033">33</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">def </span>__iter__(self):</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> key, value <span class="keywordflow">in</span> self.__dict__.items():</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> isinstance(value, SYLVABase):</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">yield</span> (key, dict(value))</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">else</span>:</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">yield</span> (key, value)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a5bd08c41ab09c380433d0de82fb98860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd08c41ab09c380433d0de82fb98860">&#9670;&nbsp;</a></span>__repr__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.__repr__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a string representation of the object. </p>
-<p>This method will be invoked some time instead of self.__str__().</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00073">73</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-
-<p class="reference">References <a class="el" href="sdf__schedule_8py_source.html#l00036">sylva.base.sdf_schedule.schedule.__str__()</a>, <a class="el" href="sylva__base_8py_source.html#l00060">sylva.base.sylva_base.SYLVABase.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00070">sylva.base.sdf.DataTokenType.__str__()</a>, <a class="el" href="fimp_8py_source.html#l00126">sylva.base.fimp.fimp.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00143">sylva.base.sdf.Port.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00196">sylva.base.sdf.edge.__str__()</a>, and <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">def </span><a class="code" href="namespacesylva_1_1code__generation_1_1floorplanner.html#a84f24b1e40f5425e9bb40ab45ccbd10f">__repr__</a>(self):</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> self.__str__()</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="ttc" id="namespacesylva_1_1code__generation_1_1floorplanner_html_a84f24b1e40f5425e9bb40ab45ccbd10f"><div class="ttname"><a href="namespacesylva_1_1code__generation_1_1floorplanner.html#a84f24b1e40f5425e9bb40ab45ccbd10f">sylva.code_generation.floorplanner.__repr__</a></div><div class="ttdeci">__repr__</div><div class="ttdef"><b>Definition:</b> <a href="floorplanner_8py_source.html#l00345">floorplanner.py:345</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a8e6cd7c07850ca053a8a8788d94ae37c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e6cd7c07850ca053a8a8788d94ae37c">&#9670;&nbsp;</a></span>__str__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sdf.Port.__str__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p></p>
-
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00143">143</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="sylva__base_8py_source.html#l00073">sylva.base.sylva_base.SYLVABase.__repr__()</a>, and <a class="el" href="air_8py_source.html#l00100">sylva.code_generation.air.BassObject.__repr__()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">def </span>__str__(self):</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        result = <span class="stringliteral">&#39;&#39;</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        result += f<span class="stringliteral">&#39;SDF port {self.name} index {self.index}&#39;</span> + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        result += f<span class="stringliteral">&#39;  Token type  {self.token_type}&#39;</span> + <span class="stringliteral">&#39;\n&#39;</span></div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        result += f<span class="stringliteral">&#39;  Token count {self.count}&#39;</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> result</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div></div><!-- fragment -->
-</div>
-</div>
-<a id="ad0192710d76f8b2b3fefeef6e49f49bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0192710d76f8b2b3fefeef6e49f49bd">&#9670;&nbsp;</a></span>clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sdf.Port.clone </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a new instance of the object with same properties than original. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>The object</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Copy of this object. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00153">153</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-
-<p class="reference">References <a class="el" href="sdf_8py_source.html#l00136">sylva.base.sdf.Port.count</a>, <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="sdf_8py_source.html#l00134">sylva.base.sdf.Port.index</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00054">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="sdf_8py_source.html#l00133">sylva.base.sdf.Port.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="fimp_8py_source.html#l00039">sylva.base.fimp.fimp.type</a>.</p>
-<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">def </span>clone(self):</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> Port(self.name, self.index, self.type, self.count)</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a15a6d8d321b101e2247cad4cd14d5623"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15a6d8d321b101e2247cad4cd14d5623">&#9670;&nbsp;</a></span>dict_object()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sdf.Port.dict_object </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p></p>
-
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00159">159</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-
-<p class="reference">References <a class="el" href="sdf_8py_source.html#l00136">sylva.base.sdf.Port.count</a>, <a class="el" href="fimp_8py_source.html#l00069">sylva.base.fimp.fimp.index</a>, <a class="el" href="sdf_8py_source.html#l00134">sylva.base.sdf.Port.index</a>, <a class="el" href="fimp_8py_source.html#l00038">sylva.base.fimp.fimp.name</a>, <a class="el" href="sdf_8py_source.html#l00054">sylva.base.sdf.DataTokenType.name</a>, <a class="el" href="sdf_8py_source.html#l00133">sylva.base.sdf.Port.name</a>, <a class="el" href="fimp_8py_source.html#l00336">sylva.base.fimp.fimp_set.name</a>, <a class="el" href="fimp_8py_source.html#l00425">sylva.base.fimp.fimp_lib.name</a>, and <a class="el" href="sdf_8py_source.html#l00135">sylva.base.sdf.Port.token_type</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">def </span>dict_object(self):</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> {<span class="stringliteral">&#39;name&#39;</span>: self.name,</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="stringliteral">&#39;index&#39;</span>: self.index,</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="stringliteral">&#39;type&#39;</span>: self.token_type.dict_object(),</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="stringliteral">&#39;count&#39;</span>: self.count}</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a4acd68307f4b2bef6082b86f3ff6ce3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4acd68307f4b2bef6082b86f3ff6ce3a">&#9670;&nbsp;</a></span>load_from_dict()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def sylva.base.sylva_base.SYLVABase.load_from_dict </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cls</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dict_object</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Loads an object from a dictionary object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cls</td><td>The cls </td></tr>
-    <tr><td class="paramname">dict_object</td><td>The dictionary object</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an SYLVABase object </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sylva__base_8py_source.html#l00049">49</a> of file <a class="el" href="sylva__base_8py_source.html">sylva_base.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">def </span>load_from_dict(cls, dict_object):</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        msg = f<span class="stringliteral">&#39;load {cls} from dict is not implemented yet.&#39;</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">raise</span> NotImplementedError(msg)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00101">101</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                 count=1):</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        SYLVABase.__init__(self)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        self.name = name</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        self.index = index</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        self.data_token_type = data_token_type</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        self.count = count</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1d6e4ff7796c0ecdd2fc39b12fb15494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d6e4ff7796c0ecdd2fc39b12fb15494">&#9670;&nbsp;</a></span>__repr__</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sylva.base.sdf.Port.__repr__</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00138">138</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-
-</div>
-</div>
 <a id="aec009757acfd92df95b273c671cac068"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec009757acfd92df95b273c671cac068">&#9670;&nbsp;</a></span>count</h2>
 
@@ -497,9 +281,25 @@ Private Attributes</h2></td></tr>
 <p>The number of data tokens to be consumed or produced per invocation. </p>
 <p>One token per clock cycle is the minimum throughput. </p>
 
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00136">136</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00106">106</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, and <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>.</p>
+</div>
+</div>
+<a id="ac0ca6b47887a32c69c66564f683adf2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ca6b47887a32c69c66564f683adf2b">&#9670;&nbsp;</a></span>data_token_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylva.base.sdf.Port.data_token_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The data token type of the port, e.g `DataTokenType(name='int32', size=32)`. </p>
+
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00105">105</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
 
 </div>
 </div>
@@ -515,12 +315,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The index of the port among all ports in the same list, e.g. </p>
-<p>all ports in list <code>input_ports</code> have unique index values. </p>
+<p>The index of the port among all ports in the same list, e.g all ports in list <code>input_ports</code> have unique index values. </p>
 
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00134">134</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00104">104</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="glic_8py_source.html#l00089">sylva.glic.glic.state.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00310">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>, <a class="el" href="glic_8py_source.html#l00092">sylva.glic.glic.state.serialize()</a>, and <a class="el" href="sdf_8py_source.html#l00317">sylva.base.sdf.actor.serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="glic_8py_source.html#l00089">sylva.glic.glic.state.__str__()</a>, and <a class="el" href="glic_8py_source.html#l00092">sylva.glic.glic.state.serialize()</a>.</p>
 
 </div>
 </div>
@@ -536,33 +335,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The name of the port, e.g. </p>
-<p><code>din</code>. </p>
+<p>The name of the port, e.g <code>din</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00133">133</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00103">103</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00307">sylva.base.sdf.actor.__str__()</a>, <a class="el" href="sdf_8py_source.html#l00153">sylva.base.sdf.Port.clone()</a>, <a class="el" href="sdf_8py_source.html#l00310">sylva.base.sdf.actor.clone()</a>, <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>, <a class="el" href="dse_8py_source.html#l00108">sylva.dse.dse.system_model.serialize()</a>, <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>, and <a class="el" href="sdf_8py_source.html#l00317">sylva.base.sdf.actor.serialize()</a>.</p>
-
-</div>
-</div>
-<a id="a3bc0e05af490f897794a9781127c69e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc0e05af490f897794a9781127c69e3">&#9670;&nbsp;</a></span>token_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sylva.base.sdf.Port.token_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The data token type of the port, e.g. </p>
-<p>`DataTokenType(name='int32', size=32)` </p>
-
-<p class="definition">Definition at line <a class="el" href="sdf_8py_source.html#l00135">135</a> of file <a class="el" href="sdf_8py_source.html">sdf.py</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="sdf_8py_source.html#l00159">sylva.base.sdf.Port.dict_object()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mdl__reader_8py_source.html#l00031">sylva.frontend.mdl_reader.simulink_model.__str__()</a>, <a class="el" href="mdl__reader_8py_source.html#l00036">sylva.frontend.mdl_reader.simulink_system.__str__()</a>, <a class="el" href="glic_8py_source.html#l00157">sylva.glic.glic.control.__str__()</a>, <a class="el" href="dse_8py_source.html#l00111">sylva.dse.dse.system_model.serialize()</a>, and <a class="el" href="glic_8py_source.html#l00172">sylva.glic.glic.control.serialize()</a>.</p>
 
 </div>
 </div>
